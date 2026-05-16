@@ -1,0 +1,189 @@
+{
+  "benchmark_id": "folded_strip_order_v1",
+  "n_items": 30,
+  "n_correct": 0,
+  "accuracy": 0.0,
+  "exact_match": true,
+  "per_item": [
+    {
+      "id": "fso_20260516_000",
+      "gold": "ECBDA",
+      "pred": "AEBCD",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_001",
+      "gold": "SQTRP",
+      "pred": "QRPTS",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_002",
+      "gold": "KFHJG",
+      "pred": "FKGHJ",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_003",
+      "gold": "NLXYM",
+      "pred": "LNYXM",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_004",
+      "gold": "UWZVY",
+      "pred": "YVZWU",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_005",
+      "gold": "ABCDE",
+      "pred": "ABECD",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_006",
+      "gold": "TRSQP",
+      "pred": "PSTQR",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_007",
+      "gold": "FGHJK",
+      "pred": "FHKJG",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_008",
+      "gold": "MLYXN",
+      "pred": "XMNYL",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_009",
+      "gold": "UYZWV",
+      "pred": "YUVZW",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_010",
+      "gold": "DEBAC",
+      "pred": "ACBDE",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_011",
+      "gold": "RPSQT",
+      "pred": "RQSTP",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_012",
+      "gold": "JKFGH",
+      "pred": "FKGHJ",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_013",
+      "gold": "YLMXN",
+      "pred": "YMLNX",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_014",
+      "gold": "YUWVZ",
+      "pred": "UYVZW",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_015",
+      "gold": "ACBED",
+      "pred": "DCBAE",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_016",
+      "gold": "SPQRT",
+      "pred": "RSTPQ",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_017",
+      "gold": "HGFKJ",
+      "pred": "FHJGK",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_018",
+      "gold": "LXYMN",
+      "pred": "LXMYN",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_019",
+      "gold": "YUVZW",
+      "pred": "VUWYZ",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_020",
+      "gold": "ECBDA",
+      "pred": "ACDBE",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_021",
+      "gold": "PQTRS",
+      "pred": "QPSRT",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_022",
+      "gold": "HFGJK",
+      "pred": "KFHGJ",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_023",
+      "gold": "MNYXL",
+      "pred": "XNYLM",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_024",
+      "gold": "YWVZU",
+      "pred": "UWYVZ",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_025",
+      "gold": "ACEDB",
+      "pred": "DCAEB",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_026",
+      "gold": "PQSTR",
+      "pred": "RTPQS",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_027",
+      "gold": "GKHJF",
+      "pred": "FHKGJ",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_028",
+      "gold": "YMXNL",
+      "pred": "NLXYM",
+      "correct": 0
+    },
+    {
+      "id": "fso_20260516_029",
+      "gold": "VUZYW",
+      "pred": "WZUVY",
+      "correct": 0
+    }
+  ]
+}

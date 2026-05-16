@@ -1,0 +1,124 @@
+source,benchmark,benchmark_name,rank,rank_spread,model,organization,license,score,uncertainty,votes,price_per_million_input_output,context,source_url
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,1,1 7,claude-opus-4-7-thinking,Anthropic,Proprietary,1305.0,±10,5333,$5 / $25,1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,2,1 7,claude-opus-4-7,Anthropic,Proprietary,1303.0,±9,5600,$5 / $25,1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,3,1 8,claude-opus-4-6-thinking,Anthropic,Proprietary,1300.0,±9,6088,$5 / $25,1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,4,1 9,muse-spark,Meta,Proprietary,1299.0,±10,4319,N/A,N/A,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,5,1 11,claude-opus-4-6,Anthropic,Proprietary,1292.0,±9,7157,$5 / $25,1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,6,1 12,gpt-5.5,OpenAI,Proprietary,1290.0,±11,3557,$5 / $30,1.1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,7,1 12,gemini-3-pro,Google,Proprietary,1289.0,±8,13239,$2 / $12,1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,8,3 14,gpt-5.5-high,OpenAI,Proprietary,1282.0,±11,3216,$5 / $30,1.1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,9,5 14,gpt-5.2-chat-latest-20260210,OpenAI,Proprietary,1279.0,±8,11207,$1.75 / $14,128K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,10,4 17,gpt-5.5-instant,OpenAI,Proprietary,1278.0,±13,2537,$5 / $30,1.1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,11,5 14,gemini-3.1-pro-preview,Google,Proprietary,1277.0,±7,15333,$2 / $12,1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,12,6 17,claude-sonnet-4-6,Anthropic,Proprietary,1274.0,±8,7486,$3 / $15,1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,13,8 17,gemini-3-flash,Google,Proprietary,1270.0,±7,20074,$0.50 / $3,1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,14,8 24,kimi-k2.6,Moonshot,Modified MIT,1262.0,±10,4629,$0.95 / $4,262.1K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,15,11 24,gemini-3-flash (thinking-minimal),Google,Proprietary,1260.0,±7,18202,$0.50 / $3,1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,16,11 25,dola-seed-2.0-pro,Bytedance,Proprietary,1260.0,±8,8662,N/A,N/A,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,17,11 28,gpt-5.4-mini-high,OpenAI,Proprietary,1257.0,±9,7378,$0.75 / $4.50,400K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,18,14 31,gemma-4-31b,Google,Apache 2.0,1252.0,±7,14707,$0.14 / $0.40,262.1K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,19,14 31,grok-4.20-beta-0309-reasoning,xAI,Proprietary,1252.0,±8,8320,$2 / $6,2M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,20,14 31,gpt-5.1-high,OpenAI,Proprietary,1251.0,±8,9247,$1.25 / $10,400K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,21,14 31,kimi-k2.5-thinking,Moonshot,Modified MIT,1248.0,±7,13375,$0.60 / $3,N/A,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,22,14 31,gpt-5.2-high,OpenAI,Proprietary,1247.0,±7,14002,$1.75 / $14,400K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,23,14 35,grok-4.3,xAI,Proprietary,1246.0,±12,2794,$1.25 / $2.50,1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,24,16 31,gemini-2.5-pro,Google,Proprietary,1246.0,±5,86183,$1.25 / $10,1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,25,14 34,grok-4.20-multi-agent-beta-0309,xAI,Proprietary,1245.0,±8,7854,$2 / $6,2M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,26,17 35,gemma-4-26b-a4b,Google,Apache 2.0,1243.0,±8,9416,N/A,N/A,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,27,17 35,qwen3.5-397b-a17b,Alibaba,Apache 2.0,1241.0,±8,10848,$0.39 / $2.34,262.1K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,28,18 35,chatgpt-4o-latest-20250326,OpenAI,Proprietary,1241.0,±6,23461,$5 / $15,128K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,29,17 40,kimi-k2.5-instant,Moonshot,Modified MIT,1240.0,±11,3898,$0.40 / $1.90,262.1K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,30,18 39,gemini-3.1-flash-lite-preview,Google,Proprietary,1239.0,±8,12871,$0.25 / $1.50,1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,31,18 40,gpt-5.1,OpenAI,Proprietary,1238.0,±8,10127,$1.25 / $10,400K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,32,24 40,gpt-5.2,OpenAI,Proprietary,1233.0,±7,14885,$1.75 / $14,400K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,33,24 45,glm-5v-turbo,Z.ai,Proprietary,1229.0,±9,5962,$1.20 / $4,202.8K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,34,25 48,gemini-2.5-flash-preview-09-2025,Google,Proprietary,1226.0,±10,4736,$0.30 / $2.50,1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,35,24 48,gpt-4.5-preview-2025-02-27,OpenAI,Proprietary,1226.0,±12,2925,$75 / $150,128K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,36,29 48,gpt-5-chat,OpenAI,Proprietary,1226.0,±7,40855,$1.25 / $10,128K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,37,29 48,qwen3.5-122b-a10b,Alibaba,Apache 2.0,1224.0,±8,9074,$0.26 / $2.08,262.1K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,38,29 48,qwen3.5-27b,Alibaba,Apache 2.0,1224.0,±8,8502,$0.20 / $1.56,262.1K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,39,29 48,mimo-v2.5,Xiaomi,MIT,1222.0,±9,5675,$0.40 / $2,1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,40,30 52,ernie-5.0-preview-1220,Baidu,Proprietary,1218.0,±12,3193,N/A,N/A,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,41,33 48,o3-2025-04-16,OpenAI,Proprietary,1218.0,±7,46737,$2 / $8,200K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,42,33 52,qwen3-vl-235b-a22b-instruct,Alibaba,Apache 2.0,1215.0,±7,12236,$0.20 / $0.88,262.1K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,43,33 52,gpt-4.1-2025-04-14,OpenAI,Proprietary,1214.0,±7,42144,$2 / $8,1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,44,34 52,gemini-2.5-flash,Google,Proprietary,1214.0,±5,56519,$0.30 / $2.50,1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,45,34 53,gpt-5-high,OpenAI,Proprietary,1211.0,±7,35162,$1.25 / $10,400K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,46,34 55,mimo-v2-omni,Xiaomi,Proprietary,1210.0,±9,6393,$0.40 / $2,262.1K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,47,33 60,claude-sonnet-4-20250514-thinking-32k,Anthropic,Proprietary,1207.0,±17,1174,$3 / $15,1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,48,33 59,claude-opus-4-20250514-thinking-16k,Anthropic,Proprietary,1207.0,±16,1316,$15 / $75,200K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,49,41 59,gpt-4.1-mini-2025-04-14,OpenAI,Proprietary,1203.0,±8,41383,$0.40 / $1.60,1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,50,41 59,o4-mini-2025-04-16,OpenAI,Proprietary,1202.0,±7,42435,$1.10 / $4.40,200K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,51,41 59,gpt-5.4-nano-high,OpenAI,Proprietary,1201.0,±9,7314,$0.20 / $1.25,400K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,52,41 64,claude-3-7-sonnet-20250219-thinking-32k,Anthropic,Proprietary,1195.0,±15,1471,$3 / $15,200K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,53,45 64,o1-2024-12-17,OpenAI,Proprietary,1193.0,±11,3694,$15 / $60,200K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,54,47 64,grok-4-1-fast-reasoning,xAI,Proprietary,1191.0,±8,9796,$0.20 / $0.50,2M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,55,46 66,qwen3-vl-235b-a22b-thinking,Alibaba,Apache 2.0,1190.0,±12,2368,$0.26 / $2.60,131.1K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,56,46 66,claude-sonnet-4-20250514,Anthropic,Proprietary,1189.0,±14,1854,$3 / $15,1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,57,47 64,gemini-2.5-flash-lite-preview-06-17-thinking,Google,Proprietary,1188.0,±8,36879,$0.10 / $0.40,1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,58,47 66,claude-opus-4-20250514,Anthropic,Proprietary,1188.0,±13,2227,$15 / $75,200K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,59,47 66,qwen-vl-max-2025-08-13,Alibaba,Proprietary,1188.0,±12,3237,$0.52 / $2.08,131.1K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,60,52 66,grok-4-0709,xAI,Proprietary,1182.0,±7,32772,$3 / $15,256K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,61,51 67,gpt-5-mini-high,OpenAI,Proprietary,1182.0,±8,29653,$0.25 / $2,400K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,62,52 69,gemini-1.5-pro-002,Google,Proprietary,1179.0,±9,8902,$3.50 / $10.50,2.1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,63,52 72,claude-3-7-sonnet-20250219,Anthropic,Proprietary,1176.0,±9,4559,$3 / $15,200K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,64,52 73,gemini-2.5-flash-lite-preview-09-2025-no-thinking,Google,Proprietary,1175.0,±10,4780,$0.10 / $0.40,1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,65,56 74,gemini-2.0-flash-001,Google,Proprietary,1171.0,±7,10243,$0.10 / $0.40,1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,66,56 79,glm-4.6v,Z.ai,MIT,1165.0,±14,2338,$0.30 / $0.90,131.1K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,67,62 79,gpt-4o-2024-05-13,OpenAI,Proprietary,1162.0,±8,23273,$5 / $15,128K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,68,61 81,hunyuan-vision-1.5-thinking,Tencent,Proprietary,1162.0,±12,2430,N/A,N/A,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,69,63 79,claude-3-5-sonnet-20241022,Anthropic,Proprietary,1161.0,±8,10409,$3 / $15,200K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,70,64 79,mistral-medium-2508,Mistral,Proprietary,1159.0,±7,42219,$2.70 / $8.10,32K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,71,63 79,gemma-3-27b-it,Google,Gemma,1159.0,±8,17443,$0.08 / $0.16,131.1K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,72,62 82,step-1o-turbo-202506,StepFun,Proprietary,1159.0,±14,1943,N/A,N/A,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,73,65 81,mistral-medium-2505,Mistral,Proprietary,1156.0,±8,11006,$0.40 / $2,131.1K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,74,63 82,glm-4.5v,Z.ai,MIT,1156.0,±12,3331,$0.60 / $1.80,65.5K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,75,66 88,hunyuan-large-vision,Tencent,Proprietary,1148.0,±16,1307,N/A,N/A,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,76,66 87,gpt-5-nano-high,OpenAI,Proprietary,1148.0,±11,4030,$0.05 / $0.40,400K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,77,66 84,llama-4-maverick-17b-128e-instruct,Meta,Llama 4,1147.0,±9,7066,$0.63 / $1.80,131.1K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,78,66 87,claude-3-5-sonnet-20240620,Anthropic,Proprietary,1146.0,±10,21624,$3 / $15,200K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,79,66 87,step-3,StepFun,Apache 2.0,1146.0,±12,3306,$0.57 / $1.42,65.5K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,80,71 88,mistral-small-2506,Mistral,Apache 2.0,1141.0,±9,11155,$0.10 / $0.30,32K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,81,71 88,gemini-1.5-flash-002,Google,Proprietary,1141.0,±10,7241,$0.07 / $0.30,1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,82,73 91,gemini-2.0-flash-lite-preview-02-05,Google,Proprietary,1135.0,±10,3991,$0.07 / $0.30,1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,83,76 92,mistral-small-3.1-24b-instruct-2503,Mistral,Apache 2.0,1129.0,±9,29371,$0.10 / $0.30,32K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,84,76 92,llama-4-scout-17b-16e-instruct,Meta,Llama,1128.0,±10,6552,$0.40 / $0.70,8.2K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,85,75 92,claude-3-5-haiku-20241022,Anthropic,Proprietary,1127.0,±16,1432,$0.80 / $4,200K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,86,75 92,step-1o-vision-32k-highres,StepFun,Proprietary,1126.0,±12,2833,N/A,N/A,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,87,79 92,qwen2.5-vl-72b-instruct,Alibaba,Qwen,1122.0,±11,3768,$0.25 / $0.75,131.1K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,88,76 94,qwen2.5-vl-32b-instruct,Alibaba,Apache 2.0,1121.0,±15,1490,$0.20 / $0.60,128K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,89,82 92,gemini-1.5-pro-001,Google,Proprietary,1119.0,±11,16734,$3.50 / $10.50,2.1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,90,82 93,gpt-4o-2024-08-06,OpenAI,Proprietary,1119.0,±12,3376,$2.50 / $10,128K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,91,83 96,gpt-4-turbo-2024-04-09,OpenAI,Proprietary,1113.0,±11,13391,$10 / $30,128K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,92,82 97,molmo-2-8b,Ai2,Apache 2.0,1108.0,±20,1171,$0.20 / $0.20,36.9K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,93,90 97,gpt-4o-mini-2024-07-18,OpenAI,Proprietary,1098.0,±8,17342,$0.15 / $0.60,128K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,94,91 97,pixtral-large-2411,Mistral,MRL,1095.0,±9,5423,$2 / $6,131.1K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,95,89 101,gpt-4.1-nano-2025-04-14,OpenAI,Proprietary,1090.0,±18,1211,$0.10 / $0.40,1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,96,91 101,qwen-vl-max-1119,Alibaba,Proprietary,1086.0,±16,1422,$0.80 / $3.20,131.1K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,97,92 99,qwen2-vl-72b,Alibaba,Qwen,1086.0,±10,5937,$0.90 / $0.90,32.8K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,98,95 102,gemini-1.5-flash-8b-001,Google,Proprietary,1071.0,±10,6243,$0.07 / $0.30,1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,99,95 103,step-1v-32k,StepFun,Proprietary,1065.0,±17,1534,N/A,N/A,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,100,96 103,claude-3-opus-20240229,Anthropic,Proprietary,1063.0,±10,15565,$15 / $75,200K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,101,96 103,gemini-1.5-flash-001,Google,Proprietary,1060.0,±12,13260,$0.07 / $0.30,1M,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,102,99 109,molmo-72b-0924,Ai2,Apache 2.0,1046.0,±13,3048,N/A,N/A,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,103,98 111,hunyuan-standard-vision-2024-12-31,Tencent,Proprietary,1043.0,±21,809,N/A,N/A,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,104,102 110,llama-3.2-vision-90b-instruct,Meta,Llama 3.2,1033.0,±9,8682,N/A,N/A,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,105,102 111,qwen2-vl-7b-instruct,Alibaba,Apache 2.0,1032.0,±10,5766,$0.20 / $0.20,32.8K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,106,102 112,pixtral-12b-2409,Mistral,Apache 2.0,1026.0,±9,7511,$0.15 / $0.15,128K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,107,102 113,internvl2-26b,OpenGVLab,MIT,1025.0,±13,5148,N/A,N/A,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,108,102 115,amazon-nova-lite-v1.0,Amazon,Proprietary,1020.0,±15,1854,$0.06 / $0.24,300K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,109,102 115,amazon-nova-pro-v1.0,Amazon,Proprietary,1020.0,±14,2335,$0.80 / $3.20,300K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,110,103 115,claude-3-sonnet-20240229,Anthropic,Proprietary,1018.0,±11,12314,$3 / $15,200K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,111,106 117,yi-vision,AI,Proprietary,1003.0,±18,1219,N/A,N/A,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,112,107 117,claude-3-haiku-20240307,Anthropic,Proprietary,1001.0,±12,13380,$0.25 / $1.25,200K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,113,104 119,c4ai-aya-vision-32b,Cohere,CC-BY-NC-4.0,1001.0,±22,847,N/A,N/A,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,114,108 117,molmo-7b-d-0924,Ai2,Apache 2.0,995.0,±14,2815,N/A,N/A,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,115,111 117,llama-3.2-vision-11b-instruct,Meta,Llama 3.2,993.0,±11,4817,N/A,N/A,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,116,108 121,nvila-internal-15b-v1,Nvidia,-,987.0,±20,1077,N/A,N/A,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,117,111 121,llava-onevision-qwen2-72b-ov,LLaVA,Apache 2.0,979.0,±18,1321,N/A,N/A,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,118,116 121,llava-v1.6-34b,LLaVA,Apache 2.0,965.0,±12,4531,N/A,N/A,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,119,115 121,cogvlm2-llama3-chat-19b,Z.ai,CogVLM2,964.0,±15,1991,N/A,N/A,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,120,115 121,minicpm-v-2_6,OpenBMB,Apache 2.0,964.0,±16,1987,N/A,N/A,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,121,116 121,internvl2-4b,OpenGVLab,MIT,959.0,±12,3703,N/A,N/A,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,122,122 122,phi-3.5-vision-instruct,Microsoft,MIT,921.0,±16,2592,$0.13 / $0.52,128K,https://arena.ai/leaderboard/vision
+lmarena_current_vision,arena_vision_overall,LMArena Vision Arena overall,123,123 123,phi-3-vision-128k-instruct,Microsoft,MIT,883.0,±19,1401,$0.20 / $0.20,32.1K,https://arena.ai/leaderboard/vision

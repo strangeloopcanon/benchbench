@@ -1,0 +1,48 @@
+
+You are gpt-5.4+Codex creating one BenchBench candidate.
+
+You are already in the empty artifact directory. Build the package here now.
+Do not browse. Do not spend a long planning pass. Write files, generate the
+sample, validate, then respond with a short summary.
+
+Goal: create a 30-item benchmark that is valid, deterministic, exactly scored,
+human-auditable, and difficult for GPT-5.4/GPT-5.5 Codex solvers.
+
+Prior evidence to use:
+- Text/JSON rule benchmarks were solved 29/30 to 30/30.
+- Rich document/OCR packet benchmarks were solved 30/30.
+- Visual Trace Cords broke GPT-5.5+Codex at 0/30 because the obvious
+  computational shortcut was anticorrelated with the true visual topology.
+
+Make a distinct benchmark. Do not clone Visual Trace Cords. Good directions:
+raster-only perceptual grouping, occlusion/layer topology, folded-strip order,
+tile-overlap provenance, shadow/contact topology, or another residual skill
+where a cheap extraction shortcut is wrong.
+
+Required files in this directory:
+- README.md
+- benchmark_spec.json
+- generator.py
+- verifier.py
+- scorer.py
+- gold_private_sample.jsonl
+- validation_report.md
+- failure_modes.md
+- solver_bundle/SOLVER_MANIFEST.json
+- solver_bundle/items_private_sample.jsonl
+- solver_bundle/README.md or solver_bundle/solver_packet.md
+
+Strict CLI contract:
+- `/Users/rohit/.pyenv/versions/global_env/bin/python generator.py --sample-count 30 --seed 20260516 --out-dir .`
+- `/Users/rohit/.pyenv/versions/global_env/bin/python verifier.py --items solver_bundle/items_private_sample.jsonl --gold gold_private_sample.jsonl`
+- `/Users/rohit/.pyenv/versions/global_env/bin/python scorer.py --gold gold_private_sample.jsonl --predictions predictions.jsonl --out score_report.json`
+
+Contracts:
+- gold rows and prediction rows contain exactly `id` and `answer`.
+- solver_bundle item paths must be relative to solver_bundle.
+- solver_bundle must not contain gold, generator/verifier/scorer, validation
+  report, private traces, hidden coordinates, seed, source vectors, or solution
+  labels.
+
+Before finishing, generate 30 items, run verifier, run gold scorer, run one weak
+baseline, inspect solver_bundle for leakage, and write validation_report.md.

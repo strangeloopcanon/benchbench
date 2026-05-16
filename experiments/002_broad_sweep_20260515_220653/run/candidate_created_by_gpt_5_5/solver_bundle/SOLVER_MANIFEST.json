@@ -1,0 +1,14 @@
+{
+  "benchmark": "protocol_archaeology",
+  "forbidden": [
+    "Do not inspect files outside this solver_bundle.",
+    "Do not use generator.py, scorer.py, verifier.py, gold files, audit traces, or hidden seeds."
+  ],
+  "item_file": "items_private_sample.jsonl",
+  "prediction_schema": {
+    "answer": "8 lowercase hex characters",
+    "id": "string"
+  },
+  "sample_count": 30,
+  "version": "0.1.0"
+}

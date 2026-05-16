@@ -1,0 +1,22 @@
+{
+  "answer_format": "four-character string over labels K,L,M,N,P,Q",
+  "benchmark_name": "Shadow Weave Topology",
+  "determinism": {
+    "generator_seeded": true,
+    "sample_command": "/Users/rohit/.pyenv/versions/global_env/bin/python generator.py --sample-count 30 --seed 20260516 --out-dir ."
+  },
+  "item_count": 30,
+  "scoring": {
+    "row_schema": {
+      "answer": "string",
+      "id": "string"
+    },
+    "rule": "exact match after no normalization"
+  },
+  "solver_inputs": {
+    "assets": "solver_bundle/images/*.png",
+    "items": "solver_bundle/items_private_sample.jsonl",
+    "paths_relative_to": "solver_bundle"
+  },
+  "task": "Given a raster image of overlapping labeled strips, identify which strip is visibly on top at four marked probe contacts."
+}

@@ -1,0 +1,57 @@
+{
+  "generated_at": "2026-05-16T15:57:35.636491+00:00",
+  "sources": [
+    {
+      "source": "open_llm_leaderboard_v2",
+      "url": "https://huggingface.co/datasets/open-llm-leaderboard/contents",
+      "rows": 4576,
+      "notes": "Hugging Face dataset parquet; contains open-weight model scores."
+    },
+    {
+      "source": "lmarena_archive_20250409",
+      "url": "https://huggingface.co/spaces/lmarena/chatbot-arena-leaderboard",
+      "rows": 61,
+      "notes": "Historical CSV in the LMArena Hugging Face Space."
+    },
+    {
+      "source": "lmarena_current_text",
+      "benchmark": "arena_text_overall",
+      "url": "https://arena.ai/leaderboard/text",
+      "rows": 357
+    },
+    {
+      "source": "lmarena_current_code_webdev",
+      "benchmark": "arena_code_webdev_overall",
+      "url": "https://arena.ai/leaderboard/code/webdev",
+      "rows": 79
+    },
+    {
+      "source": "lmarena_current_code_image_to_webdev",
+      "benchmark": "arena_code_image_to_webdev_overall",
+      "url": "https://arena.ai/leaderboard/code/image-to-webdev",
+      "rows": 23
+    },
+    {
+      "source": "lmarena_current_vision",
+      "benchmark": "arena_vision_overall",
+      "url": "https://arena.ai/leaderboard/vision",
+      "rows": 123
+    },
+    {
+      "source": "lmarena_current_document",
+      "benchmark": "arena_document_overall",
+      "url": "https://arena.ai/leaderboard/document",
+      "rows": 24
+    },
+    {
+      "source": "lmarena_current_search",
+      "benchmark": "arena_search_overall",
+      "url": "https://arena.ai/leaderboard/search",
+      "rows": 29
+    }
+  ],
+  "local_sources": [
+    "experiments/001_three_model_grid_pilot/run/*/score_solver*.json",
+    "experiments/002_broad_sweep_20260515_220653/run/*/score_solver*.json"
+  ]
+}

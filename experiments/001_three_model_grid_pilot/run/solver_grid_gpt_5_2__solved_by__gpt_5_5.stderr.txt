@@ -1,0 +1,835 @@
+2026-05-16T03:28:53.338381Z  WARN codex_core::plugins::manager: failed to warm featured plugin ids cache error=remote plugin sync request to https://chatgpt.com/backend-api/plugins/featured failed with status 403 Forbidden: <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style global>body{font-family:Arial,Helvetica,sans-serif}.container{align-items:center;display:flex;flex-direction:column;gap:2rem;height:100%;justify-content:center;width:100%}@keyframes enlarge-appear{0%{opacity:0;transform:scale(75%) rotate(-90deg)}to{opacity:1;transform:scale(100%) rotate(0deg)}}.logo{color:#8e8ea0}.scale-appear{animation:enlarge-appear .4s ease-out}@media (min-width:768px){.scale-appear{height:48px;width:48px}}.data:empty{display:none}.data{border-radius:5px;color:#8e8ea0;text-align:center}@media (prefers-color-scheme:dark){body{background-color:#343541}.logo{color:#acacbe}}</style>
+  <meta http-equiv="refresh" content="360"></head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <svg
+          width="41"
+          height="41"
+          viewBox="0 0 41 41"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          strokeWidth="2"
+          class="scale-appear"
+        >
+          <path
+            d="M37.5324 16.8707C37.9808 15.5241 38.1363 14.0974 37.9886 12.6859C37.8409 11.2744 37.3934 9.91076 36.676 8.68622C35.6126 6.83404 33.9882 5.3676 32.0373 4.4985C30.0864 3.62941 27.9098 3.40259 25.8215 3.85078C24.8796 2.7893 23.7219 1.94125 22.4257 1.36341C21.1295 0.785575 19.7249 0.491269 18.3058 0.500197C16.1708 0.495044 14.0893 1.16803 12.3614 2.42214C10.6335 3.67624 9.34853 5.44666 8.6917 7.47815C7.30085 7.76286 5.98686 8.3414 4.8377 9.17505C3.68854 10.0087 2.73073 11.0782 2.02839 12.312C0.956464 14.1591 0.498905 16.2988 0.721698 18.4228C0.944492 20.5467 1.83612 22.5449 3.268 24.1293C2.81966 25.4759 2.66413 26.9026 2.81182 28.3141C2.95951 29.7256 3.40701 31.0892 4.12437 32.3138C5.18791 34.1659 6.8123 35.6322 8.76321 36.5013C10.7141 37.3704 12.8907 37.5973 14.9789 37.1492C15.9208 38.2107 17.0786 39.0587 18.3747 39.6366C19.6709 40.2144 21.0755 40.5087 22.4946 40.4998C24.6307 40.5054 26.7133 39.8321 28.4418 38.5772C30.1704 37.3223 31.4556 35.5506 32.1119 33.5179C33.5027 33.2332 34.8167 32.6547 35.9659 31.821C37.115 30.9874 38.0728 29.9178 38.7752 28.684C39.8458 26.8371 40.3023 24.6979 40.0789 22.5748C39.8556 20.4517 38.9639 18.4544 37.5324 16.8707ZM22.4978 37.8849C20.7443 37.8874 19.0459 37.2733 17.6994 36.1501C17.7601 36.117 17.8666 36.0586 17.936 36.0161L25.9004 31.4156C26.1003 31.3019 26.2663 31.137 26.3813 30.9378C26.4964 30.7386 26.5563 30.5124 26.5549 30.2825V19.0542L29.9213 20.998C29.9389 21.0068 29.9541 21.0198 29.9656 21.0359C29.977 21.052 29.9842 21.0707 29.9867 21.0902V30.3889C29.9842 32.375 29.1946 34.2791 27.7909 35.6841C26.3872 37.0892 24.4838 37.8806 22.4978 37.8849ZM6.39227 31.0064C5.51397 29.4888 5.19742 27.7107 5.49804 25.9832C5.55718 26.0187 5.66048 26.0818 5.73461 26.1244L13.699 30.7248C13.8975 30.8408 14.1233 30.902 14.3532 30.902C14.583 30.902 14.8088 30.8408 15.0073 30.7248L24.731 25.1103V28.9979C24.7321 29.0177 24.7283 29.0376 24.7199 29.0556C24.7115 29.0736 24.6988 29.0893 24.6829 29.1012L16.6317 33.7497C14.9096 34.7416 12.8643 35.0097 10.9447 34.4954C9.02506 33.9811 7.38785 32.7263 6.39227 31.0064ZM4.29707 13.6194C5.17156 12.0998 6.55279 10.9364 8.19885 10.3327C8.19885 10.4013 8.19491 10.5228 8.19491 10.6071V19.808C8.19351 20.0378 8.25334 20.2638 8.36823 20.4629C8.48312 20.6619 8.64893 20.8267 8.84863 20.9404L18.5723 26.5542L15.206 28.4979C15.1894 28.5089 15.1703 28.5155 15.1505 28.5173C15.1307 28.5191 15.1107 28.516 15.0924 28.5082L7.04046 23.8557C5.32135 22.8601 4.06716 21.2235 3.55289 19.3046C3.03862 17.3858 3.30624 15.3413 4.29707 13.6194ZM31.955 20.0556L22.2312 14.4411L25.5976 12.4981C25.6142 12.4872 25.6333 12.4805 25.6531 12.4787C25.6729 12.4769 25.6928 12.4801 25.7111 12.4879L33.7631 17.1364C34.9967 17.849 36.0017 18.8982 36.6606 20.1613C37.3194 21.4244 37.6047 22.849 37.4832 24.2684C37.3617 25.6878 36.8382 27.0432 35.9743 28.1759C35.1103 29.3086 33.9415 30.1717 32.6047 30.6641C32.6047 30.5947 32.6047 30.4733 32.6047 30.3889V21.188C32.6066 20.9586 32.5474 20.7328 32.4332 20.5338C32.319 20.3348 32.154 20.1698 31.955 20.0556ZM35.3055 15.0128C35.2464 14.9765 35.1431 14.9142 35.069 14.8717L27.1045 10.2712C26.906 10.1554 26.6803 10.0943 26.4504 10.0943C26.2206 10.0943 25.9948 10.1554 25.7963 10.2712L16.0726 15.8858V11.9982C16.0715 11.9783 16.0753 11.9585 16.0837 11.9405C16.0921 11.9225 16.1048 11.9068 16.1207 11.8949L24.1719 7.25025C25.4053 6.53903 26.8158 6.19376 28.2383 6.25482C29.6608 6.31589 31.0364 6.78077 32.2044 7.59508C33.3723 8.40939 34.2842 9.53945 34.8334 10.8531C35.3826 12.1667 35.5464 13.6095 35.3055 15.0128ZM14.2424 21.9419L10.8752 19.9981C10.8576 19.9893 10.8423 19.9763 10.8309 19.9602C10.8195 19.9441 10.8122 19.9254 10.8098 19.9058V10.6071C10.8107 9.18295 11.2173 7.78848 11.9819 6.58696C12.7466 5.38544 13.8377 4.42659 15.1275 3.82264C16.4173 3.21869 17.8524 2.99464 19.2649 3.1767C20.6775 3.35876 22.0089 3.93941 23.1034 4.85067C23.0427 4.88379 22.937 4.94215 22.8668 4.98473L14.9024 9.58517C14.7025 9.69878 14.5366 9.86356 14.4215 10.0626C14.3065 10.2616 14.2466 10.4877 14.2479 10.7175L14.2424 21.9419ZM16.071 17.9991L20.4018 15.4978L24.7325 17.9975V22.9985L20.4018 25.4983L16.071 22.9985V17.9991Z"
+            fill="currentColor"
+          />
+        </svg>
+      </div>
+      <div class="data"><div class="main-wrapper" role="main"><div class="main-content"><noscript><div class="h2"><span id="challenge-error-text">Enable JavaScript and cookies to continue</span></div></noscript></div></div><script>(function(){window._cf_chl_opt = {cFPWv: 'b',cH: 'fttRN3LgXgfLDQOvhRBbkTq5NXRd7lyYu3cbeYRqyaw-1778902133-1.2.1.1-FIuUQVJvTEs.cz17qE5IbQSOgxqMBpOCw_PEep4hACYPMISnBXDmxf5GORcf5CR8',cITimeS: '1778902133',cRay: '9fc74b7d8cf5230c',cTplB: '0',cTplC:1,cTplO:0,cTplV:5,cType: 'managed',cUPMDTk:"/backend-api/plugins/featured?platform=codex&__cf_chl_tk=yF45R40np1udEVQOxyWC1Omy75TUxYIjdMPGl5SWN4o-1778902133-1.0.1.1-I37pxbQoMiwxLpsvkLab_dK4HhZb0cOIslgXS.fxG1U",cvId: '3',cZone: 'chatgpt.com',fa:"/backend-api/plugins/featured?platform=codex&__cf_chl_f_tk=yF45R40np1udEVQOxyWC1Omy75TUxYIjdMPGl5SWN4o-1778902133-1.0.1.1-I37pxbQoMiwxLpsvkLab_dK4HhZb0cOIslgXS.fxG1U",md: 'I3_AvXeC6aLMwmywg1giPuy.0mTwBevitxixI1WRQOY-1778902133-1.2.1.1-jw3jAAtZw51cAH9MzWidtQld4qUxJBh.b0J0mZdep8nMbctYDe6YnRrXbHerZHWUdVXJZ4dDGoUncwN8oQN2Ra3v1UmPrysBfzWIZLA4.bi2HeyVzA3gkqvnjxJS75q8xOyR.hEbc4nNlQ.4l0COYPxCUz9c_CcT0T8.Gg22muB8m8b9znlgWPABfv.Sg3DKK9a0HXnjkmgrJuipLrwm_1hqomw09iGIbUrpHSZpcz4ncb_7_b039R5O59I.75HacM8IlrEr74f4l7BEa7VRhWM1JS.dHM2BzhLICow09bsMkQhRWbLV248feUYqTQywkhvYTcL3t1LltGuGlcqXazqs9bi3X7zrFojF_V5uo0kWhwWEfe7v81J4lB2l8NSDSSou6S67LoYKApCxx4JrsFPOmp.W5mwFSMrfXKgEjc8PZcZ4lm_y4cs6GM1RQBHBRl.aop7dokat.5eiGnA4.NftP3ksoAunJJ_IKoosni9jZsCtEYwzPufh6IjKLUZjkwuMolACzwuOe2_PM.Cg3ApoB_wBUAZemqIzFTHXtEBnnHUBEenZ.FmP4aW8tAnFhPqhDzl8yJgM1sTGJBlatAQ9Es1CnK0bE1pwWtjlNsLkkhdHF3KfZu87HfrOOI6La.Rs09StJVnkEWllbXBYXc9kGNm9RSPyZ3PP4.kQmIrKf8RNz7u9BhBpQigan_RhT85Wxn29cWjYDsstd4gEfWcJIQqgObh6g62MEQ2nnY_mR1ySazhEvZBUmCMAlgtQCWWBvhyfviOQXPnbj5wX6SqKLQIPmO_DI6zTgiPU4OnJThm5Lxl7knNxETr2kjN7nsUFsYYq0mhRZKgK4uS4ZBgeNRdXIsAGNGLkkfXhGGTVc4P_pAhPWTyj4XAh5LCvjCN_qGEk8rni.CYH0Q5UODG0aJiqM2rE_vZKMR3TKkLLYuVfjh0M_jJsVdl1P.IaU9KcUwyou00fRq2b.BWeiRELKv5kkzwxyAx_hqe_MjY7q6MBLxzGO1k1uH8Gy1gq',mdrd: 'kLjpPJyKDMOhxjwzF5_oZn7KiO__JuLbfW_Rddv3DcI-1778902133-1.2.1.1-ppYO9SV.WJBuC2EoG_Ye3hQ5Ngo4BdstuuOhjFfmU68li.XMueRmuF2gYwtMPlFJmBAML009Dp7KSl5uMRdrfNTS4mG41w7CC9JELwb8mFDu_.dg9OcNtrvzwNbnZfNzt3PnAOn4L0cJ3rBP73Y0NamZq79pRS1aFLR.UWYqvJ_gbZiHCl7hIjTxlBz0M6MAQVZZydMs8jNb8EjGozrMWMIEe5w3synvrJMYtHiJYzUbg4cBSurFXyn1eAbC5Bzyj687C0ul.f9Ley13MSnxOiGDULSgVXYsFAZEjXyVP8y9ML84S2ZqVO3UTX6w7QdkHizHblYr0s9oyP84XvVIaIS8gyHRqBUW620Z61LiqAc8Lwd9d30ftkIxJ20pjHtE2AoCaUYN3bXpNdfJPwnzU_4N9nB6d6Fst.f8MTjA3patsCezbAYayX5H.CUHp6qbFe.fPuZl0nP0BOxmcYIcaPqPO5Qn_8Fc53a2SFELb9.CUsVpyvIPZ8Az34gS4cH7plRhyqZD3M7rTFEOTmzsjtI3bVjuA7pVHqGDdrQupRLy.xM7JbKGdurlzFYUtKJYTb5qmMF3_8vX4GvhkRV373jaOEF5dXFoLYzg9v7GZIbCjndhNFy_l0bo1xoH69wu0ok3A2fIRTnNUFScj28dSUuqt8_kCMb9EP6w9awVclxjp8gYdnncPeOzmXVkqgXgCeggmLthNuOAn9lII9lT8YZZvZvWuA4FWWX6uGtpHx13J9MZLJ2yPvHN.3f9yYH9J.j2DiHb_.iLP7zwOcfw_II3Pjy9yjb764dDIEJksl482.B_rVjg9X2B7oRYE4LPOrmE8ru9wXSyb7Zi0f0ibnMHsQA9my38q2QQm3ORM1WSxpgEXUqdD80JfaoPwCXooqQytHnLKETUWHp6vrnNHHaS12A5.YNhJQZR5XBAN38sbH4w83JrKFiJJtXndU4kJ5V5ic3w7Jf..MaBkqm0cf3qQj5iBeEHzccI__DIfz5kWSgihf_2RmZwTzdLquCgZsf6ozYyqhdXmFnanLRdw9FmcCrkt0pDiriNO962uhB4EjxE5ISVH.yOK0nMk8bpBeRWedDgowNTrobiPdPoxoyrE0BtJbN10IGIv6nsBdKyiOhS.529KfMuKUC9ameTuhgxZusB3JIan3u_TWCYfr5Or7ddwl.drWP0RrlsAbkFapXciObUlJr0CSRZXktd76Ba7dZ4GdPE4UePSs7iWQzwVhP3pwwlwZ7sPEOa5NU4OO_.cXkj67UgnsxRd3mF785wPkCeBTRz0JtxbAJrL3p1htWTqFj7JFlg3sXQmJSUzErxgc.n.1FV28Pg.kG8EDo_UjCcjTs57TvvZ_Sasq8YSRbHCQqNoBC4VkUWgQpAfOUHFo2nNE5Ym3qLYd7IW.hO9tYtd3ZxoJ.RIlxjpeXmpmwuhZok_UIY9PzT_Y2BLfBmkSdE6ChW5LDNVSytlP6ZnWNTrpT0C4jvrqhQ9hJC68X2bPgzQ4yVx_nkc4qoHh2x7mwdf.H2J2xgAemd5JY5pI9LbtViTllR_HJMR2aVNOlLn7qN3XlWaX4rGtPecAjMMtokxv35oLY919p9ue3hmgkRYBJysQcSbW5ZXxVSYoYJV5r7p2pJnT6k3bZAfqguFAK9myDg9G4Af0Q7kb4wPFWEVhDpCdfEE0SzT4414ml.T6ED57wd_be8zYe0RLHATfig5bGOwH2KDW7.Wce.ZM3xvvUcIEtusi3vVy0RPn.S32KMlba2tOF34skFFesMm0DlFHKLsDbzcCYTd8cGhlDlJRdHzWKvJO2sWasDxyubNRPV2DBpLfIpaS8paawqXW6ULPPJglWK3DwqQR8vn7scYs3tUQj623VNr5MA5ppwm2X9qvru2.PKM2Lgt4_cHdzlhsMWU2kh_gX3bV2I3Z9yNsmZheyl9ZPWZtZ1jg9clXrq8BH_qGHf215WPsmS.ZD7Zc85zWyXt7pGIP0d4vdh4txGFV.ZmGINuzshKeV.uYSUP9TA786gHS7lDAFhT7XrzuCWxGn9uq.cMFvDFoN4smRMQUTo9kF88d6Kj0WWaqTq.rGs8r4SssWvUMtZKj.ZQbszA2AXHFRUCrV0LeB5h.N2NRq0wddSqBoPfmU3_KzsCEEPS_pQiQ3Ur66V1oxqekudm1OJd3oVNrgftaaU4uoZLrojt8KGdg',};var a = document.createElement('script');a.src = '/cdn-cgi/challenge-platform/h/b/orchestrate/chl_page/v1?ray=9fc74b7d8cf5230c';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,"/backend-api/plugins/featured?platform=codex&__cf_chl_rt_tk=yF45R40np1udEVQOxyWC1Omy75TUxYIjdMPGl5SWN4o-1778902133-1.0.1.1-I37pxbQoMiwxLpsvkLab_dK4HhZb0cOIslgXS.fxG1U"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script></div>
+    </div>
+  </body>
+</html>
+
+OpenAI Codex v0.128.0 (research preview)
+--------
+workdir: /Users/rohit/Documents/Workspace/Coding/benchbench/runs/two_model_sweep_20260515_181811/isolated_solver_grid_gpt_5_2__solved_by__gpt_5_5
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR, /Users/rohit/.codex/memories] (network access enabled)
+reasoning effort: low
+reasoning summaries: none
+session id: 019e2ed4-6aa2-7360-b0e6-408c19a69789
+--------
+user
+
+You are gpt-5.5+Codex acting as a blind BenchBench solver.
+
+You are in an isolated solver bundle. You may use local computation inside this
+directory. You must not inspect parent directories or files outside this bundle.
+Do not browse the internet.
+
+Read every relevant visible file in this directory, including manifest, item
+JSONL, README or solver packet, and referenced local assets. Solve every item.
+Use local scripts or image processing if helpful, but prioritize returning a
+complete best-effort answer set in this run.
+
+Return only JSONL, one object per item, with exactly:
+{"id":"...","answer":"..."}
+
+2026-05-16T03:28:53.761772Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:28:53.762238Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:28:53.765860Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:28:53.765912Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:28:58.208984Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:28:58.209563Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:28:58.214220Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:28:58.214278Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:28:58.217666Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:28:58.217671Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:28:58.218960Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:28:58.218964Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:28:58.219475Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:28:58.219478Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:28:58.220009Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:28:58.220016Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:28:58.220524Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:28:58.220528Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:28:58.221681Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:28:58.221685Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:28:59.301867Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:28:59.302252Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:28:59.305699Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:28:59.305746Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:28:59.307984Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:28:59.307990Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:28:59.308457Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:28:59.308463Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:28:59.308935Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:28:59.308939Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:28:59.309418Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:28:59.309425Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:28:59.309885Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:28:59.309889Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:28:59.310879Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:28:59.310883Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+exec
+/bin/zsh -lc 'pwd && rg --files -n .' in /Users/rohit/Documents/Workspace/Coding/benchbench/runs/two_model_sweep_20260515_181811/isolated_solver_grid_gpt_5_2__solved_by__gpt_5_5
+ succeeded in 0ms:
+/Users/rohit/Documents/Workspace/Coding/benchbench/runs/two_model_sweep_20260515_181811/isolated_solver_grid_gpt_5_2__solved_by__gpt_5_5
+./SOLVER_MANIFEST.json
+./items_private_sample.jsonl
+./items/fso_20260516_028.png
+./items/fso_20260516_014.png
+./items/fso_20260516_000.png
+./items/fso_20260516_001.png
+./items/fso_20260516_015.png
+./items/fso_20260516_029.png
+./items/fso_20260516_003.png
+./items/fso_20260516_017.png
+./items/fso_20260516_016.png
+./items/fso_20260516_002.png
+./items/fso_20260516_006.png
+./items/fso_20260516_012.png
+./items/fso_20260516_013.png
+./items/fso_20260516_007.png
+./items/fso_20260516_011.png
+./items/fso_20260516_005.png
+./items/fso_20260516_004.png
+./items/fso_20260516_010.png
+./items/fso_20260516_009.png
+./items/fso_20260516_021.png
+./items/fso_20260516_020.png
+./items/fso_20260516_008.png
+./items/fso_20260516_022.png
+./items/fso_20260516_023.png
+./items/fso_20260516_027.png
+./items/fso_20260516_026.png
+./items/fso_20260516_024.png
+./items/fso_20260516_018.png
+./items/fso_20260516_019.png
+./items/fso_20260516_025.png
+./README.md
+
+2026-05-16T03:29:01.861316Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:29:01.861781Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:29:01.865419Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:29:01.865467Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:29:01.867691Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:01.867699Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:01.868162Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:01.868167Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:01.868635Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:01.868641Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:01.869107Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:01.869111Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:01.869577Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:01.869581Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:01.870583Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:01.870588Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+exec
+/bin/zsh -lc "sed -n '1,220p' SOLVER_MANIFEST.json" in /Users/rohit/Documents/Workspace/Coding/benchbench/runs/two_model_sweep_20260515_181811/isolated_solver_grid_gpt_5_2__solved_by__gpt_5_5
+ succeeded in 0ms:
+{
+  "benchmark_id": "folded_strip_order_v1",
+  "version": "1.0.0",
+  "items_file": "items_private_sample.jsonl",
+  "item_schema": {
+    "id": "string",
+    "path": "string (relative to solver_bundle)",
+    "prompt": "string"
+  },
+  "answer_schema": {
+    "id": "string",
+    "answer": "string"
+  },
+  "constraints": [
+    "Predictions must be a JSONL with one object per line.",
+    "Each predictions row must contain exactly: id, answer.",
+    "Answer must be a permutation of the labels present in the image (no separators)."
+  ]
+}
+
+exec
+/bin/zsh -lc "sed -n '1,260p' README.md" in /Users/rohit/Documents/Workspace/Coding/benchbench/runs/two_model_sweep_20260515_181811/isolated_solver_grid_gpt_5_2__solved_by__gpt_5_5
+ succeeded in 0ms:
+# Folded Strip Order (FSO) v1 — Solver Packet
+
+## Task
+Each item is a PNG image in `items/`. The image shows a single folded paper strip with:
+- A **START** marker (green ring)
+- An **END** marker (red ring)
+- Several labeled visible segments on the strip (letters in white rounded boxes)
+
+Your job: infer the **true order** of the labeled segments encountered when traversing the strip from START to END.
+
+## Output format
+Write `predictions.jsonl` with one JSON object per line:
+```json
+{"id":"<item id>","answer":"<label string>"}
+```
+Where `answer` is the labels as a single string with no separators (e.g. `ABCDE`).
+
+## Important notes
+- The 2D left-to-right or nearest-neighbor adjacency in the image is *not* reliable: folds, crossings, and occluders are intentional.
+- The strip texture is continuous along the strip and provides the auditable cue for adjacency across folds.
+
+exec
+/bin/zsh -lc "sed -n '1,200p' items_private_sample.jsonl" in /Users/rohit/Documents/Workspace/Coding/benchbench/runs/two_model_sweep_20260515_181811/isolated_solver_grid_gpt_5_2__solved_by__gpt_5_5
+ succeeded in 0ms:
+{"id": "fso_20260516_000", "path": "items/fso_20260516_000.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_001", "path": "items/fso_20260516_001.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_002", "path": "items/fso_20260516_002.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_003", "path": "items/fso_20260516_003.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_004", "path": "items/fso_20260516_004.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_005", "path": "items/fso_20260516_005.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_006", "path": "items/fso_20260516_006.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_007", "path": "items/fso_20260516_007.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_008", "path": "items/fso_20260516_008.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_009", "path": "items/fso_20260516_009.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_010", "path": "items/fso_20260516_010.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_011", "path": "items/fso_20260516_011.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_012", "path": "items/fso_20260516_012.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_013", "path": "items/fso_20260516_013.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_014", "path": "items/fso_20260516_014.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_015", "path": "items/fso_20260516_015.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_016", "path": "items/fso_20260516_016.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_017", "path": "items/fso_20260516_017.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_018", "path": "items/fso_20260516_018.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_019", "path": "items/fso_20260516_019.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_020", "path": "items/fso_20260516_020.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_021", "path": "items/fso_20260516_021.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_022", "path": "items/fso_20260516_022.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_023", "path": "items/fso_20260516_023.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_024", "path": "items/fso_20260516_024.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_025", "path": "items/fso_20260516_025.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_026", "path": "items/fso_20260516_026.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_027", "path": "items/fso_20260516_027.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_028", "path": "items/fso_20260516_028.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+{"id": "fso_20260516_029", "path": "items/fso_20260516_029.png", "prompt": "You are given a single image of a folded paper strip. Several visible segments on the strip are labeled with letters. The strip has a START marker (green ring) and an END marker (red ring). Determine the true order of the labeled segments encountered when walking along the strip from START to END. Return the labels as a single string with no separators (e.g. ABCDE). Exact match required."}
+
+2026-05-16T03:29:08.189141Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:29:08.189499Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:29:08.192318Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:29:08.192358Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:29:08.194613Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:08.194622Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:08.195052Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:08.195058Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:08.195484Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:08.195489Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:08.195955Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:08.195959Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:08.196392Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:08.196396Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:08.197341Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:08.197345Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from PIL import Image,ImageDraw,ImageFont
+from pathlib import Path
+files=sorted(Path('items').glob('*.png'))
+thumbs=[]
+for f in files:
+ im=Image.open(f).convert('RGB')
+ im.thumbnail((320,240))
+ canvas=Image.new('RGB',(340,280),'white')
+ canvas.paste(im,((340-im.width)//2,20))
+ d=ImageDraw.Draw(canvas); d.text((10,250),f.stem,fill=(0,0,0))
+ thumbs.append(canvas)
+cols=5; rows=(len(thumbs)+cols-1)//cols
+out=Image.new('RGB',(cols*340,rows*280),(230,230,230))
+for i,t in enumerate(thumbs): out.paste(t,((i%cols)*340,(i//cols)*280))
+out.save('montage.jpg')
+PY" in /Users/rohit/Documents/Workspace/Coding/benchbench/runs/two_model_sweep_20260515_181811/isolated_solver_grid_gpt_5_2__solved_by__gpt_5_5
+2026-05-16T03:29:16.389635Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:29:16.390200Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+ succeeded in 273ms:
+2026-05-16T03:29:16.394690Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:29:16.394751Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:29:16.397193Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:16.397203Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:16.397679Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:16.397684Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:16.398165Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:16.398171Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:16.398627Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:16.398631Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:16.399115Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:16.399118Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:16.400130Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:16.400135Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:20.028042Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:29:20.028494Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:29:20.032104Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:29:20.032152Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:29:20.034467Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:20.034472Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:20.034962Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:20.034968Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:20.035423Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:20.035427Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:20.035903Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:20.035908Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:20.036379Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:20.036382Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:20.037374Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:20.037378Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:24.708276Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:29:24.708685Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:29:24.711987Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:29:24.712037Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:29:24.714249Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:24.714254Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:24.714694Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:24.714698Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:24.715132Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:24.715136Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:24.715583Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:24.715590Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:24.716029Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:24.716033Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:24.716959Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:24.716963Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:32.610588Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:29:32.611024Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:29:32.614561Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:29:32.614609Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:29:32.616955Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:32.616965Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:32.617416Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:32.617420Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:32.617878Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:32.617884Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:32.618351Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:32.618356Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:32.618816Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:32.618820Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:32.619792Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:32.619795Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:36.404317Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:29:36.404861Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:29:36.409284Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:29:36.409344Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:29:36.411726Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:36.411733Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:36.412232Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:36.412238Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:36.412860Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:36.412864Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:36.413346Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:36.413350Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:36.413848Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:36.413851Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:36.414888Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:36.414892Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:39.566967Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:29:39.567387Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:29:39.570943Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:29:39.570992Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:29:39.573211Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:39.573215Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:39.573712Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:39.573718Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:39.574217Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:39.574222Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:39.574692Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:39.574696Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:39.575152Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:39.575156Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:39.576103Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:39.576107Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:43.352417Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:29:43.352779Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:29:43.355893Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:29:43.355940Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:29:43.358195Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:43.358199Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:43.358685Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:43.358688Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:43.359126Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:43.359131Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:43.359588Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:43.359592Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:43.360055Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:43.360058Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:43.361077Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:43.361084Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:47.110955Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:29:47.111552Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:29:47.115210Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:29:47.115259Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:29:47.117518Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:47.117524Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:47.117996Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:47.118003Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:47.118463Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:47.118467Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:47.118939Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:47.118943Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:47.119418Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:47.119422Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:47.120427Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:47.120431Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:52.165458Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:29:52.165886Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:29:52.169386Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:29:52.169433Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:29:52.171798Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:52.171803Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:52.172269Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:52.172274Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:52.172748Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:52.172753Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:52.173221Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:52.173227Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:52.173688Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:52.173694Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:52.174714Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:52.174719Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:55.198521Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:29:55.198964Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:29:55.202396Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:29:55.202439Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:29:55.204698Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:55.204702Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:55.205178Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:55.205185Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:55.205663Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:55.205670Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:55.206139Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:55.206144Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:55.206614Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:55.206618Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:29:55.207586Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:29:55.207590Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:08.351520Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:30:08.352081Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:30:08.356577Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:30:08.356635Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:30:08.358992Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:08.358997Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:08.359481Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:08.359484Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:08.359981Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:08.359988Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:08.360478Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:08.360485Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:08.361000Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:08.361004Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:08.362177Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:08.362181Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:11.731049Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:30:11.731490Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:30:11.735190Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:30:11.735242Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:30:11.737522Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:11.737528Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:11.737990Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:11.737994Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:11.738462Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:11.738468Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:11.738972Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:11.738976Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:11.739427Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:11.739431Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:11.740417Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:11.740421Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:25.656550Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:30:25.657177Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:30:25.661533Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:30:25.661586Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:30:25.663962Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:25.663971Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:25.664449Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:25.664454Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:25.664962Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:25.664970Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:25.665498Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:25.665504Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:25.666013Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:25.666018Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:25.667116Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:25.667120Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:29.645821Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:30:29.646279Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:30:29.649861Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:30:29.649912Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:30:29.652196Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:29.652203Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:29.652673Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:29.652679Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:29.653152Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:29.653157Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:29.653622Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:29.653625Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:29.654091Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:29.654095Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:29.655092Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:29.655096Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:36.516865Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:30:36.517225Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:30:36.520005Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:30:36.520049Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:30:36.523233Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:36.523240Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:36.523685Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:36.523691Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:36.524132Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:36.524136Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:36.524570Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:36.524575Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:36.525017Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:36.525024Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:36.525995Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:36.526000Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:40.241009Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:30:40.241462Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:30:40.245000Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:30:40.245050Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:30:40.247314Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:40.247319Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:40.247782Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:40.247787Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:40.248256Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:40.248262Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:40.248733Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:40.248737Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:40.249213Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:40.249217Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:40.250228Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:40.250232Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:44.183397Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:30:44.183805Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:30:44.187010Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:30:44.187053Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:30:44.189305Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:44.189312Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:44.189764Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:44.189768Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:44.190213Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:44.190217Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:44.190683Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:44.190687Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:44.191126Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:44.191130Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:44.192060Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:44.192064Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:48.075074Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:30:48.075521Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:30:48.078989Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:30:48.079035Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:30:48.081291Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:48.081297Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:48.081784Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:48.081788Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:48.082254Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:48.082258Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:48.082719Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:48.082723Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:48.083182Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:48.083186Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:48.084271Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:48.084275Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:53.194045Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:30:53.194455Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:30:53.197940Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:30:53.197989Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:30:53.200418Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:53.200425Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:53.200913Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:53.200918Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:53.201443Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:53.201447Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:53.201935Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:53.201938Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:53.202415Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:53.202421Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:53.203420Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:53.203425Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:57.396169Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:30:57.396601Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:30:57.400217Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:30:57.400265Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:30:57.402540Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:57.402546Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:57.403081Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:57.403086Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:57.403574Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:57.403577Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:57.404042Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:57.404048Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:57.404512Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:57.404517Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:30:57.405469Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:30:57.405476Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:01.619262Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:31:01.619700Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:31:01.623071Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:31:01.623117Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:31:01.625386Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:01.625390Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:01.625854Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:01.625860Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:01.626316Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:01.626320Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:01.626778Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:01.626784Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:01.627253Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:01.627256Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:01.628363Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:01.628366Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:07.022510Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:31:07.022957Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:31:07.026483Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:31:07.026530Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:31:07.028758Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:07.028765Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:07.029222Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:07.029228Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:07.029816Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:07.029823Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:07.030300Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:07.030304Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:07.030762Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:07.030765Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:07.031762Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:07.031766Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:11.117142Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:31:11.117597Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:31:11.121112Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:31:11.121159Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:31:11.123424Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:11.123431Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:11.123905Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:11.123911Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:11.124372Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:11.124376Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:11.124854Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:11.124860Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:11.125342Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:11.125346Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:11.126307Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:11.126312Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:16.451806Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:31:16.452267Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:31:16.455845Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:31:16.455897Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:31:16.458405Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:16.458411Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:16.458916Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:16.458920Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:16.459410Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:16.459416Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:16.459923Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:16.459926Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:16.460396Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:16.460400Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:16.461529Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:16.461532Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:21.461429Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:31:21.461848Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:31:21.465432Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:31:21.465479Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:31:21.467709Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:21.467714Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:21.468172Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:21.468176Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:21.468644Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:21.468647Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:21.469113Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:21.469119Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:21.469582Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:21.469586Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:21.470563Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:21.470570Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:27.501340Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:31:27.501784Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:31:27.505489Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:31:27.505539Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:31:27.507815Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:27.507822Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:27.508294Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:27.508299Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:27.508769Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:27.508773Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:27.509233Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:27.509237Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:27.509699Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:27.509705Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:27.510687Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:27.510692Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:35.694437Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:31:35.694888Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:31:35.698549Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:31:35.698597Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:31:35.700892Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:35.700898Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:35.701357Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:35.701362Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:35.701835Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:35.701841Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:35.702326Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:35.702330Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:35.702793Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:35.702796Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:35.703803Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:35.703807Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:41.019921Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:31:41.020366Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:31:41.023894Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:31:41.023942Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:31:41.026413Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:41.026420Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:41.026890Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:41.026896Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:41.027361Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:41.027369Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:41.027852Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:41.027856Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:41.028323Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:41.028327Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:41.029325Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:41.029329Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:49.954469Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:31:49.954916Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:31:49.958424Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:31:49.958471Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:31:49.960680Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:49.960689Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:49.961155Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:49.961159Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:49.961771Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:49.961781Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:49.962299Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:49.962303Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:49.962762Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:49.962765Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:49.963730Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:49.963736Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:54.393876Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:31:54.394304Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:31:54.397794Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:31:54.397842Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:31:54.400183Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:54.400190Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:54.400661Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:54.400667Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:54.401159Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:54.401164Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:54.401635Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:54.401640Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:54.402113Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:54.402117Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:31:54.403098Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:31:54.403102Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:32:03.348463Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:32:03.349008Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:32:03.353386Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:32:03.353443Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:32:03.355894Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:32:03.355899Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:32:03.356428Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:32:03.356435Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:32:03.356942Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:32:03.356945Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:32:03.357441Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:32:03.357445Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:32:03.357928Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:32:03.357933Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:32:03.358970Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:32:03.358976Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:32:08.628733Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:32:08.629173Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:32:08.632847Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:32:08.632896Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:32:08.635136Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:32:08.635148Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:32:08.635608Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:32:08.635612Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:32:08.636074Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:32:08.636079Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:32:08.636561Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:32:08.636565Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:32:08.637025Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:32:08.637028Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:32:08.638021Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:32:08.638027Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from PIL import Image
+from pathlib import Path
+for f in sorted(Path('items').glob('*.png'))[:3]:
+ im=Image.open(f)
+ print(f.name, im.size, im.info)
+PY" in /Users/rohit/Documents/Workspace/Coding/benchbench/runs/two_model_sweep_20260515_181811/isolated_solver_grid_gpt_5_2__solved_by__gpt_5_5
+ succeeded in 0ms:
+fso_20260516_000.png (640, 640) {}
+fso_20260516_001.png (640, 640) {}
+fso_20260516_002.png (640, 640) {}
+
+2026-05-16T03:32:21.377124Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/rohit/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-05-16T03:32:21.377691Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+2026-05-16T03:32:21.382210Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/twilio-developer-kit/.codex-plugin/plugin.json
+2026-05-16T03:32:21.382271Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/rohit/.codex/.tmp/plugins/plugins/openai-developers/.codex-plugin/plugin.json
+2026-05-16T03:32:21.384688Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:32:21.384697Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:32:21.385193Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:32:21.385197Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:32:21.385689Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:32:21.385695Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:32:21.386182Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:32:21.386186Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:32:21.386670Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:32:21.386674Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-16T03:32:21.387701Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-16T03:32:21.387706Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+codex
+{"id":"fso_20260516_000","answer":"ECAD"}
+{"id":"fso_20260516_001","answer":"SQTR"}
+{"id":"fso_20260516_002","answer":"KFHJG"}
+{"id":"fso_20260516_003","answer":"NLXYM"}
+{"id":"fso_20260516_004","answer":"UWZY"}
+{"id":"fso_20260516_005","answer":"ACBDE"}
+{"id":"fso_20260516_006","answer":"TRSQP"}
+{"id":"fso_20260516_007","answer":"FHJK"}
+{"id":"fso_20260516_008","answer":"MLYXN"}
+{"id":"fso_20260516_009","answer":"WZUV"}
+{"id":"fso_20260516_010","answer":"DEAC"}
+{"id":"fso_20260516_011","answer":"RPSQT"}
+{"id":"fso_20260516_012","answer":"JKFGH"}
+{"id":"fso_20260516_013","answer":"YLMXN"}
+{"id":"fso_20260516_014","answer":"YUWVZ"}
+{"id":"fso_20260516_015","answer":"ACBED"}
+{"id":"fso_20260516_016","answer":"SPRT"}
+{"id":"fso_20260516_017","answer":"HGFKJ"}
+{"id":"fso_20260516_018","answer":"LXYMN"}
+{"id":"fso_20260516_019","answer":"YUVZW"}
+{"id":"fso_20260516_020","answer":"FBCDA"}
+{"id":"fso_20260516_021","answer":"PQTS"}
+{"id":"fso_20260516_022","answer":"HFGJK"}
+{"id":"fso_20260516_023","answer":"XMNYL"}
+{"id":"fso_20260516_024","answer":"YWVZU"}
+{"id":"fso_20260516_025","answer":"ACEDB"}
+{"id":"fso_20260516_026","answer":"PQSTR"}
+{"id":"fso_20260516_027","answer":"GKHJF"}
+{"id":"fso_20260516_028","answer":"YMXNL"}
+{"id":"fso_20260516_029","answer":"VUZYW"}
+tokens used
+154,150

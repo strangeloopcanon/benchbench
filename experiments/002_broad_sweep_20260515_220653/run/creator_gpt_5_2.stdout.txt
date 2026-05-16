@@ -1,0 +1,9 @@
+Built a complete BenchBench benchmark package: **IgnoreSense** (gitignore-semantics correctness), with deterministic generation + grading and an isolated solver bundle.
+
+- Core files: `README.md`, `benchmark_spec.json`, `generator.py`, `verifier.py`, `scorer.py`, `gold_private_sample.jsonl`, `validation_report.md`, `failure_modes.md`
+- Solver isolation: `solver_bundle/SOLVER_MANIFEST.json`, `solver_bundle/items_private_sample.jsonl`, `solver_bundle/README.md` (no gold or grader code inside)
+- Verified required flow:
+  - Generated 30 items with `/Users/rohit/.pyenv/versions/global_env/bin/python generator.py --sample-count 30 --seed 20260516 --out-dir .`
+  - Verified reproducibility with `/Users/rohit/.pyenv/versions/global_env/bin/python verifier.py --items solver_bundle/items_private_sample.jsonl --gold gold_private_sample.jsonl` (OK)
+  - Self-scored gold = 1.0 via `scorer.py` (`score_report.json`)
+  - Weak naive baseline scored **9/30 = 0.30** (`baseline_naive_score_report.json`)

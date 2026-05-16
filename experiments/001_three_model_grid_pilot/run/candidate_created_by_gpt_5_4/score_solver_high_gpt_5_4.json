@@ -1,0 +1,187 @@
+{
+  "accuracy": 0.13333333333333333,
+  "correct": 4,
+  "details": [
+    {
+      "correct": false,
+      "gold": "B",
+      "id": "tile_provenance_000",
+      "prediction": "C"
+    },
+    {
+      "correct": false,
+      "gold": "B",
+      "id": "tile_provenance_001",
+      "prediction": "A"
+    },
+    {
+      "correct": false,
+      "gold": "C",
+      "id": "tile_provenance_002",
+      "prediction": "B"
+    },
+    {
+      "correct": false,
+      "gold": "C",
+      "id": "tile_provenance_003",
+      "prediction": "A"
+    },
+    {
+      "correct": true,
+      "gold": "C",
+      "id": "tile_provenance_004",
+      "prediction": "C"
+    },
+    {
+      "correct": false,
+      "gold": "C",
+      "id": "tile_provenance_005",
+      "prediction": "A"
+    },
+    {
+      "correct": false,
+      "gold": "C",
+      "id": "tile_provenance_006",
+      "prediction": "A"
+    },
+    {
+      "correct": false,
+      "gold": "D",
+      "id": "tile_provenance_007",
+      "prediction": "B"
+    },
+    {
+      "correct": false,
+      "gold": "A",
+      "id": "tile_provenance_008",
+      "prediction": "C"
+    },
+    {
+      "correct": false,
+      "gold": "D",
+      "id": "tile_provenance_009",
+      "prediction": "C"
+    },
+    {
+      "correct": false,
+      "gold": "B",
+      "id": "tile_provenance_010",
+      "prediction": "D"
+    },
+    {
+      "correct": false,
+      "gold": "C",
+      "id": "tile_provenance_011",
+      "prediction": "D"
+    },
+    {
+      "correct": false,
+      "gold": "C",
+      "id": "tile_provenance_012",
+      "prediction": "D"
+    },
+    {
+      "correct": false,
+      "gold": "B",
+      "id": "tile_provenance_013",
+      "prediction": "C"
+    },
+    {
+      "correct": true,
+      "gold": "A",
+      "id": "tile_provenance_014",
+      "prediction": "A"
+    },
+    {
+      "correct": false,
+      "gold": "A",
+      "id": "tile_provenance_015",
+      "prediction": "B"
+    },
+    {
+      "correct": false,
+      "gold": "B",
+      "id": "tile_provenance_016",
+      "prediction": "D"
+    },
+    {
+      "correct": false,
+      "gold": "C",
+      "id": "tile_provenance_017",
+      "prediction": "A"
+    },
+    {
+      "correct": true,
+      "gold": "A",
+      "id": "tile_provenance_018",
+      "prediction": "A"
+    },
+    {
+      "correct": false,
+      "gold": "D",
+      "id": "tile_provenance_019",
+      "prediction": "A"
+    },
+    {
+      "correct": false,
+      "gold": "D",
+      "id": "tile_provenance_020",
+      "prediction": "B"
+    },
+    {
+      "correct": false,
+      "gold": "D",
+      "id": "tile_provenance_021",
+      "prediction": "A"
+    },
+    {
+      "correct": false,
+      "gold": "A",
+      "id": "tile_provenance_022",
+      "prediction": "D"
+    },
+    {
+      "correct": false,
+      "gold": "D",
+      "id": "tile_provenance_023",
+      "prediction": "C"
+    },
+    {
+      "correct": false,
+      "gold": "A",
+      "id": "tile_provenance_024",
+      "prediction": "B"
+    },
+    {
+      "correct": false,
+      "gold": "D",
+      "id": "tile_provenance_025",
+      "prediction": "B"
+    },
+    {
+      "correct": false,
+      "gold": "A",
+      "id": "tile_provenance_026",
+      "prediction": "D"
+    },
+    {
+      "correct": false,
+      "gold": "C",
+      "id": "tile_provenance_027",
+      "prediction": "B"
+    },
+    {
+      "correct": false,
+      "gold": "B",
+      "id": "tile_provenance_028",
+      "prediction": "A"
+    },
+    {
+      "correct": true,
+      "gold": "A",
+      "id": "tile_provenance_029",
+      "prediction": "A"
+    }
+  ],
+  "total": 30
+}

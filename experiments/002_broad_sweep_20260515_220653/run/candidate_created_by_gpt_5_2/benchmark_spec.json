@@ -1,0 +1,33 @@
+{
+  "name": "IgnoreSense",
+  "version": "1.0.0",
+  "capability_claim": "Correctly implement a precise subset of .gitignore matching semantics (including negation and anchoring) and apply it to classify paths as ignored vs not ignored.",
+  "task_format": {
+    "input_item_fields": [
+      "id",
+      "gitignore",
+      "paths"
+    ],
+    "output_answer_format": "For each item, output a single JSON array (as a string) containing exactly the ignored paths from the provided `paths`, sorted lexicographically (Unicode codepoint order). Example: [\"build/\", \"dist/app.js\"]."
+  },
+  "rules": {
+    "allowed_tools": "Any tools are allowed for the solver, including writing and running code, as long as the solver only reads files inside solver_bundle/.",
+    "time_budget_notes": "Designed to be solvable by a careful engineer with a few hours and a test harness. It targets spec-implementation correctness, not memorization."
+  },
+  "closest_existing_benchmarks": [
+    {
+      "name": "LiveCodeBench / SWE-bench (adjacent)",
+      "why": "Like executable code tasks, this tests whether a solver can implement a tricky real-world spec; however this benchmark is self-contained, deterministic, and does not require external repos or unit tests."
+    }
+  ],
+  "not_a_duplicate_because": "This benchmark is not a general coding benchmark or a generic 'write a parser' task: it targets a specific, widely-misimplemented ruleset (.gitignore pattern matching) and includes adversarial edge cases (escaping, negation, anchoring, directory-only patterns, ** semantics) that systematically break naive implementations.",
+  "grading": {
+    "type": "deterministic_exact_match",
+    "details": "Answers are parsed as JSON arrays of strings and compared for exact equality after sorting and normalization of path strings."
+  },
+  "data_generation": {
+    "method": "Procedural generation with a fixed seed; patterns are sampled from a constrained grammar that is fully implemented by the reference matcher shipped with this package.",
+    "contamination_notes": "Items are generated at runtime from a seed and are not sourced from existing public datasets. The held-out sample included here is small; a larger run should generate fresh items per evaluation date."
+  }
+}
+

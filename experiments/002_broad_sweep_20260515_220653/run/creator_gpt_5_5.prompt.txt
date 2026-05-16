@@ -1,0 +1,395 @@
+
+You are gpt-5.5+Codex acting as a BenchBench creator.
+
+You are already in an empty artifact directory. Build one benchmark package
+here. You may use local computation and internet research if useful. Do not
+browse or research forever: the output must be a working package.
+
+Your task, in the broadest terms:
+
+Create the best possible new benchmark you can: valid, deterministic or
+reliably graded, human-auditable, hard for strong Codex-enabled models, and
+interesting rather than a near-duplicate of existing evals. You may choose any
+domain, modality, artifact type, environment, or scoring method that you can
+package and validate in this directory.
+
+You are not being asked to make a visual benchmark. You are not being asked to
+choose any particular domain. Use the landscape report and prior pilot only as
+evidence about what has been tried and what makes benchmarks good or bad.
+
+Benchmark landscape report:
+
+<<<BENCHMARK_LANDSCAPE
+# BenchBench research notes
+
+Last researched: 2026-05-15
+
+## Core take
+
+BenchBench is a good idea if it judges whether a model can produce a *valid, useful, hard benchmark package*, not merely whether it can invent tasks that current models fail.
+
+The major lesson from existing evals is that a benchmark is not just a prompt set. The best ones combine:
+
+- a clear construct claim: what capability is being measured
+- defensible item sourcing: expert-written, real-world, live, adversarial, or executable
+- reliable scoring: objective answers, test harnesses, calibrated judges, or human preference aggregation
+- human baselines: who can solve it and at what rate
+- contamination controls: hidden/private splits, live refresh, new items, or provenance checks
+- statistical analysis: discriminability, ranking stability, confidence intervals, item-level data
+- update process: versioning, review, retirement of bad items, and fresh hard items as models improve
+
+For BenchBench, the "frontier model cannot beat it by 50%" rule should be framed against humans, not absolute failure:
+
+> A generated benchmark is frontier-resistant if qualified humans reach a high minimum score, while the best frontier solver reaches less than 50% of human performance under a fixed budget.
+
+That avoids rewarding impossible, ambiguous, or ungradeable tasks.
+
+## Benchmarks and what they actually do
+
+### Broad knowledge and exam-style benchmarks
+
+| Benchmark | What it tests | How it is built | How it scores | BenchBench lesson |
+| --- | --- | --- | --- | --- |
+| MMLU | Broad multitask academic/professional knowledge | Multiple-choice questions across many subjects | Accuracy | Breadth makes adoption easy, but static exam-style datasets saturate and invite contamination. |
+| MMLU-Pro | Harder multitask understanding and reasoning | Removes trivial/noisy MMLU items, adds harder reasoning questions, expands answer options from 4 to 10 | Accuracy, with prompt-stability analysis | A "better benchmark" can be a cleaned, harder, more stable version of a saturated one. BenchBench should reward item cleanup and prompt robustness, not just novelty. |
+| GPQA | Graduate-level science Q&A | 448 multiple-choice questions written by biology, physics, and chemistry experts; designed to be hard even with web access | Accuracy; compares experts, skilled non-experts, and models | Expert construction plus human baselines are central. "Google-proof" is a useful property for generated benchmarks too. |
+| Humanity's Last Exam | Expert-level closed-ended academic questions | 2,500 expert-authored multimodal questions across 100+ subjects; unambiguous, verifiable answers; designed against quick retrieval | Accuracy/calibration on closed-ended questions | Pre-screen against current models and require known, verifiable answers. This is close to BenchBench's desired benchmark object. |
+| FrontierMath | Advanced math reasoning | Hundreds of original math problems crafted and vetted by expert mathematicians; some hidden/private | Exact answer or proof-style verification depending on problem | Originality and expert vetting matter, but very hard expert items need independent QA because grading/math errors become fatal. |
+
+Sources: [MMLU](https://arxiv.org/abs/2009.03300), [MMLU-Pro](https://arxiv.org/abs/2406.01574), [GPQA](https://arxiv.org/abs/2311.12022), [Humanity's Last Exam](https://arxiv.org/abs/2501.14249), [FrontierMath](https://arxiv.org/abs/2411.04872), [Epoch FrontierMath page](https://epoch.ai/frontiermath/the-benchmark).
+
+### Dynamic, live, and contamination-resistant benchmarks
+
+| Benchmark | What it tests | How it is built | How it scores | BenchBench lesson |
+| --- | --- | --- | --- | --- |
+| BIG-bench | Broad probing of language model capabilities | Collaborative benchmark with 200+ tasks contributed by many researchers | Task-specific metrics | Community task submission can scale coverage, but quality varies. BenchBench needs task acceptance gates. |
+| Dynabench | Robustness under model-in-the-loop data collection | Humans write examples that fool a target model but remain clear to other humans | Task-specific; dynamic rounds | This is the closest ancestor of "models create hard evals." The key constraint is "fool model, not humans." |
+| LiveBench | Contamination-free general LLM capabilities | Frequently updated questions from recent math competitions, arXiv papers, news, datasets, and harder variants of prior tasks | Objective ground-truth scoring | Live refresh plus objective grading is one of the cleanest anti-leakage patterns. |
+| LiveCodeBench | Code generation and related coding skills | Continuously collects new contest problems from LeetCode, AtCoder, and Codeforces; covers generation, repair, execution, test-output prediction | Functional correctness and task metrics | Time-based sourcing is a practical contamination control. |
+
+Sources: [BIG-bench GitHub](https://github.com/google/BIG-bench), [BIG-bench paper](https://arxiv.org/abs/2206.04615), [Dynabench](https://arxiv.org/abs/2104.14337), [LiveBench](https://arxiv.org/abs/2406.19314), [LiveBench GitHub](https://github.com/livebench/livebench), [LiveCodeBench](https://arxiv.org/abs/2403.07974).
+
+### Real-world executable and agent benchmarks
+
+| Benchmark | What it tests | How it is built | How it scores | BenchBench lesson |
+| --- | --- | --- | --- | --- |
+| SWE-bench | Real software issue resolution | 2,294 issues and PRs from 12 Python repos; model gets repo plus issue and must edit code | Tests pass after patch | Executable graders are powerful. BenchBench should prefer generated evals with runnable checkers where possible. |
+| MLE-bench | Machine learning engineering | 75 Kaggle competitions curated into offline tasks with local train/test splits and grading scripts | Competition-specific score; medal baselines from Kaggle leaderboards | Use existing human competition ecosystems as baselines and graders. |
+| RE-Bench | AI R&D / research engineering | METR tasks conforming to a task standard; compares AI agents and human experts under time budgets | Task-specific outcome under controlled budgets | For long-horizon tasks, budget and scaffold must be part of the benchmark definition. |
+| OSWorld | Computer-use agents | 369 tasks in real computer environments across desktop/web apps, file I/O, and cross-app workflows | Execution-based task success | Environment setup and reset become part of the benchmark. Generated benchmarks must include reproducible environments. |
+| BFCL | Function/tool calling | Real-world functions and multi-turn tool-use scenarios, periodically updated | AST/execution-style correctness, cost | Tool-use benchmarks show the value of narrow, verifiable subskills. |
+
+Sources: [SWE-bench](https://arxiv.org/abs/2310.06770), [SWE-bench GitHub](https://github.com/SWE-bench/SWE-bench), [MLE-bench](https://openai.com/index/mle-bench/), [MLE-bench GitHub](https://github.com/openai/mle-bench), [RE-Bench GitHub](https://github.com/METR/RE-Bench), [METR RE-Bench writeup](https://metr.org/blog/2024-11-22-evaluating-r-d-capabilities-of-llms/), [OSWorld](https://arxiv.org/abs/2404.07972), [BFCL leaderboard](https://gorilla.cs.berkeley.edu/leaderboard), [BFCL project](https://sky.cs.berkeley.edu/project/berkeley-function-calling-leaderboard/).
+
+### Preference, chat, and judge-based benchmarks
+
+| Benchmark | What it tests | How it is built | How it scores | BenchBench lesson |
+| --- | --- | --- | --- | --- |
+| Chatbot Arena | Human preference over model responses | Blind pairwise comparisons on live user prompts | Elo / Bradley-Terry style ratings from votes | Good for open-ended chat quality, but it measures preference, not ground truth. |
+| Arena-Hard | Hard real-user prompts that better predict Arena preference | Samples from Chatbot Arena queries; topic modeling for diversity; LLM filtering for quality | LLM judge / automated preference, checked against Arena agreement | Strong pipeline example: source real prompts, cluster for diversity, filter for quality, validate against human rankings. |
+| MT-Bench / LLM-as-judge style evals | Multi-turn helpfulness and instruction following | Fixed prompts with model-judge scoring | Judge scores | Useful for speed, but BenchBench should treat LLM judges as provisional unless calibrated to humans or objective checks. |
+
+Sources: [Chatbot Arena paper](https://arxiv.org/abs/2403.04132), [Arena-Hard pipeline](https://www.lmsys.org/blog/2024-04-19-arena-hard/).
+
+### Benchmark quality and "benchmarking benchmarks"
+
+| Source | Main idea | BenchBench lesson |
+| --- | --- | --- |
+| Benchmark^2 | Evaluates benchmark quality using cross-benchmark ranking consistency, discriminability, and capability alignment deviation | BenchBench should directly score generated benchmarks on these properties. |
+| Bowman and Dahl, "What Will it Take to Fix Benchmarking..." | Benchmarks need validity, reliable annotation, enough statistical power, and attention to social bias | These are acceptance gates before hardness counts. |
+| Toward an Evaluation Science for Generative AI Systems | Metrics should map to real-world performance, be iteratively refined, and sit inside institutions/norms | BenchBench should judge whether the benchmark would remain useful outside a one-off paper. |
+| tinyBenchmarks / Anchor Points | Item Response Theory can preserve rankings using small high-information item subsets | BenchBench can keep solver costs down by requiring anchor items and item-level difficulty estimates. |
+
+Sources: [Benchmark^2](https://arxiv.org/abs/2601.03986), [Fix Benchmarking in NLU](https://arxiv.org/abs/2104.02145), [Evaluation Science for Generative AI](https://arxiv.org/abs/2503.05336), [tinyBenchmarks](https://arxiv.org/abs/2402.14992), [Anchor Points](https://api.emergentmind.com/papers/2309.08638).
+
+## The eval-correlation material
+
+I found two relevant recent correlation items.
+
+### 1. OpenThoughts3 eval meta-analysis
+
+OpenThoughts3 released results from evaluating about 1,000 models and shows a benchmark-correlation heatmap across reasoning benchmarks. Their main observations:
+
+- rankings across different reasoning benchmarks generally positively correlate
+- correlations are stronger within categories, such as math with math or code with code
+- some pairs show strong agreement, such as AIME24 and AIME25
+- some correlations hide saturation, such as easier math benchmarks where strong models cluster near perfect scores
+- Pearson score correlation and Kendall rank correlation can tell different stories, especially when middle-tier models are hard to distinguish
+- aggregate rankings can change when the benchmark basket changes; for example, a science-only basket can elevate a different model than an all-category basket
+
+Source: [OpenThoughts3 - 1000 models evaluated](https://www.open-thoughts.ai/blog/ot3-experiment-data).
+
+### 2. "LLM rankings are not a ladder" thread
+
+The recent Reddit thread by Spico197 builds a graph from benchmark wins: if model A beats model B on benchmark X, add edge A -> B. The reported findings:
+
+- 126,937 weak-to-strong model pairs were checked, where the source model had lower Artificial Analysis Intelligence Index than the target
+- 119,514 of those pairs were reachable through benchmark win chains, a 94.2% reachable rate
+- 91.4% of reachable weak-to-strong paths took only 2-3 hops
+- about 119k direct weak-over-strong triples remained after treating non-positive benchmark values as missing
+- high-reversal candidates included HLE, IFBench, AIME 2025, TAU2, and SciCode
+- IFBench was reported at about 17.5% reversal rate, 80% coverage, and r ~= 0.82 correlation with Intelligence Index
+
+Source: [Reddit thread](https://www.reddit.com/r/MachineLearning/comments/1t8f61o/llm_rankings_are_not_a_ladder_experimental/). The linked tool is [LLM Win](https://llm-win.com/), though the public page did not expose crawlable text in my search session.
+
+### What this means for BenchBench
+
+Do not rank generated benchmarks only by "frontier model failed." A generated benchmark can be valuable in two different ways:
+
+- it aligns with existing capability ladders but is less saturated, cleaner, or cheaper
+- it reveals an interpretable residual capability that existing eval baskets miss
+
+BenchBench should therefore measure both:
+
+- consistency: does the generated benchmark produce sensible rankings against nearby evals?
+- complementarity: does it add a useful new axis instead of duplicating MMLU/GPQA/AIME/SWE-bench?
+
+Reversals are not automatically bad. A reversal is good if it reflects a named skill specialization and bad if it reflects noise, ambiguous items, bad graders, low coverage, or saturation.
+
+## Proposed BenchBench benchmark package spec
+
+A generator model should output a full package, not just questions:
+
+1. Capability claim
+   - What skill does this benchmark measure?
+   - Why does the skill matter?
+   - What existing evals are adjacent?
+
+2. Task boundary
+   - Input format
+   - Allowed tools
+   - Time/token budget
+   - Interaction rules
+   - Output format
+
+3. Item set or item generator
+   - At least a public dev subset and a private/held-out test subset
+   - Provenance for each item
+   - Deduplication and contamination checks
+   - Difficulty labels or expected difficulty model
+
+4. Grader
+   - Objective checker, executable harness, reference answer, calibrated rubric, or human preference protocol
+   - Failure cases and ambiguity policy
+   - Repeatability requirements
+
+5. Human baseline
+   - Who counts as qualified
+   - Sample size
+   - Time/tool budget
+   - Expected score and confidence interval
+
+6. Frontier pre-screen
+   - Which solver models were tried
+   - Prompt/scaffold budget
+   - Best score and uncertainty
+   - Evidence that failure is not caused by broken instructions or grading
+
+7. Benchmark-quality report
+   - Discriminability
+   - Correlation with nearby benchmarks
+   - Complementarity / residual skill signal
+   - Item-level pass rates
+   - Known limitations
+
+## Acceptance gates for generated benchmarks
+
+A BenchBench candidate should pass all gates before getting a hardness score:
+
+1. Validity gate
+   - The benchmark measures a named capability, not "stuff the model got wrong."
+
+2. Solvability gate
+   - Qualified humans can solve it well above chance. For an MVP, require >= 75% human score or an explained domain-specific threshold.
+
+3. Grading gate
+   - The grader is deterministic or has measured inter-rater reliability.
+
+4. Frontier-resistance gate
+   - Best tested frontier solver scores below 50% of qualified human performance under the same stated budget.
+
+5. Novelty / contamination gate
+   - Items are original, post-cutoff, private, procedurally generated, or checked against known benchmark/training leaks.
+
+6. Statistical gate
+   - The benchmark separates at least some solvers with confidence intervals, not just noise.
+
+7. Correlation / complementarity gate
+   - The benchmark either tracks a nearby capability better than saturated evals or adds an interpretable new axis.
+
+8. Cost gate
+   - A normal run is affordable enough to reproduce, or the benchmark provides a calibrated tiny/anchor subset.
+
+9. Abuse / bias gate
+   - The benchmark does not reward harmful behavior, identity shortcuts, or ungrounded cultural assumptions unless those are explicitly the object of study and safely scoped.
+
+## Scoring sketch
+
+Use binary gates first, then score accepted candidates:
+
+```
+BenchBenchScore =
+  ValidItemCount
+  * HumanSolvability
+  * FrontierGap
+  * GraderReliability
+  * Discriminability
+  * Complementarity
+  * Reproducibility
+  - CostPenalty
+  - AmbiguityPenalty
+  - LeakagePenalty
+```
+
+Possible definitions:
+
+- `HumanSolvability`: min(1, human_score / target_human_score)
+- `FrontierGap`: max(0, 1 - best_frontier_score / (0.5 * human_score)), capped at 1
+- `GraderReliability`: exact checker = 1; human rubric = inter-rater agreement or calibrated judge-human agreement
+- `Discriminability`: performance spread adjusted by uncertainty, or IRT item discrimination
+- `Complementarity`: residual rank signal after controlling for a benchmark basket, plus an explanation of the skill
+- `Reproducibility`: environment rebuild success, deterministic scoring, versioned data
+
+Important: a generated benchmark that no model and no human can solve should score zero, no matter how "hard" it is.
+
+## Suggested MVP
+
+Do a small first run before building a full leaderboard.
+
+1. Ask 5 generator models to produce benchmark packages in 3 domains:
+   - short-horizon objective reasoning
+   - code/tool/executable tasks
+   - domain-expert closed-answer questions
+
+2. Require each generator to produce:
+   - 20 public/dev items
+   - 50 private/test items or a generator for them
+   - grader
+   - human baseline plan
+   - contamination plan
+   - predicted frontier failure mode
+
+3. Run automated validation:
+   - schema validation
+   - duplicate/leak search
+   - prompt clarity check
+   - grader determinism check
+   - cheap solver pass with 2-3 models
+
+4. Human-review the top 5 generated packages:
+   - reject ambiguous tasks
+   - repair only formatting/packaging issues, not item logic
+   - record review labor as part of the score
+
+5. Run a solver gauntlet:
+   - 3-5 frontier solvers
+   - fixed prompts/scaffolds
+   - multiple seeds where nondeterminism matters
+   - item-level outputs saved
+
+6. Publish not only a generator leaderboard, but a benchmark-quality report:
+   - how many packages passed gates
+   - why packages failed
+   - which generated benchmarks were genuinely new/useful
+   - whether any exposed a stable residual capability
+
+## Strong initial claim
+
+The defensible paper/project claim is:
+
+> BenchBench evaluates whether frontier models can generate new evaluation instruments that are valid, human-solvable, reliably graded, contamination-resistant, and frontier-resistant.
+
+The stronger claim to avoid until proven:
+
+> Models can autonomously discover the next generation of AI benchmarks.
+
+That may become true, but the first version should prove the narrower thing: which models can produce benchmark candidates that survive real benchmark-construction scrutiny.
+
+
+BENCHMARK_LANDSCAPE>>>
+
+Prior BenchBench pilot result:
+
+<<<PRIOR_PILOT
+# Experiment 001: Three-Model Grid Pilot
+
+This folder preserves the first complete BenchBench pilot grid.
+
+## What It Tested
+
+- Creator models: GPT-5.2, GPT-5.4, GPT-5.5 through Codex.
+- Solver models: GPT-5.2, GPT-5.4, GPT-5.5 through Codex.
+- Creator prompt style: influenced by the prior Visual Trace success, which
+  pulled candidates toward visual/topology benchmarks.
+
+## Main Result
+
+Only the GPT-5.4-created benchmark passed the difficulty gate.
+
+| creator | benchmark | solver GPT-5.2 | solver GPT-5.4 | solver GPT-5.5 | status |
+|---|---|---:|---:|---:|---|
+| GPT-5.2 | Folded Strip Order | 16/30 | 14/30 | 19/30 | too easy |
+| GPT-5.4 | Occluded Tile Provenance | 7/30 | 4/30 | 5/30 | passed |
+| GPT-5.5 | Shadow Weave Topology | 15/30 | 24/30 | 26/30 | too easy |
+
+Extra sanity check: GPT-5.5 at `xhigh` scored 10/30 on GPT-5.4's candidate.
+
+## Files
+
+- `experiment_summary_three_model_grid_20260515.md`: final interpretation.
+- `experiment_summary_two_model_sweep_20260515.md`: earlier two-model sweep.
+- `run/`: full run artifacts, candidates, solver outputs, score JSONs, and logs.
+
+## Caveat
+
+This pilot was useful, but the prompt had a visual/topology attractor. The next
+experiment should ask for the best possible benchmark in the broadest terms,
+provide only benchmark landscape context and prior results, and avoid nudging
+toward any specific domain or modality.
+
+
+PRIOR_PILOT>>>
+
+Required root files:
+- README.md
+- benchmark_spec.json
+- generator.py
+- verifier.py
+- scorer.py
+- gold_private_sample.jsonl
+- validation_report.md
+- failure_modes.md
+
+Required isolated solver bundle:
+- solver_bundle/SOLVER_MANIFEST.json
+- solver_bundle/items_private_sample.jsonl
+- solver_bundle/README.md or solver_bundle/solver_packet.md
+- any solver-visible assets needed for the task
+
+Strict CLI contract from this directory:
+- `/Users/rohit/.pyenv/versions/global_env/bin/python generator.py --sample-count 30 --seed 20260516 --out-dir .`
+- `/Users/rohit/.pyenv/versions/global_env/bin/python verifier.py --items solver_bundle/items_private_sample.jsonl --gold gold_private_sample.jsonl`
+- `/Users/rohit/.pyenv/versions/global_env/bin/python scorer.py --gold gold_private_sample.jsonl --predictions predictions.jsonl --out score_report.json`
+
+Data contract:
+- gold_private_sample.jsonl rows include exactly `id` and `answer`.
+- solver predictions include exactly `id` and `answer`.
+- solver_bundle/items_private_sample.jsonl must include all item ids and any
+  solver-visible asset references relative to solver_bundle.
+- The solver bundle must not contain gold answers, generator/verifier/scorer
+  code, validation reports, private audit traces, hidden seeds, private solution
+  labels, or answer keys.
+
+Before finishing:
+1. Generate 30 private sample items.
+2. Verify the package.
+3. Run a gold self-score.
+4. Run at least one weak baseline or obvious-shortcut baseline.
+5. Inspect the solver bundle for leakage.
+6. Write validation_report.md.
+7. In README.md or benchmark_spec.json, briefly state what existing benchmarks
+   this is closest to and why this package is not merely a duplicate.
+
+BenchBench evaluates you as a benchmark inventor. The solver models will be
+allowed to use all available tools and try hard, except they may not inspect
+private files outside the isolated solver bundle.

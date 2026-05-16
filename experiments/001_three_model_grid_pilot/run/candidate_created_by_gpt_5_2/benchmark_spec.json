@@ -1,0 +1,43 @@
+{
+  "benchmark_name": "Folded Strip Order (FSO) v1",
+  "benchmark_id": "folded_strip_order_v1",
+  "version": "1.0.0",
+  "task_family": "raster_only_perceptual_topology",
+  "description": "Given a single raster image of a folded paper strip with labeled visible segments, infer the true order of the labels along the underlying strip from START to END.",
+  "item_count_default": 30,
+  "answer_format": {
+    "type": "string",
+    "constraints": "A permutation of the visible segment labels (e.g. ABCDE) with no separators; exact match required."
+  },
+  "determinism": {
+    "generator_seeded": true,
+    "generator_seed_cli_param": "--seed",
+    "guaranteed_reproducible_on": [
+      "Python>=3.10",
+      "Pillow>=9"
+    ]
+  },
+  "scoring": {
+    "type": "exact_match",
+    "per_item_score": 1,
+    "max_score": 30
+  },
+  "input_modalities": [
+    "image/png"
+  ],
+  "output_modalities": [
+    "text"
+  ],
+  "difficulty_rationale": [
+    "The visually obvious shortcut (left-to-right or nearest-neighbor continuity in 2D) is intentionally unreliable due to folds, occlusions, and crossings.",
+    "The correct order is recoverable by tracing texture continuity at segment ends, which is human-auditable but brittle for LLM vision systems."
+  ],
+  "files": {
+    "generator": "generator.py",
+    "verifier": "verifier.py",
+    "scorer": "scorer.py",
+    "gold_private_sample": "gold_private_sample.jsonl",
+    "solver_bundle_dir": "solver_bundle"
+  }
+}
+

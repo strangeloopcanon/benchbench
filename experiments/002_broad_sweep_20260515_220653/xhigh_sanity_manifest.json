@@ -1,0 +1,44 @@
+[
+  {
+    "benchmark": "IgnoreSense",
+    "creator_model": "gpt-5.2",
+    "out_path": "/Users/rohit/Documents/Workspace/Coding/benchbench/experiments/002_broad_sweep_20260515_220653/run/solver_gpt_5_2__solved_by__gpt_5_5__xhigh.jsonl",
+    "prediction_rows": 30,
+    "predictions_path": "/Users/rohit/Documents/Workspace/Coding/benchbench/experiments/002_broad_sweep_20260515_220653/run/candidate_created_by_gpt_5_2/predictions_solver_gpt_5_5_xhigh.jsonl",
+    "prompt_path": "/Users/rohit/Documents/Workspace/Coding/benchbench/experiments/002_broad_sweep_20260515_220653/run/solver_gpt_5_2__solved_by__gpt_5_5__xhigh.prompt.txt",
+    "returncode": 0,
+    "score_path": "/Users/rohit/Documents/Workspace/Coding/benchbench/experiments/002_broad_sweep_20260515_220653/run/candidate_created_by_gpt_5_2/score_solver_gpt_5_5_xhigh.json",
+    "score_returncode": 0,
+    "score_stderr": "",
+    "score_stdout": "{\"accuracy\": 0.23333333333333334, \"correct\": 7, \"total\": 30}\n",
+    "score_summary": {
+      "accuracy": 0.23333333333333334,
+      "correct": 7,
+      "total": 30
+    },
+    "stderr_path": "/Users/rohit/Documents/Workspace/Coding/benchbench/experiments/002_broad_sweep_20260515_220653/run/solver_gpt_5_2__solved_by__gpt_5_5__xhigh.stderr.txt",
+    "stdout_path": "/Users/rohit/Documents/Workspace/Coding/benchbench/experiments/002_broad_sweep_20260515_220653/run/solver_gpt_5_2__solved_by__gpt_5_5__xhigh.stdout.txt",
+    "tokens_used": 117912
+  },
+  {
+    "benchmark": "protocol_archaeology",
+    "creator_model": "gpt-5.5",
+    "out_path": "/Users/rohit/Documents/Workspace/Coding/benchbench/experiments/002_broad_sweep_20260515_220653/run/solver_gpt_5_5__solved_by__gpt_5_5__xhigh.jsonl",
+    "prediction_rows": 30,
+    "predictions_path": "/Users/rohit/Documents/Workspace/Coding/benchbench/experiments/002_broad_sweep_20260515_220653/run/candidate_created_by_gpt_5_5/predictions_solver_gpt_5_5_xhigh.jsonl",
+    "prompt_path": "/Users/rohit/Documents/Workspace/Coding/benchbench/experiments/002_broad_sweep_20260515_220653/run/solver_gpt_5_5__solved_by__gpt_5_5__xhigh.prompt.txt",
+    "returncode": 0,
+    "score_path": "/Users/rohit/Documents/Workspace/Coding/benchbench/experiments/002_broad_sweep_20260515_220653/run/candidate_created_by_gpt_5_5/score_solver_gpt_5_5_xhigh.json",
+    "score_returncode": 0,
+    "score_stderr": "",
+    "score_stdout": "{\"accuracy\": 0.0, \"correct\": 0, \"malformed_count\": 0, \"total\": 30}\n",
+    "score_summary": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "total": 30
+    },
+    "stderr_path": "/Users/rohit/Documents/Workspace/Coding/benchbench/experiments/002_broad_sweep_20260515_220653/run/solver_gpt_5_5__solved_by__gpt_5_5__xhigh.stderr.txt",
+    "stdout_path": "/Users/rohit/Documents/Workspace/Coding/benchbench/experiments/002_broad_sweep_20260515_220653/run/solver_gpt_5_5__solved_by__gpt_5_5__xhigh.stdout.txt",
+    "tokens_used": 194895
+  }
+]

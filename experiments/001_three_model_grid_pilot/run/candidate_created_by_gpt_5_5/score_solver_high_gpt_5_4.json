@@ -1,0 +1,189 @@
+{
+  "accuracy": 0.8,
+  "correct": 24,
+  "details": [
+    {
+      "correct": true,
+      "gold": "MPML",
+      "id": "swt_001",
+      "prediction": "MPML"
+    },
+    {
+      "correct": false,
+      "gold": "QKLL",
+      "id": "swt_002",
+      "prediction": "KPQL"
+    },
+    {
+      "correct": true,
+      "gold": "LPLP",
+      "id": "swt_003",
+      "prediction": "LPLP"
+    },
+    {
+      "correct": false,
+      "gold": "KLKP",
+      "id": "swt_004",
+      "prediction": "KLPK"
+    },
+    {
+      "correct": true,
+      "gold": "NQMQ",
+      "id": "swt_005",
+      "prediction": "NQMQ"
+    },
+    {
+      "correct": true,
+      "gold": "QMQM",
+      "id": "swt_006",
+      "prediction": "QMQM"
+    },
+    {
+      "correct": true,
+      "gold": "KPNK",
+      "id": "swt_007",
+      "prediction": "KPNK"
+    },
+    {
+      "correct": true,
+      "gold": "NQPL",
+      "id": "swt_008",
+      "prediction": "NQPL"
+    },
+    {
+      "correct": false,
+      "gold": "LLQN",
+      "id": "swt_009",
+      "prediction": "QLQN"
+    },
+    {
+      "correct": true,
+      "gold": "KLNM",
+      "id": "swt_010",
+      "prediction": "KLNM"
+    },
+    {
+      "correct": false,
+      "gold": "KNMN",
+      "id": "swt_011",
+      "prediction": "KMNN"
+    },
+    {
+      "correct": true,
+      "gold": "QPQP",
+      "id": "swt_012",
+      "prediction": "QPQP"
+    },
+    {
+      "correct": true,
+      "gold": "PNKK",
+      "id": "swt_013",
+      "prediction": "PNKK"
+    },
+    {
+      "correct": true,
+      "gold": "LMKN",
+      "id": "swt_014",
+      "prediction": "LMKN"
+    },
+    {
+      "correct": true,
+      "gold": "LQQM",
+      "id": "swt_015",
+      "prediction": "LQQM"
+    },
+    {
+      "correct": true,
+      "gold": "MLNL",
+      "id": "swt_016",
+      "prediction": "MLNL"
+    },
+    {
+      "correct": true,
+      "gold": "NKMQ",
+      "id": "swt_017",
+      "prediction": "NKMQ"
+    },
+    {
+      "correct": true,
+      "gold": "KNKM",
+      "id": "swt_018",
+      "prediction": "KNKM"
+    },
+    {
+      "correct": false,
+      "gold": "PMLK",
+      "id": "swt_019",
+      "prediction": "PMLL"
+    },
+    {
+      "correct": true,
+      "gold": "MLNQ",
+      "id": "swt_020",
+      "prediction": "MLNQ"
+    },
+    {
+      "correct": true,
+      "gold": "KLPK",
+      "id": "swt_021",
+      "prediction": "KLPK"
+    },
+    {
+      "correct": true,
+      "gold": "KPQQ",
+      "id": "swt_022",
+      "prediction": "KPQQ"
+    },
+    {
+      "correct": false,
+      "gold": "QKLN",
+      "id": "swt_023",
+      "prediction": "MKLN"
+    },
+    {
+      "correct": true,
+      "gold": "LKMM",
+      "id": "swt_024",
+      "prediction": "LKMM"
+    },
+    {
+      "correct": true,
+      "gold": "NLQP",
+      "id": "swt_025",
+      "prediction": "NLQP"
+    },
+    {
+      "correct": true,
+      "gold": "KQQM",
+      "id": "swt_026",
+      "prediction": "KQQM"
+    },
+    {
+      "correct": true,
+      "gold": "NNLK",
+      "id": "swt_027",
+      "prediction": "NNLK"
+    },
+    {
+      "correct": true,
+      "gold": "NKKM",
+      "id": "swt_028",
+      "prediction": "NKKM"
+    },
+    {
+      "correct": true,
+      "gold": "KLPQ",
+      "id": "swt_029",
+      "prediction": "KLPQ"
+    },
+    {
+      "correct": true,
+      "gold": "LPNP",
+      "id": "swt_030",
+      "prediction": "LPNP"
+    }
+  ],
+  "extra_predictions": [],
+  "missing_predictions": [],
+  "total": 30
+}

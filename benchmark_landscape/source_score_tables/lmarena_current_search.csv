@@ -1,0 +1,30 @@
+source,benchmark,benchmark_name,rank,rank_spread,model,organization,license,score,uncertainty,votes,price_per_million_input_output,context,source_url
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,1,1 3,claude-opus-4-6-search,Anthropic,Proprietary,1251.0,±6,48724,$5 / $25,1M,https://arena.ai/leaderboard/search
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,2,1 4,gpt-5.5-search,OpenAI,Proprietary,1239.0,±8,9492,$5 / $30,1.1M,https://arena.ai/leaderboard/search
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,3,1 4,claude-opus-4-7,Anthropic,Proprietary,1237.0,±8,9696,$5 / $25,1M,https://arena.ai/leaderboard/search
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,4,2 9,ernie-5.1,Baidu,Proprietary,1226.0,±12,2293,N/A,N/A,https://arena.ai/leaderboard/search
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,5,4 9,claude-sonnet-4-6-search,Anthropic,Proprietary,1219.0,±6,48055,$3 / $15,1M,https://arena.ai/leaderboard/search
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,6,4 10,gemini-3.1-pro-grounding,Google,Proprietary,1216.0,±7,28011,N/A,N/A,https://arena.ai/leaderboard/search
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,7,4 12,gpt-5.2-search,OpenAI,Proprietary,1210.0,±6,47097,$1.75 / $14,400K,https://arena.ai/leaderboard/search
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,8,4 12,grok-4.20-multi-agent-beta-0309,xAI,Proprietary,1209.0,±7,27452,$2 / $6,2M,https://arena.ai/leaderboard/search
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,9,4 12,gemini-3-pro-grounding,Google,Proprietary,1208.0,±5,37289,$2 / $12,N/A,https://arena.ai/leaderboard/search
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,10,6 12,gemini-3-flash-grounding,Google,Proprietary,1206.0,±6,62919,N/A,N/A,https://arena.ai/leaderboard/search
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,11,7 14,gpt-5.1-search,OpenAI,Proprietary,1199.0,±6,53667,$1.25 / $10,400K,https://arena.ai/leaderboard/search
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,12,7 14,gpt-5.4-search,OpenAI,Proprietary,1199.0,±7,27862,$2.50 / $15,1.1M,https://arena.ai/leaderboard/search
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,13,11 15,grok-4.20-beta1,xAI,Proprietary,1193.0,±6,48961,N/A,N/A,https://arena.ai/leaderboard/search
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,14,11 16,grok-4.3,xAI,Proprietary,1189.0,±8,6865,$1.25 / $2.50,1M,https://arena.ai/leaderboard/search
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,15,13 18,claude-opus-4-5-search,Anthropic,Proprietary,1182.0,±6,53423,$5 / $25,200K,https://arena.ai/leaderboard/search
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,16,14 18,gpt-5.2-search-non-reasoning,OpenAI,Proprietary,1177.0,±6,65549,$1.75 / $14,400K,https://arena.ai/leaderboard/search
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,17,15 18,grok-4-1-fast-search,xAI,Proprietary,1175.0,±5,71617,$0.20 / $0.50,2M,https://arena.ai/leaderboard/search
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,18,15 18,grok-4-fast-search,xAI,Proprietary,1172.0,±4,42951,$0.20 / $0.50,2M,https://arena.ai/leaderboard/search
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,19,19 23,claude-sonnet-4-5-search,Anthropic,Proprietary,1152.0,±6,45686,$3 / $15,1M,https://arena.ai/leaderboard/search
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,20,19 24,claude-opus-4-1-search,Anthropic,Proprietary,1148.0,±5,71286,$15 / $75,200K,https://arena.ai/leaderboard/search
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,21,19 25,o3-search,OpenAI,Proprietary,1144.0,±5,20700,$2 / $8,200K,https://arena.ai/leaderboard/search
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,22,19 25,gemini-2.5-pro-grounding,Google,Proprietary,1143.0,±5,76776,$1.25 / $10,1M,https://arena.ai/leaderboard/search
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,23,19 25,grok-4-search,xAI,Proprietary,1143.0,±6,19303,$3 / $15,N/A,https://arena.ai/leaderboard/search
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,24,20 26,ppl-sonar-reasoning-pro-high,AI,Proprietary,1139.0,±6,29136,$1 / $1,127.1K,https://arena.ai/leaderboard/search
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,25,21 27,gpt-5-search,OpenAI,Proprietary,1134.0,±6,20839,$1.25 / $10,400K,https://arena.ai/leaderboard/search
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,26,24 27,ppl-sonar-pro-high,AI,Proprietary,1130.0,±6,28623,$1 / $1,127.1K,https://arena.ai/leaderboard/search
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,27,25 27,claude-opus-4-search,Anthropic,Proprietary,1128.0,±5,31129,$15 / $75,200K,https://arena.ai/leaderboard/search
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,28,28 29,diffbot-small-xl,Diffbot,Apache 2.0,1024.0,±8,6406,N/A,N/A,https://arena.ai/leaderboard/search
+lmarena_current_search,arena_search_overall,LMArena Search Arena overall,29,28 29,api-gpt-4o-search,OpenAI,Proprietary,1006.0,±11,3413,$30 / $60,8.2K,https://arena.ai/leaderboard/search

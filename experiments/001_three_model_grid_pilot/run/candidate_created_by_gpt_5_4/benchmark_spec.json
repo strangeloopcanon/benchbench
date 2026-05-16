@@ -1,0 +1,48 @@
+{
+  "benchmark_name": "occluded_tile_provenance",
+  "version": "1.0.0",
+  "description": "Identify which labeled same-texture tile owns the visible surface under a red crosshair in an occluded raster scene.",
+  "task_family": "visual_reasoning",
+  "item_count": 30,
+  "modality": "raster_image",
+  "input_format": {
+    "items_file": "solver_bundle/items_private_sample.jsonl",
+    "row_fields": {
+      "id": "string",
+      "image": "relative solver_bundle path to a PPM image",
+      "prompt": "text instructions"
+    }
+  },
+  "prediction_format": {
+    "jsonl_rows": {
+      "id": "string",
+      "answer": "one of A, B, C, D"
+    }
+  },
+  "gold_format": {
+    "jsonl_rows": {
+      "id": "string",
+      "answer": "one of A, B, C, D"
+    }
+  },
+  "scoring": {
+    "metric": "exact_match_accuracy",
+    "per_item_score": "1 if prediction.answer == gold.answer else 0",
+    "aggregate": "mean over 30 items"
+  },
+  "determinism": {
+    "generator_seed_arg": "20260516",
+    "generator_sample_count_arg": 30,
+    "image_format": "ASCII PPM"
+  },
+  "auditing": {
+    "human_auditable": true,
+    "rationale": "A human can visually trace exposed piece fragments, follow occlusion boundaries, and verify that only badge labels reveal identity."
+  },
+  "difficulty_rationale": [
+    "Piece bodies are visually identical away from badges.",
+    "The target piece is frequently fragmented into disconnected visible islands.",
+    "Local crops around the crosshair are intentionally non-diagnostic.",
+    "Shortcut heuristics like nearest badge or largest visible component are often wrong."
+  ]
+}

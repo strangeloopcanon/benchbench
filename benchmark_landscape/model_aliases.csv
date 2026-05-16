@@ -1,0 +1,6 @@
+canonical_model,alias,confidence,notes
+gpt-5.2,gpt-5.2-chat-latest-20260210,medium,BenchBench Codex model versus LMArena chat endpoint; compare cautiously.
+gpt-5.4,gpt-5.4,high,Same public model label where present.
+gpt-5.4,gpt-5.4-high,low,"High-reasoning Arena variant, not identical to low-effort BenchBench solver."
+gpt-5.5,gpt-5.5,high,Same public model label where present.
+gpt-5.5-xhigh,gpt-5.5-xhigh (codex-harness),medium,Arena Codex-harness xhigh variant; useful but not guaranteed identical to local Codex run.

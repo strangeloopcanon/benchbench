@@ -1,0 +1,106 @@
+missing_root_files: none
+missing_solver_bundle_files: none
+gold_rows: 30
+solver_bundle_file_count: 33
+solver_bundle_files_preview:
+README.md
+SOLVER_MANIFEST.json
+images/item_000.ppm
+images/item_001.ppm
+images/item_002.ppm
+images/item_003.ppm
+images/item_004.ppm
+images/item_005.ppm
+images/item_006.ppm
+images/item_007.ppm
+images/item_008.ppm
+images/item_009.ppm
+images/item_010.ppm
+images/item_011.ppm
+images/item_012.ppm
+images/item_013.ppm
+images/item_014.ppm
+images/item_015.ppm
+images/item_016.ppm
+images/item_017.ppm
+images/item_018.ppm
+images/item_019.ppm
+images/item_020.ppm
+images/item_021.ppm
+images/item_022.ppm
+images/item_023.ppm
+images/item_024.ppm
+images/item_025.ppm
+images/item_026.ppm
+images/item_027.ppm
+images/item_028.ppm
+images/item_029.ppm
+items_private_sample.jsonl
+solver_bundle_item_rows: 30
+leak_scan_matches:
+SOLVER_MANIFEST.json:solution
+SOLVER_MANIFEST.json:seed
+score_gold_controller: {"accuracy": 1.0, "correct": 30, "total": 30}
+score_wrong_shifted_controller: {"accuracy": 0.0, "correct": 0, "total": 30}
+
+commands:
+[
+  {
+    "args": [
+      "/Users/rohit/.pyenv/versions/global_env/bin/python",
+      "generator.py",
+      "--sample-count",
+      "30",
+      "--seed",
+      "20260516",
+      "--out-dir",
+      "."
+    ],
+    "returncode": 0,
+    "stdout_tail": "",
+    "stderr_tail": ""
+  },
+  {
+    "args": [
+      "/Users/rohit/.pyenv/versions/global_env/bin/python",
+      "verifier.py",
+      "--items",
+      "solver_bundle/items_private_sample.jsonl",
+      "--gold",
+      "gold_private_sample.jsonl"
+    ],
+    "returncode": 0,
+    "stdout_tail": "Verification passed for 30 items.\n",
+    "stderr_tail": ""
+  },
+  {
+    "args": [
+      "/Users/rohit/.pyenv/versions/global_env/bin/python",
+      "scorer.py",
+      "--gold",
+      "gold_private_sample.jsonl",
+      "--predictions",
+      "predictions_gold.jsonl",
+      "--out",
+      "score_gold_controller.json"
+    ],
+    "returncode": 0,
+    "stdout_tail": "Scored 30/30 correct.\n",
+    "stderr_tail": ""
+  },
+  {
+    "args": [
+      "/Users/rohit/.pyenv/versions/global_env/bin/python",
+      "scorer.py",
+      "--gold",
+      "gold_private_sample.jsonl",
+      "--predictions",
+      "predictions_wrong_shifted.jsonl",
+      "--out",
+      "score_wrong_shifted_controller.json"
+    ],
+    "returncode": 0,
+    "stdout_tail": "Scored 0/30 correct.\n",
+    "stderr_tail": ""
+  }
+]

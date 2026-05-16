@@ -1,0 +1,27 @@
+{
+  "answer_format": {
+    "allowed_values": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "type": "string"
+  },
+  "benchmark_name": "occluded_tile_provenance",
+  "files": {
+    "images_dir": "images",
+    "items": "items_private_sample.jsonl",
+    "readme": "README.md"
+  },
+  "item_count": 30,
+  "prohibited_contents": [
+    "gold answers",
+    "hidden generation seeds",
+    "source geometry",
+    "occlusion traces",
+    "solution labels"
+  ],
+  "task_type": "visual_reasoning",
+  "version": "1.0.0"
+}

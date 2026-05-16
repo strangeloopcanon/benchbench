@@ -1,0 +1,25 @@
+source,benchmark,benchmark_name,rank,rank_spread,model,organization,license,score,uncertainty,votes,price_per_million_input_output,context,source_url
+lmarena_current_document,arena_document_overall,LMArena Document Arena overall,1,1 4,claude-opus-4-6-thinking,Anthropic,Proprietary,1522.0,±8,11934,$5 / $25,1M,https://arena.ai/leaderboard/document
+lmarena_current_document,arena_document_overall,LMArena Document Arena overall,2,1 4,claude-opus-4-6,Anthropic,Proprietary,1513.0,±7,20354,$5 / $25,1M,https://arena.ai/leaderboard/document
+lmarena_current_document,arena_document_overall,LMArena Document Arena overall,3,1 5,claude-opus-4-7,Anthropic,Proprietary,1510.0,±8,6695,$5 / $25,1M,https://arena.ai/leaderboard/document
+lmarena_current_document,arena_document_overall,LMArena Document Arena overall,4,1 7,claude-opus-4-7-thinking,Anthropic,Proprietary,1509.0,±8,6402,$5 / $25,1M,https://arena.ai/leaderboard/document
+lmarena_current_document,arena_document_overall,LMArena Document Arena overall,5,3 7,gpt-5.5-high,OpenAI,Proprietary,1496.0,±9,4615,$5 / $30,1.1M,https://arena.ai/leaderboard/document
+lmarena_current_document,arena_document_overall,LMArena Document Arena overall,6,4 7,claude-sonnet-4-6,Anthropic,Proprietary,1495.0,±6,31885,$3 / $15,1M,https://arena.ai/leaderboard/document
+lmarena_current_document,arena_document_overall,LMArena Document Arena overall,7,4 7,gpt-5.5,OpenAI,Proprietary,1492.0,±9,4672,$5 / $30,1.1M,https://arena.ai/leaderboard/document
+lmarena_current_document,arena_document_overall,LMArena Document Arena overall,8,8 10,gpt-5.4,OpenAI,Proprietary,1474.0,±7,14439,$2.50 / $15,1.1M,https://arena.ai/leaderboard/document
+lmarena_current_document,arena_document_overall,LMArena Document Arena overall,9,8 12,claude-opus-4-5-20251101,Anthropic,Proprietary,1466.0,±10,8015,$5 / $25,200K,https://arena.ai/leaderboard/document
+lmarena_current_document,arena_document_overall,LMArena Document Arena overall,10,9 15,kimi-k2.6,Moonshot,Modified MIT,1454.0,±10,3769,$0.95 / $4,262.1K,https://arena.ai/leaderboard/document
+lmarena_current_document,arena_document_overall,LMArena Document Arena overall,11,8 17,muse-spark,Meta,Proprietary,1452.0,±19,868,N/A,N/A,https://arena.ai/leaderboard/document
+lmarena_current_document,arena_document_overall,LMArena Document Arena overall,12,9 15,claude-sonnet-4-5-20250929,Anthropic,Proprietary,1450.0,±7,16693,$3 / $15,200K,https://arena.ai/leaderboard/document
+lmarena_current_document,arena_document_overall,LMArena Document Arena overall,13,10 15,gemini-3.1-pro-preview,Google,Proprietary,1443.0,±6,24873,$2 / $12,1M,https://arena.ai/leaderboard/document
+lmarena_current_document,arena_document_overall,LMArena Document Arena overall,14,10 17,gemini-3-pro,Google,Proprietary,1439.0,±9,10773,$2 / $12,1M,https://arena.ai/leaderboard/document
+lmarena_current_document,arena_document_overall,LMArena Document Arena overall,15,10 18,kimi-k2.5-thinking,Moonshot,Modified MIT,1437.0,±8,10471,$0.60 / $3,N/A,https://arena.ai/leaderboard/document
+lmarena_current_document,arena_document_overall,LMArena Document Arena overall,16,13 20,gemini-2.5-pro,Google,Proprietary,1427.0,±6,19978,$1.25 / $10,1M,https://arena.ai/leaderboard/document
+lmarena_current_document,arena_document_overall,LMArena Document Arena overall,17,13 23,gemma-4-31b,Google,Apache 2.0,1424.0,±10,4360,N/A,N/A,https://arena.ai/leaderboard/document
+lmarena_current_document,arena_document_overall,LMArena Document Arena overall,18,15 22,claude-haiku-4-5-20251001,Anthropic,Proprietary,1423.0,±7,17855,$1 / $5,200K,https://arena.ai/leaderboard/document
+lmarena_current_document,arena_document_overall,LMArena Document Arena overall,19,16 24,grok-4.20-beta-0309-reasoning,xAI,Proprietary,1420.0,±8,6807,$2 / $6,2M,https://arena.ai/leaderboard/document
+lmarena_current_document,arena_document_overall,LMArena Document Arena overall,20,16 24,gemini-3-flash,Google,Proprietary,1418.0,±9,7202,$0.50 / $3,1M,https://arena.ai/leaderboard/document
+lmarena_current_document,arena_document_overall,LMArena Document Arena overall,21,17 24,gpt-5.2-high,OpenAI,Proprietary,1411.0,±9,7110,$1.75 / $14,400K,https://arena.ai/leaderboard/document
+lmarena_current_document,arena_document_overall,LMArena Document Arena overall,22,19 24,gpt-5.2,OpenAI,Proprietary,1407.0,±6,22399,$1.75 / $14,400K,https://arena.ai/leaderboard/document
+lmarena_current_document,arena_document_overall,LMArena Document Arena overall,23,17 24,gpt-5.5-instant,OpenAI,Proprietary,1407.0,±10,3503,$5 / $30,1.1M,https://arena.ai/leaderboard/document
+lmarena_current_document,arena_document_overall,LMArena Document Arena overall,24,18 24,gpt-5.1,OpenAI,Proprietary,1407.0,±9,8281,$1.25 / $10,400K,https://arena.ai/leaderboard/document

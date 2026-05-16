@@ -1,0 +1,70 @@
+missing_root_files: none
+missing_solver_bundle_files: none
+gold_rows: 30
+solver_bundle_file_count: 3
+solver_bundle_item_rows: 30
+leak_scan_matches: none
+score_gold_controller: {"accuracy": 1.0, "correct": 30, "total": 30}
+score_wrong_shifted_controller: {"accuracy": 0.0, "correct": 0, "total": 30}
+
+commands:
+[
+  {
+    "args": [
+      "/Users/rohit/.pyenv/versions/global_env/bin/python",
+      "generator.py",
+      "--sample-count",
+      "30",
+      "--seed",
+      "20260516",
+      "--out-dir",
+      "."
+    ],
+    "returncode": 0,
+    "stdout_tail": "",
+    "stderr_tail": ""
+  },
+  {
+    "args": [
+      "/Users/rohit/.pyenv/versions/global_env/bin/python",
+      "verifier.py",
+      "--items",
+      "solver_bundle/items_private_sample.jsonl",
+      "--gold",
+      "gold_private_sample.jsonl"
+    ],
+    "returncode": 0,
+    "stdout_tail": "OK: items match gold under reference matcher.\n",
+    "stderr_tail": ""
+  },
+  {
+    "args": [
+      "/Users/rohit/.pyenv/versions/global_env/bin/python",
+      "scorer.py",
+      "--gold",
+      "gold_private_sample.jsonl",
+      "--predictions",
+      "predictions_gold_controller.jsonl",
+      "--out",
+      "score_gold_controller.json"
+    ],
+    "returncode": 0,
+    "stdout_tail": "{\"accuracy\": 1.0, \"correct\": 30, \"total\": 30}\n",
+    "stderr_tail": ""
+  },
+  {
+    "args": [
+      "/Users/rohit/.pyenv/versions/global_env/bin/python",
+      "scorer.py",
+      "--gold",
+      "gold_private_sample.jsonl",
+      "--predictions",
+      "predictions_wrong_shifted_controller.jsonl",
+      "--out",
+      "score_wrong_shifted_controller.json"
+    ],
+    "returncode": 0,
+    "stdout_tail": "{\"accuracy\": 0.0, \"correct\": 0, \"total\": 30}\n",
+    "stderr_tail": ""
+  }
+]

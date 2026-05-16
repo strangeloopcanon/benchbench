@@ -1,0 +1,14 @@
+{
+  "benchmark_name": "Spectrum Assembly with Side Constraints",
+  "prediction_format": {
+    "answer": "string",
+    "id": "string"
+  },
+  "task": "Recover the unique hidden string for each item.",
+  "version": "1.0.0",
+  "visible_files": [
+    "items_private_sample.jsonl",
+    "README.md",
+    "SOLVER_MANIFEST.json"
+  ]
+}

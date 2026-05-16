@@ -1,0 +1,70 @@
+missing_root_files: none
+missing_solver_bundle_files: none
+gold_rows: 30
+solver_bundle_file_count: 3
+solver_bundle_item_rows: 30
+leak_scan_matches: none
+score_gold_controller: {"accuracy": 1.0, "correct": 30, "total": 30}
+score_wrong_shifted_controller: {"accuracy": 0.0, "correct": 0, "total": 30}
+
+commands:
+[
+  {
+    "args": [
+      "/Users/rohit/.pyenv/versions/global_env/bin/python",
+      "generator.py",
+      "--sample-count",
+      "30",
+      "--seed",
+      "20260516",
+      "--out-dir",
+      "."
+    ],
+    "returncode": 0,
+    "stdout_tail": "",
+    "stderr_tail": ""
+  },
+  {
+    "args": [
+      "/Users/rohit/.pyenv/versions/global_env/bin/python",
+      "verifier.py",
+      "--items",
+      "solver_bundle/items_private_sample.jsonl",
+      "--gold",
+      "gold_private_sample.jsonl"
+    ],
+    "returncode": 0,
+    "stdout_tail": "olution_count_capped_at_3\": 1\n    },\n    {\n      \"gold_valid\": true,\n      \"id\": \"spectrum_008\",\n      \"passed\": true,\n      \"solver_solution\": \"EAAABAECEAECBCCE\",\n      \"unique_solution_count_capped_at_3\": 1\n    },\n    {\n      \"gold_valid\": true,\n      \"id\": \"spectrum_009\",\n      \"passed\": true,\n      \"solver_solution\": \"CDEEEECBBADDADCB\",\n      \"unique_solution_count_capped_at_3\": 1\n    },\n    {\n      \"gold_valid\": true,\n      \"id\": \"spectrum_010\",\n      \"passed\": true,\n      \"solver_solution\": \"DCAAEADBDDBCAADE\",\n      \"unique_solution_count_capped_at_3\": 1\n    },\n    {\n      \"gold_valid\": true,\n      \"id\": \"spectrum_011\",\n      \"passed\": true,\n      \"solver_solution\": \"EDEEDEBEEDCECBEB\",\n      \"unique_solution_count_capped_at_3\": 1\n    },\n    {\n      \"gold_valid\": true,\n      \"id\": \"spectrum_012\",\n      \"passed\": true,\n      \"solver_solution\": \"DEDECCDDECABAEBE\",\n      \"unique_solution_count_capped_at_3\": 1\n    },\n    {\n      \"gold_valid\": true,\n      \"id\": \"spectrum_013\",\n      \"passed\": true,\n      \"solver_solution\": \"CBBEADADEBBEACDA\",\n      \"unique_solution_count_capped_at_3\": 1\n    },\n    {\n      \"gold_valid\": true,\n      \"id\": \"spectrum_014\",\n      \"passed\": true,\n      \"solver_solution\": \"BCBDACBEDEBACBBE\",\n      \"unique_solution_count_capped_at_3\": 1\n    },\n    {\n      \"gold_valid\": true,\n      \"id\": \"spectrum_015\",\n      \"passed\": true,\n      \"solver_solution\": \"DEBBBEEBAEABBEDE\",\n      \"unique_solution_count_capped_at_3\": 1\n    },\n    {\n      \"gold_valid\": true,\n      \"id\": \"spectrum_016\",\n      \"passed\": true,\n      \"solver_solution\": \"CECBDBECBBBBCDDE\",\n      \"unique_solution_count_capped_at_3\": 1\n    },\n    {\n      \"gold_valid\": true,\n      \"id\": \"spectrum_017\",\n      \"passed\": true,\n      \"solver_solution\": \"EABCCECDBADADABC\",\n      \"unique_solution_count_capped_at_3\": 1\n    },\n    {\n      \"gold_valid\": true,\n      \"id\": \"spectrum_018\",\n      \"passed\": true,\n      \"solver_solution\": \"DCDBEDBBBBAAEECB\",\n      \"unique_solution_count_capped_at_3\": 1\n    },\n    {\n      \"gold_valid\": true,\n      \"id\": \"spectrum_019\",\n      \"passed\": true,\n      \"solver_solution\": \"EDECEADACEAABEAB\",\n      \"unique_solution_count_capped_at_3\": 1\n    },\n    {\n      \"gold_valid\": true,\n      \"id\": \"spectrum_020\",\n      \"passed\": true,\n      \"solver_solution\": \"ECADDEDADADDAADC\",\n      \"unique_solution_count_capped_at_3\": 1\n    },\n    {\n      \"gold_valid\": true,\n      \"id\": \"spectrum_021\",\n      \"passed\": true,\n      \"solver_solution\": \"BBBEEDBBBECECDBD\",\n      \"unique_solution_count_capped_at_3\": 1\n    },\n    {\n      \"gold_valid\": true,\n      \"id\": \"spectrum_022\",\n      \"passed\": true,\n      \"solver_solution\": \"ACCDCDCAEABCBECE\",\n      \"unique_solution_count_capped_at_3\": 1\n    },\n    {\n      \"gold_valid\": true,\n      \"id\": \"spectrum_023\",\n      \"passed\": true,\n      \"solver_solution\": \"BDDEACDEABAAECDB\",\n      \"unique_solution_count_capped_at_3\": 1\n    },\n    {\n      \"gold_valid\": true,\n      \"id\": \"spectrum_024\",\n      \"passed\": true,\n      \"solver_solution\": \"EADDCEBBBDCEAABC\",\n      \"unique_solution_count_capped_at_3\": 1\n    },\n    {\n      \"gold_valid\": true,\n      \"id\": \"spectrum_025\",\n      \"passed\": true,\n      \"solver_solution\": \"ECBDAABEDEEEECEE\",\n      \"unique_solution_count_capped_at_3\": 1\n    },\n    {\n      \"gold_valid\": true,\n      \"id\": \"spectrum_026\",\n      \"passed\": true,\n      \"solver_solution\": \"EDECCABAABDECBCE\",\n      \"unique_solution_count_capped_at_3\": 1\n    },\n    {\n      \"gold_valid\": true,\n      \"id\": \"spectrum_027\",\n      \"passed\": true,\n      \"solver_solution\": \"CAAABDEBECCDCCDB\",\n      \"unique_solution_count_capped_at_3\": 1\n    },\n    {\n      \"gold_valid\": true,\n      \"id\": \"spectrum_028\",\n      \"passed\": true,\n      \"solver_solution\": \"DCBDACAECACABEAA\",\n      \"unique_solution_count_capped_at_3\": 1\n    },\n    {\n      \"gold_valid\": true,\n      \"id\": \"spectrum_029\",\n      \"passed\": true,\n      \"solver_solution\": \"BCBAAAEECDEAAEAD\",\n      \"unique_solution_count_capped_at_3\": 1\n    }\n  ],\n  \"item_count\": 30\n}\n",
+    "stderr_tail": ""
+  },
+  {
+    "args": [
+      "/Users/rohit/.pyenv/versions/global_env/bin/python",
+      "scorer.py",
+      "--gold",
+      "gold_private_sample.jsonl",
+      "--predictions",
+      "predictions_gold_controller.jsonl",
+      "--out",
+      "score_gold_controller.json"
+    ],
+    "returncode": 0,
+    "stdout_tail": "{\n  \"accuracy\": 1.0,\n  \"correct\": 30,\n  \"extra_ids\": [],\n  \"missing_ids\": [],\n  \"total\": 30\n}\n",
+    "stderr_tail": ""
+  },
+  {
+    "args": [
+      "/Users/rohit/.pyenv/versions/global_env/bin/python",
+      "scorer.py",
+      "--gold",
+      "gold_private_sample.jsonl",
+      "--predictions",
+      "predictions_wrong_shifted_controller.jsonl",
+      "--out",
+      "score_wrong_shifted_controller.json"
+    ],
+    "returncode": 0,
+    "stdout_tail": "{\n  \"accuracy\": 0.0,\n  \"correct\": 0,\n  \"extra_ids\": [],\n  \"missing_ids\": [],\n  \"total\": 30\n}\n",
+    "stderr_tail": ""
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "benchmark_name": "Spectrum Assembly with Side Constraints",
+  "version": "1.0.0",
+  "task_type": "exact constrained reconstruction",
+  "capability_claim": "Measures whether a solver can convert overlapping local evidence plus global logical side constraints into a single exact synthesized artifact.",
+  "why_it_matters": "Many strong models can reason locally yet fail to maintain global consistency across a long combinatorial object. This benchmark isolates that failure mode in a deterministic, executable form.",
+  "closest_existing_benchmarks": [
+    {
+      "name": "SWE-bench",
+      "why_close": "Both reward constructing an exact procedure under an executable checker rather than answering a static question."
+    },
+    {
+      "name": "LiveCodeBench",
+      "why_close": "Both favor algorithmic problem solving with unambiguous correctness."
+    },
+    {
+      "name": "Logic-puzzle / formal reasoning tasks",
+      "why_close": "Both require consistent reasoning over interacting constraints."
+    }
+  ],
+  "why_not_duplicate": [
+    "Items are side-constrained spectrum-assembly instances rather than code-repair, factual QA, or contest-math problems.",
+    "Each item is uniqueness-checked by an exact reference solver before publication.",
+    "The output is a synthesized string artifact with exact-match grading."
+  ],
+  "input_format": {
+    "id": "string",
+    "alphabet": "string",
+    "length": "integer",
+    "k": "integer",
+    "counts": "object mapping symbol to exact count",
+    "spectrum": "sorted list of contiguous k-grams with multiplicity",
+    "forbidden_trigrams": "list of trigrams that must not appear anywhere",
+    "anchor_multisets": "optional list of clues; each clue gives positions and the multiset of letters occupying them"
+  },
+  "output_format": {
+    "id": "string",
+    "answer": "string"
+  },
+  "grading": {
+    "type": "deterministic exact match",
+    "gold_contract": "gold_private_sample.jsonl contains exactly id and answer",
+    "prediction_contract": "predictions.jsonl contains exactly id and answer"
+  },
+  "generation": {
+    "procedure": [
+      "Sample a hidden string over alphabet ABCDE.",
+      "Derive its full contiguous 4-gram spectrum, exact symbol counts, and a set of absent trigrams.",
+      "Optionally add anchor multiset clues derived from the target string.",
+      "Run an exact search solver and publish the item only if the solution is unique and a greedy stitching shortcut fails."
+    ],
+    "determinism": "Sample generation is deterministic given sample-count, seed, and item index."
+  },
+  "solver_rules": {
+    "tools_allowed": "Any local tools available to the solver, as long as they stay inside the isolated solver bundle.",
+    "disallowed": "Reading private files outside solver_bundle, inspecting gold answers, or using hidden seeds."
+  },
+  "known_limits": [
+    "This package does not yet include a measured human baseline study.",
+    "A sufficiently strong symbolic search implementation may solve many items reliably; the intended difficulty is for model-led procedural reasoning, not for humans running an optimized custom solver already tuned to this benchmark family."
+  ]
+}

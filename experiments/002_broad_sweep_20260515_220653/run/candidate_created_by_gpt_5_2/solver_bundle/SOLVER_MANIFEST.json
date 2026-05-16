@@ -1,0 +1,10 @@
+{
+  "benchmark_name": "IgnoreSense",
+  "benchmark_version": "1.0.0",
+  "items_file": "items_private_sample.jsonl",
+  "answer_format": "JSON array of ignored paths sorted lexicographically; answer is serialized as a compact JSON string.",
+  "notes": [
+    "All tasks are self-contained; do not assume full gitignore semantics beyond what the packet describes.",
+    "Paths use '/' separators and are relative (no leading './'). Directory paths end with '/'."
+  ]
+}

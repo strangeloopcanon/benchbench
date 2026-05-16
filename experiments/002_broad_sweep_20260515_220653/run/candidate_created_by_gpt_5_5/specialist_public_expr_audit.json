@@ -1,0 +1,1056 @@
+{
+  "items": [
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0000"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0001"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0002"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0003"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0004"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0005"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0006"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0007"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0008"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0009"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0010"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0011"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0012"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0013"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0014"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0015"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0016"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0017"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0018"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0019"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0020"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0021"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0022"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0023"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0024"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0025"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0026"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0027"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0028"
+    },
+    {
+      "answer": "00000000",
+      "base_count": 80515,
+      "bytes": [
+        {
+          "best_expr": null,
+          "byte": 0,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 1,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 2,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        },
+        {
+          "best_expr": null,
+          "byte": 3,
+          "distinct_query_values": 0,
+          "fit_count": 0,
+          "prediction": "00"
+        }
+      ],
+      "id": "pa-0029"
+    }
+  ],
+  "public_input": "experiments/002_broad_sweep_20260515_220653/run/candidate_created_by_gpt_5_5/solver_bundle/items_private_sample.jsonl",
+  "solver": "public_expression_library_v1"
+}

@@ -1,0 +1,11 @@
+Built the package in the artifact directory.
+
+Created the required benchmark files for **Shadow Weave Topology**, generated all 30 raster items, and wrote the solver bundle with relative image paths only.
+
+Verified:
+- `verifier.py`: `VERIFIED 30 items`
+- gold scorer: `SCORED 30/30`
+- weak constant baseline: `SCORED 0/30`
+- solver bundle leakage sweep: no gold/seed/trace/layer-order/coordinate/source leakage found; only the required `items_private_sample.jsonl` filename appears in the manifest.
+
+Validation details are in `validation_report.md`.

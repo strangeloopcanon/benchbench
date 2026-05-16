@@ -1,0 +1,162 @@
+{
+  "accuracy": 0.0,
+  "benchmark": "protocol_archaeology",
+  "correct": 0,
+  "extra_ids": [],
+  "item_scores": [
+    {
+      "correct": false,
+      "id": "pa-0000",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0001",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0002",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0003",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0004",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0005",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0006",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0007",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0008",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0009",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0010",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0011",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0012",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0013",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0014",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0015",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0016",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0017",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0018",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0019",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0020",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0021",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0022",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0023",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0024",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0025",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0026",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0027",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0028",
+      "valid": true
+    },
+    {
+      "correct": false,
+      "id": "pa-0029",
+      "valid": true
+    }
+  ],
+  "malformed": [],
+  "malformed_count": 0,
+  "missing_ids": [],
+  "total": 30
+}

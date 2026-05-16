@@ -1,0 +1,7 @@
+{
+  "answer_format": "exactly four labels from KLMNPQ, one per probe A-D",
+  "assets": "images/*.png",
+  "benchmark": "Shadow Weave Topology",
+  "item_count": 30,
+  "item_file": "items_private_sample.jsonl"
+}

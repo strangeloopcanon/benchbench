@@ -1,0 +1,19 @@
+{
+  "benchmark_id": "folded_strip_order_v1",
+  "version": "1.0.0",
+  "items_file": "items_private_sample.jsonl",
+  "item_schema": {
+    "id": "string",
+    "path": "string (relative to solver_bundle)",
+    "prompt": "string"
+  },
+  "answer_schema": {
+    "id": "string",
+    "answer": "string"
+  },
+  "constraints": [
+    "Predictions must be a JSONL with one object per line.",
+    "Each predictions row must contain exactly: id, answer.",
+    "Answer must be a permutation of the labels present in the image (no separators)."
+  ]
+}
