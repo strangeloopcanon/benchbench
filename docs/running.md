@@ -13,6 +13,12 @@ python run_broad_three_model_sweep.py
 The creator prompt reads `benchmark_landscape/creator_prompt_landscape_pack.md`
 when present, plus the Experiment 001 pilot summary.
 
+Each completed sweep writes:
+
+- `summary.md`: run metadata, benchmark cards, solver grid, and call table.
+- `feedback_for_next_sweep.md`: a creator-ready feedback packet with the solver
+  grid, benchmark cards, and next-run lessons.
+
 ## Five-Model GPT/Gemini Sweep
 
 ```bash
@@ -112,4 +118,3 @@ python scripts/score_benchmark_similarity.py \
 
 The method is ready, but the current local solver set is too small for serious
 regression novelty claims.
-

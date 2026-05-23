@@ -16,7 +16,7 @@ from benchbench_model_backends import (
     safe_name,
 )
 from benchbench_results import extract_predictions, extract_solver_predictions, score_summary
-from run_broad_three_model_sweep import candidate_status
+from run_broad_three_model_sweep import candidate_card_lines, candidate_status
 from scripts.build_benchmark_landscape_pack import model_from_safe_slug, solver_model_from_score_path
 
 
@@ -207,6 +207,35 @@ class ModelBackendTests(unittest.TestCase):
         self.assertEqual(candidate_status([{"total": 30, "correct": 0, "accuracy": 0.0}]), "solvability_audit")
         self.assertEqual(candidate_status([{"total": 30, "correct": 14, "accuracy": 14 / 30}]), "accept")
         self.assertEqual(candidate_status([{"total": 30, "correct": 15, "accuracy": 0.5}]), "reject")
+
+    def test_candidate_card_summarizes_benchmark_mechanics(self) -> None:
+        with tempfile.TemporaryDirectory(prefix="benchbench-card-test.") as tmp:
+            tmp_path = Path(tmp)
+            (tmp_path / "benchmark_spec.json").write_text(
+                '{'
+                '"name":"Card Test",'
+                '"description":"Answer messy document questions.",'
+                '"capability_claim":"Cross-document evidence use.",'
+                '"grading_method":"Exact match.",'
+                '"closest_existing_benchmarks":[{"name":"DocVQA","reason":"Document grounding."}]'
+                '}\n',
+                encoding="utf-8",
+            )
+            (tmp_path / "README.md").write_text("# Card Test\n\nFallback paragraph.\n", encoding="utf-8")
+            (tmp_path / "failure_modes.md").write_text("# Failures\n\nObvious parser shortcut.\n", encoding="utf-8")
+            (tmp_path / "score_solver_gpt_5_2.json").write_text('{"correct": 7, "total": 30}\n', encoding="utf-8")
+
+            spec = parse_model_spec("gpt-5.2")
+            lines = candidate_card_lines(
+                spec,
+                tmp_path,
+                {"valid": True, "bundle_file_count": 3, "leak_matches": []},
+            )
+            text = "\n".join(lines)
+            self.assertIn("What it asks: Answer messy document questions.", text)
+            self.assertIn("Intended capability: Cross-document evidence use.", text)
+            self.assertIn("Closest existing benchmarks: DocVQA", text)
+            self.assertIn("Solver results: gpt-5.2: 7/30", text)
 
 
 if __name__ == "__main__":

@@ -55,6 +55,57 @@ GPT-5.5 got 17/30. But it is narrow and operationally brittle: several solvers
 returned blanks, no parsed rows, or timed out. Treat it as a caution, not as
 the benchmark shape to copy.
 
+## Prior Benchmark Cards
+
+These cards describe what the earlier generated benchmarks actually asked. Use
+them to learn from the task mechanics, not just the names and scores.
+
+### Exp003-style candidates
+
+- **Ledger Canonical Reconciliation**: reconcile transaction ledger CSVs and FX
+  tables under de-duplication and reversal rules, then emit exact per-account
+  USD-cent balances. It looked like an audit/spec task, but four solvers got
+  30/30.
+- **Patchwork Ordinance Adjudication**: compile a fictional ordinance, later
+  amendments, and case files into an exact adjudication string. It exposed a
+  GPT-5.2 weakness but saturated for the other solvers.
+- **Amendment Ledger Reconciliation**: apply a base rule code plus chronological
+  amendments, suspensions, caps, and waivers to case files. It saturated at
+  30/30 across all solvers.
+- **Polyhedral Surface Traversal**: track movement and coordinates across a
+  folded 3D cube surface. It exposed a GPT-5.4 weakness but saturated for the
+  other solvers.
+- **Mutative Assembly Inversion**: find two register inputs that make a
+  self-modifying toy assembly program reach a target state. It was ultimately
+  too clean to script or emulate; strongest solvers reached 30/30.
+- **String Rewriting Distance**: compute shortest-path distances under small
+  string rewrite rules. This failed as a Claude-created candidate because the
+  public packet made the BFS/search abstraction too obvious, and the low GPT
+  cells were a scorer type artifact.
+
+### Feedback-style candidates
+
+- **Reimbursement Forensics**: compute travel reimbursement totals from public
+  policy text, exchange rates, receipts, and emails. This is the target shape:
+  messy finite evidence, exact numeric answers, and all solvers in the
+  low-nonzero band.
+- **release_packet_arbitration**: decide whether fictional software release
+  packets should be approved, rejected, or escalated under a governance manual.
+  Mostly too easy, with one diagnostic Gemini Pro failure.
+- **Cross-Document Obligation Resolution**: reconcile incident dossiers,
+  amendments, board/hold rules, remediation rules, dates, and evidence codes.
+  The public packet supported the core date answers, but the scorer required
+  private label strings, so the all-zero row was a scoring-contract failure.
+- **Corrupted LZ77 Recovery**: recover original byte blocks from LZ77 streams
+  with random byte flips and CRC checks. It was solvable for some solvers but
+  too narrow and operationally brittle.
+- **MFN-Cascade**: trace treaty-style MFN tariff updates through recursive
+  category hierarchies to a fixed point. It looked complex but saturated at
+  30/30 for every solver.
+- **Conlang Rosetta**: infer a generated fictional language from a lexicon and
+  interlinear examples, then translate exact strings. It looked more
+  linguistics-like, but every solver got 30/30.
+
 ## What The Next Creator Should Do
 
 Build something closer to Reimbursement Forensics and farther from the failure

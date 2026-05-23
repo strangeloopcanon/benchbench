@@ -48,6 +48,62 @@ def read_text(path: Path, limit: int | None = None) -> str:
     return text[:limit] if limit else text
 
 
+def compact_text(value: Any, limit: int = 260) -> str:
+    if value is None:
+        return ""
+    if isinstance(value, str):
+        text = value
+    elif isinstance(value, list):
+        text = "; ".join(compact_text(item, limit=limit) for item in value)
+    elif isinstance(value, dict):
+        preferred = [
+            value.get("name"),
+            value.get("description"),
+            value.get("reason"),
+            value.get("why_not_duplicate"),
+            value.get("type"),
+        ]
+        text = " - ".join(str(part) for part in preferred if part)
+        if not text:
+            text = json.dumps(value, sort_keys=True)
+    else:
+        text = str(value)
+    text = " ".join(text.replace("|", "\\|").split())
+    if len(text) <= limit:
+        return text
+    return text[: limit - 1].rstrip() + "..."
+
+
+def read_json_dict(path: Path) -> dict[str, Any]:
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    return data if isinstance(data, dict) else {}
+
+
+def first_markdown_paragraph(path: Path, limit: int = 260) -> str:
+    if not path.exists():
+        return ""
+    paragraphs: list[str] = []
+    current: list[str] = []
+    for raw_line in path.read_text(encoding="utf-8", errors="replace").splitlines():
+        line = raw_line.strip()
+        if not line:
+            if current:
+                paragraphs.append(" ".join(current))
+                current = []
+            continue
+        if line.startswith(("#", "-", "`", "|")):
+            continue
+        current.append(line)
+    if current:
+        paragraphs.append(" ".join(current))
+    return compact_text(paragraphs[0], limit=limit) if paragraphs else ""
+
+
 LANDSCAPE_PACK = ROOT / "benchmark_landscape" / "creator_prompt_landscape_pack.md"
 BENCHMARK_LANDSCAPE = read_text(
     LANDSCAPE_PACK if LANDSCAPE_PACK.exists() else ROOT / "benchbench_research_notes.md",
@@ -504,6 +560,74 @@ def candidate_status(scores: list[dict[str, Any] | None]) -> str:
     return "accept"
 
 
+def solver_score_cells(candidate_dir: Path) -> tuple[list[str], list[dict[str, Any] | None], str, str]:
+    cells: list[str] = []
+    scores: list[dict[str, Any] | None] = []
+    max_correct: int | None = None
+    max_total: int | None = None
+    for solver_spec in MODEL_SPECS:
+        score = score_summary(candidate_dir / f"score_solver_{safe_name(solver_spec.name)}.json")
+        scores.append(score)
+        if score:
+            cells.append(f"{score['correct']}/{score['total']}")
+            if max_correct is None or score["correct"] > max_correct:
+                max_correct = int(score["correct"])
+                max_total = int(score["total"])
+        else:
+            cells.append("NA")
+    max_score = f"{max_correct}/{max_total}" if max_correct is not None and max_total is not None else "NA"
+    return cells, scores, max_score, candidate_status(scores)
+
+
+def candidate_card_lines(spec: ModelSpec, candidate_dir: Path, validation: dict[str, Any]) -> list[str]:
+    spec_data = read_json_dict(candidate_dir / "benchmark_spec.json")
+    title = candidate_title(candidate_dir)
+    description = compact_text(
+        spec_data.get("description")
+        or spec_data.get("task")
+        or spec_data.get("task_description")
+        or first_markdown_paragraph(candidate_dir / "README.md")
+    )
+    capability = compact_text(
+        spec_data.get("capability_claim")
+        or spec_data.get("capabilities_measured")
+        or spec_data.get("capability")
+        or spec_data.get("modality")
+    )
+    answer = compact_text(
+        spec_data.get("grading_method")
+        or spec_data.get("grading")
+        or spec_data.get("answer_format")
+        or spec_data.get("output_format")
+    )
+    closest = compact_text(spec_data.get("closest_existing_benchmarks"), limit=360)
+    failure_hint = compact_text(first_markdown_paragraph(candidate_dir / "failure_modes.md"), limit=300)
+    cells, scores, max_score, status = solver_score_cells(candidate_dir)
+    score_text = ", ".join(f"{solver.display_name}: {cell}" for solver, cell in zip(MODEL_SPECS, cells))
+
+    lines = [f"### {spec.display_name}: {title}", ""]
+    if description:
+        lines.append(f"- What it asks: {description}")
+    if capability:
+        lines.append(f"- Intended capability: {capability}")
+    if answer:
+        lines.append(f"- Answer/scoring: {answer}")
+    if closest:
+        lines.append(f"- Closest existing benchmarks: {closest}")
+    if failure_hint:
+        lines.append(f"- Creator-anticipated failure modes: {failure_hint}")
+    lines.append(f"- Validation: `{validation.get('valid')}`; bundle files: `{validation.get('bundle_file_count')}`; leak scan matches: `{len(validation.get('leak_matches') or [])}`")
+    if validation.get("gold_summary"):
+        lines.append(f"- Gold control: `{json.dumps(validation['gold_summary'], sort_keys=True)}`")
+    if validation.get("wrong_summary"):
+        lines.append(f"- Shifted-wrong control: `{json.dumps(validation['wrong_summary'], sort_keys=True)}`")
+    if any(scores):
+        lines.append(f"- Solver results: {score_text}")
+        lines.append(f"- Current read: `{status}`; max score `{max_score}`")
+    lines.append("")
+    return lines
+
+
 def mismatch_validation(result: dict[str, Any]) -> dict[str, Any]:
     expected = result.get("antigravity_expected_label")
     actual = result.get("antigravity_actual_label")
@@ -516,6 +640,60 @@ def mismatch_validation(result: dict[str, Any]) -> dict[str, Any]:
         "leak_matches": [],
         "report": report,
     }
+
+
+def solver_grid_lines(candidate_dirs: dict[str, Path]) -> list[str]:
+    lines: list[str] = []
+    solver_headers = [f"solver {spec.display_name}" for spec in MODEL_SPECS]
+    lines.append("| creator | benchmark | " + " | ".join(solver_headers) + " | max score | status |")
+    lines.append("|---|---|" + "|".join("---:" for _ in MODEL_SPECS) + "|---:|---|")
+    for creator_spec in MODEL_SPECS:
+        cdir = candidate_dirs[creator_spec.name]
+        cells, _scores, max_score, status = solver_score_cells(cdir)
+        lines.append(
+            f"| {creator_spec.display_name} | {candidate_title(cdir)} | "
+            + " | ".join(cells)
+            + f" | {max_score} | {status} |"
+        )
+    return lines
+
+
+def write_feedback_for_next_sweep(validations: dict[str, dict[str, Any]], candidate_dirs: dict[str, Path]) -> None:
+    lines: list[str] = [
+        "# Feedback For Next BenchBench Sweep",
+        "",
+        "This file is generated from the current creator/solver sweep state. After the final solver finishes, give it to the next creator models with `--feedback-context`.",
+        "",
+        "BenchBench is evaluating benchmark invention. The goal is a complete benchmark package that is valid, reproducible, externally solvable in principle, and still hard after strong tool-enabled solvers attack the public solver bundle.",
+        "",
+        "## Result Grid",
+        "",
+    ]
+    lines.extend(solver_grid_lines(candidate_dirs))
+    lines.extend(
+        [
+            "",
+            "## Benchmark Cards",
+            "",
+            "These cards summarize what each prior benchmark actually asked, not just its name and score.",
+            "",
+        ]
+    )
+    for spec in MODEL_SPECS:
+        lines.extend(candidate_card_lines(spec, candidate_dirs[spec.name], validations.get(spec.name, {})))
+    lines.extend(
+        [
+            "## Lessons For The Next Creator",
+            "",
+            "- Do not make a clean puzzle where the public packet exposes one obvious parser, simulator, BFS, or brute-force strategy.",
+            "- Do not rely on type strictness, hidden labels, private vocabulary, malformed output expectations, or missing public evidence to create low scores.",
+            "- Treat all-zero rows as audit warnings, not as automatic benchmark wins.",
+            "- Prefer complete but messy public evidence, closed answer contracts, adversarial edge cases, cross-document consistency, and partial recoverability.",
+            "- A candidate should be rejected if any strong solver gets 30/30, or if all strong solvers get 0/30 and the public bundle cannot prove external solvability.",
+            "",
+        ]
+    )
+    (RUN_ROOT / "feedback_for_next_sweep.md").write_text("\n".join(lines), encoding="utf-8")
 
 
 def write_summary(manifest: list[dict[str, Any]], validations: dict[str, dict[str, Any]], candidate_dirs: dict[str, Path]) -> None:
@@ -538,46 +716,14 @@ def write_summary(manifest: list[dict[str, Any]], validations: dict[str, dict[st
         lines.append("")
         lines.append("Antigravity rows use the current selected `agy` model and are checked against the selected-model label in the CLI log when a specific Gemini label is requested.")
     lines.append("")
-    lines.append("## Candidates")
+    lines.append("## Benchmark Cards")
     lines.append("")
     for spec in MODEL_SPECS:
-        cdir = candidate_dirs[spec.name]
-        val = validations.get(spec.name, {})
-        lines.append(f"### {spec.display_name}: {candidate_title(cdir)}")
-        lines.append("")
-        lines.append(f"- Candidate: `{cdir}`")
-        lines.append(f"- Validated: `{val.get('valid')}`")
-        lines.append(f"- Bundle files: `{val.get('bundle_file_count')}`")
-        if val.get("gold_summary"):
-            lines.append(f"- Gold control: `{json.dumps(val['gold_summary'], sort_keys=True)}`")
-        if val.get("wrong_summary"):
-            lines.append(f"- Shifted-wrong control: `{json.dumps(val['wrong_summary'], sort_keys=True)}`")
-        lines.append(f"- Leak scan matches: `{len(val.get('leak_matches') or [])}`")
-        lines.append("")
+        lines.extend(candidate_card_lines(spec, candidate_dirs[spec.name], validations.get(spec.name, {})))
 
     lines.append("## Solver Grid")
     lines.append("")
-    solver_headers = [f"solver {spec.display_name}" for spec in MODEL_SPECS]
-    lines.append("| creator | benchmark | " + " | ".join(solver_headers) + " | max score | status |")
-    lines.append("|---|---|" + "|".join("---:" for _ in MODEL_SPECS) + "|---:|---|")
-    for creator_spec in MODEL_SPECS:
-        cdir = candidate_dirs[creator_spec.name]
-        cells = []
-        scores: list[dict[str, Any] | None] = []
-        max_correct: int | None = None
-        max_total: int | None = None
-        for solver_spec in MODEL_SPECS:
-            score = score_summary(cdir / f"score_solver_{safe_name(solver_spec.name)}.json")
-            scores.append(score)
-            if score:
-                cells.append(f"{score['correct']}/{score['total']}")
-                if max_correct is None or score["correct"] > max_correct:
-                    max_correct = int(score["correct"])
-                    max_total = int(score["total"])
-            else:
-                cells.append("NA")
-        status = candidate_status(scores)
-        lines.append(f"| {creator_spec.display_name} | {candidate_title(cdir)} | " + " | ".join(cells) + f" | {max_correct}/{max_total} | {status} |")
+    lines.extend(solver_grid_lines(candidate_dirs))
 
     lines.append("")
     lines.append("## Calls")
@@ -610,6 +756,7 @@ def write_summary(manifest: list[dict[str, Any]], validations: dict[str, dict[st
     lines.append("")
     (RUN_ROOT / "summary.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     (RUN_ROOT / "manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    write_feedback_for_next_sweep(validations, candidate_dirs)
 
 
 def write_manifest(manifest: list[dict[str, Any]]) -> None:

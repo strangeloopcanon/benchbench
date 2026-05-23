@@ -17,7 +17,7 @@ hard after strong tool-enabled models attack the public evidence.
 6. Run each solver model blind against that bundle.
 7. Score solver JSONL predictions against private gold answers.
 8. Interpret the creator-by-solver matrix.
-9. Write a failure report for the next creator sweep.
+9. Write benchmark cards and a failure report for the next creator sweep.
 
 A sweep is a matrix. Rows are benchmark creators. Columns are solvers. Cells
 are exact-match scores out of 30.
@@ -109,6 +109,11 @@ code, token counts, and Claude Code cost/cache fields when available.
 ## Feedback Loop
 
 After a sweep, BenchBench can pass a failure report into the next creator run.
+The runner now writes `feedback_for_next_sweep.md` next to the run summary. The
+report includes the solver grid plus benchmark cards, so the next creators see
+what each prior task actually asked instead of learning only from benchmark
+names and scores.
+
 The report names what broke:
 
 - near-perfect solver scores;
@@ -163,4 +168,3 @@ designer. It shows which model produced the best candidate in these runs.
 It also does not yet prove novelty against the full benchmark landscape. The
 similarity path exists, but the local solver set is still too small for serious
 regression novelty claims.
-
