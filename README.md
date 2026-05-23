@@ -182,12 +182,15 @@ solver strategies.
 Full artifact:
 `experiments/004_feedback_sweep_20260522_225208/summary.md`.
 
+Solvability audit:
+`experiments/004_feedback_sweep_20260522_225208/solvability_audit.md`.
+
 | creator | generated benchmark | solver GPT-5.2 | solver GPT-5.4 | solver GPT-5.5 | solver Gemini 3.1 Pro | solver Gemini 3.5 Flash | status |
 |---|---|---:|---:|---:|---:|---:|---|
 | GPT-5.2 | Reimbursement Forensics (ReiFor) | 10/30 | 14/30 | 11/30 | 12/30 | 11/30 | best current candidate; audit next |
 | GPT-5.4 | release_packet_arbitration | 27/30 | 25/30 | 27/30 | 0/30 | 27/30 | mostly too easy; Gemini Pro failure is diagnostic |
-| GPT-5.5 | Cross-Document Obligation Resolution | 0/30 | 0/30 | 0/30 | 0/30 | 0/30 | solvability warning |
-| Gemini 3.1 Pro | Corrupted LZ77 Recovery | 0/30 | 22/30 | 17/30 | 0/30 | 0/30 | mixed; reliability and solvability audit needed |
+| GPT-5.5 | Cross-Document Obligation Resolution | 0/30 | 0/30 | 0/30 | 0/30 | 0/30 | scoring-contract failure |
+| Gemini 3.1 Pro | Corrupted LZ77 Recovery | 0/30 | 22/30 | 17/30 | 0/30 | 0/30 | solvable but too narrow/operationally brittle |
 | Gemini 3.5 Flash | MFN-Cascade | 30/30 | 30/30 | 30/30 | 30/30 | 30/30 | too easy |
 
 The strongest result was GPT-5.2's Reimbursement Forensics benchmark. Every
@@ -195,6 +198,15 @@ solver recovered some answers, so it does not look purely unknowable, but no
 solver got close to saturation. That is the shape BenchBench is looking for.
 It should be audited for leakage, answer evidence, and human solvability before
 being promoted to the stable bank.
+
+The post-run audit changed the interpretation of two rows. GPT-5.5's
+Cross-Document Obligation Resolution was not a clean all-zero benchmark:
+solvers recovered all 30 notification dates, but the scorer required exact
+private labels for `evidence_codes` and categorical values that the public
+packet did not enumerate. That makes it an under-specified answer-contract
+failure, not a keeper. Gemini 3.1 Pro's Corrupted LZ77 Recovery is not
+unsolvable: GPT-5.4 solved 22/30 and GPT-5.5 solved 17/30. Its weak cells are
+mostly blank outputs, no parsed rows, or timeout behavior.
 
 ## What We Think We Learned
 
@@ -217,8 +229,12 @@ being promoted to the stable bank.
   by at least one solver. In Experiment 004, GPT-5.2 created a candidate where
   all five solvers scored between 10/30 and 14/30.
 - Feedback did not solve the whole problem. One candidate was still saturated
-  at 30/30, one was all-zero, and two had split results that require audit
-  before they can be treated as useful measurements.
+  at 30/30, one all-zero row turned out to be an under-specified scoring
+  contract, and two had split results that require audit before they can be
+  treated as useful measurements.
+- All-zero scores need forensic follow-up. GPT-5.5's row looked impossible in
+  the grid, but the saved predictions showed all solvers solved the due-date
+  part and were zeroed by hidden answer vocabulary choices.
 - A benchmark can fail by being too easy: Spectrum Assembly looked formal, but
   every solver got 30/30 once the right search abstraction was obvious.
 - A benchmark can also fail by being too unknowable: Protocol Archaeology may
