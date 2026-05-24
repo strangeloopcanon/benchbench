@@ -17,7 +17,7 @@ from pathlib import Path
 from typing import Any
 
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[2]
 RUN_ROOT = ROOT / "runs" / f"gpt55_benchbench_v4_creative_{dt.datetime.now().strftime('%Y%m%d_%H%M%S')}"
 MODEL = "gpt-5.5"
 CANDIDATE_ID = "creative_bestshot"

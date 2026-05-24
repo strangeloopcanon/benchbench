@@ -6,14 +6,17 @@ from __future__ import annotations
 import json
 import shutil
 import subprocess
+import sys
 from pathlib import Path
 from typing import Any
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT))
 
 from benchbench_model_backends import parse_tokens, run_cmd, safe_name
 from benchbench_results import candidate_title, extract_predictions, read_jsonl, score_summary, write_jsonl
 
 
-ROOT = Path(__file__).resolve().parent
 RUN_ROOT = ROOT / "experiments" / "002_broad_sweep_20260515_220653"
 RUN_DIR = RUN_ROOT / "run"
 PYTHON = shutil.which("python") or shutil.which("python3") or "python3"

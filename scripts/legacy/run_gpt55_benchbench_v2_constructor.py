@@ -15,7 +15,7 @@ import subprocess
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[2]
 RUN_ROOT = ROOT / "runs" / f"gpt55_benchbench_v2_constructor_{dt.datetime.now().strftime('%Y%m%d_%H%M%S')}"
 MODEL = "gpt-5.5"
 REQUIRED_FILES = [

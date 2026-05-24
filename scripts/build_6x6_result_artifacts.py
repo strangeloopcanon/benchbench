@@ -18,7 +18,6 @@ from benchbench_results import score_summary
 LEGACY_MD = ROOT / "experiments" / "result_grids_6x6_20260523.md"
 CANONICAL_DIR = ROOT / "experiments" / "canonical"
 CANONICAL_MD = CANONICAL_DIR / "README.md"
-FIG_DIR = ROOT / "experiments" / "figures"
 CANONICAL_FIG_DIR = CANONICAL_DIR / "figures"
 
 SOLVERS = [
@@ -162,7 +161,6 @@ def incumbent_carry_forward_grid(exp004_rows: list[list[str]], exp007_rows: list
 
 
 def main() -> None:
-    FIG_DIR.mkdir(parents=True, exist_ok=True)
     CANONICAL_FIG_DIR.mkdir(parents=True, exist_ok=True)
     exp003_rows = build_grid(
         "experiments/003_five_model_sweep_20260522_195526",
@@ -204,25 +202,6 @@ def main() -> None:
     )
     canonical_round3_rows = incumbent_carry_forward_grid(exp004_rows, exp007_rows)
 
-    write_heatmap(
-        FIG_DIR / "exp003_style_6x6_heatmap.svg",
-        "Experiment 003: first full grid, mostly saturated",
-        "Five-model sweep reconstructed with Claude Opus row and solver column.",
-        exp003_rows,
-    )
-    write_heatmap(
-        FIG_DIR / "exp004_feedback_6x6_heatmap.svg",
-        "Experiment 004: incumbent emerges",
-        "Reimbursement Forensics is the only all-solver low-nonzero row.",
-        exp004_rows,
-    )
-    write_heatmap(
-        FIG_DIR / "exp007_challenger_6x6_heatmap.svg",
-        "Experiment 007: challengers did not beat incumbent",
-        "All six creators saw prior failures; no new row beat Reimbursement Forensics.",
-        exp007_rows,
-        solvers=SOLVERS_CURRENT,
-    )
     write_heatmap(
         CANONICAL_FIG_DIR / "canonical_round1_6x6_heatmap.svg",
         "Round 1: first full 6x6, mostly saturated",

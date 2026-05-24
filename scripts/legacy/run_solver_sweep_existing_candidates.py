@@ -11,7 +11,7 @@ from pathlib import Path
 from typing import Any
 
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[2]
 RUN_ROOT = ROOT / "runs" / "two_model_sweep_20260515_181811"
 PYTHON = shutil.which("python") or shutil.which("python3") or "python3"
 SOLVER_MODELS = ["gpt-5.4", "gpt-5.5"]

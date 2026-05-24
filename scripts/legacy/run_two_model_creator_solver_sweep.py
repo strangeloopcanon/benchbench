@@ -17,7 +17,7 @@ from pathlib import Path
 from typing import Any
 
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[2]
 RUN_ROOT = ROOT / "runs" / f"two_model_sweep_{dt.datetime.now().strftime('%Y%m%d_%H%M%S')}"
 PYTHON = shutil.which("python") or shutil.which("python3") or "python3"
 

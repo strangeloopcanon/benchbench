@@ -15,7 +15,7 @@ import textwrap
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[2]
 NOTE_PATH = ROOT / "benchbench_research_notes.md"
 RUN_ROOT = ROOT / "runs" / f"gpt55_benchbench_mvp_{dt.datetime.now().strftime('%Y%m%d_%H%M%S')}"
 MODEL = "gpt-5.5"
