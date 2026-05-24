@@ -1,0 +1,11 @@
+From: Maintenance
+To: Accounting
+Date: Day 287
+Subject: Direct Charge
+The expense on Day 285 for 'Minor plumbing repair 555' (49411 cents) was caused by Tenant C. Reclassify this as a Direct Charge to Tenant C instead of OpEx.
+
+From: Property Manager
+To: Accounting
+Date: Day 10
+Subject: CAM Cap
+Please note that Tenant C has a negotiated CAM Cap of 729 cents per sq ft per year. Apply this to their final calculation.

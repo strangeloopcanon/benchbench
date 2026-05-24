@@ -1,0 +1,35 @@
+From: Management
+To: Accounting
+Date: Day 277
+Subject: Reclassification
+We decided to capitalize the 'Security patrol 239' cost from Day 272. It is excluded.
+
+From: Maintenance
+To: Accounting
+Date: Day 279
+Subject: Direct Charge
+Please bill the 'HVAC filter replacement 463' (Day 277) directly to Tenant F. They are responsible for it. Do not put it in the main OpEx pool.
+
+From: Property Manager
+To: Accounting
+Date: Day 10
+Subject: CAM Cap
+Do not charge Tenant F more than their CAM cap of 1334 cents per sq ft per year.
+
+From: Maintenance
+To: Accounting
+Date: Day 44
+Subject: Direct Charge
+Accounting, ensure that Tenant C pays the full 265482 cents for the Day 42 'Common area utilities 217'. It's not a shared expense.
+
+From: Leasing
+To: Accounting
+Date: Day 94
+Subject: Expansion
+Effective Day 96, Tenant C added Suite 107 to their lease for the remainder of the year.
+
+From: Maintenance
+To: Accounting
+Date: Day 284
+Subject: Direct Charge
+Accounting, ensure that Tenant B pays the full 295941 cents for the Day 282 'Common area utilities 696'. It's not a shared expense.

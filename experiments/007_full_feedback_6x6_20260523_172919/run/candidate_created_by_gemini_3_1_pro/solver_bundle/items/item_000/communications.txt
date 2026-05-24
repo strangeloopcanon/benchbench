@@ -1,0 +1,17 @@
+From: Leasing
+To: Accounting
+Date: Day 131
+Subject: Expansion
+Tenant C has expanded into Suite 106 starting on Day 133. They will occupy this suite until the end of the year.
+
+From: Maintenance
+To: Accounting
+Date: Day 247
+Subject: Direct Charge
+Regarding the 22054 cents spent on 'Snow removal 113' on Day 245: Tenant D is at fault. This is a direct charge to them.
+
+From: Maintenance
+To: Accounting
+Date: Day 78
+Subject: Direct Charge
+Regarding the 203230 cents spent on 'Security patrol 915' on Day 76: Tenant D is at fault. This is a direct charge to them.

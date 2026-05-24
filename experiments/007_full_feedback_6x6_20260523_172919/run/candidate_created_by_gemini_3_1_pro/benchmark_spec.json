@@ -1,0 +1,10 @@
+{
+  "name": "Commercial Lease CAM Reconciliation",
+  "description": "A benchmark that tests a solver's ability to extract specific clauses, timeline events, and expense reclassifications from unstructured text (emails, lease manuals) and structured data (CSV, JSON), and perfectly apply integer math rules to calculate Commercial Area Maintenance (CAM) charges.",
+  "creator": "gemini-3.1-pro",
+  "version": "1.0",
+  "similar_to": ["Reimbursement Forensics", "Cross-Document Obligation Resolution"],
+  "novelty_argument": "Requires temporal tracking of occupancy, robust extraction of numerical rules and caps from emails with varied phrasing, and precise conditional application of exclusions (like > 500k vs exactly 500k) across a distributed set of documents. Unlike simple parsing benchmarks, the variables depend heavily on cross-referencing multiple files.",
+  "score_type": "continuous_0_to_1",
+  "solvability": "Fully self-contained. The solver must strictly follow the rules in the lease_manual.md and apply any overrides explicitly given in communications.txt."
+}

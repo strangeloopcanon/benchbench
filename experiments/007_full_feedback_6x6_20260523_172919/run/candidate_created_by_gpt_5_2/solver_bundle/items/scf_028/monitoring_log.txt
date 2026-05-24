@@ -1,0 +1,31 @@
+# Monitoring Log Export (Public)
+
+tz_hint: America/Los_Angeles (UTC-07:00 during this incident)
+clock_drift_seconds: -60
+
+Format variants (one per line):
+1) <timestamp> <region> STATE <state>
+2) <timestamp> <region> METRIC {"p95_ms": <int>, "error_rate_pct": <int>}
+
+States: OK | DEGRADED | SEVERE_DEGRADED | UNAVAILABLE
+
+2026-03-05T03:10:00-07:00 eu-central METRIC p95_ms=448 error_rate_pct=8
+2026-03-05T16:11:00Z eu-central METRIC {"p95_ms": 613, "error_rate_pct": 4}
+2026-03-05T16:51:00Z eu-central METRIC {"p95_ms": 464, "error_rate_pct": 7}
+2026-03-05T09:52:14-07:00 eu-central METRIC {"p95_ms": 1763, "error_rate_pct": 84}
+2026-03-05T17:21:58Z eu-central METRIC {"p95_ms": 856, "error_rate_pct": 13}
+2026-03-05T10:24:16-07:00 eu-central METRIC p95_ms=363 error_rate_pct=3
+2026-03-05T11:18:00-07:00 eu-central METRIC {"p95_ms": 562, "error_rate_pct": 7}
+2026-03-05T18:19:35Z eu-central METRIC {"p95_ms": 1371, "error_rate_pct": 44}
+2026-03-05T12:08:16-07:00 eu-central METRIC {"p95_ms": 1184, "error_rate_pct": 0}
+2026-03-05T19:11:44Z eu-central METRIC {"p95_ms": 585, "error_rate_pct": 4}
+2026-03-05T15:58:00-07:00 eu-central METRIC {"p95_ms": 398, "error_rate_pct": 5}
+2026-03-05T16:00:35-07:00 eu-central METRIC {"p95_ms": 1388, "error_rate_pct": 13}
+2026-03-05T16:18:15-07:00 eu-central METRIC p95_ms=1103 error_rate_pct=7
+2026-03-05T23:19:32Z eu-central METRIC {"p95_ms": 303, "error_rate_pct": 4}
+2026-03-05T19:00:00-07:00 eu-central METRIC {"p95_ms": 349, "error_rate_pct": 4}
+2026-03-06T07:45:00Z eu-central METRIC {"p95_ms": 399, "error_rate_pct": 0}
+2026-03-06T13:49:00Z eu-central METRIC {"p95_ms": 295, "error_rate_pct": 6}
+2026-03-06T13:51:37Z eu-central METRIC {"p95_ms": 1352, "error_rate_pct": 38}
+2026-03-06T07:30:18-07:00 eu-central METRIC {"p95_ms": 929, "error_rate_pct": 6}
+2026-03-06T14:33:49Z eu-central METRIC p95_ms=382 error_rate_pct=0

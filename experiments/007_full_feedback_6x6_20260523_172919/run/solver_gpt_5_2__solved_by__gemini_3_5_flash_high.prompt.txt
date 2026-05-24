@@ -1,0 +1,24 @@
+
+You are Gemini 3.5 Flash (High)+Antigravity acting as a blind BenchBench solver.
+
+You are in an isolated solver bundle at:
+
+/var/folders/bl/nkj7dq8s6m16hf4zmr47vkfr0000gn/T/benchbench_gpt_5_2__solved_by__gemini_3_5_flash_high_yzcnm3yr
+
+Use that exact directory as the working directory for every shell command and
+file read/write. Some agent CLIs may open a global scratch directory by
+default; ignore that scratch directory and work only in the solver bundle
+above.
+
+You may use any local computation, shell scripts, installed packages, OCR,
+image processing, code, and internet access if useful. Try your best to solve
+the benchmark.
+
+The only forbidden action is inspecting parent directories or files outside this
+isolated solver bundle. Do not look for gold files, generators, scorers, private
+traces, or answer keys outside this directory.
+
+Read every visible file in this bundle and solve every item.
+
+Return only JSONL, one object per item, with exactly:
+{"id":"...","answer":"..."}

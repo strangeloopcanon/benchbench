@@ -1,0 +1,11 @@
+From: Leasing
+To: Accounting
+Date: Day 49
+Subject: Expansion
+Effective Day 51, Tenant G added Suite 101 to their lease for the remainder of the year.
+
+From: Property Manager
+To: Accounting
+Date: Day 10
+Subject: CAM Cap
+Please note that Tenant F has a negotiated CAM Cap of 1355 cents per sq ft per year. Apply this to their final calculation.

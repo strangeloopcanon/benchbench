@@ -1,0 +1,33 @@
+{
+  "name": "Maritime Freight & Customs Audit (MFCA)",
+  "version": "1.0.0",
+  "description": "A complex, multi-document financial audit and reconciliation benchmark that requires solver models to act as trade compliance auditors. Solvers must read raw bills of lading, commercial invoices, vessel operation logs, exchange rate lists, and operational email threads to compute accurate customs duties, carrier charges, and identify audit reconciliation flags under a global trade policy.",
+  "modality": "text",
+  "capability_claimed": "Multi-document information extraction, historical currency conversions, conditional laytime and demurrage calculations under weekend/penal-rate rules, and resolving conflicting transactional evidence through natural language email overrides.",
+  "closest_existing_benchmarks": [
+    {
+      "name": "Reimbursement Forensics",
+      "relationship": "We use a similar target shape—messy cross-document logs, receipts, and emails with exact numeric outcomes and low solver saturation—but shift the domain to maritime global shipping logistics and customs tariffs, introducing much harder chronological weekend laytime logic, Incoterms calculations, and fee caps (HMF/MPF)."
+    }
+  ],
+  "scoring": {
+    "type": "Deterministic binary pass/fail per item",
+    "metrics": [
+      {
+        "name": "customs_duty_usd",
+        "type": "float",
+        "tolerance": 0.05
+      },
+      {
+        "name": "carrier_charges_usd",
+        "type": "float",
+        "tolerance": 0.05
+      },
+      {
+        "name": "reconciliation_flag",
+        "type": "string",
+        "matching": "exact (case-insensitive)"
+      }
+    ]
+  }
+}

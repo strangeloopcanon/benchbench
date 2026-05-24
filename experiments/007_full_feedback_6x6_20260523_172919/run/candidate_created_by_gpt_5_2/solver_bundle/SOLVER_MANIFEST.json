@@ -1,0 +1,8 @@
+{
+  "benchmark": "Service Credit Forensics (SCF) v1",
+  "items_file": "items_private_sample.jsonl",
+  "assets": {
+    "public_policy": "assets/public_policy.md"
+  },
+  "notes": "This bundle contains only solver-visible evidence and rules. It does not contain gold answers or creator-side code."
+}

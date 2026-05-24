@@ -1,0 +1,17 @@
+From: Management
+To: Accounting
+Date: Day 206
+Subject: Reclassification
+The 30601 cents for 'Snow removal 597' (Day 201) is actually a capital expense.
+
+From: Property Manager
+To: Accounting
+Date: Day 10
+Subject: CAM Cap
+Do not charge Tenant B more than their CAM cap of 686 cents per sq ft per year.
+
+From: Leasing
+To: Accounting
+Date: Day 71
+Subject: Expansion
+Effective Day 73, Tenant G added Suite 104 to their lease for the remainder of the year.

@@ -1,0 +1,488 @@
+{
+  "benchmark": "Service Credit Forensics (SCF) v1",
+  "score": "30/30",
+  "correct": 30,
+  "total": 30,
+  "details": [
+    {
+      "id": "scf_000",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 32,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 14990
+      },
+      "pred": {
+        "eligible_downtime_minutes": 32,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 14990
+      }
+    },
+    {
+      "id": "scf_001",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 89,
+        "sla_breached": true,
+        "credit_percent": 50,
+        "credit_usd_cents": 124950
+      },
+      "pred": {
+        "eligible_downtime_minutes": 89,
+        "sla_breached": true,
+        "credit_percent": 50,
+        "credit_usd_cents": 124950
+      }
+    },
+    {
+      "id": "scf_002",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 40,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 24990
+      },
+      "pred": {
+        "eligible_downtime_minutes": 40,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 24990
+      }
+    },
+    {
+      "id": "scf_003",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 33,
+        "sla_breached": false,
+        "credit_percent": 0,
+        "credit_usd_cents": 0
+      },
+      "pred": {
+        "eligible_downtime_minutes": 33,
+        "sla_breached": false,
+        "credit_percent": 0,
+        "credit_usd_cents": 0
+      }
+    },
+    {
+      "id": "scf_004",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 90,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 9990
+      },
+      "pred": {
+        "eligible_downtime_minutes": 90,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 9990
+      }
+    },
+    {
+      "id": "scf_005",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 33,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 9990
+      },
+      "pred": {
+        "eligible_downtime_minutes": 33,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 9990
+      }
+    },
+    {
+      "id": "scf_006",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 26,
+        "sla_breached": true,
+        "credit_percent": 25,
+        "credit_usd_cents": 99975
+      },
+      "pred": {
+        "eligible_downtime_minutes": 26,
+        "sla_breached": true,
+        "credit_percent": 25,
+        "credit_usd_cents": 99975
+      }
+    },
+    {
+      "id": "scf_007",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 88,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 24990
+      },
+      "pred": {
+        "eligible_downtime_minutes": 88,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 24990
+      }
+    },
+    {
+      "id": "scf_008",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 123,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 9990
+      },
+      "pred": {
+        "eligible_downtime_minutes": 123,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 9990
+      }
+    },
+    {
+      "id": "scf_009",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 55,
+        "sla_breached": true,
+        "credit_percent": 25,
+        "credit_usd_cents": 62475
+      },
+      "pred": {
+        "eligible_downtime_minutes": 55,
+        "sla_breached": true,
+        "credit_percent": 25,
+        "credit_usd_cents": 62475
+      }
+    },
+    {
+      "id": "scf_010",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 38,
+        "sla_breached": true,
+        "credit_percent": 25,
+        "credit_usd_cents": 62475
+      },
+      "pred": {
+        "eligible_downtime_minutes": 38,
+        "sla_breached": true,
+        "credit_percent": 25,
+        "credit_usd_cents": 62475
+      }
+    },
+    {
+      "id": "scf_011",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 64,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 14990
+      },
+      "pred": {
+        "eligible_downtime_minutes": 64,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 14990
+      }
+    },
+    {
+      "id": "scf_012",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 73,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 9990
+      },
+      "pred": {
+        "eligible_downtime_minutes": 73,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 9990
+      }
+    },
+    {
+      "id": "scf_013",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 21,
+        "sla_breached": true,
+        "credit_percent": 25,
+        "credit_usd_cents": 24975
+      },
+      "pred": {
+        "eligible_downtime_minutes": 21,
+        "sla_breached": true,
+        "credit_percent": 25,
+        "credit_usd_cents": 24975
+      }
+    },
+    {
+      "id": "scf_014",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 44,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 24990
+      },
+      "pred": {
+        "eligible_downtime_minutes": 44,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 24990
+      }
+    },
+    {
+      "id": "scf_015",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 70,
+        "sla_breached": true,
+        "credit_percent": 50,
+        "credit_usd_cents": 24950
+      },
+      "pred": {
+        "eligible_downtime_minutes": 70,
+        "sla_breached": true,
+        "credit_percent": 50,
+        "credit_usd_cents": 24950
+      }
+    },
+    {
+      "id": "scf_016",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 70,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 24990
+      },
+      "pred": {
+        "eligible_downtime_minutes": 70,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 24990
+      }
+    },
+    {
+      "id": "scf_017",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 26,
+        "sla_breached": false,
+        "credit_percent": 0,
+        "credit_usd_cents": 0
+      },
+      "pred": {
+        "eligible_downtime_minutes": 26,
+        "sla_breached": false,
+        "credit_percent": 0,
+        "credit_usd_cents": 0
+      }
+    },
+    {
+      "id": "scf_018",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 69,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 14990
+      },
+      "pred": {
+        "eligible_downtime_minutes": 69,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 14990
+      }
+    },
+    {
+      "id": "scf_019",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 70,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 9990
+      },
+      "pred": {
+        "eligible_downtime_minutes": 70,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 9990
+      }
+    },
+    {
+      "id": "scf_020",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 47,
+        "sla_breached": true,
+        "credit_percent": 50,
+        "credit_usd_cents": 24950
+      },
+      "pred": {
+        "eligible_downtime_minutes": 47,
+        "sla_breached": true,
+        "credit_percent": 50,
+        "credit_usd_cents": 24950
+      }
+    },
+    {
+      "id": "scf_021",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 62,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 39990
+      },
+      "pred": {
+        "eligible_downtime_minutes": 62,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 39990
+      }
+    },
+    {
+      "id": "scf_022",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 30,
+        "sla_breached": false,
+        "credit_percent": 0,
+        "credit_usd_cents": 0
+      },
+      "pred": {
+        "eligible_downtime_minutes": 30,
+        "sla_breached": false,
+        "credit_percent": 0,
+        "credit_usd_cents": 0
+      }
+    },
+    {
+      "id": "scf_023",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 64,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 4990
+      },
+      "pred": {
+        "eligible_downtime_minutes": 64,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 4990
+      }
+    },
+    {
+      "id": "scf_024",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 6,
+        "sla_breached": false,
+        "credit_percent": 0,
+        "credit_usd_cents": 0
+      },
+      "pred": {
+        "eligible_downtime_minutes": 6,
+        "sla_breached": false,
+        "credit_percent": 0,
+        "credit_usd_cents": 0
+      }
+    },
+    {
+      "id": "scf_025",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 31,
+        "sla_breached": false,
+        "credit_percent": 0,
+        "credit_usd_cents": 0
+      },
+      "pred": {
+        "eligible_downtime_minutes": 31,
+        "sla_breached": false,
+        "credit_percent": 0,
+        "credit_usd_cents": 0
+      }
+    },
+    {
+      "id": "scf_026",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 37,
+        "sla_breached": false,
+        "credit_percent": 0,
+        "credit_usd_cents": 0
+      },
+      "pred": {
+        "eligible_downtime_minutes": 37,
+        "sla_breached": false,
+        "credit_percent": 0,
+        "credit_usd_cents": 0
+      }
+    },
+    {
+      "id": "scf_027",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 44,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 4990
+      },
+      "pred": {
+        "eligible_downtime_minutes": 44,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 4990
+      }
+    },
+    {
+      "id": "scf_028",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 45,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 9990
+      },
+      "pred": {
+        "eligible_downtime_minutes": 45,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 9990
+      }
+    },
+    {
+      "id": "scf_029",
+      "correct": true,
+      "gold": {
+        "eligible_downtime_minutes": 56,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 24990
+      },
+      "pred": {
+        "eligible_downtime_minutes": 56,
+        "sla_breached": true,
+        "credit_percent": 10,
+        "credit_usd_cents": 24990
+      }
+    }
+  ]
+}

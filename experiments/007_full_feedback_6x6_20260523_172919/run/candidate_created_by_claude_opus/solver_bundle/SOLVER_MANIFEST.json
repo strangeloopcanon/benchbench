@@ -1,0 +1,19 @@
+{
+  "benchmark_name": "Construction Progress Payment Certification",
+  "benchmark_id": "cppc",
+  "version": "1.0",
+  "task_description": "Compute the certified payment amount for construction subcontract progress payment applications by applying multi-article contract general conditions to item-specific data including schedules of values, change orders, stored materials, backcharges, deficiencies, liquidated damages, and insurance provisions.",
+  "files": [
+    "solver_packet.md",
+    "general_conditions.md",
+    "items_private_sample.jsonl"
+  ],
+  "answer_format": {
+    "type": "jsonl",
+    "fields": {
+      "id": "string — item identifier",
+      "answer": "integer — certified amount in cents"
+    }
+  },
+  "notes": "The solver must read general_conditions.md for the full computation rules. Each item is self-contained when combined with the general conditions."
+}

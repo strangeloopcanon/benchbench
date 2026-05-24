@@ -1,0 +1,11 @@
+From: Leasing
+To: Accounting
+Date: Day 50
+Subject: Expansion
+Tenant G has expanded into Suite 105 starting on Day 52. They will occupy this suite until the end of the year.
+
+From: Maintenance
+To: Accounting
+Date: Day 355
+Subject: Direct Charge
+Please bill the 'Snow removal 224' (Day 353) directly to Tenant F. They are responsible for it. Do not put it in the main OpEx pool.

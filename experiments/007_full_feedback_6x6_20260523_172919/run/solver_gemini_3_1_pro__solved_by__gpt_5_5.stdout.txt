@@ -1,0 +1,30 @@
+{"id":"item_000","answer":{"Tenant D":515495,"Tenant C":278666,"Tenant G":21037}}
+{"id":"item_001","answer":{"Tenant G":221115,"Tenant F":221383,"Tenant C":273040}}
+{"id":"item_002","answer":{"Tenant E":158986,"Tenant A":154432,"Tenant F":277502,"Tenant C":319068,"Tenant D":171362}}
+{"id":"item_003","answer":{"Tenant B":178154,"Tenant C":43684,"Tenant F":153606,"Tenant G":282269,"Tenant D":79558}}
+{"id":"item_004","answer":{"Tenant C":391660,"Tenant D":708012,"Tenant A":83673,"Tenant B":244280,"Tenant G":423418}}
+{"id":"item_005","answer":{"Tenant B":149064,"Tenant C":294881,"Tenant G":29933,"Tenant E":21149,"Tenant D":61091}}
+{"id":"item_006","answer":{"Tenant E":100799,"Tenant F":178847,"Tenant B":454945}}
+{"id":"item_007","answer":{"Tenant A":88507,"Tenant G":333067,"Tenant C":437446,"Tenant F":690359}}
+{"id":"item_008","answer":{"Tenant G":215968,"Tenant D":248611,"Tenant E":158886,"Tenant A":220913}}
+{"id":"item_009","answer":{"Tenant G":302880,"Tenant B":65029,"Tenant E":353827,"Tenant A":198590}}
+{"id":"item_010","answer":{"Tenant A":156301,"Tenant B":44657,"Tenant E":342375,"Tenant D":71697,"Tenant C":97329}}
+{"id":"item_011","answer":{"Tenant D":165141,"Tenant A":346315,"Tenant G":230876,"Tenant F":115438}}
+{"id":"item_012","answer":{"Tenant A":329886,"Tenant G":246033,"Tenant D":136711}}
+{"id":"item_013","answer":{"Tenant E":253359,"Tenant G":253040,"Tenant D":345055,"Tenant C":53675}}
+{"id":"item_014","answer":{"Tenant A":32793,"Tenant E":486783,"Tenant D":642658}}
+{"id":"item_015","answer":{"Tenant F":255644,"Tenant B":466534,"Tenant C":326725}}
+{"id":"item_016","answer":{"Tenant D":271515,"Tenant E":125533,"Tenant C":238082,"Tenant G":508347}}
+{"id":"item_017","answer":{"Tenant C":294296,"Tenant F":357123,"Tenant G":19033,"Tenant B":39021}}
+{"id":"item_018","answer":{"Tenant B":329974,"Tenant A":252129,"Tenant C":95506,"Tenant D":232925,"Tenant E":204881}}
+{"id":"item_019","answer":{"Tenant A":305163,"Tenant D":264253,"Tenant B":97580,"Tenant E":181220}}
+{"id":"item_020","answer":{"Tenant C":90593,"Tenant B":174981,"Tenant A":91697,"Tenant G":131364}}
+{"id":"item_021","answer":{"Tenant E":114730,"Tenant F":839726,"Tenant C":417618,"Tenant G":380904}}
+{"id":"item_022","answer":{"Tenant B":336976,"Tenant C":347077,"Tenant D":314022}}
+{"id":"item_023","answer":{"Tenant G":438661,"Tenant F":354996,"Tenant A":93114}}
+{"id":"item_024","answer":{"Tenant F":200488,"Tenant E":72904,"Tenant B":148556,"Tenant D":66213,"Tenant C":346298}}
+{"id":"item_025","answer":{"Tenant C":55241,"Tenant D":279848,"Tenant A":26275,"Tenant B":268187}}
+{"id":"item_026","answer":{"Tenant G":298398,"Tenant F":263883,"Tenant A":144110}}
+{"id":"item_027","answer":{"Tenant E":314595,"Tenant D":285877,"Tenant F":142495,"Tenant B":158569,"Tenant C":274196}}
+{"id":"item_028","answer":{"Tenant C":132245,"Tenant D":317132,"Tenant B":301658}}
+{"id":"item_029","answer":{"Tenant D":107505,"Tenant F":116517,"Tenant C":409941,"Tenant E":80348}}

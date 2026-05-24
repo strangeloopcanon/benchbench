@@ -1,0 +1,11 @@
+From: Property Manager
+To: Accounting
+Date: Day 10
+Subject: CAM Cap
+For Tenant G, their base CAM is capped at 1496 cents per square foot annually.
+
+From: Maintenance
+To: Accounting
+Date: Day 277
+Subject: Direct Charge
+Regarding the 139941 cents spent on 'Routine landscaping 766' on Day 275: Tenant G is at fault. This is a direct charge to them.

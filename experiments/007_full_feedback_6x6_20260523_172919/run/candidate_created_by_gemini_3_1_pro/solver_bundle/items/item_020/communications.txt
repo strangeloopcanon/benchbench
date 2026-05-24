@@ -1,0 +1,11 @@
+From: Maintenance
+To: Accounting
+Date: Day 299
+Subject: Direct Charge
+Accounting, ensure that Tenant B pays the full 95597 cents for the Day 297 'Routine landscaping 997'. It's not a shared expense.
+
+From: Property Manager
+To: Accounting
+Date: Day 10
+Subject: CAM Cap
+Tenant B secured a cap on CAM at 1135 cents per sq ft per year.

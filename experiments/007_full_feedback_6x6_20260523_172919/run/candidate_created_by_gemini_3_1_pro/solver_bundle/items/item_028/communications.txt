@@ -1,0 +1,23 @@
+From: Management
+To: Accounting
+Date: Day 46
+Subject: Reclassification
+The 37290 cents for 'Minor plumbing repair 262' (Day 41) is actually a capital expense.
+
+From: Property Manager
+To: Accounting
+Date: Day 10
+Subject: CAM Cap
+Do not charge Tenant D more than their CAM cap of 894 cents per sq ft per year.
+
+From: Maintenance
+To: Accounting
+Date: Day 237
+Subject: Direct Charge
+The expense on Day 235 for 'Common area utilities 370' (269920 cents) was caused by Tenant B. Reclassify this as a Direct Charge to Tenant B instead of OpEx.
+
+From: Maintenance
+To: Accounting
+Date: Day 346
+Subject: Direct Charge
+Accounting, ensure that Tenant D pays the full 94960 cents for the Day 344 'Monthly cleaning 104'. It's not a shared expense.

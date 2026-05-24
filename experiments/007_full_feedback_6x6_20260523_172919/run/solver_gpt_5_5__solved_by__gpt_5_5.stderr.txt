@@ -1,0 +1,2327 @@
+2026-05-24T02:13:47.138316Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.160437Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+OpenAI Codex v0.130.0
+--------
+workdir: /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_5__solved_by__gpt_5_5
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR, /Users/rohit/.codex/memories] (network access enabled)
+reasoning effort: low
+reasoning summaries: none
+session id: 019e57c2-87c8-7200-8f12-08139e57b1b4
+--------
+user
+
+You are gpt-5.5+Codex acting as a blind BenchBench solver.
+
+You are in an isolated solver bundle at:
+
+/Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_5__solved_by__gpt_5_5
+
+Use that exact directory as the working directory for every shell command and
+file read/write. Some agent CLIs may open a global scratch directory by
+default; ignore that scratch directory and work only in the solver bundle
+above.
+
+You may use any local computation, shell scripts, installed packages, OCR,
+image processing, code, and internet access if useful. Try your best to solve
+the benchmark.
+
+The only forbidden action is inspecting parent directories or files outside this
+isolated solver bundle. Do not look for gold files, generators, scorers, private
+traces, or answer keys outside this directory.
+
+Read every visible file in this bundle and solve every item.
+
+Return only JSONL, one object per item, with exactly:
+{"id":"...","answer":"..."}
+
+deprecated: `[features].codex_hooks` is deprecated. Use `[features].hooks` instead.
+Enable it with `--enable hooks` or `[features].hooks` in config.toml. See https://developers.openai.com/codex/config-basic#feature-flags for details.
+2026-05-24T02:13:47.183868Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.209894Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.226073Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.248263Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.271866Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.297644Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.319112Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.341783Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.366176Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.389535Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.416694Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.440383Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.466706Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.492955Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.521142Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.548510Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.575855Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.601286Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.624083Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.650508Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.673309Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.700221Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.727495Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.751752Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.779277Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.804347Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.831443Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.858850Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.886131Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.913340Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.940614Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.968095Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:47.995375Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:48.022690Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:48.050153Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T02:13:48.213427Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:13:48.213437Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:13:48.213953Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:13:48.213960Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:13:48.214450Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:13:48.214455Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:13:48.214967Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:13:48.214971Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:13:48.215470Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:13:48.215474Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:13:48.216553Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:13:48.216559Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:13:49.203069Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:13:49.203085Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:13:49.203562Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:13:49.203569Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:13:49.204063Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:13:49.204067Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:13:49.204546Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:13:49.204550Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:13:49.205019Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:13:49.205023Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:13:49.206027Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:13:49.206030Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+codex
+I’ll stay inside the isolated solver bundle and read the visible files there before solving.
+exec
+/bin/zsh -lc 'find . -maxdepth 2 -type f -print' in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_5__solved_by__gpt_5_5
+ succeeded in 0ms:
+./README.md
+./dossiers/PAF-002.md
+./dossiers/PAF-012.md
+./dossiers/PAF-026.md
+./dossiers/PAF-006.md
+./dossiers/PAF-022.md
+./dossiers/PAF-016.md
+./dossiers/PAF-007.md
+./dossiers/PAF-023.md
+./dossiers/PAF-017.md
+./dossiers/PAF-003.md
+./dossiers/PAF-013.md
+./dossiers/PAF-027.md
+./dossiers/PAF-008.md
+./dossiers/PAF-018.md
+./dossiers/PAF-028.md
+./dossiers/PAF-029.md
+./dossiers/PAF-009.md
+./dossiers/PAF-019.md
+./dossiers/PAF-004.md
+./dossiers/PAF-030.md
+./dossiers/PAF-020.md
+./dossiers/PAF-014.md
+./dossiers/PAF-010.md
+./dossiers/PAF-024.md
+./dossiers/PAF-001.md
+./dossiers/PAF-011.md
+./dossiers/PAF-025.md
+./dossiers/PAF-005.md
+./dossiers/PAF-021.md
+./dossiers/PAF-015.md
+./items_private_sample.jsonl
+./SOLVER_MANIFEST.json
+
+exec
+/bin/zsh -lc 'pwd && rg --files -uu' in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_5__solved_by__gpt_5_5
+ succeeded in 0ms:
+/Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_5__solved_by__gpt_5_5
+SOLVER_MANIFEST.json
+items_private_sample.jsonl
+dossiers/PAF-015.md
+dossiers/PAF-021.md
+dossiers/PAF-005.md
+dossiers/PAF-025.md
+dossiers/PAF-011.md
+dossiers/PAF-001.md
+dossiers/PAF-024.md
+dossiers/PAF-010.md
+dossiers/PAF-014.md
+dossiers/PAF-020.md
+dossiers/PAF-030.md
+dossiers/PAF-004.md
+dossiers/PAF-019.md
+dossiers/PAF-009.md
+dossiers/PAF-029.md
+dossiers/PAF-028.md
+dossiers/PAF-018.md
+dossiers/PAF-008.md
+dossiers/PAF-027.md
+dossiers/PAF-013.md
+dossiers/PAF-003.md
+dossiers/PAF-017.md
+dossiers/PAF-023.md
+dossiers/PAF-007.md
+dossiers/PAF-016.md
+dossiers/PAF-022.md
+dossiers/PAF-006.md
+dossiers/PAF-026.md
+dossiers/PAF-012.md
+dossiers/PAF-002.md
+README.md
+
+2026-05-24T02:13:55.016390Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:13:55.016403Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:13:55.016891Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:13:55.016895Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:13:55.017372Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:13:55.017376Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:13:55.017864Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:13:55.017870Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:13:55.018348Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:13:55.018355Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:13:55.019400Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:13:55.019404Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+codex
+I found a compact bundle: manifest, sample item list, README, and 30 dossiers. I’m reading all of them now and will derive the answer format from the task text rather than guessing.
+exec
+/bin/zsh -lc "sed -n '1,220p' README.md" in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_5__solved_by__gpt_5_5
+ succeeded in 0ms:
+# Prior Authorization Forensics (PAF) v1 Solver Packet
+
+You are given 30 fictional health-insurance claim dossiers. For each id in
+`items_private_sample.jsonl`, open the referenced Markdown dossier under
+`dossiers/` and adjudicate the single claim line.
+
+Return one JSONL prediction row per item:
+
+```json
+{"id":"PAF-001","answer":{"status":"approved","reason_code":"OK","allowed_cents":12345,"insurer_pays_cents":10000,"patient_owes_cents":2345}}
+```
+
+Allowed reason codes are `OK`, `NO_AUTH`, `NO_REF`, `OON`, `NOT_COVERED`, and
+`DATE`. If the claim is denied, the benchmark convention is zero allowed,
+zero insurer payment, and zero patient responsibility. Cents are integer cents,
+with no dollar signs or commas.
+
+The dossiers intentionally include only excerpts needed for each claim. The
+task is to reconcile plan type, service schedule, riders, network status,
+authorization/referral correspondence, document dates, and accumulators.
+
+exec
+/bin/zsh -lc "sed -n '1,220p' SOLVER_MANIFEST.json" in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_5__solved_by__gpt_5_5
+ succeeded in 0ms:
+{
+  "assets": "dossiers/*.md",
+  "benchmark": "Prior Authorization Forensics (PAF) v1",
+  "item_file": "items_private_sample.jsonl",
+  "notes": "All answer-determining rules and evidence are in the dossier files. Do not infer from file order.",
+  "prediction_format": {
+    "answer": {
+      "allowed_cents": "integer",
+      "insurer_pays_cents": "integer",
+      "patient_owes_cents": "integer",
+      "reason_code": "OK|NO_AUTH|NO_REF|OON|NOT_COVERED|DATE",
+      "status": "approved|denied"
+    },
+    "id": "string"
+  }
+}
+
+exec
+/bin/zsh -lc "sed -n '1,120p' items_private_sample.jsonl" in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_5__solved_by__gpt_5_5
+ succeeded in 0ms:
+{"asset": "dossiers/PAF-001.md", "id": "PAF-001"}
+{"asset": "dossiers/PAF-002.md", "id": "PAF-002"}
+{"asset": "dossiers/PAF-003.md", "id": "PAF-003"}
+{"asset": "dossiers/PAF-004.md", "id": "PAF-004"}
+{"asset": "dossiers/PAF-005.md", "id": "PAF-005"}
+{"asset": "dossiers/PAF-006.md", "id": "PAF-006"}
+{"asset": "dossiers/PAF-007.md", "id": "PAF-007"}
+{"asset": "dossiers/PAF-008.md", "id": "PAF-008"}
+{"asset": "dossiers/PAF-009.md", "id": "PAF-009"}
+{"asset": "dossiers/PAF-010.md", "id": "PAF-010"}
+{"asset": "dossiers/PAF-011.md", "id": "PAF-011"}
+{"asset": "dossiers/PAF-012.md", "id": "PAF-012"}
+{"asset": "dossiers/PAF-013.md", "id": "PAF-013"}
+{"asset": "dossiers/PAF-014.md", "id": "PAF-014"}
+{"asset": "dossiers/PAF-015.md", "id": "PAF-015"}
+{"asset": "dossiers/PAF-016.md", "id": "PAF-016"}
+{"asset": "dossiers/PAF-017.md", "id": "PAF-017"}
+{"asset": "dossiers/PAF-018.md", "id": "PAF-018"}
+{"asset": "dossiers/PAF-019.md", "id": "PAF-019"}
+{"asset": "dossiers/PAF-020.md", "id": "PAF-020"}
+{"asset": "dossiers/PAF-021.md", "id": "PAF-021"}
+{"asset": "dossiers/PAF-022.md", "id": "PAF-022"}
+{"asset": "dossiers/PAF-023.md", "id": "PAF-023"}
+{"asset": "dossiers/PAF-024.md", "id": "PAF-024"}
+{"asset": "dossiers/PAF-025.md", "id": "PAF-025"}
+{"asset": "dossiers/PAF-026.md", "id": "PAF-026"}
+{"asset": "dossiers/PAF-027.md", "id": "PAF-027"}
+{"asset": "dossiers/PAF-028.md", "id": "PAF-028"}
+{"asset": "dossiers/PAF-029.md", "id": "PAF-029"}
+{"asset": "dossiers/PAF-030.md", "id": "PAF-030"}
+
+exec
+/bin/zsh -lc "for f in dossiers/*.md; do printf '\\n===== %s =====\\n' \""'$f"; sed -n '"'1,220p' \""'$f"; done' in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_5__solved_by__gpt_5_5
+ succeeded in 0ms:
+
+===== dossiers/PAF-001.md =====
+# Claim Dossier PAF-001
+
+## Member and plan card
+- Member id: M69284
+- Plan: HMO Silver (HMO_SILVER)
+- Accumulators before this claim: deductible met $0.00; out-of-pocket met $950.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| PT_EVAL | 97161 | Physical therapy initial evaluation | $310.00 | no | yes | no | $35.00 | 10% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **in network** for HMO Silver on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: approved, id A-516811, valid for the listed service during the benefit-year document window
+- Primary-care referral: no matching approved referral appears in the packet
+- Service-date check: the claim date falls inside the current benefit-year document window
+
+## Claim line
+Claim line CL-001: service date 2026-03-23; service_key PT_EVAL; CPT 97161; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-002.md =====
+# Claim Dossier PAF-002
+
+## Member and plan card
+- Member id: M55481
+- Plan: PPO Gold (PPO_GOLD)
+- Accumulators before this claim: deductible met $50.00; out-of-pocket met $1625.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| MRI_LUMBAR | 72148 | Lumbar spine MRI without contrast | $1850.00 | yes | no | yes | $0.00 | 20% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: no matching approved authorization appears in the packet
+- Primary-care referral: approved, id R-630853, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+
+## Claim line
+Claim line CL-002: service date 2026-04-21; service_key MRI_LUMBAR; CPT 72148; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-003.md =====
+# Claim Dossier PAF-003
+
+## Member and plan card
+- Member id: M88418
+- Plan: EPO Plus (EPO_PLUS)
+- Accumulators before this claim: deductible met $650.00; out-of-pocket met $2700.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| DERM_EXCISION | 11402 | Dermatology benign lesion excision | $760.00 | no | yes | no | $45.00 | 20% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **out of network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: approved, id A-954869, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-157784, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+
+## Claim line
+Claim line CL-003: service date 2026-03-13; service_key DERM_EXCISION; CPT 11402; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-004.md =====
+# Claim Dossier PAF-004
+
+## Member and plan card
+- Member id: M36708
+- Plan: PPO Gold (PPO_GOLD)
+- Accumulators before this claim: deductible met $50.00; out-of-pocket met $700.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| INFUSION | 96413 | Specialty drug infusion, first hour | $2240.00 | yes | no | yes | $0.00 | 25% |
+
+## Member rider
+Member rider RX-9 excludes office-administered specialty drug infusion from medical benefits unless a separate pharmacy approval letter is present. No pharmacy approval letter is in this packet.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: approved, id A-458208, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-515197, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+
+## Claim line
+Claim line CL-004: service date 2026-03-24; service_key INFUSION; CPT 96413; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-005.md =====
+# Claim Dossier PAF-005
+
+## Member and plan card
+- Member id: M72652
+- Plan: HMO Silver (HMO_SILVER)
+- Accumulators before this claim: deductible met $450.00; out-of-pocket met $250.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| SLEEP_STUDY | 95810 | Attended diagnostic sleep study | $1420.00 | yes | yes | yes | $0.00 | 15% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **in network** for HMO Silver on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: approved, id A-132879, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-487888, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date is after 2026-06-30, and no later benefit manual is included
+
+## Claim line
+Claim line CL-005: service date 2026-07-05; service_key SLEEP_STUDY; CPT 95810; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-006.md =====
+# Claim Dossier PAF-006
+
+## Member and plan card
+- Member id: M72480
+- Plan: PPO Gold (PPO_GOLD)
+- Accumulators before this claim: deductible met $450.00; out-of-pocket met $3375.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| MRI_LUMBAR | 72148 | Lumbar spine MRI without contrast | $1850.00 | yes | no | yes | $0.00 | 20% |
+
+## Member rider
+Member rider RW-14 waives prior authorization for radiology, sleep, and infusion services when the ordering clinician documents conservative treatment or medical necessity.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **out of network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: approved, id A-785183, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-139335, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+
+## Claim line
+Claim line CL-006: service date 2026-03-25; service_key MRI_LUMBAR; CPT 72148; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-007.md =====
+# Claim Dossier PAF-007
+
+## Member and plan card
+- Member id: M33830
+- Plan: EPO Plus (EPO_PLUS)
+- Accumulators before this claim: deductible met $750.00; out-of-pocket met $1225.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| INFUSION | 96413 | Specialty drug infusion, first hour | $2240.00 | yes | no | yes | $0.00 | 25% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **in network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: approved, id A-815245, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-202482, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+
+## Claim line
+Claim line CL-007: service date 2026-05-27; service_key INFUSION; CPT 96413; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-008.md =====
+# Claim Dossier PAF-008
+
+## Member and plan card
+- Member id: M96895
+- Plan: HMO Silver (HMO_SILVER)
+- Accumulators before this claim: deductible met $800.00; out-of-pocket met $3450.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| MRI_LUMBAR | 72148 | Lumbar spine MRI without contrast | $1850.00 | yes | no | yes | $0.00 | 20% |
+
+## Member rider
+Member rider RW-22 waives primary-care referral requirements for therapy, sleep medicine, and dermatology visits.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **in network** for HMO Silver on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: approved, id A-959223, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-881166, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+
+## Claim line
+Claim line CL-008: service date 2026-02-24; service_key MRI_LUMBAR; CPT 72148; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-009.md =====
+# Claim Dossier PAF-009
+
+## Member and plan card
+- Member id: M70620
+- Plan: PPO Gold (PPO_GOLD)
+- Accumulators before this claim: deductible met $450.00; out-of-pocket met $400.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| PT_EVAL | 97161 | Physical therapy initial evaluation | $310.00 | no | yes | no | $35.00 | 10% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: no matching approved authorization appears in the packet
+- Primary-care referral: approved, id R-603834, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date is after 2026-06-30, and no later benefit manual is included
+
+## Claim line
+Claim line CL-009: service date 2026-07-07; service_key PT_EVAL; CPT 97161; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-010.md =====
+# Claim Dossier PAF-010
+
+## Member and plan card
+- Member id: M62813
+- Plan: EPO Plus (EPO_PLUS)
+- Accumulators before this claim: deductible met $300.00; out-of-pocket met $2625.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| DERM_EXCISION | 11402 | Dermatology benign lesion excision | $760.00 | no | yes | no | $45.00 | 20% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **out of network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: approved, id A-846730, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-997794, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date is after 2026-06-30, and no later benefit manual is included
+
+## Claim line
+Claim line CL-010: service date 2026-07-08; service_key DERM_EXCISION; CPT 11402; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-011.md =====
+# Claim Dossier PAF-011
+
+## Member and plan card
+- Member id: M16604
+- Plan: PPO Gold (PPO_GOLD)
+- Accumulators before this claim: deductible met $700.00; out-of-pocket met $1625.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| SLEEP_STUDY | 95810 | Attended diagnostic sleep study | $1420.00 | yes | yes | yes | $0.00 | 15% |
+
+## Member rider
+Member rider RX-9 excludes office-administered specialty drug infusion from medical benefits unless a separate pharmacy approval letter is present. No pharmacy approval letter is in this packet.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: no matching approved authorization appears in the packet
+- Primary-care referral: approved, id R-880956, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+
+## Claim line
+Claim line CL-011: service date 2026-01-13; service_key SLEEP_STUDY; CPT 95810; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-012.md =====
+# Claim Dossier PAF-012
+
+## Member and plan card
+- Member id: M74404
+- Plan: EPO Plus (EPO_PLUS)
+- Accumulators before this claim: deductible met $650.00; out-of-pocket met $3075.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| URGENT_XRAY | 73610 | Urgent care ankle x-ray | $280.00 | no | no | no | $70.00 | 0% |
+
+## Member rider
+Member rider RW-14 waives prior authorization for radiology, sleep, and infusion services when the ordering clinician documents conservative treatment or medical necessity.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **in network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: approved, id A-462771, valid for the listed service during the benefit-year document window
+- Primary-care referral: no matching approved referral appears in the packet
+- Service-date check: the claim date falls inside the current benefit-year document window
+
+## Claim line
+Claim line CL-012: service date 2026-02-12; service_key URGENT_XRAY; CPT 73610; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-013.md =====
+# Claim Dossier PAF-013
+
+## Member and plan card
+- Member id: M88903
+- Plan: PPO Gold (PPO_GOLD)
+- Accumulators before this claim: deductible met $500.00; out-of-pocket met $1325.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| SLEEP_STUDY | 95810 | Attended diagnostic sleep study | $1420.00 | yes | yes | yes | $0.00 | 15% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **out of network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: no matching approved authorization appears in the packet
+- Primary-care referral: no matching approved referral appears in the packet
+- Service-date check: the claim date falls inside the current benefit-year document window
+
+## Claim line
+Claim line CL-013: service date 2026-04-21; service_key SLEEP_STUDY; CPT 95810; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-014.md =====
+# Claim Dossier PAF-014
+
+## Member and plan card
+- Member id: M20040
+- Plan: PPO Gold (PPO_GOLD)
+- Accumulators before this claim: deductible met $600.00; out-of-pocket met $2050.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| SLEEP_STUDY | 95810 | Attended diagnostic sleep study | $1420.00 | yes | yes | yes | $0.00 | 15% |
+
+## Member rider
+Member rider RX-9 excludes office-administered specialty drug infusion from medical benefits unless a separate pharmacy approval letter is present. No pharmacy approval letter is in this packet.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: approved, id A-697966, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-897434, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date is after 2026-06-30, and no later benefit manual is included
+
+## Claim line
+Claim line CL-014: service date 2026-07-20; service_key SLEEP_STUDY; CPT 95810; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-015.md =====
+# Claim Dossier PAF-015
+
+## Member and plan card
+- Member id: M42975
+- Plan: PPO Gold (PPO_GOLD)
+- Accumulators before this claim: deductible met $250.00; out-of-pocket met $25.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| DERM_EXCISION | 11402 | Dermatology benign lesion excision | $760.00 | no | yes | no | $45.00 | 20% |
+
+## Member rider
+Member rider RW-22 waives primary-care referral requirements for therapy, sleep medicine, and dermatology visits.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: approved, id A-170854, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-157456, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+
+## Claim line
+Claim line CL-015: service date 2026-01-13; service_key DERM_EXCISION; CPT 11402; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-016.md =====
+# Claim Dossier PAF-016
+
+## Member and plan card
+- Member id: M34154
+- Plan: EPO Plus (EPO_PLUS)
+- Accumulators before this claim: deductible met $350.00; out-of-pocket met $3250.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| INFUSION | 96413 | Specialty drug infusion, first hour | $2240.00 | yes | no | yes | $0.00 | 25% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **in network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: no matching approved authorization appears in the packet
+- Primary-care referral: approved, id R-872833, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+
+## Claim line
+Claim line CL-016: service date 2026-04-22; service_key INFUSION; CPT 96413; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-017.md =====
+# Claim Dossier PAF-017
+
+## Member and plan card
+- Member id: M32948
+- Plan: EPO Plus (EPO_PLUS)
+- Accumulators before this claim: deductible met $250.00; out-of-pocket met $225.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| PT_EVAL | 97161 | Physical therapy initial evaluation | $310.00 | no | yes | no | $35.00 | 10% |
+
+## Member rider
+Member rider RX-9 excludes office-administered specialty drug infusion from medical benefits unless a separate pharmacy approval letter is present. No pharmacy approval letter is in this packet.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **in network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: approved, id A-308646, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-714152, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+
+## Claim line
+Claim line CL-017: service date 2026-04-11; service_key PT_EVAL; CPT 97161; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-018.md =====
+# Claim Dossier PAF-018
+
+## Member and plan card
+- Member id: M39363
+- Plan: PPO Gold (PPO_GOLD)
+- Accumulators before this claim: deductible met $550.00; out-of-pocket met $2200.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| PT_EVAL | 97161 | Physical therapy initial evaluation | $310.00 | no | yes | no | $35.00 | 10% |
+
+## Member rider
+Member rider RW-22 waives primary-care referral requirements for therapy, sleep medicine, and dermatology visits.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: no matching approved authorization appears in the packet
+- Primary-care referral: approved, id R-306731, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+
+## Claim line
+Claim line CL-018: service date 2026-05-22; service_key PT_EVAL; CPT 97161; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-019.md =====
+# Claim Dossier PAF-019
+
+## Member and plan card
+- Member id: M72263
+- Plan: HMO Silver (HMO_SILVER)
+- Accumulators before this claim: deductible met $150.00; out-of-pocket met $375.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| PT_EVAL | 97161 | Physical therapy initial evaluation | $310.00 | no | yes | no | $35.00 | 10% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **out of network** for HMO Silver on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: approved, id A-338444, valid for the listed service during the benefit-year document window
+- Primary-care referral: no matching approved referral appears in the packet
+- Service-date check: the claim date falls inside the current benefit-year document window
+
+## Claim line
+Claim line CL-019: service date 2026-01-20; service_key PT_EVAL; CPT 97161; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-020.md =====
+# Claim Dossier PAF-020
+
+## Member and plan card
+- Member id: M66825
+- Plan: EPO Plus (EPO_PLUS)
+- Accumulators before this claim: deductible met $0.00; out-of-pocket met $1425.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| MRI_LUMBAR | 72148 | Lumbar spine MRI without contrast | $1850.00 | yes | no | yes | $0.00 | 20% |
+
+## Member rider
+Member rider RX-9 excludes office-administered specialty drug infusion from medical benefits unless a separate pharmacy approval letter is present. No pharmacy approval letter is in this packet.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **in network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: approved, id A-237412, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-891894, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+
+## Claim line
+Claim line CL-020: service date 2026-05-11; service_key MRI_LUMBAR; CPT 72148; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-021.md =====
+# Claim Dossier PAF-021
+
+## Member and plan card
+- Member id: M53701
+- Plan: HMO Silver (HMO_SILVER)
+- Accumulators before this claim: deductible met $100.00; out-of-pocket met $150.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| PT_EVAL | 97161 | Physical therapy initial evaluation | $310.00 | no | yes | no | $35.00 | 10% |
+
+## Member rider
+Member rider RW-22 waives primary-care referral requirements for therapy, sleep medicine, and dermatology visits.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **in network** for HMO Silver on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: no matching approved authorization appears in the packet
+- Primary-care referral: approved, id R-424224, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+
+## Claim line
+Claim line CL-021: service date 2026-04-16; service_key PT_EVAL; CPT 97161; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-022.md =====
+# Claim Dossier PAF-022
+
+## Member and plan card
+- Member id: M42728
+- Plan: EPO Plus (EPO_PLUS)
+- Accumulators before this claim: deductible met $500.00; out-of-pocket met $1500.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| MRI_LUMBAR | 72148 | Lumbar spine MRI without contrast | $1850.00 | yes | no | yes | $0.00 | 20% |
+
+## Member rider
+Member rider RX-9 excludes office-administered specialty drug infusion from medical benefits unless a separate pharmacy approval letter is present. No pharmacy approval letter is in this packet.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **in network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: no matching approved authorization appears in the packet
+- Primary-care referral: approved, id R-737272, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+
+## Claim line
+Claim line CL-022: service date 2026-01-28; service_key MRI_LUMBAR; CPT 72148; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-023.md =====
+# Claim Dossier PAF-023
+
+## Member and plan card
+- Member id: M71064
+- Plan: HMO Silver (HMO_SILVER)
+- Accumulators before this claim: deductible met $850.00; out-of-pocket met $850.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| PT_EVAL | 97161 | Physical therapy initial evaluation | $310.00 | no | yes | no | $35.00 | 10% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **in network** for HMO Silver on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: approved, id A-621464, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-412819, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+
+## Claim line
+Claim line CL-023: service date 2026-01-21; service_key PT_EVAL; CPT 97161; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-024.md =====
+# Claim Dossier PAF-024
+
+## Member and plan card
+- Member id: M57675
+- Plan: PPO Gold (PPO_GOLD)
+- Accumulators before this claim: deductible met $800.00; out-of-pocket met $2825.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| SLEEP_STUDY | 95810 | Attended diagnostic sleep study | $1420.00 | yes | yes | yes | $0.00 | 15% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: approved, id A-675679, valid for the listed service during the benefit-year document window
+- Primary-care referral: no matching approved referral appears in the packet
+- Service-date check: the claim date is after 2026-06-30, and no later benefit manual is included
+
+## Claim line
+Claim line CL-024: service date 2026-07-03; service_key SLEEP_STUDY; CPT 95810; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-025.md =====
+# Claim Dossier PAF-025
+
+## Member and plan card
+- Member id: M61455
+- Plan: PPO Gold (PPO_GOLD)
+- Accumulators before this claim: deductible met $850.00; out-of-pocket met $3425.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| INFUSION | 96413 | Specialty drug infusion, first hour | $2240.00 | yes | no | yes | $0.00 | 25% |
+
+## Member rider
+Member rider RX-9 excludes office-administered specialty drug infusion from medical benefits unless a separate pharmacy approval letter is present. No pharmacy approval letter is in this packet.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: approved, id A-301039, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-742905, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+
+## Claim line
+Claim line CL-025: service date 2026-03-25; service_key INFUSION; CPT 96413; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-026.md =====
+# Claim Dossier PAF-026
+
+## Member and plan card
+- Member id: M86639
+- Plan: HMO Silver (HMO_SILVER)
+- Accumulators before this claim: deductible met $700.00; out-of-pocket met $3525.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| MRI_LUMBAR | 72148 | Lumbar spine MRI without contrast | $1850.00 | yes | no | yes | $0.00 | 20% |
+
+## Member rider
+Member rider RW-14 waives prior authorization for radiology, sleep, and infusion services when the ordering clinician documents conservative treatment or medical necessity.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **in network** for HMO Silver on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: approved, id A-341315, valid for the listed service during the benefit-year document window
+- Primary-care referral: no matching approved referral appears in the packet
+- Service-date check: the claim date falls inside the current benefit-year document window
+
+## Claim line
+Claim line CL-026: service date 2026-02-22; service_key MRI_LUMBAR; CPT 72148; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-027.md =====
+# Claim Dossier PAF-027
+
+## Member and plan card
+- Member id: M76393
+- Plan: EPO Plus (EPO_PLUS)
+- Accumulators before this claim: deductible met $400.00; out-of-pocket met $3575.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| URGENT_XRAY | 73610 | Urgent care ankle x-ray | $280.00 | no | no | no | $70.00 | 0% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **in network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: approved, id A-997006, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-683210, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date is after 2026-06-30, and no later benefit manual is included
+
+## Claim line
+Claim line CL-027: service date 2026-07-08; service_key URGENT_XRAY; CPT 73610; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-028.md =====
+# Claim Dossier PAF-028
+
+## Member and plan card
+- Member id: M81582
+- Plan: EPO Plus (EPO_PLUS)
+- Accumulators before this claim: deductible met $200.00; out-of-pocket met $1875.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| PT_EVAL | 97161 | Physical therapy initial evaluation | $310.00 | no | yes | no | $35.00 | 10% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **in network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: approved, id A-196454, valid for the listed service during the benefit-year document window
+- Primary-care referral: no matching approved referral appears in the packet
+- Service-date check: the claim date is after 2026-06-30, and no later benefit manual is included
+
+## Claim line
+Claim line CL-028: service date 2026-07-06; service_key PT_EVAL; CPT 97161; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-029.md =====
+# Claim Dossier PAF-029
+
+## Member and plan card
+- Member id: M48136
+- Plan: PPO Gold (PPO_GOLD)
+- Accumulators before this claim: deductible met $650.00; out-of-pocket met $1675.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| SLEEP_STUDY | 95810 | Attended diagnostic sleep study | $1420.00 | yes | yes | yes | $0.00 | 15% |
+
+## Member rider
+Member rider RW-14 waives prior authorization for radiology, sleep, and infusion services when the ordering clinician documents conservative treatment or medical necessity.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: no matching approved authorization appears in the packet
+- Primary-care referral: no matching approved referral appears in the packet
+- Service-date check: the claim date falls inside the current benefit-year document window
+
+## Claim line
+Claim line CL-029: service date 2026-05-16; service_key SLEEP_STUDY; CPT 95810; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+===== dossiers/PAF-030.md =====
+# Claim Dossier PAF-030
+
+## Member and plan card
+- Member id: M35566
+- Plan: HMO Silver (HMO_SILVER)
+- Accumulators before this claim: deductible met $450.00; out-of-pocket met $875.00.
+- Current benefit year documents are valid for services from 2026-01-01 through 2026-06-30.
+
+## Benefit manual excerpts
+- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+- If a service is denied, report zero allowed amount, zero insurer payment, and zero patient responsibility for this benchmark.
+- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+
+## Service schedule excerpt
+| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+|---|---|---|---:|---|---|---|---:|---:|
+| URGENT_XRAY | 73610 | Urgent care ankle x-ray | $280.00 | no | no | no | $70.00 | 0% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+The rendering provider listed for this claim is marked **out of network** for HMO Silver on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+## Utilization and referral correspondence
+- Prior authorization letter: approved, id A-849837, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-715981, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+
+## Claim line
+Claim line CL-030: service date 2026-02-26; service_key URGENT_XRAY; CPT 73610; billed by rendering provider above.
+
+Return exactly one JSON object for this item with keys:
+`status`, `reason_code`, `allowed_cents`, `insurer_pays_cents`, `patient_owes_cents`.
+
+2026-05-24T02:14:05.067743Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:05.067758Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:05.068294Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:05.068302Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:05.068794Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:05.068798Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:05.069308Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:05.069312Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:05.069813Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:05.069819Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:05.070925Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:05.070932Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+codex
+The first pass shows each dossier is self-contained but the combined output truncated. I’m switching to extraction: pull the plan, service, rider, network, auth/referral/date facts, then compute each row consistently.
+exec
+/bin/zsh -lc "awk '
+/"'^# Claim Dossier/{id=$4}
+/Plan:/{plan=$0}
+/Accumulators/{acc=$0}
+/''^'"\\| [A-Z_]+ /{svc="'$0}
+/''^Member rider/{getline; rider=$0}
+/''^The rendering provider/{net=$0}
+/Prior authorization letter/{auth=$0}
+/Primary-care referral/{ref=$0}
+/Service-date check/{date=$0}
+/''^Claim line/{claim=$0; print id "'"\\n\" plan \"\\n\" acc \"\\n\" svc \"\\n\" rider \"\\n\" net \"\\n\" auth \"\\n\" ref \"\\n\" date \"\\n\" claim \"\\n\"}
+' dossiers/*.md" in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_5__solved_by__gpt_5_5
+ succeeded in 0ms:
+PAF-001
+- Plan: HMO Silver (HMO_SILVER)
+- Accumulators before this claim: deductible met $0.00; out-of-pocket met $950.00.
+| PT_EVAL | 97161 | Physical therapy initial evaluation | $310.00 | no | yes | no | $35.00 | 10% |
+
+The rendering provider listed for this claim is marked **in network** for HMO Silver on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: approved, id A-516811, valid for the listed service during the benefit-year document window
+- Primary-care referral: no matching approved referral appears in the packet
+- Service-date check: the claim date falls inside the current benefit-year document window
+Claim line CL-001: service date 2026-03-23; service_key PT_EVAL; CPT 97161; billed by rendering provider above.
+
+PAF-002
+- Plan: PPO Gold (PPO_GOLD)
+- Accumulators before this claim: deductible met $50.00; out-of-pocket met $1625.00.
+| MRI_LUMBAR | 72148 | Lumbar spine MRI without contrast | $1850.00 | yes | no | yes | $0.00 | 20% |
+
+The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: no matching approved authorization appears in the packet
+- Primary-care referral: approved, id R-630853, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+Claim line CL-002: service date 2026-04-21; service_key MRI_LUMBAR; CPT 72148; billed by rendering provider above.
+
+PAF-003
+- Plan: EPO Plus (EPO_PLUS)
+- Accumulators before this claim: deductible met $650.00; out-of-pocket met $2700.00.
+| DERM_EXCISION | 11402 | Dermatology benign lesion excision | $760.00 | no | yes | no | $45.00 | 20% |
+
+The rendering provider listed for this claim is marked **out of network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: approved, id A-954869, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-157784, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+Claim line CL-003: service date 2026-03-13; service_key DERM_EXCISION; CPT 11402; billed by rendering provider above.
+
+PAF-004
+- Plan: PPO Gold (PPO_GOLD)
+- Accumulators before this claim: deductible met $50.00; out-of-pocket met $700.00.
+| INFUSION | 96413 | Specialty drug infusion, first hour | $2240.00 | yes | no | yes | $0.00 | 25% |
+
+The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: approved, id A-458208, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-515197, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+Claim line CL-004: service date 2026-03-24; service_key INFUSION; CPT 96413; billed by rendering provider above.
+
+PAF-005
+- Plan: HMO Silver (HMO_SILVER)
+- Accumulators before this claim: deductible met $450.00; out-of-pocket met $250.00.
+| SLEEP_STUDY | 95810 | Attended diagnostic sleep study | $1420.00 | yes | yes | yes | $0.00 | 15% |
+
+The rendering provider listed for this claim is marked **in network** for HMO Silver on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: approved, id A-132879, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-487888, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date is after 2026-06-30, and no later benefit manual is included
+Claim line CL-005: service date 2026-07-05; service_key SLEEP_STUDY; CPT 95810; billed by rendering provider above.
+
+PAF-006
+- Plan: PPO Gold (PPO_GOLD)
+- Accumulators before this claim: deductible met $450.00; out-of-pocket met $3375.00.
+| MRI_LUMBAR | 72148 | Lumbar spine MRI without contrast | $1850.00 | yes | no | yes | $0.00 | 20% |
+
+The rendering provider listed for this claim is marked **out of network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: approved, id A-785183, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-139335, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+Claim line CL-006: service date 2026-03-25; service_key MRI_LUMBAR; CPT 72148; billed by rendering provider above.
+
+PAF-007
+- Plan: EPO Plus (EPO_PLUS)
+- Accumulators before this claim: deductible met $750.00; out-of-pocket met $1225.00.
+| INFUSION | 96413 | Specialty drug infusion, first hour | $2240.00 | yes | no | yes | $0.00 | 25% |
+
+The rendering provider listed for this claim is marked **in network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: approved, id A-815245, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-202482, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+Claim line CL-007: service date 2026-05-27; service_key INFUSION; CPT 96413; billed by rendering provider above.
+
+PAF-008
+- Plan: HMO Silver (HMO_SILVER)
+- Accumulators before this claim: deductible met $800.00; out-of-pocket met $3450.00.
+| MRI_LUMBAR | 72148 | Lumbar spine MRI without contrast | $1850.00 | yes | no | yes | $0.00 | 20% |
+
+The rendering provider listed for this claim is marked **in network** for HMO Silver on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: approved, id A-959223, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-881166, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+Claim line CL-008: service date 2026-02-24; service_key MRI_LUMBAR; CPT 72148; billed by rendering provider above.
+
+PAF-009
+- Plan: PPO Gold (PPO_GOLD)
+- Accumulators before this claim: deductible met $450.00; out-of-pocket met $400.00.
+| PT_EVAL | 97161 | Physical therapy initial evaluation | $310.00 | no | yes | no | $35.00 | 10% |
+
+The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: no matching approved authorization appears in the packet
+- Primary-care referral: approved, id R-603834, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date is after 2026-06-30, and no later benefit manual is included
+Claim line CL-009: service date 2026-07-07; service_key PT_EVAL; CPT 97161; billed by rendering provider above.
+
+PAF-010
+- Plan: EPO Plus (EPO_PLUS)
+- Accumulators before this claim: deductible met $300.00; out-of-pocket met $2625.00.
+| DERM_EXCISION | 11402 | Dermatology benign lesion excision | $760.00 | no | yes | no | $45.00 | 20% |
+
+The rendering provider listed for this claim is marked **out of network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: approved, id A-846730, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-997794, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date is after 2026-06-30, and no later benefit manual is included
+Claim line CL-010: service date 2026-07-08; service_key DERM_EXCISION; CPT 11402; billed by rendering provider above.
+
+PAF-011
+- Plan: PPO Gold (PPO_GOLD)
+- Accumulators before this claim: deductible met $700.00; out-of-pocket met $1625.00.
+| SLEEP_STUDY | 95810 | Attended diagnostic sleep study | $1420.00 | yes | yes | yes | $0.00 | 15% |
+
+The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: no matching approved authorization appears in the packet
+- Primary-care referral: approved, id R-880956, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+Claim line CL-011: service date 2026-01-13; service_key SLEEP_STUDY; CPT 95810; billed by rendering provider above.
+
+PAF-012
+- Plan: EPO Plus (EPO_PLUS)
+- Accumulators before this claim: deductible met $650.00; out-of-pocket met $3075.00.
+| URGENT_XRAY | 73610 | Urgent care ankle x-ray | $280.00 | no | no | no | $70.00 | 0% |
+
+The rendering provider listed for this claim is marked **in network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: approved, id A-462771, valid for the listed service during the benefit-year document window
+- Primary-care referral: no matching approved referral appears in the packet
+- Service-date check: the claim date falls inside the current benefit-year document window
+Claim line CL-012: service date 2026-02-12; service_key URGENT_XRAY; CPT 73610; billed by rendering provider above.
+
+PAF-013
+- Plan: PPO Gold (PPO_GOLD)
+- Accumulators before this claim: deductible met $500.00; out-of-pocket met $1325.00.
+| SLEEP_STUDY | 95810 | Attended diagnostic sleep study | $1420.00 | yes | yes | yes | $0.00 | 15% |
+
+The rendering provider listed for this claim is marked **out of network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: no matching approved authorization appears in the packet
+- Primary-care referral: no matching approved referral appears in the packet
+- Service-date check: the claim date falls inside the current benefit-year document window
+Claim line CL-013: service date 2026-04-21; service_key SLEEP_STUDY; CPT 95810; billed by rendering provider above.
+
+PAF-014
+- Plan: PPO Gold (PPO_GOLD)
+- Accumulators before this claim: deductible met $600.00; out-of-pocket met $2050.00.
+| SLEEP_STUDY | 95810 | Attended diagnostic sleep study | $1420.00 | yes | yes | yes | $0.00 | 15% |
+
+The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: approved, id A-697966, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-897434, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date is after 2026-06-30, and no later benefit manual is included
+Claim line CL-014: service date 2026-07-20; service_key SLEEP_STUDY; CPT 95810; billed by rendering provider above.
+
+PAF-015
+- Plan: PPO Gold (PPO_GOLD)
+- Accumulators before this claim: deductible met $250.00; out-of-pocket met $25.00.
+| DERM_EXCISION | 11402 | Dermatology benign lesion excision | $760.00 | no | yes | no | $45.00 | 20% |
+
+The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: approved, id A-170854, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-157456, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+Claim line CL-015: service date 2026-01-13; service_key DERM_EXCISION; CPT 11402; billed by rendering provider above.
+
+PAF-016
+- Plan: EPO Plus (EPO_PLUS)
+- Accumulators before this claim: deductible met $350.00; out-of-pocket met $3250.00.
+| INFUSION | 96413 | Specialty drug infusion, first hour | $2240.00 | yes | no | yes | $0.00 | 25% |
+
+The rendering provider listed for this claim is marked **in network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: no matching approved authorization appears in the packet
+- Primary-care referral: approved, id R-872833, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+Claim line CL-016: service date 2026-04-22; service_key INFUSION; CPT 96413; billed by rendering provider above.
+
+PAF-017
+- Plan: EPO Plus (EPO_PLUS)
+- Accumulators before this claim: deductible met $250.00; out-of-pocket met $225.00.
+| PT_EVAL | 97161 | Physical therapy initial evaluation | $310.00 | no | yes | no | $35.00 | 10% |
+
+The rendering provider listed for this claim is marked **in network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: approved, id A-308646, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-714152, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+Claim line CL-017: service date 2026-04-11; service_key PT_EVAL; CPT 97161; billed by rendering provider above.
+
+PAF-018
+- Plan: PPO Gold (PPO_GOLD)
+- Accumulators before this claim: deductible met $550.00; out-of-pocket met $2200.00.
+| PT_EVAL | 97161 | Physical therapy initial evaluation | $310.00 | no | yes | no | $35.00 | 10% |
+
+The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: no matching approved authorization appears in the packet
+- Primary-care referral: approved, id R-306731, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+Claim line CL-018: service date 2026-05-22; service_key PT_EVAL; CPT 97161; billed by rendering provider above.
+
+PAF-019
+- Plan: HMO Silver (HMO_SILVER)
+- Accumulators before this claim: deductible met $150.00; out-of-pocket met $375.00.
+| PT_EVAL | 97161 | Physical therapy initial evaluation | $310.00 | no | yes | no | $35.00 | 10% |
+
+The rendering provider listed for this claim is marked **out of network** for HMO Silver on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: approved, id A-338444, valid for the listed service during the benefit-year document window
+- Primary-care referral: no matching approved referral appears in the packet
+- Service-date check: the claim date falls inside the current benefit-year document window
+Claim line CL-019: service date 2026-01-20; service_key PT_EVAL; CPT 97161; billed by rendering provider above.
+
+PAF-020
+- Plan: EPO Plus (EPO_PLUS)
+- Accumulators before this claim: deductible met $0.00; out-of-pocket met $1425.00.
+| MRI_LUMBAR | 72148 | Lumbar spine MRI without contrast | $1850.00 | yes | no | yes | $0.00 | 20% |
+
+The rendering provider listed for this claim is marked **in network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: approved, id A-237412, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-891894, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+Claim line CL-020: service date 2026-05-11; service_key MRI_LUMBAR; CPT 72148; billed by rendering provider above.
+
+PAF-021
+- Plan: HMO Silver (HMO_SILVER)
+- Accumulators before this claim: deductible met $100.00; out-of-pocket met $150.00.
+| PT_EVAL | 97161 | Physical therapy initial evaluation | $310.00 | no | yes | no | $35.00 | 10% |
+
+The rendering provider listed for this claim is marked **in network** for HMO Silver on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: no matching approved authorization appears in the packet
+- Primary-care referral: approved, id R-424224, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+Claim line CL-021: service date 2026-04-16; service_key PT_EVAL; CPT 97161; billed by rendering provider above.
+
+PAF-022
+- Plan: EPO Plus (EPO_PLUS)
+- Accumulators before this claim: deductible met $500.00; out-of-pocket met $1500.00.
+| MRI_LUMBAR | 72148 | Lumbar spine MRI without contrast | $1850.00 | yes | no | yes | $0.00 | 20% |
+
+The rendering provider listed for this claim is marked **in network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: no matching approved authorization appears in the packet
+- Primary-care referral: approved, id R-737272, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+Claim line CL-022: service date 2026-01-28; service_key MRI_LUMBAR; CPT 72148; billed by rendering provider above.
+
+PAF-023
+- Plan: HMO Silver (HMO_SILVER)
+- Accumulators before this claim: deductible met $850.00; out-of-pocket met $850.00.
+| PT_EVAL | 97161 | Physical therapy initial evaluation | $310.00 | no | yes | no | $35.00 | 10% |
+
+The rendering provider listed for this claim is marked **in network** for HMO Silver on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: approved, id A-621464, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-412819, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+Claim line CL-023: service date 2026-01-21; service_key PT_EVAL; CPT 97161; billed by rendering provider above.
+
+PAF-024
+- Plan: PPO Gold (PPO_GOLD)
+- Accumulators before this claim: deductible met $800.00; out-of-pocket met $2825.00.
+| SLEEP_STUDY | 95810 | Attended diagnostic sleep study | $1420.00 | yes | yes | yes | $0.00 | 15% |
+
+The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: approved, id A-675679, valid for the listed service during the benefit-year document window
+- Primary-care referral: no matching approved referral appears in the packet
+- Service-date check: the claim date is after 2026-06-30, and no later benefit manual is included
+Claim line CL-024: service date 2026-07-03; service_key SLEEP_STUDY; CPT 95810; billed by rendering provider above.
+
+PAF-025
+- Plan: PPO Gold (PPO_GOLD)
+- Accumulators before this claim: deductible met $850.00; out-of-pocket met $3425.00.
+| INFUSION | 96413 | Specialty drug infusion, first hour | $2240.00 | yes | no | yes | $0.00 | 25% |
+
+The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: approved, id A-301039, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-742905, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+Claim line CL-025: service date 2026-03-25; service_key INFUSION; CPT 96413; billed by rendering provider above.
+
+PAF-026
+- Plan: HMO Silver (HMO_SILVER)
+- Accumulators before this claim: deductible met $700.00; out-of-pocket met $3525.00.
+| MRI_LUMBAR | 72148 | Lumbar spine MRI without contrast | $1850.00 | yes | no | yes | $0.00 | 20% |
+
+The rendering provider listed for this claim is marked **in network** for HMO Silver on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: approved, id A-341315, valid for the listed service during the benefit-year document window
+- Primary-care referral: no matching approved referral appears in the packet
+- Service-date check: the claim date falls inside the current benefit-year document window
+Claim line CL-026: service date 2026-02-22; service_key MRI_LUMBAR; CPT 72148; billed by rendering provider above.
+
+PAF-027
+- Plan: EPO Plus (EPO_PLUS)
+- Accumulators before this claim: deductible met $400.00; out-of-pocket met $3575.00.
+| URGENT_XRAY | 73610 | Urgent care ankle x-ray | $280.00 | no | no | no | $70.00 | 0% |
+
+The rendering provider listed for this claim is marked **in network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: approved, id A-997006, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-683210, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date is after 2026-06-30, and no later benefit manual is included
+Claim line CL-027: service date 2026-07-08; service_key URGENT_XRAY; CPT 73610; billed by rendering provider above.
+
+PAF-028
+- Plan: EPO Plus (EPO_PLUS)
+- Accumulators before this claim: deductible met $200.00; out-of-pocket met $1875.00.
+| PT_EVAL | 97161 | Physical therapy initial evaluation | $310.00 | no | yes | no | $35.00 | 10% |
+
+The rendering provider listed for this claim is marked **in network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: approved, id A-196454, valid for the listed service during the benefit-year document window
+- Primary-care referral: no matching approved referral appears in the packet
+- Service-date check: the claim date is after 2026-06-30, and no later benefit manual is included
+Claim line CL-028: service date 2026-07-06; service_key PT_EVAL; CPT 97161; billed by rendering provider above.
+
+PAF-029
+- Plan: PPO Gold (PPO_GOLD)
+- Accumulators before this claim: deductible met $650.00; out-of-pocket met $1675.00.
+| SLEEP_STUDY | 95810 | Attended diagnostic sleep study | $1420.00 | yes | yes | yes | $0.00 | 15% |
+
+The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: no matching approved authorization appears in the packet
+- Primary-care referral: no matching approved referral appears in the packet
+- Service-date check: the claim date falls inside the current benefit-year document window
+Claim line CL-029: service date 2026-05-16; service_key SLEEP_STUDY; CPT 95810; billed by rendering provider above.
+
+PAF-030
+- Plan: HMO Silver (HMO_SILVER)
+- Accumulators before this claim: deductible met $450.00; out-of-pocket met $875.00.
+| URGENT_XRAY | 73610 | Urgent care ankle x-ray | $280.00 | no | no | no | $70.00 | 0% |
+
+The rendering provider listed for this claim is marked **out of network** for HMO Silver on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+- Prior authorization letter: approved, id A-849837, valid for the listed service during the benefit-year document window
+- Primary-care referral: approved, id R-715981, valid for the listed service during the benefit-year document window
+- Service-date check: the claim date falls inside the current benefit-year document window
+Claim line CL-030: service date 2026-02-26; service_key URGENT_XRAY; CPT 73610; billed by rendering provider above.
+
+
+2026-05-24T02:14:12.865819Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:12.865834Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:12.866364Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:12.866370Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:12.866915Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:12.866921Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:12.867434Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:12.867439Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:12.867964Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:12.867969Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:12.869055Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:12.869062Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+exec
+/bin/zsh -lc 'rg -n "deductible|out-of-pocket|maximum|max|HMO|PPO|EPO" dossiers/PAF-*.md README.md' in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_5__solved_by__gpt_5_5
+ succeeded in 0ms:
+dossiers/PAF-009.md:5:- Plan: PPO Gold (PPO_GOLD)
+dossiers/PAF-009.md:6:- Accumulators before this claim: deductible met $450.00; out-of-pocket met $400.00.
+dossiers/PAF-009.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-009.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-009.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-009.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-009.md:24:The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-005.md:5:- Plan: HMO Silver (HMO_SILVER)
+dossiers/PAF-005.md:6:- Accumulators before this claim: deductible met $450.00; out-of-pocket met $250.00.
+dossiers/PAF-005.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-005.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-005.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-005.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-005.md:24:The rendering provider listed for this claim is marked **in network** for HMO Silver on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-001.md:5:- Plan: HMO Silver (HMO_SILVER)
+dossiers/PAF-001.md:6:- Accumulators before this claim: deductible met $0.00; out-of-pocket met $950.00.
+dossiers/PAF-001.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-001.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-001.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-001.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-001.md:24:The rendering provider listed for this claim is marked **in network** for HMO Silver on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-006.md:5:- Plan: PPO Gold (PPO_GOLD)
+dossiers/PAF-006.md:6:- Accumulators before this claim: deductible met $450.00; out-of-pocket met $3375.00.
+dossiers/PAF-006.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-006.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-006.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-006.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-006.md:24:The rendering provider listed for this claim is marked **out of network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-010.md:5:- Plan: EPO Plus (EPO_PLUS)
+dossiers/PAF-010.md:6:- Accumulators before this claim: deductible met $300.00; out-of-pocket met $2625.00.
+dossiers/PAF-010.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-010.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-010.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-010.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-010.md:24:The rendering provider listed for this claim is marked **out of network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-003.md:5:- Plan: EPO Plus (EPO_PLUS)
+dossiers/PAF-003.md:6:- Accumulators before this claim: deductible met $650.00; out-of-pocket met $2700.00.
+dossiers/PAF-003.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-003.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-003.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-003.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-003.md:24:The rendering provider listed for this claim is marked **out of network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-004.md:5:- Plan: PPO Gold (PPO_GOLD)
+dossiers/PAF-004.md:6:- Accumulators before this claim: deductible met $50.00; out-of-pocket met $700.00.
+dossiers/PAF-004.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-004.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-004.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-004.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-004.md:24:The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-008.md:5:- Plan: HMO Silver (HMO_SILVER)
+dossiers/PAF-008.md:6:- Accumulators before this claim: deductible met $800.00; out-of-pocket met $3450.00.
+dossiers/PAF-008.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-008.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-008.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-008.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-008.md:24:The rendering provider listed for this claim is marked **in network** for HMO Silver on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-007.md:5:- Plan: EPO Plus (EPO_PLUS)
+dossiers/PAF-007.md:6:- Accumulators before this claim: deductible met $750.00; out-of-pocket met $1225.00.
+dossiers/PAF-007.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-007.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-007.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-007.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-007.md:24:The rendering provider listed for this claim is marked **in network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-019.md:5:- Plan: HMO Silver (HMO_SILVER)
+dossiers/PAF-019.md:6:- Accumulators before this claim: deductible met $150.00; out-of-pocket met $375.00.
+dossiers/PAF-019.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-019.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-019.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-019.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-019.md:24:The rendering provider listed for this claim is marked **out of network** for HMO Silver on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-015.md:5:- Plan: PPO Gold (PPO_GOLD)
+dossiers/PAF-015.md:6:- Accumulators before this claim: deductible met $250.00; out-of-pocket met $25.00.
+dossiers/PAF-015.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-015.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-015.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-015.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-015.md:24:The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-011.md:5:- Plan: PPO Gold (PPO_GOLD)
+dossiers/PAF-011.md:6:- Accumulators before this claim: deductible met $700.00; out-of-pocket met $1625.00.
+dossiers/PAF-011.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-011.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-011.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-011.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-011.md:24:The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-002.md:5:- Plan: PPO Gold (PPO_GOLD)
+dossiers/PAF-002.md:6:- Accumulators before this claim: deductible met $50.00; out-of-pocket met $1625.00.
+dossiers/PAF-002.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-002.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-002.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-002.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-002.md:24:The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-020.md:5:- Plan: EPO Plus (EPO_PLUS)
+dossiers/PAF-020.md:6:- Accumulators before this claim: deductible met $0.00; out-of-pocket met $1425.00.
+dossiers/PAF-020.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-020.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-020.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-020.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-020.md:24:The rendering provider listed for this claim is marked **in network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-014.md:5:- Plan: PPO Gold (PPO_GOLD)
+dossiers/PAF-014.md:6:- Accumulators before this claim: deductible met $600.00; out-of-pocket met $2050.00.
+dossiers/PAF-014.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-014.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-014.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-014.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-014.md:24:The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-016.md:5:- Plan: EPO Plus (EPO_PLUS)
+dossiers/PAF-016.md:6:- Accumulators before this claim: deductible met $350.00; out-of-pocket met $3250.00.
+dossiers/PAF-016.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-016.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-016.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-016.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-016.md:24:The rendering provider listed for this claim is marked **in network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-018.md:5:- Plan: PPO Gold (PPO_GOLD)
+dossiers/PAF-018.md:6:- Accumulators before this claim: deductible met $550.00; out-of-pocket met $2200.00.
+dossiers/PAF-018.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-018.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-018.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-018.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-018.md:24:The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-013.md:5:- Plan: PPO Gold (PPO_GOLD)
+dossiers/PAF-013.md:6:- Accumulators before this claim: deductible met $500.00; out-of-pocket met $1325.00.
+dossiers/PAF-013.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-013.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-013.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-013.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-013.md:24:The rendering provider listed for this claim is marked **out of network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-029.md:5:- Plan: PPO Gold (PPO_GOLD)
+dossiers/PAF-029.md:6:- Accumulators before this claim: deductible met $650.00; out-of-pocket met $1675.00.
+dossiers/PAF-029.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-029.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-029.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-029.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-029.md:24:The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-021.md:5:- Plan: HMO Silver (HMO_SILVER)
+dossiers/PAF-021.md:6:- Accumulators before this claim: deductible met $100.00; out-of-pocket met $150.00.
+dossiers/PAF-021.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-021.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-021.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-021.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-021.md:24:The rendering provider listed for this claim is marked **in network** for HMO Silver on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-017.md:5:- Plan: EPO Plus (EPO_PLUS)
+dossiers/PAF-017.md:6:- Accumulators before this claim: deductible met $250.00; out-of-pocket met $225.00.
+dossiers/PAF-017.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-017.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-017.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-017.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-017.md:24:The rendering provider listed for this claim is marked **in network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-012.md:5:- Plan: EPO Plus (EPO_PLUS)
+dossiers/PAF-012.md:6:- Accumulators before this claim: deductible met $650.00; out-of-pocket met $3075.00.
+dossiers/PAF-012.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-012.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-012.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-012.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-012.md:24:The rendering provider listed for this claim is marked **in network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-028.md:5:- Plan: EPO Plus (EPO_PLUS)
+dossiers/PAF-028.md:6:- Accumulators before this claim: deductible met $200.00; out-of-pocket met $1875.00.
+dossiers/PAF-028.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-028.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-028.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-028.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-028.md:24:The rendering provider listed for this claim is marked **in network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-025.md:5:- Plan: PPO Gold (PPO_GOLD)
+dossiers/PAF-025.md:6:- Accumulators before this claim: deductible met $850.00; out-of-pocket met $3425.00.
+dossiers/PAF-025.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-025.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-025.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-025.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-025.md:24:The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-030.md:5:- Plan: HMO Silver (HMO_SILVER)
+dossiers/PAF-030.md:6:- Accumulators before this claim: deductible met $450.00; out-of-pocket met $875.00.
+dossiers/PAF-030.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-030.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-030.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-030.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-030.md:24:The rendering provider listed for this claim is marked **out of network** for HMO Silver on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-026.md:5:- Plan: HMO Silver (HMO_SILVER)
+dossiers/PAF-026.md:6:- Accumulators before this claim: deductible met $700.00; out-of-pocket met $3525.00.
+dossiers/PAF-026.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-026.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-026.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-026.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-026.md:24:The rendering provider listed for this claim is marked **in network** for HMO Silver on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-027.md:5:- Plan: EPO Plus (EPO_PLUS)
+dossiers/PAF-027.md:6:- Accumulators before this claim: deductible met $400.00; out-of-pocket met $3575.00.
+dossiers/PAF-027.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-027.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-027.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-027.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-027.md:24:The rendering provider listed for this claim is marked **in network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-024.md:5:- Plan: PPO Gold (PPO_GOLD)
+dossiers/PAF-024.md:6:- Accumulators before this claim: deductible met $800.00; out-of-pocket met $2825.00.
+dossiers/PAF-024.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-024.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-024.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-024.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-024.md:24:The rendering provider listed for this claim is marked **in network** for PPO Gold on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-023.md:5:- Plan: HMO Silver (HMO_SILVER)
+dossiers/PAF-023.md:6:- Accumulators before this claim: deductible met $850.00; out-of-pocket met $850.00.
+dossiers/PAF-023.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-023.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-023.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-023.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-023.md:24:The rendering provider listed for this claim is marked **in network** for HMO Silver on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+dossiers/PAF-022.md:5:- Plan: EPO Plus (EPO_PLUS)
+dossiers/PAF-022.md:6:- Accumulators before this claim: deductible met $500.00; out-of-pocket met $1500.00.
+dossiers/PAF-022.md:10:- HMO Silver and EPO Plus do not pay out-of-network non-emergency services. PPO Gold pays out-of-network allowed amount at 55 percent of the in-network schedule.
+dossiers/PAF-022.md:12:- For approved claims, patient responsibility is deductible first when the service row says deductible applies, then copay, then coinsurance. The out-of-pocket maximum caps patient responsibility.
+dossiers/PAF-022.md:13:- HMO Silver requires a primary-care referral when both the plan requires referrals and the service row marks referral required. PPO Gold and EPO Plus do not have plan-level referral requirements.
+dossiers/PAF-022.md:16:| service_key | CPT | description | in-network allowed | prior auth? | referral? | deductible? | copay | coinsurance |
+dossiers/PAF-022.md:24:The rendering provider listed for this claim is marked **in network** for EPO Plus on the service date. Directory notes say urgent care emergency exceptions do not apply unless the claim is emergency-coded; this claim is not emergency-coded.
+
+2026-05-24T02:14:17.428847Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:17.428860Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:17.429342Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:17.429347Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:17.429846Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:17.429852Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:17.430339Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:17.430343Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:17.430809Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:17.430814Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:17.431847Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:17.431854Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+exec
+/bin/zsh -lc 'for f in dossiers/*.md; do echo $f; sed -n '"'18,23p' \""'$f"; done' in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_5__solved_by__gpt_5_5
+ succeeded in 0ms:
+dossiers/PAF-001.md
+| PT_EVAL | 97161 | Physical therapy initial evaluation | $310.00 | no | yes | no | $35.00 | 10% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+dossiers/PAF-002.md
+| MRI_LUMBAR | 72148 | Lumbar spine MRI without contrast | $1850.00 | yes | no | yes | $0.00 | 20% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+dossiers/PAF-003.md
+| DERM_EXCISION | 11402 | Dermatology benign lesion excision | $760.00 | no | yes | no | $45.00 | 20% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+dossiers/PAF-004.md
+| INFUSION | 96413 | Specialty drug infusion, first hour | $2240.00 | yes | no | yes | $0.00 | 25% |
+
+## Member rider
+Member rider RX-9 excludes office-administered specialty drug infusion from medical benefits unless a separate pharmacy approval letter is present. No pharmacy approval letter is in this packet.
+
+## Provider directory note
+dossiers/PAF-005.md
+| SLEEP_STUDY | 95810 | Attended diagnostic sleep study | $1420.00 | yes | yes | yes | $0.00 | 15% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+dossiers/PAF-006.md
+| MRI_LUMBAR | 72148 | Lumbar spine MRI without contrast | $1850.00 | yes | no | yes | $0.00 | 20% |
+
+## Member rider
+Member rider RW-14 waives prior authorization for radiology, sleep, and infusion services when the ordering clinician documents conservative treatment or medical necessity.
+
+## Provider directory note
+dossiers/PAF-007.md
+| INFUSION | 96413 | Specialty drug infusion, first hour | $2240.00 | yes | no | yes | $0.00 | 25% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+dossiers/PAF-008.md
+| MRI_LUMBAR | 72148 | Lumbar spine MRI without contrast | $1850.00 | yes | no | yes | $0.00 | 20% |
+
+## Member rider
+Member rider RW-22 waives primary-care referral requirements for therapy, sleep medicine, and dermatology visits.
+
+## Provider directory note
+dossiers/PAF-009.md
+| PT_EVAL | 97161 | Physical therapy initial evaluation | $310.00 | no | yes | no | $35.00 | 10% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+dossiers/PAF-010.md
+| DERM_EXCISION | 11402 | Dermatology benign lesion excision | $760.00 | no | yes | no | $45.00 | 20% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+dossiers/PAF-011.md
+| SLEEP_STUDY | 95810 | Attended diagnostic sleep study | $1420.00 | yes | yes | yes | $0.00 | 15% |
+
+## Member rider
+Member rider RX-9 excludes office-administered specialty drug infusion from medical benefits unless a separate pharmacy approval letter is present. No pharmacy approval letter is in this packet.
+
+## Provider directory note
+dossiers/PAF-012.md
+| URGENT_XRAY | 73610 | Urgent care ankle x-ray | $280.00 | no | no | no | $70.00 | 0% |
+
+## Member rider
+Member rider RW-14 waives prior authorization for radiology, sleep, and infusion services when the ordering clinician documents conservative treatment or medical necessity.
+
+## Provider directory note
+dossiers/PAF-013.md
+| SLEEP_STUDY | 95810 | Attended diagnostic sleep study | $1420.00 | yes | yes | yes | $0.00 | 15% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+dossiers/PAF-014.md
+| SLEEP_STUDY | 95810 | Attended diagnostic sleep study | $1420.00 | yes | yes | yes | $0.00 | 15% |
+
+## Member rider
+Member rider RX-9 excludes office-administered specialty drug infusion from medical benefits unless a separate pharmacy approval letter is present. No pharmacy approval letter is in this packet.
+
+## Provider directory note
+dossiers/PAF-015.md
+| DERM_EXCISION | 11402 | Dermatology benign lesion excision | $760.00 | no | yes | no | $45.00 | 20% |
+
+## Member rider
+Member rider RW-22 waives primary-care referral requirements for therapy, sleep medicine, and dermatology visits.
+
+## Provider directory note
+dossiers/PAF-016.md
+| INFUSION | 96413 | Specialty drug infusion, first hour | $2240.00 | yes | no | yes | $0.00 | 25% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+dossiers/PAF-017.md
+| PT_EVAL | 97161 | Physical therapy initial evaluation | $310.00 | no | yes | no | $35.00 | 10% |
+
+## Member rider
+Member rider RX-9 excludes office-administered specialty drug infusion from medical benefits unless a separate pharmacy approval letter is present. No pharmacy approval letter is in this packet.
+
+## Provider directory note
+dossiers/PAF-018.md
+| PT_EVAL | 97161 | Physical therapy initial evaluation | $310.00 | no | yes | no | $35.00 | 10% |
+
+## Member rider
+Member rider RW-22 waives primary-care referral requirements for therapy, sleep medicine, and dermatology visits.
+
+## Provider directory note
+dossiers/PAF-019.md
+| PT_EVAL | 97161 | Physical therapy initial evaluation | $310.00 | no | yes | no | $35.00 | 10% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+dossiers/PAF-020.md
+| MRI_LUMBAR | 72148 | Lumbar spine MRI without contrast | $1850.00 | yes | no | yes | $0.00 | 20% |
+
+## Member rider
+Member rider RX-9 excludes office-administered specialty drug infusion from medical benefits unless a separate pharmacy approval letter is present. No pharmacy approval letter is in this packet.
+
+## Provider directory note
+dossiers/PAF-021.md
+| PT_EVAL | 97161 | Physical therapy initial evaluation | $310.00 | no | yes | no | $35.00 | 10% |
+
+## Member rider
+Member rider RW-22 waives primary-care referral requirements for therapy, sleep medicine, and dermatology visits.
+
+## Provider directory note
+dossiers/PAF-022.md
+| MRI_LUMBAR | 72148 | Lumbar spine MRI without contrast | $1850.00 | yes | no | yes | $0.00 | 20% |
+
+## Member rider
+Member rider RX-9 excludes office-administered specialty drug infusion from medical benefits unless a separate pharmacy approval letter is present. No pharmacy approval letter is in this packet.
+
+## Provider directory note
+dossiers/PAF-023.md
+| PT_EVAL | 97161 | Physical therapy initial evaluation | $310.00 | no | yes | no | $35.00 | 10% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+dossiers/PAF-024.md
+| SLEEP_STUDY | 95810 | Attended diagnostic sleep study | $1420.00 | yes | yes | yes | $0.00 | 15% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+dossiers/PAF-025.md
+| INFUSION | 96413 | Specialty drug infusion, first hour | $2240.00 | yes | no | yes | $0.00 | 25% |
+
+## Member rider
+Member rider RX-9 excludes office-administered specialty drug infusion from medical benefits unless a separate pharmacy approval letter is present. No pharmacy approval letter is in this packet.
+
+## Provider directory note
+dossiers/PAF-026.md
+| MRI_LUMBAR | 72148 | Lumbar spine MRI without contrast | $1850.00 | yes | no | yes | $0.00 | 20% |
+
+## Member rider
+Member rider RW-14 waives prior authorization for radiology, sleep, and infusion services when the ordering clinician documents conservative treatment or medical necessity.
+
+## Provider directory note
+dossiers/PAF-027.md
+| URGENT_XRAY | 73610 | Urgent care ankle x-ray | $280.00 | no | no | no | $70.00 | 0% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+dossiers/PAF-028.md
+| PT_EVAL | 97161 | Physical therapy initial evaluation | $310.00 | no | yes | no | $35.00 | 10% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+dossiers/PAF-029.md
+| SLEEP_STUDY | 95810 | Attended diagnostic sleep study | $1420.00 | yes | yes | yes | $0.00 | 15% |
+
+## Member rider
+Member rider RW-14 waives prior authorization for radiology, sleep, and infusion services when the ordering clinician documents conservative treatment or medical necessity.
+
+## Provider directory note
+dossiers/PAF-030.md
+| URGENT_XRAY | 73610 | Urgent care ankle x-ray | $280.00 | no | no | no | $70.00 | 0% |
+
+## Member rider
+No special rider changes apply to this member for the service category.
+
+## Provider directory note
+
+2026-05-24T02:14:30.695707Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:30.695724Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:30.696217Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:30.696224Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:30.696734Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:30.696738Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:30.697224Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:30.697229Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:30.697707Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:30.697711Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:30.698762Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:30.698766Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from decimal import Decimal, ROUND_HALF_UP
+items={
+'PAF-006':('PPO_OON',185000,45000,337500,0,20),
+'PAF-007':('IN',224000,75000,122500,0,25),
+'PAF-008':('IN',185000,80000,345000,0,20),
+'PAF-012':('IN',28000,65000,307500,7000,0),
+'PAF-015':('IN',76000,25000,2500,4500,20),
+'PAF-017':('IN',31000,25000,22500,3500,10),
+'PAF-018':('IN',31000,55000,220000,3500,10),
+'PAF-020':('IN',185000,0,142500,0,20),
+'PAF-021':('IN',31000,10000,15000,3500,10),
+'PAF-023':('IN',31000,85000,85000,3500,10),
+'PAF-026':('IN',185000,70000,352500,0,20),
+'PAF-029':('IN',142000,65000,167500,0,15),
+}
+DED=100000; OOP=360000
+for k,(net,allowed,dedmet,oopmet,copay,coins) in items.items():
+    if net=='PPO_OON': allowed=round(allowed*0.55)
+    # deductible applies if copay 0 and service in items mostly; for xray copay non-ded no. determine by service? pass bool
+PY" in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_5__solved_by__gpt_5_5
+ succeeded in 0ms:
+2026-05-24T02:14:48.521080Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:48.521093Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:48.521702Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:48.521707Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:48.522258Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:48.522265Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:48.522917Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:48.522924Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:48.523445Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:48.523449Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:48.524510Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:48.524515Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+exec
+/bin/zsh -lc "python3 - <<'PY'
+items={
+'PAF-006':(101750,45000,337500,0,20,True),
+'PAF-007':(224000,75000,122500,0,25,True),
+'PAF-008':(185000,80000,345000,0,20,True),
+'PAF-012':(28000,65000,307500,7000,0,False),
+'PAF-015':(76000,25000,2500,4500,20,False),
+'PAF-017':(31000,25000,22500,3500,10,False),
+'PAF-018':(31000,55000,220000,3500,10,False),
+'PAF-020':(185000,0,142500,0,20,True),
+'PAF-021':(31000,10000,15000,3500,10,False),
+'PAF-023':(31000,85000,85000,3500,10,False),
+'PAF-026':(185000,70000,352500,0,20,True),
+'PAF-029':(142000,65000,167500,0,15,True),
+}
+DED=100000; OOP=360000
+for k,(allowed,dedmet,oopmet,copay,coins,dedapplies) in items.items():
+    rem=allowed; patient=0
+    if dedapplies:
+        d=min(rem,max(0,DED-dedmet)); patient+=d; rem-=d
+    c=min(copay,rem); patient+=c; rem-=c
+    patient += round(rem*coins/100)
+    cap=max(0,OOP-oopmet)
+    if patient>cap: patient=cap
+    print(k, allowed, patient, allowed-patient)
+PY" in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_5__solved_by__gpt_5_5
+ succeeded in 0ms:
+PAF-006 101750 22500 79250
+PAF-007 224000 74750 149250
+PAF-008 185000 15000 170000
+PAF-012 28000 7000 21000
+PAF-015 76000 18800 57200
+PAF-017 31000 6250 24750
+PAF-018 31000 6250 24750
+PAF-020 185000 117000 68000
+PAF-021 31000 6250 24750
+PAF-023 31000 6250 24750
+PAF-026 185000 7500 177500
+PAF-029 142000 51050 90950
+
+2026-05-24T02:14:59.650664Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:59.650678Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:59.651218Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:59.651223Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:59.651739Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:59.651745Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:59.652246Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:59.652250Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:59.652766Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:59.652773Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T02:14:59.653945Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T02:14:59.653950Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+codex
+{"id":"PAF-001","answer":{"status":"denied","reason_code":"NO_REF","allowed_cents":0,"insurer_pays_cents":0,"patient_owes_cents":0}}
+{"id":"PAF-002","answer":{"status":"denied","reason_code":"NO_AUTH","allowed_cents":0,"insurer_pays_cents":0,"patient_owes_cents":0}}
+{"id":"PAF-003","answer":{"status":"denied","reason_code":"OON","allowed_cents":0,"insurer_pays_cents":0,"patient_owes_cents":0}}
+{"id":"PAF-004","answer":{"status":"denied","reason_code":"NOT_COVERED","allowed_cents":0,"insurer_pays_cents":0,"patient_owes_cents":0}}
+{"id":"PAF-005","answer":{"status":"denied","reason_code":"DATE","allowed_cents":0,"insurer_pays_cents":0,"patient_owes_cents":0}}
+{"id":"PAF-006","answer":{"status":"approved","reason_code":"OK","allowed_cents":101750,"insurer_pays_cents":79250,"patient_owes_cents":22500}}
+{"id":"PAF-007","answer":{"status":"approved","reason_code":"OK","allowed_cents":224000,"insurer_pays_cents":149250,"patient_owes_cents":74750}}
+{"id":"PAF-008","answer":{"status":"approved","reason_code":"OK","allowed_cents":185000,"insurer_pays_cents":170000,"patient_owes_cents":15000}}
+{"id":"PAF-009","answer":{"status":"denied","reason_code":"DATE","allowed_cents":0,"insurer_pays_cents":0,"patient_owes_cents":0}}
+{"id":"PAF-010","answer":{"status":"denied","reason_code":"DATE","allowed_cents":0,"insurer_pays_cents":0,"patient_owes_cents":0}}
+{"id":"PAF-011","answer":{"status":"denied","reason_code":"NO_AUTH","allowed_cents":0,"insurer_pays_cents":0,"patient_owes_cents":0}}
+{"id":"PAF-012","answer":{"status":"approved","reason_code":"OK","allowed_cents":28000,"insurer_pays_cents":21000,"patient_owes_cents":7000}}
+{"id":"PAF-013","answer":{"status":"denied","reason_code":"NO_AUTH","allowed_cents":0,"insurer_pays_cents":0,"patient_owes_cents":0}}
+{"id":"PAF-014","answer":{"status":"denied","reason_code":"DATE","allowed_cents":0,"insurer_pays_cents":0,"patient_owes_cents":0}}
+{"id":"PAF-015","answer":{"status":"approved","reason_code":"OK","allowed_cents":76000,"insurer_pays_cents":57200,"patient_owes_cents":18800}}
+{"id":"PAF-016","answer":{"status":"denied","reason_code":"NO_AUTH","allowed_cents":0,"insurer_pays_cents":0,"patient_owes_cents":0}}
+{"id":"PAF-017","answer":{"status":"approved","reason_code":"OK","allowed_cents":31000,"insurer_pays_cents":24750,"patient_owes_cents":6250}}
+{"id":"PAF-018","answer":{"status":"approved","reason_code":"OK","allowed_cents":31000,"insurer_pays_cents":24750,"patient_owes_cents":6250}}
+{"id":"PAF-019","answer":{"status":"denied","reason_code":"OON","allowed_cents":0,"insurer_pays_cents":0,"patient_owes_cents":0}}
+{"id":"PAF-020","answer":{"status":"approved","reason_code":"OK","allowed_cents":185000,"insurer_pays_cents":68000,"patient_owes_cents":117000}}
+{"id":"PAF-021","answer":{"status":"approved","reason_code":"OK","allowed_cents":31000,"insurer_pays_cents":24750,"patient_owes_cents":6250}}
+{"id":"PAF-022","answer":{"status":"denied","reason_code":"NO_AUTH","allowed_cents":0,"insurer_pays_cents":0,"patient_owes_cents":0}}
+{"id":"PAF-023","answer":{"status":"approved","reason_code":"OK","allowed_cents":31000,"insurer_pays_cents":24750,"patient_owes_cents":6250}}
+{"id":"PAF-024","answer":{"status":"denied","reason_code":"DATE","allowed_cents":0,"insurer_pays_cents":0,"patient_owes_cents":0}}
+{"id":"PAF-025","answer":{"status":"denied","reason_code":"NOT_COVERED","allowed_cents":0,"insurer_pays_cents":0,"patient_owes_cents":0}}
+{"id":"PAF-026","answer":{"status":"approved","reason_code":"OK","allowed_cents":185000,"insurer_pays_cents":177500,"patient_owes_cents":7500}}
+{"id":"PAF-027","answer":{"status":"denied","reason_code":"DATE","allowed_cents":0,"insurer_pays_cents":0,"patient_owes_cents":0}}
+{"id":"PAF-028","answer":{"status":"denied","reason_code":"DATE","allowed_cents":0,"insurer_pays_cents":0,"patient_owes_cents":0}}
+{"id":"PAF-029","answer":{"status":"approved","reason_code":"OK","allowed_cents":142000,"insurer_pays_cents":90950,"patient_owes_cents":51050}}
+{"id":"PAF-030","answer":{"status":"denied","reason_code":"OON","allowed_cents":0,"insurer_pays_cents":0,"patient_owes_cents":0}}
+tokens used
+63,937

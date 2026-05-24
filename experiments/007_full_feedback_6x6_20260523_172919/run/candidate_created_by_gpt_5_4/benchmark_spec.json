@@ -1,0 +1,28 @@
+{
+  "name": "Catalog Royalty Forensics (CRF) v1",
+  "version": "1.0.0",
+  "description": "Cross-document royalty statement reconstruction from license riders, amendments, finance memos, and sales ledgers. Solvers must compute exact quarter-end royalty outputs under public recoupment and reserve rules.",
+  "task_type": "forensic_reasoning",
+  "answer_format": "json",
+  "answer_schema_public": {
+    "included_units": "integer",
+    "earned_royalty_cents": "integer",
+    "recouped_advance_cents": "integer",
+    "payable_cents": "integer"
+  },
+  "sample_count_default": 30,
+  "closest_existing_evals": [
+    {
+      "name": "Reimbursement Forensics (BenchBench)",
+      "why_close": "both require reconciling messy public evidence across several documents into exact numeric outputs under explicit policy rules",
+      "why_not_duplicate": "this benchmark is royalty-accounting rather than travel-policy accounting; the core difficulty is contract amendment precedence, territory and channel rights, reserve withholding, and advance recoupment"
+    },
+    {
+      "name": "Doc-style forensic reasoning benchmarks",
+      "why_close": "shared emphasis on document interpretation rather than pure puzzle solving",
+      "why_not_duplicate": "answers are deterministic ledger calculations with public contract mechanics, not open-ended extraction or subjective judgment"
+    }
+  ],
+  "determinism_notes": "Items are procedurally generated from a seed, and all answer-determining rules are solver-visible in the public rulebook and item documents.",
+  "license": "CC0-1.0"
+}

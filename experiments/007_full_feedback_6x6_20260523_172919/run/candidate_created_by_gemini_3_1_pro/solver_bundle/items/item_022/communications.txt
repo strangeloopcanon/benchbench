@@ -1,0 +1,23 @@
+From: Leasing
+To: Accounting
+Date: Day 61
+Subject: Expansion
+Effective Day 63, Tenant D added Suite 105 to their lease for the remainder of the year.
+
+From: Maintenance
+To: Accounting
+Date: Day 247
+Subject: Direct Charge
+Accounting, ensure that Tenant C pays the full 67067 cents for the Day 245 'Minor plumbing repair 339'. It's not a shared expense.
+
+From: Maintenance
+To: Accounting
+Date: Day 131
+Subject: Direct Charge
+Please bill the 'Common area utilities 187' (Day 129) directly to Tenant C. They are responsible for it. Do not put it in the main OpEx pool.
+
+From: Property Manager
+To: Accounting
+Date: Day 10
+Subject: CAM Cap
+For Tenant C, their base CAM is capped at 1223 cents per square foot annually.

@@ -1,0 +1,548 @@
+{
+  "benchmark": "Prior Authorization Forensics (PAF) v1",
+  "correct": 0,
+  "details": [
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "NO_REF",
+        "status": "denied"
+      },
+      "id": "PAF-001",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "NO_AUTH",
+        "status": "denied"
+      },
+      "id": "PAF-002",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OON",
+        "status": "denied"
+      },
+      "id": "PAF-003",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "NOT_COVERED",
+        "status": "denied"
+      },
+      "id": "PAF-004",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "DATE",
+        "status": "denied"
+      },
+      "id": "PAF-005",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 101800,
+        "insurer_pays_cents": 101800,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      },
+      "id": "PAF-006",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 224000,
+        "insurer_pays_cents": 168000,
+        "patient_owes_cents": 56000,
+        "reason_code": "OK",
+        "status": "approved"
+      },
+      "id": "PAF-007",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 185000,
+        "insurer_pays_cents": 140000,
+        "patient_owes_cents": 45000,
+        "reason_code": "OK",
+        "status": "approved"
+      },
+      "id": "PAF-008",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "DATE",
+        "status": "denied"
+      },
+      "id": "PAF-009",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "DATE",
+        "status": "denied"
+      },
+      "id": "PAF-010",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "NO_AUTH",
+        "status": "denied"
+      },
+      "id": "PAF-011",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 28000,
+        "insurer_pays_cents": 21000,
+        "patient_owes_cents": 7000,
+        "reason_code": "OK",
+        "status": "approved"
+      },
+      "id": "PAF-012",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "NO_AUTH",
+        "status": "denied"
+      },
+      "id": "PAF-013",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "DATE",
+        "status": "denied"
+      },
+      "id": "PAF-014",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 76000,
+        "insurer_pays_cents": 57200,
+        "patient_owes_cents": 18800,
+        "reason_code": "OK",
+        "status": "approved"
+      },
+      "id": "PAF-015",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "NO_AUTH",
+        "status": "denied"
+      },
+      "id": "PAF-016",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 31000,
+        "insurer_pays_cents": 24750,
+        "patient_owes_cents": 6250,
+        "reason_code": "OK",
+        "status": "approved"
+      },
+      "id": "PAF-017",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 31000,
+        "insurer_pays_cents": 24750,
+        "patient_owes_cents": 6250,
+        "reason_code": "OK",
+        "status": "approved"
+      },
+      "id": "PAF-018",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OON",
+        "status": "denied"
+      },
+      "id": "PAF-019",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 185000,
+        "insurer_pays_cents": 92000,
+        "patient_owes_cents": 93000,
+        "reason_code": "OK",
+        "status": "approved"
+      },
+      "id": "PAF-020",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 31000,
+        "insurer_pays_cents": 24750,
+        "patient_owes_cents": 6250,
+        "reason_code": "OK",
+        "status": "approved"
+      },
+      "id": "PAF-021",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "NO_AUTH",
+        "status": "denied"
+      },
+      "id": "PAF-022",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 31000,
+        "insurer_pays_cents": 24750,
+        "patient_owes_cents": 6250,
+        "reason_code": "OK",
+        "status": "approved"
+      },
+      "id": "PAF-023",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "DATE",
+        "status": "denied"
+      },
+      "id": "PAF-024",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "NOT_COVERED",
+        "status": "denied"
+      },
+      "id": "PAF-025",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 185000,
+        "insurer_pays_cents": 132000,
+        "patient_owes_cents": 53000,
+        "reason_code": "OK",
+        "status": "approved"
+      },
+      "id": "PAF-026",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "DATE",
+        "status": "denied"
+      },
+      "id": "PAF-027",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "DATE",
+        "status": "denied"
+      },
+      "id": "PAF-028",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 142000,
+        "insurer_pays_cents": 120700,
+        "patient_owes_cents": 21300,
+        "reason_code": "OK",
+        "status": "approved"
+      },
+      "id": "PAF-029",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    },
+    {
+      "correct": false,
+      "gold": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OON",
+        "status": "denied"
+      },
+      "id": "PAF-030",
+      "pred": {
+        "allowed_cents": 0,
+        "insurer_pays_cents": 0,
+        "patient_owes_cents": 0,
+        "reason_code": "OK",
+        "status": "approved"
+      }
+    }
+  ],
+  "score": "0/30",
+  "total": 30
+}

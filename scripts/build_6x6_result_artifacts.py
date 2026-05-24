@@ -27,6 +27,15 @@ SOLVERS = [
     ("opus", "Claude Opus"),
 ]
 
+SOLVERS_CURRENT = [
+    ("gpt-5.2", "GPT-5.2"),
+    ("gpt-5.4", "GPT-5.4"),
+    ("gpt-5.5", "GPT-5.5"),
+    ("gemini-3.1-pro", "Gemini 3.1 Pro"),
+    ("gemini-3.5-flash-high", "Gemini 3.5 Flash"),
+    ("claude-opus", "Claude Opus"),
+]
+
 
 def candidate_score(candidate_dir: Path, solver_id: str) -> str:
     score = score_summary(candidate_dir / f"score_solver_{safe_name(solver_id)}.json")
@@ -35,15 +44,22 @@ def candidate_score(candidate_dir: Path, solver_id: str) -> str:
     return f"{score['correct']}/{score['total']}"
 
 
-def build_grid(base_run: str, claude_run: str, creators: list[tuple[str, str, str]], skip: dict[tuple[str, str], str] | None = None) -> list[list[str]]:
+def build_grid(
+    base_run: str,
+    claude_run: str | None,
+    creators: list[tuple[str, str, str]],
+    skip: dict[tuple[str, str], str] | None = None,
+    solvers: list[tuple[str, str]] | None = None,
+) -> list[list[str]]:
     skip = skip or {}
+    solvers = solvers or SOLVERS
     rows: list[list[str]] = []
     base = ROOT / base_run / "run"
-    claude = ROOT / claude_run / "run"
+    claude = ROOT / claude_run / "run" if claude_run else None
     for creator_id, creator_label, benchmark in creators:
         row = [creator_label, benchmark]
-        candidate_dir = claude / "candidate_created_by_opus" if creator_id == "opus" else base / f"candidate_created_by_{safe_name(creator_id)}"
-        for solver_id, _solver_label in SOLVERS:
+        candidate_dir = claude / "candidate_created_by_opus" if creator_id == "opus" and claude else base / f"candidate_created_by_{safe_name(creator_id)}"
+        for solver_id, _solver_label in solvers:
             row.append(skip.get((creator_id, solver_id), candidate_score(candidate_dir, solver_id)))
         rows.append(row)
     return rows
@@ -72,13 +88,20 @@ def text_color(cell: str) -> str:
     return "#111111" if value is None or value < 30 else "#ffffff"
 
 
-def write_heatmap(path: Path, title: str, subtitle: str, rows: list[list[str]]) -> None:
+def write_heatmap(
+    path: Path,
+    title: str,
+    subtitle: str,
+    rows: list[list[str]],
+    solvers: list[tuple[str, str]] | None = None,
+) -> None:
+    solvers = solvers or SOLVERS
     cell_w = 104
     cell_h = 38
     label_w = 220
     bench_w = 238
     header_h = 106
-    width = label_w + bench_w + cell_w * len(SOLVERS) + 28
+    width = label_w + bench_w + cell_w * len(solvers) + 28
     height = header_h + cell_h * len(rows) + 82
 
     parts = [
@@ -94,7 +117,7 @@ def write_heatmap(path: Path, title: str, subtitle: str, rows: list[list[str]]) 
     y0 = header_h
     parts.append(f'<text x="18" y="{y0 - 14}" class="head">creator</text>')
     parts.append(f'<text x="{label_w + 8}" y="{y0 - 14}" class="head">benchmark</text>')
-    for idx, (_solver_id, solver_label) in enumerate(SOLVERS):
+    for idx, (_solver_id, solver_label) in enumerate(solvers):
         x = x0 + idx * cell_w + cell_w / 2
         parts.append(f'<text x="{x}" y="{y0 - 28}" class="head" text-anchor="middle">{escape(solver_label)}</text>')
 
@@ -121,9 +144,10 @@ def write_heatmap(path: Path, title: str, subtitle: str, rows: list[list[str]]) 
     path.write_text("\n".join(parts) + "\n", encoding="utf-8")
 
 
-def markdown_table(rows: list[list[str]]) -> str:
-    headers = ["creator", "benchmark"] + [label for _id, label in SOLVERS]
-    lines = ["| " + " | ".join(headers) + " |", "|---|---|" + "|".join("---:" for _ in SOLVERS) + "|"]
+def markdown_table(rows: list[list[str]], solvers: list[tuple[str, str]] | None = None) -> str:
+    solvers = solvers or SOLVERS
+    headers = ["creator", "benchmark"] + [label for _id, label in solvers]
+    lines = ["| " + " | ".join(headers) + " |", "|---|---|" + "|".join("---:" for _ in solvers) + "|"]
     for row in rows:
         lines.append("| " + " | ".join(row) + " |")
     return "\n".join(lines)
@@ -156,6 +180,19 @@ def main() -> None:
         ],
         skip={("gpt-5.5", "opus"): "skip"},
     )
+    exp007_rows = build_grid(
+        "experiments/007_full_feedback_6x6_20260523_172919",
+        None,
+        [
+            ("gpt-5.2", "GPT-5.2", "Service Credit Forensics"),
+            ("gpt-5.4", "GPT-5.4", "Catalog Royalty Forensics"),
+            ("gpt-5.5", "GPT-5.5", "Prior Authorization Forensics"),
+            ("gemini-3.1-pro", "Gemini 3.1 Pro", "Commercial Lease CAM Reconciliation"),
+            ("gemini-3.5-flash-high", "Gemini 3.5 Flash", "Maritime Freight & Customs Audit"),
+            ("claude-opus", "Claude Opus", "Construction Progress Payment Certification"),
+        ],
+        solvers=SOLVERS_CURRENT,
+    )
 
     write_heatmap(
         FIG_DIR / "exp003_style_6x6_heatmap.svg",
@@ -169,13 +206,20 @@ def main() -> None:
         "Experiment 004 feedback sweep, then Claude Opus row and column added afterward.",
         exp004_rows,
     )
+    write_heatmap(
+        FIG_DIR / "exp007_challenger_6x6_heatmap.svg",
+        "Experiment 007 full-feedback 6x6 challenger grid",
+        "All six creator models saw prior failures. All six solvers then attacked each new candidate.",
+        exp007_rows,
+        solvers=SOLVERS_CURRENT,
+    )
 
     lines = [
         "# 6x6 Result Grids - 2026-05-23",
         "",
         "Generated by `scripts/build_6x6_result_artifacts.py` from saved score JSONs.",
         "",
-        "These are reconstructed 6x6 grids. The first five rows in each grid come from the canonical five-model sweep. The Claude Opus row and Claude Opus solver column were added afterward by extension runs.",
+        "The first two grids are reconstructed from five-model sweeps plus Claude Opus extension runs. The third grid is the direct six-creator, six-solver Experiment 007 run.",
         "",
         "Read each row as one creator's benchmark and each column as one solver's attempt. Cell values are exact-match correct out of 30.",
         "",
@@ -204,6 +248,19 @@ def main() -> None:
         "- Cross-Document Obligation Resolution is marked `skip` for Claude Opus because the row was already audited as a scoring-contract failure.",
         "- Corrupted LZ77 Recovery gave Claude Opus an operational 0/30 after an extended stall. It remains a narrow technical-recovery task, not a clean broad reasoning benchmark.",
         "- Conlang Rosetta was self-critiqued into a better-looking task, but every solver got 30/30 once tested.",
+        "",
+        "## Experiment 007 Full-Feedback Challenger Grid",
+        "",
+        "![Experiment 007 full-feedback 6x6 heatmap](figures/exp007_challenger_6x6_heatmap.svg)",
+        "",
+        markdown_table(exp007_rows, SOLVERS_CURRENT),
+        "",
+        "Notes:",
+        "",
+        "- No Experiment 007 challenger beat the frozen Reimbursement Forensics incumbent.",
+        "- Service Credit Forensics is all-zero. That is an audit queue item, not a win, because the exact downtime field zeroed every solver while other answer fields were often close.",
+        "- Maritime Freight and Commercial Lease CAM produced useful solver spread, but both were still too easy for at least one strong solver.",
+        "- Catalog Royalty, Prior Authorization, and Construction Progress Payment were plainly saturated.",
         "",
     ]
     OUT_MD.write_text("\n".join(lines), encoding="utf-8")

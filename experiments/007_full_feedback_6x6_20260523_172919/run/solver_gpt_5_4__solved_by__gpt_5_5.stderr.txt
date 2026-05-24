@@ -1,0 +1,1959 @@
+2026-05-24T01:46:43.456625Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:43.478309Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+OpenAI Codex v0.130.0
+--------
+workdir: /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_4__solved_by__gpt_5_5
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR, /Users/rohit/.codex/memories] (network access enabled)
+reasoning effort: low
+reasoning summaries: none
+session id: 019e57a9-c147-77c1-a096-d50392d91bd8
+--------
+user
+
+You are gpt-5.5+Codex acting as a blind BenchBench solver.
+
+You are in an isolated solver bundle at:
+
+/Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_4__solved_by__gpt_5_5
+
+Use that exact directory as the working directory for every shell command and
+file read/write. Some agent CLIs may open a global scratch directory by
+default; ignore that scratch directory and work only in the solver bundle
+above.
+
+You may use any local computation, shell scripts, installed packages, OCR,
+image processing, code, and internet access if useful. Try your best to solve
+the benchmark.
+
+The only forbidden action is inspecting parent directories or files outside this
+isolated solver bundle. Do not look for gold files, generators, scorers, private
+traces, or answer keys outside this directory.
+
+Read every visible file in this bundle and solve every item.
+
+Return only JSONL, one object per item, with exactly:
+{"id":"...","answer":"..."}
+
+2026-05-24T01:46:43.500953Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+deprecated: `[features].codex_hooks` is deprecated. Use `[features].hooks` instead.
+Enable it with `--enable hooks` or `[features].hooks` in config.toml. See https://developers.openai.com/codex/config-basic#feature-flags for details.
+2026-05-24T01:46:43.513531Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:43.537824Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:43.561985Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:43.598067Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:43.620433Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:43.641948Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:43.665478Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:43.688883Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:43.712361Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:43.734088Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:43.757276Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:43.781028Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:43.802188Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:43.827296Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:43.851154Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:43.874971Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:43.898873Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:43.922448Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:43.946396Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:43.970438Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:43.993567Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:44.017015Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:44.039023Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:44.063135Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:44.086559Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:44.109722Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:44.131262Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:44.155166Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:44.179231Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:44.203060Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:44.226660Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:44.250506Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:44.272160Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:44.295979Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:46:44.694928Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:46:44.694941Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:46:44.695658Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:46:44.695665Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:46:44.696410Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:46:44.696414Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:46:44.697005Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:46:44.697011Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:46:44.697595Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:46:44.697599Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:46:44.699291Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:46:44.699295Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:46:45.640867Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:46:45.640880Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:46:45.641377Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:46:45.641382Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:46:45.641891Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:46:45.641898Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:46:45.642400Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:46:45.642407Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:46:45.642903Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:46:45.642907Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:46:45.643992Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:46:45.643997Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+codex
+I’ll work only inside the isolated solver bundle and inspect the visible files there before producing the JSONL answers.
+exec
+/bin/zsh -lc 'pwd && rg --files -uu' in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_4__solved_by__gpt_5_5
+ succeeded in 0ms:
+/Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_4__solved_by__gpt_5_5
+SOLVER_MANIFEST.json
+items_private_sample.jsonl
+items/crf_011/amendments.md
+items/crf_011/rights_rider.md
+items/crf_011/finance_memo.md
+items/crf_011/sales_statement.csv
+items/crf_016/amendments.md
+items/crf_016/rights_rider.md
+items/crf_016/finance_memo.md
+items/crf_016/sales_statement.csv
+items/crf_029/amendments.md
+items/crf_029/rights_rider.md
+items/crf_029/finance_memo.md
+items/crf_029/sales_statement.csv
+items/crf_020/amendments.md
+items/crf_020/rights_rider.md
+items/crf_020/finance_memo.md
+items/crf_020/sales_statement.csv
+items/crf_027/amendments.md
+items/crf_027/rights_rider.md
+items/crf_027/finance_memo.md
+items/crf_027/sales_statement.csv
+items/crf_018/amendments.md
+items/crf_018/rights_rider.md
+items/crf_018/finance_memo.md
+items/crf_018/sales_statement.csv
+items/crf_026/amendments.md
+items/crf_026/rights_rider.md
+items/crf_026/finance_memo.md
+items/crf_026/sales_statement.csv
+items/crf_019/amendments.md
+items/crf_019/rights_rider.md
+items/crf_019/finance_memo.md
+items/crf_019/sales_statement.csv
+items/crf_021/amendments.md
+items/crf_021/rights_rider.md
+items/crf_021/finance_memo.md
+items/crf_021/sales_statement.csv
+items/crf_017/amendments.md
+items/crf_017/rights_rider.md
+items/crf_017/finance_memo.md
+items/crf_017/sales_statement.csv
+items/crf_028/amendments.md
+items/crf_028/rights_rider.md
+items/crf_028/finance_memo.md
+items/crf_028/sales_statement.csv
+items/crf_010/amendments.md
+items/crf_010/rights_rider.md
+items/crf_010/finance_memo.md
+items/crf_010/sales_statement.csv
+items/crf_003/amendments.md
+items/crf_003/rights_rider.md
+items/crf_003/finance_memo.md
+items/crf_003/sales_statement.csv
+items/crf_004/amendments.md
+items/crf_004/rights_rider.md
+items/crf_004/finance_memo.md
+items/crf_004/sales_statement.csv
+items/crf_005/amendments.md
+items/crf_005/rights_rider.md
+items/crf_005/finance_memo.md
+items/crf_005/sales_statement.csv
+items/crf_002/amendments.md
+items/crf_002/rights_rider.md
+items/crf_002/finance_memo.md
+items/crf_002/sales_statement.csv
+items/crf_015/amendments.md
+items/crf_015/rights_rider.md
+items/crf_015/finance_memo.md
+items/crf_015/sales_statement.csv
+items/crf_012/amendments.md
+items/crf_012/rights_rider.md
+items/crf_012/finance_memo.md
+items/crf_012/sales_statement.csv
+README.md
+public_rulebook.md
+items/crf_024/amendments.md
+items/crf_024/rights_rider.md
+items/crf_024/finance_memo.md
+items/crf_024/sales_statement.csv
+items/crf_007/amendments.md
+items/crf_007/rights_rider.md
+items/crf_007/finance_memo.md
+items/crf_007/sales_statement.csv
+items/crf_008/amendments.md
+items/crf_008/rights_rider.md
+items/crf_008/finance_memo.md
+items/crf_008/sales_statement.csv
+items/crf_001/amendments.md
+items/crf_001/rights_rider.md
+items/crf_001/finance_memo.md
+items/crf_001/sales_statement.csv
+items/crf_009/amendments.md
+items/crf_009/rights_rider.md
+items/crf_009/finance_memo.md
+items/crf_009/sales_statement.csv
+items/crf_025/amendments.md
+items/crf_025/rights_rider.md
+items/crf_025/finance_memo.md
+items/crf_025/sales_statement.csv
+items/crf_014/finance_memo.md
+items/crf_014/sales_statement.csv
+items/crf_014/amendments.md
+items/crf_014/rights_rider.md
+items/crf_022/sales_statement.csv
+items/crf_022/finance_memo.md
+items/crf_022/rights_rider.md
+items/crf_022/amendments.md
+items/crf_013/amendments.md
+items/crf_013/rights_rider.md
+items/crf_013/finance_memo.md
+items/crf_013/sales_statement.csv
+items/crf_023/amendments.md
+items/crf_030/amendments.md
+items/crf_023/rights_rider.md
+items/crf_030/rights_rider.md
+items/crf_023/finance_memo.md
+items/crf_030/finance_memo.md
+items/crf_030/sales_statement.csv
+items/crf_023/sales_statement.csv
+items/crf_006/amendments.md
+items/crf_006/rights_rider.md
+items/crf_006/finance_memo.md
+items/crf_006/sales_statement.csv
+
+2026-05-24T01:46:49.766718Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:46:49.766737Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:46:49.767370Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:46:49.767381Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:46:49.767874Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:46:49.767878Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:46:49.768352Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:46:49.768356Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:46:49.768825Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:46:49.768832Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:46:49.769870Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:46:49.769875Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+codex
+The bundle has 30 item folders plus the rulebook, manifest, and sample file. I’m going to read the rules and then parse all item documents programmatically so the arithmetic is reproducible.
+exec
+/bin/zsh -lc "sed -n '1,240p' README.md" in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_4__solved_by__gpt_5_5
+ succeeded in 0ms:
+# Catalog Royalty Forensics (CRF) v1 Solver Packet
+
+This bundle is sufficient for an external solver.
+
+For each item, read:
+- `public_rulebook.md`
+- the item's `rights_rider.md`
+- the item's `amendments.md`
+- the item's `finance_memo.md`
+- the item's `sales_statement.csv`
+
+Then produce one JSON answer object per item with exactly these keys:
+- `included_units`
+- `earned_royalty_cents`
+- `recouped_advance_cents`
+- `payable_cents`
+
+No hidden labels are required. Every answer field is determined by public rows and public rules.
+
+exec
+/bin/zsh -lc "sed -n '1,260p' public_rulebook.md" in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_4__solved_by__gpt_5_5
+ succeeded in 0ms:
+# Catalog Royalty Forensics (Public Rulebook)
+
+This benchmark asks you to compute a quarter-end royalty statement from public contract documents and public sales evidence.
+
+## Answer fields
+
+Return JSON with exactly these fields:
+- `included_units`: integer
+- `earned_royalty_cents`: integer
+- `recouped_advance_cents`: integer
+- `payable_cents`: integer
+
+## 1) Inclusion rules
+
+A sales row contributes only if all of the following are true:
+1. `sale_date` falls within the licensed effective window.
+2. `territory` is licensed and not carved out.
+3. `format` is licensed.
+4. `channel` is not excluded by the base rider or a later amendment.
+5. `is_promo` is `0` unless a later amendment explicitly says otherwise.
+
+Negative `units` or negative money values represent reversals or returns. If the original row type would have been included, the negative row also counts and subtracts from totals.
+
+## 2) Document precedence
+
+Use the latest applicable rule in this order:
+1. Later amendment
+2. Base rights rider
+3. This public rulebook
+
+The finance memo is authoritative only for opening advance balance and reserve release.
+
+## 3) Recognized base per row
+
+Start from the row's `gross_cents`.
+
+Then apply these public adjustments in order:
+1. If `channel = bundle`, use `bundle_allocated_cents` instead of `gross_cents`.
+2. If the row is included, check the contractual discount floor. Compute the row's actual unit price as `gross_cents / units` using absolute values. If that unit price is below `discount_floor_pct` of `list_price_cents`, and the channel is not floor-exempt, replace the recognized base with `units * floor(discount_floor_pct * list_price_cents / 100)` while preserving the original sign.
+3. If an amendment applies a base multiplier for that row, multiply the recognized base by that percentage and round down toward zero.
+
+## 4) Rate selection
+
+Each format has a base royalty rate in basis points.
+An amendment may override the rate for a format, channel, territory set, or date window.
+Use the latest applicable override. If multiple filters are listed, all of them must match.
+
+## 5) Row earnings and units
+
+For each included row:
+- `included_units` adds the signed `units` value.
+- Row royalty earnings are `trunc_toward_zero(recognized_base_cents * rate_bps / 10000)`.
+
+Truncation toward zero means:
+- `123.9 -> 123`
+- `-123.9 -> -123`
+
+## 6) Reserve withholding
+
+Current-quarter reserve withholding applies only to included physical rows (`paperback` and `hardcover`) whose royalty earnings are positive.
+Reserve withheld is `floor(sum(positive physical-row earnings) * reserve_withhold_pct / 100)`.
+
+## 7) Advance recoupment and payable amount
+
+- `earned_royalty_cents` is the sum of all included row earnings.
+- `recouped_advance_cents = min(max(earned_royalty_cents, 0), opening_advance_cents)`.
+- `payable_cents = max(0, earned_royalty_cents + reserve_release_cents - reserve_withheld_cents - recouped_advance_cents)`.
+
+Reserve release increases payable but does not reduce recoupment.
+
+exec
+/bin/zsh -lc "sed -n '1,200p' SOLVER_MANIFEST.json && sed -n '1,80p' items_private_sample.jsonl" in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_4__solved_by__gpt_5_5
+ succeeded in 0ms:
+{
+  "benchmark": "Catalog Royalty Forensics (CRF) v1",
+  "sample_count": 30,
+  "entrypoint": "README.md",
+  "items_file": "items_private_sample.jsonl",
+  "visible_assets": [
+    "public_rulebook.md",
+    "items/*/rights_rider.md",
+    "items/*/amendments.md",
+    "items/*/finance_memo.md",
+    "items/*/sales_statement.csv"
+  ]
+}
+{"id": "crf_001", "title": "Pale Cartography", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_001/rights_rider.md", "amendments": "items/crf_001/amendments.md", "finance_memo": "items/crf_001/finance_memo.md", "sales_statement": "items/crf_001/sales_statement.csv"}}
+{"id": "crf_002", "title": "Quiet Meridian", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_002/rights_rider.md", "amendments": "items/crf_002/amendments.md", "finance_memo": "items/crf_002/finance_memo.md", "sales_statement": "items/crf_002/sales_statement.csv"}}
+{"id": "crf_003", "title": "Errata for Wolves", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_003/rights_rider.md", "amendments": "items/crf_003/amendments.md", "finance_memo": "items/crf_003/finance_memo.md", "sales_statement": "items/crf_003/sales_statement.csv"}}
+{"id": "crf_004", "title": "Signal Harbor", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_004/rights_rider.md", "amendments": "items/crf_004/amendments.md", "finance_memo": "items/crf_004/finance_memo.md", "sales_statement": "items/crf_004/sales_statement.csv"}}
+{"id": "crf_005", "title": "Pale Cartography", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_005/rights_rider.md", "amendments": "items/crf_005/amendments.md", "finance_memo": "items/crf_005/finance_memo.md", "sales_statement": "items/crf_005/sales_statement.csv"}}
+{"id": "crf_006", "title": "The Fifth Freight", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_006/rights_rider.md", "amendments": "items/crf_006/amendments.md", "finance_memo": "items/crf_006/finance_memo.md", "sales_statement": "items/crf_006/sales_statement.csv"}}
+{"id": "crf_007", "title": "The Latent Orchard", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_007/rights_rider.md", "amendments": "items/crf_007/amendments.md", "finance_memo": "items/crf_007/finance_memo.md", "sales_statement": "items/crf_007/sales_statement.csv"}}
+{"id": "crf_008", "title": "Quiet Meridian", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_008/rights_rider.md", "amendments": "items/crf_008/amendments.md", "finance_memo": "items/crf_008/finance_memo.md", "sales_statement": "items/crf_008/sales_statement.csv"}}
+{"id": "crf_009", "title": "Signal Harbor", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_009/rights_rider.md", "amendments": "items/crf_009/amendments.md", "finance_memo": "items/crf_009/finance_memo.md", "sales_statement": "items/crf_009/sales_statement.csv"}}
+{"id": "crf_010", "title": "Quiet Meridian", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_010/rights_rider.md", "amendments": "items/crf_010/amendments.md", "finance_memo": "items/crf_010/finance_memo.md", "sales_statement": "items/crf_010/sales_statement.csv"}}
+{"id": "crf_011", "title": "North of Eventide", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_011/rights_rider.md", "amendments": "items/crf_011/amendments.md", "finance_memo": "items/crf_011/finance_memo.md", "sales_statement": "items/crf_011/sales_statement.csv"}}
+{"id": "crf_012", "title": "Glass Provinces", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_012/rights_rider.md", "amendments": "items/crf_012/amendments.md", "finance_memo": "items/crf_012/finance_memo.md", "sales_statement": "items/crf_012/sales_statement.csv"}}
+{"id": "crf_013", "title": "The Latent Orchard", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_013/rights_rider.md", "amendments": "items/crf_013/amendments.md", "finance_memo": "items/crf_013/finance_memo.md", "sales_statement": "items/crf_013/sales_statement.csv"}}
+{"id": "crf_014", "title": "The Fifth Freight", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_014/rights_rider.md", "amendments": "items/crf_014/amendments.md", "finance_memo": "items/crf_014/finance_memo.md", "sales_statement": "items/crf_014/sales_statement.csv"}}
+{"id": "crf_015", "title": "The Latent Orchard", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_015/rights_rider.md", "amendments": "items/crf_015/amendments.md", "finance_memo": "items/crf_015/finance_memo.md", "sales_statement": "items/crf_015/sales_statement.csv"}}
+{"id": "crf_016", "title": "Signal Harbor", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_016/rights_rider.md", "amendments": "items/crf_016/amendments.md", "finance_memo": "items/crf_016/finance_memo.md", "sales_statement": "items/crf_016/sales_statement.csv"}}
+{"id": "crf_017", "title": "Errata for Wolves", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_017/rights_rider.md", "amendments": "items/crf_017/amendments.md", "finance_memo": "items/crf_017/finance_memo.md", "sales_statement": "items/crf_017/sales_statement.csv"}}
+{"id": "crf_018", "title": "The Fifth Freight", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_018/rights_rider.md", "amendments": "items/crf_018/amendments.md", "finance_memo": "items/crf_018/finance_memo.md", "sales_statement": "items/crf_018/sales_statement.csv"}}
+{"id": "crf_019", "title": "Signal Harbor", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_019/rights_rider.md", "amendments": "items/crf_019/amendments.md", "finance_memo": "items/crf_019/finance_memo.md", "sales_statement": "items/crf_019/sales_statement.csv"}}
+{"id": "crf_020", "title": "North of Eventide", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_020/rights_rider.md", "amendments": "items/crf_020/amendments.md", "finance_memo": "items/crf_020/finance_memo.md", "sales_statement": "items/crf_020/sales_statement.csv"}}
+{"id": "crf_021", "title": "Signal Harbor", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_021/rights_rider.md", "amendments": "items/crf_021/amendments.md", "finance_memo": "items/crf_021/finance_memo.md", "sales_statement": "items/crf_021/sales_statement.csv"}}
+{"id": "crf_022", "title": "Errata for Wolves", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_022/rights_rider.md", "amendments": "items/crf_022/amendments.md", "finance_memo": "items/crf_022/finance_memo.md", "sales_statement": "items/crf_022/sales_statement.csv"}}
+{"id": "crf_023", "title": "The Fifth Freight", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_023/rights_rider.md", "amendments": "items/crf_023/amendments.md", "finance_memo": "items/crf_023/finance_memo.md", "sales_statement": "items/crf_023/sales_statement.csv"}}
+{"id": "crf_024", "title": "The Fifth Freight", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_024/rights_rider.md", "amendments": "items/crf_024/amendments.md", "finance_memo": "items/crf_024/finance_memo.md", "sales_statement": "items/crf_024/sales_statement.csv"}}
+{"id": "crf_025", "title": "The Fifth Freight", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_025/rights_rider.md", "amendments": "items/crf_025/amendments.md", "finance_memo": "items/crf_025/finance_memo.md", "sales_statement": "items/crf_025/sales_statement.csv"}}
+{"id": "crf_026", "title": "Quiet Meridian", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_026/rights_rider.md", "amendments": "items/crf_026/amendments.md", "finance_memo": "items/crf_026/finance_memo.md", "sales_statement": "items/crf_026/sales_statement.csv"}}
+{"id": "crf_027", "title": "Glass Provinces", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_027/rights_rider.md", "amendments": "items/crf_027/amendments.md", "finance_memo": "items/crf_027/finance_memo.md", "sales_statement": "items/crf_027/sales_statement.csv"}}
+{"id": "crf_028", "title": "Signal Harbor", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_028/rights_rider.md", "amendments": "items/crf_028/amendments.md", "finance_memo": "items/crf_028/finance_memo.md", "sales_statement": "items/crf_028/sales_statement.csv"}}
+{"id": "crf_029", "title": "Pale Cartography", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_029/rights_rider.md", "amendments": "items/crf_029/amendments.md", "finance_memo": "items/crf_029/finance_memo.md", "sales_statement": "items/crf_029/sales_statement.csv"}}
+{"id": "crf_030", "title": "Quiet Meridian", "assets": {"rulebook": "public_rulebook.md", "rights_rider": "items/crf_030/rights_rider.md", "amendments": "items/crf_030/amendments.md", "finance_memo": "items/crf_030/finance_memo.md", "sales_statement": "items/crf_030/sales_statement.csv"}}
+
+2026-05-24T01:46:57.901394Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:46:57.901410Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:46:57.901918Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:46:57.901927Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:46:57.902419Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:46:57.902423Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:46:57.903018Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:46:57.903022Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:46:57.903514Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:46:57.903518Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:46:57.904803Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:46:57.904810Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+exec
+/bin/zsh -lc "sed -n '1,200p' items/crf_001/rights_rider.md" in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_4__solved_by__gpt_5_5
+ succeeded in 0ms:
+# Base Rights Rider
+
+Title: Pale Cartography
+Effective window: 2026-01-01 through 2026-03-31
+Licensed territories: AR, AU, BR, GB, IE, MX, NZ
+Territory carve-outs: NZ
+Licensed formats: audio, ebook, hardcover
+Excluded channels at signing: library
+
+## Base royalty rates
+- ebook: 2500 bps
+- audio: 1800 bps
+- paperback: 1400 bps
+- hardcover: 1500 bps
+
+## Commercial mechanics
+- Opening unrecouped advance balance: 85012 cents
+- Reserve release this quarter: 24421 cents
+- Current-quarter reserve withholding on positive physical royalties: 10%
+- Discount floor: 65% of list price per unit
+- Discount floor-exempt channels: (none)
+- Bundle allocation share for this title: 35% of bundle gross
+
+Interpretation note: all amendments are cumulative; later amendments override earlier terms when they conflict.
+
+exec
+/bin/zsh -lc "sed -n '1,200p' items/crf_001/amendments.md" in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_4__solved_by__gpt_5_5
+ succeeded in 0ms:
+# Amendments
+
+1. Effective 2026-02-01: promo rows may count at 25% of recognized base for channel=subscription and format=ANY.
+2. Effective 2026-02-05: exclude channel=retail from royalty-bearing sales.
+3. Effective 2026-02-15: apply a recognized-base multiplier of 50% for format=ebook, channel=subscription, territories=ANY.
+4. Effective 2026-02-20: rate override to 1800 bps for format=ebook, channel=retail, territories=US|CA.
+
+exec
+/bin/zsh -lc "sed -n '1,120p' items/crf_001/finance_memo.md && sed -n '1,20p' items/crf_001/sales_statement.csv" in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_4__solved_by__gpt_5_5
+ succeeded in 0ms:
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 85012 cents.
+- Approved reserve release to add back this quarter: 24421 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 10%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 0 cents once the statement is computed.
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_001_r01,2026-02-19,ES,library,paperback,5,4720,2099,0,1,DSP settlement
+crf_001_r02,2026-03-17,AR,direct,hardcover,-4,-5036,2799,0,0,library batch
+crf_001_r03,2026-01-17,GB,bundle,paperback,-15,-28335,2099,-9917,0,wholesale feed import
+crf_001_r04,2026-03-02,IE,subscription,ebook,12,11868,1099,0,0,wholesale feed import
+crf_001_r05,2026-01-28,GB,subscription,ebook,2,2698,1499,0,0,DSP settlement
+crf_001_r06,2026-02-26,FR,direct,hardcover,2,5598,2799,0,0,manual correction row
+crf_001_r07,2026-02-27,AR,library,paperback,-1,-1139,1899,0,0,DSP settlement
+crf_001_r08,2026-03-15,AU,subscription,paperback,-8,-10792,1499,0,0,library batch
+crf_001_r09,2026-03-15,ES,bundle,ebook,1,779,1299,272,0,manual correction row
+crf_001_r10,2026-02-07,NL,direct,ebook,-3,-1212,899,0,0,metadata sync row
+
+2026-05-24T01:47:05.614537Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:47:05.614551Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:47:05.615087Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:47:05.615096Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:47:05.615574Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:47:05.615578Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:47:05.616077Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:47:05.616084Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:47:05.616574Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:47:05.616578Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:47:05.617749Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:47:05.617754Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+exec
+/bin/zsh -lc "for f in items/*/rights_rider.md items/*/amendments.md items/*/finance_memo.md items/*/sales_statement.csv; do printf '\\n===== %s =====\\n' \""'$f"; sed -n '"'1,220p' \""'$f"; done' in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_4__solved_by__gpt_5_5
+ succeeded in 354ms:
+# Amendments
+
+1. Effective 2026-02-01: promo rows may count at 40% of recognized base for channel=direct and format=ANY.
+2. Effective 2026-02-15: apply a recognized-base multiplier of 70% for format=audio, channel=bundle, territories=AU|NZ.
+3. Effective 2026-02-20: rate override to 1100 bps for format=hardcover, channel=ANY, territories=ANY.
+
+===== items/crf_014/amendments.md =====
+# Amendments
+
+1. Effective 2026-02-01: rate override to 2400 bps for format=hardcover, channel=ANY, territories=US|CA.
+2. Effective 2026-02-15: apply a recognized-base multiplier of 50% for format=paperback, channel=library, territories=AU|NZ.
+3. Effective 2026-03-05: exclude channel=direct from royalty-bearing sales.
+
+===== items/crf_015/amendments.md =====
+# Amendments
+
+1. Effective 2026-01-20: add licensed territory set NZ.
+2. Effective 2026-02-05: exclude channel=direct from royalty-bearing sales.
+3. Effective 2026-03-01: apply a recognized-base multiplier of 60% for format=paperback, channel=library, territories=ANY.
+
+===== items/crf_016/amendments.md =====
+# Amendments
+
+1. Effective 2026-01-01: promo rows may count at 25% of recognized base for channel=subscription and format=paperback.
+2. Effective 2026-01-20: add licensed territory set NZ.
+3. Effective 2026-03-01: apply a recognized-base multiplier of 70% for format=paperback, channel=library, territories=AU|NZ.
+
+===== items/crf_017/amendments.md =====
+# Amendments
+
+1. Effective 2026-02-01: promo rows may count at 40% of recognized base for channel=subscription and format=ebook.
+2. Effective 2026-02-20: rate override to 1100 bps for format=hardcover, channel=ANY, territories=ANY.
+3. Effective 2026-03-01: apply a recognized-base multiplier of 80% for format=hardcover, channel=library, territories=AU|NZ.
+
+===== items/crf_018/amendments.md =====
+# Amendments
+
+1. Effective 2026-01-01: promo rows may count at 40% of recognized base for channel=direct and format=paperback.
+2. Effective 2026-02-05: exclude channel=library from royalty-bearing sales.
+3. Effective 2026-03-01: apply a recognized-base multiplier of 60% for format=ebook, channel=bundle, territories=AU|NZ.
+4. Effective 2026-03-10: add licensed territory set MX.
+
+===== items/crf_019/amendments.md =====
+# Amendments
+
+1. Effective 2026-01-15: apply a recognized-base multiplier of 60% for format=hardcover, channel=ANY, territories=US|CA.
+2. Effective 2026-02-05: exclude channel=library from royalty-bearing sales.
+3. Effective 2026-02-20: rate override to 1500 bps for format=ebook, channel=retail, territories=ANY.
+4. Effective 2026-03-01: promo rows may count at 50% of recognized base for channel=subscription and format=audio.
+
+===== items/crf_020/amendments.md =====
+# Amendments
+
+1. Effective 2026-02-01: promo rows may count at 50% of recognized base for channel=subscription and format=hardcover.
+2. Effective 2026-03-01: apply a recognized-base multiplier of 70% for format=audio, channel=subscription, territories=US|CA.
+3. Effective 2026-03-05: exclude channel=bundle from royalty-bearing sales.
+
+===== items/crf_021/amendments.md =====
+# Amendments
+
+1. Effective 2026-02-01: promo rows may count at 40% of recognized base for channel=direct and format=ANY.
+2. Effective 2026-03-01: apply a recognized-base multiplier of 60% for format=ebook, channel=subscription, territories=US|CA.
+3. Effective 2026-03-05: exclude channel=retail from royalty-bearing sales.
+
+===== items/crf_022/amendments.md =====
+# Amendments
+
+1. Effective 2026-01-01: promo rows may count at 50% of recognized base for channel=subscription and format=paperback.
+2. Effective 2026-01-20: add licensed territory set AR.
+3. Effective 2026-02-01: rate override to 1500 bps for format=ebook, channel=retail, territories=ANY.
+4. Effective 2026-03-01: apply a recognized-base multiplier of 60% for format=paperback, channel=subscription, territories=BR|MX|AR.
+
+===== items/crf_023/amendments.md =====
+# Amendments
+
+1. Effective 2026-02-15: apply a recognized-base multiplier of 50% for format=hardcover, channel=ANY, territories=AU|NZ.
+2. Effective 2026-03-05: exclude channel=subscription from royalty-bearing sales.
+
+===== items/crf_024/amendments.md =====
+# Amendments
+
+1. Effective 2026-01-01: promo rows may count at 40% of recognized base for channel=direct and format=hardcover.
+2. Effective 2026-01-15: apply a recognized-base multiplier of 70% for format=ebook, channel=subscription, territories=ANY.
+3. Effective 2026-02-05: exclude channel=retail from royalty-bearing sales.
+4. Effective 2026-02-10: rate override to 1800 bps for format=audio, channel=ANY, territories=ANY.
+
+===== items/crf_025/amendments.md =====
+# Amendments
+
+1. Effective 2026-02-05: exclude channel=direct from royalty-bearing sales.
+2. Effective 2026-02-20: rate override to 2400 bps for format=ebook, channel=direct, territories=US|CA.
+
+===== items/crf_026/amendments.md =====
+# Amendments
+
+1. Effective 2026-01-20: add licensed territory set GB.
+2. Effective 2026-02-01: rate override to 1800 bps for format=hardcover, channel=subscription, territories=US|CA.
+3. Effective 2026-03-01: apply a recognized-base multiplier of 50% for format=paperback, channel=ANY, territories=ANY.
+
+===== items/crf_027/amendments.md =====
+# Amendments
+
+1. Effective 2026-02-20: rate override to 2400 bps for format=ebook, channel=ANY, territories=ANY.
+2. Effective 2026-03-05: exclude channel=retail from royalty-bearing sales.
+3. Effective 2026-03-10: add licensed territory set IT.
+
+===== items/crf_028/amendments.md =====
+# Amendments
+
+1. Effective 2026-01-15: apply a recognized-base multiplier of 80% for format=hardcover, channel=subscription, territories=BR|MX|AR.
+2. Effective 2026-02-01: rate override to 2800 bps for format=ebook, channel=subscription, territories=US|CA.
+3. Effective 2026-03-10: add licensed territory set IE.
+
+===== items/crf_029/amendments.md =====
+# Amendments
+
+1. Effective 2026-02-10: rate override to 1100 bps for format=paperback, channel=subscription, territories=ANY.
+2. Effective 2026-02-15: add licensed territory set NL.
+3. Effective 2026-03-01: promo rows may count at 50% of recognized base for channel=subscription and format=paperback.
+
+===== items/crf_030/amendments.md =====
+# Amendments
+
+1. Effective 2026-01-01: promo rows may count at 50% of recognized base for channel=subscription and format=ANY.
+2. Effective 2026-02-15: apply a recognized-base multiplier of 80% for format=audio, channel=bundle, territories=US|CA.
+3. Effective 2026-02-15: add licensed territory set ES.
+4. Effective 2026-02-20: rate override to 2400 bps for format=paperback, channel=ANY, territories=GB|IE.
+
+===== items/crf_001/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 85012 cents.
+- Approved reserve release to add back this quarter: 24421 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 10%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 0 cents once the statement is computed.
+
+===== items/crf_002/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 41080 cents.
+- Approved reserve release to add back this quarter: 30034 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 15%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 387 cents once the statement is computed.
+
+===== items/crf_003/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 80998 cents.
+- Approved reserve release to add back this quarter: 22722 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 10%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 214 cents once the statement is computed.
+
+===== items/crf_004/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 50070 cents.
+- Approved reserve release to add back this quarter: 10514 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 15%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 177 cents once the statement is computed.
+
+===== items/crf_005/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 50051 cents.
+- Approved reserve release to add back this quarter: 17933 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 20%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 209 cents once the statement is computed.
+
+===== items/crf_006/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 22246 cents.
+- Approved reserve release to add back this quarter: 5787 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 10%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 337 cents once the statement is computed.
+
+===== items/crf_007/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 17111 cents.
+- Approved reserve release to add back this quarter: 24858 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 25%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 803 cents once the statement is computed.
+
+===== items/crf_008/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 60542 cents.
+- Approved reserve release to add back this quarter: 13523 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 15%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 136 cents once the statement is computed.
+
+===== items/crf_009/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 24623 cents.
+- Approved reserve release to add back this quarter: 27636 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 20%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 0 cents once the statement is computed.
+
+===== items/crf_010/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 40257 cents.
+- Approved reserve release to add back this quarter: 26091 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 10%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 142 cents once the statement is computed.
+
+===== items/crf_011/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 35851 cents.
+- Approved reserve release to add back this quarter: 6503 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 10%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 0 cents once the statement is computed.
+
+===== items/crf_012/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 106890 cents.
+- Approved reserve release to add back this quarter: 1900 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 15%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 0 cents once the statement is computed.
+
+===== items/crf_013/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 49027 cents.
+- Approved reserve release to add back this quarter: 17972 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 20%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 118 cents once the statement is computed.
+
+===== items/crf_014/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 94790 cents.
+- Approved reserve release to add back this quarter: 31974 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 10%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 215 cents once the statement is computed.
+
+===== items/crf_015/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 77988 cents.
+- Approved reserve release to add back this quarter: 24958 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 20%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 0 cents once the statement is computed.
+
+===== items/crf_016/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 46394 cents.
+- Approved reserve release to add back this quarter: 19259 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 20%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 545 cents once the statement is computed.
+
+===== items/crf_017/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 68039 cents.
+- Approved reserve release to add back this quarter: 17301 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 10%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 29 cents once the statement is computed.
+
+===== items/crf_018/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 94213 cents.
+- Approved reserve release to add back this quarter: 26095 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 25%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 0 cents once the statement is computed.
+
+===== items/crf_019/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 47228 cents.
+- Approved reserve release to add back this quarter: 16921 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 15%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 665 cents once the statement is computed.
+
+===== items/crf_020/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 69658 cents.
+- Approved reserve release to add back this quarter: 13866 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 25%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 843 cents once the statement is computed.
+
+===== items/crf_021/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 47606 cents.
+- Approved reserve release to add back this quarter: 26253 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 25%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 590 cents once the statement is computed.
+
+===== items/crf_022/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 40637 cents.
+- Approved reserve release to add back this quarter: 25715 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 20%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 739 cents once the statement is computed.
+
+===== items/crf_023/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 100317 cents.
+- Approved reserve release to add back this quarter: 11960 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 20%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 0 cents once the statement is computed.
+
+===== items/crf_024/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 68916 cents.
+- Approved reserve release to add back this quarter: 30033 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 15%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 487 cents once the statement is computed.
+
+===== items/crf_025/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 24330 cents.
+- Approved reserve release to add back this quarter: 26749 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 15%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 0 cents once the statement is computed.
+
+===== items/crf_026/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 75316 cents.
+- Approved reserve release to add back this quarter: 5195 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 10%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 628 cents once the statement is computed.
+
+===== items/crf_027/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 39401 cents.
+- Approved reserve release to add back this quarter: 14941 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 20%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 654 cents once the statement is computed.
+
+===== items/crf_028/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 37176 cents.
+- Approved reserve release to add back this quarter: 6159 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 25%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 91 cents once the statement is computed.
+
+===== items/crf_029/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 21357 cents.
+- Approved reserve release to add back this quarter: 7131 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 20%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 382 cents once the statement is computed.
+
+===== items/crf_030/finance_memo.md =====
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 32572 cents.
+- Approved reserve release to add back this quarter: 3288 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 10%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 48 cents once the statement is computed.
+
+===== items/crf_001/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_001_r01,2026-02-19,ES,library,paperback,5,4720,2099,0,1,DSP settlement
+crf_001_r02,2026-03-17,AR,direct,hardcover,-4,-5036,2799,0,0,library batch
+crf_001_r03,2026-01-17,GB,bundle,paperback,-15,-28335,2099,-9917,0,wholesale feed import
+crf_001_r04,2026-03-02,IE,subscription,ebook,12,11868,1099,0,0,wholesale feed import
+crf_001_r05,2026-01-28,GB,subscription,ebook,2,2698,1499,0,0,DSP settlement
+crf_001_r06,2026-02-26,FR,direct,hardcover,2,5598,2799,0,0,manual correction row
+crf_001_r07,2026-02-27,AR,library,paperback,-1,-1139,1899,0,0,DSP settlement
+crf_001_r08,2026-03-15,AU,subscription,paperback,-8,-10792,1499,0,0,library batch
+crf_001_r09,2026-03-15,ES,bundle,ebook,1,779,1299,272,0,manual correction row
+crf_001_r10,2026-02-07,NL,direct,ebook,-3,-1212,899,0,0,metadata sync row
+
+===== items/crf_002/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_002_r01,2026-01-08,IT,bundle,ebook,2,1978,1099,593,0,metadata sync row
+crf_002_r02,2026-03-08,ES,retail,ebook,8,4672,1299,0,0,standard shipment
+crf_002_r03,2026-01-22,NZ,direct,ebook,3,1212,899,0,0,library batch
+crf_002_r04,2026-01-18,US,library,paperback,4,3416,1899,0,0,DSP settlement
+crf_002_r05,2026-01-15,MX,direct,paperback,10,9440,2099,0,1,manual correction row
+crf_002_r06,2026-01-20,FR,bundle,ebook,15,10110,1499,3033,0,standard shipment
+crf_002_r07,2026-03-10,IE,direct,ebook,15,16485,1099,0,0,metadata sync row
+crf_002_r08,2026-02-09,DE,retail,audio,4,5276,2199,0,0,metadata sync row
+crf_002_r09,2026-03-08,NL,retail,audio,-2,-2848,1899,0,0,manual correction row
+crf_002_r10,2026-02-12,AU,retail,hardcover,2,2248,2499,0,0,manual correction row
+crf_002_r11,2026-01-03,FR,retail,audio,5,8545,1899,0,0,standard shipment
+crf_002_r12,2026-03-23,ES,retail,hardcover,1,2699,2999,0,0,metadata sync row
+crf_002_r13,2026-01-12,FR,library,hardcover,1,0,2999,0,0,wholesale feed import
+crf_002_r14,2026-03-17,NL,bundle,paperback,10,0,2099,0,0,wholesale feed import
+
+===== items/crf_003/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_003_r01,2026-03-17,US,bundle,audio,-4,-7496,2499,-2998,1,library batch
+crf_003_r02,2026-01-21,US,bundle,hardcover,5,6745,2999,2698,0,manual correction row
+crf_003_r03,2026-03-04,GB,direct,paperback,2,2548,1699,0,0,DSP settlement
+crf_003_r04,2026-03-26,FR,direct,hardcover,5,8995,2999,0,0,standard shipment
+crf_003_r05,2026-03-28,NL,direct,ebook,8,5392,899,0,0,library batch
+crf_003_r06,2026-02-05,IT,direct,audio,3,3417,1899,0,1,DSP settlement
+crf_003_r07,2026-02-06,DE,bundle,paperback,2,1888,2099,755,0,wholesale feed import
+crf_003_r08,2026-01-11,AR,retail,paperback,3,6297,2099,0,0,DSP settlement
+crf_003_r09,2026-02-19,DE,subscription,hardcover,15,34485,2299,0,0,DSP settlement
+crf_003_r10,2026-02-21,IT,retail,ebook,-2,-1318,1099,0,0,library batch
+
+===== items/crf_004/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_004_r01,2026-01-13,GB,library,paperback,8,6832,1899,0,0,standard shipment
+crf_004_r02,2026-03-14,IT,retail,paperback,-5,-8495,1699,0,0,library batch
+crf_004_r03,2026-02-07,FR,bundle,paperback,-1,-1499,1499,-449,0,wholesale feed import
+crf_004_r04,2026-02-27,CA,bundle,paperback,-2,-1708,1899,-512,0,metadata sync row
+crf_004_r05,2026-02-09,IT,direct,ebook,15,8085,899,0,0,wholesale feed import
+crf_004_r06,2026-03-11,NL,library,audio,1,1599,1599,0,0,library batch
+crf_004_r07,2026-01-14,FR,direct,ebook,-5,-7495,1499,0,0,manual correction row
+crf_004_r08,2026-01-20,IE,bundle,hardcover,2,3598,2999,1079,0,DSP settlement
+crf_004_r09,2026-02-26,GB,direct,audio,-1,-1139,1899,0,0,DSP settlement
+crf_004_r10,2026-02-27,BR,library,ebook,3,2967,1099,0,0,DSP settlement
+crf_004_r11,2026-03-10,NL,bundle,hardcover,2,2248,2499,674,0,library batch
+
+===== items/crf_005/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_005_r01,2026-03-16,BR,library,paperback,2,4198,2099,0,0,DSP settlement
+crf_005_r02,2026-03-08,FR,direct,hardcover,4,7196,2999,0,0,metadata sync row
+crf_005_r03,2026-02-15,US,retail,paperback,-1,-899,1499,0,0,DSP settlement
+crf_005_r04,2026-02-19,MX,bundle,hardcover,5,8620,2299,2155,0,library batch
+crf_005_r05,2026-01-18,DE,bundle,ebook,12,4848,899,1212,0,manual correction row
+crf_005_r06,2026-01-14,CA,subscription,audio,15,17085,1899,0,0,manual correction row
+crf_005_r07,2026-03-18,MX,retail,paperback,5,4720,2099,0,0,metadata sync row
+crf_005_r08,2026-03-26,US,bundle,audio,-2,-2278,1899,-569,0,manual correction row
+crf_005_r09,2026-03-21,FR,direct,hardcover,-4,-8276,2299,0,0,manual correction row
+
+===== items/crf_006/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_006_r01,2026-01-14,BR,bundle,hardcover,8,8992,2499,2248,0,DSP settlement
+crf_006_r02,2026-03-04,ES,retail,audio,3,0,1899,0,0,metadata sync row
+crf_006_r03,2026-01-19,FR,retail,ebook,10,4940,1099,0,0,wholesale feed import
+crf_006_r04,2026-01-24,MX,library,audio,2,4998,2499,0,0,metadata sync row
+crf_006_r05,2026-02-10,MX,retail,audio,10,17090,1899,0,0,wholesale feed import
+crf_006_r06,2026-03-27,NL,bundle,paperback,8,8992,1499,2248,1,wholesale feed import
+crf_006_r07,2026-03-04,CA,subscription,ebook,-3,-2427,899,0,0,library batch
+crf_006_r08,2026-02-08,US,library,ebook,5,7495,1499,0,0,library batch
+crf_006_r09,2026-03-15,MX,subscription,ebook,3,1977,1099,0,0,DSP settlement
+crf_006_r10,2026-03-03,NZ,bundle,audio,1,0,2499,0,0,wholesale feed import
+crf_006_r11,2026-03-24,NZ,library,audio,10,14990,2499,0,0,metadata sync row
+crf_006_r12,2026-01-28,AU,bundle,audio,8,11512,1599,2878,1,wholesale feed import
+crf_006_r13,2026-03-28,BR,direct,hardcover,10,14990,2499,0,0,standard shipment
+
+===== items/crf_007/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_007_r01,2026-01-06,IT,retail,audio,12,15828,2199,0,0,wholesale feed import
+crf_007_r02,2026-01-09,NL,subscription,paperback,2,1888,2099,0,0,manual correction row
+crf_007_r03,2026-02-07,IE,subscription,paperback,2,2278,1899,0,0,library batch
+crf_007_r04,2026-02-17,FR,library,ebook,1,539,899,0,0,library batch
+crf_007_r05,2026-02-22,DE,subscription,audio,8,14992,2499,0,0,manual correction row
+crf_007_r06,2026-02-22,NL,bundle,ebook,10,8090,899,2427,0,library batch
+crf_007_r07,2026-02-28,DE,subscription,paperback,2,1798,1499,0,0,manual correction row
+crf_007_r08,2026-01-13,MX,bundle,audio,2,4998,2499,1499,0,DSP settlement
+crf_007_r09,2026-01-21,FR,subscription,hardcover,12,17988,2499,0,0,standard shipment
+
+===== items/crf_008/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_008_r01,2026-01-20,DE,bundle,hardcover,4,7496,2499,1874,0,metadata sync row
+crf_008_r02,2026-03-20,IE,retail,audio,-1,-1319,2199,0,0,library batch
+crf_008_r03,2026-02-04,NZ,bundle,hardcover,10,27990,2799,6997,0,standard shipment
+crf_008_r04,2026-02-11,BR,direct,hardcover,-2,-4138,2299,0,0,DSP settlement
+crf_008_r05,2026-01-04,NZ,library,paperback,3,5667,2099,0,0,library batch
+crf_008_r06,2026-01-09,NL,subscription,ebook,1,674,899,0,0,standard shipment
+crf_008_r07,2026-01-23,IE,subscription,ebook,-2,-2998,1499,0,0,standard shipment
+crf_008_r08,2026-03-17,IT,bundle,audio,5,0,1899,0,0,wholesale feed import
+crf_008_r09,2026-03-14,AR,library,ebook,10,11690,1299,0,0,metadata sync row
+crf_008_r10,2026-03-27,AU,direct,hardcover,2,5598,2799,0,0,standard shipment
+
+===== items/crf_009/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_009_r01,2026-01-01,ES,library,ebook,12,11688,1299,0,0,metadata sync row
+crf_009_r02,2026-02-11,AR,direct,ebook,2,1348,899,0,0,metadata sync row
+crf_009_r03,2026-03-23,BR,subscription,ebook,12,14028,1299,0,1,DSP settlement
+crf_009_r04,2026-03-07,AR,retail,audio,10,0,1599,0,0,standard shipment
+crf_009_r05,2026-03-12,AR,bundle,paperback,1,0,1899,0,0,manual correction row
+crf_009_r06,2026-02-13,AU,retail,hardcover,5,11245,2999,0,0,standard shipment
+crf_009_r07,2026-02-14,ES,bundle,ebook,8,7912,1099,1978,0,standard shipment
+crf_009_r08,2026-02-26,IE,retail,hardcover,2,4598,2299,0,0,metadata sync row
+crf_009_r09,2026-03-13,AR,bundle,ebook,-1,-1299,1299,-324,0,library batch
+crf_009_r10,2026-02-04,IT,library,paperback,15,21360,1899,0,0,library batch
+crf_009_r11,2026-02-14,AR,library,paperback,2,1798,1499,0,0,manual correction row
+crf_009_r12,2026-03-02,IE,library,ebook,10,5390,899,0,0,library batch
+crf_009_r13,2026-02-27,BR,retail,paperback,1,764,1699,0,1,standard shipment
+crf_009_r14,2026-02-02,BR,retail,ebook,2,1648,1099,0,0,standard shipment
+
+===== items/crf_010/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_010_r01,2026-01-25,NZ,bundle,paperback,12,9168,1699,2750,0,DSP settlement
+crf_010_r02,2026-02-09,AU,library,ebook,4,1616,899,0,0,DSP settlement
+crf_010_r03,2026-01-25,BR,subscription,ebook,-1,-1499,1499,0,0,manual correction row
+crf_010_r04,2026-02-20,IT,library,paperback,-12,-18348,1699,0,0,DSP settlement
+crf_010_r05,2026-01-22,BR,subscription,audio,2,3298,2199,0,0,library batch
+crf_010_r06,2026-02-13,IE,subscription,ebook,2,1558,1299,0,0,manual correction row
+crf_010_r07,2026-01-07,FR,bundle,paperback,1,0,1899,0,0,wholesale feed import
+crf_010_r08,2026-01-11,CA,library,audio,3,4497,2499,0,1,metadata sync row
+crf_010_r09,2026-02-07,IE,direct,hardcover,8,11992,2499,0,0,standard shipment
+crf_010_r10,2026-03-03,CA,subscription,paperback,2,3418,1899,0,0,DSP settlement
+
+===== items/crf_011/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_011_r01,2026-02-13,DE,library,audio,1,1709,1899,0,0,library batch
+crf_011_r02,2026-01-12,FR,direct,paperback,1,764,1699,0,1,manual correction row
+crf_011_r03,2026-01-13,ES,subscription,hardcover,15,16860,2499,0,0,metadata sync row
+crf_011_r04,2026-02-13,BR,library,ebook,1,0,899,0,0,library batch
+crf_011_r05,2026-01-16,NL,bundle,hardcover,4,5996,2499,1798,0,DSP settlement
+crf_011_r06,2026-01-17,NL,subscription,hardcover,2,2068,2299,0,0,DSP settlement
+crf_011_r07,2026-03-20,AR,library,hardcover,-15,-44985,2999,0,0,manual correction row
+crf_011_r08,2026-03-08,IT,bundle,audio,15,19785,2199,5935,1,library batch
+crf_011_r09,2026-01-16,CA,retail,ebook,1,674,899,0,0,standard shipment
+
+===== items/crf_012/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_012_r01,2026-01-08,MX,retail,audio,5,6595,2199,0,0,library batch
+crf_012_r02,2026-02-06,IE,retail,ebook,-12,-11688,1299,0,0,library batch
+crf_012_r03,2026-01-06,DE,retail,audio,8,8992,2499,0,0,standard shipment
+crf_012_r04,2026-02-17,IE,subscription,audio,4,7496,2499,0,0,DSP settlement
+crf_012_r05,2026-02-09,GB,bundle,paperback,4,3776,2099,1888,0,standard shipment
+crf_012_r06,2026-03-25,NL,bundle,hardcover,3,6297,2799,3148,1,DSP settlement
+crf_012_r07,2026-02-13,US,library,paperback,1,1124,1499,0,1,library batch
+crf_012_r08,2026-01-27,IT,library,audio,-1,-1979,2199,0,0,DSP settlement
+crf_012_r09,2026-03-17,GB,retail,audio,15,21585,1599,0,0,manual correction row
+crf_012_r10,2026-02-17,MX,direct,ebook,1,0,1299,0,0,wholesale feed import
+crf_012_r11,2026-03-09,DE,subscription,paperback,-2,-3798,1899,0,0,standard shipment
+
+===== items/crf_013/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_013_r01,2026-01-23,AU,direct,ebook,15,12135,899,0,0,library batch
+crf_013_r02,2026-02-28,BR,library,hardcover,-4,-8996,2499,0,0,manual correction row
+crf_013_r03,2026-02-15,GB,subscription,ebook,-1,-1124,1499,0,0,wholesale feed import
+crf_013_r04,2026-01-12,DE,library,ebook,-15,0,1499,0,0,wholesale feed import
+crf_013_r05,2026-03-19,AU,subscription,paperback,-8,-6832,1899,0,0,library batch
+crf_013_r06,2026-01-12,FR,library,audio,2,0,2199,0,0,wholesale feed import
+crf_013_r07,2026-01-03,IT,subscription,ebook,-1,-539,899,0,0,metadata sync row
+crf_013_r08,2026-02-18,CA,direct,ebook,10,8990,899,0,0,DSP settlement
+crf_013_r09,2026-02-28,AR,subscription,hardcover,2,5398,2999,0,0,library batch
+
+===== items/crf_014/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_014_r01,2026-02-14,ES,retail,audio,12,20508,1899,0,0,wholesale feed import
+crf_014_r02,2026-03-21,IE,direct,hardcover,2,5998,2999,0,0,library batch
+crf_014_r03,2026-01-18,IT,bundle,hardcover,5,0,2499,0,0,metadata sync row
+crf_014_r04,2026-01-09,GB,subscription,audio,1,2249,2499,0,0,standard shipment
+crf_014_r05,2026-03-21,ES,subscription,audio,2,2278,1899,0,0,standard shipment
+crf_014_r06,2026-01-23,FR,bundle,audio,1,2499,2499,874,0,DSP settlement
+crf_014_r07,2026-01-12,NL,subscription,ebook,3,2472,1099,0,1,manual correction row
+crf_014_r08,2026-03-15,US,bundle,hardcover,5,6745,2999,2360,0,manual correction row
+crf_014_r09,2026-01-06,CA,library,ebook,3,2697,1499,0,0,metadata sync row
+
+===== items/crf_015/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_015_r01,2026-01-24,IT,subscription,ebook,12,9708,899,0,0,manual correction row
+crf_015_r02,2026-01-16,MX,retail,hardcover,-1,-1799,2999,0,1,wholesale feed import
+crf_015_r03,2026-01-28,DE,direct,audio,10,9590,1599,0,0,manual correction row
+crf_015_r04,2026-02-19,IE,subscription,audio,8,19992,2499,0,0,metadata sync row
+crf_015_r05,2026-01-18,FR,retail,hardcover,5,10495,2799,0,1,wholesale feed import
+crf_015_r06,2026-03-01,DE,subscription,paperback,10,12590,2099,0,0,library batch
+crf_015_r07,2026-03-04,NL,direct,ebook,1,974,1299,0,1,metadata sync row
+crf_015_r08,2026-03-28,AU,library,audio,10,18990,1899,0,0,standard shipment
+crf_015_r09,2026-01-26,FR,bundle,ebook,3,2022,899,606,0,DSP settlement
+crf_015_r10,2026-01-11,BR,retail,audio,4,2876,1599,0,0,library batch
+crf_015_r11,2026-03-17,NZ,retail,audio,-1,-1499,2499,0,0,DSP settlement
+
+===== items/crf_016/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_016_r01,2026-03-19,MX,bundle,audio,2,0,1899,0,0,wholesale feed import
+crf_016_r02,2026-03-27,IT,retail,ebook,2,2198,1099,0,0,DSP settlement
+crf_016_r03,2026-02-03,BR,direct,hardcover,1,1724,2299,0,0,manual correction row
+crf_016_r04,2026-02-18,IT,bundle,audio,4,8996,2499,4498,0,metadata sync row
+crf_016_r05,2026-01-28,IT,library,paperback,2,2038,1699,0,1,manual correction row
+crf_016_r06,2026-02-25,AR,subscription,audio,-5,-7495,2499,0,0,library batch
+crf_016_r07,2026-02-10,IE,library,hardcover,10,20990,2799,0,0,metadata sync row
+crf_016_r08,2026-01-09,NZ,subscription,ebook,5,4870,1299,0,0,standard shipment
+crf_016_r09,2026-02-20,ES,subscription,ebook,8,10792,1499,0,0,library batch
+crf_016_r10,2026-02-18,BR,library,ebook,4,5196,1299,0,0,metadata sync row
+crf_016_r11,2026-03-16,GB,library,ebook,12,10788,1499,0,1,wholesale feed import
+crf_016_r12,2026-03-26,CA,library,hardcover,2,5038,2799,0,0,library batch
+
+===== items/crf_017/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_017_r01,2026-01-18,MX,direct,paperback,5,7645,1699,0,1,library batch
+crf_017_r02,2026-03-26,NZ,bundle,hardcover,4,10076,2799,4030,0,manual correction row
+crf_017_r03,2026-03-20,GB,direct,paperback,3,0,1499,0,1,manual correction row
+crf_017_r04,2026-01-13,NZ,subscription,audio,2,3748,2499,0,0,standard shipment
+crf_017_r05,2026-01-23,ES,direct,hardcover,-2,-4498,2499,0,0,library batch
+crf_017_r06,2026-03-08,BR,library,hardcover,1,2699,2999,0,0,standard shipment
+crf_017_r07,2026-03-04,AU,library,audio,1,1709,1899,0,1,standard shipment
+crf_017_r08,2026-02-26,AU,bundle,audio,3,4272,1899,1708,0,wholesale feed import
+crf_017_r09,2026-03-28,NZ,library,ebook,4,1976,1099,0,0,standard shipment
+crf_017_r10,2026-03-16,DE,bundle,hardcover,12,12408,2299,4963,1,wholesale feed import
+crf_017_r11,2026-01-06,NL,bundle,ebook,-2,-1318,1099,-527,0,manual correction row
+crf_017_r12,2026-02-27,NL,subscription,paperback,4,7556,2099,0,1,standard shipment
+crf_017_r13,2026-02-26,FR,subscription,audio,4,6396,1599,0,0,standard shipment
+crf_017_r14,2026-03-28,AU,subscription,audio,4,5276,2199,0,0,DSP settlement
+
+===== items/crf_018/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_018_r01,2026-02-08,CA,retail,hardcover,3,5172,2299,0,0,standard shipment
+crf_018_r02,2026-02-08,IE,subscription,ebook,-1,0,899,0,0,standard shipment
+crf_018_r03,2026-01-03,CA,library,paperback,2,3778,2099,0,0,manual correction row
+crf_018_r04,2026-01-02,GB,retail,audio,3,2967,2199,0,1,wholesale feed import
+crf_018_r05,2026-03-07,ES,retail,paperback,5,3820,1699,0,0,metadata sync row
+crf_018_r06,2026-02-21,CA,bundle,audio,8,11392,1899,3417,0,standard shipment
+crf_018_r07,2026-03-06,NL,retail,hardcover,-8,-21592,2999,0,0,metadata sync row
+crf_018_r08,2026-02-07,NL,direct,hardcover,-15,-25860,2299,0,0,manual correction row
+crf_018_r09,2026-01-05,NL,subscription,paperback,-15,-23610,2099,0,0,metadata sync row
+crf_018_r10,2026-01-24,GB,library,audio,2,0,1899,0,0,DSP settlement
+
+===== items/crf_019/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_019_r01,2026-01-19,AR,bundle,ebook,-8,-8792,1099,-3516,0,metadata sync row
+crf_019_r02,2026-02-11,ES,subscription,audio,12,10248,1899,0,1,DSP settlement
+crf_019_r03,2026-02-08,US,direct,ebook,3,2697,899,0,0,wholesale feed import
+crf_019_r04,2026-03-22,DE,direct,paperback,10,18890,2099,0,0,manual correction row
+crf_019_r05,2026-02-10,IT,retail,hardcover,5,14995,2999,0,0,metadata sync row
+crf_019_r06,2026-02-01,NL,library,audio,8,11512,1599,0,0,DSP settlement
+crf_019_r07,2026-03-19,CA,bundle,ebook,3,2922,1299,1168,0,wholesale feed import
+crf_019_r08,2026-02-22,AU,subscription,paperback,3,2022,1499,0,0,wholesale feed import
+crf_019_r09,2026-03-23,IT,subscription,ebook,2,2998,1499,0,0,metadata sync row
+
+===== items/crf_020/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_020_r01,2026-03-04,DE,library,ebook,10,5840,1299,0,1,standard shipment
+crf_020_r02,2026-01-21,ES,library,ebook,8,5392,1499,0,1,manual correction row
+crf_020_r03,2026-01-12,GB,bundle,audio,8,11512,1599,2878,0,DSP settlement
+crf_020_r04,2026-01-28,IE,bundle,paperback,3,0,1499,0,1,metadata sync row
+crf_020_r05,2026-01-21,AU,library,audio,-1,-1979,2199,0,0,manual correction row
+crf_020_r06,2026-02-19,IE,library,hardcover,12,22488,2499,0,0,standard shipment
+crf_020_r07,2026-03-18,AR,subscription,paperback,-4,-6796,1699,0,0,manual correction row
+crf_020_r08,2026-02-27,AR,direct,audio,2,0,1899,0,0,metadata sync row
+crf_020_r09,2026-02-09,CA,library,paperback,1,1529,1699,0,0,DSP settlement
+crf_020_r10,2026-02-06,AR,bundle,ebook,4,2336,1299,584,0,standard shipment
+crf_020_r11,2026-03-14,FR,library,audio,2,3798,1899,0,0,metadata sync row
+crf_020_r12,2026-02-27,CA,library,hardcover,15,18885,2799,0,0,metadata sync row
+
+===== items/crf_021/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_021_r01,2026-02-10,AR,subscription,audio,5,5995,1599,0,0,library batch
+crf_021_r02,2026-01-01,IT,bundle,ebook,10,13490,1499,5396,0,DSP settlement
+crf_021_r03,2026-03-22,IT,subscription,ebook,-12,-17988,1499,0,0,standard shipment
+crf_021_r04,2026-01-16,BR,subscription,audio,-3,-3597,1599,0,1,standard shipment
+crf_021_r05,2026-03-19,CA,retail,ebook,8,10392,1299,0,1,manual correction row
+crf_021_r06,2026-03-24,IT,subscription,audio,15,21360,1899,0,0,DSP settlement
+crf_021_r07,2026-01-13,GB,bundle,paperback,2,3398,1699,1359,0,wholesale feed import
+crf_021_r08,2026-01-15,CA,library,paperback,3,4587,1699,0,0,manual correction row
+crf_021_r09,2026-02-15,US,direct,hardcover,10,16790,2799,0,0,wholesale feed import
+crf_021_r10,2026-01-23,US,subscription,paperback,12,15108,2099,0,0,metadata sync row
+crf_021_r11,2026-01-02,DE,retail,ebook,1,1124,1499,0,0,library batch
+crf_021_r12,2026-01-19,GB,retail,ebook,2,988,1099,0,0,manual correction row
+crf_021_r13,2026-02-03,NZ,subscription,hardcover,15,16860,2499,0,0,manual correction row
+
+===== items/crf_022/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_022_r01,2026-02-21,AR,library,audio,5,5995,1599,0,0,manual correction row
+crf_022_r02,2026-01-03,ES,subscription,paperback,12,15108,2099,0,0,metadata sync row
+crf_022_r03,2026-02-25,GB,library,ebook,15,14610,1299,0,1,standard shipment
+crf_022_r04,2026-02-26,IT,bundle,paperback,5,8545,1899,2136,0,standard shipment
+crf_022_r05,2026-01-24,GB,direct,ebook,1,809,899,0,0,manual correction row
+crf_022_r06,2026-02-13,AR,direct,audio,-5,-6595,2199,0,0,DSP settlement
+crf_022_r07,2026-02-10,ES,direct,paperback,1,1124,1499,0,0,library batch
+crf_022_r08,2026-03-18,IE,library,audio,-5,-3595,1599,0,0,library batch
+crf_022_r09,2026-01-04,ES,subscription,paperback,1,1899,1899,0,1,DSP settlement
+crf_022_r10,2026-03-03,IE,library,audio,10,14990,2499,0,0,metadata sync row
+crf_022_r11,2026-02-16,US,retail,audio,1,1899,1899,0,0,manual correction row
+crf_022_r12,2026-01-11,DE,library,hardcover,4,8276,2299,0,0,standard shipment
+crf_022_r13,2026-03-25,ES,bundle,hardcover,1,2099,2799,524,0,library batch
+
+===== items/crf_023/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_023_r01,2026-01-26,DE,subscription,audio,-1,0,1599,0,0,wholesale feed import
+crf_023_r02,2026-01-10,AR,direct,hardcover,8,0,2799,0,0,manual correction row
+crf_023_r03,2026-03-01,IE,direct,audio,8,14992,2499,0,1,library batch
+crf_023_r04,2026-02-01,ES,retail,ebook,1,1349,1499,0,0,wholesale feed import
+crf_023_r05,2026-02-22,AR,retail,paperback,1,1889,2099,0,0,metadata sync row
+crf_023_r06,2026-01-22,FR,retail,hardcover,3,5172,2299,0,0,library batch
+crf_023_r07,2026-02-23,NZ,subscription,ebook,15,10110,1499,0,0,manual correction row
+crf_023_r08,2026-02-20,AU,retail,audio,1,1499,2499,0,0,library batch
+crf_023_r09,2026-01-27,BR,library,paperback,8,11392,1899,0,0,manual correction row
+crf_023_r10,2026-03-18,AU,bundle,audio,10,8540,1899,2989,0,manual correction row
+crf_023_r11,2026-01-25,CA,retail,hardcover,12,25188,2799,0,0,library batch
+crf_023_r12,2026-02-26,CA,bundle,hardcover,4,0,2499,0,0,manual correction row
+
+===== items/crf_024/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_024_r01,2026-01-27,IE,library,paperback,15,10110,1499,0,1,library batch
+crf_024_r02,2026-01-06,DE,direct,audio,4,5756,1599,0,0,manual correction row
+crf_024_r03,2026-01-13,DE,library,hardcover,10,24990,2499,0,0,DSP settlement
+crf_024_r04,2026-03-04,NL,retail,hardcover,1,1034,2299,0,0,wholesale feed import
+crf_024_r05,2026-02-01,NL,retail,ebook,15,16860,1499,0,0,standard shipment
+crf_024_r06,2026-03-22,GB,bundle,paperback,2,3398,1699,1189,0,wholesale feed import
+crf_024_r07,2026-03-02,AR,library,audio,8,17592,2199,0,0,metadata sync row
+crf_024_r08,2026-01-04,IT,retail,paperback,2,2278,1899,0,0,wholesale feed import
+crf_024_r09,2026-02-28,CA,library,audio,-2,0,2499,0,0,library batch
+crf_024_r10,2026-03-15,US,direct,paperback,2,3418,1899,0,0,wholesale feed import
+crf_024_r11,2026-01-13,AU,subscription,ebook,-1,-1499,1499,0,0,library batch
+crf_024_r12,2026-02-12,NZ,direct,paperback,1,1889,2099,0,0,DSP settlement
+crf_024_r13,2026-01-22,US,library,audio,15,24735,2199,0,0,DSP settlement
+
+===== items/crf_025/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_025_r01,2026-02-28,ES,bundle,paperback,1,1019,1699,356,0,DSP settlement
+crf_025_r02,2026-03-06,IT,bundle,hardcover,15,40485,2999,14169,1,library batch
+crf_025_r03,2026-02-24,GB,direct,paperback,4,5096,1699,0,0,metadata sync row
+crf_025_r04,2026-01-06,IE,subscription,audio,8,13192,2199,0,1,wholesale feed import
+crf_025_r05,2026-02-01,FR,bundle,hardcover,-5,-10345,2299,-3620,0,metadata sync row
+crf_025_r06,2026-03-03,IT,bundle,ebook,12,0,899,0,0,metadata sync row
+crf_025_r07,2026-01-09,DE,retail,paperback,1,1424,1899,0,0,metadata sync row
+crf_025_r08,2026-03-04,US,subscription,hardcover,15,0,2999,0,0,metadata sync row
+crf_025_r09,2026-01-11,MX,bundle,hardcover,1,0,2299,0,0,metadata sync row
+
+===== items/crf_026/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_026_r01,2026-01-10,AU,library,audio,8,0,2199,0,0,manual correction row
+crf_026_r02,2026-01-26,CA,library,paperback,12,15288,1699,0,0,DSP settlement
+crf_026_r03,2026-02-07,NL,direct,audio,1,1319,2199,0,0,wholesale feed import
+crf_026_r04,2026-01-23,AU,library,ebook,5,3370,1499,0,0,DSP settlement
+crf_026_r05,2026-02-16,ES,library,ebook,1,989,1099,0,0,wholesale feed import
+crf_026_r06,2026-03-06,ES,direct,hardcover,12,26988,2499,0,0,metadata sync row
+crf_026_r07,2026-01-25,CA,direct,ebook,8,7192,1499,0,1,metadata sync row
+crf_026_r08,2026-01-13,IT,subscription,paperback,10,16990,1699,0,0,library batch
+crf_026_r09,2026-02-02,IE,retail,hardcover,2,3598,2999,0,0,metadata sync row
+crf_026_r10,2026-01-08,MX,bundle,audio,3,2877,1599,1006,0,wholesale feed import
+crf_026_r11,2026-02-01,IE,subscription,audio,4,4556,1899,0,0,DSP settlement
+crf_026_r12,2026-02-10,IE,bundle,audio,10,18990,1899,6646,0,standard shipment
+crf_026_r13,2026-01-02,DE,library,ebook,4,0,899,0,0,library batch
+crf_026_r14,2026-01-04,BR,direct,ebook,2,0,1499,0,0,standard shipment
+
+===== items/crf_027/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_027_r01,2026-01-17,AR,direct,hardcover,15,25185,2799,0,0,metadata sync row
+crf_027_r02,2026-01-14,IT,library,paperback,-10,-15740,2099,0,0,standard shipment
+crf_027_r03,2026-02-22,US,library,ebook,5,5620,1499,0,0,metadata sync row
+crf_027_r04,2026-03-11,US,subscription,hardcover,2,4598,2299,0,0,library batch
+crf_027_r05,2026-01-04,AR,direct,hardcover,-10,-13790,2299,0,0,standard shipment
+crf_027_r06,2026-02-24,US,library,audio,8,11992,2499,0,0,manual correction row
+crf_027_r07,2026-03-17,BR,library,ebook,-1,-584,1299,0,0,library batch
+crf_027_r08,2026-02-19,GB,retail,ebook,2,1948,1299,0,0,manual correction row
+crf_027_r09,2026-03-24,US,direct,audio,5,5995,1599,0,0,DSP settlement
+crf_027_r10,2026-01-19,IE,library,paperback,4,5396,1499,0,0,library batch
+
+===== items/crf_028/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_028_r01,2026-02-01,NZ,retail,audio,15,10785,1599,0,1,DSP settlement
+crf_028_r02,2026-03-24,CA,subscription,ebook,2,1078,899,0,0,metadata sync row
+crf_028_r03,2026-02-22,AU,bundle,paperback,1,899,1499,359,0,metadata sync row
+crf_028_r04,2026-03-08,CA,direct,hardcover,-4,-6896,2299,0,0,wholesale feed import
+crf_028_r05,2026-03-12,IT,direct,paperback,1,0,1699,0,0,metadata sync row
+crf_028_r06,2026-03-06,ES,library,paperback,12,20388,1699,0,1,standard shipment
+crf_028_r07,2026-02-07,AR,retail,paperback,10,18990,1899,0,0,DSP settlement
+crf_028_r08,2026-01-21,BR,subscription,hardcover,15,40485,2999,0,0,metadata sync row
+crf_028_r09,2026-02-26,FR,subscription,hardcover,8,0,2999,0,0,wholesale feed import
+crf_028_r10,2026-02-06,US,retail,paperback,1,1424,1899,0,0,library batch
+crf_028_r11,2026-02-17,NZ,retail,ebook,15,11685,1299,0,0,metadata sync row
+crf_028_r12,2026-03-27,AR,bundle,audio,2,3748,2499,1499,0,standard shipment
+crf_028_r13,2026-02-26,BR,retail,ebook,15,20235,1499,0,0,wholesale feed import
+crf_028_r14,2026-03-15,BR,library,ebook,15,0,1499,0,1,wholesale feed import
+
+===== items/crf_029/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_029_r01,2026-01-14,BR,retail,hardcover,-2,0,2299,0,0,manual correction row
+crf_029_r02,2026-02-08,NL,bundle,audio,-3,-4272,1899,-1281,0,manual correction row
+crf_029_r03,2026-03-10,IE,subscription,audio,-2,-1708,1899,0,0,manual correction row
+crf_029_r04,2026-03-15,MX,direct,hardcover,12,27588,2299,0,0,metadata sync row
+crf_029_r05,2026-02-26,ES,retail,hardcover,-10,-29990,2999,0,0,wholesale feed import
+crf_029_r06,2026-03-17,NZ,direct,paperback,15,19110,1699,0,0,DSP settlement
+crf_029_r07,2026-02-12,BR,library,audio,4,6396,1599,0,1,DSP settlement
+crf_029_r08,2026-03-16,NL,subscription,ebook,2,2598,1299,0,0,DSP settlement
+crf_029_r09,2026-01-27,NL,direct,audio,1,854,1899,0,0,library batch
+crf_029_r10,2026-03-04,NL,direct,audio,1,1599,1599,0,0,metadata sync row
+crf_029_r11,2026-02-13,AR,subscription,ebook,-1,-1124,1499,0,0,library batch
+crf_029_r12,2026-02-28,NZ,bundle,hardcover,3,6747,2999,2024,0,manual correction row
+
+===== items/crf_030/sales_statement.csv =====
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_030_r01,2026-02-28,ES,direct,ebook,1,674,899,0,0,library batch
+crf_030_r02,2026-03-10,MX,retail,audio,10,7190,1599,0,0,manual correction row
+crf_030_r03,2026-01-01,NZ,library,audio,-5,0,2199,0,0,wholesale feed import
+crf_030_r04,2026-03-28,ES,subscription,audio,-10,-11990,1599,0,0,metadata sync row
+crf_030_r05,2026-03-06,ES,subscription,hardcover,-4,-7196,2999,0,0,DSP settlement
+crf_030_r06,2026-01-01,BR,direct,hardcover,8,10792,2999,0,1,DSP settlement
+crf_030_r07,2026-01-20,IT,subscription,paperback,-2,-1528,1699,0,0,DSP settlement
+crf_030_r08,2026-03-03,NL,library,audio,-8,-10552,2199,0,0,wholesale feed import
+crf_030_r09,2026-03-15,BR,library,ebook,2,0,1499,0,0,DSP settlement
+crf_030_r10,2026-03-09,BR,direct,ebook,10,6740,899,0,0,standard shipment
+crf_030_r11,2026-03-04,CA,bundle,paperback,4,4076,1699,1630,0,DSP settlement
+
+2026-05-24T01:47:10.922859Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:47:10.922882Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:47:10.923381Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:47:10.923387Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:47:10.923894Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:47:10.923900Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:47:10.924372Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:47:10.924376Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:47:10.925041Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:47:10.925047Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:47:10.926833Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:47:10.926842Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+exec
+/bin/zsh -lc "for f in items/*/amendments.md; do printf '%s\\n' \""'$f"; sed -n '"'1,80p' \""'$f" | tail -n +3; done' in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_4__solved_by__gpt_5_5
+ succeeded in 0ms:
+items/crf_001/amendments.md
+1. Effective 2026-02-01: promo rows may count at 25% of recognized base for channel=subscription and format=ANY.
+2. Effective 2026-02-05: exclude channel=retail from royalty-bearing sales.
+3. Effective 2026-02-15: apply a recognized-base multiplier of 50% for format=ebook, channel=subscription, territories=ANY.
+4. Effective 2026-02-20: rate override to 1800 bps for format=ebook, channel=retail, territories=US|CA.
+items/crf_002/amendments.md
+1. Effective 2026-01-20: add licensed territory set CA.
+2. Effective 2026-02-01: promo rows may count at 50% of recognized base for channel=direct and format=paperback.
+3. Effective 2026-02-20: rate override to 1800 bps for format=hardcover, channel=retail, territories=US|CA.
+4. Effective 2026-03-01: apply a recognized-base multiplier of 60% for format=paperback, channel=library, territories=US|CA.
+5. Effective 2026-03-05: exclude channel=direct from royalty-bearing sales.
+items/crf_003/amendments.md
+1. Effective 2026-01-01: promo rows may count at 50% of recognized base for channel=direct and format=audio.
+2. Effective 2026-02-10: rate override to 2800 bps for format=audio, channel=direct, territories=GB|IE.
+3. Effective 2026-02-15: apply a recognized-base multiplier of 50% for format=audio, channel=ANY, territories=BR|MX|AR.
+4. Effective 2026-02-15: add licensed territory set FR.
+items/crf_004/amendments.md
+- None.
+items/crf_005/amendments.md
+1. Effective 2026-02-01: rate override to 1500 bps for format=paperback, channel=subscription, territories=DE|FR|ES|IT|NL.
+items/crf_006/amendments.md
+1. Effective 2026-01-15: apply a recognized-base multiplier of 50% for format=audio, channel=ANY, territories=ANY.
+2. Effective 2026-02-01: rate override to 2800 bps for format=audio, channel=subscription, territories=GB|IE.
+3. Effective 2026-03-05: exclude channel=bundle from royalty-bearing sales.
+items/crf_007/amendments.md
+1. Effective 2026-02-10: rate override to 2800 bps for format=paperback, channel=ANY, territories=GB|IE.
+2. Effective 2026-02-15: apply a recognized-base multiplier of 70% for format=ebook, channel=ANY, territories=BR|MX|AR.
+items/crf_008/amendments.md
+1. Effective 2026-01-01: promo rows may count at 25% of recognized base for channel=direct and format=hardcover.
+2. Effective 2026-01-20: add licensed territory set US.
+3. Effective 2026-02-10: rate override to 2800 bps for format=ebook, channel=subscription, territories=GB|IE.
+items/crf_009/amendments.md
+1. Effective 2026-02-01: promo rows may count at 25% of recognized base for channel=subscription and format=ANY.
+2. Effective 2026-02-10: rate override to 2400 bps for format=audio, channel=subscription, territories=GB|IE.
+items/crf_010/amendments.md
+1. Effective 2026-02-05: exclude channel=subscription from royalty-bearing sales.
+2. Effective 2026-02-15: add licensed territory set IT.
+3. Effective 2026-02-20: rate override to 2400 bps for format=hardcover, channel=direct, territories=DE|FR|ES|IT|NL.
+items/crf_011/amendments.md
+1. Effective 2026-02-05: exclude channel=subscription from royalty-bearing sales.
+2. Effective 2026-02-15: apply a recognized-base multiplier of 70% for format=ebook, channel=library, territories=US|CA.
+items/crf_012/amendments.md
+1. Effective 2026-03-01: apply a recognized-base multiplier of 60% for format=audio, channel=library, territories=US|CA.
+2. Effective 2026-03-01: promo rows may count at 50% of recognized base for channel=direct and format=ANY.
+3. Effective 2026-03-10: add licensed territory set IT.
+items/crf_013/amendments.md
+1. Effective 2026-02-01: promo rows may count at 40% of recognized base for channel=direct and format=ANY.
+2. Effective 2026-02-15: apply a recognized-base multiplier of 70% for format=audio, channel=bundle, territories=AU|NZ.
+3. Effective 2026-02-20: rate override to 1100 bps for format=hardcover, channel=ANY, territories=ANY.
+items/crf_014/amendments.md
+1. Effective 2026-02-01: rate override to 2400 bps for format=hardcover, channel=ANY, territories=US|CA.
+2. Effective 2026-02-15: apply a recognized-base multiplier of 50% for format=paperback, channel=library, territories=AU|NZ.
+3. Effective 2026-03-05: exclude channel=direct from royalty-bearing sales.
+items/crf_015/amendments.md
+1. Effective 2026-01-20: add licensed territory set NZ.
+2. Effective 2026-02-05: exclude channel=direct from royalty-bearing sales.
+3. Effective 2026-03-01: apply a recognized-base multiplier of 60% for format=paperback, channel=library, territories=ANY.
+items/crf_016/amendments.md
+1. Effective 2026-01-01: promo rows may count at 25% of recognized base for channel=subscription and format=paperback.
+2. Effective 2026-01-20: add licensed territory set NZ.
+3. Effective 2026-03-01: apply a recognized-base multiplier of 70% for format=paperback, channel=library, territories=AU|NZ.
+items/crf_017/amendments.md
+1. Effective 2026-02-01: promo rows may count at 40% of recognized base for channel=subscription and format=ebook.
+2. Effective 2026-02-20: rate override to 1100 bps for format=hardcover, channel=ANY, territories=ANY.
+3. Effective 2026-03-01: apply a recognized-base multiplier of 80% for format=hardcover, channel=library, territories=AU|NZ.
+items/crf_018/amendments.md
+1. Effective 2026-01-01: promo rows may count at 40% of recognized base for channel=direct and format=paperback.
+2. Effective 2026-02-05: exclude channel=library from royalty-bearing sales.
+3. Effective 2026-03-01: apply a recognized-base multiplier of 60% for format=ebook, channel=bundle, territories=AU|NZ.
+4. Effective 2026-03-10: add licensed territory set MX.
+items/crf_019/amendments.md
+1. Effective 2026-01-15: apply a recognized-base multiplier of 60% for format=hardcover, channel=ANY, territories=US|CA.
+2. Effective 2026-02-05: exclude channel=library from royalty-bearing sales.
+3. Effective 2026-02-20: rate override to 1500 bps for format=ebook, channel=retail, territories=ANY.
+4. Effective 2026-03-01: promo rows may count at 50% of recognized base for channel=subscription and format=audio.
+items/crf_020/amendments.md
+1. Effective 2026-02-01: promo rows may count at 50% of recognized base for channel=subscription and format=hardcover.
+2. Effective 2026-03-01: apply a recognized-base multiplier of 70% for format=audio, channel=subscription, territories=US|CA.
+3. Effective 2026-03-05: exclude channel=bundle from royalty-bearing sales.
+items/crf_021/amendments.md
+1. Effective 2026-02-01: promo rows may count at 40% of recognized base for channel=direct and format=ANY.
+2. Effective 2026-03-01: apply a recognized-base multiplier of 60% for format=ebook, channel=subscription, territories=US|CA.
+3. Effective 2026-03-05: exclude channel=retail from royalty-bearing sales.
+items/crf_022/amendments.md
+1. Effective 2026-01-01: promo rows may count at 50% of recognized base for channel=subscription and format=paperback.
+2. Effective 2026-01-20: add licensed territory set AR.
+3. Effective 2026-02-01: rate override to 1500 bps for format=ebook, channel=retail, territories=ANY.
+4. Effective 2026-03-01: apply a recognized-base multiplier of 60% for format=paperback, channel=subscription, territories=BR|MX|AR.
+items/crf_023/amendments.md
+1. Effective 2026-02-15: apply a recognized-base multiplier of 50% for format=hardcover, channel=ANY, territories=AU|NZ.
+2. Effective 2026-03-05: exclude channel=subscription from royalty-bearing sales.
+items/crf_024/amendments.md
+1. Effective 2026-01-01: promo rows may count at 40% of recognized base for channel=direct and format=hardcover.
+2. Effective 2026-01-15: apply a recognized-base multiplier of 70% for format=ebook, channel=subscription, territories=ANY.
+3. Effective 2026-02-05: exclude channel=retail from royalty-bearing sales.
+4. Effective 2026-02-10: rate override to 1800 bps for format=audio, channel=ANY, territories=ANY.
+items/crf_025/amendments.md
+1. Effective 2026-02-05: exclude channel=direct from royalty-bearing sales.
+2. Effective 2026-02-20: rate override to 2400 bps for format=ebook, channel=direct, territories=US|CA.
+items/crf_026/amendments.md
+1. Effective 2026-01-20: add licensed territory set GB.
+2. Effective 2026-02-01: rate override to 1800 bps for format=hardcover, channel=subscription, territories=US|CA.
+3. Effective 2026-03-01: apply a recognized-base multiplier of 50% for format=paperback, channel=ANY, territories=ANY.
+items/crf_027/amendments.md
+1. Effective 2026-02-20: rate override to 2400 bps for format=ebook, channel=ANY, territories=ANY.
+2. Effective 2026-03-05: exclude channel=retail from royalty-bearing sales.
+3. Effective 2026-03-10: add licensed territory set IT.
+items/crf_028/amendments.md
+1. Effective 2026-01-15: apply a recognized-base multiplier of 80% for format=hardcover, channel=subscription, territories=BR|MX|AR.
+2. Effective 2026-02-01: rate override to 2800 bps for format=ebook, channel=subscription, territories=US|CA.
+3. Effective 2026-03-10: add licensed territory set IE.
+items/crf_029/amendments.md
+1. Effective 2026-02-10: rate override to 1100 bps for format=paperback, channel=subscription, territories=ANY.
+2. Effective 2026-02-15: add licensed territory set NL.
+3. Effective 2026-03-01: promo rows may count at 50% of recognized base for channel=subscription and format=paperback.
+items/crf_030/amendments.md
+1. Effective 2026-01-01: promo rows may count at 50% of recognized base for channel=subscription and format=ANY.
+2. Effective 2026-02-15: apply a recognized-base multiplier of 80% for format=audio, channel=bundle, territories=US|CA.
+3. Effective 2026-02-15: add licensed territory set ES.
+4. Effective 2026-02-20: rate override to 2400 bps for format=paperback, channel=ANY, territories=GB|IE.
+
+2026-05-24T01:47:15.313272Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:47:15.313292Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:47:15.313760Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:47:15.313764Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:47:15.314208Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:47:15.314212Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:47:15.314658Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:47:15.314661Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:47:15.315113Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:47:15.315119Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:47:15.316454Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:47:15.316460Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+codex
+The amendment language is regular enough to parse directly: licensed-territory adds, channel exclusions, promo inclusion multipliers, recognized-base multipliers, and rate overrides. I’m computing from the CSV rows now and will sanity-check against the memo reserve hints.
+exec
+/bin/zsh -lc "python3 - <<'PY'
+import csv,re,json,math
+from pathlib import Path
+from datetime import date
+root=Path('.')
+
+def trunc0(n,d):
+    return n//d if n>=0 else -((-n)//d)
+
+def floor_pct(pct, val):
+    return (pct*val)//100
+
+def parse_set(s):
+    s=s.strip()
+    if s=='(none)': return set()
+    return set(x.strip() for x in s.split(',') if x.strip())
+
+def match_filter(row, fmt, channel, terrs):
+    if fmt"'!='"'ANY' and row['format']"'!=fmt: return False
+    if channel!='"'ANY' and row['channel']"'!=channel: return False
+    if terrs!='"'ANY' and row['territory'] not in terrs.split('|'): return False
+    return True
+
+answers=[]
+debug={}
+for item in sorted((root/'items').iterdir()):
+    if not item.is_dir(): continue
+    rid=item.name
+    rr=(item/'rights_rider.md').read_text()
+    am=(item/'amendments.md').read_text()
+    # parse base
+    eff=re.search(r'Effective window: (\\d{4}-\\d{2}-\\d{2}) through (\\d{4}-\\d{2}-\\d{2})',rr).groups()
+    territories=parse_set(re.search(r'Licensed territories: (.*)',rr).group(1))
+    carve=parse_set(re.search(r'Territory carve-outs: (.*)',rr).group(1))
+    formats=parse_set(re.search(r'Licensed formats: (.*)',rr).group(1))
+    excl=parse_set(re.search(r'Excluded channels at signing: (.*)',rr).group(1))
+    rates={m.group(1):int(m.group(2)) for m in re.finditer(r'- (ebook|audio|paperback|hardcover): (\\d+) bps',rr)}
+    opening=int(re.search(r'Opening unrecouped advance balance: (\\d+) cents',rr).group(1))
+    release=int(re.search(r'Reserve release this quarter: (\\d+) cents',rr).group(1))
+    reserve_pct=int(re.search(r'positive physical royalties: (\\d+)%',rr).group(1))
+    floor_pct_base=int(re.search(r'Discount floor: (\\d+)% of list price',rr).group(1))
+    floor_exempt=parse_set(re.search(r'Discount floor-exempt channels: (.*)',rr).group(1))
+    # amendments list
+    adds=[]; excludes=[]; promos=[]; mults=[]; rateovs=[]
+    for line in am.splitlines():
+        m=re.match(r'\\d+\\. Effective (\\d{4}-\\d{2}-\\d{2}): (.*)',line)
+        if not m: continue
+        d,txt=m.groups()
+        if 'add licensed territory set' in txt:
+            adds.append((d, set(re.search(r'add licensed territory set (.*)\\.',txt).group(1).split('|'))))
+        elif 'exclude channel=' in txt:
+            excludes.append((d, re.search(r'exclude channel=([a-z]+)',txt).group(1)))
+        elif 'promo rows may count at' in txt:
+            mm=re.search(r'promo rows may count at (\\d+)% of recognized base for channel=([A-Z_a-z]+) and format=([A-Z_a-z]+)\\.',txt)
+            promos.append((d,int(mm.group(1)),mm.group(2),mm.group(3)))
+        elif 'recognized-base multiplier' in txt:
+            mm=re.search(r'multiplier of (\\d+)% for format=([A-Z_a-z]+), channel=([A-Z_a-z]+), territories=([A-Z|]+)\\.',txt)
+            mults.append((d,int(mm.group(1)),mm.group(2),mm.group(3),mm.group(4)))
+        elif 'rate override' in txt:
+            mm=re.search(r'rate override to (\\d+) bps for format=([A-Z_a-z]+), channel=([A-Z_a-z]+), territories=([A-Z|]+)\\.',txt)
+            rateovs.append((d,int(mm.group(1)),mm.group(2),mm.group(3),mm.group(4)))
+        else:
+            print('UNPARSED',rid,line)
+    inc_units=0; earned=0; phys_pos=0; rows_dbg=[]
+    for row in csv.DictReader(open(item/'sales_statement.csv')):
+        sd=row['sale_date']
+        units=int(row['units']); gross=int(row['gross_cents']); lp=int(row['list_price_cents']); ba=int(row['bundle_allocated_cents']); promo=row['is_promo']=='1'
+        terrs=set(territories)
+        for d,s in adds:
+            if sd>=d: terrs |= s
+        reasons=[]
+        included=True
+        if not(eff[0] <= sd <= eff[1]): included=False; reasons.append('date')
+        if row['territory'] not in terrs or row['territory'] in carve: included=False; reasons.append('terr')
+        if row['format'] not in formats: included=False; reasons.append('fmt')
+        ex=set(excl)
+        for d,ch in excludes:
+            if sd>=d: ex.add(ch)
+        if row['channel'] in ex: included=False; reasons.append('ch')
+        # promo inclusion and promo multiplier latest applicable
+        promo_mults=[]
+        if promo:
+            for d,p,ch,fmt in promos:
+                if sd>=d and (ch=='ANY' or row['channel']==ch) and (fmt=='ANY' or row['format']==fmt):
+                    promo_mults.append((d,p))
+            if not promo_mults:
+                included=False; reasons.append('promo')
+        if not included:
+            rows_dbg.append((row['row_id'],False,reasons))
+            continue
+        inc_units += units
+        base = ba if row['channel']=='bundle' else gross
+        # floor actual unit price abs gross/units below threshold. avoid units 0 none likely
+        if row['channel'] not in floor_exempt and units"'!=0:
+            # compare abs(gross)/abs(units) < floor_pct_base*lp/100 via integer
+            if abs(gross)*100 < abs(units)*floor_pct_base*lp:
+                per=(floor_pct_base*lp)//100
+                base = (1 if units>=0 else -1) * abs(units) * per
+        # regular recognized-base multiplier: latest applicable? rule says if an amendment applies a base multiplier, multiply. But cumulative? apply all applicable in date order.
+        # Use all applicable non-conflicting (there'"'s at most one likely per row)
+        for d,p,fmt,ch,ters in mults:
+            if sd>=d and match_filter(row,fmt,ch,ters):
+                base = trunc0(base*p,100)
+        if promo:
+            # latest promo permission/multiplier
+            p=sorted(promo_mults)[-1][1]
+            base=trunc0(base*p,100)
+        rate=rates[row['format']]
+        applicable=[]
+        for d,r,fmt,ch,ters in rateovs:
+            if sd>=d and match_filter(row,fmt,ch,ters): applicable.append((d,r))
+        if applicable: rate=sorted(applicable)[-1][1]
+        roy=trunc0(base*rate,10000)
+        earned += roy
+        if row['format'] in ('paperback','hardcover') and roy>0:
+            phys_pos += roy
+        rows_dbg.append((row['row_id'],True,base,rate,roy))
+    withheld=(phys_pos*reserve_pct)//100
+    recoup=min(max(earned,0),opening)
+    payable=max(0, earned+release-withheld-recoup)
+    ans={\"id\":rid,\"answer\":json.dumps({\"included_units\":inc_units,\"earned_royalty_cents\":earned,\"recouped_advance_cents\":recoup,\"payable_cents\":payable},separators=(',',':'))}
+    answers.append(ans)
+    debug[rid]=(ans,withheld,phys_pos,rows_dbg)
+print('\\n'.join(json.dumps(a,separators=(',',':')) for a in answers))
+print('\\nDEBUG crf_001',debug['crf_001'], file=open('/tmp/crf_debug.txt','w'))
+PY" in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_4__solved_by__gpt_5_5
+ succeeded in 0ms:
+{"id":"crf_001","answer":"{\"included_units\":10,\"earned_royalty_cents\":1066,\"recouped_advance_cents\":1066,\"payable_cents\":24421}"}
+{"id":"crf_002","answer":"{\"included_units\":42,\"earned_royalty_cents\":9317,\"recouped_advance_cents\":9317,\"payable_cents\":29647}"}
+{"id":"crf_003","answer":"{\"included_units\":10,\"earned_royalty_cents\":2142,\"recouped_advance_cents\":2142,\"payable_cents\":22508}"}
+{"id":"crf_004","answer":"{\"included_units\":5,\"earned_royalty_cents\":683,\"recouped_advance_cents\":683,\"payable_cents\":10337}"}
+{"id":"crf_005","answer":"{\"included_units\":6,\"earned_royalty_cents\":959,\"recouped_advance_cents\":959,\"payable_cents\":17724}"}
+{"id":"crf_006","answer":"{\"included_units\":38,\"earned_royalty_cents\":7416,\"recouped_advance_cents\":7416,\"payable_cents\":5450}"}
+{"id":"crf_007","answer":"{\"included_units\":49,\"earned_royalty_cents\":9682,\"recouped_advance_cents\":9682,\"payable_cents\":24055}"}
+{"id":"crf_008","answer":"{\"included_units\":3,\"earned_royalty_cents\":-173,\"recouped_advance_cents\":0,\"payable_cents\":13314}"}
+{"id":"crf_009","answer":"{\"included_units\":48,\"earned_royalty_cents\":6000,\"recouped_advance_cents\":6000,\"payable_cents\":27636}"}
+{"id":"crf_010","answer":"{\"included_units\":4,\"earned_royalty_cents\":44,\"recouped_advance_cents\":44,\"payable_cents\":25949}"}
+{"id":"crf_011","answer":"{\"included_units\":0,\"earned_royalty_cents\":0,\"recouped_advance_cents\":0,\"payable_cents\":6503}"}
+{"id":"crf_012","answer":"{\"included_units\":6,\"earned_royalty_cents\":1873,\"recouped_advance_cents\":1873,\"payable_cents\":1900}"}
+{"id":"crf_013","answer":"{\"included_units\":0,\"earned_royalty_cents\":-10,\"recouped_advance_cents\":0,\"payable_cents\":17844}"}
+{"id":"crf_014","answer":"{\"included_units\":5,\"earned_royalty_cents\":2158,\"recouped_advance_cents\":2158,\"payable_cents\":31759}"}
+{"id":"crf_015","answer":"{\"included_units\":0,\"earned_royalty_cents\":0,\"recouped_advance_cents\":0,\"payable_cents\":24958}"}
+{"id":"crf_016","answer":"{\"included_units\":16,\"earned_royalty_cents\":3930,\"recouped_advance_cents\":3930,\"payable_cents\":18714}"}
+{"id":"crf_017","answer":"{\"included_units\":3,\"earned_royalty_cents\":645,\"recouped_advance_cents\":645,\"payable_cents\":17272}"}
+{"id":"crf_018","answer":"{\"included_units\":-37,\"earned_royalty_cents\":-7712,\"recouped_advance_cents\":0,\"payable_cents\":18383}"}
+{"id":"crf_019","answer":"{\"included_units\":23,\"earned_royalty_cents\":6740,\"recouped_advance_cents\":6740,\"payable_cents\":16256}"}
+{"id":"crf_020","answer":"{\"included_units\":21,\"earned_royalty_cents\":3243,\"recouped_advance_cents\":3243,\"payable_cents\":13023}"}
+{"id":"crf_021","answer":"{\"included_units\":20,\"earned_royalty_cents\":3321,\"recouped_advance_cents\":3321,\"payable_cents\":25663}"}
+{"id":"crf_022","answer":"{\"included_units\":30,\"earned_royalty_cents\":4940,\"recouped_advance_cents\":4940,\"payable_cents\":25094}"}
+{"id":"crf_023","answer":"{\"included_units\":11,\"earned_royalty_cents\":2834,\"recouped_advance_cents\":2834,\"payable_cents\":11960}"}
+{"id":"crf_024","answer":"{\"included_units\":26,\"earned_royalty_cents\":7080,\"recouped_advance_cents\":7080,\"payable_cents\":29546}"}
+{"id":"crf_025","answer":"{\"included_units\":0,\"earned_royalty_cents\":0,\"recouped_advance_cents\":0,\"payable_cents\":26749}"}
+{"id":"crf_026","answer":"{\"included_units\":43,\"earned_royalty_cents\":11650,\"recouped_advance_cents\":11650,\"payable_cents\":4567}"}
+{"id":"crf_027","answer":"{\"included_units\":7,\"earned_royalty_cents\":1871,\"recouped_advance_cents\":1871,\"payable_cents\":14287}"}
+{"id":"crf_028","answer":"{\"included_units\":-2,\"earned_royalty_cents\":-807,\"recouped_advance_cents\":0,\"payable_cents\":5261}"}
+{"id":"crf_029","answer":"{\"included_units\":16,\"earned_royalty_cents\":2198,\"recouped_advance_cents\":2198,\"payable_cents\":6749}"}
+{"id":"crf_030","answer":"{\"included_units\":-11,\"earned_royalty_cents\":-3598,\"recouped_advance_cents\":0,\"payable_cents\":0}"}
+
+2026-05-24T01:48:01.518754Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:48:01.518772Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:48:01.519306Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:48:01.519311Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:48:01.519799Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:48:01.519803Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:48:01.520303Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:48:01.520307Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:48:01.520806Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:48:01.520809Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:48:01.522040Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:48:01.522047Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+exec
+/bin/zsh -lc "python3 - <<'PY'
+# Re-run compact compute and compare reserve withheld hints in finance memos.
+import csv,re,math
+from pathlib import Path
+root=Path('.')
+def trunc0(n,d): return n//d if n>=0 else -((-n)//d)
+def parse_set(s):
+    s=s.strip(); return set() if s=='(none)' else set(x.strip() for x in s.split(',') if x.strip())
+def match(row,fmt,ch,ters):
+    return (fmt=='ANY' or row['format']==fmt) and (ch=='ANY' or row['channel']==ch) and (ters=='ANY' or row['territory'] in ters.split('|'))
+for item in sorted((root/'items').iterdir()):
+    rr=(item/'rights_rider.md').read_text(); am=(item/'amendments.md').read_text()
+    eff=re.search(r'Effective window: (\\S+) through (\\S+)',rr).groups(); territories=parse_set(re.search(r'Licensed territories: (.*)',rr).group(1)); carve=parse_set(re.search(r'Territory carve-outs: (.*)',rr).group(1)); formats=parse_set(re.search(r'Licensed formats: (.*)',rr).group(1)); excl=parse_set(re.search(r'Excluded channels at signing: (.*)',rr).group(1)); rates={m.group(1):int(m.group(2)) for m in re.finditer(r'- (ebook|audio|paperback|hardcover): (\\d+) bps',rr)}; reserve_pct=int(re.search(r'positive physical royalties: (\\d+)%',rr).group(1)); floor_pct_base=int(re.search(r'Discount floor: (\\d+)%',rr).group(1)); floor_exempt=parse_set(re.search(r'Discount floor-exempt channels: (.*)',rr).group(1))
+    adds=[]; excludes=[]; promos=[]; mults=[]; rateovs=[]
+    for line in am.splitlines():
+        m=re.match(r'\\d+\\. Effective (\\S+): (.*)',line)
+        if not m: continue
+        d,txt=m.groups()
+        if 'add licensed territory set' in txt: adds.append((d,set(re.search(r'set (.*)\\.',txt).group(1).split('|'))))
+        elif 'exclude channel=' in txt: excludes.append((d,re.search(r'channel=([a-z]+)',txt).group(1)))
+        elif 'promo rows' in txt:
+            mm=re.search(r'at (\\d+)% .* channel=([A-Z_a-z]+) and format=([A-Z_a-z]+)',txt); promos.append((d,int(mm.group(1)),mm.group(2),mm.group(3)))
+        elif 'recognized-base multiplier' in txt:
+            mm=re.search(r'of (\\d+)% for format=([A-Z_a-z]+), channel=([A-Z_a-z]+), territories=([A-Z|]+)',txt); mults.append((d,int(mm.group(1)),mm.group(2),mm.group(3),mm.group(4)))
+        elif 'rate override' in txt:
+            mm=re.search(r'to (\\d+) bps for format=([A-Z_a-z]+), channel=([A-Z_a-z]+), territories=([A-Z|]+)',txt); rateovs.append((d,int(mm.group(1)),mm.group(2),mm.group(3),mm.group(4)))
+    phys=0
+    for row in csv.DictReader(open(item/'sales_statement.csv')):
+        sd=row['sale_date']; units=int(row['units']); gross=int(row['gross_cents']); lp=int(row['list_price_cents']); ba=int(row['bundle_allocated_cents']); promo=row['is_promo']=='1'
+        terrs=set(territories)
+        for d,s in adds:
+            if sd>=d: terrs|=s
+        ex=set(excl)
+        for d,ch in excludes:
+            if sd>=d: ex.add(ch)
+        pms=[(d,p) for d,p,ch,fmt in promos if sd>=d and (ch=='ANY' or row['channel']==ch) and (fmt=='ANY' or row['format']==fmt)]
+        if not(eff[0]<=sd<=eff[1]) or row['territory'] not in terrs or row['territory'] in carve or row['format'] not in formats or row['channel'] in ex or (promo and not pms): continue
+        base=ba if row['channel']=='bundle' else gross
+        if row['channel'] not in floor_exempt and units and abs(gross)*100 < abs(units)*floor_pct_base*lp:
+            base=(1 if units>=0 else -1)*abs(units)*((floor_pct_base*lp)//100)
+        for d,p,fmt,ch,ters in mults:
+            if sd>=d and match(row,fmt,ch,ters): base=trunc0(base*p,100)
+        if promo: base=trunc0(base*sorted(pms)[-1][1],100)
+        rate=rates[row['format']]
+        apps=[(d,r) for d,r,fmt,ch,ters in rateovs if sd>=d and match(row,fmt,ch,ters)]
+        if apps: rate=sorted(apps)[-1][1]
+        roy=trunc0(base*rate,10000)
+        if row['format'] in ('paperback','hardcover') and roy>0: phys+=roy
+    withheld=phys*reserve_pct//100
+    fm=(item/'finance_memo.md').read_text(); hinted=int(re.search(r'withheld amount of (\\d+) cents',fm).group(1))
+    if withheld"'!=hinted: print(item.name, '"'calc',withheld,'hint',hinted)
+PY" in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_4__solved_by__gpt_5_5
+ succeeded in 0ms:
+crf_008 calc 36 hint 136
+crf_022 calc 621 hint 739
+
+2026-05-24T01:48:29.929295Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:48:29.929317Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:48:29.929982Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:48:29.929988Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:48:29.930531Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:48:29.930537Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:48:29.931034Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:48:29.931038Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:48:29.931539Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:48:29.931545Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:48:29.932621Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:48:29.932625Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+codex
+Two reserve-hint checks did not match on the first pass, which is useful: I’m drilling into those rows rather than trusting the first script. The likely issue is around physical-row inclusion or the order of floor/bundle/multiplier handling.
+exec
+/bin/zsh -lc "for id in crf_008 crf_022; do printf '\\n=== "'$id rider ==='"\\n'; sed -n '1,80p' items/"'$id/rights_rider.md; printf '"'\\n=== amendments ===\\n'; sed -n '1,80p' items/"'$id/amendments.md; printf '"'\\n=== finance ===\\n'; sed -n '1,80p' items/"'$id/finance_memo.md; printf '"'\\n=== sales ===\\n'; sed -n '1,80p' items/"'$id/sales_statement.csv; done' in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_4__solved_by__gpt_5_5
+ succeeded in 0ms:
+
+=== $id rider ===
+# Base Rights Rider
+
+Title: Quiet Meridian
+Effective window: 2026-01-01 through 2026-03-31
+Licensed territories: AR, BR, DE, ES, FR, IT, MX, NL
+Territory carve-outs: (none)
+Licensed formats: ebook, hardcover, paperback
+Excluded channels at signing: library
+
+## Base royalty rates
+- ebook: 1800 bps
+- audio: 1800 bps
+- paperback: 1000 bps
+- hardcover: 1300 bps
+
+## Commercial mechanics
+- Opening unrecouped advance balance: 60542 cents
+- Reserve release this quarter: 13523 cents
+- Current-quarter reserve withholding on positive physical royalties: 15%
+- Discount floor: 70% of list price per unit
+- Discount floor-exempt channels: (none)
+- Bundle allocation share for this title: 25% of bundle gross
+
+Interpretation note: all amendments are cumulative; later amendments override earlier terms when they conflict.
+
+=== amendments ===
+# Amendments
+
+1. Effective 2026-01-01: promo rows may count at 25% of recognized base for channel=direct and format=hardcover.
+2. Effective 2026-01-20: add licensed territory set US.
+3. Effective 2026-02-10: rate override to 2800 bps for format=ebook, channel=subscription, territories=GB|IE.
+
+=== finance ===
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 60542 cents.
+- Approved reserve release to add back this quarter: 13523 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 15%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 136 cents once the statement is computed.
+
+=== sales ===
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_008_r01,2026-01-20,DE,bundle,hardcover,4,7496,2499,1874,0,metadata sync row
+crf_008_r02,2026-03-20,IE,retail,audio,-1,-1319,2199,0,0,library batch
+crf_008_r03,2026-02-04,NZ,bundle,hardcover,10,27990,2799,6997,0,standard shipment
+crf_008_r04,2026-02-11,BR,direct,hardcover,-2,-4138,2299,0,0,DSP settlement
+crf_008_r05,2026-01-04,NZ,library,paperback,3,5667,2099,0,0,library batch
+crf_008_r06,2026-01-09,NL,subscription,ebook,1,674,899,0,0,standard shipment
+crf_008_r07,2026-01-23,IE,subscription,ebook,-2,-2998,1499,0,0,standard shipment
+crf_008_r08,2026-03-17,IT,bundle,audio,5,0,1899,0,0,wholesale feed import
+crf_008_r09,2026-03-14,AR,library,ebook,10,11690,1299,0,0,metadata sync row
+crf_008_r10,2026-03-27,AU,direct,hardcover,2,5598,2799,0,0,standard shipment
+
+=== $id rider ===
+# Base Rights Rider
+
+Title: Errata for Wolves
+Effective window: 2026-01-01 through 2026-03-31
+Licensed territories: AU, DE, ES, FR, GB, IE, IT, NL, NZ
+Territory carve-outs: (none)
+Licensed formats: audio, ebook, hardcover, paperback
+Excluded channels at signing: (none)
+
+## Base royalty rates
+- ebook: 2500 bps
+- audio: 1600 bps
+- paperback: 900 bps
+- hardcover: 1300 bps
+
+## Commercial mechanics
+- Opening unrecouped advance balance: 40637 cents
+- Reserve release this quarter: 25715 cents
+- Current-quarter reserve withholding on positive physical royalties: 20%
+- Discount floor: 70% of list price per unit
+- Discount floor-exempt channels: (none)
+- Bundle allocation share for this title: 25% of bundle gross
+
+Interpretation note: all amendments are cumulative; later amendments override earlier terms when they conflict.
+
+=== amendments ===
+# Amendments
+
+1. Effective 2026-01-01: promo rows may count at 50% of recognized base for channel=subscription and format=paperback.
+2. Effective 2026-01-20: add licensed territory set AR.
+3. Effective 2026-02-01: rate override to 1500 bps for format=ebook, channel=retail, territories=ANY.
+4. Effective 2026-03-01: apply a recognized-base multiplier of 60% for format=paperback, channel=subscription, territories=BR|MX|AR.
+
+=== finance ===
+# Finance Memo
+
+- Opening unrecouped advance entering the quarter: 40637 cents.
+- Approved reserve release to add back this quarter: 25715 cents.
+- Current-quarter reserve withholding is computed from positive physical-row earnings at 20%.
+- For audit sanity only: the reserve-withholding base is positive physical earnings, not net earnings, and not total gross revenue.
+- This implies a current-quarter reserve withheld amount of 739 cents once the statement is computed.
+
+=== sales ===
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_022_r01,2026-02-21,AR,library,audio,5,5995,1599,0,0,manual correction row
+crf_022_r02,2026-01-03,ES,subscription,paperback,12,15108,2099,0,0,metadata sync row
+crf_022_r03,2026-02-25,GB,library,ebook,15,14610,1299,0,1,standard shipment
+crf_022_r04,2026-02-26,IT,bundle,paperback,5,8545,1899,2136,0,standard shipment
+crf_022_r05,2026-01-24,GB,direct,ebook,1,809,899,0,0,manual correction row
+crf_022_r06,2026-02-13,AR,direct,audio,-5,-6595,2199,0,0,DSP settlement
+crf_022_r07,2026-02-10,ES,direct,paperback,1,1124,1499,0,0,library batch
+crf_022_r08,2026-03-18,IE,library,audio,-5,-3595,1599,0,0,library batch
+crf_022_r09,2026-01-04,ES,subscription,paperback,1,1899,1899,0,1,DSP settlement
+crf_022_r10,2026-03-03,IE,library,audio,10,14990,2499,0,0,metadata sync row
+crf_022_r11,2026-02-16,US,retail,audio,1,1899,1899,0,0,manual correction row
+crf_022_r12,2026-01-11,DE,library,hardcover,4,8276,2299,0,0,standard shipment
+crf_022_r13,2026-03-25,ES,bundle,hardcover,1,2099,2799,524,0,library batch
+
+2026-05-24T01:48:37.420476Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:48:37.420491Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:48:37.421043Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:48:37.421051Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:48:37.421846Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:48:37.421853Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:48:37.422378Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:48:37.422383Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:48:37.422924Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:48:37.422929Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:48:37.424083Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:48:37.424087Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+codex
+Found it: for bundle rows, the discount floor needs to compare against the allocated recognized base per unit, not the raw bundle gross per unit. That reconciles the reserve hints, so I’m recomputing all answers with that corrected interpretation.
+exec
+/bin/zsh -lc "python3 - <<'PY'
+import csv,re,json
+from pathlib import Path
+root=Path('.')
+def trunc0(n,d): return n//d if n>=0 else -((-n)//d)
+def parse_set(s):
+    s=s.strip(); return set() if s=='(none)' else set(x.strip() for x in s.split(',') if x.strip())
+def match(row,fmt,ch,ters):
+    return (fmt=='ANY' or row['format']==fmt) and (ch=='ANY' or row['channel']==ch) and (ters=='ANY' or row['territory'] in ters.split('|'))
+answers=[]; mism=[]
+for item in sorted((root/'items').iterdir()):
+    rid=item.name; rr=(item/'rights_rider.md').read_text(); am=(item/'amendments.md').read_text(); fm=(item/'finance_memo.md').read_text()
+    eff=re.search(r'Effective window: (\\S+) through (\\S+)',rr).groups(); territories=parse_set(re.search(r'Licensed territories: (.*)',rr).group(1)); carve=parse_set(re.search(r'Territory carve-outs: (.*)',rr).group(1)); formats=parse_set(re.search(r'Licensed formats: (.*)',rr).group(1)); excl=parse_set(re.search(r'Excluded channels at signing: (.*)',rr).group(1)); rates={m.group(1):int(m.group(2)) for m in re.finditer(r'- (ebook|audio|paperback|hardcover): (\\d+) bps',rr)}; opening=int(re.search(r'Opening unrecouped advance balance: (\\d+) cents',rr).group(1)); release=int(re.search(r'Reserve release this quarter: (\\d+) cents',rr).group(1)); reserve_pct=int(re.search(r'positive physical royalties: (\\d+)%',rr).group(1)); floor_pct_base=int(re.search(r'Discount floor: (\\d+)%',rr).group(1)); floor_exempt=parse_set(re.search(r'Discount floor-exempt channels: (.*)',rr).group(1))
+    adds=[]; excludes=[]; promos=[]; mults=[]; rateovs=[]
+    for line in am.splitlines():
+        m=re.match(r'\\d+\\. Effective (\\S+): (.*)',line)
+        if not m: continue
+        d,txt=m.groups()
+        if 'add licensed territory set' in txt: adds.append((d,set(re.search(r'set (.*)\\.',txt).group(1).split('|'))))
+        elif 'exclude channel=' in txt: excludes.append((d,re.search(r'channel=([a-z]+)',txt).group(1)))
+        elif 'promo rows' in txt:
+            mm=re.search(r'at (\\d+)% .* channel=([A-Z_a-z]+) and format=([A-Z_a-z]+)',txt); promos.append((d,int(mm.group(1)),mm.group(2),mm.group(3)))
+        elif 'recognized-base multiplier' in txt:
+            mm=re.search(r'of (\\d+)% for format=([A-Z_a-z]+), channel=([A-Z_a-z]+), territories=([A-Z|]+)',txt); mults.append((d,int(mm.group(1)),mm.group(2),mm.group(3),mm.group(4)))
+        elif 'rate override' in txt:
+            mm=re.search(r'to (\\d+) bps for format=([A-Z_a-z]+), channel=([A-Z_a-z]+), territories=([A-Z|]+)',txt); rateovs.append((d,int(mm.group(1)),mm.group(2),mm.group(3),mm.group(4)))
+    inc=earned=phys=0
+    for row in csv.DictReader(open(item/'sales_statement.csv')):
+        sd=row['sale_date']; units=int(row['units']); gross=int(row['gross_cents']); lp=int(row['list_price_cents']); ba=int(row['bundle_allocated_cents']); promo=row['is_promo']=='1'
+        terrs=set(territories)
+        for d,s in adds:
+            if sd>=d: terrs|=s
+        ex=set(excl)
+        for d,ch in excludes:
+            if sd>=d: ex.add(ch)
+        pms=[(d,p) for d,p,ch,fmt in promos if sd>=d and (ch=='ANY' or row['channel']==ch) and (fmt=='ANY' or row['format']==fmt)]
+        if not(eff[0]<=sd<=eff[1]) or row['territory'] not in terrs or row['territory'] in carve or row['format'] not in formats or row['channel'] in ex or (promo and not pms): continue
+        inc+=units
+        base=ba if row['channel']=='bundle' else gross
+        if row['channel'] not in floor_exempt and units and abs(base)*100 < abs(units)*floor_pct_base*lp:
+            base=(1 if base>=0 else -1)*abs(units)*((floor_pct_base*lp)//100)
+        for d,p,fmt,ch,ters in mults:
+            if sd>=d and match(row,fmt,ch,ters): base=trunc0(base*p,100)
+        if promo: base=trunc0(base*sorted(pms)[-1][1],100)
+        rate=rates[row['format']]
+        apps=[(d,r) for d,r,fmt,ch,ters in rateovs if sd>=d and match(row,fmt,ch,ters)]
+        if apps: rate=sorted(apps)[-1][1]
+        roy=trunc0(base*rate,10000); earned+=roy
+        if row['format'] in ('paperback','hardcover') and roy>0: phys+=roy
+    withheld=phys*reserve_pct//100
+    hint=int(re.search(r'withheld amount of (\\d+) cents',fm).group(1))
+    if withheld"'!=hint: mism.append((rid,withheld,hint))
+    recoup=min(max(earned,0),opening); payable=max(0,earned+release-withheld-recoup)
+    answers.append({"id":rid,"answer":json.dumps({"included_units":inc,"earned_royalty_cents":earned,"recouped_advance_cents":recoup,"payable_cents":payable},separators=('"',',':'))})
+print('MISMATCHES',mism)
+print('\\n'.join(json.dumps(a,separators=(',',':')) for a in answers))
+PY" in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_4__solved_by__gpt_5_5
+ succeeded in 0ms:
+MISMATCHES []
+{"id":"crf_001","answer":"{\"included_units\":10,\"earned_royalty_cents\":1066,\"recouped_advance_cents\":1066,\"payable_cents\":24421}"}
+{"id":"crf_002","answer":"{\"included_units\":42,\"earned_royalty_cents\":9317,\"recouped_advance_cents\":9317,\"payable_cents\":29647}"}
+{"id":"crf_003","answer":"{\"included_units\":10,\"earned_royalty_cents\":2142,\"recouped_advance_cents\":2142,\"payable_cents\":22508}"}
+{"id":"crf_004","answer":"{\"included_units\":5,\"earned_royalty_cents\":683,\"recouped_advance_cents\":683,\"payable_cents\":10337}"}
+{"id":"crf_005","answer":"{\"included_units\":6,\"earned_royalty_cents\":959,\"recouped_advance_cents\":959,\"payable_cents\":17724}"}
+{"id":"crf_006","answer":"{\"included_units\":38,\"earned_royalty_cents\":7416,\"recouped_advance_cents\":7416,\"payable_cents\":5450}"}
+{"id":"crf_007","answer":"{\"included_units\":49,\"earned_royalty_cents\":10604,\"recouped_advance_cents\":10604,\"payable_cents\":24055}"}
+{"id":"crf_008","answer":"{\"included_units\":3,\"earned_royalty_cents\":493,\"recouped_advance_cents\":493,\"payable_cents\":13387}"}
+{"id":"crf_009","answer":"{\"included_units\":48,\"earned_royalty_cents\":6000,\"recouped_advance_cents\":6000,\"payable_cents\":27636}"}
+{"id":"crf_010","answer":"{\"included_units\":4,\"earned_royalty_cents\":44,\"recouped_advance_cents\":44,\"payable_cents\":25949}"}
+{"id":"crf_011","answer":"{\"included_units\":0,\"earned_royalty_cents\":0,\"recouped_advance_cents\":0,\"payable_cents\":6503}"}
+{"id":"crf_012","answer":"{\"included_units\":6,\"earned_royalty_cents\":1873,\"recouped_advance_cents\":1873,\"payable_cents\":1900}"}
+{"id":"crf_013","answer":"{\"included_units\":0,\"earned_royalty_cents\":-10,\"recouped_advance_cents\":0,\"payable_cents\":17844}"}
+{"id":"crf_014","answer":"{\"included_units\":5,\"earned_royalty_cents\":2158,\"recouped_advance_cents\":2158,\"payable_cents\":31759}"}
+{"id":"crf_015","answer":"{\"included_units\":0,\"earned_royalty_cents\":0,\"recouped_advance_cents\":0,\"payable_cents\":24958}"}
+{"id":"crf_016","answer":"{\"included_units\":16,\"earned_royalty_cents\":4330,\"recouped_advance_cents\":4330,\"payable_cents\":18714}"}
+{"id":"crf_017","answer":"{\"included_units\":3,\"earned_royalty_cents\":645,\"recouped_advance_cents\":645,\"payable_cents\":17272}"}
+{"id":"crf_018","answer":"{\"included_units\":-37,\"earned_royalty_cents\":-7436,\"recouped_advance_cents\":0,\"payable_cents\":18659}"}
+{"id":"crf_019","answer":"{\"included_units\":23,\"earned_royalty_cents\":6740,\"recouped_advance_cents\":6740,\"payable_cents\":16256}"}
+{"id":"crf_020","answer":"{\"included_units\":21,\"earned_royalty_cents\":4297,\"recouped_advance_cents\":4297,\"payable_cents\":13023}"}
+{"id":"crf_021","answer":"{\"included_units\":20,\"earned_royalty_cents\":3321,\"recouped_advance_cents\":3321,\"payable_cents\":25663}"}
+{"id":"crf_022","answer":"{\"included_units\":30,\"earned_royalty_cents\":5532,\"recouped_advance_cents\":5532,\"payable_cents\":24976}"}
+{"id":"crf_023","answer":"{\"included_units\":11,\"earned_royalty_cents\":2834,\"recouped_advance_cents\":2834,\"payable_cents\":11960}"}
+{"id":"crf_024","answer":"{\"included_units\":26,\"earned_royalty_cents\":8248,\"recouped_advance_cents\":8248,\"payable_cents\":29546}"}
+{"id":"crf_025","answer":"{\"included_units\":0,\"earned_royalty_cents\":0,\"recouped_advance_cents\":0,\"payable_cents\":26749}"}
+{"id":"crf_026","answer":"{\"included_units\":43,\"earned_royalty_cents\":11650,\"recouped_advance_cents\":11650,\"payable_cents\":4567}"}
+{"id":"crf_027","answer":"{\"included_units\":7,\"earned_royalty_cents\":1871,\"recouped_advance_cents\":1871,\"payable_cents\":14287}"}
+{"id":"crf_028","answer":"{\"included_units\":-2,\"earned_royalty_cents\":-807,\"recouped_advance_cents\":0,\"payable_cents\":5261}"}
+{"id":"crf_029","answer":"{\"included_units\":16,\"earned_royalty_cents\":2198,\"recouped_advance_cents\":2198,\"payable_cents\":6749}"}
+{"id":"crf_030","answer":"{\"included_units\":-11,\"earned_royalty_cents\":-698,\"recouped_advance_cents\":0,\"payable_cents\":2542}"}
+
+2026-05-24T01:49:17.267567Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:49:17.267586Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:49:17.268078Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:49:17.268085Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:49:17.268599Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:49:17.268604Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:49:17.269120Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:49:17.269126Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:49:17.269633Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:49:17.269637Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:49:17.270697Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:49:17.270701Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+codex
+{"id":"crf_001","answer":"{\"included_units\":10,\"earned_royalty_cents\":1066,\"recouped_advance_cents\":1066,\"payable_cents\":24421}"}
+{"id":"crf_002","answer":"{\"included_units\":42,\"earned_royalty_cents\":9317,\"recouped_advance_cents\":9317,\"payable_cents\":29647}"}
+{"id":"crf_003","answer":"{\"included_units\":10,\"earned_royalty_cents\":2142,\"recouped_advance_cents\":2142,\"payable_cents\":22508}"}
+{"id":"crf_004","answer":"{\"included_units\":5,\"earned_royalty_cents\":683,\"recouped_advance_cents\":683,\"payable_cents\":10337}"}
+{"id":"crf_005","answer":"{\"included_units\":6,\"earned_royalty_cents\":959,\"recouped_advance_cents\":959,\"payable_cents\":17724}"}
+{"id":"crf_006","answer":"{\"included_units\":38,\"earned_royalty_cents\":7416,\"recouped_advance_cents\":7416,\"payable_cents\":5450}"}
+{"id":"crf_007","answer":"{\"included_units\":49,\"earned_royalty_cents\":10604,\"recouped_advance_cents\":10604,\"payable_cents\":24055}"}
+{"id":"crf_008","answer":"{\"included_units\":3,\"earned_royalty_cents\":493,\"recouped_advance_cents\":493,\"payable_cents\":13387}"}
+{"id":"crf_009","answer":"{\"included_units\":48,\"earned_royalty_cents\":6000,\"recouped_advance_cents\":6000,\"payable_cents\":27636}"}
+{"id":"crf_010","answer":"{\"included_units\":4,\"earned_royalty_cents\":44,\"recouped_advance_cents\":44,\"payable_cents\":25949}"}
+{"id":"crf_011","answer":"{\"included_units\":0,\"earned_royalty_cents\":0,\"recouped_advance_cents\":0,\"payable_cents\":6503}"}
+{"id":"crf_012","answer":"{\"included_units\":6,\"earned_royalty_cents\":1873,\"recouped_advance_cents\":1873,\"payable_cents\":1900}"}
+{"id":"crf_013","answer":"{\"included_units\":0,\"earned_royalty_cents\":-10,\"recouped_advance_cents\":0,\"payable_cents\":17844}"}
+{"id":"crf_014","answer":"{\"included_units\":5,\"earned_royalty_cents\":2158,\"recouped_advance_cents\":2158,\"payable_cents\":31759}"}
+{"id":"crf_015","answer":"{\"included_units\":0,\"earned_royalty_cents\":0,\"recouped_advance_cents\":0,\"payable_cents\":24958}"}
+{"id":"crf_016","answer":"{\"included_units\":16,\"earned_royalty_cents\":4330,\"recouped_advance_cents\":4330,\"payable_cents\":18714}"}
+{"id":"crf_017","answer":"{\"included_units\":3,\"earned_royalty_cents\":645,\"recouped_advance_cents\":645,\"payable_cents\":17272}"}
+{"id":"crf_018","answer":"{\"included_units\":-37,\"earned_royalty_cents\":-7436,\"recouped_advance_cents\":0,\"payable_cents\":18659}"}
+{"id":"crf_019","answer":"{\"included_units\":23,\"earned_royalty_cents\":6740,\"recouped_advance_cents\":6740,\"payable_cents\":16256}"}
+{"id":"crf_020","answer":"{\"included_units\":21,\"earned_royalty_cents\":4297,\"recouped_advance_cents\":4297,\"payable_cents\":13023}"}
+{"id":"crf_021","answer":"{\"included_units\":20,\"earned_royalty_cents\":3321,\"recouped_advance_cents\":3321,\"payable_cents\":25663}"}
+{"id":"crf_022","answer":"{\"included_units\":30,\"earned_royalty_cents\":5532,\"recouped_advance_cents\":5532,\"payable_cents\":24976}"}
+{"id":"crf_023","answer":"{\"included_units\":11,\"earned_royalty_cents\":2834,\"recouped_advance_cents\":2834,\"payable_cents\":11960}"}
+{"id":"crf_024","answer":"{\"included_units\":26,\"earned_royalty_cents\":8248,\"recouped_advance_cents\":8248,\"payable_cents\":29546}"}
+{"id":"crf_025","answer":"{\"included_units\":0,\"earned_royalty_cents\":0,\"recouped_advance_cents\":0,\"payable_cents\":26749}"}
+{"id":"crf_026","answer":"{\"included_units\":43,\"earned_royalty_cents\":11650,\"recouped_advance_cents\":11650,\"payable_cents\":4567}"}
+{"id":"crf_027","answer":"{\"included_units\":7,\"earned_royalty_cents\":1871,\"recouped_advance_cents\":1871,\"payable_cents\":14287}"}
+{"id":"crf_028","answer":"{\"included_units\":-2,\"earned_royalty_cents\":-807,\"recouped_advance_cents\":0,\"payable_cents\":5261}"}
+{"id":"crf_029","answer":"{\"included_units\":16,\"earned_royalty_cents\":2198,\"recouped_advance_cents\":2198,\"payable_cents\":6749}"}
+{"id":"crf_030","answer":"{\"included_units\":-11,\"earned_royalty_cents\":-698,\"recouped_advance_cents\":0,\"payable_cents\":2542}"}
+tokens used
+71,760

@@ -1,0 +1,5 @@
+- Implemented new benchmark package: `Service Credit Forensics (SCF) v1` (`benchmark_spec.json`, `README.md`, `generator.py`, `verifier.py`, `scorer.py`, `validation_report.md`, `failure_modes.md`).
+- Generated the required 30-item sample with the strict CLI (`gold_private_sample.jsonl`, `solver_bundle/` with `SOLVER_MANIFEST.json`, `items_private_sample.jsonl`, and all per-item evidence assets).
+- Verified integrity: `verifier.py` confirms item/gold id match and that all item asset paths exist and stay inside `solver_bundle/`.
+- Verified scoring: gold-copy self-score produces `30/30` (`score_report_goldcopy_v3.json`); a weak “all zeros” baseline produces `0/30` (`score_report_baseline_zero_v2.json`).
+- Solver bundle leakage check: `solver_bundle/` contains only the manifest, packet README, public policy, item index, and per-item evidence (no gold or code).

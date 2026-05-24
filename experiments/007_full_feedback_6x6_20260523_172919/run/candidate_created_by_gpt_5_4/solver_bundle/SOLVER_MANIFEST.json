@@ -1,0 +1,13 @@
+{
+  "benchmark": "Catalog Royalty Forensics (CRF) v1",
+  "sample_count": 30,
+  "entrypoint": "README.md",
+  "items_file": "items_private_sample.jsonl",
+  "visible_assets": [
+    "public_rulebook.md",
+    "items/*/rights_rider.md",
+    "items/*/amendments.md",
+    "items/*/finance_memo.md",
+    "items/*/sales_statement.csv"
+  ]
+}

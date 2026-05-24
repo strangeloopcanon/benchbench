@@ -1,0 +1,49 @@
+# Monitoring Log Export (Public)
+
+tz_hint: America/Los_Angeles (UTC-07:00 during this incident)
+clock_drift_seconds: -120
+
+Format variants (one per line):
+1) <timestamp> <region> STATE <state>
+2) <timestamp> <region> METRIC {"p95_ms": <int>, "error_rate_pct": <int>}
+
+States: OK | DEGRADED | SEVERE_DEGRADED | UNAVAILABLE
+
+2026-03-13T06:30:00Z eu-central METRIC {"p95_ms": 326, "error_rate_pct": 0}
+2026-03-13T06:30:00Z us-east METRIC {"p95_ms": 423, "error_rate_pct": 7}
+2026-03-13T06:30:00Z us-west STATE OK
+2026-03-13T06:32:21Z eu-central METRIC {"p95_ms": 1193, "error_rate_pct": 18}
+2026-03-13T06:32:21Z us-east METRIC {"p95_ms": 1700, "error_rate_pct": 71}
+2026-03-13T06:32:21Z us-west STATE OK
+2026-03-13T07:12:07Z eu-central METRIC p95_ms=907 error_rate_pct=11
+2026-03-13T07:12:07Z us-east METRIC p95_ms=1076 error_rate_pct=4
+2026-03-13T07:12:07Z us-west STATE OK
+2026-03-13T07:14:20Z eu-central METRIC p95_ms=401 error_rate_pct=2
+2026-03-13T07:14:20Z us-east METRIC p95_ms=337 error_rate_pct=1
+2026-03-13T07:14:20Z us-west STATE OK
+2026-03-13T08:28:00Z eu-central STATE DEGRADED
+2026-03-13T08:28:00Z us-east STATE DEGRADED
+2026-03-13T08:28:00Z us-west METRIC {"p95_ms": 261, "error_rate_pct": 5}
+2026-03-13T01:29:34-07:00 eu-central STATE UNAVAILABLE
+2026-03-13T01:29:34-07:00 us-east STATE UNAVAILABLE
+2026-03-13T01:29:34-07:00 us-west METRIC {"p95_ms": 532, "error_rate_pct": 3}
+2026-03-13T01:53:44-07:00 eu-central STATE DEGRADED
+2026-03-13T01:53:44-07:00 us-east STATE DEGRADED
+2026-03-13T01:53:44-07:00 us-west METRIC {"p95_ms": 259, "error_rate_pct": 6}
+2026-03-13T01:55:44-07:00 eu-central STATE OK
+2026-03-13T01:55:44-07:00 us-east STATE OK
+2026-03-13T01:55:44-07:00 us-west METRIC p95_ms=247 error_rate_pct=2
+2026-03-14T12:36:00Z eu-central METRIC {"p95_ms": 407, "error_rate_pct": 3}
+2026-03-14T12:36:00Z us-east STATE OK
+2026-03-14T12:36:00Z us-west STATE OK
+2026-03-14T05:37:13-07:00 eu-central METRIC {"p95_ms": 1238, "error_rate_pct": 56}
+2026-03-14T05:37:13-07:00 us-east STATE OK
+2026-03-14T05:37:13-07:00 us-west STATE OK
+2026-03-14T13:16:49Z eu-central METRIC p95_ms=1069 error_rate_pct=3
+2026-03-14T13:16:49Z us-east STATE OK
+2026-03-14T13:16:49Z us-west STATE OK
+2026-03-14T13:20:14Z eu-central METRIC {"p95_ms": 446, "error_rate_pct": 0}
+2026-03-14T13:20:14Z us-east STATE OK
+2026-03-14T13:20:14Z us-west STATE OK
+2026-03-14T17:06:00Z eu-central METRIC p95_ms=486 error_rate_pct=9
+2026-03-14T12:35:00-07:00 us-east METRIC {"p95_ms": 282, "error_rate_pct": 3}

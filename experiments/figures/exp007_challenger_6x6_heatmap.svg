@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1110" height="416" viewBox="0 0 1110 416">
+<style>text{font-family:Arial,Helvetica,sans-serif} .small{font-size:12px;fill:#444} .head{font-size:12px;font-weight:700;fill:#333} .cell{font-size:13px;font-weight:700;text-anchor:middle;dominant-baseline:middle} .row{font-size:12px;fill:#111} .bench{font-size:11px;fill:#444}</style>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="18" y="28" font-size="20" font-weight="700" fill="#111">Experiment 007 full-feedback 6x6 challenger grid</text>
+<text x="18" y="50" class="small">All six creator models saw prior failures. All six solvers then attacked each new candidate.</text>
+<text x="18" y="72" class="small">Exact-match correct / 30. Blue = low nonzero; red = saturated/easy; gray = zero/audit.</text>
+<text x="18" y="92" class="head">creator</text>
+<text x="228" y="92" class="head">benchmark</text>
+<text x="510.0" y="78" class="head" text-anchor="middle">GPT-5.2</text>
+<text x="614.0" y="78" class="head" text-anchor="middle">GPT-5.4</text>
+<text x="718.0" y="78" class="head" text-anchor="middle">GPT-5.5</text>
+<text x="822.0" y="78" class="head" text-anchor="middle">Gemini 3.1 Pro</text>
+<text x="926.0" y="78" class="head" text-anchor="middle">Gemini 3.5 Flash</text>
+<text x="1030.0" y="78" class="head" text-anchor="middle">Claude Opus</text>
+<line x1="18" x2="1092" y1="106" y2="106" stroke="#eeeeee"/>
+<text x="18" y="130" class="row">GPT-5.2</text>
+<text x="228" y="130" class="bench">Service Credit Forensics</text>
+<rect x="462" y="111" width="96" height="28" rx="2" fill="#d9d9d9"/>
+<text x="510.0" y="126.0" class="cell" fill="#111111">0/30</text>
+<rect x="566" y="111" width="96" height="28" rx="2" fill="#d9d9d9"/>
+<text x="614.0" y="126.0" class="cell" fill="#111111">0/30</text>
+<rect x="670" y="111" width="96" height="28" rx="2" fill="#d9d9d9"/>
+<text x="718.0" y="126.0" class="cell" fill="#111111">0/30</text>
+<rect x="774" y="111" width="96" height="28" rx="2" fill="#d9d9d9"/>
+<text x="822.0" y="126.0" class="cell" fill="#111111">0/30</text>
+<rect x="878" y="111" width="96" height="28" rx="2" fill="#d9d9d9"/>
+<text x="926.0" y="126.0" class="cell" fill="#111111">0/30</text>
+<rect x="982" y="111" width="96" height="28" rx="2" fill="#d9d9d9"/>
+<text x="1030.0" y="126.0" class="cell" fill="#111111">0/30</text>
+<line x1="18" x2="1092" y1="144" y2="144" stroke="#eeeeee"/>
+<text x="18" y="168" class="row">GPT-5.4</text>
+<text x="228" y="168" class="bench">Catalog Royalty Forensics</text>
+<rect x="462" y="149" width="96" height="28" rx="2" fill="#f2c078"/>
+<text x="510.0" y="164.0" class="cell" fill="#111111">27/30</text>
+<rect x="566" y="149" width="96" height="28" rx="2" fill="#d96b6b"/>
+<text x="614.0" y="164.0" class="cell" fill="#ffffff">30/30</text>
+<rect x="670" y="149" width="96" height="28" rx="2" fill="#f2c078"/>
+<text x="718.0" y="164.0" class="cell" fill="#111111">27/30</text>
+<rect x="774" y="149" width="96" height="28" rx="2" fill="#f2c078"/>
+<text x="822.0" y="164.0" class="cell" fill="#111111">25/30</text>
+<rect x="878" y="149" width="96" height="28" rx="2" fill="#f2c078"/>
+<text x="926.0" y="164.0" class="cell" fill="#111111">27/30</text>
+<rect x="982" y="149" width="96" height="28" rx="2" fill="#f2c078"/>
+<text x="1030.0" y="164.0" class="cell" fill="#111111">25/30</text>
+<line x1="18" x2="1092" y1="182" y2="182" stroke="#eeeeee"/>
+<text x="18" y="206" class="row">GPT-5.5</text>
+<text x="228" y="206" class="bench">Prior Authorization Forensics</text>
+<rect x="462" y="187" width="96" height="28" rx="2" fill="#f2c078"/>
+<text x="510.0" y="202.0" class="cell" fill="#111111">25/30</text>
+<rect x="566" y="187" width="96" height="28" rx="2" fill="#f2c078"/>
+<text x="614.0" y="202.0" class="cell" fill="#111111">24/30</text>
+<rect x="670" y="187" width="96" height="28" rx="2" fill="#f2c078"/>
+<text x="718.0" y="202.0" class="cell" fill="#111111">24/30</text>
+<rect x="774" y="187" width="96" height="28" rx="2" fill="#f2c078"/>
+<text x="822.0" y="202.0" class="cell" fill="#111111">23/30</text>
+<rect x="878" y="187" width="96" height="28" rx="2" fill="#f2c078"/>
+<text x="926.0" y="202.0" class="cell" fill="#111111">24/30</text>
+<rect x="982" y="187" width="96" height="28" rx="2" fill="#f2c078"/>
+<text x="1030.0" y="202.0" class="cell" fill="#111111">24/30</text>
+<line x1="18" x2="1092" y1="220" y2="220" stroke="#eeeeee"/>
+<text x="18" y="244" class="row">Gemini 3.1 Pro</text>
+<text x="228" y="244" class="bench">Commercial Lease CAM Reconciliation</text>
+<rect x="462" y="225" width="96" height="28" rx="2" fill="#8ecae6"/>
+<text x="510.0" y="240.0" class="cell" fill="#111111">1/30</text>
+<rect x="566" y="225" width="96" height="28" rx="2" fill="#f2c078"/>
+<text x="614.0" y="240.0" class="cell" fill="#111111">26/30</text>
+<rect x="670" y="225" width="96" height="28" rx="2" fill="#f2c078"/>
+<text x="718.0" y="240.0" class="cell" fill="#111111">26/30</text>
+<rect x="774" y="225" width="96" height="28" rx="2" fill="#f2c078"/>
+<text x="822.0" y="240.0" class="cell" fill="#111111">16/30</text>
+<rect x="878" y="225" width="96" height="28" rx="2" fill="#f2c078"/>
+<text x="926.0" y="240.0" class="cell" fill="#111111">18/30</text>
+<rect x="982" y="225" width="96" height="28" rx="2" fill="#f2c078"/>
+<text x="1030.0" y="240.0" class="cell" fill="#111111">26/30</text>
+<line x1="18" x2="1092" y1="258" y2="258" stroke="#eeeeee"/>
+<text x="18" y="282" class="row">Gemini 3.5 Flash</text>
+<text x="228" y="282" class="bench">Maritime Freight &amp; Customs Audit</text>
+<rect x="462" y="263" width="96" height="28" rx="2" fill="#8ecae6"/>
+<text x="510.0" y="278.0" class="cell" fill="#111111">4/30</text>
+<rect x="566" y="263" width="96" height="28" rx="2" fill="#f2c078"/>
+<text x="614.0" y="278.0" class="cell" fill="#111111">23/30</text>
+<rect x="670" y="263" width="96" height="28" rx="2" fill="#f2c078"/>
+<text x="718.0" y="278.0" class="cell" fill="#111111">15/30</text>
+<rect x="774" y="263" width="96" height="28" rx="2" fill="#f2c078"/>
+<text x="822.0" y="278.0" class="cell" fill="#111111">21/30</text>
+<rect x="878" y="263" width="96" height="28" rx="2" fill="#f2c078"/>
+<text x="926.0" y="278.0" class="cell" fill="#111111">25/30</text>
+<rect x="982" y="263" width="96" height="28" rx="2" fill="#f2c078"/>
+<text x="1030.0" y="278.0" class="cell" fill="#111111">25/30</text>
+<line x1="18" x2="1092" y1="296" y2="296" stroke="#eeeeee"/>
+<text x="18" y="320" class="row">Claude Opus</text>
+<text x="228" y="320" class="bench">Construction Progress Payment Certification</text>
+<rect x="462" y="301" width="96" height="28" rx="2" fill="#d96b6b"/>
+<text x="510.0" y="316.0" class="cell" fill="#ffffff">30/30</text>
+<rect x="566" y="301" width="96" height="28" rx="2" fill="#d96b6b"/>
+<text x="614.0" y="316.0" class="cell" fill="#ffffff">30/30</text>
+<rect x="670" y="301" width="96" height="28" rx="2" fill="#d96b6b"/>
+<text x="718.0" y="316.0" class="cell" fill="#ffffff">30/30</text>
+<rect x="774" y="301" width="96" height="28" rx="2" fill="#d96b6b"/>
+<text x="822.0" y="316.0" class="cell" fill="#ffffff">30/30</text>
+<rect x="878" y="301" width="96" height="28" rx="2" fill="#f2c078"/>
+<text x="926.0" y="316.0" class="cell" fill="#111111">29/30</text>
+<rect x="982" y="301" width="96" height="28" rx="2" fill="#d96b6b"/>
+<text x="1030.0" y="316.0" class="cell" fill="#ffffff">30/30</text>
+<rect x="18" y="368" width="18" height="18" fill="#8ecae6" stroke="#ddd"/>
+<text x="42" y="382" class="small">1-14/30</text>
+<rect x="124" y="368" width="18" height="18" fill="#f2c078" stroke="#ddd"/>
+<text x="148" y="382" class="small">15-29/30</text>
+<rect x="230" y="368" width="18" height="18" fill="#d96b6b" stroke="#ddd"/>
+<text x="254" y="382" class="small">30/30</text>
+<rect x="336" y="368" width="18" height="18" fill="#d9d9d9" stroke="#ddd"/>
+<text x="360" y="382" class="small">0/30</text>
+<rect x="442" y="368" width="18" height="18" fill="#f6f6f6" stroke="#ddd"/>
+<text x="466" y="382" class="small">skip/NA</text>
+</svg>

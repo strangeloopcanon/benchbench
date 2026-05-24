@@ -1,0 +1,29 @@
+From: Management
+To: Accounting
+Date: Day 333
+Subject: Reclassification
+The 168020 cents for 'Security patrol 231' (Day 328) is actually a capital expense.
+
+From: Maintenance
+To: Accounting
+Date: Day 196
+Subject: Direct Charge
+Accounting, ensure that Tenant G pays the full 278948 cents for the Day 194 'Common area utilities 688'. It's not a shared expense.
+
+From: Management
+To: Accounting
+Date: Day 184
+Subject: Reclassification
+The 73131 cents for 'HVAC filter replacement 140' (Day 179) is actually a capital expense.
+
+From: Leasing
+To: Accounting
+Date: Day 62
+Subject: Expansion
+Effective Day 64, Tenant G added Suite 102 to their lease for the remainder of the year.
+
+From: Maintenance
+To: Accounting
+Date: Day 22
+Subject: Direct Charge
+Please bill the 'Security patrol 647' (Day 20) directly to Tenant C. They are responsible for it. Do not put it in the main OpEx pool.

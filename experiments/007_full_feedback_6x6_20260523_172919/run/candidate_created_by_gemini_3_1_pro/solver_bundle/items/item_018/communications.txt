@@ -1,0 +1,41 @@
+From: Maintenance
+To: Accounting
+Date: Day 282
+Subject: Direct Charge
+Regarding the 170267 cents spent on 'Security patrol 650' on Day 280: Tenant A is at fault. This is a direct charge to them.
+
+From: Maintenance
+To: Accounting
+Date: Day 5
+Subject: Direct Charge
+Accounting, ensure that Tenant B pays the full 75409 cents for the Day 3 'HVAC filter replacement 469'. It's not a shared expense.
+
+From: Management
+To: Accounting
+Date: Day 142
+Subject: Reclassification
+We decided to capitalize the 'HVAC filter replacement 114' cost from Day 137. It is excluded.
+
+From: Property Manager
+To: Accounting
+Date: Day 10
+Subject: CAM Cap
+Do not charge Tenant D more than their CAM cap of 442 cents per sq ft per year.
+
+From: Maintenance
+To: Accounting
+Date: Day 360
+Subject: Direct Charge
+Please bill the 'Routine landscaping 673' (Day 358) directly to Tenant B. They are responsible for it. Do not put it in the main OpEx pool.
+
+From: Leasing
+To: Accounting
+Date: Day 150
+Subject: Expansion
+Update the rent roll: Tenant B took over Suite 104 on Day 152.
+
+From: Maintenance
+To: Accounting
+Date: Day 49
+Subject: Direct Charge
+Please bill the 'Security patrol 891' (Day 47) directly to Tenant D. They are responsible for it. Do not put it in the main OpEx pool.

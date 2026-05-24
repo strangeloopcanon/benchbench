@@ -1,0 +1,28 @@
+{
+  "name": "Service Credit Forensics (SCF) v1",
+  "version": "1.0.0",
+  "description": "Cross-document SLA/service-credit forensics: determine eligible downtime and owed service credits from messy incident evidence (logs, email, status updates) under a public SLA policy and customer-specific contract riders.",
+  "task_type": "forensic_reasoning",
+  "answer_format": "json",
+  "answer_schema_public": {
+    "eligible_downtime_minutes": "integer (non-negative)",
+    "sla_breached": "boolean",
+    "credit_percent": "integer (0..100)",
+    "credit_usd_cents": "integer (>=0)"
+  },
+  "sample_count_default": 30,
+  "closest_existing_evals": [
+    {
+      "name": "Reimbursement Forensics (BenchBench)",
+      "why_close": "both require reconciling messy, multi-document evidence into exact numeric outputs under explicit policy rules",
+      "why_not_duplicate": "domain is SLA credits and incident timelines; includes time arithmetic, exclusions, multi-region aggregation, and contract riders rather than receipts/FX/per-diem policy"
+    },
+    {
+      "name": "SWE-bench (family)",
+      "why_close": "shared flavor of real-world artifact interpretation",
+      "why_not_duplicate": "no code fixing; answers are numeric/boolean computed from provided evidence, graded deterministically"
+    }
+  ],
+  "determinism_notes": "All items are procedurally generated from a seed; gold is computed by the same rules described in the solver packet.",
+  "license": "CC0-1.0"
+}

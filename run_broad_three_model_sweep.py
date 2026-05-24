@@ -34,7 +34,9 @@ PYTHON = shutil.which("python") or shutil.which("python3") or "python3"
 
 DEFAULT_MODELS = ["gpt-5.2", "gpt-5.4", "gpt-5.5"]
 MODELS = DEFAULT_MODELS[:]
+CREATOR_MODELS = DEFAULT_MODELS[:]
 MODEL_SPECS = [parse_model_spec(model) for model in MODELS]
+CREATOR_SPECS = [parse_model_spec(model) for model in CREATOR_MODELS]
 CREATOR_EFFORT = "low"
 SOLVER_EFFORT = "low"
 CREATOR_TIMEOUT_SECONDS = 2400
@@ -647,7 +649,7 @@ def solver_grid_lines(candidate_dirs: dict[str, Path]) -> list[str]:
     solver_headers = [f"solver {spec.display_name}" for spec in MODEL_SPECS]
     lines.append("| creator | benchmark | " + " | ".join(solver_headers) + " | max score | status |")
     lines.append("|---|---|" + "|".join("---:" for _ in MODEL_SPECS) + "|---:|---|")
-    for creator_spec in MODEL_SPECS:
+    for creator_spec in CREATOR_SPECS:
         cdir = candidate_dirs[creator_spec.name]
         cells, _scores, max_score, status = solver_score_cells(cdir)
         lines.append(
@@ -679,7 +681,7 @@ def write_feedback_for_next_sweep(validations: dict[str, dict[str, Any]], candid
             "",
         ]
     )
-    for spec in MODEL_SPECS:
+    for spec in CREATOR_SPECS:
         lines.extend(candidate_card_lines(spec, candidate_dirs[spec.name], validations.get(spec.name, {})))
     lines.extend(
         [
@@ -706,19 +708,19 @@ def write_summary(manifest: list[dict[str, Any]], validations: dict[str, dict[st
         lines.append("This run used the broad creator prompt plus a prior-run failure report: creators saw benchmark landscape notes, prior pilot outcomes, and feedback on how the previous candidates broke.")
     lines.append("")
     lines.append(f"Run root: `{RUN_ROOT}`")
-    lines.append(f"Creator models: `{', '.join(spec.name for spec in MODEL_SPECS)}`")
+    lines.append(f"Creator models: `{', '.join(spec.name for spec in CREATOR_SPECS)}`")
     lines.append(f"Solver models: `{', '.join(spec.name for spec in MODEL_SPECS)}`")
     lines.append(f"Creator effort: `{CREATOR_EFFORT}`")
     lines.append(f"Solver effort: `{SOLVER_EFFORT}`")
     if CREATOR_FEEDBACK_CONTEXT_PATH is not None:
         lines.append(f"Creator feedback context: `{CREATOR_FEEDBACK_CONTEXT_PATH}`")
-    if any(spec.provider == "antigravity" for spec in MODEL_SPECS):
+    if any(spec.provider == "antigravity" for spec in [*CREATOR_SPECS, *MODEL_SPECS]):
         lines.append("")
         lines.append("Antigravity rows use the current selected `agy` model and are checked against the selected-model label in the CLI log when a specific Gemini label is requested.")
     lines.append("")
     lines.append("## Benchmark Cards")
     lines.append("")
-    for spec in MODEL_SPECS:
+    for spec in CREATOR_SPECS:
         lines.extend(candidate_card_lines(spec, candidate_dirs[spec.name], validations.get(spec.name, {})))
 
     lines.append("## Solver Grid")
@@ -765,18 +767,39 @@ def write_manifest(manifest: list[dict[str, Any]]) -> None:
     (RUN_ROOT / "manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
+def resolve_model_lists(
+    models: list[str] | None,
+    creator_models: list[str] | None,
+    solver_models: list[str] | None,
+) -> tuple[list[str], list[str]]:
+    base_models = models or DEFAULT_MODELS
+    return creator_models or base_models, solver_models or base_models
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run a broad BenchBench creator/solver sweep.")
     parser.add_argument(
         "--models",
         nargs="+",
-        default=DEFAULT_MODELS,
+        default=None,
         help=(
-            "Creator and solver model specs. Unprefixed specs use Codex. "
+            "Creator and solver model specs when separate panels are not supplied. Unprefixed specs use Codex. "
             "Use agy:gemini-3.5-flash-high, agy:gemini-3.1-pro, or agy:current for Antigravity. "
             "Use claude:sonnet or claude:opus for Claude Code. "
             "Use cursor:claude-opus for Claude Opus through Cursor Agent."
         ),
+    )
+    parser.add_argument(
+        "--creator-models",
+        nargs="+",
+        default=None,
+        help="Creator model specs. Use this for challenger sweeps where frozen incumbents are not rerun as creators.",
+    )
+    parser.add_argument(
+        "--solver-models",
+        nargs="+",
+        default=None,
+        help="Solver model specs. Defaults to --models, or the default model panel when --models is omitted.",
     )
     parser.add_argument("--run-root", type=Path, default=None, help="Optional output experiment directory.")
     parser.add_argument("--creator-effort", default=CREATOR_EFFORT)
@@ -793,10 +816,11 @@ def parse_args() -> argparse.Namespace:
 
 
 def main() -> None:
-    global CREATOR_EFFORT, SOLVER_EFFORT, CREATOR_TIMEOUT_SECONDS, SOLVER_TIMEOUT_SECONDS, MODELS, MODEL_SPECS, RUN_ROOT, RUN_DIR, CREATOR_FEEDBACK_CONTEXT, CREATOR_FEEDBACK_CONTEXT_PATH
+    global CREATOR_EFFORT, SOLVER_EFFORT, CREATOR_TIMEOUT_SECONDS, SOLVER_TIMEOUT_SECONDS, MODELS, CREATOR_MODELS, MODEL_SPECS, CREATOR_SPECS, RUN_ROOT, RUN_DIR, CREATOR_FEEDBACK_CONTEXT, CREATOR_FEEDBACK_CONTEXT_PATH
 
     args = parse_args()
-    MODELS = args.models
+    CREATOR_MODELS, MODELS = resolve_model_lists(args.models, args.creator_models, args.solver_models)
+    CREATOR_SPECS = [parse_model_spec(model) for model in CREATOR_MODELS]
     MODEL_SPECS = [parse_model_spec(model) for model in MODELS]
     CREATOR_EFFORT = args.creator_effort
     SOLVER_EFFORT = args.solver_effort
@@ -814,7 +838,7 @@ def main() -> None:
     validations: dict[str, dict[str, Any]] = {}
     candidate_dirs: dict[str, Path] = {}
 
-    for spec in MODEL_SPECS:
+    for spec in CREATOR_SPECS:
         slug = safe_name(spec.name)
         candidate_dir = RUN_DIR / f"candidate_created_by_{slug}"
         candidate_dir.mkdir(parents=True, exist_ok=True)
@@ -874,7 +898,7 @@ def main() -> None:
             validations[spec.name] = validation
             print(f"[validate:after_repair] {spec.name} valid={validation['valid']}", flush=True)
 
-    for creator_spec in MODEL_SPECS:
+    for creator_spec in CREATOR_SPECS:
         candidate_dir = candidate_dirs[creator_spec.name]
         if not validations.get(creator_spec.name, {}).get("valid"):
             continue

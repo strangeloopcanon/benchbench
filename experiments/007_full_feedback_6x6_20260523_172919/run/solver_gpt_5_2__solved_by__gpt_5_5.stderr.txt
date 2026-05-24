@@ -1,0 +1,1239 @@
+2026-05-24T01:19:29.423827Z ERROR codex_models_manager::manager: failed to refresh available models: timeout waiting for child process to exit
+2026-05-24T01:19:29.452307Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:29.476398Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+OpenAI Codex v0.130.0
+--------
+workdir: /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_2__solved_by__gpt_5_5
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR, /Users/rohit/.codex/memories] (network access enabled)
+reasoning effort: low
+reasoning summaries: none
+session id: 019e5790-d290-78a2-ac8f-81d8d156e554
+--------
+user
+
+You are gpt-5.5+Codex acting as a blind BenchBench solver.
+
+You are in an isolated solver bundle at:
+
+/Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_2__solved_by__gpt_5_5
+
+Use that exact directory as the working directory for every shell command and
+file read/write. Some agent CLIs may open a global scratch directory by
+default; ignore that scratch directory and work only in the solver bundle
+above.
+
+You may use any local computation, shell scripts, installed packages, OCR,
+image processing, code, and internet access if useful. Try your best to solve
+the benchmark.
+
+The only forbidden action is inspecting parent directories or files outside this
+isolated solver bundle. Do not look for gold files, generators, scorers, private
+traces, or answer keys outside this directory.
+
+Read every visible file in this bundle and solve every item.
+
+Return only JSONL, one object per item, with exactly:
+{"id":"...","answer":"..."}
+
+2026-05-24T01:19:29.498802Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+deprecated: `[features].codex_hooks` is deprecated. Use `[features].hooks` instead.
+Enable it with `--enable hooks` or `[features].hooks` in config.toml. See https://developers.openai.com/codex/config-basic#feature-flags for details.
+2026-05-24T01:19:29.522289Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:29.545010Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:29.568734Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:29.581216Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:29.602317Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:29.625900Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:29.647163Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:29.670505Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:29.693850Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:29.717452Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:29.740217Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:29.764443Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:29.788219Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:29.812153Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:29.835961Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:29.859838Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:29.881863Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:29.906069Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:29.929935Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:29.952215Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:29.976002Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:29.998574Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:30.022544Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:30.046418Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:30.070391Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:30.094127Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:30.117839Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:30.141657Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:30.165209Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:30.189427Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:30.213313Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:30.237043Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:30.260119Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:30.281855Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-05-24T01:19:34.209520Z  WARN codex_core_plugins::manager: failed to warm featured plugin ids cache error=failed to send remote plugin sync request to https://chatgpt.com/backend-api/plugins/featured: error sending request for url (https://chatgpt.com/backend-api/plugins/featured?platform=codex)
+2026-05-24T01:19:39.496207Z  WARN codex_analytics::client: failed to send events request: error sending request for url (https://chatgpt.com/backend-api/codex/analytics-events/events)
+2026-05-24T01:20:05.663983Z  WARN codex_core::session::turn: failed to load discoverable tool suggestions: failed to send request: error sending request for url (https://chatgpt.com/backend-api//connectors/directory/list?external_logos=true): client error (Connect): connection closed via error
+2026-05-24T01:20:05.723220Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when Client(HttpRequest(HttpRequest("http/request failed: error sending request for url (https://chatgpt.com/backend-api/wham/apps)")))
+2026-05-24T01:20:20.724654Z  WARN codex_core::session::turn: stream disconnected - retrying sampling request (1/5 in 180ms)...
+2026-05-24T01:20:35.908707Z  WARN codex_core::session::turn: stream disconnected - retrying sampling request (2/5 in 379ms)...
+ERROR: Reconnecting... 2/5
+2026-05-24T01:20:51.292239Z  WARN codex_core::session::turn: stream disconnected - retrying sampling request (3/5 in 762ms)...
+ERROR: Reconnecting... 3/5
+2026-05-24T01:21:07.058145Z  WARN codex_core::session::turn: stream disconnected - retrying sampling request (4/5 in 1.598s)...
+ERROR: Reconnecting... 4/5
+2026-05-24T01:21:23.660869Z  WARN codex_core::session::turn: stream disconnected - retrying sampling request (5/5 in 3.507s)...
+ERROR: Reconnecting... 5/5
+2026-05-24T01:21:42.173211Z  WARN codex_core::client: falling back to HTTP
+2026-05-24T01:23:29.318755Z  WARN codex_core_plugins::startup_sync: git sync failed for curated plugin sync; falling back to GitHub HTTP error=git ls-remote curated plugins repo timed out after 30s: fatal: unable to access 'https://github.com/openai/plugins.git/': Recv failure: Connection reset by peer git_binary="git"
+2026-05-24T01:23:30.282375Z  WARN codex_core_plugins::startup_sync: GitHub HTTP sync failed for curated plugin sync; skipping export archive fallback because a local curated plugins snapshot already exists error=failed to get curated plugins repository from https://api.github.com/repos/openai/plugins: error sending request for url (https://api.github.com/repos/openai/plugins)
+2026-05-24T01:23:30.282401Z  WARN codex_core_plugins::manager: failed to sync curated plugins repo: git sync failed for curated plugin sync: git ls-remote curated plugins repo timed out after 30s: fatal: unable to access 'https://github.com/openai/plugins.git/': Recv failure: Connection reset by peer; GitHub HTTP sync failed for curated plugin sync: failed to get curated plugins repository from https://api.github.com/repos/openai/plugins: error sending request for url (https://api.github.com/repos/openai/plugins); export archive fallback skipped because a local curated plugins snapshot already exists
+2026-05-24T01:23:33.114763Z ERROR codex_models_manager::manager: failed to refresh available models: timeout waiting for child process to exit
+exec
+/bin/zsh -lc 'pwd && rg --files' in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_2__solved_by__gpt_5_5
+ succeeded in 0ms:
+/Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_2__solved_by__gpt_5_5
+SOLVER_MANIFEST.json
+items_private_sample.jsonl
+assets/public_policy.md
+items/scf_017/internal_timeline.md
+items/scf_017/status_page.md
+items/scf_017/monitoring_log.txt
+items/scf_017/email_thread.eml
+items/scf_017/maintenance_windows.md
+items/scf_017/contract_rider.md
+items/scf_028/internal_timeline.md
+items/scf_028/status_page.md
+items/scf_028/monitoring_log.txt
+items/scf_028/email_thread.eml
+items/scf_028/maintenance_windows.md
+items/scf_028/contract_rider.md
+items/scf_010/internal_timeline.md
+items/scf_010/status_page.md
+items/scf_010/monitoring_log.txt
+items/scf_010/email_thread.eml
+items/scf_010/maintenance_windows.md
+items/scf_010/contract_rider.md
+items/scf_026/internal_timeline.md
+items/scf_026/status_page.md
+items/scf_026/monitoring_log.txt
+items/scf_026/email_thread.eml
+items/scf_026/maintenance_windows.md
+items/scf_026/contract_rider.md
+items/scf_019/internal_timeline.md
+items/scf_019/status_page.md
+items/scf_019/monitoring_log.txt
+items/scf_019/email_thread.eml
+items/scf_019/maintenance_windows.md
+items/scf_019/contract_rider.md
+items/scf_021/internal_timeline.md
+items/scf_021/contract_rider.md
+items/scf_021/email_thread.eml
+items/scf_021/monitoring_log.txt
+items/scf_021/status_page.md
+items/scf_021/maintenance_windows.md
+items/scf_023/internal_timeline.md
+items/scf_023/status_page.md
+items/scf_023/monitoring_log.txt
+items/scf_023/email_thread.eml
+items/scf_023/maintenance_windows.md
+items/scf_023/contract_rider.md
+items/scf_014/internal_timeline.md
+items/scf_014/status_page.md
+items/scf_014/monitoring_log.txt
+items/scf_014/email_thread.eml
+items/scf_014/maintenance_windows.md
+items/scf_014/contract_rider.md
+items/scf_002/internal_timeline.md
+items/scf_002/status_page.md
+items/scf_002/monitoring_log.txt
+items/scf_002/email_thread.eml
+items/scf_002/maintenance_windows.md
+items/scf_002/contract_rider.md
+items/scf_012/internal_timeline.md
+items/scf_012/status_page.md
+items/scf_012/monitoring_log.txt
+items/scf_012/email_thread.eml
+items/scf_012/maintenance_windows.md
+items/scf_012/contract_rider.md
+items/scf_025/contract_rider.md
+items/scf_025/internal_timeline.md
+items/scf_025/status_page.md
+items/scf_025/monitoring_log.txt
+items/scf_025/email_thread.eml
+items/scf_025/maintenance_windows.md
+items/scf_022/internal_timeline.md
+items/scf_022/status_page.md
+items/scf_022/monitoring_log.txt
+items/scf_022/email_thread.eml
+items/scf_022/maintenance_windows.md
+items/scf_022/contract_rider.md
+items/scf_003/internal_timeline.md
+items/scf_003/status_page.md
+items/scf_003/monitoring_log.txt
+items/scf_003/email_thread.eml
+items/scf_003/maintenance_windows.md
+items/scf_003/contract_rider.md
+items/scf_024/internal_timeline.md
+items/scf_024/status_page.md
+items/scf_024/monitoring_log.txt
+items/scf_027/internal_timeline.md
+items/scf_024/email_thread.eml
+items/scf_027/status_page.md
+items/scf_024/maintenance_windows.md
+items/scf_024/contract_rider.md
+items/scf_027/monitoring_log.txt
+items/scf_027/email_thread.eml
+items/scf_027/maintenance_windows.md
+items/scf_027/contract_rider.md
+items/scf_018/email_thread.eml
+items/scf_018/maintenance_windows.md
+items/scf_018/contract_rider.md
+items/scf_018/monitoring_log.txt
+items/scf_018/status_page.md
+items/scf_029/email_thread.eml
+items/scf_029/maintenance_windows.md
+items/scf_029/contract_rider.md
+items/scf_008/internal_timeline.md
+items/scf_008/status_page.md
+items/scf_008/monitoring_log.txt
+items/scf_008/email_thread.eml
+items/scf_008/maintenance_windows.md
+items/scf_008/contract_rider.md
+items/scf_029/internal_timeline.md
+items/scf_018/internal_timeline.md
+items/scf_029/status_page.md
+items/scf_029/monitoring_log.txt
+items/scf_004/contract_rider.md
+items/scf_000/internal_timeline.md
+items/scf_004/internal_timeline.md
+items/scf_000/status_page.md
+items/scf_000/monitoring_log.txt
+items/scf_004/status_page.md
+items/scf_000/email_thread.eml
+items/scf_004/monitoring_log.txt
+items/scf_000/maintenance_windows.md
+items/scf_004/email_thread.eml
+items/scf_000/contract_rider.md
+items/scf_004/maintenance_windows.md
+items/scf_011/email_thread.eml
+items/scf_011/maintenance_windows.md
+items/scf_011/contract_rider.md
+items/scf_011/status_page.md
+items/scf_011/monitoring_log.txt
+items/scf_011/internal_timeline.md
+items/scf_015/maintenance_windows.md
+items/scf_015/contract_rider.md
+items/scf_015/email_thread.eml
+items/scf_015/monitoring_log.txt
+README.md
+items/scf_020/maintenance_windows.md
+items/scf_020/contract_rider.md
+items/scf_020/email_thread.eml
+items/scf_015/status_page.md
+items/scf_020/monitoring_log.txt
+items/scf_020/status_page.md
+items/scf_020/internal_timeline.md
+items/scf_015/internal_timeline.md
+items/scf_001/internal_timeline.md
+items/scf_001/status_page.md
+items/scf_001/monitoring_log.txt
+items/scf_001/email_thread.eml
+items/scf_001/maintenance_windows.md
+items/scf_001/contract_rider.md
+items/scf_007/internal_timeline.md
+items/scf_016/internal_timeline.md
+items/scf_009/internal_timeline.md
+items/scf_009/status_page.md
+items/scf_009/monitoring_log.txt
+items/scf_009/email_thread.eml
+items/scf_009/maintenance_windows.md
+items/scf_009/contract_rider.md
+items/scf_013/internal_timeline.md
+items/scf_013/status_page.md
+items/scf_013/monitoring_log.txt
+items/scf_013/email_thread.eml
+items/scf_013/maintenance_windows.md
+items/scf_013/contract_rider.md
+items/scf_007/status_page.md
+items/scf_007/monitoring_log.txt
+items/scf_007/email_thread.eml
+items/scf_007/maintenance_windows.md
+items/scf_007/contract_rider.md
+items/scf_016/email_thread.eml
+items/scf_006/internal_timeline.md
+items/scf_005/internal_timeline.md
+items/scf_006/email_thread.eml
+items/scf_016/maintenance_windows.md
+items/scf_005/status_page.md
+items/scf_016/contract_rider.md
+items/scf_006/status_page.md
+items/scf_006/maintenance_windows.md
+items/scf_005/monitoring_log.txt
+items/scf_016/monitoring_log.txt
+items/scf_006/monitoring_log.txt
+items/scf_006/contract_rider.md
+items/scf_016/status_page.md
+items/scf_005/email_thread.eml
+items/scf_005/maintenance_windows.md
+items/scf_005/contract_rider.md
+
+2026-05-24T01:23:34.424845Z  WARN codex_analytics::client: failed to send events request: error sending request for url (https://chatgpt.com/backend-api/codex/analytics-events/events)
+2026-05-24T01:23:34.424972Z  WARN codex_core::session::turn: failed to load discoverable tool suggestions: failed to send request: error sending request for url (https://chatgpt.com/backend-api//connectors/directory/list?external_logos=true): client error (Connect): tcp connect error: Connection refused (os error 61)
+exec
+/bin/zsh -lc "sed -n '1,220p' README.md" in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_2__solved_by__gpt_5_5
+exec
+/bin/zsh -lc "sed -n '1,220p' SOLVER_MANIFEST.json" in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_2__solved_by__gpt_5_5
+ succeeded in 0ms:
+# SCF Solver Packet
+
+You may use any tools, but **only** files inside this `solver_bundle/` directory.
+
+## Task
+
+For each item in `items_private_sample.jsonl`, read the referenced assets and output a JSON prediction row:
+
+```
+{"id": "scf_000", "answer": {"eligible_downtime_minutes": 12, "sla_breached": false, "credit_percent": 0, "credit_usd_cents": 0}}
+```
+
+## Rules
+
+The authoritative rules are in `assets/public_policy.md` and the item contract rider.
+
+ succeeded in 0ms:
+{
+  "benchmark": "Service Credit Forensics (SCF) v1",
+  "items_file": "items_private_sample.jsonl",
+  "assets": {
+    "public_policy": "assets/public_policy.md"
+  },
+  "notes": "This bundle contains only solver-visible evidence and rules. It does not contain gold answers or creator-side code."
+}
+
+exec
+/bin/zsh -lc "sed -n '1,80p' items_private_sample.jsonl" in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_2__solved_by__gpt_5_5
+ succeeded in 0ms:
+{"id": "scf_000", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_000/contract_rider.md", "maintenance_windows": "items/scf_000/maintenance_windows.md", "monitoring_log": "items/scf_000/monitoring_log.txt", "internal_timeline": "items/scf_000/internal_timeline.md", "status_page": "items/scf_000/status_page.md", "email_thread": "items/scf_000/email_thread.eml"}}
+{"id": "scf_001", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_001/contract_rider.md", "maintenance_windows": "items/scf_001/maintenance_windows.md", "monitoring_log": "items/scf_001/monitoring_log.txt", "internal_timeline": "items/scf_001/internal_timeline.md", "status_page": "items/scf_001/status_page.md", "email_thread": "items/scf_001/email_thread.eml"}}
+{"id": "scf_002", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_002/contract_rider.md", "maintenance_windows": "items/scf_002/maintenance_windows.md", "monitoring_log": "items/scf_002/monitoring_log.txt", "internal_timeline": "items/scf_002/internal_timeline.md", "status_page": "items/scf_002/status_page.md", "email_thread": "items/scf_002/email_thread.eml"}}
+{"id": "scf_003", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_003/contract_rider.md", "maintenance_windows": "items/scf_003/maintenance_windows.md", "monitoring_log": "items/scf_003/monitoring_log.txt", "internal_timeline": "items/scf_003/internal_timeline.md", "status_page": "items/scf_003/status_page.md", "email_thread": "items/scf_003/email_thread.eml"}}
+{"id": "scf_004", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_004/contract_rider.md", "maintenance_windows": "items/scf_004/maintenance_windows.md", "monitoring_log": "items/scf_004/monitoring_log.txt", "internal_timeline": "items/scf_004/internal_timeline.md", "status_page": "items/scf_004/status_page.md", "email_thread": "items/scf_004/email_thread.eml"}}
+{"id": "scf_005", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_005/contract_rider.md", "maintenance_windows": "items/scf_005/maintenance_windows.md", "monitoring_log": "items/scf_005/monitoring_log.txt", "internal_timeline": "items/scf_005/internal_timeline.md", "status_page": "items/scf_005/status_page.md", "email_thread": "items/scf_005/email_thread.eml"}}
+{"id": "scf_006", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_006/contract_rider.md", "maintenance_windows": "items/scf_006/maintenance_windows.md", "monitoring_log": "items/scf_006/monitoring_log.txt", "internal_timeline": "items/scf_006/internal_timeline.md", "status_page": "items/scf_006/status_page.md", "email_thread": "items/scf_006/email_thread.eml"}}
+{"id": "scf_007", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_007/contract_rider.md", "maintenance_windows": "items/scf_007/maintenance_windows.md", "monitoring_log": "items/scf_007/monitoring_log.txt", "internal_timeline": "items/scf_007/internal_timeline.md", "status_page": "items/scf_007/status_page.md", "email_thread": "items/scf_007/email_thread.eml"}}
+{"id": "scf_008", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_008/contract_rider.md", "maintenance_windows": "items/scf_008/maintenance_windows.md", "monitoring_log": "items/scf_008/monitoring_log.txt", "internal_timeline": "items/scf_008/internal_timeline.md", "status_page": "items/scf_008/status_page.md", "email_thread": "items/scf_008/email_thread.eml"}}
+{"id": "scf_009", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_009/contract_rider.md", "maintenance_windows": "items/scf_009/maintenance_windows.md", "monitoring_log": "items/scf_009/monitoring_log.txt", "internal_timeline": "items/scf_009/internal_timeline.md", "status_page": "items/scf_009/status_page.md", "email_thread": "items/scf_009/email_thread.eml"}}
+{"id": "scf_010", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_010/contract_rider.md", "maintenance_windows": "items/scf_010/maintenance_windows.md", "monitoring_log": "items/scf_010/monitoring_log.txt", "internal_timeline": "items/scf_010/internal_timeline.md", "status_page": "items/scf_010/status_page.md", "email_thread": "items/scf_010/email_thread.eml"}}
+{"id": "scf_011", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_011/contract_rider.md", "maintenance_windows": "items/scf_011/maintenance_windows.md", "monitoring_log": "items/scf_011/monitoring_log.txt", "internal_timeline": "items/scf_011/internal_timeline.md", "status_page": "items/scf_011/status_page.md", "email_thread": "items/scf_011/email_thread.eml"}}
+{"id": "scf_012", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_012/contract_rider.md", "maintenance_windows": "items/scf_012/maintenance_windows.md", "monitoring_log": "items/scf_012/monitoring_log.txt", "internal_timeline": "items/scf_012/internal_timeline.md", "status_page": "items/scf_012/status_page.md", "email_thread": "items/scf_012/email_thread.eml"}}
+{"id": "scf_013", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_013/contract_rider.md", "maintenance_windows": "items/scf_013/maintenance_windows.md", "monitoring_log": "items/scf_013/monitoring_log.txt", "internal_timeline": "items/scf_013/internal_timeline.md", "status_page": "items/scf_013/status_page.md", "email_thread": "items/scf_013/email_thread.eml"}}
+{"id": "scf_014", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_014/contract_rider.md", "maintenance_windows": "items/scf_014/maintenance_windows.md", "monitoring_log": "items/scf_014/monitoring_log.txt", "internal_timeline": "items/scf_014/internal_timeline.md", "status_page": "items/scf_014/status_page.md", "email_thread": "items/scf_014/email_thread.eml"}}
+{"id": "scf_015", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_015/contract_rider.md", "maintenance_windows": "items/scf_015/maintenance_windows.md", "monitoring_log": "items/scf_015/monitoring_log.txt", "internal_timeline": "items/scf_015/internal_timeline.md", "status_page": "items/scf_015/status_page.md", "email_thread": "items/scf_015/email_thread.eml"}}
+{"id": "scf_016", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_016/contract_rider.md", "maintenance_windows": "items/scf_016/maintenance_windows.md", "monitoring_log": "items/scf_016/monitoring_log.txt", "internal_timeline": "items/scf_016/internal_timeline.md", "status_page": "items/scf_016/status_page.md", "email_thread": "items/scf_016/email_thread.eml"}}
+{"id": "scf_017", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_017/contract_rider.md", "maintenance_windows": "items/scf_017/maintenance_windows.md", "monitoring_log": "items/scf_017/monitoring_log.txt", "internal_timeline": "items/scf_017/internal_timeline.md", "status_page": "items/scf_017/status_page.md", "email_thread": "items/scf_017/email_thread.eml"}}
+{"id": "scf_018", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_018/contract_rider.md", "maintenance_windows": "items/scf_018/maintenance_windows.md", "monitoring_log": "items/scf_018/monitoring_log.txt", "internal_timeline": "items/scf_018/internal_timeline.md", "status_page": "items/scf_018/status_page.md", "email_thread": "items/scf_018/email_thread.eml"}}
+{"id": "scf_019", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_019/contract_rider.md", "maintenance_windows": "items/scf_019/maintenance_windows.md", "monitoring_log": "items/scf_019/monitoring_log.txt", "internal_timeline": "items/scf_019/internal_timeline.md", "status_page": "items/scf_019/status_page.md", "email_thread": "items/scf_019/email_thread.eml"}}
+{"id": "scf_020", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_020/contract_rider.md", "maintenance_windows": "items/scf_020/maintenance_windows.md", "monitoring_log": "items/scf_020/monitoring_log.txt", "internal_timeline": "items/scf_020/internal_timeline.md", "status_page": "items/scf_020/status_page.md", "email_thread": "items/scf_020/email_thread.eml"}}
+{"id": "scf_021", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_021/contract_rider.md", "maintenance_windows": "items/scf_021/maintenance_windows.md", "monitoring_log": "items/scf_021/monitoring_log.txt", "internal_timeline": "items/scf_021/internal_timeline.md", "status_page": "items/scf_021/status_page.md", "email_thread": "items/scf_021/email_thread.eml"}}
+{"id": "scf_022", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_022/contract_rider.md", "maintenance_windows": "items/scf_022/maintenance_windows.md", "monitoring_log": "items/scf_022/monitoring_log.txt", "internal_timeline": "items/scf_022/internal_timeline.md", "status_page": "items/scf_022/status_page.md", "email_thread": "items/scf_022/email_thread.eml"}}
+{"id": "scf_023", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_023/contract_rider.md", "maintenance_windows": "items/scf_023/maintenance_windows.md", "monitoring_log": "items/scf_023/monitoring_log.txt", "internal_timeline": "items/scf_023/internal_timeline.md", "status_page": "items/scf_023/status_page.md", "email_thread": "items/scf_023/email_thread.eml"}}
+{"id": "scf_024", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_024/contract_rider.md", "maintenance_windows": "items/scf_024/maintenance_windows.md", "monitoring_log": "items/scf_024/monitoring_log.txt", "internal_timeline": "items/scf_024/internal_timeline.md", "status_page": "items/scf_024/status_page.md", "email_thread": "items/scf_024/email_thread.eml"}}
+{"id": "scf_025", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_025/contract_rider.md", "maintenance_windows": "items/scf_025/maintenance_windows.md", "monitoring_log": "items/scf_025/monitoring_log.txt", "internal_timeline": "items/scf_025/internal_timeline.md", "status_page": "items/scf_025/status_page.md", "email_thread": "items/scf_025/email_thread.eml"}}
+{"id": "scf_026", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_026/contract_rider.md", "maintenance_windows": "items/scf_026/maintenance_windows.md", "monitoring_log": "items/scf_026/monitoring_log.txt", "internal_timeline": "items/scf_026/internal_timeline.md", "status_page": "items/scf_026/status_page.md", "email_thread": "items/scf_026/email_thread.eml"}}
+{"id": "scf_027", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_027/contract_rider.md", "maintenance_windows": "items/scf_027/maintenance_windows.md", "monitoring_log": "items/scf_027/monitoring_log.txt", "internal_timeline": "items/scf_027/internal_timeline.md", "status_page": "items/scf_027/status_page.md", "email_thread": "items/scf_027/email_thread.eml"}}
+{"id": "scf_028", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_028/contract_rider.md", "maintenance_windows": "items/scf_028/maintenance_windows.md", "monitoring_log": "items/scf_028/monitoring_log.txt", "internal_timeline": "items/scf_028/internal_timeline.md", "status_page": "items/scf_028/status_page.md", "email_thread": "items/scf_028/email_thread.eml"}}
+{"id": "scf_029", "task": "Using ONLY the public policy and evidence in this solver bundle, compute the exact answer JSON with keys `eligible_downtime_minutes`, `sla_breached`, `credit_percent`, `credit_usd_cents`.", "assets": {"policy": "assets/public_policy.md", "contract_rider": "items/scf_029/contract_rider.md", "maintenance_windows": "items/scf_029/maintenance_windows.md", "monitoring_log": "items/scf_029/monitoring_log.txt", "internal_timeline": "items/scf_029/internal_timeline.md", "status_page": "items/scf_029/status_page.md", "email_thread": "items/scf_029/email_thread.eml"}}
+
+exec
+/bin/zsh -lc "sed -n '1,200p' assets/public_policy.md" in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_2__solved_by__gpt_5_5
+ succeeded in 0ms:
+# NimbusCloud Service Credit Policy (Public)
+
+This policy defines how to compute eligible downtime and service credits.
+
+## 1) What counts as downtime
+
+A downtime interval is any contiguous period where the service is either:
+- **UNAVAILABLE** (requests fail), or
+- **SEVERE_DEGRADED** (p95 latency exceeds the contract threshold).
+
+Periods that are only **DEGRADED** (but not severe) do *not* count.
+
+### Deriving state from monitoring evidence
+
+Monitoring logs may contain either explicit `STATE` records or `METRIC` records.
+If explicit `STATE` records exist, you may use them.
+If you only have metrics, derive state per region using the contract rider parameters:
+- `unavailable_error_rate_pct`: if `error_rate_pct >= unavailable_error_rate_pct`, state is UNAVAILABLE.
+- `severe_p95_ms`: if `p95_ms >= severe_p95_ms` AND `error_rate_pct >= 10`, state is SEVERE_DEGRADED.
+- Else if `p95_ms >= severe_p95_ms/2`, state is DEGRADED.
+- Else state is OK.
+
+## 2) Evidence precedence
+
+Use the following precedence if sources disagree:
+1. Internal incident timeline **when it provides explicit start/end timestamps** (and includes a correction note)
+2. Monitoring log events (after applying clock drift correction)
+3. Status page updates
+4. Customer email thread
+
+If the internal timeline is missing an explicit boundary (for example it says "use monitoring for exact end"),
+then the monitoring log defines the missing boundary.
+
+## 3) Clock drift correction (monitoring logs)
+
+Monitoring logs may have a consistent clock drift. If a drift value is provided
+in the item, *shift every monitoring timestamp by that drift* before using it.
+
+## 4) Exclusions
+
+Exclude time that falls within any of:
+- Published maintenance windows (global policy asset for the item)
+- Contract rider exclusions (customer-specific)
+
+Exclusions subtract from downtime even if the service was unavailable.
+
+## 5) Aggregation and rounding
+
+Compute downtime as a set of UTC intervals. After applying exclusions:
+- Merge overlapping/adjacent downtime intervals.
+- Round **each remaining interval up to whole minutes**.
+- Sum those rounded minutes to get `eligible_downtime_minutes`.
+
+## 6) Multi-region scope
+
+If the contract scope is `multi`, downtime is the union across regions.
+If the scope is `single`, use only the named region in the contract.
+
+## 7) SLA breach and credit table
+
+SLA breach is `eligible_downtime_minutes` >= the tier threshold:
+- STANDARD: 40 minutes
+- BUSINESS: 20 minutes
+- ENTERPRISE: 10 minutes
+
+Credit percent is determined from eligible minutes (take the highest matching tier band):
+- STANDARD: >=40 => 10%, >=80 => 25%, >=160 => 50%
+- BUSINESS: >=20 => 10%, >=40 => 25%, >=80 => 50%
+- ENTERPRISE: >=10 => 10%, >=20 => 25%, >=40 => 50%
+
+Apply the customer contract cap: `credit_percent = min(credit_percent, cap_percent)`.
+
+## 8) Credit calculation
+
+`credit_usd_cents = floor(monthly_fee_cents * credit_percent / 100)`.
+
+2026-05-24T01:23:48.220281Z  WARN codex_core::session::turn: failed to load discoverable tool suggestions: request failed with status 500 Internal Server Error: {"detail":"Internal Server Error"}
+exec
+/bin/zsh -lc "for f in items/scf_001/*; do printf '\\n### %s\\n' \""'$f"; sed -n '"'1,160p' \""'$f"; done' in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_2__solved_by__gpt_5_5
+exec
+/bin/zsh -lc "for f in items/scf_000/*; do printf '\\n### %s\\n' \""'$f"; sed -n '"'1,160p' \""'$f"; done' in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_2__solved_by__gpt_5_5
+ succeeded in 0ms:
+
+### items/scf_000/contract_rider.md
+# Customer Contract Rider (Public)
+
+- Customer tier: **BUSINESS**
+- Monthly fee: **$1499.00** (=149900 cents)
+- Scope: **multi**
+- Primary region (if scope=single): **us-east**
+- Credit cap (percent): **25%**
+
+## Monitoring interpretation parameters
+
+- severe_p95_ms: **900**
+- unavailable_error_rate_pct: **80**
+
+## Contract exclusions (UTC)
+
+- 2026-04-05T16:45:00Z to 2026-04-05T17:05:00Z
+- 2026-04-06T00:35:00Z to 2026-04-06T00:45:00Z
+- 2026-04-06T07:05:00Z to 2026-04-06T07:35:00Z
+
+## Notes
+- All timestamps in evidence may be in UTC or a local offset; treat ISO offsets as authoritative.
+
+### items/scf_000/email_thread.eml
+From: support@nimbuscloud.example
+Subject: Incident follow-up
+
+---
+From: customer@acme.example
+Date: 2026-04-07T12:45:00Z
+
+Can you confirm whether we qualify for service credits this month?
+
+---
+From: support@nimbuscloud.example
+Date: 2026-04-07T13:15:00Z
+
+We will review monitoring and the incident timeline. Note: posted status times can be delayed.
+
+---
+From: support@nimbuscloud.example
+Date: 2026-04-07T14:45:00Z
+
+Initial estimate (may be revised): outage lasted about 27 minutes.
+
+### items/scf_000/internal_timeline.md
+# Internal Incident Timeline (Public excerpt)
+
+This excerpt is considered higher-precedence if it includes a correction note.
+
+
+Correction note: Timeline timestamps are UTC and reflect the corrected incident bridge notes.
+
+Format: <timestamp_utc> - <event>
+
+2026-04-06T09:19:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-04-06T09:46:43Z - Incident resolved; service OK
+2026-04-06T14:56:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-04-06T15:19:16Z - Incident end estimate; use monitoring log for exact end
+2026-04-06T17:21:00Z - Incident start noted (UNAVAILABLE)
+2026-04-06T18:07:34Z - Incident end estimate; use monitoring log for exact end
+
+### items/scf_000/maintenance_windows.md
+# Published Maintenance Windows (Public)
+
+- 2026-04-05T13:57:00Z to 2026-04-05T14:27:00Z
+
+Notes: Maintenance windows always exclude downtime.
+
+### items/scf_000/monitoring_log.txt
+# Monitoring Log Export (Public)
+
+tz_hint: America/Los_Angeles (UTC-07:00 during this incident)
+clock_drift_seconds: 0
+
+Format variants (one per line):
+1) <timestamp> <region> STATE <state>
+2) <timestamp> <region> METRIC {"p95_ms": <int>, "error_rate_pct": <int>}
+
+States: OK | DEGRADED | SEVERE_DEGRADED | UNAVAILABLE
+
+2026-04-05T03:12:00Z us-west METRIC p95_ms=282 error_rate_pct=4
+2026-04-05T07:09:00-07:00 us-west METRIC {"p95_ms": 460, "error_rate_pct": 2}
+2026-04-05T07:15:00-07:00 eu-central METRIC {"p95_ms": 644, "error_rate_pct": 7}
+2026-04-05T15:41:00-07:00 eu-central METRIC {"p95_ms": 557, "error_rate_pct": 6}
+2026-04-06T02:19:00-07:00 eu-central METRIC {"p95_ms": 690, "error_rate_pct": 5}
+2026-04-06T02:19:00-07:00 us-east METRIC {"p95_ms": 257, "error_rate_pct": 0}
+2026-04-06T02:19:00-07:00 us-west METRIC {"p95_ms": 627, "error_rate_pct": 1}
+2026-04-06T09:20:37Z eu-central METRIC {"p95_ms": 1397, "error_rate_pct": 45}
+2026-04-06T09:20:37Z us-east METRIC p95_ms=1108 error_rate_pct=51
+2026-04-06T09:20:37Z us-west METRIC p95_ms=1734 error_rate_pct=17
+2026-04-06T09:44:35Z eu-central METRIC {"p95_ms": 790, "error_rate_pct": 15}
+2026-04-06T09:44:35Z us-east METRIC p95_ms=849 error_rate_pct=12
+2026-04-06T09:44:35Z us-west METRIC p95_ms=877 error_rate_pct=9
+2026-04-06T09:46:43Z eu-central METRIC {"p95_ms": 216, "error_rate_pct": 2}
+2026-04-06T09:46:43Z us-east METRIC {"p95_ms": 445, "error_rate_pct": 2}
+2026-04-06T09:46:43Z us-west METRIC p95_ms=213 error_rate_pct=4
+2026-04-06T14:56:00Z eu-central STATE DEGRADED
+2026-04-06T14:56:00Z us-east STATE DEGRADED
+2026-04-06T14:56:00Z us-west STATE DEGRADED
+2026-04-06T07:59:35-07:00 eu-central STATE SEVERE_DEGRADED
+2026-04-06T07:59:35-07:00 us-east STATE SEVERE_DEGRADED
+2026-04-06T07:59:35-07:00 us-west STATE SEVERE_DEGRADED
+2026-04-06T08:13:58-07:00 eu-central STATE DEGRADED
+2026-04-06T08:13:58-07:00 us-east STATE DEGRADED
+2026-04-06T08:13:58-07:00 us-west STATE DEGRADED
+2026-04-06T08:17:16-07:00 eu-central STATE OK
+2026-04-06T08:17:16-07:00 us-east STATE OK
+2026-04-06T08:17:16-07:00 us-west STATE OK
+2026-04-06T10:21:00-07:00 eu-central METRIC {"p95_ms": 655, "error_rate_pct": 8}
+2026-04-06T10:21:00-07:00 us-east METRIC {"p95_ms": 455, "error_rate_pct": 2}
+2026-04-06T10:21:00-07:00 us-west STATE DEGRADED
+2026-04-06T10:23:25-07:00 eu-central METRIC {"p95_ms": 1790, "error_rate_pct": 74}
+2026-04-06T10:23:25-07:00 us-east METRIC {"p95_ms": 1443, "error_rate_pct": 80}
+2026-04-06T10:23:25-07:00 us-west STATE UNAVAILABLE
+2026-04-06T18:02:14Z eu-central METRIC {"p95_ms": 963, "error_rate_pct": 9}
+2026-04-06T18:02:14Z us-east METRIC p95_ms=711 error_rate_pct=3
+2026-04-06T18:02:14Z us-west STATE DEGRADED
+2026-04-06T11:05:34-07:00 eu-central METRIC {"p95_ms": 598, "error_rate_pct": 1}
+2026-04-06T11:05:34-07:00 us-east METRIC p95_ms=459 error_rate_pct=4
+2026-04-06T11:05:34-07:00 us-west STATE OK
+
+### items/scf_000/status_page.md
+# Status Page Updates (Public)
+
+Notes: times are as-posted; some posts are delayed relative to real events.
+
+Format: <timestamp_utc> - <message>
+
+2026-04-06T09:25:00Z - Investigating elevated errors in some regions.
+2026-04-06T09:51:43Z - Monitoring: mitigation applied; service recovering.
+2026-04-06T14:59:00Z - Investigating elevated errors in some regions.
+2026-04-06T15:18:16Z - Monitoring: mitigation applied; service recovering.
+2026-04-06T17:24:00Z - Investigating elevated errors in some regions.
+2026-04-06T18:10:34Z - Monitoring: mitigation applied; service recovering.
+
+ succeeded in 0ms:
+
+### items/scf_001/contract_rider.md
+# Customer Contract Rider (Public)
+
+- Customer tier: **ENTERPRISE**
+- Monthly fee: **$2499.00** (=249900 cents)
+- Scope: **single**
+- Primary region (if scope=single): **us-west**
+- Credit cap (percent): **10%**
+
+## Monitoring interpretation parameters
+
+- severe_p95_ms: **700**
+- unavailable_error_rate_pct: **60**
+
+## Contract exclusions (UTC)
+
+- 2026-03-27T07:00:00Z to 2026-03-27T07:20:00Z
+- 2026-03-27T19:20:00Z to 2026-03-27T19:30:00Z
+- 2026-03-28T04:30:00Z to 2026-03-28T04:55:00Z
+
+## Notes
+- All timestamps in evidence may be in UTC or a local offset; treat ISO offsets as authoritative.
+
+### items/scf_001/email_thread.eml
+From: support@nimbuscloud.example
+Subject: Incident follow-up
+
+---
+From: customer@acme.example
+Date: 2026-03-29T10:00:00Z
+
+Can you confirm whether we qualify for service credits this month?
+
+---
+From: support@nimbuscloud.example
+Date: 2026-03-29T10:30:00Z
+
+We will review monitoring and the incident timeline. Note: posted status times can be delayed.
+
+---
+From: support@nimbuscloud.example
+Date: 2026-03-29T12:00:00Z
+
+Initial estimate (may be revised): outage lasted about 8 minutes.
+
+### items/scf_001/internal_timeline.md
+# Internal Incident Timeline (Public excerpt)
+
+This excerpt is considered higher-precedence if it includes a correction note.
+
+
+Correction note: Timeline timestamps are UTC and reflect the corrected incident bridge notes.
+
+Format: <timestamp_utc> - <event>
+
+2026-03-27T08:08:00Z - Incident start noted (UNAVAILABLE)
+2026-03-27T08:17:21Z - Incident end estimate; use monitoring log for exact end
+2026-03-28T00:23:00Z - Incident start noted (UNAVAILABLE)
+2026-03-28T01:04:11Z - Incident end estimate; use monitoring log for exact end
+
+### items/scf_001/maintenance_windows.md
+# Published Maintenance Windows (Public)
+
+- 2026-03-27T02:26:00Z to 2026-03-27T03:26:00Z
+
+Notes: Maintenance windows always exclude downtime.
+
+### items/scf_001/monitoring_log.txt
+# Monitoring Log Export (Public)
+
+tz_hint: America/Los_Angeles (UTC-07:00 during this incident)
+clock_drift_seconds: 0
+
+Format variants (one per line):
+1) <timestamp> <region> STATE <state>
+2) <timestamp> <region> METRIC {"p95_ms": <int>, "error_rate_pct": <int>}
+
+States: OK | DEGRADED | SEVERE_DEGRADED | UNAVAILABLE
+
+2026-03-27T08:08:00Z us-west METRIC {"p95_ms": 387, "error_rate_pct": 7}
+2026-03-27T08:10:38Z us-west METRIC p95_ms=964 error_rate_pct=83
+2026-03-27T01:13:59-07:00 us-west METRIC p95_ms=607 error_rate_pct=10
+2026-03-27T08:16:21Z us-west METRIC p95_ms=239 error_rate_pct=5
+2026-03-27T09:28:00Z us-west METRIC {"p95_ms": 627, "error_rate_pct": 8}
+2026-03-27T02:41:00-07:00 us-west METRIC p95_ms=271 error_rate_pct=3
+2026-03-27T13:24:00Z us-west METRIC p95_ms=321 error_rate_pct=5
+2026-03-27T17:23:00-07:00 us-west METRIC {"p95_ms": 651, "error_rate_pct": 1}
+2026-03-28T00:26:10Z us-west METRIC {"p95_ms": 956, "error_rate_pct": 84}
+2026-03-28T00:58:55Z us-west METRIC {"p95_ms": 569, "error_rate_pct": 10}
+2026-03-28T01:02:11Z us-west METRIC {"p95_ms": 533, "error_rate_pct": 5}
+2026-03-28T14:12:00Z us-west METRIC {"p95_ms": 574, "error_rate_pct": 0}
+
+### items/scf_001/status_page.md
+# Status Page Updates (Public)
+
+Notes: times are as-posted; some posts are delayed relative to real events.
+
+Format: <timestamp_utc> - <message>
+
+2026-03-27T08:14:00Z - Investigating elevated errors in some regions.
+2026-03-27T08:20:21Z - Monitoring: mitigation applied; service recovering.
+2026-03-28T00:25:00Z - Investigating elevated errors in some regions.
+2026-03-28T01:05:11Z - Monitoring: mitigation applied; service recovering.
+
+2026-05-24T01:24:00.154263Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:24:00.154274Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:24:00.154801Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:24:00.154808Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:24:00.155325Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:24:00.155332Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:24:00.155847Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:24:00.155852Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:24:00.156362Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:24:00.156368Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:24:00.157735Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:24:00.157740Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+exec
+/bin/zsh -lc "cat > /tmp/solve_scf.py <<'PY'
+import os,re,json,math
+from datetime import datetime,timezone,timedelta
+ROOT='/Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_2__solved_by__gpt_5_5'
+
+def dt(s):
+    return datetime.fromisoformat(s.replace('Z','+00:00')).astimezone(timezone.utc)
+
+def merge(ints):
+    ints=sorted(ints)
+    out=[]
+    for a,b in ints:
+        if b<=a: continue
+        if out and a<=out[-1][1]: out[-1]=(out[-1][0], max(out[-1][1],b))
+        else: out.append((a,b))
+    return out
+
+def subtract(ints, exs):
+    res=[]
+    for a,b in ints:
+        segs=[(a,b)]
+        for x,y in exs:
+            ns=[]
+            for s,e in segs:
+                if y<=s or x>=e: ns.append((s,e))
+                else:
+                    if x>s: ns.append((s,min(x,e)))
+                    if y<e: ns.append((max(y,s),e))
+            segs=ns
+        res+=segs
+    return merge(res)
+
+def read(p):
+    with open(os.path.join(ROOT,p),encoding='utf-8') as f: return f.read()
+
+def parse_contract(id):
+    t=read(f'items/{id}/contract_rider.md')
+    tier=re.search(r'Customer tier: \\*\\*(\\w+)\\*\\*',t).group(1)
+    fee=int(re.search(r'=([0-9]+) cents',t).group(1))
+    scope=re.search(r'Scope: \\*\\*(\\w+)\\*\\*',t).group(1)
+    primary=re.search(r'Primary region.*: \\*\\*(["'^*]+)'"\\*\\*',t).group(1)
+    cap=int(re.search(r'Credit cap \\(percent\\): \\*\\*(\\d+)%\\*\\*',t).group(1))
+    severe=int(re.search(r'severe_p95_ms: \\*\\*(\\d+)\\*\\*',t).group(1))
+    unavail=int(re.search(r'unavailable_error_rate_pct: \\*\\*(\\d+)\\*\\*',t).group(1))
+    ex=[]
+    for a,b in re.findall(r'- (\\S+) to (\\S+)',t): ex.append((dt(a),dt(b)))
+    return dict(tier=tier,fee=fee,scope=scope,primary=primary,cap=cap,severe=severe,unavail=unavail,ex=ex)
+
+def parse_maint(id):
+    t=read(f'items/{id}/maintenance_windows.md')
+    return [(dt(a),dt(b)) for a,b in re.findall(r'- (\\S+) to (\\S+)',t)]
+
+def mon_records(id,c):
+    t=read(f'items/{id}/monitoring_log.txt')
+    drift=int(re.search(r'clock_drift_seconds:\\s*(-?\\d+)',t).group(1))
+    rec=[]
+    for line in t.splitlines():
+        if not line or line.startswith('#') or line.startswith(('tz_hint','clock','Format','1)','2)','States')): continue
+        m=re.match(r'(\\S+)\\s+(\\S+)\\s+(STATE|METRIC)\\s+(.+)',line)
+        if not m: continue
+        ts=dt(m.group(1))+timedelta(seconds=drift)
+        region=m.group(2); typ=m.group(3); rest=m.group(4)
+        if typ=='STATE': state=rest.strip()
+        else:
+            p=re.search(r'p95_ms[\"=:\\s]+(\\d+)',rest).group(1)
+            e=re.search(r'error_rate_pct[\"=:\\s]+(\\d+)',rest).group(1)
+            p95=int(p); er=int(e)
+            if er>=c['unavail']: state='UNAVAILABLE'
+            elif p95>=c['severe'] and er>=10: state='SEVERE_DEGRADED'
+            elif p95>=c['severe']/2: state='DEGRADED'
+            else: state='OK'
+        rec.append((ts,region,state,line))
+    return sorted(rec)
+
+def monitoring_intervals(records,c):
+    regions=sorted({r for _,r,_,_ in records})
+    use=regions if c['scope']=='multi' else [c['primary']]
+    ints=[]
+    for reg in use:
+        cur=None
+        for ts,r,state,line in sorted([x for x in records if x[1]==reg]):
+            down=state in ('UNAVAILABLE','SEVERE_DEGRADED')
+            if down and cur is None: cur=ts
+            if (not down) and cur is not None:
+                ints.append((cur,ts)); cur=None
+    return merge(ints)
+
+def solve(id):
+    c=parse_contract(id); rec=mon_records(id,c); mon_ints=monitoring_intervals(rec,c)
+    tl=read(f'items/{id}/internal_timeline.md')
+    use_internal='Correction note:' in tl
+    ints=[]
+    if use_internal:
+        starts=[]
+        for line in tl.splitlines():
+            m=re.match(r'(\\S+) - (.+)',line)
+            if not m: continue
+            ts=dt(m.group(1)); ev=m.group(2)
+            if 'Incident start' in ev:
+                starts.append(ts)
+            elif ('Incident resolved' in ev or 'Incident end' in ev) and starts:
+                st=starts.pop(0)
+                if 'use monitoring log for exact end' in ev:
+                    # find monitoring interval overlapping/after st; end is end of union that starts after or overlaps st and near estimate
+                    candidates=[(a,b) for a,b in mon_ints if b>st and a<=ts+timedelta(minutes=30)]
+                    if candidates:
+                        # choose first candidate whose end after start and closest to internal end estimate
+                        cand=min(candidates, key=lambda ab: abs((ab[1]-ts).total_seconds()))
+                        end=cand[1]
+                    else:
+                        end=ts
+                else:
+                    end=ts
+                ints.append((st,end))
+    else:
+        ints=mon_ints
+    ints=merge(ints)
+    eligible=subtract(ints, c['ex']+parse_maint(id))
+    minutes=sum(math.ceil((b-a).total_seconds()/60) for a,b in eligible)
+    bands={'STANDARD':[(160,50),(80,25),(40,10)],'BUSINESS':[(80,50),(40,25),(20,10)],'ENTERPRISE':[(40,50),(20,25),(10,10)]}[c['tier']]
+    pct=0
+    for thr,p in bands:
+        if minutes>=thr: pct=p; break
+    pct=min(pct,c['cap'])
+    return {'eligible_downtime_minutes':minutes,'sla_breached':pct>0,'credit_percent':pct,'credit_usd_cents':c['fee']*pct//100,'_ints':ints,'_elig':eligible,'_mon':mon_ints}
+
+for i in range(30):
+    id=f'scf_{i:03d}'
+    ans=solve(id)
+    dbg={k:v for k,v in ans.items() if k.startswith('_')}
+    for k in list(ans):
+        if k.startswith('_'): ans.pop(k)
+    print(id, ans, dbg)
+PY
+python /tmp/solve_scf.py" in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_2__solved_by__gpt_5_5
+ succeeded in 0ms:
+scf_000 {'eligible_downtime_minutes': 88, 'sla_breached': True, 'credit_percent': 25, 'credit_usd_cents': 37475} {'_ints': [(datetime.datetime(2026, 4, 6, 9, 19, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 6, 9, 46, 43, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 6, 14, 56, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 6, 15, 13, 58, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 6, 17, 21, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 6, 18, 2, 14, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 4, 6, 9, 19, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 6, 9, 46, 43, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 6, 14, 56, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 6, 15, 13, 58, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 6, 17, 21, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 6, 18, 2, 14, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 4, 6, 9, 20, 37, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 6, 9, 44, 35, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 6, 14, 59, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 6, 15, 13, 58, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 6, 17, 23, 25, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 6, 18, 2, 14, tzinfo=datetime.timezone.utc))]}
+scf_001 {'eligible_downtime_minutes': 42, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 24990} {'_ints': [(datetime.datetime(2026, 3, 27, 8, 8, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 27, 8, 13, 59, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 28, 0, 23, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 28, 0, 58, 55, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 3, 27, 8, 8, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 27, 8, 13, 59, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 28, 0, 23, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 28, 0, 58, 55, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 3, 27, 8, 10, 38, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 27, 8, 13, 59, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 28, 0, 26, 10, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 28, 0, 58, 55, tzinfo=datetime.timezone.utc))]}
+scf_002 {'eligible_downtime_minutes': 139, 'sla_breached': True, 'credit_percent': 25, 'credit_usd_cents': 12475} {'_ints': [(datetime.datetime(2026, 1, 14, 18, 51, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 14, 19, 39, 11, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 15, 5, 4, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 15, 5, 25, 3, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 16, 3, 43, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 16, 4, 36, 17, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 16, 16, 47, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 16, 17, 0, 30, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 1, 14, 18, 51, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 14, 19, 39, 11, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 15, 5, 4, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 15, 5, 25, 3, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 16, 3, 43, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 16, 4, 36, 17, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 16, 16, 47, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 16, 17, 0, 30, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 1, 14, 18, 50, 27, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 14, 19, 39, 11, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 15, 5, 4, 8, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 15, 5, 19, 34, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 16, 3, 42, 34, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 16, 4, 30, 42, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 16, 16, 47, 13, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 16, 17, 0, 30, tzinfo=datetime.timezone.utc))]}
+scf_003 {'eligible_downtime_minutes': 137, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 9990} {'_ints': [(datetime.datetime(2026, 4, 3, 5, 2, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 3, 5, 29, 30, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 3, 5, 47, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 3, 6, 19, 2, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 3, 7, 17, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 3, 8, 1, 31, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 3, 9, 32, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 3, 10, 2, 31, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 4, 3, 5, 2, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 3, 5, 29, 30, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 3, 5, 47, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 3, 6, 19, 2, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 3, 7, 17, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 3, 8, 1, 31, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 3, 9, 32, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 3, 10, 2, 31, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 4, 3, 5, 11, 6, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 3, 5, 33, 21, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 3, 5, 55, 21, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 3, 6, 19, 2, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 3, 7, 25, 5, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 3, 8, 5, 51, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 3, 9, 41, 20, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 3, 10, 2, 31, tzinfo=datetime.timezone.utc))]}
+scf_004 {'eligible_downtime_minutes': 80, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 39990} {'_ints': [(datetime.datetime(2026, 4, 23, 12, 48, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 23, 13, 9, 41, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 23, 13, 15, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 23, 14, 12, 22, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 4, 23, 12, 48, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 23, 13, 9, 41, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 23, 13, 15, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 23, 14, 12, 22, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 4, 23, 12, 55, 28, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 23, 13, 15, 41, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 23, 13, 23, 25, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 23, 14, 12, 22, tzinfo=datetime.timezone.utc))]}
+scf_005 {'eligible_downtime_minutes': 107, 'sla_breached': True, 'credit_percent': 25, 'credit_usd_cents': 37475} {'_ints': [(datetime.datetime(2026, 2, 13, 4, 16, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 13, 4, 58, 11, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 14, 4, 47, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 14, 5, 26, 31, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 15, 0, 23, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 15, 1, 6, 50, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 2, 13, 4, 16, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 13, 4, 58, 11, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 14, 4, 47, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 14, 4, 50, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 14, 5, 10, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 14, 5, 26, 31, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 15, 0, 23, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 15, 1, 6, 50, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 2, 13, 4, 18, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 13, 4, 58, 11, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 14, 4, 48, 28, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 14, 5, 22, 25, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 15, 0, 23, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 15, 0, 32, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 15, 0, 34, 6, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 15, 0, 38, 17, tzinfo=datetime.timezone.utc))]}
+scf_006 {'eligible_downtime_minutes': 69, 'sla_breached': True, 'credit_percent': 25, 'credit_usd_cents': 37475} {'_ints': [(datetime.datetime(2026, 4, 28, 2, 56, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 28, 3, 12, 17, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 28, 17, 3, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 28, 17, 37, 30, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 28, 20, 47, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 28, 21, 3, 13, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 4, 28, 2, 56, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 28, 3, 12, 17, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 28, 17, 3, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 28, 17, 37, 30, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 28, 20, 47, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 28, 21, 3, 13, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 4, 28, 2, 58, 22, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 28, 3, 8, 4, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 28, 17, 3, 25, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 28, 17, 37, 30, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 28, 20, 49, 5, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 28, 21, 2, 13, tzinfo=datetime.timezone.utc))]}
+scf_007 {'eligible_downtime_minutes': 47, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 14990} {'_ints': [(datetime.datetime(2026, 1, 28, 20, 45, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 28, 21, 5, 26, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 29, 5, 16, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 29, 5, 41, 15, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 1, 28, 20, 45, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 28, 21, 5, 26, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 29, 5, 16, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 29, 5, 41, 15, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 1, 28, 20, 48, 26, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 28, 21, 5, 26, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 29, 5, 19, 30, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 29, 5, 41, 15, tzinfo=datetime.timezone.utc))]}
+scf_008 {'eligible_downtime_minutes': 73, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 24990} {'_ints': [(datetime.datetime(2026, 1, 20, 10, 12, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 20, 10, 39, 32, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 20, 20, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 20, 21, 19, 28, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 1, 20, 10, 12, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 20, 10, 39, 32, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 20, 20, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 20, 21, 19, 28, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 1, 20, 10, 11, 28, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 20, 10, 36, 6, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 20, 20, 34, 6, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 20, 21, 14, 25, tzinfo=datetime.timezone.utc))]}
+scf_009 {'eligible_downtime_minutes': 107, 'sla_breached': True, 'credit_percent': 50, 'credit_usd_cents': 24950} {'_ints': [(datetime.datetime(2026, 1, 3, 21, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 3, 21, 38, 5, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 4, 4, 7, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 4, 4, 47, 32, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 4, 5, 32, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 4, 6, 11, 36, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 5, 3, 21, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 5, 3, 42, 47, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 1, 3, 21, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 3, 21, 38, 5, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 4, 4, 7, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 4, 4, 47, 32, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 4, 5, 32, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 4, 6, 11, 36, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 5, 3, 21, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 5, 3, 42, 47, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 1, 3, 21, 35, 10, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 3, 21, 38, 5, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 4, 4, 6, 20, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 4, 4, 47, 32, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 4, 5, 31, 40, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 4, 6, 6, 21, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 5, 3, 20, 7, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 5, 3, 42, 47, tzinfo=datetime.timezone.utc))]}
+scf_010 {'eligible_downtime_minutes': 181, 'sla_breached': True, 'credit_percent': 25, 'credit_usd_cents': 24975} {'_ints': [(datetime.datetime(2026, 4, 4, 6, 4, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 4, 6, 57, 40, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 4, 18, 41, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 4, 19, 17, 50, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 4, 22, 2, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 4, 22, 46, 5, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 5, 1, 24, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 5, 2, 8, 7, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 4, 4, 6, 4, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 4, 6, 57, 40, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 4, 18, 41, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 4, 19, 17, 50, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 4, 22, 2, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 4, 22, 46, 5, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 5, 1, 24, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 5, 2, 8, 7, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 4, 4, 6, 6, 20, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 4, 6, 56, 34, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 4, 18, 44, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 4, 19, 17, 50, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 4, 22, 3, 36, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 4, 22, 42, 43, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 5, 1, 27, 37, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 5, 2, 4, 39, tzinfo=datetime.timezone.utc))]}
+scf_011 {'eligible_downtime_minutes': 110, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 24990} {'_ints': [(datetime.datetime(2026, 3, 13, 6, 32, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 13, 7, 16, 20, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 13, 8, 30, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 13, 8, 57, 44, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 14, 12, 38, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 14, 13, 14, 49, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 3, 13, 6, 32, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 13, 7, 16, 20, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 13, 8, 30, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 13, 8, 57, 44, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 14, 12, 38, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 14, 13, 14, 49, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 3, 13, 6, 30, 21, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 13, 7, 12, 20, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 13, 8, 27, 34, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 13, 8, 51, 44, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 14, 12, 35, 13, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 14, 13, 14, 49, tzinfo=datetime.timezone.utc))]}
+scf_012 {'eligible_downtime_minutes': 109, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 39990} {'_ints': [(datetime.datetime(2026, 4, 13, 12, 33, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 13, 13, 0, 33, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 13, 19, 49, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 13, 20, 24, 57, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 14, 1, 17, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 14, 2, 1, 29, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 4, 13, 12, 33, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 13, 13, 0, 33, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 13, 19, 49, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 13, 20, 24, 57, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 14, 1, 17, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 14, 2, 1, 29, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 4, 13, 12, 36, 1, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 13, 12, 59, 9, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 13, 19, 51, 30, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 13, 20, 24, 57, tzinfo=datetime.timezone.utc))]}
+scf_013 {'eligible_downtime_minutes': 85, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 4990} {'_ints': [(datetime.datetime(2026, 2, 22, 21, 8, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 22, 21, 14, 21, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 23, 3, 48, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 23, 4, 21, 13, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 24, 6, 25, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 24, 7, 8, 1, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 2, 22, 21, 8, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 22, 21, 14, 21, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 23, 3, 48, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 23, 4, 21, 13, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 24, 6, 25, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 24, 7, 8, 1, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 2, 22, 21, 12, 6, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 22, 21, 13, 51, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 23, 3, 53, 10, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 23, 4, 21, 13, tzinfo=datetime.timezone.utc))]}
+scf_014 {'eligible_downtime_minutes': 19, 'sla_breached': False, 'credit_percent': 0, 'credit_usd_cents': 0} {'_ints': [(datetime.datetime(2026, 3, 6, 20, 15, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 6, 20, 27, 25, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 7, 1, 19, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 7, 1, 24, 40, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 3, 6, 20, 15, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 6, 20, 27, 25, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 7, 1, 19, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 7, 1, 24, 40, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 3, 6, 20, 15, 5, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 6, 20, 24, 52, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 7, 1, 20, 14, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 7, 1, 24, 40, tzinfo=datetime.timezone.utc))]}
+scf_015 {'eligible_downtime_minutes': 24, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 24990} {'_ints': [(datetime.datetime(2026, 2, 7, 3, 0, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 3, 6, 5, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 7, 8, 4, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 8, 20, 17, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 2, 7, 3, 0, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 3, 6, 5, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 7, 8, 4, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 8, 20, 17, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 2, 7, 3, 2, 40, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 3, 3, 3, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 7, 8, 5, 38, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 8, 17, 50, tzinfo=datetime.timezone.utc))]}
+scf_016 {'eligible_downtime_minutes': 78, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 14990} {'_ints': [(datetime.datetime(2026, 4, 28, 4, 15, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 28, 4, 48, 26, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 29, 11, 43, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 29, 12, 26, 3, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 4, 28, 4, 15, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 28, 4, 48, 26, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 29, 11, 43, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 29, 12, 26, 3, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 4, 28, 4, 18, 49, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 28, 4, 48, 46, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 29, 11, 48, 5, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 29, 12, 26, 3, tzinfo=datetime.timezone.utc))]}
+scf_017 {'eligible_downtime_minutes': 74, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 14990} {'_ints': [(datetime.datetime(2026, 1, 25, 4, 40, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 25, 4, 48, 27, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 25, 15, 14, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 25, 15, 22, 49, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 25, 23, 42, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 26, 0, 15, 4, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 26, 8, 7, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 26, 8, 28, 6, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 1, 25, 4, 40, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 25, 4, 48, 27, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 25, 15, 14, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 25, 15, 22, 49, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 25, 23, 42, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 26, 0, 15, 4, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 26, 8, 7, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 26, 8, 28, 6, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 1, 25, 4, 44, 19, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 25, 4, 48, 27, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 25, 15, 18, 7, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 25, 15, 24, 24, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 25, 23, 47, 11, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 26, 0, 16, 27, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 26, 8, 11, 25, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 26, 8, 28, 6, tzinfo=datetime.timezone.utc))]}
+scf_018 {'eligible_downtime_minutes': 107, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 14990} {'_ints': [(datetime.datetime(2026, 4, 10, 21, 19, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 10, 22, 2, 12, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 11, 4, 29, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 11, 5, 13, 3, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 12, 0, 20, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 12, 0, 26, 20, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 12, 7, 49, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 12, 8, 16, 15, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 4, 10, 21, 36, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 10, 22, 2, 12, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 11, 4, 29, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 11, 5, 13, 3, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 12, 0, 20, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 12, 0, 26, 20, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 12, 7, 49, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 12, 8, 16, 15, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 4, 10, 21, 23, 3, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 10, 22, 2, 12, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 11, 4, 31, 52, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 11, 5, 13, 3, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 12, 0, 22, 56, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 12, 0, 26, 20, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 12, 7, 51, 50, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 12, 8, 14, 14, tzinfo=datetime.timezone.utc))]}
+scf_019 {'eligible_downtime_minutes': 32, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 9990} {'_ints': [(datetime.datetime(2026, 1, 8, 15, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 8, 16, 28, 7, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 9, 18, 56, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 9, 19, 2, 3, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 1, 8, 15, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 8, 16, 0, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 9, 18, 56, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 9, 19, 2, 3, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 1, 8, 15, 41, 38, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 8, 16, 29, 32, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 9, 19, 0, 39, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 9, 19, 2, tzinfo=datetime.timezone.utc))]}
+scf_020 {'eligible_downtime_minutes': 50, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 24990} {'_ints': [(datetime.datetime(2026, 3, 26, 2, 32, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 26, 2, 53, 10, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 26, 14, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 26, 15, 2, 10, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 3, 26, 2, 32, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 26, 2, 53, 10, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 26, 14, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 26, 15, 2, 10, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 3, 26, 14, 37, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 26, 14, 58, 41, tzinfo=datetime.timezone.utc))]}
+scf_021 {'eligible_downtime_minutes': 90, 'sla_breached': True, 'credit_percent': 50, 'credit_usd_cents': 24950} {'_ints': [(datetime.datetime(2026, 4, 17, 5, 20, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 17, 6, 13, 16, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 17, 16, 2, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 17, 16, 12, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 17, 18, 56, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 17, 19, 15, 7, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 18, 16, 14, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 18, 16, 19, 16, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 4, 17, 5, 20, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 17, 6, 13, 16, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 17, 16, 2, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 17, 16, 12, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 17, 18, 56, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 17, 19, 15, 7, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 18, 16, 14, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 18, 16, 19, 16, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 4, 17, 5, 22, 8, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 17, 6, 11, 40, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 17, 16, 5, 18, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 17, 16, 12, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 17, 18, 58, 25, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 17, 19, 15, 7, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 18, 16, 16, 25, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 18, 16, 19, 16, tzinfo=datetime.timezone.utc))]}
+scf_022 {'eligible_downtime_minutes': 77, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 4990} {'_ints': [(datetime.datetime(2026, 4, 14, 3, 44, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 14, 3, 50, 16, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 14, 12, 21, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 14, 12, 44, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 15, 8, 22, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 15, 8, 55, 37, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 15, 11, 24, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 15, 11, 36, 47, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 4, 14, 3, 44, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 14, 3, 50, 16, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 14, 12, 21, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 14, 12, 44, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 15, 8, 22, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 15, 8, 55, 37, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 15, 11, 24, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 15, 11, 36, 47, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 4, 14, 3, 43, 21, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 14, 3, 46, 16, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 14, 12, 19, 37, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 14, 12, 44, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 15, 8, 19, 37, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 15, 8, 49, 33, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 15, 11, 21, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 15, 11, 30, 25, tzinfo=datetime.timezone.utc))]}
+scf_023 {'eligible_downtime_minutes': 143, 'sla_breached': True, 'credit_percent': 25, 'credit_usd_cents': 12475} {'_ints': [(datetime.datetime(2026, 2, 10, 11, 13, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 10, 12, 6, 35, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 11, 7, 7, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 11, 7, 28, 25, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 11, 9, 40, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 11, 9, 52, 13, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 11, 11, 27, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 11, 12, 20, 38, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 2, 10, 11, 13, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 10, 12, 6, 35, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 11, 7, 7, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 11, 7, 28, 25, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 11, 9, 40, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 11, 9, 52, 13, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 11, 11, 27, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 11, 12, 20, 38, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 2, 10, 11, 13, 9, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 10, 12, 5, 35, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 11, 7, 9, 17, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 11, 7, 27, 25, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 11, 9, 41, 28, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 11, 9, 49, 41, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 11, 11, 28, 19, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 11, 12, 17, 3, tzinfo=datetime.timezone.utc))]}
+scf_024 {'eligible_downtime_minutes': 47, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 39990} {'_ints': [(datetime.datetime(2026, 1, 26, 16, 54, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 26, 17, 9, 1, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 28, 5, 0, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 28, 5, 30, 14, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 1, 26, 16, 54, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 26, 17, 9, 1, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 28, 5, 0, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 28, 5, 30, 14, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 1, 28, 5, 7, 23, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 28, 5, 30, 14, tzinfo=datetime.timezone.utc))]}
+scf_025 {'eligible_downtime_minutes': 77, 'sla_breached': True, 'credit_percent': 25, 'credit_usd_cents': 12475} {'_ints': [(datetime.datetime(2026, 2, 2, 19, 10, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 2, 19, 49, 35, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 3, 8, 29, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 3, 9, 5, 12, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 2, 2, 19, 10, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 2, 19, 49, 35, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 3, 8, 29, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 3, 9, 5, 12, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 2, 2, 19, 17, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 2, 19, 55, 35, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 3, 8, 38, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 3, 9, 5, 12, tzinfo=datetime.timezone.utc))]}
+scf_026 {'eligible_downtime_minutes': 62, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 4990} {'_ints': [(datetime.datetime(2026, 2, 28, 13, 14, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 28, 13, 24, 17, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 1, 20, 12, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 1, 20, 28, 29, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 1, 21, 49, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 1, 22, 22, 19, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 2, 28, 13, 14, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 28, 13, 24, 17, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 1, 20, 12, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 1, 20, 28, 29, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 1, 21, 49, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 1, 22, 22, 19, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 2, 28, 13, 18, 2, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 28, 13, 24, 17, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 1, 21, 55, 1, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 1, 22, 22, 55, tzinfo=datetime.timezone.utc))]}
+scf_027 {'eligible_downtime_minutes': 138, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 24990} {'_ints': [(datetime.datetime(2026, 2, 6, 22, 29, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 6, 22, 40, 28, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 7, 1, 18, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 1, 51, 6, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 7, 3, 40, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 4, 19, 40, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 7, 8, 4, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 8, 55, 39, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 2, 6, 22, 29, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 6, 22, 40, 28, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 7, 1, 18, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 1, 51, 6, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 7, 3, 40, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 4, 19, 40, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 7, 8, 4, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 8, 55, 39, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 2, 6, 22, 31, 31, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 6, 22, 40, 28, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 7, 1, 21, 39, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 1, 51, 11, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 7, 3, 43, 32, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 4, 17, 31, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 7, 8, 8, 2, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 8, 55, 39, tzinfo=datetime.timezone.utc))]}
+scf_028 {'eligible_downtime_minutes': 150, 'sla_breached': True, 'credit_percent': 25, 'credit_usd_cents': 24975} {'_ints': [(datetime.datetime(2026, 3, 5, 16, 52, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 5, 17, 20, 58, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 5, 18, 19, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 5, 19, 12, 44, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 5, 22, 59, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 5, 23, 20, 32, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 6, 13, 50, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 6, 14, 34, 49, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 3, 5, 16, 52, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 5, 17, 20, 58, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 5, 18, 19, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 5, 19, 12, 44, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 5, 22, 59, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 5, 23, 20, 32, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 6, 13, 50, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 6, 14, 34, 49, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 3, 5, 16, 51, 14, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 5, 17, 20, 58, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 5, 18, 18, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 5, 19, 7, 16, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 5, 22, 59, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 5, 23, 17, 15, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 6, 13, 50, 37, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 6, 14, 29, 18, tzinfo=datetime.timezone.utc))]}
+scf_029 {'eligible_downtime_minutes': 52, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 4990} {'_ints': [(datetime.datetime(2026, 4, 12, 2, 18, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 12, 2, 51, 23, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 13, 9, 11, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 13, 9, 28, 41, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 4, 12, 2, 18, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 12, 2, 51, 23, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 13, 9, 11, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 13, 9, 28, 41, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 4, 12, 2, 21, 19, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 12, 2, 48, 8, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 13, 9, 12, 7, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 13, 9, 28, 41, tzinfo=datetime.timezone.utc))]}
+
+2026-05-24T01:24:42.078746Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:24:42.078759Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:24:42.079193Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:24:42.079197Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:24:42.079657Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:24:42.079664Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:24:42.080106Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:24:42.080110Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:24:42.080536Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:24:42.080539Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:24:42.081526Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:24:42.081533Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+exec
+/bin/zsh -lc 'for id in items/scf_*; do echo "## $id"; sed -n '"'/Format:/,"'$p'"' \""'$id/internal_timeline.md" | sed -n '"'3,12p'; done" in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_2__solved_by__gpt_5_5
+ succeeded in 0ms:
+## items/scf_000
+2026-04-06T09:19:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-04-06T09:46:43Z - Incident resolved; service OK
+2026-04-06T14:56:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-04-06T15:19:16Z - Incident end estimate; use monitoring log for exact end
+2026-04-06T17:21:00Z - Incident start noted (UNAVAILABLE)
+2026-04-06T18:07:34Z - Incident end estimate; use monitoring log for exact end
+## items/scf_001
+2026-03-27T08:08:00Z - Incident start noted (UNAVAILABLE)
+2026-03-27T08:17:21Z - Incident end estimate; use monitoring log for exact end
+2026-03-28T00:23:00Z - Incident start noted (UNAVAILABLE)
+2026-03-28T01:04:11Z - Incident end estimate; use monitoring log for exact end
+## items/scf_002
+2026-01-14T18:51:00Z - Incident start noted (UNAVAILABLE)
+2026-01-14T19:43:13Z - Incident end estimate; use monitoring log for exact end
+2026-01-15T05:04:00Z - Incident start noted (UNAVAILABLE)
+2026-01-15T05:25:03Z - Incident resolved; service OK
+2026-01-16T03:43:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-01-16T04:36:17Z - Incident resolved; service OK
+2026-01-16T16:47:00Z - Incident start noted (UNAVAILABLE)
+2026-01-16T17:02:35Z - Incident end estimate; use monitoring log for exact end
+## items/scf_003
+2026-04-03T07:17:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-04-03T08:01:31Z - Incident resolved; service OK
+2026-04-03T05:02:00Z - Incident start noted (UNAVAILABLE)
+2026-04-03T05:29:30Z - Incident resolved; service OK
+2026-04-03T05:47:00Z - Incident start noted (UNAVAILABLE)
+2026-04-03T06:16:02Z - Incident end estimate; use monitoring log for exact end
+2026-04-03T09:32:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-04-03T10:01:01Z - Incident end estimate; use monitoring log for exact end
+## items/scf_004
+2026-04-23T12:48:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-04-23T13:09:41Z - Incident resolved; service OK
+2026-04-23T13:15:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-04-23T14:09:47Z - Incident end estimate; use monitoring log for exact end
+## items/scf_005
+2026-02-15T00:33:00Z - Incident start noted (UNAVAILABLE)
+2026-02-15T01:06:50Z - Incident resolved; service OK
+2026-02-14T04:47:00Z - Incident start noted (UNAVAILABLE)
+2026-02-14T05:26:31Z - Incident resolved; service OK
+2026-02-15T00:23:00Z - Incident start noted (UNAVAILABLE)
+2026-02-15T00:38:17Z - Incident end estimate; use monitoring log for exact end
+2026-02-13T04:16:00Z - Incident start noted (UNAVAILABLE)
+2026-02-13T04:59:36Z - Incident end estimate; use monitoring log for exact end
+## items/scf_006
+2026-04-28T20:47:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-04-28T21:03:13Z - Incident resolved; service OK
+2026-04-28T02:56:00Z - Incident start noted (UNAVAILABLE)
+2026-04-28T03:12:17Z - Incident resolved; service OK
+2026-04-28T17:03:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-04-28T17:41:10Z - Incident end estimate; use monitoring log for exact end
+## items/scf_007
+2026-01-28T20:45:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-01-28T21:05:15Z - Incident end estimate; use monitoring log for exact end
+2026-01-29T05:16:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-01-29T05:41:51Z - Incident end estimate; use monitoring log for exact end
+## items/scf_008
+2026-01-20T10:12:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-01-20T10:39:32Z - Incident resolved; service OK
+2026-01-20T20:35:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-01-20T21:19:28Z - Incident resolved; service OK
+## items/scf_009
+2026-01-03T21:35:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-01-03T21:43:36Z - Incident end estimate; use monitoring log for exact end
+2026-01-05T03:21:00Z - Incident start noted (UNAVAILABLE)
+2026-01-05T03:46:54Z - Incident end estimate; use monitoring log for exact end
+2026-01-04T05:32:00Z - Incident start noted (UNAVAILABLE)
+2026-01-04T06:11:36Z - Incident resolved; service OK
+2026-01-04T04:07:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-01-04T04:50:50Z - Incident end estimate; use monitoring log for exact end
+## items/scf_010
+2026-04-04T18:41:00Z - Incident start noted (UNAVAILABLE)
+2026-04-04T19:21:16Z - Incident end estimate; use monitoring log for exact end
+2026-04-04T06:04:00Z - Incident start noted (UNAVAILABLE)
+2026-04-04T06:57:40Z - Incident resolved; service OK
+2026-04-05T01:24:00Z - Incident start noted (UNAVAILABLE)
+2026-04-05T02:08:07Z - Incident resolved; service OK
+2026-04-04T22:02:00Z - Incident start noted (UNAVAILABLE)
+2026-04-04T22:46:05Z - Incident resolved; service OK
+## items/scf_011
+2026-03-13T06:32:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-03-13T07:16:20Z - Incident resolved; service OK
+2026-03-14T12:38:00Z - Incident start noted (UNAVAILABLE)
+2026-03-14T13:20:44Z - Incident end estimate; use monitoring log for exact end
+2026-03-13T08:30:00Z - Incident start noted (UNAVAILABLE)
+2026-03-13T08:57:44Z - Incident resolved; service OK
+## items/scf_012
+2026-04-14T01:17:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-04-14T02:01:29Z - Incident resolved; service OK
+2026-04-13T12:33:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-04-13T13:00:33Z - Incident resolved; service OK
+2026-04-13T19:49:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-04-13T20:29:15Z - Incident end estimate; use monitoring log for exact end
+## items/scf_013
+2026-02-23T03:48:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-02-23T04:20:03Z - Incident end estimate; use monitoring log for exact end
+2026-02-22T21:08:00Z - Incident start noted (UNAVAILABLE)
+2026-02-22T21:14:21Z - Incident resolved; service OK
+2026-02-24T06:25:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-02-24T07:08:01Z - Incident end estimate; use monitoring log for exact end
+## items/scf_014
+2026-03-07T01:19:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-03-07T01:28:50Z - Incident end estimate; use monitoring log for exact end
+2026-03-06T20:15:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-03-06T20:27:25Z - Incident resolved; service OK
+## items/scf_015
+2026-02-07T08:04:00Z - Incident start noted (UNAVAILABLE)
+2026-02-07T08:20:17Z - Incident resolved; service OK
+2026-02-07T03:00:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-02-07T03:06:05Z - Incident resolved; service OK
+## items/scf_016
+2026-04-29T11:43:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-04-29T12:28:05Z - Incident end estimate; use monitoring log for exact end
+2026-04-28T04:15:00Z - Incident start noted (UNAVAILABLE)
+2026-04-28T04:48:26Z - Incident resolved; service OK
+## items/scf_017
+2026-01-25T23:42:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-01-26T00:15:04Z - Incident resolved; service OK
+2026-01-26T08:07:00Z - Incident start noted (UNAVAILABLE)
+2026-01-26T08:30:28Z - Incident end estimate; use monitoring log for exact end
+2026-01-25T15:14:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-01-25T15:22:49Z - Incident resolved; service OK
+2026-01-25T04:40:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-01-25T04:45:44Z - Incident end estimate; use monitoring log for exact end
+## items/scf_018
+2026-04-12T00:20:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-04-12T00:28:08Z - Incident end estimate; use monitoring log for exact end
+2026-04-12T07:49:00Z - Incident start noted (UNAVAILABLE)
+2026-04-12T08:16:15Z - Incident resolved; service OK
+2026-04-10T21:19:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-04-10T22:05:44Z - Incident end estimate; use monitoring log for exact end
+2026-04-11T04:29:00Z - Incident start noted (UNAVAILABLE)
+2026-04-11T05:14:12Z - Incident end estimate; use monitoring log for exact end
+## items/scf_019
+2026-01-08T15:35:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-01-08T16:28:07Z - Incident resolved; service OK
+2026-01-09T18:56:00Z - Incident start noted (UNAVAILABLE)
+2026-01-09T19:02:03Z - Incident resolved; service OK
+## items/scf_020
+2026-03-26T02:32:00Z - Incident start noted (UNAVAILABLE)
+2026-03-26T02:53:10Z - Incident resolved; service OK
+2026-03-26T14:35:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-03-26T15:02:10Z - Incident resolved; service OK
+## items/scf_021
+2026-04-17T16:02:00Z - Incident start noted (UNAVAILABLE)
+2026-04-17T16:12:58Z - Incident end estimate; use monitoring log for exact end
+2026-04-18T16:14:00Z - Incident start noted (UNAVAILABLE)
+2026-04-18T16:21:16Z - Incident end estimate; use monitoring log for exact end
+2026-04-17T18:56:00Z - Incident start noted (UNAVAILABLE)
+2026-04-17T19:19:12Z - Incident end estimate; use monitoring log for exact end
+2026-04-17T05:20:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-04-17T06:13:16Z - Incident resolved; service OK
+## items/scf_022
+2026-04-15T08:22:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-04-15T08:55:37Z - Incident resolved; service OK
+2026-04-14T12:21:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-04-14T12:47:00Z - Incident end estimate; use monitoring log for exact end
+2026-04-14T03:44:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-04-14T03:50:16Z - Incident resolved; service OK
+2026-04-15T11:24:00Z - Incident start noted (UNAVAILABLE)
+2026-04-15T11:36:47Z - Incident resolved; service OK
+## items/scf_023
+2026-02-10T11:13:00Z - Incident start noted (UNAVAILABLE)
+2026-02-10T12:06:35Z - Incident resolved; service OK
+2026-02-11T07:07:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-02-11T07:28:25Z - Incident resolved; service OK
+2026-02-11T09:40:00Z - Incident start noted (UNAVAILABLE)
+2026-02-11T09:52:13Z - Incident resolved; service OK
+2026-02-11T11:27:00Z - Incident start noted (UNAVAILABLE)
+2026-02-11T12:20:38Z - Incident resolved; service OK
+## items/scf_024
+2026-01-28T05:00:00Z - Incident start noted (UNAVAILABLE)
+2026-01-28T05:26:07Z - Incident end estimate; use monitoring log for exact end
+2026-01-26T16:54:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-01-26T17:09:01Z - Incident end estimate; use monitoring log for exact end
+## items/scf_025
+2026-02-03T08:29:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-02-03T09:04:17Z - Incident end estimate; use monitoring log for exact end
+2026-02-02T19:10:00Z - Incident start noted (UNAVAILABLE)
+2026-02-02T19:49:35Z - Incident resolved; service OK
+## items/scf_026
+2026-03-01T20:12:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-03-01T20:28:29Z - Incident resolved; service OK
+2026-02-28T13:14:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-02-28T13:21:32Z - Incident end estimate; use monitoring log for exact end
+2026-03-01T21:49:00Z - Incident start noted (UNAVAILABLE)
+2026-03-01T22:22:19Z - Incident resolved; service OK
+## items/scf_027
+2026-02-07T03:40:00Z - Incident start noted (UNAVAILABLE)
+2026-02-07T04:19:40Z - Incident resolved; service OK
+2026-02-06T22:29:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-02-06T22:40:30Z - Incident end estimate; use monitoring log for exact end
+2026-02-07T01:18:00Z - Incident start noted (UNAVAILABLE)
+2026-02-07T01:51:06Z - Incident resolved; service OK
+2026-02-07T08:04:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-02-07T08:56:00Z - Incident end estimate; use monitoring log for exact end
+## items/scf_028
+2026-03-06T13:50:00Z - Incident start noted (UNAVAILABLE)
+2026-03-06T14:34:49Z - Incident resolved; service OK
+2026-03-05T18:19:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-03-05T19:12:44Z - Incident resolved; service OK
+2026-03-05T16:52:00Z - Incident start noted (UNAVAILABLE)
+2026-03-05T17:24:16Z - Incident end estimate; use monitoring log for exact end
+2026-03-05T22:59:00Z - Incident start noted (UNAVAILABLE)
+2026-03-05T23:20:32Z - Incident resolved; service OK
+## items/scf_029
+2026-04-13T09:11:00Z - Incident start noted (UNAVAILABLE)
+2026-04-13T09:31:10Z - Incident end estimate; use monitoring log for exact end
+2026-04-12T02:18:00Z - Incident start noted (SEVERE_DEGRADED)
+2026-04-12T02:51:23Z - Incident resolved; service OK
+
+2026-05-24T01:24:49.782058Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:24:49.782072Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:24:49.782604Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:24:49.782611Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:24:49.783058Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:24:49.783062Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:24:49.783501Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:24:49.783504Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:24:49.783929Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:24:49.783932Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:24:49.784877Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:24:49.784883Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+exec
+/bin/zsh -lc "python - <<'PY'
+import importlib.util, json
+spec=importlib.util.spec_from_file_location('s','/tmp/solve_scf.py'); s=importlib.util.module_from_spec(spec); spec.loader.exec_module(s)
+# above printed debug, ignore impossible here
+PY" in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_2__solved_by__gpt_5_5
+ succeeded in 0ms:
+scf_000 {'eligible_downtime_minutes': 88, 'sla_breached': True, 'credit_percent': 25, 'credit_usd_cents': 37475} {'_ints': [(datetime.datetime(2026, 4, 6, 9, 19, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 6, 9, 46, 43, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 6, 14, 56, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 6, 15, 13, 58, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 6, 17, 21, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 6, 18, 2, 14, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 4, 6, 9, 19, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 6, 9, 46, 43, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 6, 14, 56, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 6, 15, 13, 58, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 6, 17, 21, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 6, 18, 2, 14, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 4, 6, 9, 20, 37, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 6, 9, 44, 35, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 6, 14, 59, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 6, 15, 13, 58, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 6, 17, 23, 25, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 6, 18, 2, 14, tzinfo=datetime.timezone.utc))]}
+scf_001 {'eligible_downtime_minutes': 42, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 24990} {'_ints': [(datetime.datetime(2026, 3, 27, 8, 8, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 27, 8, 13, 59, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 28, 0, 23, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 28, 0, 58, 55, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 3, 27, 8, 8, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 27, 8, 13, 59, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 28, 0, 23, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 28, 0, 58, 55, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 3, 27, 8, 10, 38, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 27, 8, 13, 59, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 28, 0, 26, 10, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 28, 0, 58, 55, tzinfo=datetime.timezone.utc))]}
+scf_002 {'eligible_downtime_minutes': 139, 'sla_breached': True, 'credit_percent': 25, 'credit_usd_cents': 12475} {'_ints': [(datetime.datetime(2026, 1, 14, 18, 51, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 14, 19, 39, 11, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 15, 5, 4, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 15, 5, 25, 3, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 16, 3, 43, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 16, 4, 36, 17, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 16, 16, 47, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 16, 17, 0, 30, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 1, 14, 18, 51, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 14, 19, 39, 11, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 15, 5, 4, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 15, 5, 25, 3, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 16, 3, 43, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 16, 4, 36, 17, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 16, 16, 47, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 16, 17, 0, 30, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 1, 14, 18, 50, 27, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 14, 19, 39, 11, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 15, 5, 4, 8, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 15, 5, 19, 34, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 16, 3, 42, 34, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 16, 4, 30, 42, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 16, 16, 47, 13, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 16, 17, 0, 30, tzinfo=datetime.timezone.utc))]}
+scf_003 {'eligible_downtime_minutes': 137, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 9990} {'_ints': [(datetime.datetime(2026, 4, 3, 5, 2, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 3, 5, 29, 30, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 3, 5, 47, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 3, 6, 19, 2, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 3, 7, 17, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 3, 8, 1, 31, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 3, 9, 32, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 3, 10, 2, 31, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 4, 3, 5, 2, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 3, 5, 29, 30, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 3, 5, 47, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 3, 6, 19, 2, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 3, 7, 17, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 3, 8, 1, 31, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 3, 9, 32, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 3, 10, 2, 31, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 4, 3, 5, 11, 6, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 3, 5, 33, 21, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 3, 5, 55, 21, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 3, 6, 19, 2, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 3, 7, 25, 5, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 3, 8, 5, 51, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 3, 9, 41, 20, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 3, 10, 2, 31, tzinfo=datetime.timezone.utc))]}
+scf_004 {'eligible_downtime_minutes': 80, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 39990} {'_ints': [(datetime.datetime(2026, 4, 23, 12, 48, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 23, 13, 9, 41, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 23, 13, 15, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 23, 14, 12, 22, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 4, 23, 12, 48, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 23, 13, 9, 41, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 23, 13, 15, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 23, 14, 12, 22, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 4, 23, 12, 55, 28, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 23, 13, 15, 41, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 23, 13, 23, 25, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 23, 14, 12, 22, tzinfo=datetime.timezone.utc))]}
+scf_005 {'eligible_downtime_minutes': 107, 'sla_breached': True, 'credit_percent': 25, 'credit_usd_cents': 37475} {'_ints': [(datetime.datetime(2026, 2, 13, 4, 16, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 13, 4, 58, 11, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 14, 4, 47, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 14, 5, 26, 31, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 15, 0, 23, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 15, 1, 6, 50, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 2, 13, 4, 16, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 13, 4, 58, 11, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 14, 4, 47, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 14, 4, 50, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 14, 5, 10, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 14, 5, 26, 31, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 15, 0, 23, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 15, 1, 6, 50, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 2, 13, 4, 18, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 13, 4, 58, 11, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 14, 4, 48, 28, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 14, 5, 22, 25, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 15, 0, 23, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 15, 0, 32, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 15, 0, 34, 6, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 15, 0, 38, 17, tzinfo=datetime.timezone.utc))]}
+scf_006 {'eligible_downtime_minutes': 69, 'sla_breached': True, 'credit_percent': 25, 'credit_usd_cents': 37475} {'_ints': [(datetime.datetime(2026, 4, 28, 2, 56, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 28, 3, 12, 17, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 28, 17, 3, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 28, 17, 37, 30, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 28, 20, 47, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 28, 21, 3, 13, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 4, 28, 2, 56, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 28, 3, 12, 17, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 28, 17, 3, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 28, 17, 37, 30, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 28, 20, 47, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 28, 21, 3, 13, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 4, 28, 2, 58, 22, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 28, 3, 8, 4, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 28, 17, 3, 25, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 28, 17, 37, 30, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 28, 20, 49, 5, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 28, 21, 2, 13, tzinfo=datetime.timezone.utc))]}
+scf_007 {'eligible_downtime_minutes': 47, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 14990} {'_ints': [(datetime.datetime(2026, 1, 28, 20, 45, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 28, 21, 5, 26, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 29, 5, 16, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 29, 5, 41, 15, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 1, 28, 20, 45, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 28, 21, 5, 26, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 29, 5, 16, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 29, 5, 41, 15, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 1, 28, 20, 48, 26, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 28, 21, 5, 26, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 29, 5, 19, 30, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 29, 5, 41, 15, tzinfo=datetime.timezone.utc))]}
+scf_008 {'eligible_downtime_minutes': 73, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 24990} {'_ints': [(datetime.datetime(2026, 1, 20, 10, 12, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 20, 10, 39, 32, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 20, 20, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 20, 21, 19, 28, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 1, 20, 10, 12, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 20, 10, 39, 32, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 20, 20, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 20, 21, 19, 28, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 1, 20, 10, 11, 28, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 20, 10, 36, 6, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 20, 20, 34, 6, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 20, 21, 14, 25, tzinfo=datetime.timezone.utc))]}
+scf_009 {'eligible_downtime_minutes': 107, 'sla_breached': True, 'credit_percent': 50, 'credit_usd_cents': 24950} {'_ints': [(datetime.datetime(2026, 1, 3, 21, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 3, 21, 38, 5, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 4, 4, 7, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 4, 4, 47, 32, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 4, 5, 32, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 4, 6, 11, 36, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 5, 3, 21, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 5, 3, 42, 47, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 1, 3, 21, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 3, 21, 38, 5, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 4, 4, 7, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 4, 4, 47, 32, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 4, 5, 32, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 4, 6, 11, 36, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 5, 3, 21, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 5, 3, 42, 47, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 1, 3, 21, 35, 10, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 3, 21, 38, 5, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 4, 4, 6, 20, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 4, 4, 47, 32, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 4, 5, 31, 40, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 4, 6, 6, 21, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 5, 3, 20, 7, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 5, 3, 42, 47, tzinfo=datetime.timezone.utc))]}
+scf_010 {'eligible_downtime_minutes': 181, 'sla_breached': True, 'credit_percent': 25, 'credit_usd_cents': 24975} {'_ints': [(datetime.datetime(2026, 4, 4, 6, 4, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 4, 6, 57, 40, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 4, 18, 41, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 4, 19, 17, 50, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 4, 22, 2, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 4, 22, 46, 5, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 5, 1, 24, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 5, 2, 8, 7, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 4, 4, 6, 4, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 4, 6, 57, 40, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 4, 18, 41, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 4, 19, 17, 50, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 4, 22, 2, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 4, 22, 46, 5, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 5, 1, 24, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 5, 2, 8, 7, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 4, 4, 6, 6, 20, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 4, 6, 56, 34, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 4, 18, 44, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 4, 19, 17, 50, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 4, 22, 3, 36, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 4, 22, 42, 43, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 5, 1, 27, 37, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 5, 2, 4, 39, tzinfo=datetime.timezone.utc))]}
+scf_011 {'eligible_downtime_minutes': 110, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 24990} {'_ints': [(datetime.datetime(2026, 3, 13, 6, 32, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 13, 7, 16, 20, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 13, 8, 30, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 13, 8, 57, 44, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 14, 12, 38, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 14, 13, 14, 49, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 3, 13, 6, 32, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 13, 7, 16, 20, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 13, 8, 30, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 13, 8, 57, 44, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 14, 12, 38, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 14, 13, 14, 49, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 3, 13, 6, 30, 21, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 13, 7, 12, 20, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 13, 8, 27, 34, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 13, 8, 51, 44, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 14, 12, 35, 13, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 14, 13, 14, 49, tzinfo=datetime.timezone.utc))]}
+scf_012 {'eligible_downtime_minutes': 109, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 39990} {'_ints': [(datetime.datetime(2026, 4, 13, 12, 33, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 13, 13, 0, 33, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 13, 19, 49, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 13, 20, 24, 57, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 14, 1, 17, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 14, 2, 1, 29, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 4, 13, 12, 33, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 13, 13, 0, 33, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 13, 19, 49, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 13, 20, 24, 57, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 14, 1, 17, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 14, 2, 1, 29, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 4, 13, 12, 36, 1, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 13, 12, 59, 9, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 13, 19, 51, 30, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 13, 20, 24, 57, tzinfo=datetime.timezone.utc))]}
+scf_013 {'eligible_downtime_minutes': 85, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 4990} {'_ints': [(datetime.datetime(2026, 2, 22, 21, 8, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 22, 21, 14, 21, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 23, 3, 48, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 23, 4, 21, 13, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 24, 6, 25, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 24, 7, 8, 1, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 2, 22, 21, 8, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 22, 21, 14, 21, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 23, 3, 48, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 23, 4, 21, 13, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 24, 6, 25, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 24, 7, 8, 1, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 2, 22, 21, 12, 6, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 22, 21, 13, 51, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 23, 3, 53, 10, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 23, 4, 21, 13, tzinfo=datetime.timezone.utc))]}
+scf_014 {'eligible_downtime_minutes': 19, 'sla_breached': False, 'credit_percent': 0, 'credit_usd_cents': 0} {'_ints': [(datetime.datetime(2026, 3, 6, 20, 15, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 6, 20, 27, 25, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 7, 1, 19, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 7, 1, 24, 40, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 3, 6, 20, 15, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 6, 20, 27, 25, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 7, 1, 19, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 7, 1, 24, 40, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 3, 6, 20, 15, 5, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 6, 20, 24, 52, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 7, 1, 20, 14, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 7, 1, 24, 40, tzinfo=datetime.timezone.utc))]}
+scf_015 {'eligible_downtime_minutes': 24, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 24990} {'_ints': [(datetime.datetime(2026, 2, 7, 3, 0, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 3, 6, 5, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 7, 8, 4, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 8, 20, 17, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 2, 7, 3, 0, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 3, 6, 5, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 7, 8, 4, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 8, 20, 17, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 2, 7, 3, 2, 40, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 3, 3, 3, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 7, 8, 5, 38, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 8, 17, 50, tzinfo=datetime.timezone.utc))]}
+scf_016 {'eligible_downtime_minutes': 78, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 14990} {'_ints': [(datetime.datetime(2026, 4, 28, 4, 15, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 28, 4, 48, 26, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 29, 11, 43, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 29, 12, 26, 3, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 4, 28, 4, 15, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 28, 4, 48, 26, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 29, 11, 43, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 29, 12, 26, 3, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 4, 28, 4, 18, 49, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 28, 4, 48, 46, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 29, 11, 48, 5, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 29, 12, 26, 3, tzinfo=datetime.timezone.utc))]}
+scf_017 {'eligible_downtime_minutes': 74, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 14990} {'_ints': [(datetime.datetime(2026, 1, 25, 4, 40, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 25, 4, 48, 27, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 25, 15, 14, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 25, 15, 22, 49, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 25, 23, 42, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 26, 0, 15, 4, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 26, 8, 7, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 26, 8, 28, 6, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 1, 25, 4, 40, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 25, 4, 48, 27, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 25, 15, 14, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 25, 15, 22, 49, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 25, 23, 42, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 26, 0, 15, 4, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 26, 8, 7, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 26, 8, 28, 6, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 1, 25, 4, 44, 19, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 25, 4, 48, 27, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 25, 15, 18, 7, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 25, 15, 24, 24, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 25, 23, 47, 11, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 26, 0, 16, 27, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 26, 8, 11, 25, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 26, 8, 28, 6, tzinfo=datetime.timezone.utc))]}
+scf_018 {'eligible_downtime_minutes': 107, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 14990} {'_ints': [(datetime.datetime(2026, 4, 10, 21, 19, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 10, 22, 2, 12, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 11, 4, 29, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 11, 5, 13, 3, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 12, 0, 20, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 12, 0, 26, 20, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 12, 7, 49, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 12, 8, 16, 15, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 4, 10, 21, 36, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 10, 22, 2, 12, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 11, 4, 29, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 11, 5, 13, 3, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 12, 0, 20, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 12, 0, 26, 20, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 12, 7, 49, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 12, 8, 16, 15, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 4, 10, 21, 23, 3, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 10, 22, 2, 12, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 11, 4, 31, 52, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 11, 5, 13, 3, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 12, 0, 22, 56, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 12, 0, 26, 20, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 12, 7, 51, 50, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 12, 8, 14, 14, tzinfo=datetime.timezone.utc))]}
+scf_019 {'eligible_downtime_minutes': 32, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 9990} {'_ints': [(datetime.datetime(2026, 1, 8, 15, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 8, 16, 28, 7, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 9, 18, 56, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 9, 19, 2, 3, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 1, 8, 15, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 8, 16, 0, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 9, 18, 56, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 9, 19, 2, 3, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 1, 8, 15, 41, 38, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 8, 16, 29, 32, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 9, 19, 0, 39, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 9, 19, 2, tzinfo=datetime.timezone.utc))]}
+scf_020 {'eligible_downtime_minutes': 50, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 24990} {'_ints': [(datetime.datetime(2026, 3, 26, 2, 32, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 26, 2, 53, 10, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 26, 14, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 26, 15, 2, 10, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 3, 26, 2, 32, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 26, 2, 53, 10, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 26, 14, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 26, 15, 2, 10, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 3, 26, 14, 37, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 26, 14, 58, 41, tzinfo=datetime.timezone.utc))]}
+scf_021 {'eligible_downtime_minutes': 90, 'sla_breached': True, 'credit_percent': 50, 'credit_usd_cents': 24950} {'_ints': [(datetime.datetime(2026, 4, 17, 5, 20, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 17, 6, 13, 16, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 17, 16, 2, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 17, 16, 12, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 17, 18, 56, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 17, 19, 15, 7, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 18, 16, 14, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 18, 16, 19, 16, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 4, 17, 5, 20, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 17, 6, 13, 16, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 17, 16, 2, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 17, 16, 12, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 17, 18, 56, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 17, 19, 15, 7, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 18, 16, 14, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 18, 16, 19, 16, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 4, 17, 5, 22, 8, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 17, 6, 11, 40, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 17, 16, 5, 18, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 17, 16, 12, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 17, 18, 58, 25, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 17, 19, 15, 7, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 18, 16, 16, 25, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 18, 16, 19, 16, tzinfo=datetime.timezone.utc))]}
+scf_022 {'eligible_downtime_minutes': 77, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 4990} {'_ints': [(datetime.datetime(2026, 4, 14, 3, 44, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 14, 3, 50, 16, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 14, 12, 21, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 14, 12, 44, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 15, 8, 22, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 15, 8, 55, 37, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 15, 11, 24, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 15, 11, 36, 47, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 4, 14, 3, 44, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 14, 3, 50, 16, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 14, 12, 21, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 14, 12, 44, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 15, 8, 22, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 15, 8, 55, 37, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 15, 11, 24, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 15, 11, 36, 47, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 4, 14, 3, 43, 21, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 14, 3, 46, 16, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 14, 12, 19, 37, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 14, 12, 44, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 15, 8, 19, 37, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 15, 8, 49, 33, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 15, 11, 21, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 15, 11, 30, 25, tzinfo=datetime.timezone.utc))]}
+scf_023 {'eligible_downtime_minutes': 143, 'sla_breached': True, 'credit_percent': 25, 'credit_usd_cents': 12475} {'_ints': [(datetime.datetime(2026, 2, 10, 11, 13, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 10, 12, 6, 35, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 11, 7, 7, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 11, 7, 28, 25, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 11, 9, 40, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 11, 9, 52, 13, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 11, 11, 27, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 11, 12, 20, 38, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 2, 10, 11, 13, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 10, 12, 6, 35, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 11, 7, 7, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 11, 7, 28, 25, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 11, 9, 40, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 11, 9, 52, 13, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 11, 11, 27, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 11, 12, 20, 38, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 2, 10, 11, 13, 9, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 10, 12, 5, 35, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 11, 7, 9, 17, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 11, 7, 27, 25, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 11, 9, 41, 28, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 11, 9, 49, 41, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 11, 11, 28, 19, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 11, 12, 17, 3, tzinfo=datetime.timezone.utc))]}
+scf_024 {'eligible_downtime_minutes': 47, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 39990} {'_ints': [(datetime.datetime(2026, 1, 26, 16, 54, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 26, 17, 9, 1, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 28, 5, 0, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 28, 5, 30, 14, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 1, 26, 16, 54, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 26, 17, 9, 1, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 1, 28, 5, 0, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 28, 5, 30, 14, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 1, 28, 5, 7, 23, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 1, 28, 5, 30, 14, tzinfo=datetime.timezone.utc))]}
+scf_025 {'eligible_downtime_minutes': 77, 'sla_breached': True, 'credit_percent': 25, 'credit_usd_cents': 12475} {'_ints': [(datetime.datetime(2026, 2, 2, 19, 10, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 2, 19, 49, 35, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 3, 8, 29, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 3, 9, 5, 12, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 2, 2, 19, 10, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 2, 19, 49, 35, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 3, 8, 29, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 3, 9, 5, 12, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 2, 2, 19, 17, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 2, 19, 55, 35, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 3, 8, 38, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 3, 9, 5, 12, tzinfo=datetime.timezone.utc))]}
+scf_026 {'eligible_downtime_minutes': 62, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 4990} {'_ints': [(datetime.datetime(2026, 2, 28, 13, 14, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 28, 13, 24, 17, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 1, 20, 12, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 1, 20, 28, 29, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 1, 21, 49, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 1, 22, 22, 19, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 2, 28, 13, 14, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 28, 13, 24, 17, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 1, 20, 12, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 1, 20, 28, 29, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 1, 21, 49, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 1, 22, 22, 19, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 2, 28, 13, 18, 2, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 28, 13, 24, 17, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 1, 21, 55, 1, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 1, 22, 22, 55, tzinfo=datetime.timezone.utc))]}
+scf_027 {'eligible_downtime_minutes': 138, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 24990} {'_ints': [(datetime.datetime(2026, 2, 6, 22, 29, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 6, 22, 40, 28, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 7, 1, 18, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 1, 51, 6, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 7, 3, 40, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 4, 19, 40, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 7, 8, 4, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 8, 55, 39, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 2, 6, 22, 29, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 6, 22, 40, 28, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 7, 1, 18, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 1, 51, 6, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 7, 3, 40, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 4, 19, 40, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 7, 8, 4, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 8, 55, 39, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 2, 6, 22, 31, 31, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 6, 22, 40, 28, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 7, 1, 21, 39, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 1, 51, 11, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 7, 3, 43, 32, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 4, 17, 31, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 2, 7, 8, 8, 2, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 2, 7, 8, 55, 39, tzinfo=datetime.timezone.utc))]}
+scf_028 {'eligible_downtime_minutes': 150, 'sla_breached': True, 'credit_percent': 25, 'credit_usd_cents': 24975} {'_ints': [(datetime.datetime(2026, 3, 5, 16, 52, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 5, 17, 20, 58, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 5, 18, 19, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 5, 19, 12, 44, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 5, 22, 59, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 5, 23, 20, 32, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 6, 13, 50, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 6, 14, 34, 49, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 3, 5, 16, 52, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 5, 17, 20, 58, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 5, 18, 19, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 5, 19, 12, 44, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 5, 22, 59, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 5, 23, 20, 32, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 6, 13, 50, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 6, 14, 34, 49, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 3, 5, 16, 51, 14, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 5, 17, 20, 58, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 5, 18, 18, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 5, 19, 7, 16, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 5, 22, 59, 35, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 5, 23, 17, 15, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 3, 6, 13, 50, 37, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 3, 6, 14, 29, 18, tzinfo=datetime.timezone.utc))]}
+scf_029 {'eligible_downtime_minutes': 52, 'sla_breached': True, 'credit_percent': 10, 'credit_usd_cents': 4990} {'_ints': [(datetime.datetime(2026, 4, 12, 2, 18, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 12, 2, 51, 23, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 13, 9, 11, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 13, 9, 28, 41, tzinfo=datetime.timezone.utc))], '_elig': [(datetime.datetime(2026, 4, 12, 2, 18, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 12, 2, 51, 23, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 13, 9, 11, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 13, 9, 28, 41, tzinfo=datetime.timezone.utc))], '_mon': [(datetime.datetime(2026, 4, 12, 2, 21, 19, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 12, 2, 48, 8, tzinfo=datetime.timezone.utc)), (datetime.datetime(2026, 4, 13, 9, 12, 7, tzinfo=datetime.timezone.utc), datetime.datetime(2026, 4, 13, 9, 28, 41, tzinfo=datetime.timezone.utc))]}
+
+2026-05-24T01:24:56.312605Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:24:56.312621Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:24:56.313111Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:24:56.313116Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:24:56.313591Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:24:56.313596Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:24:56.314081Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:24:56.314087Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:24:56.314570Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:24:56.314574Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:24:56.315768Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:24:56.315776Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+exec
+/bin/zsh -lc "python - <<'PY'
+# reuse definitions by exec only up to loop removed
+p='/tmp/solve_scf.py'
+code=open(p).read().split('for i in range(30):')[0]
+ns={}
+exec(code,ns)
+import json
+for i in range(30):
+    id=f'scf_{i:03d}'
+    ans=ns['solve'](id)
+    ans={k:v for k,v in ans.items() if not k.startswith('_')}
+    print(json.dumps({'id':id,'answer':ans}, separators=(',',':')))
+PY" in /Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/isolated_solver_gpt_5_2__solved_by__gpt_5_5
+ succeeded in 0ms:
+{"id":"scf_000","answer":{"eligible_downtime_minutes":88,"sla_breached":true,"credit_percent":25,"credit_usd_cents":37475}}
+{"id":"scf_001","answer":{"eligible_downtime_minutes":42,"sla_breached":true,"credit_percent":10,"credit_usd_cents":24990}}
+{"id":"scf_002","answer":{"eligible_downtime_minutes":139,"sla_breached":true,"credit_percent":25,"credit_usd_cents":12475}}
+{"id":"scf_003","answer":{"eligible_downtime_minutes":137,"sla_breached":true,"credit_percent":10,"credit_usd_cents":9990}}
+{"id":"scf_004","answer":{"eligible_downtime_minutes":80,"sla_breached":true,"credit_percent":10,"credit_usd_cents":39990}}
+{"id":"scf_005","answer":{"eligible_downtime_minutes":107,"sla_breached":true,"credit_percent":25,"credit_usd_cents":37475}}
+{"id":"scf_006","answer":{"eligible_downtime_minutes":69,"sla_breached":true,"credit_percent":25,"credit_usd_cents":37475}}
+{"id":"scf_007","answer":{"eligible_downtime_minutes":47,"sla_breached":true,"credit_percent":10,"credit_usd_cents":14990}}
+{"id":"scf_008","answer":{"eligible_downtime_minutes":73,"sla_breached":true,"credit_percent":10,"credit_usd_cents":24990}}
+{"id":"scf_009","answer":{"eligible_downtime_minutes":107,"sla_breached":true,"credit_percent":50,"credit_usd_cents":24950}}
+{"id":"scf_010","answer":{"eligible_downtime_minutes":181,"sla_breached":true,"credit_percent":25,"credit_usd_cents":24975}}
+{"id":"scf_011","answer":{"eligible_downtime_minutes":110,"sla_breached":true,"credit_percent":10,"credit_usd_cents":24990}}
+{"id":"scf_012","answer":{"eligible_downtime_minutes":109,"sla_breached":true,"credit_percent":10,"credit_usd_cents":39990}}
+{"id":"scf_013","answer":{"eligible_downtime_minutes":85,"sla_breached":true,"credit_percent":10,"credit_usd_cents":4990}}
+{"id":"scf_014","answer":{"eligible_downtime_minutes":19,"sla_breached":false,"credit_percent":0,"credit_usd_cents":0}}
+{"id":"scf_015","answer":{"eligible_downtime_minutes":24,"sla_breached":true,"credit_percent":10,"credit_usd_cents":24990}}
+{"id":"scf_016","answer":{"eligible_downtime_minutes":78,"sla_breached":true,"credit_percent":10,"credit_usd_cents":14990}}
+{"id":"scf_017","answer":{"eligible_downtime_minutes":74,"sla_breached":true,"credit_percent":10,"credit_usd_cents":14990}}
+{"id":"scf_018","answer":{"eligible_downtime_minutes":107,"sla_breached":true,"credit_percent":10,"credit_usd_cents":14990}}
+{"id":"scf_019","answer":{"eligible_downtime_minutes":32,"sla_breached":true,"credit_percent":10,"credit_usd_cents":9990}}
+{"id":"scf_020","answer":{"eligible_downtime_minutes":50,"sla_breached":true,"credit_percent":10,"credit_usd_cents":24990}}
+{"id":"scf_021","answer":{"eligible_downtime_minutes":90,"sla_breached":true,"credit_percent":50,"credit_usd_cents":24950}}
+{"id":"scf_022","answer":{"eligible_downtime_minutes":77,"sla_breached":true,"credit_percent":10,"credit_usd_cents":4990}}
+{"id":"scf_023","answer":{"eligible_downtime_minutes":143,"sla_breached":true,"credit_percent":25,"credit_usd_cents":12475}}
+{"id":"scf_024","answer":{"eligible_downtime_minutes":47,"sla_breached":true,"credit_percent":10,"credit_usd_cents":39990}}
+{"id":"scf_025","answer":{"eligible_downtime_minutes":77,"sla_breached":true,"credit_percent":25,"credit_usd_cents":12475}}
+{"id":"scf_026","answer":{"eligible_downtime_minutes":62,"sla_breached":true,"credit_percent":10,"credit_usd_cents":4990}}
+{"id":"scf_027","answer":{"eligible_downtime_minutes":138,"sla_breached":true,"credit_percent":10,"credit_usd_cents":24990}}
+{"id":"scf_028","answer":{"eligible_downtime_minutes":150,"sla_breached":true,"credit_percent":25,"credit_usd_cents":24975}}
+{"id":"scf_029","answer":{"eligible_downtime_minutes":52,"sla_breached":true,"credit_percent":10,"credit_usd_cents":4990}}
+
+2026-05-24T01:25:03.554854Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:25:03.554873Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:25:03.555345Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:25:03.555350Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:25:03.555922Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:25:03.555928Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:25:03.556399Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:25:03.556402Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:25:03.556940Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:25:03.556946Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+2026-05-24T01:25:03.558221Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path must not contain '..'
+2026-05-24T01:25:03.558230Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path must not contain '..'
+codex
+{"id":"scf_000","answer":{"eligible_downtime_minutes":88,"sla_breached":true,"credit_percent":25,"credit_usd_cents":37475}}
+{"id":"scf_001","answer":{"eligible_downtime_minutes":42,"sla_breached":true,"credit_percent":10,"credit_usd_cents":24990}}
+{"id":"scf_002","answer":{"eligible_downtime_minutes":139,"sla_breached":true,"credit_percent":25,"credit_usd_cents":12475}}
+{"id":"scf_003","answer":{"eligible_downtime_minutes":137,"sla_breached":true,"credit_percent":10,"credit_usd_cents":9990}}
+{"id":"scf_004","answer":{"eligible_downtime_minutes":80,"sla_breached":true,"credit_percent":10,"credit_usd_cents":39990}}
+{"id":"scf_005","answer":{"eligible_downtime_minutes":107,"sla_breached":true,"credit_percent":25,"credit_usd_cents":37475}}
+{"id":"scf_006","answer":{"eligible_downtime_minutes":69,"sla_breached":true,"credit_percent":25,"credit_usd_cents":37475}}
+{"id":"scf_007","answer":{"eligible_downtime_minutes":47,"sla_breached":true,"credit_percent":10,"credit_usd_cents":14990}}
+{"id":"scf_008","answer":{"eligible_downtime_minutes":73,"sla_breached":true,"credit_percent":10,"credit_usd_cents":24990}}
+{"id":"scf_009","answer":{"eligible_downtime_minutes":107,"sla_breached":true,"credit_percent":50,"credit_usd_cents":24950}}
+{"id":"scf_010","answer":{"eligible_downtime_minutes":181,"sla_breached":true,"credit_percent":25,"credit_usd_cents":24975}}
+{"id":"scf_011","answer":{"eligible_downtime_minutes":110,"sla_breached":true,"credit_percent":10,"credit_usd_cents":24990}}
+{"id":"scf_012","answer":{"eligible_downtime_minutes":109,"sla_breached":true,"credit_percent":10,"credit_usd_cents":39990}}
+{"id":"scf_013","answer":{"eligible_downtime_minutes":85,"sla_breached":true,"credit_percent":10,"credit_usd_cents":4990}}
+{"id":"scf_014","answer":{"eligible_downtime_minutes":19,"sla_breached":false,"credit_percent":0,"credit_usd_cents":0}}
+{"id":"scf_015","answer":{"eligible_downtime_minutes":24,"sla_breached":true,"credit_percent":10,"credit_usd_cents":24990}}
+{"id":"scf_016","answer":{"eligible_downtime_minutes":78,"sla_breached":true,"credit_percent":10,"credit_usd_cents":14990}}
+{"id":"scf_017","answer":{"eligible_downtime_minutes":74,"sla_breached":true,"credit_percent":10,"credit_usd_cents":14990}}
+{"id":"scf_018","answer":{"eligible_downtime_minutes":107,"sla_breached":true,"credit_percent":10,"credit_usd_cents":14990}}
+{"id":"scf_019","answer":{"eligible_downtime_minutes":32,"sla_breached":true,"credit_percent":10,"credit_usd_cents":9990}}
+{"id":"scf_020","answer":{"eligible_downtime_minutes":50,"sla_breached":true,"credit_percent":10,"credit_usd_cents":24990}}
+{"id":"scf_021","answer":{"eligible_downtime_minutes":90,"sla_breached":true,"credit_percent":50,"credit_usd_cents":24950}}
+{"id":"scf_022","answer":{"eligible_downtime_minutes":77,"sla_breached":true,"credit_percent":10,"credit_usd_cents":4990}}
+{"id":"scf_023","answer":{"eligible_downtime_minutes":143,"sla_breached":true,"credit_percent":25,"credit_usd_cents":12475}}
+{"id":"scf_024","answer":{"eligible_downtime_minutes":47,"sla_breached":true,"credit_percent":10,"credit_usd_cents":39990}}
+{"id":"scf_025","answer":{"eligible_downtime_minutes":77,"sla_breached":true,"credit_percent":25,"credit_usd_cents":12475}}
+{"id":"scf_026","answer":{"eligible_downtime_minutes":62,"sla_breached":true,"credit_percent":10,"credit_usd_cents":4990}}
+{"id":"scf_027","answer":{"eligible_downtime_minutes":138,"sla_breached":true,"credit_percent":10,"credit_usd_cents":24990}}
+{"id":"scf_028","answer":{"eligible_downtime_minutes":150,"sla_breached":true,"credit_percent":25,"credit_usd_cents":24975}}
+{"id":"scf_029","answer":{"eligible_downtime_minutes":52,"sla_breached":true,"credit_percent":10,"credit_usd_cents":4990}}
+2026-05-24T01:25:35.347032Z  WARN codex_mcp::rmcp_client: failed to initialize MCP client during shutdown: MCP startup failed: timed out handshaking with MCP server after 30s
+tokens used
+123,532

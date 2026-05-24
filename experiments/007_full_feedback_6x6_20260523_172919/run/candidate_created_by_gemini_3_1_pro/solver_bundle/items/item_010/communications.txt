@@ -1,0 +1,41 @@
+From: Management
+To: Accounting
+Date: Day 271
+Subject: Reclassification
+Correction: 'Snow removal 807' on Day 266 is a CapEx. Remove from OpEx.
+
+From: Management
+To: Accounting
+Date: Day 136
+Subject: Reclassification
+We decided to capitalize the 'Minor plumbing repair 395' cost from Day 131. It is excluded.
+
+From: Property Manager
+To: Accounting
+Date: Day 10
+Subject: CAM Cap
+For Tenant A, their base CAM is capped at 1263 cents per square foot annually.
+
+From: Management
+To: Accounting
+Date: Day 25
+Subject: Reclassification
+Correction: 'Security patrol 539' on Day 20 is a CapEx. Remove from OpEx.
+
+From: Management
+To: Accounting
+Date: Day 173
+Subject: Reclassification
+We decided to capitalize the 'Snow removal 980' cost from Day 168. It is excluded.
+
+From: Leasing
+To: Accounting
+Date: Day 116
+Subject: Expansion
+Effective Day 118, Tenant C added Suite 104 to their lease for the remainder of the year.
+
+From: Management
+To: Accounting
+Date: Day 123
+Subject: Reclassification
+The expense on Day 118 for 'HVAC filter replacement 659' should be considered a capital improvement. Exclude it from the OpEx pool.

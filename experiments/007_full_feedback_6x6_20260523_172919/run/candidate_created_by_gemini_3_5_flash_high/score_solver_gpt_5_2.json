@@ -1,0 +1,584 @@
+{
+  "accuracy": 0.13333333333333333,
+  "correct": 4,
+  "total": 30,
+  "metrics": {
+    "total_items": 30,
+    "correct_items": 4,
+    "customs_duty_accuracy": 0.5333333333333333,
+    "carrier_charges_accuracy": 0.6666666666666666,
+    "reconciliation_flag_accuracy": 0.6666666666666666
+  },
+  "results": [
+    {
+      "id": "item_001",
+      "customs_duty": {
+        "gold": 970.22,
+        "pred": 918.02,
+        "correct": false
+      },
+      "carrier_charges": {
+        "gold": 11400.0,
+        "pred": 11400.0,
+        "correct": true
+      },
+      "reconciliation_flag": {
+        "gold": "CURRENCY_VALUATION_ERROR",
+        "pred": "CURRENCY_VALUATION_ERROR",
+        "correct": true
+      },
+      "item_correct": false
+    },
+    {
+      "id": "item_002",
+      "customs_duty": {
+        "gold": 2964.6,
+        "pred": 2952.45,
+        "correct": false
+      },
+      "carrier_charges": {
+        "gold": 4800.0,
+        "pred": 4800.0,
+        "correct": true
+      },
+      "reconciliation_flag": {
+        "gold": "CURRENCY_VALUATION_ERROR",
+        "pred": "CURRENCY_VALUATION_ERROR",
+        "correct": true
+      },
+      "item_correct": false
+    },
+    {
+      "id": "item_003",
+      "customs_duty": {
+        "gold": 7296.87,
+        "pred": 7081.92,
+        "correct": false
+      },
+      "carrier_charges": {
+        "gold": 9600.0,
+        "pred": 9600.0,
+        "correct": true
+      },
+      "reconciliation_flag": {
+        "gold": "DEMURRAGE_OVERCHARGE",
+        "pred": "DEMURRAGE_OVERCHARGE",
+        "correct": true
+      },
+      "item_correct": false
+    },
+    {
+      "id": "item_004",
+      "customs_duty": {
+        "gold": 41.37,
+        "pred": 41.36,
+        "correct": true
+      },
+      "carrier_charges": {
+        "gold": 16400.0,
+        "pred": 16400.0,
+        "correct": true
+      },
+      "reconciliation_flag": {
+        "gold": "CURRENCY_VALUATION_ERROR",
+        "pred": "CURRENCY_VALUATION_ERROR",
+        "correct": true
+      },
+      "item_correct": true
+    },
+    {
+      "id": "item_005",
+      "customs_duty": {
+        "gold": 1849.69,
+        "pred": 7401.79,
+        "correct": false
+      },
+      "carrier_charges": {
+        "gold": 10800.0,
+        "pred": 10800.0,
+        "correct": true
+      },
+      "reconciliation_flag": {
+        "gold": "HS_RECLASSIFICATION",
+        "pred": "HS_RECLASSIFICATION",
+        "correct": true
+      },
+      "item_correct": false
+    },
+    {
+      "id": "item_006",
+      "customs_duty": {
+        "gold": 5047.65,
+        "pred": 20785.41,
+        "correct": false
+      },
+      "carrier_charges": {
+        "gold": 4600.0,
+        "pred": 4600.0,
+        "correct": true
+      },
+      "reconciliation_flag": {
+        "gold": "HS_RECLASSIFICATION",
+        "pred": "HS_RECLASSIFICATION",
+        "correct": true
+      },
+      "item_correct": false
+    },
+    {
+      "id": "item_007",
+      "customs_duty": {
+        "gold": 414.17,
+        "pred": 414.17,
+        "correct": true
+      },
+      "carrier_charges": {
+        "gold": 16400.0,
+        "pred": 14000.0,
+        "correct": false
+      },
+      "reconciliation_flag": {
+        "gold": "CURRENCY_VALUATION_ERROR",
+        "pred": "CURRENCY_VALUATION_ERROR",
+        "correct": true
+      },
+      "item_correct": false
+    },
+    {
+      "id": "item_008",
+      "customs_duty": {
+        "gold": 621.74,
+        "pred": 621.74,
+        "correct": true
+      },
+      "carrier_charges": {
+        "gold": 2100.0,
+        "pred": 2100.0,
+        "correct": true
+      },
+      "reconciliation_flag": {
+        "gold": "CURRENCY_VALUATION_ERROR",
+        "pred": "CURRENCY_VALUATION_ERROR",
+        "correct": true
+      },
+      "item_correct": true
+    },
+    {
+      "id": "item_009",
+      "customs_duty": {
+        "gold": 1209.29,
+        "pred": 1209.29,
+        "correct": true
+      },
+      "carrier_charges": {
+        "gold": 12000.0,
+        "pred": 10200.0,
+        "correct": false
+      },
+      "reconciliation_flag": {
+        "gold": "HS_RECLASSIFICATION",
+        "pred": "HS_RECLASSIFICATION",
+        "correct": true
+      },
+      "item_correct": false
+    },
+    {
+      "id": "item_010",
+      "customs_duty": {
+        "gold": 50.76,
+        "pred": 49.12,
+        "correct": false
+      },
+      "carrier_charges": {
+        "gold": 5100.0,
+        "pred": 5100.0,
+        "correct": true
+      },
+      "reconciliation_flag": {
+        "gold": "NO_DISCREPANCY",
+        "pred": "INCOTERM_MISMATCH",
+        "correct": false
+      },
+      "item_correct": false
+    },
+    {
+      "id": "item_011",
+      "customs_duty": {
+        "gold": 1165.02,
+        "pred": 1139.62,
+        "correct": false
+      },
+      "carrier_charges": {
+        "gold": 3800.0,
+        "pred": 3800.0,
+        "correct": true
+      },
+      "reconciliation_flag": {
+        "gold": "INCOTERM_MISMATCH",
+        "pred": "INCOTERM_MISMATCH",
+        "correct": true
+      },
+      "item_correct": false
+    },
+    {
+      "id": "item_012",
+      "customs_duty": {
+        "gold": 244.07,
+        "pred": 38.56,
+        "correct": false
+      },
+      "carrier_charges": {
+        "gold": 17400.0,
+        "pred": 15000.0,
+        "correct": false
+      },
+      "reconciliation_flag": {
+        "gold": "HS_RECLASSIFICATION",
+        "pred": "HS_RECLASSIFICATION",
+        "correct": true
+      },
+      "item_correct": false
+    },
+    {
+      "id": "item_013",
+      "customs_duty": {
+        "gold": 2388.38,
+        "pred": 2324.58,
+        "correct": false
+      },
+      "carrier_charges": {
+        "gold": 10400.0,
+        "pred": 10400.0,
+        "correct": true
+      },
+      "reconciliation_flag": {
+        "gold": "INCOTERM_MISMATCH",
+        "pred": "INCOTERM_MISMATCH",
+        "correct": true
+      },
+      "item_correct": false
+    },
+    {
+      "id": "item_014",
+      "customs_duty": {
+        "gold": 3240.71,
+        "pred": 3240.72,
+        "correct": true
+      },
+      "carrier_charges": {
+        "gold": 6200.0,
+        "pred": 6200.0,
+        "correct": true
+      },
+      "reconciliation_flag": {
+        "gold": "DEMURRAGE_OVERCHARGE",
+        "pred": "DEMURRAGE_OVERCHARGE",
+        "correct": true
+      },
+      "item_correct": true
+    },
+    {
+      "id": "item_015",
+      "customs_duty": {
+        "gold": 777.96,
+        "pred": 789.64,
+        "correct": false
+      },
+      "carrier_charges": {
+        "gold": 12000.0,
+        "pred": 10200.0,
+        "correct": false
+      },
+      "reconciliation_flag": {
+        "gold": "INCOTERM_MISMATCH",
+        "pred": "NO_DISCREPANCY",
+        "correct": false
+      },
+      "item_correct": false
+    },
+    {
+      "id": "item_016",
+      "customs_duty": {
+        "gold": 9488.57,
+        "pred": 9630.9,
+        "correct": false
+      },
+      "carrier_charges": {
+        "gold": 14000.0,
+        "pred": 14000.0,
+        "correct": true
+      },
+      "reconciliation_flag": {
+        "gold": "INCOTERM_MISMATCH",
+        "pred": "NO_DISCREPANCY",
+        "correct": false
+      },
+      "item_correct": false
+    },
+    {
+      "id": "item_017",
+      "customs_duty": {
+        "gold": 2861.43,
+        "pred": 2861.43,
+        "correct": true
+      },
+      "carrier_charges": {
+        "gold": 2550.0,
+        "pred": 2550.0,
+        "correct": true
+      },
+      "reconciliation_flag": {
+        "gold": "NO_DISCREPANCY",
+        "pred": "INCOTERM_MISMATCH",
+        "correct": false
+      },
+      "item_correct": false
+    },
+    {
+      "id": "item_018",
+      "customs_duty": {
+        "gold": 926.65,
+        "pred": 926.65,
+        "correct": true
+      },
+      "carrier_charges": {
+        "gold": 12800.0,
+        "pred": 12800.0,
+        "correct": true
+      },
+      "reconciliation_flag": {
+        "gold": "NO_DISCREPANCY",
+        "pred": "INCOTERM_MISMATCH",
+        "correct": false
+      },
+      "item_correct": false
+    },
+    {
+      "id": "item_019",
+      "customs_duty": {
+        "gold": 17557.77,
+        "pred": 17557.78,
+        "correct": true
+      },
+      "carrier_charges": {
+        "gold": 4100.0,
+        "pred": 3500.0,
+        "correct": false
+      },
+      "reconciliation_flag": {
+        "gold": "NO_DISCREPANCY",
+        "pred": "INCOTERM_MISMATCH",
+        "correct": false
+      },
+      "item_correct": false
+    },
+    {
+      "id": "item_020",
+      "customs_duty": {
+        "gold": 5231.63,
+        "pred": 5231.64,
+        "correct": true
+      },
+      "carrier_charges": {
+        "gold": 3200.0,
+        "pred": 3200.0,
+        "correct": true
+      },
+      "reconciliation_flag": {
+        "gold": "NO_DISCREPANCY",
+        "pred": "INCOTERM_MISMATCH",
+        "correct": false
+      },
+      "item_correct": false
+    },
+    {
+      "id": "item_021",
+      "customs_duty": {
+        "gold": 1522.41,
+        "pred": 1522.41,
+        "correct": true
+      },
+      "carrier_charges": {
+        "gold": 12000.0,
+        "pred": 10200.0,
+        "correct": false
+      },
+      "reconciliation_flag": {
+        "gold": "HS_RECLASSIFICATION",
+        "pred": "HS_RECLASSIFICATION",
+        "correct": true
+      },
+      "item_correct": false
+    },
+    {
+      "id": "item_022",
+      "customs_duty": {
+        "gold": 627.16,
+        "pred": 85.17,
+        "correct": false
+      },
+      "carrier_charges": {
+        "gold": 2900.0,
+        "pred": 2900.0,
+        "correct": true
+      },
+      "reconciliation_flag": {
+        "gold": "HS_RECLASSIFICATION",
+        "pred": "HS_RECLASSIFICATION",
+        "correct": true
+      },
+      "item_correct": false
+    },
+    {
+      "id": "item_023",
+      "customs_duty": {
+        "gold": 1000.21,
+        "pred": 1000.21,
+        "correct": true
+      },
+      "carrier_charges": {
+        "gold": 5400.0,
+        "pred": 6600.0,
+        "correct": false
+      },
+      "reconciliation_flag": {
+        "gold": "DEMURRAGE_OVERCHARGE",
+        "pred": "DEMURRAGE_OVERCHARGE",
+        "correct": true
+      },
+      "item_correct": false
+    },
+    {
+      "id": "item_024",
+      "customs_duty": {
+        "gold": 76.55,
+        "pred": 76.55,
+        "correct": true
+      },
+      "carrier_charges": {
+        "gold": 10650.0,
+        "pred": 8850.0,
+        "correct": false
+      },
+      "reconciliation_flag": {
+        "gold": "DEMURRAGE_OVERCHARGE",
+        "pred": "DEMURRAGE_OVERCHARGE",
+        "correct": true
+      },
+      "item_correct": false
+    },
+    {
+      "id": "item_025",
+      "customs_duty": {
+        "gold": 1911.24,
+        "pred": 1911.24,
+        "correct": true
+      },
+      "carrier_charges": {
+        "gold": 7400.0,
+        "pred": 8600.0,
+        "correct": false
+      },
+      "reconciliation_flag": {
+        "gold": "DEMURRAGE_OVERCHARGE",
+        "pred": "DEMURRAGE_OVERCHARGE",
+        "correct": true
+      },
+      "item_correct": false
+    },
+    {
+      "id": "item_026",
+      "customs_duty": {
+        "gold": 90.2,
+        "pred": 100.57,
+        "correct": false
+      },
+      "carrier_charges": {
+        "gold": 5800.0,
+        "pred": 5800.0,
+        "correct": true
+      },
+      "reconciliation_flag": {
+        "gold": "INCOTERM_MISMATCH",
+        "pred": "NO_DISCREPANCY",
+        "correct": false
+      },
+      "item_correct": false
+    },
+    {
+      "id": "item_027",
+      "customs_duty": {
+        "gold": 2816.09,
+        "pred": 3139.94,
+        "correct": false
+      },
+      "carrier_charges": {
+        "gold": 6000.0,
+        "pred": 6000.0,
+        "correct": true
+      },
+      "reconciliation_flag": {
+        "gold": "INCOTERM_MISMATCH",
+        "pred": "NO_DISCREPANCY",
+        "correct": false
+      },
+      "item_correct": false
+    },
+    {
+      "id": "item_028",
+      "customs_duty": {
+        "gold": 153.4,
+        "pred": 153.4,
+        "correct": true
+      },
+      "carrier_charges": {
+        "gold": 6000.0,
+        "pred": 6000.0,
+        "correct": true
+      },
+      "reconciliation_flag": {
+        "gold": "CURRENCY_VALUATION_ERROR",
+        "pred": "CURRENCY_VALUATION_ERROR",
+        "correct": true
+      },
+      "item_correct": true
+    },
+    {
+      "id": "item_029",
+      "customs_duty": {
+        "gold": 5574.88,
+        "pred": 5574.88,
+        "correct": true
+      },
+      "carrier_charges": {
+        "gold": 3200.0,
+        "pred": 3200.0,
+        "correct": true
+      },
+      "reconciliation_flag": {
+        "gold": "NO_DISCREPANCY",
+        "pred": "INCOTERM_MISMATCH",
+        "correct": false
+      },
+      "item_correct": false
+    },
+    {
+      "id": "item_030",
+      "customs_duty": {
+        "gold": 12822.07,
+        "pred": 12822.06,
+        "correct": true
+      },
+      "carrier_charges": {
+        "gold": 4300.0,
+        "pred": 3700.0,
+        "correct": false
+      },
+      "reconciliation_flag": {
+        "gold": "DEMURRAGE_OVERCHARGE",
+        "pred": "DEMURRAGE_OVERCHARGE",
+        "correct": true
+      },
+      "item_correct": false
+    }
+  ]
+}

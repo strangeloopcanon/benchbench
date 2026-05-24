@@ -1,0 +1,5 @@
+From: Property Manager
+To: Accounting
+Date: Day 10
+Subject: CAM Cap
+Do not charge Tenant E more than their CAM cap of 1170 cents per sq ft per year.

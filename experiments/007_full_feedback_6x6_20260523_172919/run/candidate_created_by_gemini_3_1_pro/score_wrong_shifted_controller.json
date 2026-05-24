@@ -1,0 +1,12 @@
+{
+  "total": 30,
+  "correct": 0,
+  "accuracy": 0.0,
+  "metrics": {
+    "total_items": 30,
+    "correct_items": 0,
+    "total_tenants_evaluated": 122,
+    "correct_tenants": 0,
+    "accuracy": 0.0
+  }
+}

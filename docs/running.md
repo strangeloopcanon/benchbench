@@ -1,8 +1,8 @@
 # Running BenchBench
 
-This page keeps the commands and backend details out of the README.
+This page keeps commands and backend notes out of the README.
 
-## Fresh Sweep
+## Fresh Symmetric Sweep
 
 Run the default three-model sweep:
 
@@ -10,20 +10,39 @@ Run the default three-model sweep:
 python run_broad_three_model_sweep.py
 ```
 
-The creator prompt reads `benchmark_landscape/creator_prompt_landscape_pack.md`
-when present, plus the Experiment 001 pilot summary.
-
-Each completed sweep writes:
-
-- `summary.md`: run metadata, benchmark cards, solver grid, and call table.
-- `feedback_for_next_sweep.md`: a creator-ready feedback packet with the solver
-  grid, benchmark cards, and next-run lessons.
-
-## Five-Model GPT/Gemini Sweep
+Use `--models` when the creator and solver panels are the same:
 
 ```bash
 python run_broad_three_model_sweep.py \
   --models gpt-5.2 gpt-5.4 gpt-5.5 agy:gemini-3.1-pro agy:gemini-3.5-flash-high
+```
+
+Each completed sweep writes:
+
+- `summary.md`: run metadata, benchmark cards, solver grid, and call table.
+- `feedback_for_next_sweep.md`: a creator-ready packet with the grid,
+  benchmark cards, and next-run lessons.
+
+## Challenger Sweep
+
+Use a challenger sweep when a good candidate has been frozen and the next run
+should search for something better.
+
+The current incumbent is Reimbursement Forensics from Experiment 004. The next
+challenger sweep should give creators the current feedback packet, skip GPT-5.2
+as a creator, and keep the full six-model solver panel:
+
+```bash
+BENCHBENCH_CLAUDE_MAX_BUDGET_USD=25 python run_broad_three_model_sweep.py \
+  --feedback-context experiments/feedback_for_next_challenger_sweep_20260523.md \
+  --creator-models gpt-5.4 gpt-5.5 agy:gemini-3.1-pro agy:gemini-3.5-flash-high cursor:claude-opus \
+  --solver-models gpt-5.2 gpt-5.4 gpt-5.5 agy:gemini-3.1-pro agy:gemini-3.5-flash-high cursor:claude-opus
+```
+
+Run the audit queue before treating any all-zero or low-scoring row as evidence:
+
+```text
+experiments/audit_queue.md
 ```
 
 ## Feedback Sweep
@@ -36,10 +55,10 @@ python run_broad_three_model_sweep.py \
   --models gpt-5.2 gpt-5.4 gpt-5.5 agy:gemini-3.1-pro agy:gemini-3.5-flash-high
 ```
 
-For the next full all-model run, use the current 6x6 feedback packet:
+For a full symmetric six-model feedback run:
 
 ```bash
-python run_broad_three_model_sweep.py \
+BENCHBENCH_CLAUDE_MAX_BUDGET_USD=25 python run_broad_three_model_sweep.py \
   --feedback-context experiments/feedback_for_next_full_6x6_sweep_20260523.md \
   --models gpt-5.2 gpt-5.4 gpt-5.5 agy:gemini-3.1-pro agy:gemini-3.5-flash-high cursor:claude-opus
 ```
@@ -58,12 +77,20 @@ Gemini 3.1 Pro:
 python run_existing_solver_extension.py --solver agy:gemini-3.1-pro
 ```
 
-Claude Sonnet on the feedback sweep:
+Claude Opus through Cursor:
 
 ```bash
-BENCHBENCH_CLAUDE_MAX_BUDGET_USD=25 python run_existing_solver_extension.py \
+python run_existing_solver_extension.py \
   --run-root experiments/004_feedback_sweep_20260522_225208 \
-  --solver claude:sonnet
+  --solver cursor:claude-opus
+```
+
+## Rebuild Published Result Artifacts
+
+Regenerate the markdown grids and SVG heatmaps:
+
+```bash
+python scripts/build_6x6_result_artifacts.py
 ```
 
 ## Claude Code Backend
@@ -79,10 +106,8 @@ BenchBench uses native Claude Code calls for `claude:` specs.
   summary tables.
 - `BENCHBENCH_CLAUDE_MAX_BUDGET_USD` caps each Claude Code call. The default is
   `$25` per call unless overridden.
-- Native Claude Code prompt caching is preserved by using normal print-mode
-  calls and stdin prompts.
-- The creator prompt keeps large stable context before volatile artifact paths
-  so repeated Claude creator calls can reuse more of the prefix cache.
+- Native Claude Code prompt caching is preserved by using print-mode calls and
+  stdin prompts.
 
 ## Cursor Backend
 
@@ -94,8 +119,7 @@ BenchBench can use Cursor Agent for `cursor:` specs.
 - `cursor:claude-opus-4.7-thinking-high` maps to Cursor model
   `claude-opus-4-7-thinking-high` if a newer Opus row is desired.
 - Calls use `cursor-agent --print --output-format json --force --trust
-  --sandbox disabled --workspace <run-dir>` and pass the prompt on stdin, so
-  long feedback packets do not depend on shell argument length.
+  --sandbox disabled --workspace <run-dir>` and pass the prompt on stdin.
 - Cursor JSON reports `usage.inputTokens`, `usage.outputTokens`,
   `usage.cacheReadTokens`, and `usage.cacheWriteTokens`; BenchBench records
   those fields in the manifest.
@@ -120,12 +144,8 @@ Supported labels in the current runner:
 - `agy:claude-opus-4.6-thinking` selects `Claude Opus 4.6 (Thinking)`.
 
 Antigravity Claude is usable for grid parity, but the current Antigravity path
-does not report Claude `total_cost_usd` or cache-read tokens. Native Claude
-Code is the better path when cost and caching telemetry matter.
-
-Antigravity terminal tools open in a global scratch directory by default, so
-creator and solver prompts include the exact artifact or isolated bundle path
-and instruct the model to use that path for all file and shell work.
+does not report Claude cost or cache-read tokens. Native Claude Code or Cursor
+is better when telemetry matters.
 
 ## Similarity / Novelty Smoke Check
 
@@ -135,5 +155,5 @@ python scripts/score_benchmark_similarity.py \
   --out benchmark_landscape/similarity_ignoresense_smoke.md
 ```
 
-The method is ready, but the current local solver set is too small for serious
-regression novelty claims.
+The method is ready, but the current local solver set is still too small for a
+serious regression novelty claim.

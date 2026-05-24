@@ -1,0 +1,39 @@
+# Monitoring Log Export (Public)
+
+tz_hint: America/Los_Angeles (UTC-07:00 during this incident)
+clock_drift_seconds: -60
+
+Format variants (one per line):
+1) <timestamp> <region> STATE <state>
+2) <timestamp> <region> METRIC {"p95_ms": <int>, "error_rate_pct": <int>}
+
+States: OK | DEGRADED | SEVERE_DEGRADED | UNAVAILABLE
+
+2026-01-20T07:57:00Z eu-central METRIC p95_ms=631 error_rate_pct=3
+2026-01-20T08:19:00Z us-east METRIC p95_ms=326 error_rate_pct=0
+2026-01-20T10:11:00Z eu-central METRIC {"p95_ms": 206, "error_rate_pct": 3}
+2026-01-20T10:11:00Z us-east STATE OK
+2026-01-20T10:11:00Z us-west STATE DEGRADED
+2026-01-20T03:12:28-07:00 eu-central METRIC {"p95_ms": 960, "error_rate_pct": 93}
+2026-01-20T03:12:28-07:00 us-east STATE OK
+2026-01-20T03:12:28-07:00 us-west STATE SEVERE_DEGRADED
+2026-01-20T10:37:06Z eu-central METRIC p95_ms=691 error_rate_pct=2
+2026-01-20T10:37:06Z us-east STATE OK
+2026-01-20T10:37:06Z us-west STATE DEGRADED
+2026-01-20T03:38:32-07:00 eu-central METRIC p95_ms=520 error_rate_pct=4
+2026-01-20T03:38:32-07:00 us-east STATE OK
+2026-01-20T03:38:32-07:00 us-west STATE OK
+2026-01-20T13:34:00-07:00 eu-central METRIC {"p95_ms": 201, "error_rate_pct": 4}
+2026-01-20T13:34:00-07:00 us-east STATE DEGRADED
+2026-01-20T13:34:00-07:00 us-west METRIC {"p95_ms": 551, "error_rate_pct": 3}
+2026-01-20T20:35:06Z eu-central METRIC {"p95_ms": 1753, "error_rate_pct": 51}
+2026-01-20T20:35:06Z us-east STATE SEVERE_DEGRADED
+2026-01-20T20:35:06Z us-west METRIC {"p95_ms": 956, "error_rate_pct": 21}
+2026-01-20T21:15:25Z eu-central METRIC {"p95_ms": 602, "error_rate_pct": 15}
+2026-01-20T21:15:25Z us-east STATE DEGRADED
+2026-01-20T21:15:25Z us-west METRIC {"p95_ms": 545, "error_rate_pct": 1}
+2026-01-20T14:18:28-07:00 eu-central METRIC p95_ms=210 error_rate_pct=5
+2026-01-20T14:18:28-07:00 us-east STATE OK
+2026-01-20T14:18:28-07:00 us-west METRIC {"p95_ms": 395, "error_rate_pct": 0}
+2026-01-20T20:10:00-07:00 eu-central METRIC p95_ms=484 error_rate_pct=8
+2026-01-21T13:16:00-07:00 us-west METRIC {"p95_ms": 481, "error_rate_pct": 4}

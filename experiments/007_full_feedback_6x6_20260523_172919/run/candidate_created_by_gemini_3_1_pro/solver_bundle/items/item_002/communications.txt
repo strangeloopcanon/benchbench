@@ -1,0 +1,29 @@
+From: Management
+To: Accounting
+Date: Day 345
+Subject: Reclassification
+We decided to capitalize the 'Common area utilities 152' cost from Day 340. It is excluded.
+
+From: Maintenance
+To: Accounting
+Date: Day 70
+Subject: Direct Charge
+Regarding the 34037 cents spent on 'Snow removal 169' on Day 68: Tenant D is at fault. This is a direct charge to them.
+
+From: Management
+To: Accounting
+Date: Day 194
+Subject: Reclassification
+Correction: 'Common area utilities 687' on Day 189 is a CapEx. Remove from OpEx.
+
+From: Maintenance
+To: Accounting
+Date: Day 87
+Subject: Direct Charge
+Please bill the 'Snow removal 253' (Day 85) directly to Tenant C. They are responsible for it. Do not put it in the main OpEx pool.
+
+From: Leasing
+To: Accounting
+Date: Day 151
+Subject: Expansion
+Update the rent roll: Tenant C took over Suite 106 on Day 153.

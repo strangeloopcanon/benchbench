@@ -1,0 +1,11 @@
+From: Property Manager
+To: Accounting
+Date: Day 10
+Subject: CAM Cap
+Do not charge Tenant C more than their CAM cap of 909 cents per sq ft per year.
+
+From: Maintenance
+To: Accounting
+Date: Day 261
+Subject: Direct Charge
+Accounting, ensure that Tenant G pays the full 219002 cents for the Day 259 'Common area utilities 847'. It's not a shared expense.

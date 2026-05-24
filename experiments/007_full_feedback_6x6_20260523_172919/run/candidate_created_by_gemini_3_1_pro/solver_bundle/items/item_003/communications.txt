@@ -1,0 +1,35 @@
+From: Maintenance
+To: Accounting
+Date: Day 226
+Subject: Direct Charge
+Please bill the 'Security patrol 275' (Day 224) directly to Tenant G. They are responsible for it. Do not put it in the main OpEx pool.
+
+From: Management
+To: Accounting
+Date: Day 69
+Subject: Reclassification
+Correction: 'HVAC filter replacement 904' on Day 64 is a CapEx. Remove from OpEx.
+
+From: Leasing
+To: Accounting
+Date: Day 145
+Subject: Expansion
+Please note Tenant B is leasing Suite 104 as of Day 147.
+
+From: Maintenance
+To: Accounting
+Date: Day 54
+Subject: Direct Charge
+The expense on Day 52 for 'Minor plumbing repair 275' (83925 cents) was caused by Tenant B. Reclassify this as a Direct Charge to Tenant B instead of OpEx.
+
+From: Management
+To: Accounting
+Date: Day 117
+Subject: Reclassification
+We decided to capitalize the 'Snow removal 925' cost from Day 112. It is excluded.
+
+From: Maintenance
+To: Accounting
+Date: Day 226
+Subject: Direct Charge
+Accounting, ensure that Tenant C pays the full 23976 cents for the Day 224 'Snow removal 813'. It's not a shared expense.

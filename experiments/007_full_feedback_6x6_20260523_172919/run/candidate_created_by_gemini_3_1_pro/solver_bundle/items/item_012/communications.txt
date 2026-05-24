@@ -1,0 +1,17 @@
+From: Property Manager
+To: Accounting
+Date: Day 10
+Subject: CAM Cap
+Tenant A secured a cap on CAM at 1071 cents per sq ft per year.
+
+From: Management
+To: Accounting
+Date: Day 126
+Subject: Reclassification
+The expense on Day 121 for 'Common area utilities 893' should be considered a capital improvement. Exclude it from the OpEx pool.
+
+From: Leasing
+To: Accounting
+Date: Day 109
+Subject: Expansion
+Please note Tenant G is leasing Suite 102 as of Day 111.

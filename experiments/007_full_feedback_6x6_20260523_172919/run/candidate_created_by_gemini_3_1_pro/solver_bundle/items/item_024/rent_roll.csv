@@ -1,0 +1,6 @@
+Tenant,Suite,Start_Day,End_Day
+Tenant F,105,1,365
+Tenant E,104,1,365
+Tenant B,102,99,353
+Tenant D,103,60,365
+Tenant C,101,1,365

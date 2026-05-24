@@ -1,0 +1,17 @@
+From: Property Manager
+To: Accounting
+Date: Day 10
+Subject: CAM Cap
+Do not charge Tenant F more than their CAM cap of 1139 cents per sq ft per year.
+
+From: Leasing
+To: Accounting
+Date: Day 192
+Subject: Expansion
+Please note Tenant D is leasing Suite 105 as of Day 194.
+
+From: Management
+To: Accounting
+Date: Day 242
+Subject: Reclassification
+Correction: 'Routine landscaping 619' on Day 237 is a CapEx. Remove from OpEx.

@@ -1,0 +1,15 @@
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_017_r01,2026-01-18,MX,direct,paperback,5,7645,1699,0,1,library batch
+crf_017_r02,2026-03-26,NZ,bundle,hardcover,4,10076,2799,4030,0,manual correction row
+crf_017_r03,2026-03-20,GB,direct,paperback,3,0,1499,0,1,manual correction row
+crf_017_r04,2026-01-13,NZ,subscription,audio,2,3748,2499,0,0,standard shipment
+crf_017_r05,2026-01-23,ES,direct,hardcover,-2,-4498,2499,0,0,library batch
+crf_017_r06,2026-03-08,BR,library,hardcover,1,2699,2999,0,0,standard shipment
+crf_017_r07,2026-03-04,AU,library,audio,1,1709,1899,0,1,standard shipment
+crf_017_r08,2026-02-26,AU,bundle,audio,3,4272,1899,1708,0,wholesale feed import
+crf_017_r09,2026-03-28,NZ,library,ebook,4,1976,1099,0,0,standard shipment
+crf_017_r10,2026-03-16,DE,bundle,hardcover,12,12408,2299,4963,1,wholesale feed import
+crf_017_r11,2026-01-06,NL,bundle,ebook,-2,-1318,1099,-527,0,manual correction row
+crf_017_r12,2026-02-27,NL,subscription,paperback,4,7556,2099,0,1,standard shipment
+crf_017_r13,2026-02-26,FR,subscription,audio,4,6396,1599,0,0,standard shipment
+crf_017_r14,2026-03-28,AU,subscription,audio,4,5276,2199,0,0,DSP settlement

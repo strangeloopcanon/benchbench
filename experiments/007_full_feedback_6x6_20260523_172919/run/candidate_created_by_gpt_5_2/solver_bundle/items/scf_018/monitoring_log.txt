@@ -1,0 +1,62 @@
+# Monitoring Log Export (Public)
+
+tz_hint: America/Los_Angeles (UTC-07:00 during this incident)
+clock_drift_seconds: 45
+
+Format variants (one per line):
+1) <timestamp> <region> STATE <state>
+2) <timestamp> <region> METRIC {"p95_ms": <int>, "error_rate_pct": <int>}
+
+States: OK | DEGRADED | SEVERE_DEGRADED | UNAVAILABLE
+
+2026-04-10T14:19:45-07:00 eu-central METRIC {"p95_ms": 551, "error_rate_pct": 7}
+2026-04-10T14:19:45-07:00 us-east METRIC {"p95_ms": 409, "error_rate_pct": 4}
+2026-04-10T14:19:45-07:00 us-west METRIC {"p95_ms": 343, "error_rate_pct": 2}
+2026-04-10T14:22:18-07:00 eu-central METRIC {"p95_ms": 334, "error_rate_pct": 5}
+2026-04-10T14:22:18-07:00 us-east METRIC p95_ms=980 error_rate_pct=17
+2026-04-10T14:22:18-07:00 us-west METRIC p95_ms=326 error_rate_pct=1
+2026-04-10T22:01:27Z eu-central METRIC {"p95_ms": 407, "error_rate_pct": 0}
+2026-04-10T22:01:27Z us-east METRIC p95_ms=742 error_rate_pct=7
+2026-04-10T22:01:27Z us-west METRIC {"p95_ms": 582, "error_rate_pct": 4}
+2026-04-10T15:04:29-07:00 eu-central METRIC {"p95_ms": 308, "error_rate_pct": 1}
+2026-04-10T15:04:29-07:00 us-east METRIC p95_ms=279 error_rate_pct=2
+2026-04-10T15:04:29-07:00 us-west METRIC {"p95_ms": 321, "error_rate_pct": 4}
+2026-04-10T21:29:45-07:00 eu-central STATE DEGRADED
+2026-04-10T21:29:45-07:00 us-east METRIC {"p95_ms": 357, "error_rate_pct": 3}
+2026-04-10T21:29:45-07:00 us-west METRIC {"p95_ms": 375, "error_rate_pct": 5}
+2026-04-11T04:31:07Z eu-central STATE UNAVAILABLE
+2026-04-11T04:31:07Z us-east METRIC {"p95_ms": 1288, "error_rate_pct": 23}
+2026-04-11T04:31:07Z us-west METRIC {"p95_ms": 1563, "error_rate_pct": 34}
+2026-04-10T22:12:18-07:00 eu-central STATE DEGRADED
+2026-04-10T22:12:18-07:00 us-east METRIC {"p95_ms": 1005, "error_rate_pct": 4}
+2026-04-10T22:12:18-07:00 us-west METRIC {"p95_ms": 884, "error_rate_pct": 15}
+2026-04-10T22:13:57-07:00 eu-central STATE OK
+2026-04-10T22:13:57-07:00 us-east METRIC {"p95_ms": 377, "error_rate_pct": 0}
+2026-04-10T22:13:57-07:00 us-west METRIC {"p95_ms": 584, "error_rate_pct": 5}
+2026-04-11T12:10:45Z us-east METRIC {"p95_ms": 471, "error_rate_pct": 4}
+2026-04-11T13:09:45-07:00 us-east METRIC p95_ms=556 error_rate_pct=6
+2026-04-12T00:20:45Z eu-central STATE DEGRADED
+2026-04-12T00:20:45Z us-east METRIC {"p95_ms": 381, "error_rate_pct": 3}
+2026-04-12T00:20:45Z us-west STATE DEGRADED
+2026-04-11T17:22:11-07:00 eu-central STATE SEVERE_DEGRADED
+2026-04-11T17:22:11-07:00 us-east METRIC p95_ms=1041 error_rate_pct=63
+2026-04-11T17:22:11-07:00 us-west STATE SEVERE_DEGRADED
+2026-04-12T00:25:35Z eu-central STATE DEGRADED
+2026-04-12T00:25:35Z us-east METRIC p95_ms=1053 error_rate_pct=5
+2026-04-12T00:25:35Z us-west STATE DEGRADED
+2026-04-12T00:26:53Z eu-central STATE OK
+2026-04-12T00:26:53Z us-east METRIC {"p95_ms": 345, "error_rate_pct": 0}
+2026-04-12T00:26:53Z us-west STATE OK
+2026-04-12T00:49:45-07:00 eu-central METRIC {"p95_ms": 540, "error_rate_pct": 2}
+2026-04-12T00:49:45-07:00 us-east STATE DEGRADED
+2026-04-12T00:49:45-07:00 us-west STATE DEGRADED
+2026-04-12T07:51:05Z eu-central METRIC {"p95_ms": 953, "error_rate_pct": 72}
+2026-04-12T07:51:05Z us-east STATE UNAVAILABLE
+2026-04-12T07:51:05Z us-west STATE UNAVAILABLE
+2026-04-12T08:13:29Z eu-central METRIC {"p95_ms": 782, "error_rate_pct": 11}
+2026-04-12T08:13:29Z us-east STATE DEGRADED
+2026-04-12T08:13:29Z us-west STATE DEGRADED
+2026-04-12T08:17:00Z eu-central METRIC {"p95_ms": 217, "error_rate_pct": 1}
+2026-04-12T08:17:00Z us-east STATE OK
+2026-04-12T08:17:00Z us-west STATE OK
+2026-04-12T09:18:45Z us-east METRIC p95_ms=558 error_rate_pct=0

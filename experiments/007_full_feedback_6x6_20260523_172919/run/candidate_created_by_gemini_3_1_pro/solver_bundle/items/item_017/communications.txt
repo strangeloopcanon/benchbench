@@ -1,0 +1,23 @@
+From: Property Manager
+To: Accounting
+Date: Day 10
+Subject: CAM Cap
+Tenant B secured a cap on CAM at 554 cents per sq ft per year.
+
+From: Leasing
+To: Accounting
+Date: Day 86
+Subject: Expansion
+Update the rent roll: Tenant F took over Suite 104 on Day 88.
+
+From: Maintenance
+To: Accounting
+Date: Day 287
+Subject: Direct Charge
+Regarding the 261434 cents spent on 'Common area utilities 880' on Day 285: Tenant F is at fault. This is a direct charge to them.
+
+From: Maintenance
+To: Accounting
+Date: Day 35
+Subject: Direct Charge
+Please bill the 'Common area utilities 814' (Day 33) directly to Tenant C. They are responsible for it. Do not put it in the main OpEx pool.

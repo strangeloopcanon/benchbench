@@ -1,0 +1,23 @@
+From: Maintenance
+To: Accounting
+Date: Day 283
+Subject: Direct Charge
+Accounting, ensure that Tenant G pays the full 137582 cents for the Day 281 'Monthly cleaning 478'. It's not a shared expense.
+
+From: Maintenance
+To: Accounting
+Date: Day 115
+Subject: Direct Charge
+Please bill the 'Monthly cleaning 677' (Day 113) directly to Tenant B. They are responsible for it. Do not put it in the main OpEx pool.
+
+From: Property Manager
+To: Accounting
+Date: Day 10
+Subject: CAM Cap
+Tenant A secured a cap on CAM at 631 cents per sq ft per year.
+
+From: Maintenance
+To: Accounting
+Date: Day 157
+Subject: Direct Charge
+The expense on Day 155 for 'Security patrol 516' (237349 cents) was caused by Tenant D. Reclassify this as a Direct Charge to Tenant D instead of OpEx.

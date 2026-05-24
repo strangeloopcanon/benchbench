@@ -1,0 +1,17 @@
+From: Leasing
+To: Accounting
+Date: Day 170
+Subject: Expansion
+Tenant F has expanded into Suite 103 starting on Day 172. They will occupy this suite until the end of the year.
+
+From: Maintenance
+To: Accounting
+Date: Day 13
+Subject: Direct Charge
+Accounting, ensure that Tenant C pays the full 127574 cents for the Day 11 'Monthly cleaning 698'. It's not a shared expense.
+
+From: Maintenance
+To: Accounting
+Date: Day 165
+Subject: Direct Charge
+Regarding the 36696 cents spent on 'Snow removal 974' on Day 163: Tenant D is at fault. This is a direct charge to them.

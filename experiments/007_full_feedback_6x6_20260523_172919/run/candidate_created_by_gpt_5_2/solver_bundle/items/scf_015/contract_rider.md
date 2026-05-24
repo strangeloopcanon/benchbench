@@ -1,0 +1,19 @@
+# Customer Contract Rider (Public)
+
+- Customer tier: **BUSINESS**
+- Monthly fee: **$2499.00** (=249900 cents)
+- Scope: **single**
+- Primary region (if scope=single): **us-east**
+- Credit cap (percent): **10%**
+
+## Monitoring interpretation parameters
+
+- severe_p95_ms: **900**
+- unavailable_error_rate_pct: **80**
+
+## Contract exclusions (UTC)
+
+- 2026-02-05T20:55:00Z to 2026-02-05T21:15:00Z
+
+## Notes
+- All timestamps in evidence may be in UTC or a local offset; treat ISO offsets as authoritative.

@@ -1,0 +1,29 @@
+From: Property Manager
+To: Accounting
+Date: Day 10
+Subject: CAM Cap
+For Tenant E, their base CAM is capped at 789 cents per square foot annually.
+
+From: Management
+To: Accounting
+Date: Day 85
+Subject: Reclassification
+Correction: 'Snow removal 282' on Day 80 is a CapEx. Remove from OpEx.
+
+From: Maintenance
+To: Accounting
+Date: Day 129
+Subject: Direct Charge
+Accounting, ensure that Tenant A pays the full 58445 cents for the Day 127 'Snow removal 422'. It's not a shared expense.
+
+From: Maintenance
+To: Accounting
+Date: Day 164
+Subject: Direct Charge
+Accounting, ensure that Tenant D pays the full 110913 cents for the Day 162 'Monthly cleaning 720'. It's not a shared expense.
+
+From: Management
+To: Accounting
+Date: Day 123
+Subject: Reclassification
+The 109605 cents for 'Security patrol 736' (Day 118) is actually a capital expense.

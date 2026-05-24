@@ -1,0 +1,434 @@
+
+You are Claude Opus 4.6 Thinking+Cursor acting as a BenchBench creator.
+
+Your task, in the broadest terms:
+
+Create the best possible new benchmark you can: valid, deterministic or
+reliably graded, human-auditable, hard for strong tool-enabled models, and
+interesting rather than a near-duplicate of existing evals. You may choose any
+domain, modality, artifact type, environment, or scoring method that you can
+package and validate in this directory.
+
+External-solvability requirement:
+
+The benchmark must be solvable in principle by a qualified external solver,
+including another model or human specialist, using only the public solver
+bundle and the stated rules. Do not make a benchmark whose difficulty comes
+from being impossible, under-specified, private-keyed, dependent on hidden
+generator details, or equivalent to "solve an open research problem." Hard is
+good; unknowable is a benchmark-design failure. In `validation_report.md`,
+include a short solvability/identifiability argument and describe what evidence
+an external solver could use to determine the answers.
+
+You are not being asked to make a visual benchmark. You are not being asked to
+choose any particular domain. Use the landscape report and prior pilot only as
+evidence about what has been tried and what makes benchmarks good or bad.
+
+Benchmark landscape report:
+
+<<<BENCHMARK_LANDSCAPE
+# Benchmark Landscape Prompt Pack
+
+Purpose: give BenchBench creators broad evidence about existing evals without steering them into a specific domain.
+
+## Current Creator Prompt Inputs
+
+The current broad sweep prompt reads this landscape pack plus the prior pilot summary.
+Before this pack existed, it read `benchbench_research_notes.md` plus `experiments/001_three_model_grid_pilot/README.md`.
+
+## Eval Families To Be Aware Of
+
+- agent_reasoning: GAIA
+- coding: LiveCodeBench, HumanEval, MBPP, BigCodeBench
+- commonsense: HellaSwag
+- commonsense_coreference: WinoGrande
+- commonsense_science: ARC Challenge
+- competition_math: AIME, MATH
+- computer_use: OSWorld
+- document_understanding: DocVQA
+- dynamic_adversarial: Dynabench
+- dynamic_general: LiveBench
+- evaluation_framework: HELM, OpenCompass
+- expert_math: FrontierMath
+- expert_qa: GPQA, Humanity's Last Exam
+- factuality: SimpleQA
+- instruction_following: IFEval
+- judge_based: MT-Bench
+- knowledge_exam: MMLU, MMLU-Pro
+- long_context_reasoning: MuSR
+- math_word_problems: GSM8K
+- ml_engineering: MLE-bench
+- multimodal_reasoning: MMMU
+- preference: Chatbot Arena / LMArena, Arena-Hard
+- reasoning_suite: BIG-Bench Hard, BIG-bench
+- research_engineering: RE-Bench
+- software_engineering: SWE-bench
+- tool_agent: tau-bench
+- tool_calling: Berkeley Function Calling Leaderboard
+- truthfulness: TruthfulQA
+- visual_data: ChartQA
+- visual_math: MathVista
+- web_agent: WebArena
+- web_research: BrowseComp
+
+## High-Level Benchmark Design Lessons
+
+- State the capability claim before writing items.
+- Make the solver-visible task self-contained and the grader deterministic where possible.
+- Prefer hidden or fresh items, procedural generation, live sourcing, or expert provenance.
+- Measure human solvability; a benchmark that nobody can solve is not a win.
+- Require external solvability: the public solver packet must contain enough information for a qualified outside model or human specialist to determine the answer in principle.
+- Do not reward impossible, under-specified, private-keyed, or open-research-problem tasks just because frontier models score poorly.
+- Attack leakage, ambiguity, and shortcut baselines before counting model failures.
+- Use existing score matrices to test whether a new benchmark adds a residual measurement axis.
+
+## Machine-Readable Score Sources Included
+
+- Open LLM Leaderboard v2: 4576 models x 7 score columns: average, IFEval, BBH, MATH Lvl 5, GPQA, MuSR, MMLU-Pro.
+- Current LMArena scraped pages: 635 model rows across text, WebDev, Image-to-WebDev, vision, document, and search arenas.
+- Local BenchBench runs: 23 model-on-candidate score rows.
+
+## Current LMArena Top Rows
+
+| benchmark | rank | model | score |
+|---|---:|---|---:|
+| arena_code_image_to_webdev_overall | 1 | claude-opus-4-7-thinking | 1581 |
+| arena_code_image_to_webdev_overall | 2 | claude-sonnet-4-6 | 1557 |
+| arena_code_image_to_webdev_overall | 3 | claude-opus-4-7 | 1556 |
+| arena_code_image_to_webdev_overall | 4 | claude-opus-4-6-thinking | 1538 |
+| arena_code_image_to_webdev_overall | 5 | gpt-5.5-xhigh (codex-harness) | 1537 |
+| arena_code_image_to_webdev_overall | 6 | claude-opus-4-6 | 1534 |
+| arena_code_image_to_webdev_overall | 7 | kimi-k2.6 | 1522 |
+| arena_code_image_to_webdev_overall | 8 | gpt-5.5-high (codex-harness) | 1519 |
+| arena_code_webdev_overall | 1 | claude-opus-4-7-thinking | 1567 |
+| arena_code_webdev_overall | 2 | claude-opus-4-7 | 1559 |
+| arena_code_webdev_overall | 3 | claude-opus-4-6-thinking | 1546 |
+| arena_code_webdev_overall | 4 | claude-opus-4-6 | 1541 |
+| arena_code_webdev_overall | 5 | glm-5.1 | 1532 |
+| arena_code_webdev_overall | 6 | claude-sonnet-4-6 | 1524 |
+| arena_code_webdev_overall | 7 | kimi-k2.6 | 1519 |
+| arena_code_webdev_overall | 8 | muse-spark | 1509 |
+| arena_document_overall | 1 | claude-opus-4-6-thinking | 1522 |
+| arena_document_overall | 2 | claude-opus-4-6 | 1513 |
+| arena_document_overall | 3 | claude-opus-4-7 | 1510 |
+| arena_document_overall | 4 | claude-opus-4-7-thinking | 1509 |
+| arena_document_overall | 5 | gpt-5.5-high | 1496 |
+| arena_document_overall | 6 | claude-sonnet-4-6 | 1495 |
+| arena_document_overall | 7 | gpt-5.5 | 1492 |
+| arena_document_overall | 8 | gpt-5.4 | 1474 |
+| arena_search_overall | 1 | claude-opus-4-6-search | 1251 |
+| arena_search_overall | 2 | gpt-5.5-search | 1239 |
+| arena_search_overall | 3 | claude-opus-4-7 | 1237 |
+| arena_search_overall | 4 | ernie-5.1 | 1226 |
+| arena_search_overall | 5 | claude-sonnet-4-6-search | 1219 |
+| arena_search_overall | 6 | gemini-3.1-pro-grounding | 1216 |
+| arena_search_overall | 7 | gpt-5.2-search | 1210 |
+| arena_search_overall | 8 | grok-4.20-multi-agent-beta-0309 | 1209 |
+| arena_text_overall | 1 | claude-opus-4-6-thinking | 1502 |
+| arena_text_overall | 2 | claude-opus-4-7-thinking | 1500 |
+| arena_text_overall | 3 | claude-opus-4-6 | 1498 |
+| arena_text_overall | 4 | claude-opus-4-7 | 1492 |
+| arena_text_overall | 5 | muse-spark | 1490 |
+| arena_text_overall | 6 | gemini-3.1-pro-preview | 1489 |
+| arena_text_overall | 7 | gemini-3-pro | 1486 |
+| arena_text_overall | 8 | gpt-5.5-high | 1484 |
+| arena_vision_overall | 1 | claude-opus-4-7-thinking | 1305 |
+| arena_vision_overall | 2 | claude-opus-4-7 | 1303 |
+| arena_vision_overall | 3 | claude-opus-4-6-thinking | 1300 |
+| arena_vision_overall | 4 | muse-spark | 1299 |
+| arena_vision_overall | 5 | claude-opus-4-6 | 1292 |
+| arena_vision_overall | 6 | gpt-5.5 | 1290 |
+| arena_vision_overall | 7 | gemini-3-pro | 1289 |
+| arena_vision_overall | 8 | gpt-5.5-high | 1282 |
+
+## BenchBench Local Results To Date
+
+| experiment | benchmark | creator | solver | effort | score |
+|---|---|---|---|---|---:|
+| 001_three_model_grid_pilot | Folded Strip Order (FSO) v1 | gpt-5.2 | gpt-5.2 | default | 16/30 |
+| 001_three_model_grid_pilot | Folded Strip Order (FSO) v1 | gpt-5.2 | gpt-5.4 | default | 14/30 |
+| 001_three_model_grid_pilot | Folded Strip Order (FSO) v1 | gpt-5.2 | gpt-5.5 | default | 19/30 |
+| 001_three_model_grid_pilot | occluded_tile_provenance | gpt-5.4 | gpt-5.2 | default | 7/30 |
+| 001_three_model_grid_pilot | occluded_tile_provenance | gpt-5.4 | gpt-5.4 | high | 4/30 |
+| 001_three_model_grid_pilot | occluded_tile_provenance | gpt-5.4 | gpt-5.5 | high | 5/30 |
+| 001_three_model_grid_pilot | occluded_tile_provenance | gpt-5.4 | gpt-5.5 | xhigh | 10/30 |
+| 001_three_model_grid_pilot | Shadow Weave Topology | gpt-5.5 | gpt-5.2 | default | 15/30 |
+| 001_three_model_grid_pilot | Shadow Weave Topology | gpt-5.5 | gpt-5.4 | high | 24/30 |
+| 001_three_model_grid_pilot | Shadow Weave Topology | gpt-5.5 | gpt-5.5 | high | 26/30 |
+| 002_broad_sweep_20260515_220653 | IgnoreSense | gpt-5.2 | gpt-5.2 | default | 4/30 |
+| 002_broad_sweep_20260515_220653 | IgnoreSense | gpt-5.2 | gpt-5.4 | default | 7/30 |
+| 002_broad_sweep_20260515_220653 | IgnoreSense | gpt-5.2 | gpt-5.5 | default | 7/30 |
+| 002_broad_sweep_20260515_220653 | IgnoreSense | gpt-5.2 | gpt-5.5 | xhigh | 7/30 |
+| 002_broad_sweep_20260515_220653 | protocol_archaeology | gpt-5.5 | gpt-5.2 | default | 0/30 |
+| 002_broad_sweep_20260515_220653 | protocol_archaeology | gpt-5.5 | gpt-5.4 | default | 0/30 |
+| 002_broad_sweep_20260515_220653 | protocol_archaeology | gpt-5.5 | gpt-5.5 | default | 0/30 |
+| 002_broad_sweep_20260515_220653 | protocol_archaeology | gpt-5.5 | gpt-5.5 | xhigh | 0/30 |
+| 002_broad_sweep_20260515_220653 | protocol_archaeology | gpt-5.5 | specialist_oracle_family_search | baseline | 0/30 |
+| 002_broad_sweep_20260515_220653 | protocol_archaeology | gpt-5.5 | specialist_public_expr | baseline | 0/30 |
+| 002_broad_sweep_20260515_220653 | Spectrum Assembly with Side Constraints | gpt-5.4 | gpt-5.2 | default | 30/30 |
+| 002_broad_sweep_20260515_220653 | Spectrum Assembly with Side Constraints | gpt-5.4 | gpt-5.4 | default | 30/30 |
+| 002_broad_sweep_20260515_220653 | Spectrum Assembly with Side Constraints | gpt-5.4 | gpt-5.5 | default | 30/30 |
+
+## How To Use This For Novelty
+
+For any generated benchmark, add solver scores to `model_score_matrix_long.csv`, align model aliases cautiously, then compute:
+
+1. Spearman/Kendall rank correlations against existing eval columns.
+2. Cross-validated regression from existing eval scores to the new benchmark score.
+
+A new benchmark is most interesting when it is reliable, human-solvable, not trivially solved by tools, and not strongly predictable from the existing eval basket.
+
+BENCHMARK_LANDSCAPE>>>
+
+Prior BenchBench pilot result:
+
+<<<PRIOR_PILOT
+# Experiment 001: Three-Model Grid Pilot
+
+This folder preserves the first complete BenchBench pilot grid.
+
+## What It Tested
+
+- Creator models: GPT-5.2, GPT-5.4, GPT-5.5 through Codex.
+- Solver models: GPT-5.2, GPT-5.4, GPT-5.5 through Codex.
+- Creator prompt style: influenced by the prior Visual Trace success, which
+  pulled candidates toward visual/topology benchmarks.
+
+## Main Result
+
+Only the GPT-5.4-created benchmark passed the difficulty gate.
+
+| creator | benchmark | solver GPT-5.2 | solver GPT-5.4 | solver GPT-5.5 | status |
+|---|---|---:|---:|---:|---|
+| GPT-5.2 | Folded Strip Order | 16/30 | 14/30 | 19/30 | too easy |
+| GPT-5.4 | Occluded Tile Provenance | 7/30 | 4/30 | 5/30 | passed |
+| GPT-5.5 | Shadow Weave Topology | 15/30 | 24/30 | 26/30 | too easy |
+
+Extra sanity check: GPT-5.5 at `xhigh` scored 10/30 on GPT-5.4's candidate.
+
+## Files
+
+- `experiment_summary_three_model_grid_20260515.md`: final interpretation.
+- `experiment_summary_two_model_sweep_20260515.md`: earlier two-model sweep.
+- `run/`: full run artifacts, candidates, solver outputs, score JSONs, and logs.
+
+## Caveat
+
+This pilot was useful, but the prompt had a visual/topology attractor. The next
+experiment should ask for the best possible benchmark in the broadest terms,
+provide only benchmark landscape context and prior results, and avoid nudging
+toward any specific domain or modality.
+
+
+PRIOR_PILOT>>>
+
+Feedback from the previous BenchBench run:
+
+<<<PRIOR_RUN_FEEDBACK
+# Feedback For Next Full 6x6 BenchBench Sweep
+
+This feedback is for the next creator sweep after the GPT, Gemini, and Claude
+Opus runs through 2026-05-23.
+
+BenchBench is evaluating benchmark invention. The goal is not to make an
+impossible task. The goal is to create a complete benchmark package that is
+valid, reproducible, externally solvable in principle, and still hard after
+strong tool-enabled solvers attack the public solver bundle.
+
+## Current Full Result Set
+
+The current evidence is a reconstructed 6x6 set. The first five rows in each
+grid came from the original five-model sweep. The Claude Opus row and Claude
+Opus solver column were added afterward by extension runs.
+
+### Exp003-style grid
+
+| creator | benchmark | GPT-5.2 | GPT-5.4 | GPT-5.5 | Gemini 3.1 Pro | Gemini 3.5 Flash | Claude Opus |
+|---|---|---:|---:|---:|---:|---:|---:|
+| GPT-5.2 | Ledger Canonical Reconciliation | 11/30 | 30/30 | 30/30 | 30/30 | 30/30 | 11/30 |
+| GPT-5.4 | Patchwork Ordinance Adjudication | 3/30 | 30/30 | 30/30 | 30/30 | 30/30 | 30/30 |
+| GPT-5.5 | Amendment Ledger Reconciliation | 30/30 | 30/30 | 30/30 | 30/30 | 30/30 | 30/30 |
+| Gemini 3.1 Pro | Polyhedral Surface Traversal | 30/30 | 6/30 | 30/30 | 30/30 | 30/30 | 30/30 |
+| Gemini 3.5 Flash | Mutative Assembly Inversion | 30/30 | 30/30 | 30/30 | 30/30 | 22/30 | 30/30 |
+| Claude Opus | String Rewriting Distance | 0/30 | 0/30 | 30/30 | 30/30 | 30/30 | 30/30 |
+
+Every Exp003-style row is rejected. Each one is solved perfectly by at least
+four solvers. Claude Opus's String Rewriting Distance is not a hard benchmark:
+GPT-5.2 and GPT-5.4 returned the right integer values as JSON strings, and the
+scorer rejected those type-mismatched answers.
+
+### Feedback-style grid
+
+| creator | benchmark | GPT-5.2 | GPT-5.4 | GPT-5.5 | Gemini 3.1 Pro | Gemini 3.5 Flash | Claude Opus |
+|---|---|---:|---:|---:|---:|---:|---:|
+| GPT-5.2 | Reimbursement Forensics | 10/30 | 14/30 | 11/30 | 12/30 | 11/30 | 11/30 |
+| GPT-5.4 | release_packet_arbitration | 27/30 | 25/30 | 27/30 | 0/30 | 27/30 | 25/30 |
+| GPT-5.5 | Cross-Document Obligation Resolution | 0/30 | 0/30 | 0/30 | 0/30 | 0/30 | skip |
+| Gemini 3.1 Pro | Corrupted LZ77 Recovery | 0/30 | 22/30 | 17/30 | 0/30 | 0/30 | 0/30 |
+| Gemini 3.5 Flash | MFN-Cascade | 30/30 | 30/30 | 30/30 | 30/30 | 30/30 | 30/30 |
+| Claude Opus | Conlang Rosetta | 30/30 | 30/30 | 30/30 | 30/30 | 30/30 | 30/30 |
+
+Reimbursement Forensics is the best current candidate. Every tested solver
+gets some answers, so it does not look unknowable, but no solver gets close to
+saturation. This is the target shape.
+
+Cross-Document Obligation Resolution is not a keeper. The public packet lets
+solvers recover the core dates, but the scorer requires private exact labels
+and evidence-code strings. That is a scoring-contract failure, not a hard
+benchmark.
+
+Corrupted LZ77 Recovery is not unknowable, because GPT-5.4 got 22/30 and
+GPT-5.5 got 17/30. But it is narrow and operationally brittle: several solvers
+returned blanks, no parsed rows, or timed out. Treat it as a caution, not as
+the benchmark shape to copy.
+
+## Prior Benchmark Cards
+
+These cards describe what the earlier generated benchmarks actually asked. Use
+them to learn from the task mechanics, not just the names and scores.
+
+### Exp003-style candidates
+
+- **Ledger Canonical Reconciliation**: reconcile transaction ledger CSVs and FX
+  tables under de-duplication and reversal rules, then emit exact per-account
+  USD-cent balances. It looked like an audit/spec task, but four solvers got
+  30/30.
+- **Patchwork Ordinance Adjudication**: compile a fictional ordinance, later
+  amendments, and case files into an exact adjudication string. It exposed a
+  GPT-5.2 weakness but saturated for the other solvers.
+- **Amendment Ledger Reconciliation**: apply a base rule code plus chronological
+  amendments, suspensions, caps, and waivers to case files. It saturated at
+  30/30 across all solvers.
+- **Polyhedral Surface Traversal**: track movement and coordinates across a
+  folded 3D cube surface. It exposed a GPT-5.4 weakness but saturated for the
+  other solvers.
+- **Mutative Assembly Inversion**: find two register inputs that make a
+  self-modifying toy assembly program reach a target state. It was ultimately
+  too clean to script or emulate; strongest solvers reached 30/30.
+- **String Rewriting Distance**: compute shortest-path distances under small
+  string rewrite rules. This failed as a Claude-created candidate because the
+  public packet made the BFS/search abstraction too obvious, and the low GPT
+  cells were a scorer type artifact.
+
+### Feedback-style candidates
+
+- **Reimbursement Forensics**: compute travel reimbursement totals from public
+  policy text, exchange rates, receipts, and emails. This is the target shape:
+  messy finite evidence, exact numeric answers, and all solvers in the
+  low-nonzero band.
+- **release_packet_arbitration**: decide whether fictional software release
+  packets should be approved, rejected, or escalated under a governance manual.
+  Mostly too easy, with one diagnostic Gemini Pro failure.
+- **Cross-Document Obligation Resolution**: reconcile incident dossiers,
+  amendments, board/hold rules, remediation rules, dates, and evidence codes.
+  The public packet supported the core date answers, but the scorer required
+  private label strings, so the all-zero row was a scoring-contract failure.
+- **Corrupted LZ77 Recovery**: recover original byte blocks from LZ77 streams
+  with random byte flips and CRC checks. It was solvable for some solvers but
+  too narrow and operationally brittle.
+- **MFN-Cascade**: trace treaty-style MFN tariff updates through recursive
+  category hierarchies to a fixed point. It looked complex but saturated at
+  30/30 for every solver.
+- **Conlang Rosetta**: infer a generated fictional language from a lexicon and
+  interlinear examples, then translate exact strings. It looked more
+  linguistics-like, but every solver got 30/30.
+
+## What The Next Creator Should Do
+
+Build something closer to Reimbursement Forensics and farther from the failure
+cases.
+
+A strong candidate should have:
+
+- complete public evidence, with no hidden generator trick needed to answer;
+- a closed or clearly normalizable answer contract;
+- messy cross-document evidence that rewards careful reading and tool use;
+- adversarial edge cases that punish one-pass heuristics;
+- enough item diversity that one brittle script cannot solve all 30 rows;
+- partial recoverability, so weak or incomplete solvers get nonzero scores;
+- no obvious single algorithm such as BFS, direct simulation, exact parsing, or
+  brute-force search over a clean finite state space.
+
+Avoid these traps:
+
+- Do not rely on type strictness, casing, private labels, or hidden vocabulary
+  to create low scores.
+- Do not create an all-zero benchmark unless the public bundle contains clear
+  evidence that a human or strong external solver can recover the answers.
+- Do not make a clean puzzle where the README tells the solver the intended
+  abstraction.
+- Do not make a narrow recovery task whose main difficulty is getting a tool
+  run to finish.
+- Do not make a task that is just larger. Strong solvers can script large clean
+  tasks.
+
+In `validation_report.md`, prove the benchmark is fair. For each answer field,
+say what public evidence identifies it and how an external solver could verify
+it without seeing private gold answers.
+
+The benchmark should be rejected if any strong solver gets 30/30. It should
+also be rejected if all strong solvers get 0/30 and the package cannot show
+external solvability from the public bundle.
+
+PRIOR_RUN_FEEDBACK>>>
+
+
+Required root files:
+- README.md
+- benchmark_spec.json
+- generator.py
+- verifier.py
+- scorer.py
+- gold_private_sample.jsonl
+- validation_report.md
+- failure_modes.md
+
+Required isolated solver bundle:
+- solver_bundle/SOLVER_MANIFEST.json
+- solver_bundle/items_private_sample.jsonl
+- solver_bundle/README.md or solver_bundle/solver_packet.md
+- any solver-visible assets needed for the task
+
+Execution target:
+
+Your empty artifact directory is:
+
+/Users/rohit/Documents/Workspace/Coding/benchbench/experiments/007_full_feedback_6x6_20260523_172919/run/candidate_created_by_claude_opus
+
+Use that exact directory as the working directory for every shell command and
+file read/write. Some agent CLIs may open a global scratch directory by
+default; ignore that scratch directory and build the benchmark package only in
+the artifact directory above.
+
+You may use local computation and internet research if useful. Do not browse or
+research forever: the output must be a working package.
+
+Strict CLI contract from this directory:
+- `/Users/rohit/.pyenv/versions/global_env/bin/python generator.py --sample-count 30 --seed 20260516 --out-dir .`
+- `/Users/rohit/.pyenv/versions/global_env/bin/python verifier.py --items solver_bundle/items_private_sample.jsonl --gold gold_private_sample.jsonl`
+- `/Users/rohit/.pyenv/versions/global_env/bin/python scorer.py --gold gold_private_sample.jsonl --predictions predictions.jsonl --out score_report.json`
+
+Data contract:
+- gold_private_sample.jsonl rows include exactly `id` and `answer`.
+- solver predictions include exactly `id` and `answer`.
+- solver_bundle/items_private_sample.jsonl must include all item ids and any
+  solver-visible asset references relative to solver_bundle.
+- The solver bundle must not contain gold answers, generator/verifier/scorer
+  code, validation reports, private audit traces, hidden seeds, private solution
+  labels, or answer keys.
+
+Before finishing:
+1. Generate 30 private sample items.
+2. Verify the package.
+3. Run a gold self-score.
+4. Run at least one weak baseline or obvious-shortcut baseline.
+5. Check external solvability: explain why the public bundle contains enough
+   information for a qualified external solver to solve the items in principle.
+6. Inspect the solver bundle for leakage.
+7. Write validation_report.md.
+8. In README.md or benchmark_spec.json, briefly state what existing benchmarks
+   this is closest to and why this package is not merely a duplicate.
+
+BenchBench evaluates you as a benchmark inventor. The solver models will be
+allowed to use all available tools and try hard, except they may not inspect
+private files outside the isolated solver bundle.

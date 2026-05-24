@@ -1,0 +1,16 @@
+{
+  "assets": "dossiers/*.md",
+  "benchmark": "Prior Authorization Forensics (PAF) v1",
+  "item_file": "items_private_sample.jsonl",
+  "notes": "All answer-determining rules and evidence are in the dossier files. Do not infer from file order.",
+  "prediction_format": {
+    "answer": {
+      "allowed_cents": "integer",
+      "insurer_pays_cents": "integer",
+      "patient_owes_cents": "integer",
+      "reason_code": "OK|NO_AUTH|NO_REF|OON|NOT_COVERED|DATE",
+      "status": "approved|denied"
+    },
+    "id": "string"
+  }
+}

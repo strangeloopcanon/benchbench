@@ -1,0 +1,14 @@
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_024_r01,2026-01-27,IE,library,paperback,15,10110,1499,0,1,library batch
+crf_024_r02,2026-01-06,DE,direct,audio,4,5756,1599,0,0,manual correction row
+crf_024_r03,2026-01-13,DE,library,hardcover,10,24990,2499,0,0,DSP settlement
+crf_024_r04,2026-03-04,NL,retail,hardcover,1,1034,2299,0,0,wholesale feed import
+crf_024_r05,2026-02-01,NL,retail,ebook,15,16860,1499,0,0,standard shipment
+crf_024_r06,2026-03-22,GB,bundle,paperback,2,3398,1699,1189,0,wholesale feed import
+crf_024_r07,2026-03-02,AR,library,audio,8,17592,2199,0,0,metadata sync row
+crf_024_r08,2026-01-04,IT,retail,paperback,2,2278,1899,0,0,wholesale feed import
+crf_024_r09,2026-02-28,CA,library,audio,-2,0,2499,0,0,library batch
+crf_024_r10,2026-03-15,US,direct,paperback,2,3418,1899,0,0,wholesale feed import
+crf_024_r11,2026-01-13,AU,subscription,ebook,-1,-1499,1499,0,0,library batch
+crf_024_r12,2026-02-12,NZ,direct,paperback,1,1889,2099,0,0,DSP settlement
+crf_024_r13,2026-01-22,US,library,audio,15,24735,2199,0,0,DSP settlement

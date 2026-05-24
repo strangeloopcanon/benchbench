@@ -1,0 +1,11 @@
+From: Property Manager
+To: Accounting
+Date: Day 10
+Subject: CAM Cap
+Tenant G secured a cap on CAM at 1208 cents per sq ft per year.
+
+From: Maintenance
+To: Accounting
+Date: Day 111
+Subject: Direct Charge
+The expense on Day 109 for 'Snow removal 645' (30570 cents) was caused by Tenant E. Reclassify this as a Direct Charge to Tenant E instead of OpEx.

@@ -1,0 +1,8 @@
+{
+  "score": 30.0,
+  "metrics": {
+    "total_tenants_evaluated": 122,
+    "correct_tenants": 122,
+    "accuracy": 1.0
+  }
+}

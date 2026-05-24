@@ -1,0 +1,32 @@
+```jsonl
+{"id": "crf_001", "answer": {"included_units": 10, "earned_royalty_cents": 1066, "recouped_advance_cents": 1066, "payable_cents": 24421}}
+{"id": "crf_002", "answer": {"included_units": 42, "earned_royalty_cents": 9317, "recouped_advance_cents": 9317, "payable_cents": 29647}}
+{"id": "crf_003", "answer": {"included_units": 10, "earned_royalty_cents": 2142, "recouped_advance_cents": 2142, "payable_cents": 22508}}
+{"id": "crf_004", "answer": {"included_units": 5, "earned_royalty_cents": 683, "recouped_advance_cents": 683, "payable_cents": 10337}}
+{"id": "crf_005", "answer": {"included_units": 6, "earned_royalty_cents": 959, "recouped_advance_cents": 959, "payable_cents": 17724}}
+{"id": "crf_006", "answer": {"included_units": 38, "earned_royalty_cents": 7416, "recouped_advance_cents": 7416, "payable_cents": 5450}}
+{"id": "crf_007", "answer": {"included_units": 49, "earned_royalty_cents": 9682, "recouped_advance_cents": 9682, "payable_cents": 24055}}
+{"id": "crf_008", "answer": {"included_units": 3, "earned_royalty_cents": -173, "recouped_advance_cents": 0, "payable_cents": 13314}}
+{"id": "crf_009", "answer": {"included_units": 48, "earned_royalty_cents": 6000, "recouped_advance_cents": 6000, "payable_cents": 27636}}
+{"id": "crf_010", "answer": {"included_units": 4, "earned_royalty_cents": 44, "recouped_advance_cents": 44, "payable_cents": 25949}}
+{"id": "crf_011", "answer": {"included_units": 0, "earned_royalty_cents": 0, "recouped_advance_cents": 0, "payable_cents": 6503}}
+{"id": "crf_012", "answer": {"included_units": 6, "earned_royalty_cents": 1873, "recouped_advance_cents": 1873, "payable_cents": 1900}}
+{"id": "crf_013", "answer": {"included_units": 0, "earned_royalty_cents": -10, "recouped_advance_cents": 0, "payable_cents": 17844}}
+{"id": "crf_014", "answer": {"included_units": 5, "earned_royalty_cents": 2158, "recouped_advance_cents": 2158, "payable_cents": 31759}}
+{"id": "crf_015", "answer": {"included_units": 0, "earned_royalty_cents": 0, "recouped_advance_cents": 0, "payable_cents": 24958}}
+{"id": "crf_016", "answer": {"included_units": 16, "earned_royalty_cents": 3930, "recouped_advance_cents": 3930, "payable_cents": 18714}}
+{"id": "crf_017", "answer": {"included_units": 3, "earned_royalty_cents": 645, "recouped_advance_cents": 645, "payable_cents": 17272}}
+{"id": "crf_018", "answer": {"included_units": -37, "earned_royalty_cents": -7712, "recouped_advance_cents": 0, "payable_cents": 18383}}
+{"id": "crf_019", "answer": {"included_units": 23, "earned_royalty_cents": 6740, "recouped_advance_cents": 6740, "payable_cents": 16256}}
+{"id": "crf_020", "answer": {"included_units": 21, "earned_royalty_cents": 3243, "recouped_advance_cents": 3243, "payable_cents": 13023}}
+{"id": "crf_021", "answer": {"included_units": 20, "earned_royalty_cents": 3321, "recouped_advance_cents": 3321, "payable_cents": 25663}}
+{"id": "crf_022", "answer": {"included_units": 30, "earned_royalty_cents": 4940, "recouped_advance_cents": 4940, "payable_cents": 25094}}
+{"id": "crf_023", "answer": {"included_units": 11, "earned_royalty_cents": 2834, "recouped_advance_cents": 2834, "payable_cents": 11960}}
+{"id": "crf_024", "answer": {"included_units": 26, "earned_royalty_cents": 7080, "recouped_advance_cents": 7080, "payable_cents": 29546}}
+{"id": "crf_025", "answer": {"included_units": 0, "earned_royalty_cents": 0, "recouped_advance_cents": 0, "payable_cents": 26749}}
+{"id": "crf_026", "answer": {"included_units": 43, "earned_royalty_cents": 11650, "recouped_advance_cents": 11650, "payable_cents": 4567}}
+{"id": "crf_027", "answer": {"included_units": 7, "earned_royalty_cents": 1871, "recouped_advance_cents": 1871, "payable_cents": 14287}}
+{"id": "crf_028", "answer": {"included_units": -2, "earned_royalty_cents": -807, "recouped_advance_cents": 0, "payable_cents": 5261}}
+{"id": "crf_029", "answer": {"included_units": 16, "earned_royalty_cents": 2198, "recouped_advance_cents": 2198, "payable_cents": 6749}}
+{"id": "crf_030", "answer": {"included_units": -11, "earned_royalty_cents": -3598, "recouped_advance_cents": 0, "payable_cents": 0}}
+```

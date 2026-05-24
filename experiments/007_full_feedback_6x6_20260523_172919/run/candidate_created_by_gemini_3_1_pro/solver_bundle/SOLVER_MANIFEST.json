@@ -1,0 +1,8 @@
+{
+  "name": "Commercial Lease CAM Reconciliation",
+  "items_file": "items_private_sample.jsonl",
+  "assets": [
+    "items"
+  ],
+  "entry_point": "Read README.md"
+}

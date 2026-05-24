@@ -1,0 +1,20 @@
+From: support@nimbuscloud.example
+Subject: Incident follow-up
+
+---
+From: customer@acme.example
+Date: 2026-04-13T02:45:00Z
+
+Can you confirm whether we qualify for service credits this month?
+
+---
+From: support@nimbuscloud.example
+Date: 2026-04-13T03:15:00Z
+
+We will review monitoring and the incident timeline. Note: posted status times can be delayed.
+
+---
+From: support@nimbuscloud.example
+Date: 2026-04-13T04:45:00Z
+
+Initial estimate (may be revised): outage lasted about 6 minutes.

@@ -1,0 +1,13 @@
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_029_r01,2026-01-14,BR,retail,hardcover,-2,0,2299,0,0,manual correction row
+crf_029_r02,2026-02-08,NL,bundle,audio,-3,-4272,1899,-1281,0,manual correction row
+crf_029_r03,2026-03-10,IE,subscription,audio,-2,-1708,1899,0,0,manual correction row
+crf_029_r04,2026-03-15,MX,direct,hardcover,12,27588,2299,0,0,metadata sync row
+crf_029_r05,2026-02-26,ES,retail,hardcover,-10,-29990,2999,0,0,wholesale feed import
+crf_029_r06,2026-03-17,NZ,direct,paperback,15,19110,1699,0,0,DSP settlement
+crf_029_r07,2026-02-12,BR,library,audio,4,6396,1599,0,1,DSP settlement
+crf_029_r08,2026-03-16,NL,subscription,ebook,2,2598,1299,0,0,DSP settlement
+crf_029_r09,2026-01-27,NL,direct,audio,1,854,1899,0,0,library batch
+crf_029_r10,2026-03-04,NL,direct,audio,1,1599,1599,0,0,metadata sync row
+crf_029_r11,2026-02-13,AR,subscription,ebook,-1,-1124,1499,0,0,library batch
+crf_029_r12,2026-02-28,NZ,bundle,hardcover,3,6747,2999,2024,0,manual correction row

@@ -1,0 +1,10 @@
+row_id,sale_date,territory,channel,format,units,gross_cents,list_price_cents,bundle_allocated_cents,is_promo,notes
+crf_005_r01,2026-03-16,BR,library,paperback,2,4198,2099,0,0,DSP settlement
+crf_005_r02,2026-03-08,FR,direct,hardcover,4,7196,2999,0,0,metadata sync row
+crf_005_r03,2026-02-15,US,retail,paperback,-1,-899,1499,0,0,DSP settlement
+crf_005_r04,2026-02-19,MX,bundle,hardcover,5,8620,2299,2155,0,library batch
+crf_005_r05,2026-01-18,DE,bundle,ebook,12,4848,899,1212,0,manual correction row
+crf_005_r06,2026-01-14,CA,subscription,audio,15,17085,1899,0,0,manual correction row
+crf_005_r07,2026-03-18,MX,retail,paperback,5,4720,2099,0,0,metadata sync row
+crf_005_r08,2026-03-26,US,bundle,audio,-2,-2278,1899,-569,0,manual correction row
+crf_005_r09,2026-03-21,FR,direct,hardcover,-4,-8276,2299,0,0,manual correction row

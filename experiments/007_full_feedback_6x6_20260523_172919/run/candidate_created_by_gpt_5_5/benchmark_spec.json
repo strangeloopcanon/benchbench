@@ -1,0 +1,34 @@
+{
+  "name": "Prior Authorization Forensics (PAF) v1",
+  "version": "1.0.0",
+  "description": "Adjudicate fictional health-insurance claim dossiers by reconciling plan rules, service schedules, riders, provider-network notes, prior authorization/referral correspondence, date windows, and accumulators.",
+  "task_type": "cross_document_forensic_adjudication",
+  "sample_count_default": 30,
+  "answer_format": "json",
+  "answer_schema_public": {
+    "status": "approved|denied",
+    "reason_code": "OK|NO_AUTH|NO_REF|OON|NOT_COVERED|DATE",
+    "allowed_cents": "integer",
+    "insurer_pays_cents": "integer",
+    "patient_owes_cents": "integer"
+  },
+  "determinism_notes": "The generator is seeded. The public dossier for each item contains all adjudication rules and evidence needed to derive the answer.",
+  "closest_existing_evals": [
+    {
+      "name": "Reimbursement Forensics (BenchBench)",
+      "why_close": "Both require exact numeric decisions from messy policy and transaction evidence.",
+      "why_not_duplicate": "PAF uses medical benefit adjudication, denial precedence, network constraints, referral/auth validity, accumulators, and plan riders rather than travel receipts and exchange-rate reimbursement."
+    },
+    {
+      "name": "DocVQA / document-understanding evals",
+      "why_close": "The solver must read semi-structured documents and extract relevant facts.",
+      "why_not_duplicate": "PAF is not visual extraction or open QA; it is deterministic cross-document rule application with a closed answer schema."
+    },
+    {
+      "name": "Legal/contract rule-following benchmarks",
+      "why_close": "The benchmark includes rider precedence and policy exceptions.",
+      "why_not_duplicate": "The final output is an auditable claim calculation, not a subjective legal conclusion or a clean amendment puzzle."
+    }
+  ],
+  "license": "CC0-1.0"
+}

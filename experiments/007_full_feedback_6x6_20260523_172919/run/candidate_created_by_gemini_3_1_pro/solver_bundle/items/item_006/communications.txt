@@ -1,0 +1,23 @@
+From: Maintenance
+To: Accounting
+Date: Day 182
+Subject: Direct Charge
+Regarding the 101798 cents spent on 'Security patrol 818' on Day 180: Tenant F is at fault. This is a direct charge to them.
+
+From: Management
+To: Accounting
+Date: Day 278
+Subject: Reclassification
+Correction: 'Security patrol 286' on Day 273 is a CapEx. Remove from OpEx.
+
+From: Property Manager
+To: Accounting
+Date: Day 10
+Subject: CAM Cap
+Please note that Tenant E has a negotiated CAM Cap of 833 cents per sq ft per year. Apply this to their final calculation.
+
+From: Leasing
+To: Accounting
+Date: Day 69
+Subject: Expansion
+Tenant B has expanded into Suite 102 starting on Day 71. They will occupy this suite until the end of the year.

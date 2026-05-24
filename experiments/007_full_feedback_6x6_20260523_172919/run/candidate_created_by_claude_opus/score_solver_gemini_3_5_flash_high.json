@@ -1,0 +1,218 @@
+{
+  "correct": 29,
+  "total": 30,
+  "score": "29/30",
+  "accuracy": 0.9667,
+  "details": [
+    {
+      "id": "cppc_001",
+      "expected": 5909857,
+      "predicted_raw": 5909857,
+      "predicted_normalized": 5909857,
+      "correct": true
+    },
+    {
+      "id": "cppc_002",
+      "expected": 8028748,
+      "predicted_raw": 8028748,
+      "predicted_normalized": 8028748,
+      "correct": true
+    },
+    {
+      "id": "cppc_003",
+      "expected": 2675410,
+      "predicted_raw": 2675410,
+      "predicted_normalized": 2675410,
+      "correct": true
+    },
+    {
+      "id": "cppc_004",
+      "expected": 6106310,
+      "predicted_raw": 6106310,
+      "predicted_normalized": 6106310,
+      "correct": true
+    },
+    {
+      "id": "cppc_005",
+      "expected": 3304083,
+      "predicted_raw": 3304083,
+      "predicted_normalized": 3304083,
+      "correct": true
+    },
+    {
+      "id": "cppc_006",
+      "expected": 731161,
+      "predicted_raw": 731161,
+      "predicted_normalized": 731161,
+      "correct": true
+    },
+    {
+      "id": "cppc_007",
+      "expected": 9838240,
+      "predicted_raw": 9838240,
+      "predicted_normalized": 9838240,
+      "correct": true
+    },
+    {
+      "id": "cppc_008",
+      "expected": 3536096,
+      "predicted_raw": 3536096,
+      "predicted_normalized": 3536096,
+      "correct": true
+    },
+    {
+      "id": "cppc_009",
+      "expected": 2572346,
+      "predicted_raw": 2572346,
+      "predicted_normalized": 2572346,
+      "correct": true
+    },
+    {
+      "id": "cppc_010",
+      "expected": 2608975,
+      "predicted_raw": 2608975,
+      "predicted_normalized": 2608975,
+      "correct": true
+    },
+    {
+      "id": "cppc_011",
+      "expected": 2713995,
+      "predicted_raw": 2713995,
+      "predicted_normalized": 2713995,
+      "correct": true
+    },
+    {
+      "id": "cppc_012",
+      "expected": 1532977,
+      "predicted_raw": 1532977,
+      "predicted_normalized": 1532977,
+      "correct": true
+    },
+    {
+      "id": "cppc_013",
+      "expected": 2686377,
+      "predicted_raw": 2686377,
+      "predicted_normalized": 2686377,
+      "correct": true
+    },
+    {
+      "id": "cppc_014",
+      "expected": 4713132,
+      "predicted_raw": 4713132,
+      "predicted_normalized": 4713132,
+      "correct": true
+    },
+    {
+      "id": "cppc_015",
+      "expected": 5547117,
+      "predicted_raw": 5547117,
+      "predicted_normalized": 5547117,
+      "correct": true
+    },
+    {
+      "id": "cppc_016",
+      "expected": 3604638,
+      "predicted_raw": 3604638,
+      "predicted_normalized": 3604638,
+      "correct": true
+    },
+    {
+      "id": "cppc_017",
+      "expected": 8071184,
+      "predicted_raw": 8071184,
+      "predicted_normalized": 8071184,
+      "correct": true
+    },
+    {
+      "id": "cppc_018",
+      "expected": 3592268,
+      "predicted_raw": 3592268,
+      "predicted_normalized": 3592268,
+      "correct": true
+    },
+    {
+      "id": "cppc_019",
+      "expected": 3119727,
+      "predicted_raw": 3119727,
+      "predicted_normalized": 3119727,
+      "correct": true
+    },
+    {
+      "id": "cppc_020",
+      "expected": 5722292,
+      "predicted_raw": 5722292,
+      "predicted_normalized": 5722292,
+      "correct": true
+    },
+    {
+      "id": "cppc_021",
+      "expected": 7163775,
+      "predicted_raw": 7163775,
+      "predicted_normalized": 7163775,
+      "correct": true
+    },
+    {
+      "id": "cppc_022",
+      "expected": 3143718,
+      "predicted_raw": 3143718,
+      "predicted_normalized": 3143718,
+      "correct": true
+    },
+    {
+      "id": "cppc_023",
+      "expected": 6425105,
+      "predicted_raw": 6425105,
+      "predicted_normalized": 6425105,
+      "correct": true
+    },
+    {
+      "id": "cppc_024",
+      "expected": 5378529,
+      "predicted_raw": 5378529,
+      "predicted_normalized": 5378529,
+      "correct": true
+    },
+    {
+      "id": "cppc_025",
+      "expected": 2295272,
+      "predicted_raw": 2295272,
+      "predicted_normalized": 2295272,
+      "correct": true
+    },
+    {
+      "id": "cppc_026",
+      "expected": 2112705,
+      "predicted_raw": 2112705,
+      "predicted_normalized": 2112705,
+      "correct": true
+    },
+    {
+      "id": "cppc_027",
+      "expected": 3478015,
+      "predicted_raw": 3478015,
+      "predicted_normalized": 3478015,
+      "correct": true
+    },
+    {
+      "id": "cppc_028",
+      "expected": 3162815,
+      "predicted_raw": 3162815,
+      "predicted_normalized": 3162815,
+      "correct": true
+    },
+    {
+      "id": "cppc_029",
+      "expected": 1626253,
+      "predicted_raw": 1626254,
+      "predicted_normalized": 1626254,
+      "correct": false
+    },
+    {
+      "id": "cppc_030",
+      "expected": 8158565,
+      "predicted_raw": 8158565,
+      "predicted_normalized": 8158565,
+      "correct": true
+    }
+  ]
+}

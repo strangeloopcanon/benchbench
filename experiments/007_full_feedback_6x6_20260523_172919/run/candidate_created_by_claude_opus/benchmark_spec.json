@@ -1,0 +1,49 @@
+{
+  "benchmark_name": "Construction Progress Payment Certification",
+  "benchmark_id": "cppc",
+  "version": "1.0",
+  "capability_claim": "Measures ability to correctly translate complex multi-article contract provisions into precise numerical computations, requiring cross-referencing of structured data with procedural rules, handling of boundary conditions, and multi-step arithmetic with intermediate rounding.",
+  "domain": "construction_finance",
+  "item_count": 30,
+  "seed": 20260516,
+  "answer_type": "integer (cents)",
+  "difficulty_distribution": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 10
+  },
+  "edge_cases": [
+    "retention_threshold_50pct",
+    "change_order_status_billing_rates",
+    "stored_materials_triple_condition",
+    "excusable_delay_ld_waiver",
+    "insurance_lapse_overlap_calculation",
+    "tax_on_materials_only",
+    "tax_exemption",
+    "material_flagged_change_orders",
+    "per_line_rounding_vs_aggregate",
+    "cumulative_method_vs_incremental"
+  ],
+  "closest_existing_benchmarks": [
+    {
+      "name": "Reimbursement Forensics (BenchBench internal)",
+      "similarity": "Both require computing exact amounts from policy documents and messy evidence",
+      "differentiation": "CPPC uses cumulative AIA G702 method with per-line rounding, retention thresholds, and multi-status change orders - distinct domain mechanics"
+    },
+    {
+      "name": "GAIA (agent reasoning)",
+      "similarity": "Both require multi-step reasoning with tool use",
+      "differentiation": "CPPC has a single well-defined domain with deterministic rules, not general knowledge retrieval"
+    }
+  ],
+  "scoring": {
+    "method": "exact_match",
+    "normalization": "Integer comparison after parsing numeric strings",
+    "partial_credit": false
+  },
+  "baseline_results": {
+    "gold_self_score": "30/30",
+    "naive_baseline": "6/30 (ignores CO status, stored conditions, retention threshold, insurance, tax)",
+    "almost_correct_baseline": "16/30 (correct except always uses 10% retention)"
+  }
+}

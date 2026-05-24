@@ -1,0 +1,23 @@
+From: Management
+To: Accounting
+Date: Day 288
+Subject: Reclassification
+The 74963 cents for 'HVAC filter replacement 125' (Day 283) is actually a capital expense.
+
+From: Property Manager
+To: Accounting
+Date: Day 10
+Subject: CAM Cap
+For Tenant A, their base CAM is capped at 1257 cents per square foot annually.
+
+From: Maintenance
+To: Accounting
+Date: Day 175
+Subject: Direct Charge
+Regarding the 41441 cents spent on 'Snow removal 862' on Day 173: Tenant D is at fault. This is a direct charge to them.
+
+From: Leasing
+To: Accounting
+Date: Day 85
+Subject: Expansion
+Tenant E has expanded into Suite 101 starting on Day 87. They will occupy this suite until the end of the year.

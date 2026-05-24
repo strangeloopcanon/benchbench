@@ -1,0 +1,23 @@
+# Monitoring Log Export (Public)
+
+tz_hint: America/Los_Angeles (UTC-07:00 during this incident)
+clock_drift_seconds: 0
+
+Format variants (one per line):
+1) <timestamp> <region> STATE <state>
+2) <timestamp> <region> METRIC {"p95_ms": <int>, "error_rate_pct": <int>}
+
+States: OK | DEGRADED | SEVERE_DEGRADED | UNAVAILABLE
+
+2026-01-28T10:23:00-07:00 us-west METRIC p95_ms=607 error_rate_pct=6
+2026-01-28T13:45:00-07:00 us-west STATE DEGRADED
+2026-01-28T20:48:26Z us-west STATE SEVERE_DEGRADED
+2026-01-28T14:05:26-07:00 us-west STATE DEGRADED
+2026-01-28T21:06:45Z us-west STATE OK
+2026-01-28T15:51:00-07:00 us-west METRIC {"p95_ms": 575, "error_rate_pct": 9}
+2026-01-28T19:55:00-07:00 us-west METRIC {"p95_ms": 520, "error_rate_pct": 4}
+2026-01-29T05:16:00Z us-west STATE DEGRADED
+2026-01-28T22:19:30-07:00 us-west STATE SEVERE_DEGRADED
+2026-01-28T22:41:15-07:00 us-west STATE DEGRADED
+2026-01-28T22:43:21-07:00 us-west STATE OK
+2026-01-29T07:51:00-07:00 us-west METRIC {"p95_ms": 438, "error_rate_pct": 3}

@@ -17,7 +17,7 @@ from benchbench_model_backends import (
     safe_name,
 )
 from benchbench_results import extract_predictions, extract_solver_predictions, score_summary
-from run_broad_three_model_sweep import candidate_card_lines, candidate_status
+from run_broad_three_model_sweep import DEFAULT_MODELS, candidate_card_lines, candidate_status, resolve_model_lists
 from scripts.build_benchmark_landscape_pack import model_from_safe_slug, solver_model_from_score_path
 
 
@@ -226,6 +226,19 @@ class ModelBackendTests(unittest.TestCase):
         self.assertEqual(candidate_status([{"total": 30, "correct": 0, "accuracy": 0.0}]), "solvability_audit")
         self.assertEqual(candidate_status([{"total": 30, "correct": 14, "accuracy": 14 / 30}]), "accept")
         self.assertEqual(candidate_status([{"total": 30, "correct": 15, "accuracy": 0.5}]), "reject")
+
+    def test_sweep_model_panels_can_separate_creators_and_solvers(self) -> None:
+        creators, solvers = resolve_model_lists(None, None, None)
+        self.assertEqual(creators, DEFAULT_MODELS)
+        self.assertEqual(solvers, DEFAULT_MODELS)
+
+        creators, solvers = resolve_model_lists(
+            ["gpt-5.2", "gpt-5.4"],
+            ["gpt-5.4"],
+            ["gpt-5.2", "gpt-5.4", "cursor:claude-opus"],
+        )
+        self.assertEqual(creators, ["gpt-5.4"])
+        self.assertEqual(solvers, ["gpt-5.2", "gpt-5.4", "cursor:claude-opus"])
 
     def test_candidate_card_summarizes_benchmark_mechanics(self) -> None:
         with tempfile.TemporaryDirectory(prefix="benchbench-card-test.") as tmp:

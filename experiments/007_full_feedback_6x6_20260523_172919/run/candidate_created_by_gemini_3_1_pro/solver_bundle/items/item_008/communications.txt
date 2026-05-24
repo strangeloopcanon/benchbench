@@ -1,0 +1,17 @@
+From: Maintenance
+To: Accounting
+Date: Day 30
+Subject: Direct Charge
+Please bill the 'HVAC filter replacement 433' (Day 28) directly to Tenant E. They are responsible for it. Do not put it in the main OpEx pool.
+
+From: Leasing
+To: Accounting
+Date: Day 110
+Subject: Expansion
+Update the rent roll: Tenant D took over Suite 101 on Day 112.
+
+From: Maintenance
+To: Accounting
+Date: Day 69
+Subject: Direct Charge
+Please bill the 'Security patrol 461' (Day 67) directly to Tenant G. They are responsible for it. Do not put it in the main OpEx pool.
