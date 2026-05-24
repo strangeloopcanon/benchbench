@@ -25,8 +25,7 @@ score. Gemini 3.1 Pro and Gemini 3.5 Flash produced the most interesting Round
 3 challengers, but those tasks were still too easy for the top solvers.
 
 We carry Reimbursement Forensics forward as the incumbent so new sweeps have
-something concrete to beat. It still needs a human audit before it can move into
-a stable benchmark bank, but the audit is a guardrail, not the main result.
+something concrete to beat.
 
 ![Canonical Round 3 6x6 heatmap](experiments/canonical/figures/canonical_round3_6x6_heatmap.svg)
 
@@ -38,6 +37,19 @@ a stable benchmark bank, but the audit is a guardrail, not the main result.
 | Best Round 3 challenger | Commercial Lease CAM Reconciliation | Gemini 3.1 Pro | 1-26/30 | Separated solvers sharply, but top solvers still scored too high. |
 | Best Round 3 challenger | Maritime Freight & Customs Audit | Gemini 3.5 Flash | 4-25/30 | Also separated solvers, but did not hold the top end down. |
 | Diagnostic, not a keeper | Corrupted LZ77 Recovery | Gemini 3.1 Pro | 0-22/30 | Hard for some solvers, but too brittle and zero-heavy. |
+
+## Completion Proxy
+
+Solver completion rate is a useful proxy, but only with a second number beside
+it. A broken all-zero benchmark also has low completion. The better signal is:
+how many solvers landed in the useful 1-14/30 band?
+
+![Benchmark quality map](experiments/canonical/figures/benchmark_quality_map.svg)
+
+Reimbursement Forensics is the outlier: moderate completion, six useful solver
+cells, no zero wall. Commercial Lease CAM and Maritime Freight created solver
+spread, but the best solvers completed too much of them. Service Credit and
+Cross-Document Obligation show why low completion alone is not enough.
 
 ## What BenchBench Is Testing
 
@@ -65,9 +77,10 @@ out of 30.
 
 - High scores mean the benchmark was too easy.
 - Low nonzero scores are the useful band.
-- All-zero rows need audit before they count as hard.
-- No candidate is accepted until a human can verify that the public packet
-  contains enough evidence and the scorer is fair.
+- All-zero rows are not automatically strong; they need a scorer or
+  solvability explanation.
+- Stable benchmark-bank promotion is tracked separately. The headline here is
+  creator ranking.
 
 Canonical grids and notes:
 [`experiments/canonical/README.md`](experiments/canonical/README.md)
@@ -77,8 +90,8 @@ the latest solver leaderboard, and Round 3 matchup summaries.
 
 ## Next Challenger Sweep
 
-First resolve the audit queue:
-[`experiments/audit_queue.md`](experiments/audit_queue.md)
+First check the known scorer/solvability problem cases:
+[`experiments/review_queue.md`](experiments/review_queue.md)
 
 Then run challengers against the full solver panel. GPT-5.2's Reimbursement
 Forensics result stays frozen; the next run asks the other creators to beat it.
@@ -95,8 +108,8 @@ same.
 
 ## Evidence
 
-- [`experiments/benchmark_bank.md`](experiments/benchmark_bank.md): frozen,
-  audit-required, and rejected candidates.
+- [`experiments/benchmark_bank.md`](experiments/benchmark_bank.md): current
+  targets, diagnostic rows, and rejected candidates.
 - [`experiments/canonical/README.md`](experiments/canonical/README.md):
   current presentation-layer 6x6 grids and heatmaps.
 - [`experiments/007_full_feedback_6x6_20260523_172919/`](experiments/007_full_feedback_6x6_20260523_172919/):
@@ -119,7 +132,7 @@ In short:
    obvious leakage.
 3. Solvers receive only the public `solver_bundle/`.
 4. Scores are computed against private gold answers.
-5. Candidates are rejected, audited, or frozen as incumbents.
+5. Candidates are rejected, diagnosed, or carried forward as targets to beat.
 
 ## Repo Map
 

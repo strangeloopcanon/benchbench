@@ -16,9 +16,9 @@ are not the main result.
 ## Current Files
 
 - `canonical/README.md`: the clean three-round result story.
-- `benchmark_bank.md`: status of frozen, audit-required, and rejected
+- `benchmark_bank.md`: status of current targets, diagnostic rows, and rejected
   candidates.
-- `audit_queue.md`: checks to run before a new low-scoring result becomes
+- `review_queue.md`: checks to run before a new low-scoring result becomes
   evidence.
 - `result_grids_6x6_20260523.md`: stable pointer to the canonical result
   story.
@@ -35,9 +35,9 @@ solver broke it open. The model-level read is that GPT-5.2 has been the best
 benchmark creator so far, while Gemini 3.1 Pro and Gemini 3.5 Flash produced
 the most interesting Round 3 challengers.
 
-A human audit still matters before any candidate becomes a stable benchmark,
-but that is a guardrail. The experiment is mainly tracking which models can
-learn from prior failures and design better tests.
+The experiment is mainly tracking which models can learn from prior failures
+and design better tests. Stable reuse lives in `benchmark_bank.md`; the run
+story is about creator judgment.
 
 The canonical Round 3 comparison shows GPT-5.2 with its frozen incumbent and
 the other Experiment 007 creators as challengers:
@@ -52,8 +52,9 @@ the other Experiment 007 creators as challengers:
 | Claude Opus | Construction Progress Payment Certification | saturated |
 
 Raw Experiment 007's GPT-5.2 row is Service Credit Forensics. It scored 0/30
-for every solver and remains in the audit queue; it is not used as the
-canonical GPT-5.2 row because frozen incumbents carry forward until beaten.
+for every solver and remains a scorer/solvability problem case; it is not used
+as the canonical GPT-5.2 row because frozen incumbents carry forward until
+beaten.
 
 ## Canonical Runs
 
@@ -70,7 +71,8 @@ It presents:
 
 Direct six-creator, six-solver feedback sweep. All creators saw the current
 failure report. Claude Opus ran through Cursor. The raw GPT-5.2 output was
-Service Credit Forensics, which is audit-required rather than canonical.
+Service Credit Forensics, which is a scorer/solvability problem case rather
+than the canonical GPT-5.2 row.
 
 Two contract interventions were made before interpreting the grid:
 
@@ -92,7 +94,7 @@ Headline:
 
 | creator | benchmark | result |
 |---|---|---|
-| GPT-5.2 | Reimbursement Forensics | frozen incumbent; audit next |
+| GPT-5.2 | Reimbursement Forensics | current target to beat |
 | GPT-5.4 | release_packet_arbitration | mostly too easy |
 | GPT-5.5 | Cross-Document Obligation Resolution | scoring-contract failure |
 | Gemini 3.1 Pro | Corrupted LZ77 Recovery | narrow and operationally brittle |

@@ -10,7 +10,7 @@ The clean story has three canonical rounds:
 2. Round 2: Experiment 004, reconstructed the same way. This is where GPT-5.2 creates Reimbursement Forensics.
 3. Round 3: Experiment 007 challengers, with GPT-5.2's frozen Reimbursement Forensics row carried forward as the incumbent.
 
-That last step is deliberate. Raw Experiment 007 still contains GPT-5.2's Service Credit Forensics attempt, and it remains in the audit queue. But the canonical comparison asks whether any new challenger beat the frozen incumbent. None did.
+That last step is deliberate. Raw Experiment 007 still contains GPT-5.2's Service Credit Forensics attempt, and it remains a review item. But the canonical comparison asks whether any new challenger beat the frozen incumbent. None did.
 
 ## Current Read
 
@@ -18,11 +18,9 @@ Reimbursement Forensics remains the strongest benchmark so far. Its six-solver s
 
 The model story is the more interesting one: GPT-5.2 is the best benchmark creator so far. It is the only creator that produced an all-solver low-nonzero benchmark. We carry that row forward as the incumbent so new sweeps have something concrete to beat.
 
-A human audit still matters before any candidate moves into a stable benchmark bank. But the audit is a guardrail against false wins, not the main result.
-
 Read each row as one creator's benchmark and each column as one solver's attempt. Cell values are exact-match correct out of 30.
 
-Blue is the useful low-nonzero band. Orange and red mean the task was too easy. Gray zeros need audit before they count as hard; they can also mean an under-specified packet, scorer-contract failure, or operational failure.
+Blue is the useful low-nonzero band. Orange and red mean the task was too easy. Gray zeros need explanation before they count as hard; they can also mean an under-specified packet, scorer-contract failure, or operational failure.
 
 ## Strongest Benchmarks So Far
 
@@ -32,6 +30,24 @@ Blue is the useful low-nonzero band. Orange and red mean the task was too easy. 
 | Best Round 3 challenger | Commercial Lease CAM Reconciliation | Gemini 3.1 Pro | 1-26/30 | Separated solvers sharply, but top solvers still scored too high. |
 | Best Round 3 challenger | Maritime Freight & Customs Audit | Gemini 3.5 Flash | 4-25/30 | Also separated solvers, but did not hold the top end down. |
 | Diagnostic, not a keeper | Corrupted LZ77 Recovery | Gemini 3.1 Pro | 0-22/30 | Hard for some solvers, but too brittle and zero-heavy. |
+
+## Completion Proxy
+
+Completion rate is average exact-match score across solver attempts. Lower completion means harder, but lower is not automatically better: all-zero rows can be broken or underspecified. The useful signal is moderate completion plus many solver cells in the 1-14/30 band.
+
+![Benchmark quality map](figures/benchmark_quality_map.svg)
+
+| benchmark | creator | completion | useful cells | zero cells | read |
+|---|---|---|---|---|---|
+| Reimbursement Forensics | GPT-5.2 | 38% | 6/6 | 0/6 | current target to beat |
+| Commercial Lease CAM Reconciliation | Gemini 3.1 Pro | 63% | 1/6 | 0/6 | good spread, too easy at top |
+| Maritime Freight & Customs Audit | Gemini 3.5 Flash | 63% | 1/6 | 0/6 | good spread, too easy at top |
+| Corrupted LZ77 Recovery | Gemini 3.1 Pro | 22% | 0/6 | 4/6 | hard, but zero-heavy |
+| Service Credit Forensics | GPT-5.2 | 0% | 0/6 | 6/6 | all-zero wall |
+| Cross-Document Obligation Resolution | GPT-5.5 | 0% | 0/5 | 5/5 | scorer-contract failure |
+| Prior Authorization Forensics | GPT-5.5 | 80% | 0/6 | 0/6 | too easy |
+| Catalog Royalty Forensics | GPT-5.4 | 89% | 0/6 | 0/6 | too easy |
+| Construction Progress Payment Certification | Claude Opus | 99% | 0/6 | 0/6 | saturated |
 
 ## What Changed Across Rounds
 
@@ -68,7 +84,7 @@ For solvers, higher is better. This table uses the canonical Round 3 grid, inclu
 
 | benchmark | best solver | weakest solver | spread | read |
 |---|---|---|---|---|
-| Reimbursement Forensics | GPT-5.4 (14/30) | GPT-5.2 (10/30) | 4 | uniformly hard, audit pending |
+| Reimbursement Forensics | GPT-5.4 (14/30) | GPT-5.2 (10/30) | 4 | current target to beat |
 | Catalog Royalty Forensics | GPT-5.4 (30/30) | Gemini 3.1 Pro, Claude Opus (25/30) | 5 | too easy |
 | Prior Authorization Forensics | GPT-5.2 (25/30) | Gemini 3.1 Pro (23/30) | 2 | too easy |
 | Commercial Lease CAM Reconciliation | GPT-5.4, GPT-5.5, Claude Opus (26/30) | GPT-5.2 (1/30) | 25 | separates solvers, too easy at the top |
@@ -110,7 +126,7 @@ Notes:
 Notes:
 
 - Reimbursement Forensics is the first all-solver low-nonzero candidate.
-- Cross-Document Obligation Resolution is marked `skip` for Claude Opus because the row was already audited as a scoring-contract failure.
+- Cross-Document Obligation Resolution is marked `skip` for Claude Opus because the row had already been identified as a scoring-contract failure.
 - Corrupted LZ77 Recovery is diagnostic but narrow and operationally brittle.
 - MFN-Cascade and Conlang Rosetta saturated.
 
@@ -130,6 +146,6 @@ Notes:
 Notes:
 
 - GPT-5.2 is shown with its frozen Round 2 incumbent, not with the raw Service Credit Forensics row from Experiment 007.
-- Service Credit Forensics remains a raw Experiment 007 audit item because it scored 0/30 for every solver.
+- Service Credit Forensics remains a raw Experiment 007 scorer/solvability problem case because it scored 0/30 for every solver.
 - Maritime Freight and Commercial Lease CAM separated solvers, but both were too easy at the top end.
 - Catalog Royalty, Prior Authorization, and Construction Progress Payment saturated.

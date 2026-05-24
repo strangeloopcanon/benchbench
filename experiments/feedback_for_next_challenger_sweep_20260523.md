@@ -1,6 +1,6 @@
 # Feedback For Next Challenger Sweep
 
-Use this as `--feedback-context` after the audit queue has been checked.
+Use this as `--feedback-context` after the review queue has been checked.
 
 BenchBench evaluates benchmark invention. The next creator should try to beat
 the frozen incumbent, not recreate it.

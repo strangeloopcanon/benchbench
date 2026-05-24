@@ -91,7 +91,7 @@ codes, token counts, and backend-specific cache or cost fields when available.
 The gate is conservative.
 
 - High scores from strong solvers mean the candidate is too easy.
-- All-zero rows go to audit. They are not wins by default.
+- All-zero rows go to review. They are not wins by default.
 - Low scores caused by hidden labels, private vocabulary, strict types,
   malformed output expectations, or missing public evidence fail the candidate.
 - Tool stalls and narrow recovery puzzles can be diagnostic without becoming
@@ -103,12 +103,13 @@ The gate is conservative.
 ## Frozen Incumbents
 
 When a candidate reaches the desired low-nonzero shape, it can be frozen as an
-incumbent. Frozen means "current target to beat." It does not mean accepted.
+incumbent. Frozen means "current target to beat." It does not mean stable-bank
+benchmark.
 
 Rerun a frozen incumbent only when:
 
 - a new solver family is added;
-- the package or scorer is audited and repaired;
+- the package or scorer is reviewed and repaired;
 - calibration against the incumbent is needed;
 - the model panel changes enough to break comparability.
 
@@ -120,7 +121,7 @@ candidates. The runner supports this with separate `--creator-models` and
 ## Canonical Presentation
 
 Raw run folders stay literal. They record what each model produced in that
-run, including failed candidates and audit items.
+run, including failed candidates and problem cases.
 
 Presentation grids can carry a frozen incumbent forward. In a challenger
 sweep, the carried-forward row is marked as frozen and compared against new
@@ -130,12 +131,12 @@ but the current comparison asks whether any new candidate beat the incumbent.
 The current canonical result set is in
 [`experiments/canonical/README.md`](../experiments/canonical/README.md).
 
-## Audit Gate
+## Review Gate
 
-Audit-required candidates should be checked before they become feedback anchors
-or frozen incumbents.
+Low-scoring candidates should be checked before they become feedback anchors or
+current targets.
 
-The audit asks:
+The review asks:
 
 - Does the public bundle contain enough evidence to solve each item?
 - Are answer fields identifiable without private vocabulary?
@@ -145,17 +146,17 @@ The audit asks:
 - Is there leakage from gold answers, generator logic, hidden seeds, or private
   traces?
 
-Current queue: [`experiments/audit_queue.md`](../experiments/audit_queue.md)
+Current queue: [`experiments/review_queue.md`](../experiments/review_queue.md)
 
 ## Benchmark States
 
-- **Frozen incumbent:** best current candidate to beat, pending audit.
-- **Stable bank:** audited packages ready for fixed solver tests. Empty for
+- **Current target:** best current candidate to beat.
+- **Stable bank:** reviewed packages ready for fixed solver tests. Empty for
   now.
 - **Fresh sweep:** a new creator run searching for better candidates.
 
-Reimbursement Forensics is the current frozen incumbent. It is not yet a stable
-bank benchmark.
+Reimbursement Forensics is the current target to beat. It is not a stable-bank
+benchmark.
 
 ## Limits
 

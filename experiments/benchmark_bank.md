@@ -1,30 +1,32 @@
 # Benchmark Bank
 
-BenchBench separates frozen incumbents from accepted stable benchmarks.
+BenchBench separates current targets, diagnostic rows, problem cases, and
+rejections.
 
-Frozen means "best current candidate to beat." Accepted means "audited and
-ready to reuse as a stable benchmark." Nothing has reached accepted status yet.
+Current target means "best benchmark so far; beat this." Stable bank means
+"ready for repeated reuse." The current results are about creator ranking, not
+about declaring a permanent eval.
 
-## Frozen Incumbent
+## Current Target
 
 | benchmark | creator | source | solver scores | status |
 |---|---|---|---|---|
-| Reimbursement Forensics | GPT-5.2 | `004_feedback_sweep_20260522_225208` plus Claude extension | 10/30, 14/30, 11/30, 12/30, 11/30, 11/30 | frozen; audit next |
+| Reimbursement Forensics | GPT-5.2 | `004_feedback_sweep_20260522_225208` plus Claude extension | 10/30, 14/30, 11/30, 12/30, 11/30, 11/30 | target to beat |
 
-Why it is frozen: every tested solver landed in the low nonzero band. That is
-the best shape so far.
+Why it leads: every tested solver landed in the low nonzero band. That is the
+best shape so far.
 
-Why it is not accepted: it still needs human review for leakage, answer
-evidence, scorer fairness, and external solvability.
+Before stable reuse, check leakage, answer evidence, scorer fairness, and
+external solvability.
 
-## Audit Required
+## Problem Cases
 
-| benchmark | creator | source | observed result | audit question |
+| benchmark | creator | source | observed result | question |
 |---|---|---|---|---|
 | Service Credit Forensics | GPT-5.2 | `007_full_feedback_6x6_20260523_172919` | 0/30 for all six solvers | Did solvers fail because the benchmark is hard, or because eligible downtime is under-specified/scored unfairly? |
 
-Service Credit is a raw Experiment 007 audit item. It is not used as GPT-5.2's
-canonical Round 3 row because the frozen Reimbursement Forensics incumbent
+Service Credit is a raw Experiment 007 problem case. It is not used as GPT-5.2's
+canonical Round 3 row because the Reimbursement Forensics incumbent
 carries forward until beaten. The field-level read is suspicious: solvers often
 got other fields close, but all failed the exact eligible-downtime field.
 

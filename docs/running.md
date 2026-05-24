@@ -10,7 +10,7 @@ should search for something better.
 Current incumbent: Reimbursement Forensics from Experiment 004.
 
 Before using any new all-zero or low-scoring row as evidence, run the checks in
-`experiments/audit_queue.md`.
+`experiments/review_queue.md`.
 
 The next challenger sweep gives creators the current feedback packet, skips
 GPT-5.2 as a creator because its incumbent is frozen, and keeps the full

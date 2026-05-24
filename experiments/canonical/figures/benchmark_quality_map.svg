@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="520" viewBox="0 0 1080 520">
+<style>text{font-family:Arial,Helvetica,sans-serif}.small{font-size:12px;fill:#444}.axis{font-size:12px;fill:#333}.label{font-size:12px;fill:#111}.title{font-size:20px;font-weight:700;fill:#111}</style>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="18" y="30" class="title">Benchmark quality map</text>
+<text x="18" y="54" class="small">Completion alone is a trap: broken all-zero tasks also score low.</text>
+<text x="18" y="72" class="small">The useful shape is moderate completion with many low-nonzero solver cells.</text>
+<rect x="231.88" y="120.0" width="245.12" height="93.33333333333334" fill="#e8f4fb" stroke="#b7dbea"/>
+<text x="239.54" y="136.33333333333331" class="small">useful hard zone</text>
+<line x1="94.0" x2="94.0" y1="400" y2="120" stroke="#eeeeee"/>
+<text x="94.0" y="424" class="axis" text-anchor="middle">0%</text>
+<line x1="285.5" x2="285.5" y1="400" y2="120" stroke="#eeeeee"/>
+<text x="285.5" y="424" class="axis" text-anchor="middle">25%</text>
+<line x1="477.0" x2="477.0" y1="400" y2="120" stroke="#eeeeee"/>
+<text x="477.0" y="424" class="axis" text-anchor="middle">50%</text>
+<line x1="668.5" x2="668.5" y1="400" y2="120" stroke="#eeeeee"/>
+<text x="668.5" y="424" class="axis" text-anchor="middle">75%</text>
+<line x1="860.0" x2="860.0" y1="400" y2="120" stroke="#eeeeee"/>
+<text x="860.0" y="424" class="axis" text-anchor="middle">100%</text>
+<line x1="94" x2="860" y1="400.0" y2="400.0" stroke="#eeeeee"/>
+<text x="78" y="404.0" class="axis" text-anchor="end">0</text>
+<line x1="94" x2="860" y1="353.3333333333333" y2="353.3333333333333" stroke="#eeeeee"/>
+<text x="78" y="357.3333333333333" class="axis" text-anchor="end">1</text>
+<line x1="94" x2="860" y1="306.6666666666667" y2="306.6666666666667" stroke="#eeeeee"/>
+<text x="78" y="310.6666666666667" class="axis" text-anchor="end">2</text>
+<line x1="94" x2="860" y1="260.0" y2="260.0" stroke="#eeeeee"/>
+<text x="78" y="264.0" class="axis" text-anchor="end">3</text>
+<line x1="94" x2="860" y1="213.33333333333334" y2="213.33333333333334" stroke="#eeeeee"/>
+<text x="78" y="217.33333333333334" class="axis" text-anchor="end">4</text>
+<line x1="94" x2="860" y1="166.66666666666666" y2="166.66666666666666" stroke="#eeeeee"/>
+<text x="78" y="170.66666666666666" class="axis" text-anchor="end">5</text>
+<line x1="94" x2="860" y1="120.0" y2="120.0" stroke="#eeeeee"/>
+<text x="78" y="124.0" class="axis" text-anchor="end">6</text>
+<line x1="94" x2="860" y1="400" y2="400" stroke="#333"/>
+<line x1="94" x2="94" y1="400" y2="120" stroke="#333"/>
+<text x="477.0" y="478" class="axis" text-anchor="middle">solver completion rate: average exact-match score across solvers</text>
+<text x="22" y="260.0" class="axis" transform="rotate(-90 22 260.0)" text-anchor="middle">solvers in useful 1-14/30 band</text>
+<circle cx="387.6333333333333" cy="120.0" r="6" fill="#2f80b7" stroke="#111" stroke-width="0.8"/>
+<text x="399.6333333333333" y="110.0" class="label">Reimbursement Forensics (38%, 6/6)</text>
+<circle cx="574.8777777777777" cy="353.3333333333333" r="6" fill="#d8902f" stroke="#111" stroke-width="0.8"/>
+<text x="586.8777777777777" y="335.3333333333333" class="label">Lease CAM (63%, 1/6)</text>
+<circle cx="574.8777777777777" cy="353.3333333333333" r="6" fill="#d8902f" stroke="#111" stroke-width="0.8"/>
+<text x="586.8777777777777" y="371.3333333333333" class="label">Maritime (63%, 1/6)</text>
+<circle cx="259.9666666666667" cy="400.0" r="6" fill="#d8902f" stroke="#111" stroke-width="0.8"/>
+<text x="271.9666666666667" y="390.0" class="label">Corrupted LZ77 (22%, 0/6)</text>
+<circle cx="94.0" cy="400.0" r="6" fill="#9a9a9a" stroke="#111" stroke-width="0.8"/>
+<text x="106.0" y="388.0" class="label">Service Credit (0%, 0/6)</text>
+<circle cx="94.0" cy="400.0" r="6" fill="#9a9a9a" stroke="#111" stroke-width="0.8"/>
+<text x="106.0" y="434.0" class="label">Cross-Doc Obligation (0%, 0/5)</text>
+<circle cx="706.8000000000001" cy="400.0" r="6" fill="#c84f4f" stroke="#111" stroke-width="0.8"/>
+<circle cx="779.1444444444445" cy="400.0" r="6" fill="#c84f4f" stroke="#111" stroke-width="0.8"/>
+<circle cx="855.7444444444444" cy="400.0" r="6" fill="#c84f4f" stroke="#111" stroke-width="0.8"/>
+<circle cx="24" cy="496" r="5" fill="#2f80b7" stroke="#111" stroke-width="0.8"/>
+<text x="36" y="500" class="small">best so far</text>
+<circle cx="164" cy="496" r="5" fill="#d8902f" stroke="#111" stroke-width="0.8"/>
+<text x="176" y="500" class="small">diagnostic</text>
+<circle cx="304" cy="496" r="5" fill="#9a9a9a" stroke="#111" stroke-width="0.8"/>
+<text x="316" y="500" class="small">artifact/zero-wall</text>
+<circle cx="444" cy="496" r="5" fill="#c84f4f" stroke="#111" stroke-width="0.8"/>
+<text x="456" y="500" class="small">too easy</text>
+</svg>

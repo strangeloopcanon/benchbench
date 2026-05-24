@@ -112,7 +112,7 @@ def score_values(row: list[str]) -> list[int]:
 def row_stats(row: list[str]) -> dict[str, float | int | None]:
     values = score_values(row)
     if not values:
-        return {"mean": None, "min": None, "max": None, "spread": None, "low": 0, "zero": 0, "perfect": 0}
+        return {"mean": None, "min": None, "max": None, "spread": None, "low": 0, "zero": 0, "perfect": 0, "high": 0}
     return {
         "mean": sum(values) / len(values),
         "min": min(values),
@@ -121,6 +121,43 @@ def row_stats(row: list[str]) -> dict[str, float | int | None]:
         "low": sum(1 for value in values if 1 <= value <= 14),
         "zero": sum(1 for value in values if value == 0),
         "perfect": sum(1 for value in values if value == 30),
+        "high": sum(1 for value in values if value >= 23),
+    }
+
+
+def completion_rate(values: list[int]) -> float:
+    return sum(values) / (30 * len(values)) if values else 0.0
+
+
+def benchmark_metric(
+    row: list[str],
+    creator: str,
+    read: str,
+    kind: str,
+    label: str | None = None,
+    label_dx: int = 12,
+    label_dy: int = -8,
+    show_label: bool = True,
+) -> dict[str, str | float | int]:
+    values = score_values(row)
+    stats = row_stats(row)
+    attempts = len(values)
+    return {
+        "benchmark": row[1],
+        "label": label or row[1],
+        "creator": creator,
+        "completion": completion_rate(values),
+        "completion_label": f"{completion_rate(values) * 100:.0f}%",
+        "useful": int(stats["low"] or 0),
+        "useful_label": f"{int(stats['low'] or 0)}/{attempts}",
+        "zero": int(stats["zero"] or 0),
+        "zero_label": f"{int(stats['zero'] or 0)}/{attempts}",
+        "high": int(stats["high"] or 0),
+        "read": read,
+        "kind": kind,
+        "label_dx": label_dx,
+        "label_dy": label_dy,
+        "show_label": int(show_label),
     }
 
 
@@ -184,7 +221,7 @@ def write_creator_trajectory(path: Path, rows: list[dict[str, str]]) -> None:
         "separator": "#f2c078",
         "too_easy": "#f7b7a3",
         "saturated": "#d96b6b",
-        "audit": "#d9d9d9",
+        "artifact": "#d9d9d9",
     }
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
@@ -192,7 +229,7 @@ def write_creator_trajectory(path: Path, rows: list[dict[str, str]]) -> None:
         '<rect width="100%" height="100%" fill="#ffffff"/>',
         '<text x="18" y="28" font-size="20" font-weight="700" fill="#111">Creator trajectory across canonical rounds</text>',
         '<text x="18" y="50" class="small">Creator quality is not solver score. Good creator rows stay valid, nonzero, and unsolved.</text>',
-        '<text x="18" y="72" class="small">Blue = incumbent shape; amber = separates solvers but too easy at the top; red = too easy; gray = audit/artifact.</text>',
+        '<text x="18" y="72" class="small">Blue = incumbent shape; amber = separates solvers but too easy at the top; red = too easy; gray = scorer or solvability problem.</text>',
     ]
     y0 = header_h
     parts.append(f'<text x="18" y="{y0 - 12}" class="head">creator</text>')
@@ -209,6 +246,75 @@ def write_creator_trajectory(path: Path, rows: list[dict[str, str]]) -> None:
             parts.append(f'<rect x="{x + 6}" y="{y + 7}" width="{cell_w - 12}" height="{row_h - 14}" rx="2" fill="{fill}"/>')
             for line_idx, text in enumerate(wrap_words(row[key], 24)[:2]):
                 parts.append(f'<text x="{x + 14}" y="{y + 25 + line_idx * 14}" class="cell">{escape(text)}</text>')
+    parts.append("</svg>")
+    path.write_text("\n".join(parts) + "\n", encoding="utf-8")
+
+
+def write_quality_map(path: Path, rows: list[dict[str, str | float | int]]) -> None:
+    width = 1080
+    height = 520
+    plot_x0 = 94
+    plot_x1 = 860
+    plot_y0 = 400
+    plot_y1 = 120
+    colors = {
+        "best": "#2f80b7",
+        "diagnostic": "#d8902f",
+        "artifact": "#9a9a9a",
+        "easy": "#c84f4f",
+    }
+
+    def x_for(completion: float) -> float:
+        return plot_x0 + completion * (plot_x1 - plot_x0)
+
+    def y_for(useful: int) -> float:
+        return plot_y0 - (useful / 6) * (plot_y0 - plot_y1)
+
+    parts = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
+        "<style>text{font-family:Arial,Helvetica,sans-serif}.small{font-size:12px;fill:#444}.axis{font-size:12px;fill:#333}.label{font-size:12px;fill:#111}.title{font-size:20px;font-weight:700;fill:#111}</style>",
+        '<rect width="100%" height="100%" fill="#ffffff"/>',
+        '<text x="18" y="30" class="title">Benchmark quality map</text>',
+        '<text x="18" y="54" class="small">Completion alone is a trap: broken all-zero tasks also score low.</text>',
+        '<text x="18" y="72" class="small">The useful shape is moderate completion with many low-nonzero solver cells.</text>',
+        f'<rect x="{x_for(0.18)}" y="{y_for(6)}" width="{x_for(0.50) - x_for(0.18)}" height="{y_for(4) - y_for(6)}" fill="#e8f4fb" stroke="#b7dbea"/>',
+        f'<text x="{x_for(0.19)}" y="{y_for(5.65)}" class="small">useful hard zone</text>',
+    ]
+
+    for tick in [0, 25, 50, 75, 100]:
+        x = plot_x0 + (tick / 100) * (plot_x1 - plot_x0)
+        parts.append(f'<line x1="{x}" x2="{x}" y1="{plot_y0}" y2="{plot_y1}" stroke="#eeeeee"/>')
+        parts.append(f'<text x="{x}" y="{plot_y0 + 24}" class="axis" text-anchor="middle">{tick}%</text>')
+    for useful in range(0, 7):
+        y = y_for(useful)
+        parts.append(f'<line x1="{plot_x0}" x2="{plot_x1}" y1="{y}" y2="{y}" stroke="#eeeeee"/>')
+        parts.append(f'<text x="{plot_x0 - 16}" y="{y + 4}" class="axis" text-anchor="end">{useful}</text>')
+
+    parts.append(f'<line x1="{plot_x0}" x2="{plot_x1}" y1="{plot_y0}" y2="{plot_y0}" stroke="#333"/>')
+    parts.append(f'<line x1="{plot_x0}" x2="{plot_x0}" y1="{plot_y0}" y2="{plot_y1}" stroke="#333"/>')
+    parts.append(f'<text x="{(plot_x0 + plot_x1) / 2}" y="{height - 42}" class="axis" text-anchor="middle">solver completion rate: average exact-match score across solvers</text>')
+    parts.append(f'<text x="22" y="{(plot_y0 + plot_y1) / 2}" class="axis" transform="rotate(-90 22 {(plot_y0 + plot_y1) / 2})" text-anchor="middle">solvers in useful 1-14/30 band</text>')
+
+    for row in rows:
+        x = x_for(float(row["completion"]))
+        y = y_for(int(row["useful"]))
+        color = colors[str(row["kind"])]
+        parts.append(f'<circle cx="{x}" cy="{y}" r="6" fill="{color}" stroke="#111" stroke-width="0.8"/>')
+        if not int(row["show_label"]):
+            continue
+        label_x = x + int(row["label_dx"])
+        label_y = y + int(row["label_dy"])
+        label = f'{row["label"]} ({row["completion_label"]}, {row["useful_label"]})'
+        for line_idx, text in enumerate(wrap_words(str(label), 34)[:2]):
+            parts.append(f'<text x="{label_x}" y="{label_y + line_idx * 14}" class="label">{escape(text)}</text>')
+
+    legend_y = height - 20
+    legend = [("best so far", colors["best"]), ("diagnostic", colors["diagnostic"]), ("artifact/zero-wall", colors["artifact"]), ("too easy", colors["easy"])]
+    x = 18
+    for label, color in legend:
+        parts.append(f'<circle cx="{x + 6}" cy="{legend_y - 4}" r="5" fill="{color}" stroke="#111" stroke-width="0.8"/>')
+        parts.append(f'<text x="{x + 18}" y="{legend_y}" class="small">{escape(label)}</text>')
+        x += 140
     parts.append("</svg>")
     path.write_text("\n".join(parts) + "\n", encoding="utf-8")
 
@@ -235,7 +341,7 @@ def write_heatmap(
         '<rect width="100%" height="100%" fill="#ffffff"/>',
         f'<text x="18" y="28" font-size="20" font-weight="700" fill="#111">{escape(title)}</text>',
         f'<text x="18" y="50" class="small">{escape(subtitle)}</text>',
-        '<text x="18" y="72" class="small">Exact-match correct / 30. Blue = useful low-nonzero; orange/red = too easy; gray = all-zero audit.</text>',
+        '<text x="18" y="72" class="small">Exact-match correct / 30. Blue = useful low-nonzero; orange/red = too easy; gray = zero or skipped problem case.</text>',
     ]
 
     x0 = label_w + bench_w
@@ -349,7 +455,7 @@ def main() -> None:
             "round1": "saturated",
             "round1_kind": "saturated",
             "round2": "scorer-contract failure",
-            "round2_kind": "audit",
+            "round2_kind": "artifact",
             "round3": "too easy",
             "round3_kind": "too_easy",
         },
@@ -358,7 +464,7 @@ def main() -> None:
             "round1": "one low score; too solved",
             "round1_kind": "separator",
             "round2": "brittle, many zeros",
-            "round2_kind": "audit",
+            "round2_kind": "artifact",
             "round3": "separates, too easy at top",
             "round3_kind": "separator",
         },
@@ -374,7 +480,7 @@ def main() -> None:
         {
             "creator": "Claude Opus",
             "round1": "scorer artifact",
-            "round1_kind": "audit",
+            "round1_kind": "artifact",
             "round2": "saturated",
             "round2_kind": "saturated",
             "round3": "saturated",
@@ -434,10 +540,33 @@ def main() -> None:
         },
     ]
 
+    quality_metric_rows = [
+        benchmark_metric(exp004_rows[0], "GPT-5.2", "current target to beat", "best", "Reimbursement Forensics", 12, -10),
+        benchmark_metric(exp007_rows[3], "Gemini 3.1 Pro", "good spread, too easy at top", "diagnostic", "Lease CAM", 12, -18),
+        benchmark_metric(exp007_rows[4], "Gemini 3.5 Flash", "good spread, too easy at top", "diagnostic", "Maritime", 12, 18),
+        benchmark_metric(exp004_rows[3], "Gemini 3.1 Pro", "hard, but zero-heavy", "diagnostic", "Corrupted LZ77", 12, -10),
+        benchmark_metric(exp007_rows[0], "GPT-5.2", "all-zero wall", "artifact", "Service Credit", 12, -12),
+        benchmark_metric(exp004_rows[2], "GPT-5.5", "scorer-contract failure", "artifact", "Cross-Doc Obligation", 12, 34),
+        benchmark_metric(exp007_rows[2], "GPT-5.5", "too easy", "easy", "Prior Authorization", 30, -72, False),
+        benchmark_metric(exp007_rows[1], "GPT-5.4", "too easy", "easy", "Catalog Royalty", -160, 30, False),
+        benchmark_metric(exp007_rows[5], "Claude Opus", "saturated", "easy", "Construction Payment", -190, -10, False),
+    ]
+    quality_table_rows = [
+        {
+            "benchmark": str(row["benchmark"]),
+            "creator": str(row["creator"]),
+            "completion": str(row["completion_label"]),
+            "useful cells": str(row["useful_label"]),
+            "zero cells": str(row["zero_label"]),
+            "read": str(row["read"]),
+        }
+        for row in quality_metric_rows
+    ]
+
     round3_matchup_rows: list[dict[str, str]] = []
     for row in canonical_round3_rows:
         stats = row_stats(row)
-        read = "uniformly hard, audit pending"
+        read = "current target to beat"
         if row[0] != "GPT-5.2 (frozen)":
             if stats["perfect"] and int(stats["perfect"]) >= 4:
                 read = "saturated"
@@ -475,6 +604,7 @@ def main() -> None:
         solvers=SOLVERS_CURRENT,
     )
     write_creator_trajectory(CANONICAL_FIG_DIR / "creator_trajectory.svg", creator_trajectory_rows)
+    write_quality_map(CANONICAL_FIG_DIR / "benchmark_quality_map.svg", quality_metric_rows)
 
     lines = [
         "# Canonical BenchBench Results - 2026-05-23",
@@ -489,7 +619,7 @@ def main() -> None:
         "2. Round 2: Experiment 004, reconstructed the same way. This is where GPT-5.2 creates Reimbursement Forensics.",
         "3. Round 3: Experiment 007 challengers, with GPT-5.2's frozen Reimbursement Forensics row carried forward as the incumbent.",
         "",
-        "That last step is deliberate. Raw Experiment 007 still contains GPT-5.2's Service Credit Forensics attempt, and it remains in the audit queue. But the canonical comparison asks whether any new challenger beat the frozen incumbent. None did.",
+        "That last step is deliberate. Raw Experiment 007 still contains GPT-5.2's Service Credit Forensics attempt, and it remains a review item. But the canonical comparison asks whether any new challenger beat the frozen incumbent. None did.",
         "",
         "## Current Read",
         "",
@@ -497,15 +627,21 @@ def main() -> None:
         "",
         "The model story is the more interesting one: GPT-5.2 is the best benchmark creator so far. It is the only creator that produced an all-solver low-nonzero benchmark. We carry that row forward as the incumbent so new sweeps have something concrete to beat.",
         "",
-        "A human audit still matters before any candidate moves into a stable benchmark bank. But the audit is a guardrail against false wins, not the main result.",
-        "",
         "Read each row as one creator's benchmark and each column as one solver's attempt. Cell values are exact-match correct out of 30.",
         "",
-        "Blue is the useful low-nonzero band. Orange and red mean the task was too easy. Gray zeros need audit before they count as hard; they can also mean an under-specified packet, scorer-contract failure, or operational failure.",
+        "Blue is the useful low-nonzero band. Orange and red mean the task was too easy. Gray zeros need explanation before they count as hard; they can also mean an under-specified packet, scorer-contract failure, or operational failure.",
         "",
         "## Strongest Benchmarks So Far",
         "",
         markdown_dict_table(["read", "benchmark", "creator", "score shape", "what it shows"], strongest_benchmark_rows),
+        "",
+        "## Completion Proxy",
+        "",
+        "Completion rate is average exact-match score across solver attempts. Lower completion means harder, but lower is not automatically better: all-zero rows can be broken or underspecified. The useful signal is moderate completion plus many solver cells in the 1-14/30 band.",
+        "",
+        "![Benchmark quality map](figures/benchmark_quality_map.svg)",
+        "",
+        markdown_dict_table(["benchmark", "creator", "completion", "useful cells", "zero cells", "read"], quality_table_rows),
         "",
         "## What Changed Across Rounds",
         "",
@@ -552,7 +688,7 @@ def main() -> None:
         "Notes:",
         "",
         "- Reimbursement Forensics is the first all-solver low-nonzero candidate.",
-        "- Cross-Document Obligation Resolution is marked `skip` for Claude Opus because the row was already audited as a scoring-contract failure.",
+        "- Cross-Document Obligation Resolution is marked `skip` for Claude Opus because the row had already been identified as a scoring-contract failure.",
         "- Corrupted LZ77 Recovery is diagnostic but narrow and operationally brittle.",
         "- MFN-Cascade and Conlang Rosetta saturated.",
         "",
@@ -565,7 +701,7 @@ def main() -> None:
         "Notes:",
         "",
         "- GPT-5.2 is shown with its frozen Round 2 incumbent, not with the raw Service Credit Forensics row from Experiment 007.",
-        "- Service Credit Forensics remains a raw Experiment 007 audit item because it scored 0/30 for every solver.",
+        "- Service Credit Forensics remains a raw Experiment 007 scorer/solvability problem case because it scored 0/30 for every solver.",
         "- Maritime Freight and Commercial Lease CAM separated solvers, but both were too easy at the top end.",
         "- Catalog Royalty, Prior Authorization, and Construction Progress Payment saturated.",
         "",
@@ -577,7 +713,7 @@ def main() -> None:
         "",
         "The canonical presentation is now [`canonical/README.md`](canonical/README.md).",
         "",
-        "This file is kept as a stable link. The raw experiment folders are unchanged. In the canonical Round 3 grid, GPT-5.2's frozen Reimbursement Forensics row is carried forward from Round 2; raw Experiment 007's Service Credit Forensics row remains an audit item.",
+        "This file is kept as a stable link. The raw experiment folders are unchanged. In the canonical Round 3 grid, GPT-5.2's frozen Reimbursement Forensics row is carried forward from Round 2; raw Experiment 007's Service Credit Forensics row remains a scorer/solvability problem case.",
         "",
     ]
     LEGACY_MD.write_text("\n".join(legacy_lines), encoding="utf-8")
