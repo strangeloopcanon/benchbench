@@ -81,5 +81,5 @@ It also confirms that MFN-Cascade and most Experiment 003 candidates are too
 easy. The LZ77 row remains operationally brittle rather than a clean broad
 reasoning measurement.
 
-Full reconstructed 6x6 tables and heatmaps are in
-`result_grids_6x6_20260523.md`.
+The canonical reconstructed 6x6 tables and heatmaps are in
+`canonical/README.md`.

@@ -117,6 +117,19 @@ give creators its result and failure lessons, and ask them to produce better
 candidates. The runner supports this with separate `--creator-models` and
 `--solver-models`.
 
+## Canonical Presentation
+
+Raw run folders stay literal. They record what each model produced in that
+run, including failed candidates and audit items.
+
+Presentation grids can carry a frozen incumbent forward. In a challenger
+sweep, the carried-forward row is marked as frozen and compared against new
+challenger rows. That keeps the leaderboard honest: raw history is not edited,
+but the current comparison asks whether any new candidate beat the incumbent.
+
+The current canonical result set is in
+[`experiments/canonical/README.md`](../experiments/canonical/README.md).
+
 ## Audit Gate
 
 Audit-required candidates should be checked before they become feedback anchors

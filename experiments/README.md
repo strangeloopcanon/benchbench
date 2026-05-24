@@ -1,23 +1,27 @@
 # Experiments
 
-This folder keeps the BenchBench run history.
+This folder keeps two things separate: canonical presentation and raw run
+history.
 
 Current headline:
 
 - Experiment 004 produced the frozen incumbent, Reimbursement Forensics.
-- Experiment 007 tested the next full-feedback 6x6 challenger sweep and did
-  not produce a better candidate.
+- The canonical Round 3 grid carries that incumbent forward into the Experiment
+  007 challenger comparison.
+- No Experiment 007 challenger produced a better candidate.
 
 Experiments 001 and 002 are provenance. They explain prompt evolution, but they
 are not the main result.
 
 ## Current Files
 
+- `canonical/README.md`: the clean three-round result story.
 - `benchmark_bank.md`: status of frozen, audit-required, and rejected
   candidates.
 - `audit_queue.md`: checks to run before a new low-scoring result becomes
   evidence.
-- `result_grids_6x6_20260523.md`: current 6x6 result grids and heatmaps.
+- `result_grids_6x6_20260523.md`: stable pointer to the canonical result
+  story.
 - `feedback_for_next_challenger_sweep_20260523.md`: feedback packet for the
   next challenger sweep.
 
@@ -29,23 +33,38 @@ nonzero band across all six tested solvers: 10/30 to 14/30.
 That is the best shape seen so far. It is still not accepted; it needs a human
 audit for leakage, answer evidence, scorer fairness, and external solvability.
 
-Experiment 007 did not displace it:
+The canonical Round 3 comparison shows GPT-5.2 with its frozen incumbent and
+the other Experiment 007 creators as challengers:
 
 | creator | benchmark | read |
 |---|---|---|
-| GPT-5.2 | Service Credit Forensics | all-zero; audit required |
+| GPT-5.2 | Reimbursement Forensics | frozen incumbent; still unbeaten |
 | GPT-5.4 | Catalog Royalty Forensics | too easy |
 | GPT-5.5 | Prior Authorization Forensics | too easy |
 | Gemini 3.1 Pro | Commercial Lease CAM Reconciliation | diagnostic spread, too easy at the top end |
 | Gemini 3.5 Flash | Maritime Freight & Customs Audit | diagnostic spread, too easy at the top end |
 | Claude Opus | Construction Progress Payment Certification | saturated |
 
+Raw Experiment 007's GPT-5.2 row is Service Credit Forensics. It scored 0/30
+for every solver and remains in the audit queue; it is not used as the
+canonical GPT-5.2 row because frozen incumbents carry forward until beaten.
+
 ## Canonical Runs
+
+The canonical output lives in [`canonical/README.md`](canonical/README.md).
+It presents:
+
+- Round 1: Experiment 003 plus Claude Opus extension.
+- Round 2: Experiment 004 plus Claude Opus extension.
+- Round 3: Experiment 007 challengers plus GPT-5.2 incumbent carry-forward.
+
+## Raw Run Folders
 
 ### `007_full_feedback_6x6_20260523_172919`
 
 Direct six-creator, six-solver feedback sweep. All creators saw the current
-failure report. Claude Opus ran through Cursor.
+failure report. Claude Opus ran through Cursor. The raw GPT-5.2 output was
+Service Credit Forensics, which is audit-required rather than canonical.
 
 Two contract interventions were made before interpreting the grid:
 
@@ -55,7 +74,7 @@ Two contract interventions were made before interpreting the grid:
 - Gemini 3.5 Flash's scorer was made robust to malformed non-object solver
   answers so those answers scored wrong instead of crashing.
 
-No row beat the frozen incumbent.
+No raw challenger row beat the frozen incumbent.
 
 ### `004_feedback_sweep_20260522_225208`
 

@@ -32,7 +32,7 @@ Decision after audit:
 
 ## 2. Service Credit Forensics
 
-Status: all-zero challenger; audit required.
+Status: raw Experiment 007 all-zero challenger; audit required.
 
 Source: `007_full_feedback_6x6_20260523_172919`.
 

@@ -25,11 +25,12 @@ evidence, scorer fairness, and external solvability.
 ## Latest Challenger Sweep
 
 Experiment 007 gave all six creators the prior failure report, then ran all six
-solvers on the new candidates.
+solvers on the new candidates. The canonical comparison carries GPT-5.2's
+frozen incumbent forward and treats the other rows as challengers.
 
 | creator | benchmark | GPT-5.2 | GPT-5.4 | GPT-5.5 | Gemini 3.1 Pro | Gemini 3.5 Flash | Claude Opus | read |
 |---|---|---:|---:|---:|---:|---:|---:|---|
-| GPT-5.2 | Service Credit Forensics | 0/30 | 0/30 | 0/30 | 0/30 | 0/30 | 0/30 | audit required |
+| GPT-5.2 (frozen) | Reimbursement Forensics | 10/30 | 14/30 | 11/30 | 12/30 | 11/30 | 11/30 | incumbent |
 | GPT-5.4 | Catalog Royalty Forensics | 27/30 | 30/30 | 27/30 | 25/30 | 27/30 | 25/30 | too easy |
 | GPT-5.5 | Prior Authorization Forensics | 25/30 | 24/30 | 24/30 | 23/30 | 24/30 | 24/30 | too easy |
 | Gemini 3.1 Pro | Commercial Lease CAM Reconciliation | 1/30 | 26/30 | 26/30 | 16/30 | 18/30 | 26/30 | diagnostic spread, too easy |
@@ -38,8 +39,9 @@ solvers on the new candidates.
 
 Two notes matter:
 
-- All-zero is not automatically good. Service Credit needs a solvability/scorer
-  audit before it can count as hard.
+- Raw Experiment 007's GPT-5.2 row was Service Credit Forensics. It scored
+  0/30 for all six solvers and needs a solvability/scorer audit before it can
+  count as hard.
 - A large solver spread is not enough. Maritime Freight and CAM exposed
   differences between solvers, but at least one strong solver scored high.
 

@@ -24,7 +24,10 @@ the incumbent. Service Credit Forensics went all-zero and needs audit; Maritime
 Freight and Commercial Lease CAM separated solvers but were too easy at the top
 end; the other challengers saturated.
 
-![Feedback sweep 6x6 heatmap](experiments/figures/exp004_feedback_6x6_heatmap.svg)
+The canonical presentation carries GPT-5.2's frozen incumbent forward into the
+latest challenger grid. Raw experiment folders remain unchanged.
+
+![Canonical Round 3 6x6 heatmap](experiments/canonical/figures/canonical_round3_6x6_heatmap.svg)
 
 ## Why This Matters
 
@@ -51,8 +54,8 @@ out of 30.
 - No candidate is accepted until a human can verify that the public packet
   contains enough evidence and the scorer is fair.
 
-Full grids and notes:
-[`experiments/result_grids_6x6_20260523.md`](experiments/result_grids_6x6_20260523.md)
+Canonical grids and notes:
+[`experiments/canonical/README.md`](experiments/canonical/README.md)
 
 ## Next Challenger Sweep
 
@@ -76,10 +79,10 @@ same.
 
 - [`experiments/benchmark_bank.md`](experiments/benchmark_bank.md): frozen,
   audit-required, and rejected candidates.
-- [`experiments/result_grids_6x6_20260523.md`](experiments/result_grids_6x6_20260523.md):
-  current 6x6 grids and heatmaps.
+- [`experiments/canonical/README.md`](experiments/canonical/README.md):
+  current presentation-layer 6x6 grids and heatmaps.
 - [`experiments/007_full_feedback_6x6_20260523_172919/`](experiments/007_full_feedback_6x6_20260523_172919/):
-  latest direct six-creator, six-solver challenger sweep.
+  raw latest direct six-creator, six-solver challenger sweep.
 - [`experiments/004_feedback_sweep_20260522_225208/`](experiments/004_feedback_sweep_20260522_225208/):
   source run for the frozen incumbent.
 - [`benchmark_landscape/`](benchmark_landscape/): eval catalog and similarity

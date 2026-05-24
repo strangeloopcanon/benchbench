@@ -23,9 +23,10 @@ evidence, scorer fairness, and external solvability.
 |---|---|---|---|---|
 | Service Credit Forensics | GPT-5.2 | `007_full_feedback_6x6_20260523_172919` | 0/30 for all six solvers | Did solvers fail because the benchmark is hard, or because eligible downtime is under-specified/scored unfairly? |
 
-Service Credit is not a challenger to the incumbent until that audit is done.
-The field-level read is suspicious: solvers often got other fields close, but
-all failed the exact eligible-downtime field.
+Service Credit is a raw Experiment 007 audit item. It is not used as GPT-5.2's
+canonical Round 3 row because the frozen Reimbursement Forensics incumbent
+carries forward until beaten. The field-level read is suspicious: solvers often
+got other fields close, but all failed the exact eligible-downtime field.
 
 ## Diagnostic But Rejected
 

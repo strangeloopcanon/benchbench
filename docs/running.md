@@ -86,7 +86,8 @@ python run_existing_solver_extension.py \
 
 ## Rebuild Published Result Artifacts
 
-Regenerate the published grids and SVG heatmaps from saved score JSONs:
+Regenerate the canonical grids, compatibility pointer, and SVG heatmaps from
+saved score JSONs:
 
 ```bash
 python scripts/build_6x6_result_artifacts.py
