@@ -157,11 +157,22 @@ def sandboxed_command(args: list[str], scratch: Path, *, network: bool = False, 
     # Never add the filesystem root here: doing so would silently erase the
     # private-checkout boundary for /usr/bin/python3.
     runtime_reads.append(executable.parent)
+    allowed_executables = [executable]
     if executable == Path(sys.executable).resolve():
         # Virtual environments split their executable, standard library, and
         # site-packages across `base_prefix` and `prefix`.  Grant those runtime
         # trees explicitly instead of making the user's home directory readable.
         runtime_reads.extend([Path(sys.base_prefix).resolve(), Path(sys.prefix).resolve()])
+        # Python.org framework builds launch a second executable inside
+        # Python.app. GitHub's macOS runners use that layout; authorizing only
+        # bin/python would make the outer process start and the real runtime
+        # fail at posix_spawn.
+        framework_runtime = (
+            Path(sys.base_prefix)
+            / "Resources/Python.app/Contents/MacOS/Python"
+        ).resolve()
+        if framework_runtime.is_file():
+            allowed_executables.append(framework_runtime)
     return [
         sandbox_exec_path(),
         "-p",
@@ -169,7 +180,7 @@ def sandboxed_command(args: list[str], scratch: Path, *, network: bool = False, 
             scratch,
             network=network,
             extra_reads=runtime_reads,
-            allowed_executables=[executable],
+            allowed_executables=allowed_executables,
         ),
         *args,
     ]
@@ -427,6 +438,11 @@ def isolated_provider_path(binary: str, scratch: Path):
         # configuration.  `/etc/ssl` resolves into this narrow system-owned
         # directory; without it HTTPS fails inside Seatbelt before inference.
         Path("/private/etc/ssl"),
+        # Hosted macOS Python runtimes can live outside /Library. Providers may
+        # launch Python tools, so expose only the interpreter runtime trees,
+        # never the surrounding home directory.
+        Path(sys.base_prefix).resolve(),
+        Path(sys.prefix).resolve(),
     ]
     if binary == "cursor-agent":
         # The PATH entry is a small launcher whose Node runtime and bundled

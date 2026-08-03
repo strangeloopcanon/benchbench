@@ -3,6 +3,8 @@ import hashlib
 import tempfile
 import unittest
 import os
+import shlex
+import sys
 from contextlib import nullcontext
 from pathlib import Path
 from unittest.mock import patch
@@ -613,7 +615,8 @@ class RunnerIntegrityTests(unittest.TestCase):
                 "/usr/sbin/scutil --dns >/dev/null || exit 13\n"
                 "/usr/bin/security help >/dev/null 2>&1\n"
                 "test $? -eq 126 || exit 14\n"
-                "/usr/bin/env -i PATH=/usr/bin:/bin /usr/bin/python3 probe.py \"$$\"\n",
+                "/usr/bin/env -i PATH=/usr/bin:/bin "
+                f"{shlex.quote(sys.executable)} probe.py \"$$\"\n",
                 encoding="utf-8",
             )
             fake.chmod(0o700)

@@ -239,7 +239,14 @@ class ModelBackendTests(unittest.TestCase):
         completed = subprocess.CompletedProcess([], 0, '{"result":"ok","usage":{}}', "")
         with tempfile.TemporaryDirectory(prefix="benchbench-safe-backends-test.") as tmp:
             tmp_path = Path(tmp)
-            with patch.object(backends, "run_cmd", return_value=completed) as run:
+            with (
+                patch.object(backends, "run_cmd", return_value=completed) as run,
+                patch.object(
+                    backends.shutil,
+                    "which",
+                    side_effect=lambda name: f"/usr/local/bin/{name}",
+                ),
+            ):
                 run_codex_model(parse_model_spec("gpt-5.5"), "prompt", tmp_path / "codex.txt", tmp_path, "high", 5)
                 codex_cmd = run.call_args.args[0]
                 self.assertIn("danger-full-access", codex_cmd)
@@ -287,7 +294,10 @@ class ModelBackendTests(unittest.TestCase):
         )
         with tempfile.TemporaryDirectory(prefix="benchbench-agy-denial-test.") as tmp:
             tmp_path = Path(tmp)
-            with patch.object(backends, "run_cmd", return_value=completed):
+            with (
+                patch.object(backends, "run_cmd", return_value=completed),
+                patch.object(backends.shutil, "which", return_value="/usr/local/bin/agy"),
+            ):
                 result = run_antigravity_model(
                     parse_model_spec("agy:gemini-3.1-pro"),
                     "prompt",
@@ -309,7 +319,10 @@ class ModelBackendTests(unittest.TestCase):
         )
         with tempfile.TemporaryDirectory(prefix="benchbench-agy-canceled-test.") as tmp:
             tmp_path = Path(tmp)
-            with patch.object(backends, "run_cmd", return_value=completed):
+            with (
+                patch.object(backends, "run_cmd", return_value=completed),
+                patch.object(backends.shutil, "which", return_value="/usr/local/bin/agy"),
+            ):
                 result = run_antigravity_model(
                     parse_model_spec("agy:gemini-3.1-pro"),
                     "prompt",
@@ -326,7 +339,10 @@ class ModelBackendTests(unittest.TestCase):
         completed = subprocess.CompletedProcess([], 0, '{"response":"answer"}', "")
         with tempfile.TemporaryDirectory(prefix="benchbench-agy-status-test.") as tmp:
             tmp_path = Path(tmp)
-            with patch.object(backends, "run_cmd", return_value=completed):
+            with (
+                patch.object(backends, "run_cmd", return_value=completed),
+                patch.object(backends.shutil, "which", return_value="/usr/local/bin/agy"),
+            ):
                 result = run_antigravity_model(
                     parse_model_spec("agy:gemini-3.1-pro"),
                     "prompt",
