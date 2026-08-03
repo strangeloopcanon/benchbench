@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import os
 import json
+import shlex
 import shutil
 import subprocess
 import sys
@@ -411,6 +412,43 @@ def load_codex_broker_credentials(original: dict[str, str]) -> tuple[str, str]:
     return token, account_id
 
 
+def verify_codex_parent_environment_isolation(profile: str) -> None:
+    """Fail closed unless Seatbelt hides a provider parent's environment."""
+
+    marker = "benchbench-parent-environment-canary"
+    probe = (
+        "import ctypes, ctypes.util, sys\n"
+        "pid = int(sys.argv[1])\n"
+        "libc = ctypes.CDLL(ctypes.util.find_library('c'), use_errno=True)\n"
+        "for selector in (38, 49):\n"
+        " mib = (ctypes.c_int * 3)(1, selector, pid)\n"
+        " size = ctypes.c_size_t(0)\n"
+        " if libc.sysctl(mib, 3, None, ctypes.byref(size), None, 0) == 0:\n"
+        "  buf = ctypes.create_string_buffer(size.value)\n"
+        "  if libc.sysctl(mib, 3, buf, ctypes.byref(size), None, 0) == 0 and "
+        f"{marker.encode()!r} in buf.raw:\n"
+        "   raise SystemExit(12)\n"
+    )
+    command = f"{shlex.quote(sys.executable)} -c {shlex.quote(probe)} \"$$\""
+    environment = sanitized_environment()
+    environment["BENCHBENCH_PARENT_ENV_CANARY"] = marker
+    try:
+        completed = subprocess.run(
+            [sandbox_exec_path(), "-p", profile, "/bin/sh", "-c", command],
+            text=True,
+            capture_output=True,
+            check=False,
+            timeout=20,
+            env=environment,
+        )
+    except (OSError, subprocess.TimeoutExpired) as exc:
+        raise SandboxUnavailable("Codex parent-environment isolation probe failed") from exc
+    if completed.returncode != 0:
+        raise SandboxUnavailable(
+            "Codex parent-environment isolation is unavailable on this macOS runtime"
+        )
+
+
 @contextmanager
 def isolated_provider_path(binary: str, scratch: Path):
     """Put a Seatbelt-wrapped provider binary first on PATH for one model call.
@@ -508,6 +546,10 @@ def isolated_provider_path(binary: str, scratch: Path):
             allow_user_preferences=binary == "cursor-agent",
             allow_system_sockets=binary in {"codex", "cursor-agent"},
         )
+        if binary == "codex":
+            # Prove the boundary before sanitized_provider_environment reads a
+            # broker token. macOS builds differ in kern.procargs enforcement.
+            verify_codex_parent_environment_isolation(profile)
         escaped_profile = profile.replace("'", "'\\\"'\\\"'")
         escaped_actual = actual.replace("'", "'\\\"'\\\"'")
         if binary == "cursor-agent":

@@ -626,9 +626,12 @@ class RunnerIntegrityTests(unittest.TestCase):
             os.environ["PATH"] = f"{binary_dir}{os.pathsep}{old_path}"
             os.environ["BENCHBENCH_CODEX_BEARER_TOKEN"] = "broker-secret-canary"
             os.environ["BENCHBENCH_CODEX_ACCOUNT_ID"] = "account-canary"
+            result = None
             try:
                 with isolated_provider_path("codex", scratch):
                     result = run_cmd(["codex"], scratch, timeout=20)
+            except SandboxUnavailable as exc:
+                self.assertIn("parent-environment isolation", str(exc))
             finally:
                 os.environ["PATH"] = old_path
                 if old_token is None:
@@ -639,7 +642,8 @@ class RunnerIntegrityTests(unittest.TestCase):
                     os.environ.pop("BENCHBENCH_CODEX_ACCOUNT_ID", None)
                 else:
                     os.environ["BENCHBENCH_CODEX_ACCOUNT_ID"] = old_account
-            self.assertEqual(result.returncode, 0, result.stderr)
+            if result is not None:
+                self.assertEqual(result.returncode, 0, result.stderr)
 
     def test_codex_broker_uses_parent_environment_without_staging_credentials(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
