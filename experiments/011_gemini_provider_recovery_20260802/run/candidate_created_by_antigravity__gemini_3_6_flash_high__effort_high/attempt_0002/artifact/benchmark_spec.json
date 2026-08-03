@@ -1,0 +1,14 @@
+{
+  "benchmark_name": "state_machine_trace",
+  "version": "1.0.0",
+  "description": "A benchmark evaluating multi-step state machine execution, register tracking, and conditional flow logic.",
+  "domain": "reasoning",
+  "input_format": "JSONL",
+  "output_format": "JSONL",
+  "sample_count": 30,
+  "seed": 20260516,
+  "metrics": [
+    "accuracy"
+  ],
+  "schema_version": 2
+}

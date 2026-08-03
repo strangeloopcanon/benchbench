@@ -1,0 +1,162 @@
+{
+  "current_state": {
+    "incumbents": [],
+    "message": "No benchmark has passed the current validity and infrastructure gates.",
+    "status": "no_validated_incumbent"
+  },
+  "historical_comparison": {
+    "basis": "Against independently recomputed Decimal half-up gold, the six retained solver predictions score 12/30, 16/30, 11/30, 13/30, 11/30, and 11/30. This remains the only complete six-solver row with every score low and nonzero; later challenger rows reach 25/30 or higher, are invalid, or are incomplete. Every completed Experiment 010 solver cell is 30/30; Opus did not complete two cells and Gemini produced no valid candidate.",
+    "leader_candidate_id": "004-reimbursement-forensics",
+    "qualification": "This is a corrected historical comparison, not a canonical promotion. Experiment 004 remains invalid because its original emitted gold was wrong, and no model was rerun.",
+    "rank": 1,
+    "verdict": "win_over_challengers"
+  },
+  "historical_noncanonical": [
+    {
+      "cell_states": [],
+      "creator": "GPT-5.2",
+      "experiment_id": "004",
+      "historical_comparison": {
+        "rank": 1,
+        "read": "Best corrected historical candidate: all six retained solver scores remain low and nonzero (11-16/30), while later challengers reach at least 25/30, are invalid, or have incomplete panels; every completed Experiment 010 challenger cell is 30/30.",
+        "verdict": "win_over_challengers"
+      },
+      "historical_scores": [
+        "recorded: 10/30, 14/30, 11/30, 12/30, 11/30, 11/30",
+        "re-audit rescore of retained predictions: 12/30, 16/30, 11/30, 13/30, 11/30, 11/30"
+      ],
+      "id": "004-reimbursement-forensics",
+      "name": "Reimbursement Forensics",
+      "outcome": "invalid",
+      "reason": "The generator and verifier truncate a Decimal half-up amount through binary float multiplication. A Decimal re-audit changes gold answers for reifor_0000 (15991 to 15992), reifor_0006 (56636 to 56637), and reifor_0029 (30627 to 30629).",
+      "required_next_step": "Repair generation and verification with Decimal-only half-up rounding, then generate a new version and run a complete fresh solver panel."
+    },
+    {
+      "cell_states": [],
+      "creator": "GPT-5.2",
+      "experiment_id": "007",
+      "historical_comparison": null,
+      "historical_scores": [
+        "recorded historical row: 0/30, 0/30, 0/30, 0/30, 0/30, 0/30"
+      ],
+      "id": "007-service-credit-forensics",
+      "name": "Service Credit Forensics",
+      "outcome": "invalid",
+      "reason": "The emitted public policy gives a corrected internal timeline precedence over monitoring states, but the historical gold is computed from the lower-precedence monitoring timeline.",
+      "required_next_step": "Regenerate gold from the same public precedence rule, validate the packet, and run a complete fresh solver panel."
+    },
+    {
+      "cell_states": [
+        {
+          "solver": "GPT-5.2",
+          "state": "provider_error"
+        },
+        {
+          "solver": "Claude Opus",
+          "state": "timeout"
+        }
+      ],
+      "creator": "Claude Fable 5 Thinking",
+      "experiment_id": "008",
+      "historical_comparison": null,
+      "historical_scores": [
+        "successful historical cells only: GPT-5.4 14/30, GPT-5.5 11/30, Gemini 3.1 Pro 24/30, Gemini 3.5 Flash 27/30"
+      ],
+      "id": "008-rosetta-fieldwork",
+      "name": "Rosetta Fieldwork",
+      "outcome": "infrastructure_incomplete",
+      "reason": "The run did not complete the declared solver panel. Recorded scores for successful cells are historical only; failed calls cannot be encoded as numeric scores.",
+      "required_next_step": "Use typed cell states, fix provider preflight, and rerun the missing cells under the repaired execution contract."
+    },
+    {
+      "cell_states": [],
+      "creator": "Codex GPT-5.6 Sol high",
+      "experiment_id": "009",
+      "historical_comparison": null,
+      "historical_scores": [],
+      "id": "009-counterfeit-clock",
+      "name": "Counterfeit Clock v1",
+      "outcome": "invalid",
+      "reason": "The final immutable package passed generation, verification, deterministic regeneration, frozen-package matching, solvability evidence, and leakage checks, but its scorer emitted exact_score instead of the required correct field. Both controller score controls were therefore unparseable and the mechanical gate failed.",
+      "required_next_step": "Create a new candidate version whose scorer emits schema_version 2 with total, correct, and accuracy, pass the full mechanical gate, then run a complete fresh solver panel."
+    },
+    {
+      "cell_states": [],
+      "creator": "Codex GPT-5.6 Terra extra high",
+      "experiment_id": "009",
+      "historical_comparison": null,
+      "historical_scores": [],
+      "id": "009-patchwork-access-logic",
+      "name": "Patchwork Access Logic (PAL)",
+      "outcome": "invalid",
+      "reason": "The repair fixed deterministic solver-bundle regeneration, and the final immutable package passed verification, frozen-package matching, solvability evidence, and leakage checks. Its scorer still emitted strict_score and strict_score_out_of instead of total and correct, so both controller score controls were unparseable and the mechanical gate failed.",
+      "required_next_step": "Create a new candidate version whose scorer emits schema_version 2 with total, correct, and accuracy, pass the full mechanical gate, then run a complete fresh solver panel."
+    },
+    {
+      "cell_states": [
+        {
+          "solver": "Claude Opus 5 high",
+          "state": "timeout"
+        }
+      ],
+      "creator": "Codex GPT-5.6 Sol high",
+      "experiment_id": "010",
+      "historical_comparison": null,
+      "historical_scores": [
+        "successful cells only: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30 (recovery)"
+      ],
+      "id": "010-auditweave",
+      "name": "AuditWeave",
+      "outcome": "infrastructure_incomplete",
+      "reason": "The candidate passed the mechanical gate, and Sol, Terra, and recovered Gemini each scored 30/30. Opus did not complete, so the panel remains incomplete and every completed cell shows no useful difficulty.",
+      "required_next_step": "Increase task difficulty, generate a new version, and run a complete fresh solver panel."
+    },
+    {
+      "cell_states": [
+        {
+          "solver": "Claude Opus 5 high",
+          "state": "timeout"
+        }
+      ],
+      "creator": "Codex GPT-5.6 Terra extra high",
+      "experiment_id": "010",
+      "historical_comparison": null,
+      "historical_scores": [
+        "successful cells only: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30 (recovery)"
+      ],
+      "id": "010-counterfactual-firewall-policy-synthesis",
+      "name": "Counterfactual Firewall Policy Synthesis",
+      "outcome": "infrastructure_incomplete",
+      "reason": "The candidate passed the mechanical gate, and Sol, Terra, and recovered Gemini each scored 30/30. Opus did not complete, so the panel remains incomplete and every completed cell shows no useful difficulty.",
+      "required_next_step": "Increase task difficulty, generate a new version, and run a complete fresh solver panel."
+    },
+    {
+      "cell_states": [],
+      "creator": "Antigravity Gemini 3.6 Flash high",
+      "experiment_id": "010",
+      "historical_comparison": null,
+      "historical_scores": [],
+      "id": "010-gemini-empty-artifact",
+      "name": "Gemini creator recovery (no valid candidate)",
+      "outcome": "invalid",
+      "reason": "The provider recovered successfully, but completed creator and repair work produced no mechanically valid benchmark package. Experiment 011 retained one initial permission denial; Experiment 012 completed cleanly and produced an invalid package.",
+      "required_next_step": "Create a fresh candidate version that passes the complete mechanical package gate."
+    },
+    {
+      "cell_states": [],
+      "creator": "Cursor Claude Opus 5 high",
+      "experiment_id": "010",
+      "historical_comparison": null,
+      "historical_scores": [
+        "completed cells: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30 (recovery), Opus 30/30"
+      ],
+      "id": "010-consolidation-point",
+      "name": "Consolidation Point",
+      "outcome": "infrastructure_incomplete",
+      "reason": "The candidate passed the mechanical gate, and Sol, Terra, recovered Gemini, and Opus each scored 30/30. Every completed cell proves the benchmark is too easy, but the retained Opus runtime identity remains requested/unverified.",
+      "required_next_step": "Increase task difficulty, generate a new version, and run a complete fresh solver panel."
+    }
+  ],
+  "registry_sha256": "8956aa91362c4fd2a237b649f843096fb47fba2b1ba85f8d7fd8b926b9b5b433",
+  "schema_version": "benchbench.canonical-status/v1"
+}

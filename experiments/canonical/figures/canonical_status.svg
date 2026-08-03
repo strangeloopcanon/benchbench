@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="226" viewBox="0 0 1080 226">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<rect x="24" y="22" width="1032" height="112" rx="8" fill="#fbe4e4" stroke="#a82b2b"/>
+<text x="48" y="62" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#761c19">Canonical status: no validated incumbent</text>
+<text x="48" y="96" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#333">No benchmark has passed the current validity and infrastructure gates.</text>
+<text x="48" y="121" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#555">Registry v1 separates canonical validity from corrected historical comparison.</text>
+<text x="48" y="151" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#333">Historical #1: Reimbursement Forensics is a win over challengers; original gold remains invalid.</text>
+<text x="48" y="181" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#333">Experiment 010 recovery: Gemini solved 3/3 candidates at 30/30.</text>
+<text x="48" y="205" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#555">Opus did not complete 2/3; Gemini produced no valid candidate.</text>
+</svg>

@@ -1,182 +1,89 @@
 # BenchBench
 
-BenchBench asks whether a model can write a benchmark that other strong models
-cannot simply clear.
-
-Each creator model writes a complete benchmark package: public solver files,
-private gold answers, generator, verifier, scorer, and notes on expected
-failure modes. Solver models get only the public bundle and answer 30 items.
-
-The target is a task strong agents can work through, score exactly, and still
-not finish.
+BenchBench tests whether a model can create a benchmark package that strong
+solvers cannot simply clear. A creator supplies public solver evidence, private
+gold, a generator, verifier, scorer, and an explanation of likely failures.
 
 ## Current Result
 
-**GPT-5.2 leads as a benchmark creator.**
+**There is no validated incumbent.**
 
-Its best candidate is **Reimbursement Forensics**, from Experiment 004. Across
-six solvers, it scored **10/30, 14/30, 11/30, 12/30, 11/30, and 11/30**.
+Reimbursement Forensics remains the **#1 corrected historical candidate** and
+counts as a win over the later challengers. Recomputing its gold with Decimal
+half-up arithmetic and rescoring the retained predictions gives `12/30,
+16/30, 11/30, 13/30, 11/30, 11/30`: all six scores remain low and nonzero,
+while later challenger rows reach at least `25/30`, are invalid, or are
+incomplete. No model was rerun for this comparison.
 
-That is the best shape we have seen: every solver made progress, every solver
-stalled, and the row held up across GPT-5.2, GPT-5.4, GPT-5.5, Gemini 3.1 Pro,
-Gemini 3.5 Flash, and Claude Opus.
+That historical win is not a canonical promotion. The original Reimbursement
+Forensics run remains invalid because its emitted gold violated Decimal
+half-up rounding. Service Credit Forensics is also invalid because its public
+evidence and gold use conflicting precedence rules. The Fable creator run is
+incomplete: GPT-5.2 had a provider error and Claude Opus timed out. Those are
+execution states, not `0/30` results.
 
-Round 3 produced two good challengers. Gemini 3.1 Pro's **Commercial Lease CAM
-Reconciliation** spread solvers from **1/30 to 26/30**. Gemini 3.5 Flash's
-**Maritime Freight & Customs Audit** spread solvers from **4/30 to 25/30**.
-Both are useful. Neither beat Reimbursement Forensics, because the best solvers
-got too far.
+### Experiment 010 results
 
-![Canonical Round 3 6x6 heatmap](experiments/canonical/figures/canonical_round3_6x6_heatmap.svg)
+| Creator | Candidate | Sol high | Terra extra high | Gemini 3.6 Flash high | Opus 5 high |
+|---|---|---:|---:|---:|---:|
+| Sol | AuditWeave | 30/30 | 30/30 | 30/30 | Did not complete |
+| Terra | Counterfactual Firewall Policy Synthesis | 30/30 | 30/30 | 30/30 | Did not complete |
+| Gemini Flash | No valid candidate | — | — | — | — |
+| Opus | Consolidation Point | 30/30 | 30/30 | 30/30 | 30/30 |
 
-## Creator vs Solver
+Gemini produced no mechanically valid candidate, but its three solver results
+are valid and remain in the record. “Did not complete” is an execution state,
+not `0/30`; the retained Opus runtime identity is requested/unverified.
 
-The creator and solver signals split. GPT-5.2 has the strongest creator result
-and the weakest latest solver average. GPT-5.4 and Claude Opus look strong as
-solvers, but their created tasks mostly became too easy.
+![Canonical status](experiments/canonical/figures/canonical_status.svg)
 
-This chart does not reward `0/30` rows as "hard." It counts only low-nonzero
-solver cells, because all-zero rows can be unsolvable, underspecified, or
-scorer-broken.
-
-![Creator vs solver 2x2](experiments/canonical/figures/creator_solver_2x2.svg)
-
-## Best Rows
-
-| read | benchmark | creator | score shape | what it shows |
-|---|---|---|---|---|
-| Current leader | Reimbursement Forensics | GPT-5.2 | 10-14/30 across all six solvers | The cleanest hard-but-solvable shape so far. |
-| Round 3 challenger | Commercial Lease CAM Reconciliation | Gemini 3.1 Pro | 1-26/30 | Strong solver separation; high top-end scores. |
-| Round 3 challenger | Maritime Freight & Customs Audit | Gemini 3.5 Flash | 4-25/30 | Strong solver separation; high top-end scores. |
-| Diagnostic row | Corrupted LZ77 Recovery | Gemini 3.1 Pro | 0-22/30 | Useful stress signal; narrow and brittle. |
-
-## What Made The Hard Tasks Hard
-
-The best candidates looked like real paperwork: reimbursement claims, lease
-charges, freight records, service credits, royalties, prior authorization, and
-construction payments.
-
-They were hard because the evidence was visible but annoying. A solver had to
-track dates, exceptions, arithmetic, thresholds, and rounding inside one
-record. No single fact was magical. The work was in holding the whole packet
-together.
-
-GPT-5.2 did this best. Reimbursement Forensics used ordinary evidence and exact
-totals, then stacked enough exceptions to slow every solver.
-
-Gemini 3.1 Pro and Gemini 3.5 Flash found the best Round 3 surfaces, especially
-leases and freight. Their tasks separated solvers well. Top solvers reached
-25/30 and 26/30.
-
-GPT-5.4 and GPT-5.5 built plausible operational tasks that strong solvers often
-reduced to checklist work. Claude Opus built clean contest-style packages; in
-these runs, clean usually meant easy.
-
-## Completion Rate
-
-Completion rate is the average exact-match score across solvers. Read it with
-one more number: how many solvers landed in the useful **1-14/30** band.
-
-![Benchmark quality map](experiments/canonical/figures/benchmark_quality_map.svg)
-
-Reimbursement Forensics sits in the target zone: **38%** average completion and
-six useful low-nonzero solver cells. Commercial Lease CAM and Maritime Freight
-sit farther right: they separated solvers, while the best solvers completed too
-much. Service Credit and Cross-Document Obligation sit at the bottom left: low
-completion with no useful solver cells.
+The complete, digest-backed record is in
+[`experiments/registry.v1.json`](experiments/registry.v1.json). The generated
+canonical view preserves historical numbers as noncanonical evidence and
+promotes nothing without a fresh validated run:
+[`experiments/canonical/README.md`](experiments/canonical/README.md).
 
 ## What BenchBench Measures
 
-BenchBench turns model evaluation into a design problem.
+A valid candidate needs more than low scores. It needs public evidence that
+supports every answer, a private gold path that follows the public rules,
+deterministic scoring, complete successful solver cells, and an execution
+environment that keeps private material inaccessible to solvers.
 
-A strong creator has to choose the task, package the evidence, define exact
-answers, hide the gold data, and build a scorer that rewards the intended work.
-Then strong solvers attack the public bundle with tools.
-
-So BenchBench asks a different question: which model understands failure well
-enough to write the next hard test?
-
-Right now, the answer is GPT-5.2. The next sweep asks whether another model can
-learn from the current grid and beat Reimbursement Forensics.
-
-## Reading The Grids
-
-Rows are benchmark creators. Columns are solvers. Cells are exact-match scores
-out of 30.
-
-- High scores mean the benchmark was too easy.
-- Low nonzero scores are the target band.
-- Zero-heavy rows get inspected; they often reveal packet or scorer problems.
-
-Canonical grids and notes:
-[`experiments/canonical/README.md`](experiments/canonical/README.md)
-
-The canonical results page also includes the round-by-round creator trajectory,
-the latest solver leaderboard, and Round 3 matchup summaries.
+That is why a `0/30` can mean several different things: hard task, invalid
+gold, provider error, timeout, malformed output, or an incomplete panel. Only
+the first can contribute to a benchmark claim, and only after adjudication.
 
 ## Next Run
 
-First review the known scorer and solvability cases:
-[`experiments/review_queue.md`](experiments/review_queue.md)
+The target panel is Codex GPT-5.6 Sol high, Codex GPT-5.6 Terra extra high,
+Gemini 3.6 Flash through Antigravity, and Claude Opus 5. Live execution is
+enabled for Codex and Antigravity. Cursor remains preflight-only until it has a
+credential-safe shell boundary, so a new four-model run needs another audited
+Opus provider. Exact commands and safety limits are in
+[`docs/running.md`](docs/running.md).
 
-Then run a challenger sweep. GPT-5.2 keeps the Reimbursement Forensics row as
-the incumbent. The other creators try to beat it against the full six-model
-solver panel.
+Treat Reimbursement Forensics as the historical target to beat, not as a
+validated incumbent or reusable benchmark package. Do not reuse Service Credit
+Forensics as an incumbent, and do not backfill failed solver cells as scores.
+Historical run folders remain immutable; solver extensions publish into new
+overlay roots.
 
-```bash
-BENCHBENCH_CLAUDE_MAX_BUDGET_USD=25 python run_broad_three_model_sweep.py \
-  --feedback-context experiments/feedback_for_next_challenger_sweep_20260523.md \
-  --creator-models gpt-5.4 gpt-5.5 agy:gemini-3.1-pro agy:gemini-3.5-flash-high cursor:claude-opus cursor:fable \
-  --solver-models gpt-5.2 gpt-5.4 gpt-5.5 agy:gemini-3.1-pro agy:gemini-3.5-flash-high cursor:claude-opus
-```
+The required historical resolutions are in:
 
-`cursor:fable` runs Claude Fable 5 through Cursor Agent, the same path used
-for Claude Opus. A Fable-only creator run keeps the solver panel fixed:
-
-```bash
-BENCHBENCH_CLAUDE_MAX_BUDGET_USD=25 python run_broad_three_model_sweep.py \
-  --feedback-context experiments/feedback_for_next_challenger_sweep_20260523.md \
-  --creator-models cursor:fable \
-  --solver-models gpt-5.2 gpt-5.4 gpt-5.5 agy:gemini-3.1-pro agy:gemini-3.5-flash-high cursor:claude-opus
-```
-
-Use `--models` for a symmetric sweep where creator and solver panels are the
-same.
-
-## Evidence
-
-- [`experiments/canonical/README.md`](experiments/canonical/README.md):
-  current presentation-layer 6x6 grids and heatmaps.
-- [`experiments/benchmark_bank.md`](experiments/benchmark_bank.md): current
-  target, diagnostic rows, review cases, and rejected candidates.
-- [`experiments/007_full_feedback_6x6_20260523_172919/`](experiments/007_full_feedback_6x6_20260523_172919/):
-  raw latest direct six-creator, six-solver challenger sweep.
-- [`experiments/004_feedback_sweep_20260522_225208/`](experiments/004_feedback_sweep_20260522_225208/):
-  source run for Reimbursement Forensics.
-- [`benchmark_landscape/`](benchmark_landscape/): eval catalog and similarity
-  notes used as creator context.
-
-## Method
-
-Full process: [`docs/methodology.md`](docs/methodology.md)
-
-Commands and backend notes: [`docs/running.md`](docs/running.md)
-
-In short:
-
-1. Creators build complete benchmark packages.
-2. The controller validates generation, scoring, public/private isolation, and
-   obvious leakage.
-3. Solvers receive only the public `solver_bundle/`.
-4. Scores are computed against private gold answers.
-5. Candidates become leaders, challengers, diagnostics, review cases, or
-   rejections.
+- [`experiments/adjudications/004_reimbursement_forensics.md`](experiments/adjudications/004_reimbursement_forensics.md)
+- [`experiments/adjudications/007_service_credit_forensics.md`](experiments/adjudications/007_service_credit_forensics.md)
+- [`experiments/adjudications/008_fable_creator_sweep.md`](experiments/adjudications/008_fable_creator_sweep.md)
+- [`experiments/adjudications/010_four_model_panel.md`](experiments/adjudications/010_four_model_panel.md)
+- [`experiments/adjudications/010_provider_recovery_20260802.md`](experiments/adjudications/010_provider_recovery_20260802.md)
 
 ## Repo Map
 
 - `run_broad_three_model_sweep.py`: creator/solver sweep harness.
-- `run_existing_solver_extension.py`: add solver columns to saved runs.
-- `benchbench_model_backends.py`: model backend dispatch.
-- `benchbench_results.py`: shared score and prediction parsing helpers.
-- `scripts/build_6x6_result_artifacts.py`: result grids and SVG heatmaps.
-- `scripts/score_benchmark_similarity.py`: similarity/novelty smoke check.
+- `benchbench_model_backends.py`: provider dispatch.
+- `benchbench_results.py`: prediction and score parsing.
+- `experiments/registry.v1.json`: authoritative experiment and adjudication registry.
+- `scripts/build_6x6_result_artifacts.py`: deterministic canonical-status generator.
+- `scripts/prepare_public_evidence.py`: public-evidence sanitizer and digest rebinder.
+- `scripts/build_benchmark_landscape_pack.py`: landscape pack builder.
+- `docs/methodology.md`: evaluation method.

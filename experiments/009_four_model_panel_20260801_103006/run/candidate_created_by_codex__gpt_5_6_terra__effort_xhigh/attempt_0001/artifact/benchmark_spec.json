@@ -1,0 +1,29 @@
+{
+  "name": "Patchwork Access Logic (PAL)",
+  "version": "1.0",
+  "capability_claim": "Faithfully execute a newly specified, non-monotonic policy semantics across a sequential counterfactual patch, including hierarchical scope, time/device-gated transitive membership, ordered precedence, and winning-rule provenance.",
+  "task": "For each JSON item, evaluate all ten requests against the base policy and the policy after the ordered patches. Return the exact canonical answer string specified in the solver packet.",
+  "unit_of_evaluation": "one policy-delta item containing 10 requests",
+  "sample_generation": {
+    "command": "python3.12 generator.py --sample-count 30 --seed 20260516 --out-dir .",
+    "deterministic": true,
+    "item_count": 30,
+    "queries_per_item": 10
+  },
+  "scoring": {
+    "primary": "exact full-item answer, 0-30",
+    "diagnostic": "per-query decision-and-provenance component accuracy, 0-300",
+    "invalid_or_missing_prediction": "incorrect"
+  },
+  "public_information": [
+    "The complete semantics and answer format in solver_bundle/README.md",
+    "Every base policy, patch, and query in solver_bundle/items_private_sample.jsonl"
+  ],
+  "private_information": [
+    "gold_private_sample.jsonl"
+  ],
+  "closest_existing_benchmarks": {
+    "families": ["software/configuration reasoning", "formal rule execution", "tool-agent reliability"],
+    "not_a_duplicate_because": "PAL is not a coding-completion or API-navigation task: the solver must infer no unstated policy intent and instead execute a compact, explicitly supplied operational semantics twice, preserve rule provenance, and account for an ordered patch whose effects can be indirect through transitive membership. Existing broad code and agent benchmarks rarely score this exact counterfactual provenance discipline on fresh generated policy instances."
+  }
+}

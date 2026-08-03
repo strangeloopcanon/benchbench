@@ -12,8 +12,10 @@ from __future__ import annotations
 
 import csv
 import datetime as dt
+import hashlib
 import json
 import re
+import sys
 from pathlib import Path
 from typing import Any
 
@@ -22,10 +24,16 @@ import requests
 from bs4 import BeautifulSoup
 from huggingface_hub import hf_hub_download
 
-
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from benchbench_results import score_summary
+
+
 OUT = ROOT / "benchmark_landscape"
 SOURCE_TABLES = OUT / "source_score_tables"
+EXPERIMENT_REGISTRY = ROOT / "experiments" / "registry.v1.json"
 USER_AGENT = "Mozilla/5.0 BenchBench landscape collector"
 
 
@@ -838,37 +846,124 @@ def solver_model_from_score_path(path: Path) -> tuple[str, str]:
         effort = "xhigh"
     elif "high" in name:
         effort = "high"
-    name = name.replace("grid_", "").replace("high_", "").replace("xhigh_", "")
+    for prefix in ("grid_", "xhigh_", "high_"):
+        if name.startswith(prefix):
+            name = name.removeprefix(prefix)
+            break
+    for suffix in ("_xhigh", "_high"):
+        if name.endswith(suffix):
+            name = name.removesuffix(suffix)
+            break
     return model_from_safe_slug(name), effort
+
+
+def _sha256_file(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def registry_landscape_sources(
+    registry_path: Path = EXPERIMENT_REGISTRY,
+    root: Path = ROOT,
+) -> list[dict[str, Any]]:
+    """Return exact, digest-verified local score inputs.
+
+    A raw score directory is not publishable merely because it exists. This
+    prevents invalid gold and incomplete solver cells from leaking back into a
+    derived landscape table through a stale hard-coded experiment list or glob.
+    """
+    registry = json.loads(registry_path.read_text(encoding="utf-8"))
+    if registry.get("schema_version") != "benchbench.experiment-registry/v1":
+        raise ValueError("unsupported experiment registry schema")
+    resolved_root = root.resolve()
+    sources: list[dict[str, Any]] = []
+    seen_manifest_paths: set[Path] = set()
+    seen_run_roots: set[Path] = set()
+    seen_evidence_paths: set[Path] = set()
+    for experiment in registry.get("experiments", []):
+        if experiment.get("include_in_landscape") is not True:
+            continue
+        if experiment.get("outcome") not in {"historical_noncanonical", "validated"}:
+            raise ValueError(f"invalid experiment cannot feed landscape: {experiment.get('id')}")
+        pointer = experiment.get("landscape_evidence")
+        if not isinstance(pointer, dict) or set(pointer) != {"path", "sha256"}:
+            raise ValueError(f"landscape experiment lacks evidence manifest: {experiment.get('id')}")
+        manifest_path = (root / pointer["path"]).resolve()
+        if not manifest_path.is_relative_to(resolved_root) or not manifest_path.is_file():
+            raise ValueError(f"landscape evidence manifest is missing or out of root: {experiment.get('id')}")
+        if manifest_path in seen_manifest_paths:
+            raise ValueError(f"landscape evidence manifest is reused: {experiment.get('id')}")
+        seen_manifest_paths.add(manifest_path)
+        if _sha256_file(manifest_path) != pointer["sha256"]:
+            raise ValueError(f"landscape evidence manifest digest changed: {experiment.get('id')}")
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        expected_run = f"{experiment['run_path']}/run"
+        if (
+            manifest.get("schema_version") != "benchbench.landscape-evidence/v1"
+            or manifest.get("experiment_id") != experiment.get("id")
+            or manifest.get("run_path") != expected_run
+            or not isinstance(manifest.get("files"), list)
+        ):
+            raise ValueError(f"invalid landscape evidence manifest: {experiment.get('id')}")
+        run_root = (root / expected_run).resolve()
+        if run_root in seen_run_roots:
+            raise ValueError(f"landscape run path is reused: {experiment.get('id')}")
+        seen_run_roots.add(run_root)
+        verified_specs: set[Path] = set()
+        score_paths: list[Path] = []
+        manifest_paths: set[Path] = set()
+        for item in manifest["files"]:
+            if not isinstance(item, dict) or set(item) != {"role", "path", "sha256"}:
+                raise ValueError(f"invalid landscape evidence entry: {experiment.get('id')}")
+            path = (root / item["path"]).resolve()
+            if not path.is_relative_to(run_root) or not path.is_file() or _sha256_file(path) != item["sha256"]:
+                raise ValueError(f"landscape evidence changed: {item.get('path')}")
+            if path in manifest_paths:
+                raise ValueError(f"duplicate landscape evidence entry: {item.get('path')}")
+            if path in seen_evidence_paths:
+                raise ValueError(f"landscape evidence path is reused: {item.get('path')}")
+            manifest_paths.add(path)
+            seen_evidence_paths.add(path)
+            if item["role"] == "benchmark_spec":
+                if path.name != "benchmark_spec.json":
+                    raise ValueError(f"invalid benchmark spec evidence: {item['path']}")
+                verified_specs.add(path)
+            elif item["role"] == "score":
+                if not path.name.startswith(("score_solver", "score_specialist")) or score_summary(path) is None:
+                    raise ValueError(f"invalid landscape score evidence: {item['path']}")
+                score_paths.append(path)
+            else:
+                raise ValueError(f"unknown landscape evidence role: {item['role']}")
+        if not score_paths or any((path.parent / "benchmark_spec.json") not in verified_specs for path in score_paths):
+            raise ValueError(f"landscape scores lack verified benchmark specs: {experiment.get('id')}")
+        sources.append(
+            {
+                "experiment": Path(experiment["run_path"]).name,
+                "run_root": run_root,
+                "score_paths": sorted(score_paths),
+            }
+        )
+    return sources
+
+
+def registry_run_roots(registry_path: Path = EXPERIMENT_REGISTRY) -> list[Path]:
+    return [source["run_root"] for source in registry_landscape_sources(registry_path)]
 
 
 def collect_benchbench_scores() -> tuple[pd.DataFrame, list[dict[str, Any]]]:
     rows: list[dict[str, Any]] = []
-    run_roots = [
-        ROOT / "experiments" / "001_three_model_grid_pilot" / "run",
-        ROOT / "experiments" / "002_broad_sweep_20260515_220653" / "run",
-    ]
-    for run_root in run_roots:
-        if not run_root.exists():
-            continue
-        experiment = run_root.parent.name
-        for candidate_dir in sorted(run_root.glob("candidate_created_by_*")):
+    for source in registry_landscape_sources():
+        experiment = source["experiment"]
+        score_paths_by_candidate: dict[Path, list[Path]] = {}
+        for score_path in source["score_paths"]:
+            score_paths_by_candidate.setdefault(score_path.parent, []).append(score_path)
+        for candidate_dir, score_paths in sorted(score_paths_by_candidate.items()):
             creator = model_from_safe_slug(candidate_dir.name.replace("candidate_created_by_", ""))
             benchmark_name = read_benchmark_name(candidate_dir / "benchmark_spec.json")
             benchmark_slug = f"benchbench_{slugify(benchmark_name)}"
-            score_paths = sorted(candidate_dir.glob("score_solver*.json"))
-            score_paths += sorted(candidate_dir.glob("score_specialist*.json"))
-            for score_path in score_paths:
-                try:
-                    score = json.loads(score_path.read_text(encoding="utf-8"))
-                except Exception:
-                    continue
+            for score_path in sorted(score_paths):
+                score = score_summary(score_path)
+                assert score is not None  # verified by registry_landscape_sources
                 solver, effort = solver_model_from_score_path(score_path)
-                total = score.get("total", score.get("n_items"))
-                correct = score.get("correct", score.get("n_correct"))
-                accuracy = score.get("accuracy")
-                if accuracy is None and total:
-                    accuracy = correct / total
                 rows.append(
                     {
                         "experiment": experiment,
@@ -877,13 +972,18 @@ def collect_benchbench_scores() -> tuple[pd.DataFrame, list[dict[str, Any]]]:
                         "creator_model": creator,
                         "solver_model": solver,
                         "solver_effort": effort,
-                        "correct": correct,
-                        "total": total,
-                        "accuracy": accuracy,
+                        "correct": score["correct"],
+                        "total": score["total"],
+                        "accuracy": score["accuracy"],
                         "score_path": str(score_path.relative_to(ROOT)),
                     }
                 )
-    df = pd.DataFrame(rows)
+    columns = [
+        "experiment", "benchmark", "benchmark_name", "creator_model",
+        "solver_model", "solver_effort", "correct", "total", "accuracy",
+        "score_path",
+    ]
+    df = pd.DataFrame(rows, columns=columns)
     df.to_csv(SOURCE_TABLES / "benchbench_candidate_scores.csv", index=False)
     long_rows: list[dict[str, Any]] = []
     for _, row in df.iterrows():
@@ -1159,8 +1259,8 @@ def write_source_manifest(manifest: list[dict[str, Any]], openllm_rows: int, arc
             *manifest,
         ],
         "local_sources": [
-            "experiments/001_three_model_grid_pilot/run/candidate_created_by_*/score_solver*.json",
-            "experiments/002_broad_sweep_20260515_220653/run/candidate_created_by_*/score_solver*.json",
+            "experiments/registry.v1.json",
+            *[str(path.relative_to(ROOT)) for path in registry_run_roots()],
         ],
     }
     (OUT / "source_manifest.json").write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")

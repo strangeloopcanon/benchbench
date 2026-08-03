@@ -1,0 +1,29 @@
+{
+  "config": {
+    "creator_effort": "high",
+    "creator_models": [
+      "codex__gpt_5_6_sol__effort_high",
+      "codex__gpt_5_6_terra__effort_xhigh",
+      "antigravity__gemini_3_6_flash_high__effort_high",
+      "cursor__claude_opus_5__effort_high"
+    ],
+    "creator_timeout_seconds": 2400,
+    "feedback_digest": null,
+    "generation_seed": 20260516,
+    "harness_digest": "67d5cc5adcb0fe90ffc58ebd08dfe4ac004332d5d41c00e2ffaf76b6c4f846ed",
+    "landscape_digest": "57a9d37f7c1f50323cc4e5c70c347475f538573da1cd1d67a6511f3d5d6b9db6",
+    "max_total_tokens": 500000,
+    "sample_count": 30,
+    "solver_effort": "high",
+    "solver_models": [
+      "codex__gpt_5_6_sol__effort_high",
+      "codex__gpt_5_6_terra__effort_xhigh",
+      "antigravity__gemini_3_6_flash_high__effort_high",
+      "cursor__claude_opus_5__effort_high"
+    ],
+    "solver_timeout_seconds": 1500,
+    "unmetered_cost_acknowledged": true
+  },
+  "config_fingerprint": "8b76d03aa5a0ddeb68123a5048bea06523d2afa46b334f4ade559411cfd65e24",
+  "schema_version": 1
+}

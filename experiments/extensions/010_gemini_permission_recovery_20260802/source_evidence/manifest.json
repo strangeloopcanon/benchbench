@@ -1,0 +1,37 @@
+{
+  "files": [
+    {
+      "path": "source_evidence/run_state.json",
+      "sha256": "64dc5ed3b0fac0cdef6c125ad4c0d07809a0bb5fb289810c51c391b42182f919"
+    },
+    {
+      "path": "source_evidence/source_manifest.json",
+      "sha256": "436d40d6fdbf41c9ae876638ebfb330e03295c15217bac625bbc15659fcc2e93"
+    },
+    {
+      "path": "source_evidence/gpt_5_6_sol__controller_validation.v1.json",
+      "sha256": "e7d7bd5efc900fa47b5069f1a6d3077b0b009ea7842a7d446520af592bad645f"
+    },
+    {
+      "path": "source_evidence/gpt_5_6_sol__controller_validation_report.txt",
+      "sha256": "173f63e989d4309d057dc292a5e67aa1b39c5b194df73642d5736f7922f873b6"
+    },
+    {
+      "path": "source_evidence/gpt_5_6_terra__controller_validation.v1.json",
+      "sha256": "3c59661c49b9c10bc207f60fd9583014d97d8477370cd086ac5af417829c9cd8"
+    },
+    {
+      "path": "source_evidence/gpt_5_6_terra__controller_validation_report.txt",
+      "sha256": "19cca71b25c69b58be45f95bab210307d668f8d7f54011f3274a977a05123f76"
+    },
+    {
+      "path": "source_evidence/claude_opus_5__controller_validation.v1.json",
+      "sha256": "1b7c00ff7d7048809e17a05ca824f7435eb62a5f5e6b12e105f12449fb4f6a2a"
+    },
+    {
+      "path": "source_evidence/claude_opus_5__controller_validation_report.txt",
+      "sha256": "a3b02e6c10f2813917fa6345b45be696ef17b890f9be23f50fb63de24b0d0808"
+    }
+  ],
+  "schema_version": 1
+}

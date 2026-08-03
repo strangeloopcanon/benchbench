@@ -1,0 +1,7 @@
+{
+  "manifest_version": "1.0.0",
+  "benchmark_name": "state_machine_trace",
+  "items_file": "items_private_sample.jsonl",
+  "sample_count": 30,
+  "description": "Solver bundle containing evaluation prompts for state_machine_trace benchmark."
+}

@@ -1,0 +1,143 @@
+missing_root_files: none
+missing_solver_bundle_files: none
+external_solvability_evidence: present in validation_report.md, README.md, benchmark_spec.json
+deterministic_tree_digest: True; digests=['1c43f49f4af594137fc57695288565afe653331bc0159fa353cf92200a363842', '1c43f49f4af594137fc57695288565afe653331bc0159fa353cf92200a363842']
+frozen_package_digest_match: True; frozen_digest=1c43f49f4af594137fc57695288565afe653331bc0159fa353cf92200a363842
+solver_bundle_file_count: 3
+leak_scan_matches: none
+
+commands:
+[
+  {
+    "args": [
+      "<local-home>/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/bin/python3.12",
+      "generator.py",
+      "--sample-count",
+      "30",
+      "--seed",
+      "20260516",
+      "--out-dir",
+      "."
+    ],
+    "returncode": 0,
+    "stdout_bytes": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "args": [
+      "<local-home>/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/bin/python3.12",
+      "verifier.py",
+      "--items",
+      "solver_bundle/items_private_sample.jsonl",
+      "--gold",
+      "gold_private_sample.jsonl"
+    ],
+    "returncode": 0,
+    "stdout_bytes": 59,
+    "stdout_sha256": "ecdb46f39a7ab8fa1db12ec917620c52ca20f2d6361d8ef9bdb2114fb4075bdb",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "args": [
+      "<local-home>/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/bin/python3.12",
+      "scorer.py",
+      "--gold",
+      "gold_private_sample.jsonl",
+      "--predictions",
+      "predictions_gold_controller.jsonl",
+      "--out",
+      "score_gold_controller.json"
+    ],
+    "returncode": 0,
+    "stdout_bytes": 33,
+    "stdout_sha256": "47bfba2abe86ddcd20dea50dc396f231da6a6701ffe0b662f82720c99d4a75e5",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "args": [
+      "<local-home>/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/bin/python3.12",
+      "scorer.py",
+      "--gold",
+      "gold_private_sample.jsonl",
+      "--predictions",
+      "predictions_wrong_shifted_controller.jsonl",
+      "--out",
+      "score_wrong_shifted_controller.json"
+    ],
+    "returncode": 0,
+    "stdout_bytes": 31,
+    "stdout_sha256": "a5d9be3fa34d94be1e029467395e0f713a7853428ed73b1a3323fd8f78de9ba2",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "args": [
+      "<local-home>/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/bin/python3.12",
+      "generator.py",
+      "--sample-count",
+      "30",
+      "--seed",
+      "20260516",
+      "--out-dir",
+      "."
+    ],
+    "returncode": 0,
+    "stdout_bytes": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "args": [
+      "<local-home>/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/bin/python3.12",
+      "verifier.py",
+      "--items",
+      "solver_bundle/items_private_sample.jsonl",
+      "--gold",
+      "gold_private_sample.jsonl"
+    ],
+    "returncode": 0,
+    "stdout_bytes": 59,
+    "stdout_sha256": "ecdb46f39a7ab8fa1db12ec917620c52ca20f2d6361d8ef9bdb2114fb4075bdb",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "args": [
+      "<local-home>/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/bin/python3.12",
+      "scorer.py",
+      "--gold",
+      "gold_private_sample.jsonl",
+      "--predictions",
+      "predictions_gold_controller.jsonl",
+      "--out",
+      "score_gold_controller.json"
+    ],
+    "returncode": 0,
+    "stdout_bytes": 33,
+    "stdout_sha256": "47bfba2abe86ddcd20dea50dc396f231da6a6701ffe0b662f82720c99d4a75e5",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "args": [
+      "<local-home>/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/bin/python3.12",
+      "scorer.py",
+      "--gold",
+      "gold_private_sample.jsonl",
+      "--predictions",
+      "predictions_wrong_shifted_controller.jsonl",
+      "--out",
+      "score_wrong_shifted_controller.json"
+    ],
+    "returncode": 0,
+    "stdout_bytes": 31,
+    "stdout_sha256": "a5d9be3fa34d94be1e029467395e0f713a7853428ed73b1a3323fd8f78de9ba2",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

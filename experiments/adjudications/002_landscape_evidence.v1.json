@@ -1,0 +1,23 @@
+{
+  "schema_version": "benchbench.landscape-evidence/v1",
+  "experiment_id": "002",
+  "run_path": "experiments/002_broad_sweep_20260515_220653/run",
+  "files": [
+    {"role": "benchmark_spec", "path": "experiments/002_broad_sweep_20260515_220653/run/candidate_created_by_gpt_5_2/benchmark_spec.json", "sha256": "cc689099a38ed4fa1533daefd987029b736c7cea3c404273f0f27d557979af34"},
+    {"role": "score", "path": "experiments/002_broad_sweep_20260515_220653/run/candidate_created_by_gpt_5_2/score_solver_gpt_5_2.json", "sha256": "4c48b23c92eebed62a838a50bbc11f4c0a36fcbe5480faa85b1fb1f118515c7d"},
+    {"role": "score", "path": "experiments/002_broad_sweep_20260515_220653/run/candidate_created_by_gpt_5_2/score_solver_gpt_5_4.json", "sha256": "50d015797520b558f84413a8a4cb885d5c4995a4e81c13d7b8d5653fac4fc62d"},
+    {"role": "score", "path": "experiments/002_broad_sweep_20260515_220653/run/candidate_created_by_gpt_5_2/score_solver_gpt_5_5.json", "sha256": "50d015797520b558f84413a8a4cb885d5c4995a4e81c13d7b8d5653fac4fc62d"},
+    {"role": "score", "path": "experiments/002_broad_sweep_20260515_220653/run/candidate_created_by_gpt_5_2/score_solver_gpt_5_5_xhigh.json", "sha256": "50d015797520b558f84413a8a4cb885d5c4995a4e81c13d7b8d5653fac4fc62d"},
+    {"role": "benchmark_spec", "path": "experiments/002_broad_sweep_20260515_220653/run/candidate_created_by_gpt_5_4/benchmark_spec.json", "sha256": "7a2f97c944bfbb55debdb79c2bf028b59992c345f6109ffb9a09348f81d9a0d6"},
+    {"role": "score", "path": "experiments/002_broad_sweep_20260515_220653/run/candidate_created_by_gpt_5_4/score_solver_gpt_5_2.json", "sha256": "e4044cb0fd8eaef401bc37056b8cf1614e6abd0ed2f40051076f0fc864a89767"},
+    {"role": "score", "path": "experiments/002_broad_sweep_20260515_220653/run/candidate_created_by_gpt_5_4/score_solver_gpt_5_4.json", "sha256": "e4044cb0fd8eaef401bc37056b8cf1614e6abd0ed2f40051076f0fc864a89767"},
+    {"role": "score", "path": "experiments/002_broad_sweep_20260515_220653/run/candidate_created_by_gpt_5_4/score_solver_gpt_5_5.json", "sha256": "e4044cb0fd8eaef401bc37056b8cf1614e6abd0ed2f40051076f0fc864a89767"},
+    {"role": "benchmark_spec", "path": "experiments/002_broad_sweep_20260515_220653/run/candidate_created_by_gpt_5_5/benchmark_spec.json", "sha256": "3676c4b3c029e34acf426980b21b66e5185ba01ab1d082d1e5b4f97d96b2c1ea"},
+    {"role": "score", "path": "experiments/002_broad_sweep_20260515_220653/run/candidate_created_by_gpt_5_5/score_solver_gpt_5_2.json", "sha256": "0eade50c521f6bc993fe64554a1dd1fe6c23ef2b394a1db0d500047da252542f"},
+    {"role": "score", "path": "experiments/002_broad_sweep_20260515_220653/run/candidate_created_by_gpt_5_5/score_solver_gpt_5_4.json", "sha256": "0eade50c521f6bc993fe64554a1dd1fe6c23ef2b394a1db0d500047da252542f"},
+    {"role": "score", "path": "experiments/002_broad_sweep_20260515_220653/run/candidate_created_by_gpt_5_5/score_solver_gpt_5_5.json", "sha256": "0eade50c521f6bc993fe64554a1dd1fe6c23ef2b394a1db0d500047da252542f"},
+    {"role": "score", "path": "experiments/002_broad_sweep_20260515_220653/run/candidate_created_by_gpt_5_5/score_solver_gpt_5_5_xhigh.json", "sha256": "0eade50c521f6bc993fe64554a1dd1fe6c23ef2b394a1db0d500047da252542f"},
+    {"role": "score", "path": "experiments/002_broad_sweep_20260515_220653/run/candidate_created_by_gpt_5_5/score_specialist_oracle_family_search.json", "sha256": "0eade50c521f6bc993fe64554a1dd1fe6c23ef2b394a1db0d500047da252542f"},
+    {"role": "score", "path": "experiments/002_broad_sweep_20260515_220653/run/candidate_created_by_gpt_5_5/score_specialist_public_expr.json", "sha256": "0eade50c521f6bc993fe64554a1dd1fe6c23ef2b394a1db0d500047da252542f"}
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "digest": "f4a0e792e8a6538c60f7c679cd9cfe929bae46df65b6710dc8a0d9ed84b91d37",
+  "files": [
+    {
+      "bytes": 39553,
+      "path": "benchbench_model_backends.py",
+      "sha256": "9e2e608327c01baeb7bf8305450b1f607713e678dc57db5a857286e86d6aa894"
+    },
+    {
+      "bytes": 10969,
+      "path": "benchbench_results.py",
+      "sha256": "26ab4c2823e8aee7f9d9501de11c8d7be65c60a0707b7f54c327faf6f69b32e4"
+    },
+    {
+      "bytes": 8457,
+      "path": "benchbench_run_state.py",
+      "sha256": "c82d79faaa351955364819ced655138244b61abc6b93fb82b464966538eb98f6"
+    },
+    {
+      "bytes": 21929,
+      "path": "benchbench_sandbox.py",
+      "sha256": "059286ce48bed3bf1b02f3f668709625e953fb6f768db96533725b77bcc3df84"
+    },
+    {
+      "bytes": 10753,
+      "path": "benchbench_schema.py",
+      "sha256": "bb2db8ea6b6a3a7ada836d24a6e184b43bc9a6769efaa42b67d1bd6ca952fe39"
+    },
+    {
+      "bytes": 519,
+      "path": "pyproject.toml",
+      "sha256": "71d595cfd37524966e03840b76f8d1594f1e67c84d3c44d80c7d29da48624c68"
+    },
+    {
+      "bytes": 128,
+      "path": "requirements.txt",
+      "sha256": "35cf3f33ca5ef7d0f5da2fd735c6bff160120ae0490c40a6b5a3db26e76a2c04"
+    },
+    {
+      "bytes": 65712,
+      "path": "run_broad_three_model_sweep.py",
+      "sha256": "9817a62a88dca3662a33f8d230a7b052c06d2b6c9324b8014e864caa6e85555b"
+    },
+    {
+      "bytes": 72082,
+      "path": "uv.lock",
+      "sha256": "8ea9ad36ef1c78b95227e519406c6e60a8cc1de2d07be355ab8e37fb3ddd545b"
+    }
+  ],
+  "schema_version": "benchbench.source_snapshot/v1"
+}

@@ -1,0 +1,8 @@
+{
+  "benchmark_name": "RADN-Sim",
+  "benchmark_version": "1.0.0",
+  "description": "Reconfigurable Asynchronous Dataflow Network (RADN) Cycle-Accurate Simulation Benchmark",
+  "item_count": 30,
+  "items_file": "items_private_sample.jsonl",
+  "packet_file": "solver_packet.md"
+}

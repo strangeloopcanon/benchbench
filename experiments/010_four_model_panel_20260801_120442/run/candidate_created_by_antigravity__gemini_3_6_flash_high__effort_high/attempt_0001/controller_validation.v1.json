@@ -1,0 +1,12 @@
+{
+  "bundle_file_count": 0,
+  "candidate_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "deterministic": false,
+  "frozen_package_match": false,
+  "gold_summary": null,
+  "leak_match_count": 0,
+  "report_sha256": "123c3830dd9cbac459a3ebb0358f4742050a11599b98fdc0d8c134eb3fc49401",
+  "schema_version": "benchbench.validation/v1",
+  "valid": false,
+  "wrong_summary": null
+}

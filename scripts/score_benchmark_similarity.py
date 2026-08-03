@@ -15,7 +15,8 @@ from pathlib import Path
 import pandas as pd
 from scipy.stats import kendalltau, spearmanr
 from sklearn.linear_model import RidgeCV
-from sklearn.model_selection import LeaveOneOut, cross_val_score
+from sklearn.metrics import r2_score
+from sklearn.model_selection import LeaveOneOut, cross_val_predict
 from sklearn.pipeline import make_pipeline
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler
@@ -102,22 +103,30 @@ def regression_report(wide: pd.DataFrame, target: str, min_models: int) -> dict[
         RidgeCV(alphas=[0.01, 0.1, 1.0, 10.0, 100.0]),
     )
     loo = LeaveOneOut()
-    scores = cross_val_score(model, X, y, cv=loo, scoring="r2")
-    finite_scores = [float(s) for s in scores if math.isfinite(float(s))]
-    if not finite_scores:
+    predictions = cross_val_predict(model, X, y, cv=loo)
+    if not all(math.isfinite(float(value)) for value in predictions):
         return {
             "status": "regression_unstable",
             "models": len(usable),
             "features": len(feature_cols),
-            "message": "Leave-one-out R2 was undefined for this sample.",
+            "message": "Leave-one-out predictions contained non-finite values.",
         }
-    mean_r2 = sum(finite_scores) / len(finite_scores)
+    # R2 is undefined for each one-row LOO test fold.  Evaluate the complete
+    # out-of-fold prediction vector once instead of averaging per-fold R2s.
+    out_of_fold_r2 = float(r2_score(y, predictions))
+    if not math.isfinite(out_of_fold_r2):
+        return {
+            "status": "regression_unstable",
+            "models": len(usable),
+            "features": len(feature_cols),
+            "message": "Out-of-fold R2 was undefined for this sample.",
+        }
     return {
         "status": "ok",
         "models": len(usable),
         "features": len(feature_cols),
-        "cv_r2_mean": mean_r2,
-        "predictive_novelty": 1.0 - mean_r2,
+        "cv_r2": out_of_fold_r2,
+        "predictive_novelty": 1.0 - out_of_fold_r2,
         "message": "Use with caution unless the model set is broad and target reliability is known.",
     }
 
@@ -152,7 +161,7 @@ def write_report(path: Path, target: str, corr: pd.DataFrame, reg: dict[str, obj
         str(reg["message"]),
         "",
     ]
-    for key in ["models", "features", "cv_r2_mean", "predictive_novelty"]:
+    for key in ["models", "features", "cv_r2", "predictive_novelty"]:
         if key in reg:
             value = reg[key]
             if isinstance(value, float):

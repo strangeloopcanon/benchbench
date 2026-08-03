@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "snapshot_candidate_digest": "83a877ce85ffcf255db2550cbaa143adc14d96f2ecd5c578cdfc831076b902e6",
+  "source_artifact": "./experiments/010_four_model_panel_20260801_120442/run/candidate_created_by_codex__gpt_5_6_terra__effort_xhigh/attempt_0001/artifact",
+  "source_candidate_digest": "83a877ce85ffcf255db2550cbaa143adc14d96f2ecd5c578cdfc831076b902e6"
+}

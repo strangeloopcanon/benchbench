@@ -1,0 +1,43 @@
+{
+  "config": {
+    "dispatch_ceiling_overshoot_acknowledged": true,
+    "harness_digest": "65e9d259a0738f5fe5235a8d7949f748461223a7e6899e81bffc36e1fcc9e652",
+    "max_total_tokens": 10000000,
+    "schema_version": 1,
+    "solver": "cursor__claude_opus_5_thinking_high__effort_high",
+    "source_candidates": [
+      {
+        "artifact": "./experiments/010_four_model_panel_20260801_120442/run/candidate_created_by_codex__gpt_5_6_terra__effort_xhigh/attempt_0001/artifact",
+        "candidate_digest": "83a877ce85ffcf255db2550cbaa143adc14d96f2ecd5c578cdfc831076b902e6",
+        "creator_call_id": "codex__gpt_5_6_terra__effort_xhigh",
+        "creator_model": "gpt-5.6-terra",
+        "validation_report_sha256": "a0b77b3d5b2f798130c052ce60fd5dc2b68b27da60315601fb18b662b93e9225",
+        "validation_sha256": "3c59661c49b9c10bc207f60fd9583014d97d8477370cd086ac5af417829c9cd8"
+      },
+      {
+        "artifact": "./experiments/010_four_model_panel_20260801_120442/run/candidate_created_by_cursor__claude_opus_5_thinking_high__effort_high/attempt_0001/artifact",
+        "candidate_digest": "d7062dd405b9121979e839745b37b93ccc8a9c91babf99e74f216ab7c1d2bbc8",
+        "creator_call_id": "cursor__claude_opus_5_thinking_high__effort_high",
+        "creator_model": "claude-opus-5",
+        "validation_report_sha256": "daa835a1d372291fe7e6471772b10e3901ad68e93331b7186b049456b462049f",
+        "validation_sha256": "1b7c00ff7d7048809e17a05ca824f7435eb62a5f5e6b12e105f12449fb4f6a2a"
+      }
+    ],
+    "source_manifest_sha256": "8c3ab2c7db5e00f5da948e722d943f9ee6813af4c8e00a697f8b1c765da1e326",
+    "source_run_root": "./experiments/010_four_model_panel_20260801_120442",
+    "source_run_state_sha256": "64dc5ed3b0fac0cdef6c125ad4c0d07809a0bb5fb289810c51c391b42182f919",
+    "source_snapshot_digest": "79a126c806eab6593210f3852cbb6c26aa05b24959d11b2243b5c2c926e397c0",
+    "timeout_seconds": 1500,
+    "unmetered_cost_acknowledged": true,
+    "zero_telemetry_reservation": 5000000
+  },
+  "config_fingerprint": "f555998a6291f6f718f629dd41c4a32b4a28cd600a6793d820576d89661d0694",
+  "schema_version": 1,
+  "source_snapshot": {
+    "digest": "65e9d259a0738f5fe5235a8d7949f748461223a7e6899e81bffc36e1fcc9e652",
+    "file_count": 10,
+    "manifest_path": "source_snapshot/manifest.json",
+    "path": "source_snapshot",
+    "schema_version": "benchbench.source_snapshot/v1"
+  }
+}

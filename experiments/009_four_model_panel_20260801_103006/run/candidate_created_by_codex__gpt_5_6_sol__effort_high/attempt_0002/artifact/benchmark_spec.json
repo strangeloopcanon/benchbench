@@ -1,0 +1,48 @@
+{
+  "answer_schema": {
+    "corrected_tick": "integer in [0, item.modulus)",
+    "record_id": "one public log record_id"
+  },
+  "benchmark_id": "counterfeit_clock_v1",
+  "capability_claim": "Reliably reconstruct coupled finite latent mappings and repair a single corrupted observation under modular arithmetic constraints.",
+  "canonical_generation": {
+    "sample_count": 30,
+    "seed": 20260516
+  },
+  "determinism": "Python random.Random with explicit seed; canonical JSON serialization; generation refuses non-allowlisted solver-bundle entries",
+  "difficulty_mechanisms": [
+    "unknown bijection between manifest station names and local node names",
+    "unknown bijection of five distinct modular clock rates to nodes",
+    "unknown per-node modular offsets and counter wraparound",
+    "unknown packet-to-manifest bijections within repeated directed routes",
+    "one adversarially located incorrect tick"
+  ],
+  "external_resources_required": false,
+  "generator_version": "1.0.1",
+  "item_count": 30,
+  "item_schema": {
+    "allowed_rates": "array of distinct integers, used bijectively",
+    "id": "string",
+    "logs": "array of public local log records, grouped chronologically by node",
+    "manifest_nodes": "array of trusted-ledger station names",
+    "manifests": "array of trusted packet timing records",
+    "modulus": "prime integer",
+    "nodes": "array of local node names"
+  },
+  "nearest_benchmarks": [
+    "MuSR (multi-source constraint reasoning)",
+    "GAIA (tool-enabled multi-step reasoning)",
+    "BIG-Bench Hard logical/programmatic tasks"
+  ],
+  "non_duplicate_rationale": "Unlike QA or general agent tasks, each item is an auditable distributed-trace identification problem with interacting graph, modular-clock, matching, and error-correction layers and a deterministic uniqueness certificate.",
+  "primary_metric": "exact item accuracy",
+  "sample_hashes_sha256": {
+    "gold_private_sample.jsonl": "376374216f9ac89b6272e598a420cac8e576e9c4f9638ca6cf9d0acef021c9e3",
+    "solver_bundle/items_private_sample.jsonl": "7c9529631dd017984143b8ffa306a5631651b03fcac0aa88aee6bfe070d90112"
+  },
+  "secondary_metrics": [
+    "record_id accuracy",
+    "corrected_tick accuracy"
+  ],
+  "version": "1.0"
+}

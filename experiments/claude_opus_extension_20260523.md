@@ -1,5 +1,11 @@
 # Claude Opus Extension - 2026-05-23
 
+> **Historical report.** Its final interpretation predates the Decimal
+> re-audit. Reimbursement Forensics remains the #1 corrected historical
+> candidate and a win over the challengers, while its original gold is invalid
+> and noncanonical. The original calls and scores remain below as provenance;
+> `registry.v1.json` is authoritative.
+
 This note summarizes the Claude Opus extension runs.
 
 ## Model Path
@@ -76,10 +82,13 @@ Claude Opus did not create a durable new benchmark in these two attempts. Both
 packages were valid, but neither survived the full solver set.
 
 As a solver, Claude Opus strengthens the case that Reimbursement Forensics is
-the best current candidate: it also scored in the low nonzero band, at 11/30.
-It also confirms that MFN-Cascade and most Experiment 003 candidates are too
-easy. The LZ77 row remains operationally brittle rather than a clean broad
-reasoning measurement.
+the best corrected historical candidate: its retained prediction remains in
+the low nonzero band at 11/30 after the Decimal correction. Across all six
+retained predictions, the corrected profile is `12, 16, 11, 13, 11, 11`.
+That is a win over the challengers, not a validation of the original gold. It
+also confirms that MFN-Cascade and most Experiment 003 candidates are too easy.
+The LZ77 row remains operationally brittle rather than a clean broad reasoning
+measurement.
 
 The canonical reconstructed 6x6 tables and heatmaps are in
 `canonical/README.md`.

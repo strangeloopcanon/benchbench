@@ -1,0 +1,12 @@
+{
+  "assets": [
+    "items_private_sample.jsonl",
+    "solver_packet.md"
+  ],
+  "benchmark": "counterfeit_clock",
+  "entrypoint": "items_private_sample.jsonl",
+  "instructions": "solver_packet.md",
+  "item_count": 30,
+  "prediction_format": "JSONL rows with exactly id and answer",
+  "version": "1.0"
+}

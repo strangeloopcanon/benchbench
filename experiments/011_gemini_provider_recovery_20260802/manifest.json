@@ -1,0 +1,74 @@
+[
+  {
+    "antigravity_actual_label": "Gemini 3.6 Flash (High)",
+    "antigravity_expected_label": "Gemini 3.6 Flash (High)",
+    "antigravity_log_path": "private_raw_evidence_not_published",
+    "antigravity_usage": {
+      "cache_read_tokens": 118139,
+      "input_tokens": 41094,
+      "output_tokens": 2274,
+      "thinking_tokens": 1374,
+      "total_tokens": 43368
+    },
+    "artifact_id": "antigravity__gemini_3_6_flash_high",
+    "artifact_snapshot": "./experiments/011_gemini_provider_recovery_20260802/run/candidate_created_by_antigravity__gemini_3_6_flash_high__effort_high/attempt_0001/artifact",
+    "artifact_tree": {
+      "file_count": 0,
+      "total_bytes": 0
+    },
+    "creator_display_model": "Gemini 3.6 Flash (High)",
+    "creator_model": "gemini-3.6-flash-high",
+    "display_model": "Gemini 3.6 Flash (High)",
+    "effort": "high",
+    "model": "gemini-3.6-flash-high",
+    "model_mismatch": false,
+    "out_path": "private_raw_evidence_not_published",
+    "permission_denied": true,
+    "phase": "creator",
+    "prompt_path": "private_raw_evidence_not_published",
+    "provider": "antigravity",
+    "requested_provider_model": "gemini-3.6-flash-high",
+    "returncode": 77,
+    "sandbox_mode": "nested-antigravity-plus-outer-seatbelt",
+    "stderr_path": "private_raw_evidence_not_published",
+    "stdout_path": "private_raw_evidence_not_published",
+    "tokens_used": 43368,
+    "validation_report_path": "./experiments/011_gemini_provider_recovery_20260802/run/candidate_created_by_antigravity__gemini_3_6_flash_high__effort_high/attempt_0001/controller_validation.v1.json"
+  },
+  {
+    "antigravity_actual_label": "Gemini 3.6 Flash (High)",
+    "antigravity_expected_label": "Gemini 3.6 Flash (High)",
+    "antigravity_log_path": "private_raw_evidence_not_published",
+    "antigravity_usage": {
+      "cache_read_tokens": 1189501,
+      "input_tokens": 147295,
+      "output_tokens": 25015,
+      "thinking_tokens": 12860,
+      "total_tokens": 172310
+    },
+    "artifact_id": "antigravity__gemini_3_6_flash_high",
+    "artifact_snapshot": "./experiments/011_gemini_provider_recovery_20260802/run/candidate_created_by_antigravity__gemini_3_6_flash_high__effort_high/attempt_0002/artifact",
+    "artifact_tree": {
+      "file_count": 11,
+      "total_bytes": 63682
+    },
+    "creator_display_model": "Gemini 3.6 Flash (High)",
+    "creator_model": "gemini-3.6-flash-high",
+    "display_model": "Gemini 3.6 Flash (High)",
+    "effort": "high",
+    "model": "gemini-3.6-flash-high",
+    "model_mismatch": false,
+    "out_path": "private_raw_evidence_not_published",
+    "permission_denied": false,
+    "phase": "repair",
+    "prompt_path": "private_raw_evidence_not_published",
+    "provider": "antigravity",
+    "requested_provider_model": "gemini-3.6-flash-high",
+    "returncode": 0,
+    "sandbox_mode": "nested-antigravity-plus-outer-seatbelt",
+    "stderr_path": "private_raw_evidence_not_published",
+    "stdout_path": "private_raw_evidence_not_published",
+    "tokens_used": 172310,
+    "validation_report_path": "./experiments/011_gemini_provider_recovery_20260802/run/candidate_created_by_antigravity__gemini_3_6_flash_high__effort_high/attempt_0002/controller_validation.v1.json"
+  }
+]

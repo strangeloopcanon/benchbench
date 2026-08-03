@@ -16,9 +16,14 @@ env/
 .hypothesis/
 
 runs/
+experiments/diagnostics/
 experiments/**/run/isolated_solver_*/
 experiments/000_development_archive/runs/*
 !experiments/000_development_archive/runs/README.md
 
 *.tmp
 *.log
+experiments/**/run/call_evidence/
+experiments/**/run/creator_*.txt
+experiments/**/run/repair_*.txt
+experiments/**/run/solver_*.txt

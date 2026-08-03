@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "benchmark": "AuditWeave",
+  "item_file": "items_private_sample.jsonl",
+  "item_count": 30,
+  "solver_instructions": "solver_packet.md",
+  "answer_record_schema": {
+    "id": "string",
+    "answer": "string"
+  }
+}

@@ -1,55 +1,32 @@
 # Benchmark Bank
 
-BenchBench separates current targets, diagnostic rows, problem cases, and
-rejections.
+## Stable Bank
 
-Current target means "best benchmark so far; beat this." Stable bank means
-"ready for repeated reuse." The current results are about creator ranking, not
-about declaring a permanent eval.
+Empty. There is no validated incumbent or reusable benchmark in the current
+registry.
 
-## Current Target
+The historical comparison does have a clear leader: Reimbursement Forensics
+is #1 after correcting the gold and rescoring the retained predictions. It
+counts as a win over the challengers, but the invalid original gold keeps it
+out of the stable bank.
 
-| benchmark | creator | source | solver scores | status |
-|---|---|---|---|---|
-| Reimbursement Forensics | GPT-5.2 | `004_feedback_sweep_20260522_225208` plus Claude extension | 10/30, 14/30, 11/30, 12/30, 11/30, 11/30 | target to beat |
+## Historical Candidates Excluded From the Bank
 
-Why it leads: every tested solver landed in the low nonzero band. That is the
-best shape so far.
+| rank | benchmark | source | outcome | historical read | why it is excluded |
+|---:|---|---|---|---|---|
+| 1 | Reimbursement Forensics | Experiment 004 | invalid | Corrected retained-prediction scores are 12, 16, 11, 13, 11, 11; best historical candidate and a win over challengers. | Original emitted gold was wrong; a canonical version still requires regeneration and a fresh panel. |
+| — | Service Credit Forensics | Experiment 007 | invalid | No valid comparative difficulty claim. | Gold uses a lower-precedence timeline than the public policy exposes. |
+| — | Rosetta Fieldwork | Experiment 008 | infrastructure incomplete | Later successful cells reach 27/30. | GPT-5.2 was a provider error and Claude Opus timed out; the panel has no valid aggregate score. |
+| — | Counterfeit Clock v1 | Experiment 009 | invalid | No solver cells ran. | The scorer omitted the controller-required `correct` field, so mechanical validation failed. |
+| — | Patchwork Access Logic | Experiment 009 | invalid | No solver cells ran. | The scorer used custom strict-score fields, so mechanical validation failed. |
+| — | Experiment 010 candidates | Experiment 010 | infrastructure incomplete | Every completed solver cell is 30/30. | Opus did not complete two cells, Gemini produced no valid candidate, and the scored candidates are too easy. |
 
-Before stable reuse, check leakage, answer evidence, scorer fairness, and
-external solvability.
+Other past rows remain useful design provenance, but none has an explicit
+`validated` registry entry. Historical scores do not substitute for that gate.
 
-## Problem Cases
+## Promotion Rule
 
-| benchmark | creator | source | observed result | question |
-|---|---|---|---|---|
-| Service Credit Forensics | GPT-5.2 | `007_full_feedback_6x6_20260523_172919` | 0/30 for all six solvers | Did solvers fail because the benchmark is hard, or because eligible downtime is under-specified/scored unfairly? |
-
-Service Credit is a raw Experiment 007 problem case. It is not used as GPT-5.2's
-canonical Round 3 row because the Reimbursement Forensics incumbent
-carries forward until beaten. The field-level read is suspicious: solvers often
-got other fields close, but all failed the exact eligible-downtime field.
-
-## Diagnostic But Rejected
-
-| benchmark | creator | source | solver scores | read |
-|---|---|---|---|---|
-| Maritime Freight & Customs Audit | Gemini 3.5 Flash | Experiment 007 | 4/30, 23/30, 15/30, 21/30, 25/30, 25/30 | diagnostic spread, too easy at the top end |
-| Commercial Lease CAM Reconciliation | Gemini 3.1 Pro | Experiment 007 | 1/30, 26/30, 26/30, 16/30, 18/30, 26/30 | diagnostic spread, too easy at the top end; required contract repair |
-| Corrupted LZ77 Recovery | Gemini 3.1 Pro | Experiment 004 plus Claude extension | 0/30, 22/30, 17/30, 0/30, 0/30, 0/30 | narrow and operationally brittle |
-
-These rows are useful diagnostics. They should not be promoted as stable
-benchmarks.
-
-## Rejected As Too Easy Or Brittle
-
-| benchmark | creator | source | read |
-|---|---|---|---|
-| Catalog Royalty Forensics | GPT-5.4 | Experiment 007 | too easy; max 30/30 |
-| Prior Authorization Forensics | GPT-5.5 | Experiment 007 | too easy; max 25/30 |
-| Construction Progress Payment Certification | Claude Opus | Experiment 007 | saturated |
-| release_packet_arbitration | GPT-5.4 | Experiment 004 | mostly too easy |
-| Cross-Document Obligation Resolution | GPT-5.5 | Experiment 004 | scoring-contract failure |
-| MFN-Cascade | Gemini 3.5 Flash | Experiment 004 | saturated |
-| Conlang Rosetta | Claude Opus | Experiment 006 | saturated |
-| String Rewriting Distance | Claude Opus | Experiment 005 | scorer type artifact; otherwise saturated |
+A candidate enters this bank only after a new version has digest-backed public
+evidence, matching gold and verifier semantics, deterministic scoring, no
+private leakage, and a complete successful declared solver panel. The exact
+machine-readable state is [`registry.v1.json`](registry.v1.json).

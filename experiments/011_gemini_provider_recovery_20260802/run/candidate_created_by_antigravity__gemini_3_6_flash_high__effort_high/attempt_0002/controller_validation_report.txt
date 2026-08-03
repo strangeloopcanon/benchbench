@@ -1,0 +1,49 @@
+missing_root_files: none
+missing_solver_bundle_files: none
+external_solvability_evidence: present in validation_report.md, README.md
+generation_contract_attempt_1: /var/folders/bl/nkj7dq8s6m16hf4zmr47vkfr0000gn/T/benchbench-controller-w4ri258v/candidate/gold_private_sample.jsonl: row 1 must contain exactly id and answer
+generation_contract_attempt_2: /var/folders/bl/nkj7dq8s6m16hf4zmr47vkfr0000gn/T/benchbench-controller-vmxmxwbl/candidate/gold_private_sample.jsonl: row 1 must contain exactly id and answer
+deterministic_generated_payload_digest: False; digests=[]
+frozen_generated_payload_digest_match: False; frozen_digest=c070943d5050e0e0b64efd711d772227611a4378a3a3814ab75985e078045d26
+solver_bundle_file_count: 0
+leak_scan_matches: none
+score_gold_controller: missing or not normalizable; require total, correct, and accuracy
+score_wrong_shifted_controller: missing or not normalizable; require total, correct, and accuracy
+
+commands:
+[
+  {
+    "args": [
+      "<local-home>/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/bin/python3.12",
+      "generator.py",
+      "--sample-count",
+      "30",
+      "--seed",
+      "20260516",
+      "--out-dir",
+      "."
+    ],
+    "returncode": 0,
+    "stdout_bytes": 56,
+    "stdout_sha256": "bbee3dd0e10209a16e63c68f68498cc2874c6076027054d0deb00e25047bcdc9",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "args": [
+      "<local-home>/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/bin/python3.12",
+      "generator.py",
+      "--sample-count",
+      "30",
+      "--seed",
+      "20260516",
+      "--out-dir",
+      "."
+    ],
+    "returncode": 0,
+    "stdout_bytes": 56,
+    "stdout_sha256": "bbee3dd0e10209a16e63c68f68498cc2874c6076027054d0deb00e25047bcdc9",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

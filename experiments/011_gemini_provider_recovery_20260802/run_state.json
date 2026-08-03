@@ -1,0 +1,36 @@
+{
+  "config": {
+    "creator_effort": "high",
+    "creator_models": [
+      "antigravity__gemini_3_6_flash_high__effort_high"
+    ],
+    "creator_timeout_seconds": 1800,
+    "dispatch_ceiling_overshoot_acknowledged": true,
+    "feedback_digest": null,
+    "generation_seed": 20260516,
+    "harness_digest": "7942b444dc5d25506843695aff29f2ae00f2eecebcb10e6a3247e35a974544c0",
+    "landscape_digest": "57a9d37f7c1f50323cc4e5c70c347475f538573da1cd1d67a6511f3d5d6b9db6",
+    "landscape_path": "benchmark_landscape/creator_prompt_landscape_pack.md",
+    "max_total_tokens": 5000000,
+    "panel_policy": "custom",
+    "pilot_summary_digest": "760db830ba6e43785dbad48a2c4816a1b54e932e79f23ef0c2b8f09b4eeb6750",
+    "pilot_summary_path": "experiments/001_three_model_grid_pilot/README.md",
+    "sample_count": 30,
+    "solver_effort": "high",
+    "solver_models": [
+      "antigravity__gemini_3_6_flash_high__effort_high"
+    ],
+    "solver_timeout_seconds": 1500,
+    "unmetered_cost_acknowledged": true,
+    "zero_telemetry_reservation": 5000000
+  },
+  "config_fingerprint": "39ba294beae853514c2da9119e71ae97902dc23080664d12a554b90323c192ff",
+  "schema_version": 1,
+  "source_snapshot": {
+    "digest": "7942b444dc5d25506843695aff29f2ae00f2eecebcb10e6a3247e35a974544c0",
+    "file_count": 9,
+    "manifest_path": "source_snapshot/manifest.json",
+    "path": "source_snapshot",
+    "schema_version": "benchbench.source_snapshot/v1"
+  }
+}

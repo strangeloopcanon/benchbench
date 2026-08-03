@@ -1,920 +1,633 @@
 #!/usr/bin/env python3
-"""Build canonical 6x6 result tables and SVG heatmaps for the docs."""
+"""Build the canonical BenchBench status from the adjudication registry.
+
+Raw experiment folders are historical evidence.  They are never a source of a
+current benchmark claim by themselves: promotion requires an explicit,
+digest-backed ``validated`` registry entry.
+"""
 
 from __future__ import annotations
 
-import re
+import hashlib
+import json
 import sys
 from html import escape
 from pathlib import Path
+from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT))
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
-from benchbench_model_backends import safe_name
-from benchbench_results import score_summary
+from benchbench_results import parse_score_data
+from benchbench_run_state import (
+    SOURCE_SNAPSHOT_SCHEMA,
+    config_fingerprint,
+    verify_source_snapshot,
+)
+from benchbench_schema import benchmark_package_digest, validate_artifact_tree
 
 
-LEGACY_MD = ROOT / "experiments" / "result_grids_6x6_20260523.md"
+REGISTRY_PATH = ROOT / "experiments" / "registry.v1.json"
 CANONICAL_DIR = ROOT / "experiments" / "canonical"
-CANONICAL_MD = CANONICAL_DIR / "README.md"
-CANONICAL_FIG_DIR = CANONICAL_DIR / "figures"
-
-SOLVERS = [
-    ("gpt-5.2", "GPT-5.2"),
-    ("gpt-5.4", "GPT-5.4"),
-    ("gpt-5.5", "GPT-5.5"),
-    ("gemini-3.1-pro", "Gemini 3.1 Pro"),
-    ("gemini-3.5-flash-high", "Gemini 3.5 Flash"),
-    ("opus", "Claude Opus"),
+LEGACY_MD = ROOT / "experiments" / "result_grids_6x6_20260523.md"
+FIGURE_NAMES = (
+    "canonical_status.svg",
+)
+FRONTIER_FOUR_POLICY = "benchbench.frontier-four/2026-08-01"
+FRONTIER_FOUR_INVOCATION_IDS = [
+    "codex__gpt_5_6_sol__effort_high",
+    "codex__gpt_5_6_terra__effort_xhigh",
+    "antigravity__gemini_3_6_flash_high__effort_high",
+    "cursor__claude_opus_5_thinking_high__effort_high",
 ]
-
-SOLVERS_CURRENT = [
-    ("gpt-5.2", "GPT-5.2"),
-    ("gpt-5.4", "GPT-5.4"),
-    ("gpt-5.5", "GPT-5.5"),
-    ("gemini-3.1-pro", "Gemini 3.1 Pro"),
-    ("gemini-3.5-flash-high", "Gemini 3.5 Flash"),
-    ("claude-opus", "Claude Opus"),
-]
+ALLOWED_OUTCOMES = {
+    "validated",
+    "historical_noncanonical",
+    "rejected",
+    "invalid",
+    "infrastructure_incomplete",
+}
 
 
-def candidate_score(candidate_dir: Path, solver_id: str) -> str:
-    score = score_summary(candidate_dir / f"score_solver_{safe_name(solver_id)}.json")
-    if score is None:
-        return "NA"
-    return f"{score['correct']}/{score['total']}"
+def sha256_file(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def build_grid(
-    base_run: str,
-    claude_run: str | None,
-    creators: list[tuple[str, str, str]],
-    skip: dict[tuple[str, str], str] | None = None,
-    solvers: list[tuple[str, str]] | None = None,
-) -> list[list[str]]:
-    skip = skip or {}
-    solvers = solvers or SOLVERS
-    rows: list[list[str]] = []
-    base = ROOT / base_run / "run"
-    claude = ROOT / claude_run / "run" if claude_run else None
-    for creator_id, creator_label, benchmark in creators:
-        row = [creator_label, benchmark]
-        candidate_dir = claude / "candidate_created_by_opus" if creator_id == "opus" and claude else base / f"candidate_created_by_{safe_name(creator_id)}"
-        for solver_id, _solver_label in solvers:
-            row.append(skip.get((creator_id, solver_id), candidate_score(candidate_dir, solver_id)))
-        rows.append(row)
+def _evidence_path(root: Path, item: dict[str, str]) -> Path:
+    if set(item) != {"path", "sha256"}:
+        raise ValueError("evidence entries must contain exactly path and sha256")
+    resolved_root = root.resolve()
+    unresolved = root / item["path"]
+    cursor = unresolved
+    while cursor != root and cursor.is_relative_to(root):
+        if cursor.is_symlink():
+            raise ValueError(f"evidence path contains a symbolic link: {item['path']}")
+        cursor = cursor.parent
+    path = unresolved.resolve()
+    if not path.is_relative_to(resolved_root):
+        raise ValueError(f"evidence escapes repository root: {item['path']}")
+    return path
+
+
+def _validate_evidence(root: Path, evidence: list[dict[str, str]]) -> None:
+    for item in evidence:
+        path = _evidence_path(root, item)
+        if not path.is_file():
+            raise ValueError(f"missing adjudication evidence: {item['path']}")
+        if path.stat().st_nlink != 1:
+            raise ValueError(f"adjudication evidence is hard-linked: {item['path']}")
+        if sha256_file(path) != item["sha256"]:
+            raise ValueError(f"adjudication evidence digest changed: {item['path']}")
+
+
+def _validated_package(root: Path, candidate: dict[str, Any]) -> tuple[Path, str]:
+    package = candidate.get("benchmark_package")
+    if not isinstance(package, dict) or set(package) != {"path", "sha256"}:
+        raise ValueError(f"validated candidate lacks a digest-backed benchmark package: {candidate.get('id')}")
+    package_path = (root / str(package["path"])).resolve()
+    if not package_path.is_relative_to(root.resolve()) or not package_path.is_dir():
+        raise ValueError(f"validated candidate package is missing or outside the repository: {candidate.get('id')}")
+    validate_artifact_tree(package_path)
+    package_digest = benchmark_package_digest(package_path)
+    if package_digest != package["sha256"]:
+        raise ValueError(f"validated candidate package digest changed: {candidate.get('id')}")
+    return package_path, package_digest
+
+
+def _validate_mechanical_gate(
+    root: Path,
+    candidate: dict[str, Any],
+    package_digest: str,
+) -> None:
+    mechanical = candidate.get("mechanical_validation")
+    evidence = mechanical.get("evidence") if isinstance(mechanical, dict) else None
+    if mechanical is None or mechanical.get("valid") is not True or not isinstance(evidence, list):
+        raise ValueError(f"validated candidate lacks a passing mechanical gate: {candidate.get('id')}")
+    _validate_evidence(root, evidence)
+    records: list[dict[str, Any]] = []
+    report_digests: set[str] = set()
+    for item in evidence:
+        path = _evidence_path(root, item)
+        if path.suffix == ".json":
+            try:
+                value = json.loads(path.read_text(encoding="utf-8"))
+            except json.JSONDecodeError:
+                continue
+            if value.get("schema_version") == "benchbench.validation/v1":
+                records.append(value)
+        else:
+            report_digests.add(item["sha256"])
+    if len(records) != 1:
+        raise ValueError(f"validated candidate lacks one structured mechanical record: {candidate.get('id')}")
+    record = records[0]
+    if (
+        record.get("valid") is not True
+        or record.get("candidate_digest") != package_digest
+        or record.get("deterministic") is not True
+        or record.get("frozen_package_match") is not True
+        or record.get("leak_match_count") != 0
+        or record.get("report_sha256") not in report_digests
+    ):
+        raise ValueError(f"validated candidate mechanical record is not bound to the package: {candidate.get('id')}")
+
+
+def _declared_solver_panel(
+    root: Path,
+    candidate: dict[str, Any],
+) -> tuple[list[str], Path, list[dict[str, Any]]]:
+    evidence = candidate.get("run_state_evidence")
+    if not isinstance(evidence, dict):
+        raise ValueError(f"validated candidate lacks run-state evidence: {candidate.get('id')}")
+    _validate_evidence(root, [evidence])
+    try:
+        state = json.loads(_evidence_path(root, evidence).read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        raise ValueError(f"validated candidate has invalid run-state evidence: {candidate.get('id')}") from exc
+    config = state.get("config")
+    expected = config.get("solver_models") if isinstance(config, dict) else None
+    if (
+        state.get("schema_version") != 1
+        or not isinstance(config, dict)
+        or state.get("config_fingerprint") != config_fingerprint(config)
+        or not isinstance(expected, list)
+        or len(expected) < 2
+        or not all(isinstance(identity, str) and "__effort_" in identity for identity in expected)
+        or len(expected) != len(set(expected))
+    ):
+        raise ValueError(f"validated candidate has no complete declared solver panel: {candidate.get('id')}")
+    if candidate.get("experiment_id") == "010" and (
+        config.get("panel_policy") != FRONTIER_FOUR_POLICY
+        or config.get("creator_models") != FRONTIER_FOUR_INVOCATION_IDS
+        or expected != FRONTIER_FOUR_INVOCATION_IDS
+    ):
+        raise ValueError(
+            f"Experiment 010 candidate does not use the exact frontier-four panel: {candidate.get('id')}"
+        )
+    state_path = _evidence_path(root, evidence)
+    manifest_evidence = candidate.get("run_manifest_evidence")
+    if not isinstance(manifest_evidence, dict):
+        raise ValueError(f"validated candidate lacks run-manifest evidence: {candidate.get('id')}")
+    _validate_evidence(root, [manifest_evidence])
+    manifest_path = _evidence_path(root, manifest_evidence)
+    if state_path.name != "run_state.json" or manifest_path.name != "manifest.json":
+        raise ValueError(f"validated candidate has noncanonical run evidence paths: {candidate.get('id')}")
+    if state_path.parent != manifest_path.parent:
+        raise ValueError(f"validated candidate run state and manifest are from different runs: {candidate.get('id')}")
+    run_root = state_path.parent
+    source_snapshot = state.get("source_snapshot")
+    source_snapshot_digest = (
+        source_snapshot.get("digest") if isinstance(source_snapshot, dict) else None
+    )
+    if (
+        not isinstance(source_snapshot, dict)
+        or source_snapshot.get("schema_version") != SOURCE_SNAPSHOT_SCHEMA
+        or source_snapshot.get("path") != "source_snapshot"
+        or source_snapshot.get("manifest_path") != "source_snapshot/manifest.json"
+        or not isinstance(source_snapshot_digest, str)
+        or len(source_snapshot_digest) != 64
+        or not isinstance(source_snapshot.get("file_count"), int)
+        or isinstance(source_snapshot.get("file_count"), bool)
+    ):
+        raise ValueError(
+            f"validated candidate lacks a bound source snapshot: {candidate.get('id')}"
+        )
+    try:
+        verified_snapshot = verify_source_snapshot(
+            run_root,
+            expected_digest=source_snapshot_digest,
+        )
+    except (OSError, json.JSONDecodeError, TypeError, ValueError) as exc:
+        raise ValueError(
+            f"validated candidate has an invalid source snapshot: {candidate.get('id')}"
+        ) from exc
+    if (
+        verified_snapshot.get("schema_version") != source_snapshot.get("schema_version")
+        or verified_snapshot.get("digest") != source_snapshot_digest
+        or len(verified_snapshot.get("files", [])) != source_snapshot.get("file_count")
+    ):
+        raise ValueError(
+            f"validated candidate source snapshot conflicts with run state: {candidate.get('id')}"
+        )
+    if config.get("harness_digest") != source_snapshot_digest:
+        raise ValueError(
+            f"validated candidate source snapshot does not match harness digest: {candidate.get('id')}"
+        )
+    try:
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        raise ValueError(f"validated candidate has invalid run-manifest evidence: {candidate.get('id')}") from exc
+    if not isinstance(manifest, list) or not all(isinstance(item, dict) for item in manifest):
+        raise ValueError(f"validated candidate has invalid run-manifest evidence: {candidate.get('id')}")
+    return expected, run_root, manifest
+
+
+def _expected_solver_result_dir(package_path: Path) -> Path:
+    if package_path.name != "artifact":
+        raise ValueError("validated candidate package must use the immutable artifact layout")
+    if package_path.parent.name.startswith("attempt_"):
+        return package_path.parent.parent / "solver_results"
+    return package_path.parent / "solver_results"
+
+
+def _validate_successful_panel(
+    root: Path,
+    candidate: dict[str, Any],
+    package_path: Path,
+    package_digest: str,
+    expected_identities: list[str],
+    run_root: Path,
+    manifest: list[dict[str, Any]],
+) -> None:
+    panel = candidate.get("solver_panel")
+    if not isinstance(panel, list) or not panel:
+        raise ValueError(f"validated candidate lacks a solver panel: {candidate.get('id')}")
+    identities: set[str] = set()
+    score_paths: set[Path] = set()
+    prediction_paths: set[Path] = set()
+    if not package_path.is_relative_to(run_root):
+        raise ValueError(f"validated candidate package is outside its declared run: {candidate.get('id')}")
+    result_dir = _expected_solver_result_dir(package_path).resolve()
+    for cell in panel:
+        if not isinstance(cell, dict) or cell.get("state") != "success":
+            raise ValueError(f"validated candidate has an incomplete solver panel: {candidate.get('id')}")
+        identity = cell.get("identity")
+        if not isinstance(identity, str) or "__effort_" not in identity or identity in identities:
+            raise ValueError(f"validated candidate has an invalid solver identity: {candidate.get('id')}")
+        identities.add(identity)
+        score_evidence = cell.get("score_evidence")
+        prediction_evidence = cell.get("prediction_evidence")
+        if not isinstance(score_evidence, dict) or not isinstance(prediction_evidence, dict):
+            raise ValueError(f"validated candidate has undigested solver evidence: {candidate.get('id')}")
+        _validate_evidence(root, [score_evidence, prediction_evidence])
+        score_path = _evidence_path(root, score_evidence)
+        prediction_path = _evidence_path(root, prediction_evidence)
+        expected_score_path = (result_dir / f"score_solver_{identity}.json").resolve()
+        expected_prediction_path = (result_dir / f"predictions_solver_{identity}.jsonl").resolve()
+        if score_path != expected_score_path or prediction_path != expected_prediction_path:
+            raise ValueError(f"validated candidate solver evidence is not controller-owned: {candidate.get('id')}")
+        if score_path.is_relative_to(package_path) or prediction_path.is_relative_to(package_path):
+            raise ValueError(f"validated candidate solver evidence is inside the benchmark package: {candidate.get('id')}")
+        if score_path in score_paths or prediction_path in prediction_paths:
+            raise ValueError(f"validated candidate reuses solver evidence: {candidate.get('id')}")
+        score_paths.add(score_path)
+        prediction_paths.add(prediction_path)
+        try:
+            raw_score = json.loads(score_path.read_text(encoding="utf-8"))
+            parsed = parse_score_data(raw_score, allow_legacy=False)
+        except Exception as exc:
+            raise ValueError(f"validated candidate has an invalid normalized score: {candidate.get('id')}") from exc
+        declared_score = cell.get("score")
+        if not isinstance(declared_score, dict) or parsed != declared_score:
+            raise ValueError(f"validated candidate score conflicts with evidence: {candidate.get('id')}")
+        if raw_score.get("candidate_digest") != package_digest:
+            raise ValueError(f"validated candidate score has the wrong package digest: {candidate.get('id')}")
+        if raw_score.get("prediction_digest") != sha256_file(prediction_path):
+            raise ValueError(f"validated candidate score has the wrong prediction digest: {candidate.get('id')}")
+        gold_path = package_path / "gold_private_sample.jsonl"
+        if not gold_path.is_file() or raw_score.get("gold_digest") != sha256_file(gold_path):
+            raise ValueError(f"validated candidate score has the wrong gold digest: {candidate.get('id')}")
+        if raw_score.get("invocation_id") != identity:
+            raise ValueError(f"validated candidate score has the wrong invocation identity: {candidate.get('id')}")
+        matching_manifest_cells = [
+            item
+            for item in manifest
+            if item.get("solver_artifact_id") == identity
+            and item.get("cell_state") == "success"
+            and item.get("phase") in {"solver", "solver_extension"}
+            and Path(str(item.get("score_path", ""))).resolve() == score_path
+            and Path(str(item.get("predictions_path", ""))).resolve() == prediction_path
+        ]
+        if len(matching_manifest_cells) != 1:
+            raise ValueError(f"validated candidate solver evidence is not bound to one manifest cell: {candidate.get('id')}")
+        manifest_cell = matching_manifest_cells[0]
+        if (
+            manifest_cell.get("score_summary") != declared_score
+            or manifest_cell.get("candidate_digest") != package_digest
+            or manifest_cell.get("gold_digest") != raw_score.get("gold_digest")
+            or manifest_cell.get("prediction_digest") != raw_score.get("prediction_digest")
+        ):
+            raise ValueError(f"validated candidate manifest cell conflicts with solver evidence: {candidate.get('id')}")
+        snapshot = manifest_cell.get("candidate_snapshot")
+        if snapshot is not None and Path(str(snapshot)).resolve() != package_path:
+            raise ValueError(f"validated candidate manifest cell points to a different package: {candidate.get('id')}")
+    if identities != set(expected_identities) or len(panel) != len(expected_identities):
+        raise ValueError(f"validated candidate has an incomplete solver panel: {candidate.get('id')}")
+
+
+def validate_registry(registry: dict[str, Any], root: Path = ROOT) -> None:
+    """Fail closed on malformed, stale, or implicitly promoted registry data."""
+    if registry.get("schema_version") != "benchbench.experiment-registry/v1":
+        raise ValueError("unsupported experiment registry schema")
+    declared_status = registry.get("canonical", {}).get("status")
+    if declared_status not in {"no_validated_incumbent", "validated_incumbent"}:
+        raise ValueError("registry must state a supported canonical status explicitly")
+    experiment_entries = registry.get("experiments", [])
+    experiment_id_list = [entry.get("id") for entry in experiment_entries]
+    experiment_ids = set(experiment_id_list)
+    if not experiment_ids:
+        raise ValueError("registry has no experiments")
+    if len(experiment_ids) != len(experiment_id_list):
+        raise ValueError("registry contains duplicate experiment ids")
+    candidate_ids = [entry.get("id") for entry in registry.get("candidates", [])]
+    if len(candidate_ids) != len(set(candidate_ids)):
+        raise ValueError("registry contains duplicate candidate ids")
+    historical_comparison = registry.get("historical_comparison")
+    if historical_comparison is not None:
+        if not isinstance(historical_comparison, dict) or set(historical_comparison) != {
+            "leader_candidate_id",
+            "rank",
+            "verdict",
+            "basis",
+            "qualification",
+        }:
+            raise ValueError("registry has a malformed historical comparison")
+        if (
+            historical_comparison.get("leader_candidate_id") not in candidate_ids
+            or historical_comparison.get("rank") != 1
+            or historical_comparison.get("verdict") != "win_over_challengers"
+            or not isinstance(historical_comparison.get("basis"), str)
+            or not isinstance(historical_comparison.get("qualification"), str)
+        ):
+            raise ValueError("registry has an invalid historical comparison")
+    for entry in registry["experiments"]:
+        if entry.get("outcome") not in ALLOWED_OUTCOMES:
+            raise ValueError(f"unknown experiment outcome: {entry.get('id')}")
+        _validate_evidence(root, entry.get("evidence", []))
+        if entry.get("include_in_landscape") is True:
+            if entry.get("outcome") not in {"historical_noncanonical", "validated"}:
+                raise ValueError(f"invalid experiment included in landscape: {entry.get('id')}")
+            pointer = entry.get("landscape_evidence")
+            if not isinstance(pointer, dict):
+                raise ValueError(f"landscape experiment lacks evidence: {entry.get('id')}")
+            _validate_evidence(root, [pointer])
+    for candidate in registry.get("candidates", []):
+        if candidate.get("experiment_id") not in experiment_ids:
+            raise ValueError(f"candidate references unknown experiment: {candidate.get('id')}")
+        outcome = candidate.get("outcome")
+        if outcome not in ALLOWED_OUTCOMES:
+            raise ValueError(f"unknown candidate outcome: {candidate.get('id')}")
+        if candidate.get("canonical_eligible"):
+            if outcome != "validated":
+                raise ValueError(f"ineligible candidate promoted: {candidate.get('id')}")
+            if not candidate.get("evidence"):
+                raise ValueError(f"validated candidate lacks evidence: {candidate.get('id')}")
+            package_path, package_digest = _validated_package(root, candidate)
+            _validate_mechanical_gate(root, candidate, package_digest)
+            expected_panel, run_root, manifest = _declared_solver_panel(root, candidate)
+            _validate_successful_panel(
+                root,
+                candidate,
+                package_path,
+                package_digest,
+                expected_panel,
+                run_root,
+                manifest,
+            )
+        _validate_evidence(root, candidate.get("evidence", []))
+    derived_status = (
+        "validated_incumbent"
+        if any(candidate.get("canonical_eligible") for candidate in registry.get("candidates", []))
+        else "no_validated_incumbent"
+    )
+    if declared_status != derived_status:
+        raise ValueError(
+            f"canonical status {declared_status!r} conflicts with derived status {derived_status!r}"
+        )
+
+
+def load_registry(registry_path: Path = REGISTRY_PATH) -> dict[str, Any]:
+    """Load and fail closed on malformed or stale canonical registry data."""
+    registry = json.loads(registry_path.read_text(encoding="utf-8"))
+    validate_registry(registry, registry_path.parents[1])
+    return registry
+
+
+def canonical_state(registry: dict[str, Any]) -> dict[str, Any]:
+    eligible = [c for c in registry.get("candidates", []) if c.get("canonical_eligible")]
+    if eligible:
+        return {
+            "status": "validated_incumbent",
+            "message": "Every listed incumbent passed the registry's mechanical, adjudication, and complete-panel gates.",
+            "incumbents": [
+                {"id": c["id"], "name": c["name"], "creator": c["creator"]}
+                for c in eligible
+            ],
+        }
+    return {
+        "status": "no_validated_incumbent",
+        "message": "No benchmark has passed the current validity and infrastructure gates.",
+        "incumbents": [],
+    }
+
+
+def public_history(registry: dict[str, Any]) -> list[dict[str, Any]]:
+    """Return the intentionally visible noncanonical findings in registry order."""
+    rows: list[dict[str, Any]] = []
+    for candidate in registry.get("candidates", []):
+        if candidate.get("canonical_eligible"):
+            continue
+        rows.append(
+            {
+                "id": candidate["id"],
+                "experiment_id": candidate["experiment_id"],
+                "name": candidate["name"],
+                "creator": candidate["creator"],
+                "outcome": candidate["outcome"],
+                "reason": candidate["reason"],
+                "historical_scores": candidate.get("historical_scores", []),
+                "historical_comparison": candidate.get("historical_comparison"),
+                "cell_states": candidate.get("cell_states", []),
+                "required_next_step": candidate["required_next_step"],
+            }
+        )
     return rows
 
 
-def score_value(cell: str) -> int | None:
-    match = re.fullmatch(r"(\d+)/30", cell)
-    return int(match.group(1)) if match else None
-
-
-def cell_color(cell: str) -> str:
-    value = score_value(cell)
-    if value is None:
-        return "#f6f6f6"
-    if value == 0:
-        return "#d9d9d9"
-    if value <= 14:
-        return "#8ecae6"
-    if value < 30:
-        return "#f2c078"
-    return "#d96b6b"
-
-
-def text_color(cell: str) -> str:
-    value = score_value(cell)
-    return "#111111" if value is None or value < 30 else "#ffffff"
-
-
-def wrap_words(text: str, limit: int) -> list[str]:
-    lines: list[str] = []
-    current: list[str] = []
-    for word in text.split():
-        candidate = " ".join(current + [word])
-        if current and len(candidate) > limit:
-            lines.append(" ".join(current))
-            current = [word]
-        else:
-            current.append(word)
-    if current:
-        lines.append(" ".join(current))
-    return lines or [""]
-
-
-def score_values(row: list[str]) -> list[int]:
-    return [value for cell in row[2:] if (value := score_value(cell)) is not None]
-
-
-def row_stats(row: list[str]) -> dict[str, float | int | None]:
-    values = score_values(row)
-    if not values:
-        return {"mean": None, "min": None, "max": None, "spread": None, "low": 0, "zero": 0, "perfect": 0, "high": 0}
-    return {
-        "mean": sum(values) / len(values),
-        "min": min(values),
-        "max": max(values),
-        "spread": max(values) - min(values),
-        "low": sum(1 for value in values if 1 <= value <= 14),
-        "zero": sum(1 for value in values if value == 0),
-        "perfect": sum(1 for value in values if value == 30),
-        "high": sum(1 for value in values if value >= 23),
-    }
-
-
-def completion_rate(values: list[int]) -> float:
-    return sum(values) / (30 * len(values)) if values else 0.0
-
-
-def benchmark_metric(
-    row: list[str],
-    creator: str,
-    read: str,
-    kind: str,
-    label: str | None = None,
-    label_dx: int = 12,
-    label_dy: int = -8,
-    show_label: bool = True,
-) -> dict[str, str | float | int]:
-    values = score_values(row)
-    stats = row_stats(row)
-    attempts = len(values)
-    return {
-        "benchmark": row[1],
-        "label": label or row[1],
-        "creator": creator,
-        "completion": completion_rate(values),
-        "completion_label": f"{completion_rate(values) * 100:.0f}%",
-        "useful": int(stats["low"] or 0),
-        "useful_label": f"{int(stats['low'] or 0)}/{attempts}",
-        "zero": int(stats["zero"] or 0),
-        "zero_label": f"{int(stats['zero'] or 0)}/{attempts}",
-        "high": int(stats["high"] or 0),
-        "read": read,
-        "kind": kind,
-        "label_dx": label_dx,
-        "label_dy": label_dy,
-        "show_label": int(show_label),
-    }
-
-
-def best_solver_labels(row: list[str], solvers: list[tuple[str, str]]) -> str:
-    values = [score_value(cell) for cell in row[2:]]
-    numeric = [value for value in values if value is not None]
-    if not numeric:
-        return "NA"
-    best = max(numeric)
-    labels = [label for value, (_id, label) in zip(values, solvers) if value == best]
-    return ", ".join(labels) + f" ({best}/30)"
-
-
-def weakest_solver_labels(row: list[str], solvers: list[tuple[str, str]]) -> str:
-    values = [score_value(cell) for cell in row[2:]]
-    numeric = [value for value in values if value is not None]
-    if not numeric:
-        return "NA"
-    weakest = min(numeric)
-    labels = [label for value, (_id, label) in zip(values, solvers) if value == weakest]
-    return ", ".join(labels) + f" ({weakest}/30)"
-
-
-def solver_leaderboard(rows: list[list[str]], solvers: list[tuple[str, str]]) -> list[dict[str, str]]:
-    leaderboard: list[dict[str, str]] = []
-    for idx, (_solver_id, solver_label) in enumerate(solvers):
-        values = [score_value(row[2 + idx]) for row in rows]
-        numeric = [value for value in values if value is not None]
-        if not numeric:
-            continue
-        leaderboard.append(
-            {
-                "solver": solver_label,
-                "total": str(sum(numeric)),
-                "average": f"{sum(numeric) / len(numeric):.1f}",
-                "perfect": str(sum(1 for value in numeric if value == 30)),
-                "low": str(sum(1 for value in numeric if 1 <= value <= 14)),
-                "zero": str(sum(1 for value in numeric if value == 0)),
-            }
-        )
-    return sorted(leaderboard, key=lambda row: (-int(row["total"]), row["solver"]))
-
-
-def markdown_dict_table(headers: list[str], rows: list[dict[str, str]]) -> str:
+def _table(headers: list[str], rows: list[list[str]]) -> str:
     lines = ["| " + " | ".join(headers) + " |", "|" + "|".join("---" for _ in headers) + "|"]
-    for row in rows:
-        lines.append("| " + " | ".join(row[header] for header in headers) + " |")
+    lines.extend("| " + " | ".join(row) + " |" for row in rows)
     return "\n".join(lines)
 
 
-def write_creator_trajectory(path: Path, rows: list[dict[str, str]]) -> None:
-    round_headers = ["Round 1", "Round 2", "Round 3"]
-    model_w = 152
-    cell_w = 196
-    row_h = 54
-    header_h = 104
-    width = model_w + cell_w * len(round_headers) + 40
-    height = header_h + row_h * len(rows) + 62
-    colors = {
-        "incumbent": "#8ecae6",
-        "separator": "#f2c078",
-        "too_easy": "#f7b7a3",
-        "saturated": "#d96b6b",
-        "artifact": "#d9d9d9",
-    }
-    parts = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
-        "<style>text{font-family:Arial,Helvetica,sans-serif}.small{font-size:12px;fill:#444}.head{font-size:12px;font-weight:700;fill:#333}.model{font-size:13px;font-weight:700;fill:#111}.cell{font-size:12px;fill:#111}</style>",
-        '<rect width="100%" height="100%" fill="#ffffff"/>',
-        '<text x="18" y="28" font-size="20" font-weight="700" fill="#111">Creator trajectory across canonical rounds</text>',
-        '<text x="18" y="50" class="small">Creator quality is not solver score. Good creator rows stay valid, nonzero, and unsolved.</text>',
-        '<text x="18" y="72" class="small">Blue = incumbent shape; amber = separates solvers but too easy at the top; red = too easy; gray = scorer or solvability problem.</text>',
-    ]
-    y0 = header_h
-    parts.append(f'<text x="18" y="{y0 - 12}" class="head">creator</text>')
-    for idx, header in enumerate(round_headers):
-        x = model_w + idx * cell_w + cell_w / 2
-        parts.append(f'<text x="{x}" y="{y0 - 12}" class="head" text-anchor="middle">{header}</text>')
-    for r, row in enumerate(rows):
-        y = y0 + r * row_h
-        parts.append(f'<line x1="18" x2="{width - 18}" y1="{y}" y2="{y}" stroke="#eeeeee"/>')
-        parts.append(f'<text x="18" y="{y + 31}" class="model">{escape(row["creator"])}</text>')
-        for c, key in enumerate(["round1", "round2", "round3"]):
-            x = model_w + c * cell_w
-            fill = colors[row[f"{key}_kind"]]
-            parts.append(f'<rect x="{x + 6}" y="{y + 7}" width="{cell_w - 12}" height="{row_h - 14}" rx="2" fill="{fill}"/>')
-            for line_idx, text in enumerate(wrap_words(row[key], 24)[:2]):
-                parts.append(f'<text x="{x + 14}" y="{y + 25 + line_idx * 14}" class="cell">{escape(text)}</text>')
-    parts.append("</svg>")
-    path.write_text("\n".join(parts) + "\n", encoding="utf-8")
-
-
-def write_quality_map(path: Path, rows: list[dict[str, str | float | int]]) -> None:
-    width = 1080
-    height = 520
-    plot_x0 = 94
-    plot_x1 = 860
-    plot_y0 = 400
-    plot_y1 = 120
-    colors = {
-        "best": "#2f80b7",
-        "diagnostic": "#d8902f",
-        "artifact": "#9a9a9a",
-        "easy": "#c84f4f",
-    }
-
-    def x_for(completion: float) -> float:
-        return plot_x0 + completion * (plot_x1 - plot_x0)
-
-    def y_for(useful: int) -> float:
-        return plot_y0 - (useful / 6) * (plot_y0 - plot_y1)
-
-    parts = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
-        "<style>text{font-family:Arial,Helvetica,sans-serif}.small{font-size:12px;fill:#444}.axis{font-size:12px;fill:#333}.label{font-size:12px;fill:#111}.title{font-size:20px;font-weight:700;fill:#111}</style>",
-        '<rect width="100%" height="100%" fill="#ffffff"/>',
-        '<text x="18" y="30" class="title">Benchmark quality map</text>',
-        '<text x="18" y="54" class="small">Completion alone is a trap: broken all-zero tasks also score low.</text>',
-        '<text x="18" y="72" class="small">The useful shape is moderate completion with many low-nonzero solver cells.</text>',
-        f'<rect x="{x_for(0.18)}" y="{y_for(6)}" width="{x_for(0.50) - x_for(0.18)}" height="{y_for(4) - y_for(6)}" fill="#e8f4fb" stroke="#b7dbea"/>',
-        f'<text x="{x_for(0.19)}" y="{y_for(5.65)}" class="small">useful hard zone</text>',
-    ]
-
-    for tick in [0, 25, 50, 75, 100]:
-        x = plot_x0 + (tick / 100) * (plot_x1 - plot_x0)
-        parts.append(f'<line x1="{x}" x2="{x}" y1="{plot_y0}" y2="{plot_y1}" stroke="#eeeeee"/>')
-        parts.append(f'<text x="{x}" y="{plot_y0 + 24}" class="axis" text-anchor="middle">{tick}%</text>')
-    for useful in range(0, 7):
-        y = y_for(useful)
-        parts.append(f'<line x1="{plot_x0}" x2="{plot_x1}" y1="{y}" y2="{y}" stroke="#eeeeee"/>')
-        parts.append(f'<text x="{plot_x0 - 16}" y="{y + 4}" class="axis" text-anchor="end">{useful}</text>')
-
-    parts.append(f'<line x1="{plot_x0}" x2="{plot_x1}" y1="{plot_y0}" y2="{plot_y0}" stroke="#333"/>')
-    parts.append(f'<line x1="{plot_x0}" x2="{plot_x0}" y1="{plot_y0}" y2="{plot_y1}" stroke="#333"/>')
-    parts.append(f'<text x="{(plot_x0 + plot_x1) / 2}" y="{height - 42}" class="axis" text-anchor="middle">solver completion rate: average exact-match score across solvers</text>')
-    parts.append(f'<text x="22" y="{(plot_y0 + plot_y1) / 2}" class="axis" transform="rotate(-90 22 {(plot_y0 + plot_y1) / 2})" text-anchor="middle">solvers in useful 1-14/30 band</text>')
-
-    for row in rows:
-        x = x_for(float(row["completion"]))
-        y = y_for(int(row["useful"]))
-        color = colors[str(row["kind"])]
-        parts.append(f'<circle cx="{x}" cy="{y}" r="6" fill="{color}" stroke="#111" stroke-width="0.8"/>')
-        if not int(row["show_label"]):
-            continue
-        label_x = x + int(row["label_dx"])
-        label_y = y + int(row["label_dy"])
-        label = f'{row["label"]} ({row["completion_label"]}, {row["useful_label"]})'
-        for line_idx, text in enumerate(wrap_words(str(label), 34)[:2]):
-            parts.append(f'<text x="{label_x}" y="{label_y + line_idx * 14}" class="label">{escape(text)}</text>')
-
-    legend_y = height - 20
-    legend = [("best so far", colors["best"]), ("diagnostic", colors["diagnostic"]), ("artifact/zero-wall", colors["artifact"]), ("too easy", colors["easy"])]
-    x = 18
-    for label, color in legend:
-        parts.append(f'<circle cx="{x + 6}" cy="{legend_y - 4}" r="5" fill="{color}" stroke="#111" stroke-width="0.8"/>')
-        parts.append(f'<text x="{x + 18}" y="{legend_y}" class="small">{escape(label)}</text>')
-        x += 140
-    parts.append("</svg>")
-    path.write_text("\n".join(parts) + "\n", encoding="utf-8")
-
-
-def best_creator_signal_row(rows: list[list[str]]) -> tuple[list[str], dict[str, float | int | None]]:
-    """Pick the strongest creator row without rewarding zero walls."""
-
-    def key(row: list[str]) -> tuple[int, int, int, float]:
-        stats = row_stats(row)
-        return (
-            int(stats["low"] or 0),
-            -int(stats["zero"] or 0),
-            -int(stats["high"] or 0),
-            -float(stats["mean"] or 0),
-        )
-
-    best = max(rows, key=key)
-    return best, row_stats(best)
-
-
-def write_creator_solver_2x2(path: Path, rows: list[dict[str, str | float | int]]) -> None:
-    width = 1120
-    height = 560
-    plot_x0 = 92
-    plot_x1 = 715
-    plot_y0 = 420
-    plot_y1 = 98
-    x_split = 22.0
-    y_split = 3.0
-
-    def x_for(value: float) -> float:
-        return plot_x0 + (value / 30.0) * (plot_x1 - plot_x0)
-
-    def y_for(value: float) -> float:
-        return plot_y0 - (value / 6.0) * (plot_y0 - plot_y1)
-
-    colors = {
-        "leader": "#2f80b7",
-        "some": "#d8902f",
-        "none": "#9a9a9a",
-    }
-
-    parts = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
-        "<style>text{font-family:Arial,Helvetica,sans-serif}.small{font-size:12px;fill:#444}.axis{font-size:12px;fill:#333}.label{font-size:12px;fill:#111}.title{font-size:20px;font-weight:700;fill:#111}.quad{font-size:12px;fill:#777}</style>",
-        '<rect width="100%" height="100%" fill="#ffffff"/>',
-        '<text x="18" y="30" class="title">Creator signal vs solver strength</text>',
-        '<text x="18" y="54" class="small">Right = higher Round 3 solver score. Up = more solvers in the useful 1-14/30 band on that model&apos;s best row.</text>',
-        '<text x="18" y="72" class="small">Zero-heavy rows do not count as creator signal; they need a solvability or scorer audit first.</text>',
-    ]
-
-    # Quadrant guides.
-    parts.append(f'<line x1="{x_for(x_split)}" x2="{x_for(x_split)}" y1="{plot_y0}" y2="{plot_y1}" stroke="#dddddd"/>')
-    parts.append(f'<line x1="{plot_x0}" x2="{plot_x1}" y1="{y_for(y_split)}" y2="{y_for(y_split)}" stroke="#dddddd"/>')
-    parts.append(f'<text x="{plot_x0 + 10}" y="{plot_y1 + 22}" class="quad">creator signal</text>')
-    parts.append(f'<text x="{x_for(x_split) + 10}" y="{plot_y1 + 22}" class="quad">strong on both</text>')
-    parts.append(f'<text x="{plot_x0 + 10}" y="{plot_y0 - 12}" class="quad">low on both</text>')
-
-    for tick in [0, 10, 20, 30]:
-        x = x_for(tick)
-        parts.append(f'<line x1="{x}" x2="{x}" y1="{plot_y0}" y2="{plot_y1}" stroke="#f0f0f0"/>')
-        parts.append(f'<text x="{x}" y="{plot_y0 + 24}" class="axis" text-anchor="middle">{tick}</text>')
-    for tick in [0, 3, 6]:
-        y = y_for(tick)
-        parts.append(f'<line x1="{plot_x0}" x2="{plot_x1}" y1="{y}" y2="{y}" stroke="#f0f0f0"/>')
-        parts.append(f'<text x="{plot_x0 - 16}" y="{y + 4}" class="axis" text-anchor="end">{tick}</text>')
-
-    parts.append(f'<line x1="{plot_x0}" x2="{plot_x1}" y1="{plot_y0}" y2="{plot_y0}" stroke="#333"/>')
-    parts.append(f'<line x1="{plot_x0}" x2="{plot_x0}" y1="{plot_y0}" y2="{plot_y1}" stroke="#333"/>')
-    parts.append(f'<text x="{(plot_x0 + plot_x1) / 2}" y="{height - 66}" class="axis" text-anchor="middle">solver strength: Round 3 average exact-match score / 30</text>')
-    parts.append(f'<text x="24" y="{(plot_y0 + plot_y1) / 2}" class="axis" transform="rotate(-90 24 {(plot_y0 + plot_y1) / 2})" text-anchor="middle">creator signal: best row cells in 1-14/30 band / 6</text>')
-
-    for row in rows:
-        x = x_for(float(row["solver_average"]))
-        y = y_for(float(row["creator_signal"]))
-        color = colors[str(row["kind"])]
-        parts.append(f'<circle cx="{x}" cy="{y}" r="6" fill="{color}" stroke="#111" stroke-width="0.8"/>')
-        label_x = x + int(row["label_dx"])
-        label_y = y + int(row["label_dy"])
-        label = str(row["plot_label"])
-        parts.append(f'<text x="{label_x}" y="{label_y}" class="label">{escape(label)}</text>')
-
-    note_x = 760
-    note_y = 122
-    notes = ["Values", "model | solver avg | creator signal | best row"]
-    for row in rows:
-        notes.append(
-            f'{row["model"]} | {float(row["solver_average"]):.1f}/30 | '
-            f'{int(row["creator_signal"])}/6 | {row["best_row_short"]}'
-        )
-    notes += [
-        "",
-        "Zeros are not wins here.",
-        "Cross-Document was a scorer-contract failure.",
-        "Service Credit is still a review case.",
-        "String Rewriting had a scorer type artifact.",
-    ]
-    for idx, text in enumerate(notes):
-        klass = "axis" if idx in (0, 1) else "small"
-        weight = ' font-weight="700"' if idx == 0 else ""
-        parts.append(f'<text x="{note_x}" y="{note_y + idx * 17}" class="{klass}"{weight}>{escape(text)}</text>')
-
-    parts.append("</svg>")
-    path.write_text("\n".join(parts) + "\n", encoding="utf-8")
-
-
-def write_heatmap(
-    path: Path,
+def _status_svg(
+    state: dict[str, Any],
+    histories: list[dict[str, Any]],
+    comparison: dict[str, Any] | None,
     title: str,
-    subtitle: str,
-    rows: list[list[str]],
-    solvers: list[tuple[str, str]] | None = None,
-) -> None:
-    solvers = solvers or SOLVERS
-    cell_w = 104
-    cell_h = 38
-    label_w = 220
-    bench_w = 238
-    header_h = 106
-    width = label_w + bench_w + cell_w * len(solvers) + 28
-    height = header_h + cell_h * len(rows) + 82
-
-    parts = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
-        "<style>text{font-family:Arial,Helvetica,sans-serif} .small{font-size:12px;fill:#444} .head{font-size:12px;font-weight:700;fill:#333} .cell{font-size:13px;font-weight:700;text-anchor:middle;dominant-baseline:middle} .row{font-size:12px;fill:#111} .bench{font-size:11px;fill:#444}</style>",
+) -> str:
+    experiment_010 = [item for item in histories if item["experiment_id"] == "010"]
+    gemini_recovered = sum(
+        "Gemini 3.6 Flash high 30/30" in score
+        for item in experiment_010
+        for score in item["historical_scores"]
+    )
+    opus_incomplete = sum(
+        cell["solver"] == "Claude Opus 5 high" and cell["state"] == "timeout"
+        for item in experiment_010
+        for cell in item["cell_states"]
+    )
+    height = 226
+    lines = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="{height}" viewBox="0 0 1080 {height}">',
         '<rect width="100%" height="100%" fill="#ffffff"/>',
-        f'<text x="18" y="28" font-size="20" font-weight="700" fill="#111">{escape(title)}</text>',
-        f'<text x="18" y="50" class="small">{escape(subtitle)}</text>',
-        '<text x="18" y="72" class="small">Exact-match correct / 30. Blue = useful low-nonzero; orange/red = too easy; gray = zero or skipped problem case.</text>',
+        '<rect x="24" y="22" width="1032" height="112" rx="8" fill="#fbe4e4" stroke="#a82b2b"/>',
+        f'<text x="48" y="62" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#761c19">{escape(title)}</text>',
+        f'<text x="48" y="96" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#333">{escape(state["message"] if state["status"] == "no_validated_incumbent" else "Validated incumbent recorded.")}</text>',
+        '<text x="48" y="121" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#555">Registry v1 separates canonical validity from corrected historical comparison.</text>',
     ]
-
-    x0 = label_w + bench_w
-    y0 = header_h
-    parts.append(f'<text x="18" y="{y0 - 14}" class="head">creator</text>')
-    parts.append(f'<text x="{label_w + 8}" y="{y0 - 14}" class="head">benchmark</text>')
-    for idx, (_solver_id, solver_label) in enumerate(solvers):
-        x = x0 + idx * cell_w + cell_w / 2
-        parts.append(f'<text x="{x}" y="{y0 - 28}" class="head" text-anchor="middle">{escape(solver_label)}</text>')
-
-    for r, row in enumerate(rows):
-        y = y0 + r * cell_h
-        creator, benchmark, *cells = row
-        parts.append(f'<line x1="18" x2="{width - 18}" y1="{y}" y2="{y}" stroke="#eeeeee"/>')
-        parts.append(f'<text x="18" y="{y + 24}" class="row">{escape(creator)}</text>')
-        parts.append(f'<text x="{label_w + 8}" y="{y + 24}" class="bench">{escape(benchmark)}</text>')
-        for c, cell in enumerate(cells):
-            x = x0 + c * cell_w
-            fill = cell_color(cell)
-            parts.append(f'<rect x="{x + 4}" y="{y + 5}" width="{cell_w - 8}" height="{cell_h - 10}" rx="2" fill="{fill}"/>')
-            parts.append(f'<text x="{x + cell_w / 2}" y="{y + cell_h / 2 + 1}" class="cell" fill="{text_color(cell)}">{escape(cell)}</text>')
-
-    legend_y = height - 36
-    legend = [("1-14/30", "#8ecae6"), ("15-29/30", "#f2c078"), ("30/30", "#d96b6b"), ("0/30", "#d9d9d9"), ("skip/NA", "#f6f6f6")]
-    x = 18
-    for label, color in legend:
-        parts.append(f'<rect x="{x}" y="{legend_y - 12}" width="18" height="18" fill="{color}" stroke="#ddd"/>')
-        parts.append(f'<text x="{x + 24}" y="{legend_y + 2}" class="small">{escape(label)}</text>')
-        x += 106
-    parts.append("</svg>")
-    path.write_text("\n".join(parts) + "\n", encoding="utf-8")
+    if comparison is not None:
+        leader = next(
+            item for item in histories if item["id"] == comparison["leader_candidate_id"]
+        )
+        lines.append(
+            '<text x="48" y="151" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#333">'
+            + escape(
+                f'Historical #{comparison["rank"]}: {leader["name"]} is a {comparison["verdict"].replace("_", " ")}; original gold remains invalid.'
+            )
+            + "</text>"
+        )
+    lines.extend([
+        '<text x="48" y="181" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#333">'
+        + escape(f"Experiment 010 recovery: Gemini solved {gemini_recovered}/3 candidates at 30/30.")
+        + "</text>",
+        '<text x="48" y="205" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#555">'
+        + escape(f"Opus did not complete {opus_incomplete}/3; Gemini produced no valid candidate.")
+        + "</text>",
+    ])
+    lines.append("</svg>")
+    return "\n".join(lines) + "\n"
 
 
-def markdown_table(rows: list[list[str]], solvers: list[tuple[str, str]] | None = None) -> str:
-    solvers = solvers or SOLVERS
-    headers = ["creator", "benchmark"] + [label for _id, label in solvers]
-    lines = ["| " + " | ".join(headers) + " |", "|---|---|" + "|".join("---:" for _ in solvers) + "|"]
-    for row in rows:
-        lines.append("| " + " | ".join(row) + " |")
-    return "\n".join(lines)
+def render_markdown(
+    registry: dict[str, Any],
+    state: dict[str, Any],
+    histories: list[dict[str, Any]],
+    comparison: dict[str, Any] | None,
+) -> str:
+    rows = []
+    for item in histories:
+        scores = item["historical_scores"]
+        score_text = ", ".join(scores) if scores else "No canonical numeric score"
+        states = ", ".join(
+            f'{cell["solver"]}: '
+            + ("did not complete (timeout)" if cell["state"] == "timeout" else cell["state"])
+            for cell in item["cell_states"]
+        )
+        rows.append([
+            item["experiment_id"],
+            item["name"],
+            item["creator"],
+            item["outcome"],
+            score_text + (f"; {states}" if states else ""),
+            item["required_next_step"],
+        ])
+    experiment_rows = [
+        [entry["id"], entry["run_path"], entry["outcome"], entry["summary"]]
+        for entry in registry["experiments"]
+    ]
+    if state["status"] == "validated_incumbent":
+        current_line = "**Validated incumbent:** " + ", ".join(
+            f'{item["name"]} ({item["creator"]})' for item in state["incumbents"]
+        )
+    else:
+        current_line = "**No validated incumbent.** No benchmark can be promoted until its public evidence, gold generation, scorer, complete solver panel, and execution state pass the registry gates."
+    comparison_lines: list[str] = []
+    if comparison is not None:
+        leader = next(
+            item for item in histories if item["id"] == comparison["leader_candidate_id"]
+        )
+        comparison_lines = [
+            "## Corrected Historical Result",
+            "",
+            f'**#{comparison["rank"]}: {leader["name"]} is the best corrected historical candidate and counts as a win over the challengers.**',
+            "",
+            comparison["basis"],
+            "",
+            comparison["qualification"],
+            "",
+        ]
+    return "\n".join([
+        "# Canonical BenchBench Status",
+        "",
+        "Generated from `experiments/registry.v1.json`. Raw run folders remain preserved as evidence; this page does not turn a historical score into a current claim.",
+        "",
+        "## Current State",
+        "",
+        current_line,
+        "",
+        "![Canonical status](figures/canonical_status.svg)",
+        "",
+        *comparison_lines,
+        "## Historical Results Excluded From Canonical Ranking",
+        "",
+        _table(["experiment", "benchmark", "creator", "outcome", "preserved historical evidence", "required next step"], rows),
+        "",
+        "The figures above are historical evidence only. In particular, `0/30` is never used for a provider error, timeout, malformed output, or incomplete panel.",
+        "",
+        "## Adjudications",
+        "",
+        "- [Reimbursement Forensics](../adjudications/004_reimbursement_forensics.md): Decimal half-up re-audit changed three gold answers and rescored the retained predictions to `12, 16, 11, 13, 11, 11`. It remains the #1 corrected historical candidate and a win over the challengers, while the original run remains invalid and noncanonical.",
+        "- [Service Credit Forensics](../adjudications/007_service_credit_forensics.md): a higher-precedence public timeline contradicts gold computed from lower-precedence monitoring states.",
+        "- [Fable creator sweep](../adjudications/008_fable_creator_sweep.md): GPT-5.2 was a provider error and Claude Opus timed out; neither is a `0/30` result.",
+        "- [Four-model panel](../adjudications/009_four_model_panel.md): both created candidates failed the mechanical score-report contract, Antigravity then failed before inference, and no solver cell ran.",
+        "- [Frontier-four panel](../adjudications/010_four_model_panel.md): original sealed result; three candidates passed the mechanical gate and every completed cell was `30/30`.",
+        "- [Experiment 010 provider recovery](../adjudications/010_provider_recovery_20260802.md): Gemini recovered all three missing solver cells at `30/30`; Opus still did not complete two cells, and Gemini produced no valid candidate.",
+        "",
+        "## Registry Coverage",
+        "",
+        _table(["experiment", "raw run", "outcome", "registry read"], experiment_rows),
+        "",
+        "A future incumbent must be introduced by a new `validated` candidate entry with digest-verified evidence. The canonical builder rejects a candidate marked eligible with any other outcome.",
+        "",
+    ])
 
 
-def incumbent_carry_forward_grid(exp004_rows: list[list[str]], exp007_rows: list[list[str]]) -> list[list[str]]:
-    incumbent = ["GPT-5.2 (frozen)", "Reimbursement Forensics"] + exp004_rows[0][2:]
-    return [incumbent] + exp007_rows[1:]
+def build_canonical(
+    registry_path: Path = REGISTRY_PATH,
+    canonical_dir: Path = CANONICAL_DIR,
+    legacy_path: Path = LEGACY_MD,
+) -> dict[str, Any]:
+    registry = load_registry(registry_path)
+    state = canonical_state(registry)
+    histories = public_history(registry)
+    comparison = registry.get("historical_comparison")
+    canonical_dir.mkdir(parents=True, exist_ok=True)
+    figure_dir = canonical_dir / "figures"
+    figure_dir.mkdir(parents=True, exist_ok=True)
+    data = {
+        "schema_version": "benchbench.canonical-status/v1",
+        "registry_sha256": sha256_file(registry_path),
+        "current_state": state,
+        "historical_comparison": comparison,
+        "historical_noncanonical": histories,
+    }
+    (canonical_dir / "status.v1.json").write_text(json.dumps(data, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    (canonical_dir / "README.md").write_text(
+        render_markdown(registry, state, histories, comparison), encoding="utf-8"
+    )
+    for figure_name in FIGURE_NAMES:
+        title = (
+            "Canonical status: no validated incumbent"
+            if state["status"] == "no_validated_incumbent"
+            else "Canonical status: validated incumbent"
+        )
+        (figure_dir / figure_name).write_text(
+            _status_svg(state, histories, comparison, title), encoding="utf-8"
+        )
+    legacy_path.write_text(
+        "# 6x6 Result Grids - Superseded\n\n"
+        "Reimbursement Forensics had invalid original gold and is not a canonical incumbent. "
+        "After Decimal correction and rescoring retained predictions without a model rerun, it remains the #1 corrected historical candidate and a win over the later challengers. "
+        "See [`canonical/README.md`](canonical/README.md) and `registry.v1.json` for the qualified adjudicated state.\n",
+        encoding="utf-8",
+    )
+    return data
 
 
 def main() -> None:
-    CANONICAL_FIG_DIR.mkdir(parents=True, exist_ok=True)
-    exp003_rows = build_grid(
-        "experiments/003_five_model_sweep_20260522_195526",
-        "experiments/005_claude_opus_exp003_style_20260523_125019",
-        [
-            ("gpt-5.2", "GPT-5.2", "Ledger Canonical Reconciliation"),
-            ("gpt-5.4", "GPT-5.4", "Patchwork Ordinance Adjudication"),
-            ("gpt-5.5", "GPT-5.5", "Amendment Ledger Reconciliation"),
-            ("gemini-3.1-pro", "Gemini 3.1 Pro", "Polyhedral Surface Traversal"),
-            ("gemini-3.5-flash-high", "Gemini 3.5 Flash", "Mutative Assembly Inversion"),
-            ("opus", "Claude Opus", "String Rewriting Distance"),
-        ],
-    )
-    exp004_rows = build_grid(
-        "experiments/004_feedback_sweep_20260522_225208",
-        "experiments/006_claude_opus_feedback_style_20260523_125611",
-        [
-            ("gpt-5.2", "GPT-5.2", "Reimbursement Forensics"),
-            ("gpt-5.4", "GPT-5.4", "release_packet_arbitration"),
-            ("gpt-5.5", "GPT-5.5", "Cross-Document Obligation Resolution"),
-            ("gemini-3.1-pro", "Gemini 3.1 Pro", "Corrupted LZ77 Recovery"),
-            ("gemini-3.5-flash-high", "Gemini 3.5 Flash", "MFN-Cascade"),
-            ("opus", "Claude Opus", "Conlang Rosetta"),
-        ],
-        skip={("gpt-5.5", "opus"): "skip"},
-    )
-    exp007_rows = build_grid(
-        "experiments/007_full_feedback_6x6_20260523_172919",
-        None,
-        [
-            ("gpt-5.2", "GPT-5.2", "Service Credit Forensics"),
-            ("gpt-5.4", "GPT-5.4", "Catalog Royalty Forensics"),
-            ("gpt-5.5", "GPT-5.5", "Prior Authorization Forensics"),
-            ("gemini-3.1-pro", "Gemini 3.1 Pro", "Commercial Lease CAM Reconciliation"),
-            ("gemini-3.5-flash-high", "Gemini 3.5 Flash", "Maritime Freight & Customs Audit"),
-            ("claude-opus", "Claude Opus", "Construction Progress Payment Certification"),
-        ],
-        solvers=SOLVERS_CURRENT,
-    )
-    canonical_round3_rows = incumbent_carry_forward_grid(exp004_rows, exp007_rows)
-    all_rows_by_creator = {
-        "GPT-5.2": [exp003_rows[0], exp004_rows[0], exp007_rows[0]],
-        "GPT-5.4": [exp003_rows[1], exp004_rows[1], exp007_rows[1]],
-        "GPT-5.5": [exp003_rows[2], exp004_rows[2], exp007_rows[2]],
-        "Gemini 3.1 Pro": [exp003_rows[3], exp004_rows[3], exp007_rows[3]],
-        "Gemini 3.5 Flash": [exp003_rows[4], exp004_rows[4], exp007_rows[4]],
-        "Claude Opus": [exp003_rows[5], exp004_rows[5], exp007_rows[5]],
-    }
-
-    creator_trajectory_rows = [
-        {
-            "creator": "GPT-5.2",
-            "round1": "partial separator; too solved",
-            "round1_kind": "separator",
-            "round2": "incumbent: Reimbursement Forensics",
-            "round2_kind": "incumbent",
-            "round3": "frozen incumbent still best",
-            "round3_kind": "incumbent",
-        },
-        {
-            "creator": "GPT-5.4",
-            "round1": "one low score; too solved",
-            "round1_kind": "separator",
-            "round2": "too easy, one zero",
-            "round2_kind": "too_easy",
-            "round3": "too easy",
-            "round3_kind": "too_easy",
-        },
-        {
-            "creator": "GPT-5.5",
-            "round1": "saturated",
-            "round1_kind": "saturated",
-            "round2": "scorer-contract failure",
-            "round2_kind": "artifact",
-            "round3": "too easy",
-            "round3_kind": "too_easy",
-        },
-        {
-            "creator": "Gemini 3.1 Pro",
-            "round1": "one low score; too solved",
-            "round1_kind": "separator",
-            "round2": "brittle, many zeros",
-            "round2_kind": "artifact",
-            "round3": "separates, too easy at top",
-            "round3_kind": "separator",
-        },
-        {
-            "creator": "Gemini 3.5 Flash",
-            "round1": "too easy",
-            "round1_kind": "too_easy",
-            "round2": "saturated",
-            "round2_kind": "saturated",
-            "round3": "separates, too easy at top",
-            "round3_kind": "separator",
-        },
-        {
-            "creator": "Claude Opus",
-            "round1": "scorer artifact",
-            "round1_kind": "artifact",
-            "round2": "saturated",
-            "round2_kind": "saturated",
-            "round3": "saturated",
-            "round3_kind": "saturated",
-        },
-    ]
-
-    round_summary_rows = [
-        {
-            "round": "Round 1",
-            "best creator read": "No keeper",
-            "solver read": "GPT-5.5 and Gemini 3.1 Pro both averaged 30/30",
-            "what changed": "First full grid proved most creator ideas were easy to solve.",
-        },
-        {
-            "round": "Round 2",
-            "best creator read": "GPT-5.2: Reimbursement Forensics",
-            "solver read": "GPT-5.4 had the highest scored average, but artifacts make this a noisy solver contest",
-            "what changed": "Feedback produced the first all-solver low-nonzero row.",
-        },
-        {
-            "round": "Round 3",
-            "best creator read": "GPT-5.2 frozen incumbent remains best",
-            "solver read": "GPT-5.4 led the latest grid by total score",
-            "what changed": "New challengers separated solvers but did not beat the incumbent.",
-        },
-    ]
-
-    strongest_benchmark_rows = [
-        {
-            "read": "Strongest current candidate",
-            "benchmark": "Reimbursement Forensics",
-            "creator": "GPT-5.2",
-            "score shape": "10-14/30 across all six solvers",
-            "what it shows": "The only all-solver low-nonzero row so far.",
-        },
-        {
-            "read": "Best Round 3 challenger",
-            "benchmark": "Commercial Lease CAM Reconciliation",
-            "creator": "Gemini 3.1 Pro",
-            "score shape": "1-26/30",
-            "what it shows": "Separated solvers sharply, but top solvers still scored too high.",
-        },
-        {
-            "read": "Best Round 3 challenger",
-            "benchmark": "Maritime Freight & Customs Audit",
-            "creator": "Gemini 3.5 Flash",
-            "score shape": "4-25/30",
-            "what it shows": "Also separated solvers, but did not hold the top end down.",
-        },
-        {
-            "read": "Diagnostic, not a keeper",
-            "benchmark": "Corrupted LZ77 Recovery",
-            "creator": "Gemini 3.1 Pro",
-            "score shape": "0-22/30",
-            "what it shows": "Hard for some solvers, but too brittle and zero-heavy.",
-        },
-    ]
-
-    quality_metric_rows = [
-        benchmark_metric(exp004_rows[0], "GPT-5.2", "current target to beat", "best", "Reimbursement Forensics", 12, -10),
-        benchmark_metric(exp007_rows[3], "Gemini 3.1 Pro", "good spread, too easy at top", "diagnostic", "Lease CAM", 12, -18),
-        benchmark_metric(exp007_rows[4], "Gemini 3.5 Flash", "good spread, too easy at top", "diagnostic", "Maritime", 12, 18),
-        benchmark_metric(exp004_rows[3], "Gemini 3.1 Pro", "hard, but zero-heavy", "diagnostic", "Corrupted LZ77", 12, -10),
-        benchmark_metric(exp007_rows[0], "GPT-5.2", "all-zero wall", "artifact", "Service Credit", 12, -12),
-        benchmark_metric(exp004_rows[2], "GPT-5.5", "scorer-contract failure", "artifact", "Cross-Doc Obligation", 12, 34),
-        benchmark_metric(exp007_rows[2], "GPT-5.5", "too easy", "easy", "Prior Authorization", 30, -72, False),
-        benchmark_metric(exp007_rows[1], "GPT-5.4", "too easy", "easy", "Catalog Royalty", -160, 30, False),
-        benchmark_metric(exp007_rows[5], "Claude Opus", "saturated", "easy", "Construction Payment", -190, -10, False),
-    ]
-    quality_table_rows = [
-        {
-            "benchmark": str(row["benchmark"]),
-            "creator": str(row["creator"]),
-            "completion": str(row["completion_label"]),
-            "useful cells": str(row["useful_label"]),
-            "zero cells": str(row["zero_label"]),
-            "read": str(row["read"]),
-        }
-        for row in quality_metric_rows
-    ]
-    label_offsets = {
-        "GPT-5.2": (12, -8),
-        "GPT-5.4": (12, -14),
-        "GPT-5.5": (-78, -14),
-        "Gemini 3.1 Pro": (-36, -16),
-        "Gemini 3.5 Flash": (12, 24),
-        "Claude Opus": (12, -14),
-    }
-    plot_labels = {
-        "GPT-5.2": "GPT-5.2",
-        "GPT-5.4": "GPT-5.4",
-        "GPT-5.5": "GPT-5.5",
-        "Gemini 3.1 Pro": "Gemini 3.1",
-        "Gemini 3.5 Flash": "Gemini 3.5",
-        "Claude Opus": "Opus",
-    }
-    best_row_short = {
-        "Ledger Canonical Reconciliation": "ledger",
-        "Reimbursement Forensics": "reimbursement",
-        "Service Credit Forensics": "service credit",
-        "Patchwork Ordinance Adjudication": "patchwork ordinance",
-        "release_packet_arbitration": "release packet",
-        "Catalog Royalty Forensics": "catalog royalty",
-        "Amendment Ledger Reconciliation": "amendment ledger",
-        "Cross-Document Obligation Resolution": "cross-document",
-        "Prior Authorization Forensics": "prior auth",
-        "Polyhedral Surface Traversal": "polyhedral",
-        "Corrupted LZ77 Recovery": "corrupted LZ77",
-        "Commercial Lease CAM Reconciliation": "lease CAM",
-        "Mutative Assembly Inversion": "assembly inversion",
-        "MFN-Cascade": "MFN cascade",
-        "Maritime Freight & Customs Audit": "maritime freight",
-        "String Rewriting Distance": "string rewriting",
-        "Conlang Rosetta": "conlang",
-        "Construction Progress Payment Certification": "construction payment",
-    }
-    creator_solver_rows = []
-    for solver_idx, (_solver_id, solver_label) in enumerate(SOLVERS_CURRENT):
-        solver_values = [score_value(row[2 + solver_idx]) for row in canonical_round3_rows]
-        solver_numeric = [value for value in solver_values if value is not None]
-        best_row, best_stats = best_creator_signal_row(all_rows_by_creator[solver_label])
-        creator_signal = int(best_stats["low"] or 0)
-        if creator_signal >= 3:
-            kind = "leader"
-        elif creator_signal > 0:
-            kind = "some"
-        else:
-            kind = "none"
-        label_dx, label_dy = label_offsets[solver_label]
-        creator_solver_rows.append(
-            {
-                "model": solver_label,
-                "solver_average": sum(solver_numeric) / len(solver_numeric),
-                "creator_signal": creator_signal,
-                "best_row": best_row[1],
-                "best_row_short": best_row_short.get(best_row[1], best_row[1]),
-                "plot_label": plot_labels[solver_label],
-                "kind": kind,
-                "label_dx": label_dx,
-                "label_dy": label_dy,
-            }
-        )
-
-    round3_matchup_rows: list[dict[str, str]] = []
-    for row in canonical_round3_rows:
-        stats = row_stats(row)
-        read = "current target to beat"
-        if row[0] != "GPT-5.2 (frozen)":
-            if stats["perfect"] and int(stats["perfect"]) >= 4:
-                read = "saturated"
-            elif stats["max"] is not None and int(stats["max"]) >= 23 and int(stats["min"]) <= 4:
-                read = "separates solvers, too easy at the top"
-            elif stats["max"] is not None and int(stats["max"]) >= 23:
-                read = "too easy"
-        round3_matchup_rows.append(
-            {
-                "benchmark": row[1],
-                "best solver": best_solver_labels(row, SOLVERS_CURRENT),
-                "weakest solver": weakest_solver_labels(row, SOLVERS_CURRENT),
-                "spread": str(stats["spread"]),
-                "read": read,
-            }
-        )
-
-    write_heatmap(
-        CANONICAL_FIG_DIR / "canonical_round1_6x6_heatmap.svg",
-        "Round 1: first full 6x6, mostly saturated",
-        "Experiment 003 reconstructed with Claude Opus row and solver column.",
-        exp003_rows,
-    )
-    write_heatmap(
-        CANONICAL_FIG_DIR / "canonical_round2_6x6_heatmap.svg",
-        "Round 2: feedback creates the incumbent",
-        "Experiment 004 reconstructed with Claude Opus row and solver column.",
-        exp004_rows,
-    )
-    write_heatmap(
-        CANONICAL_FIG_DIR / "canonical_round3_6x6_heatmap.svg",
-        "Round 3: incumbent carried forward",
-        "Experiment 007 challengers did not beat Reimbursement Forensics.",
-        canonical_round3_rows,
-        solvers=SOLVERS_CURRENT,
-    )
-    write_creator_trajectory(CANONICAL_FIG_DIR / "creator_trajectory.svg", creator_trajectory_rows)
-    write_quality_map(CANONICAL_FIG_DIR / "benchmark_quality_map.svg", quality_metric_rows)
-    write_creator_solver_2x2(CANONICAL_FIG_DIR / "creator_solver_2x2.svg", creator_solver_rows)
-
-    lines = [
-        "# Canonical BenchBench Results - 2026-05-23",
-        "",
-        "Generated by `scripts/build_6x6_result_artifacts.py` from saved score JSONs.",
-        "",
-        "This is the presentation layer. The raw experiment folders are unchanged.",
-        "",
-        "The clean story has three canonical rounds:",
-        "",
-        "1. Round 1: Experiment 003, reconstructed as a 6x6 grid by adding the Claude Opus creator row and solver column.",
-        "2. Round 2: Experiment 004, reconstructed the same way. This is where GPT-5.2 creates Reimbursement Forensics.",
-        "3. Round 3: Experiment 007 challengers, with GPT-5.2's frozen Reimbursement Forensics row carried forward as the incumbent.",
-        "",
-        "That last step is deliberate. Raw Experiment 007 still contains GPT-5.2's Service Credit Forensics attempt, and it remains a review item. But the canonical comparison asks whether any new challenger beat the frozen incumbent. None did.",
-        "",
-        "## Current Read",
-        "",
-        "Reimbursement Forensics remains the strongest benchmark so far. Its six-solver score profile is **10/30, 14/30, 11/30, 12/30, 11/30, 11/30**. That is the target shape: every solver got traction, no solver solved it, and the result was not an obvious all-zero failure.",
-        "",
-        "The model story is the more interesting one: GPT-5.2 is the best benchmark creator so far. It is the only creator that produced an all-solver low-nonzero benchmark. We carry that row forward as the incumbent so new sweeps have something concrete to beat.",
-        "",
-        "Read each row as one creator's benchmark and each column as one solver's attempt. Cell values are exact-match correct out of 30.",
-        "",
-        "Blue is the useful low-nonzero band. Orange and red mean the task was too easy. Gray zeros need explanation before they count as hard; they can also mean an under-specified packet, scorer-contract failure, or operational failure.",
-        "",
-        "## Strongest Benchmarks So Far",
-        "",
-        markdown_dict_table(["read", "benchmark", "creator", "score shape", "what it shows"], strongest_benchmark_rows),
-        "",
-        "## Completion Proxy",
-        "",
-        "Completion rate is average exact-match score across solver attempts. Lower completion means harder, but lower is not automatically better: all-zero rows can be broken or underspecified. The useful signal is moderate completion plus many solver cells in the 1-14/30 band.",
-        "",
-        "![Benchmark quality map](figures/benchmark_quality_map.svg)",
-        "",
-        markdown_dict_table(["benchmark", "creator", "completion", "useful cells", "zero cells", "read"], quality_table_rows),
-        "",
-        "## What Changed Across Rounds",
-        "",
-        "The 6x6 grids are evidence, but they are not the easiest way to read the experiment. Creator quality and solver strength point in opposite directions: a good creator makes a valid task that keeps solvers low but nonzero; a good solver scores high.",
-        "",
-        "![Creator trajectory across rounds](figures/creator_trajectory.svg)",
-        "",
-        markdown_dict_table(["round", "best creator read", "solver read", "what changed"], round_summary_rows),
-        "",
-        "Current read:",
-        "",
-        "- Best benchmark creator so far: GPT-5.2, because Reimbursement Forensics is the only all-solver low-nonzero candidate.",
-        "- Strongest latest solver: GPT-5.4 by Round 3 total score, though solver rankings are secondary here.",
-        "- Most interesting Round 3 challengers: Commercial Lease CAM and Maritime Freight, because they separated solvers without going all-zero. They were still too easy at the top end.",
-        "",
-        "## Creator vs Solver",
-        "",
-        "The creator and solver results point in different directions. The chart below uses Round 3 solver average on the horizontal axis. The vertical axis is the best creator signal for each model: how many solvers landed in the useful 1-14/30 band on that model's best row.",
-        "",
-        "Zero-heavy rows are not counted as good creator signal. Cross-Document Obligation was audited as a scorer-contract failure, Service Credit remains a review case, String Rewriting had a scorer type artifact, and Corrupted LZ77 was partly solved but narrow.",
-        "",
-        "![Creator vs solver 2x2](figures/creator_solver_2x2.svg)",
-        "",
-        "Read: GPT-5.2 is the clearest creator/solver split so far. It has the best creator signal and the weakest latest solver average. GPT-5.4 and Claude Opus sit on the other side: strong solvers, but their created tasks mostly saturated or became checklists.",
-        "",
-        "## Qualitative Creator Patterns",
-        "",
-        "The generated benchmarks point to different interests in what might be hard. This is a read on the observed packages, not a general claim about the models.",
-        "",
-        "| creator | plain label | what it tended to build | what the runs suggest |",
-        "|---|---|---|---|",
-        "| GPT-5.2 | Forensic accountant | Ledger, reimbursement, and service-credit audits. | Strongest creator so far. Its best task made ordinary evidence hard through exceptions, caps, approvals, duplicates, dates, and exact money totals. |",
-        "| GPT-5.4 | Policy lawyer | Ordinance, release-governance, and royalty adjudication. | Good at building plausible policy worlds, but the rules often became clean enough for strong solvers to follow. |",
-        "| GPT-5.5 | Procedural judge | Amendment ledgers, obligation resolution, and prior authorization. | Good at procedural structure, but the hard-looking rows risked becoming schema or label traps rather than fair difficulty. |",
-        "| Gemini 3.1 Pro | Puzzle mechanic | Spatial puzzles, corrupted-data recovery, and lease CAM reconciliation. | Most uneven creator. It found solver spread, but its tasks could become brittle, operationally narrow, or too puzzle-like. |",
-        "| Gemini 3.5 Flash | Logistics operator | Assembly inversion, tariff cascades, and maritime freight audits. | Good at layered commercial calculations. Maritime Freight was close to the right family, but top solvers still solved too much. |",
-        "| Claude Opus | Exam writer | String rewriting, conlang translation, and construction payment certification. | Made clean, elegant tasks. That readability helped solvers; the rows mostly saturated or hit scorer artifacts. |",
-        "",
-        "The strongest recurring surface is paperwork forensics: all evidence is public, the answer is exact, and failure comes from missed exceptions, cross-document state, arithmetic, dates, or rounding. Reimbursement Forensics is the current best example of that surface.",
-        "",
-        "### Round 3 solver leaderboard",
-        "",
-        markdown_dict_table(["solver", "total", "average", "perfect", "low", "zero"], solver_leaderboard(canonical_round3_rows, SOLVERS_CURRENT)),
-        "",
-        "For solvers, higher is better. This table uses the canonical Round 3 grid, including the frozen GPT-5.2 incumbent row.",
-        "",
-        "### Round 3 matchups",
-        "",
-        markdown_dict_table(["benchmark", "best solver", "weakest solver", "spread", "read"], round3_matchup_rows),
-        "",
-        "## Round 1 - First Full 6x6",
-        "",
-        "![Canonical round 1 heatmap](figures/canonical_round1_6x6_heatmap.svg)",
-        "",
-        markdown_table(exp003_rows),
-        "",
-        "Notes:",
-        "",
-        "- Every Round 1 row was solved perfectly by at least four solvers.",
-        "- Claude Opus's String Rewriting Distance row is not a keeper. GPT-5.2 and GPT-5.4 returned the right integer values as JSON strings, and the scorer rejected those type-mismatched answers.",
-        "- Ledger Canonical Reconciliation had a low Claude Opus score, but other solvers saturated it.",
-        "",
-        "## Round 2 - Feedback Sweep",
-        "",
-        "![Canonical round 2 heatmap](figures/canonical_round2_6x6_heatmap.svg)",
-        "",
-        markdown_table(exp004_rows),
-        "",
-        "Notes:",
-        "",
-        "- Reimbursement Forensics is the first all-solver low-nonzero candidate.",
-        "- Cross-Document Obligation Resolution is marked `skip` for Claude Opus because the row had already been identified as a scoring-contract failure.",
-        "- Corrupted LZ77 Recovery is diagnostic but narrow and operationally brittle.",
-        "- MFN-Cascade and Conlang Rosetta saturated.",
-        "",
-        "## Round 3 - Challenger Sweep",
-        "",
-        "![Canonical round 3 heatmap](figures/canonical_round3_6x6_heatmap.svg)",
-        "",
-        markdown_table(canonical_round3_rows, SOLVERS_CURRENT),
-        "",
-        "Notes:",
-        "",
-        "- GPT-5.2 is shown with its frozen Round 2 incumbent, not with the raw Service Credit Forensics row from Experiment 007.",
-        "- Service Credit Forensics remains a raw Experiment 007 scorer/solvability problem case because it scored 0/30 for every solver.",
-        "- Maritime Freight and Commercial Lease CAM separated solvers, but both were too easy at the top end.",
-        "- Catalog Royalty, Prior Authorization, and Construction Progress Payment saturated.",
-        "",
-    ]
-    CANONICAL_MD.write_text("\n".join(lines), encoding="utf-8")
-
-    legacy_lines = [
-        "# 6x6 Result Grids - 2026-05-23",
-        "",
-        "The canonical presentation is now [`canonical/README.md`](canonical/README.md).",
-        "",
-        "This file is kept as a stable link. The raw experiment folders are unchanged. In the canonical Round 3 grid, GPT-5.2's frozen Reimbursement Forensics row is carried forward from Round 2; raw Experiment 007's Service Credit Forensics row remains a scorer/solvability problem case.",
-        "",
-    ]
-    LEGACY_MD.write_text("\n".join(legacy_lines), encoding="utf-8")
+    data = build_canonical()
+    print(f"Wrote canonical status: {data['current_state']['status']}")
 
 
 if __name__ == "__main__":

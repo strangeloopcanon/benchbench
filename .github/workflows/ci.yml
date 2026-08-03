@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: macos-14
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install locked environment
+        run: |
+          python -m pip install uv==0.8.15
+          uv sync --frozen --all-groups
+      - name: Compile Python sources
+        run: uv run python -m compileall -q benchbench_*.py run_*.py scripts tests
+      - name: Run tests
+        run: uv run pytest -q

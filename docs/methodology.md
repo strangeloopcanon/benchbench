@@ -1,32 +1,31 @@
 # Methodology
 
-BenchBench evaluates benchmark invention.
+BenchBench evaluates benchmark invention. A creator model proposes a complete
+benchmark package. Solver models receive only its public bundle. Low solver
+scores matter only after the package, execution record, and public-to-private
+answer contract have passed review.
 
-A creator model writes a benchmark package. Solver models attack only the
-public bundle. A candidate is useful only if it is externally solvable,
-reproducible, auditable, and still hard after that attack.
+## Evidence Model
 
-## Sweep Lifecycle
+Raw experiment folders are immutable evidence. Corrections are recorded as new
+adjudications or new benchmark versions; they do not rewrite the original run.
+The authoritative interpretation is `experiments/registry.v1.json`.
 
-1. Choose creator and solver panels.
-2. Give creators the landscape pack, pilot notes, package contract, and any
-   `--feedback-context`.
-3. Ask each creator to write a complete candidate package.
-4. Validate package mechanics locally.
-5. Give each invalid package one repair call from the same creator.
-6. Copy only `solver_bundle/` into isolated solver directories.
-7. Run each solver blind against each valid candidate.
-8. Score solver JSONL against private gold answers.
-9. Interpret the creator-by-solver grid.
-10. Write benchmark cards and feedback for the next sweep.
+BenchBench keeps three questions separate:
 
-Rows are creators. Columns are solvers. Cells are exact-match scores out of 30.
+1. **Mechanical validity:** does the package generate deterministically, obey
+   its data contracts, keep gold private, and score its controls correctly?
+2. **Cell validity:** did an attributable provider/model call return a complete
+   prediction set that a valid scorer processed successfully?
+3. **Adjudication:** is the task fair, externally solvable, correctly keyed,
+   useful, and eligible for canonical comparison?
+
+A package can pass mechanical checks and still fail adjudication. A low score
+can be retained as historical evidence without becoming a benchmark claim.
 
 ## Candidate Contract
 
-Each creator produces a self-contained directory.
-
-Required root files:
+Each creator produces these private-root files:
 
 - `README.md`
 - `benchmark_spec.json`
@@ -37,131 +36,146 @@ Required root files:
 - `validation_report.md`
 - `failure_modes.md`
 
-Required public bundle:
+The public `solver_bundle/` contains:
 
-- `solver_bundle/SOLVER_MANIFEST.json`
-- `solver_bundle/items_private_sample.jsonl`
-- `solver_bundle/README.md` or `solver_bundle/solver_packet.md`
-- any solver-visible assets needed for the task
+- `SOLVER_MANIFEST.json`
+- `items_private_sample.jsonl`
+- `README.md` or `solver_packet.md`
+- every solver-visible asset required by the stated rules
 
-Private gold rows and solver predictions both use:
+Gold and predictions use exact JSONL rows:
 
 ```json
 {"id":"...","answer":"..."}
 ```
 
-## Validation
+IDs must be unique and identical across public items, gold, and a complete
+prediction panel.
 
-The controller checks whether a package can be generated, verified, and scored
-before solvers spend time on it. It:
+## Mechanical Validation
 
-- regenerates the 30-item sample from the required CLI;
-- runs the verifier against public items and private gold;
-- self-scores the gold answers;
-- runs a shifted-wrong control;
-- checks that the public item ids match private gold ids;
-- scans the public bundle for obvious leakage.
+Generated code never runs against the canonical candidate directory. The
+controller copies the candidate into clean scratch workspaces and runs it in a
+fail-closed OS sandbox with the user home and network unavailable. It:
 
-Repairs are for validity only: fixing generation, scoring, contracts, or bundle
-isolation. They are not a second chance to invent a new benchmark.
+- removes expected generated outputs before each run, preventing stale files or
+  no-op generators from passing;
+- runs the same seed twice and compares output-tree digests;
+- verifies exact file and JSONL contracts;
+- runs the verifier;
+- requires the gold self-score to be exactly `30/30`;
+- requires the shifted-wrong control to be exactly `0/30`;
+- rejects prohibited private files and per-ID answer leakage in the public
+  bundle;
+- requires a substantive external-solvability explanation.
 
-## Who Sees What
+These are mechanical gates, not a fairness verdict. Promotion still requires a
+digest-backed adjudication with outcome `validated`.
 
-Creators see the landscape pack, Experiment 001 pilot summary, artifact path,
-package contract, and any feedback file supplied with `--feedback-context`.
-Feedback files include prior grids, benchmark cards, and failure lessons.
+## Solver Isolation
 
-Solvers see only the isolated `solver_bundle/` for the candidate they are
-solving. They may use tools, code, OCR, local packages, and internet access.
-They may not inspect parent directories, private gold, generators, scorers,
-private traces, or answer keys.
+Every solver receives a fresh temporary copy of `solver_bundle/` outside the
+repository. One outer macOS sandbox denies reads from the repository, including
+candidate gold and source code, and exposes a randomized empty provider home.
+No persistent credential file enters that boundary. The trusted Codex parent receives only
+the current bearer token and account ID in two dedicated environment variables;
+a command-backed provider reads the bearer directly from its parent environment.
+Model-created shells inherit no provider environment and cannot inspect the
+parent process table; the legacy `KERN_PROCARGS` and current `KERN_PROCARGS2`
+sysctl environment channels are also denied explicitly. Refresh tokens,
+histories, memories, configuration, hooks, plugins, and sessions never enter
+the boundary. Nested Codex Seatbelt profiles are not viable on macOS, so Codex
+uses the outer profile as its OS boundary.
 
-## Scoring
+Antigravity retains its provider-native file permissions inside the outer
+profile. It reads its OAuth session once from a FIFO in the
+disposable home; the path is then removed and explicitly write-denied, so a
+refreshed credential cannot appear for model tools to read.
+If credential brokering or containment cannot be established, the cell is
+unavailable; the harness does not fall back to an unrestricted host call. Live
+execution is limited to the audited Codex and Antigravity paths. Cursor is
+preflight-only because its native authentication token reaches model-created
+terminal tools; the harness rejects live Cursor calls before loading it.
 
-Solvers return JSONL rows with exactly `id` and `answer`. The controller
-extracts matching rows, preserves item order, and runs the candidate's
-`scorer.py` against private gold.
+Provider-qualified identities are part of every new artifact name. For
+example, Codex `gpt-5.2` and Cursor `gpt-5.2` are different identities and
+cannot share a prediction or score path.
 
-Missing rows, malformed rows, wrong item ids, timeouts, parser failures, and
-scorer crashes all count against the solver. Manifests also record return
-codes, token counts, and backend-specific cache or cost fields when available.
+## Score And Cell States
 
-## Interpreting A Candidate
+The normalized score schema requires integral `total` and `correct` counts,
+`0 <= correct <= total`, and an accuracy consistent with `correct / total`.
+Legacy scorer shapes remain readable only through the compatibility parser;
+new normalized reports use schema version 2.
 
-The gate is conservative.
+A numeric score exists only for a complete successful cell. Other outcomes are
+states, including:
 
-- High scores from strong solvers mean the candidate is too easy.
-- All-zero rows go to review. They are not wins by default.
-- Low scores caused by hidden labels, private vocabulary, strict types,
-  malformed output expectations, or missing public evidence fail the candidate.
-- Tool stalls and narrow recovery puzzles can be diagnostic without becoming
-  broad benchmarks.
-- A keeper should be externally solvable, well specified, reproducible,
-  auditable, hard under strong solver attempts, and meaningfully different from
-  existing evals.
+- provider unavailable or provider error;
+- timeout or model mismatch;
+- no predictions, partial predictions, or parse failure;
+- scorer failure or invalid score schema;
+- invalid benchmark or cell not run.
 
-## Frozen Incumbents
+None of those states is `0/30`. Candidate acceptance requires every declared
+solver cell to complete successfully. A true all-zero successful row goes to a
+solvability audit; it is not a win by default. A candidate is too easy when any
+declared strong solver reaches the rejection threshold.
 
-When a candidate reaches the desired low-nonzero shape, it can be frozen as an
-incumbent. Frozen means "current target to beat." It does not mean stable-bank
-benchmark.
+## Run Safety
 
-Rerun a frozen incumbent only when:
+The harness preflights every unique provider/model before the first creator
+call. Preflight is read-only and never submits an inference prompt. It verifies
+the CLI, requests each provider's model catalog where supported, and verifies
+Codex effort availability for the exact requested model. A live run cannot
+begin when a listed model or requested Codex effort is unavailable.
 
-- a new solver family is added;
-- the package or scorer is reviewed and repaired;
-- calibration against the incumbent is needed;
-- the model panel changes enough to break comparability.
+New run roots are append-only evidence. The harness refuses a non-empty root
+instead of silently reusing creator files or stale scores. Scorers write to a
+unique temporary output; the controller validates it and atomically publishes
+only an allowlisted normalized record after a successful exit. Creator-authored
+scorer output and scorer stdout/stderr are never published. Repairs create a
+new candidate snapshot rather than mutating the failed creator snapshot.
 
-Otherwise, run challenger sweeps: keep the incumbent in the benchmark bank,
-give creators its result and failure lessons, and ask them to produce better
-candidates. The runner supports this with separate `--creator-models` and
-`--solver-models`.
+Raw provider prompts, stdout, stderr, and provider logs are local diagnostic
+material, not public benchmark evidence. They may contain account metadata,
+machine paths, or provider internals. Public experiment bundles retain the
+portable manifests, validation records, packages, predictions, and scores;
+raw transcript paths are replaced with an explicit
+`private_raw_evidence_not_published` marker and public digests are rebound.
 
-## Canonical Presentation
+## Canonical Promotion
 
-Raw run folders stay literal. They record what each model produced in that
-run, including failed candidates and problem cases.
+`scripts/build_6x6_result_artifacts.py` derives the current presentation from
+the registry. A candidate enters the canonical comparison only when its entry:
 
-Presentation grids can carry a frozen incumbent forward. In a challenger
-sweep, the carried-forward row is marked as frozen and compared against new
-challenger rows. That keeps the leaderboard honest: raw history is not edited,
-but the current comparison asks whether any new candidate beat the incumbent.
+- has outcome `validated`;
+- is explicitly `canonical_eligible`;
+- carries digest-backed evidence;
+- binds its mechanical record to the frozen benchmark-package digest;
+- binds its declared model panel to a digest-verified run state and manifest;
+- stores every score and prediction at the exact controller-owned
+  `solver_results` path outside the creator package;
+- has one unique successful manifest cell per declared model, with matching
+  invocation, package, gold, and prediction digests.
 
-The current canonical result set is in
-[`experiments/canonical/README.md`](../experiments/canonical/README.md).
+Invalid and incomplete runs remain visible as history, with non-score states
+rendered separately from numeric results. The current registry has no validated
+incumbent. Separately, the corrected historical comparison ranks Reimbursement
+Forensics #1 and treats it as a win over the challengers: its retained
+predictions remain low and nonzero across all six solvers after Decimal
+correction. That historical rank does not override the invalid original gold
+or the promotion gate. The review queue is in
+[`experiments/review_queue.md`](../experiments/review_queue.md).
 
-## Review Gate
+## Similarity And Limits
 
-Low-scoring candidates should be checked before they become feedback anchors or
-current targets.
+Novelty is estimated only after enough models overlap the candidate and public
+benchmark matrix. The regression path produces leave-one-out predictions and
+computes one global out-of-fold R2; a one-row fold is never assigned its own R2.
 
-The review asks:
-
-- Does the public bundle contain enough evidence to solve each item?
-- Are answer fields identifiable without private vocabulary?
-- Does the scorer accept the stated answer format?
-- Did solvers fail because the benchmark is hard, or because the contract is
-  unfair, brittle, or ambiguous?
-- Is there leakage from gold answers, generator logic, hidden seeds, or private
-  traces?
-
-Current queue: [`experiments/review_queue.md`](../experiments/review_queue.md)
-
-## Benchmark States
-
-- **Current target:** best current candidate to beat.
-- **Stable bank:** reviewed packages ready for fixed solver tests. Empty for
-  now.
-- **Fresh sweep:** a new creator run searching for better candidates.
-
-Reimbursement Forensics is the current target to beat. It is not a stable-bank
-benchmark.
-
-## Limits
-
-BenchBench does not yet prove that one model is generally the best benchmark
-designer. It shows which model produced the best candidate in these runs.
-
-It also does not prove novelty against the whole eval landscape. The similarity
-path exists, but the current evidence is still a smoke check.
+BenchBench does not yet show that one model is generally the best benchmark
+designer. It does show that Reimbursement Forensics is the strongest corrected
+historical result within these runs, while keeping its invalid original run
+outside the canonical leaderboard. It records which candidate packages
+survived the current validity, execution, and review gates.

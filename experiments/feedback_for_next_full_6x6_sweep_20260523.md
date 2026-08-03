@@ -1,5 +1,12 @@
 # Feedback Used For Experiment 007 Full 6x6 Sweep
 
+> **Historical input only. Do not reuse for a live run.** The later Decimal
+> re-audit invalidated the original Reimbursement Forensics gold, but its
+> corrected retained-prediction profile remains the #1 historical result and a
+> win over the later challengers. The public/gold precedence audit invalidated
+> Service Credit Forensics. See `registry.v1.json` and `canonical/README.md`
+> for the qualified current state.
+
 This was the creator context for Experiment 007, after the GPT, Gemini, and
 Claude Opus runs through 2026-05-23. It is kept for provenance. For the next
 live run, use `feedback_for_next_challenger_sweep_20260523.md`.
@@ -42,9 +49,12 @@ scorer rejected those type-mismatched answers.
 | Gemini 3.5 Flash | MFN-Cascade | 30/30 | 30/30 | 30/30 | 30/30 | 30/30 | 30/30 |
 | Claude Opus | Conlang Rosetta | 30/30 | 30/30 | 30/30 | 30/30 | 30/30 | 30/30 |
 
-Reimbursement Forensics is the best current candidate. Every tested solver
-gets some answers, so it does not look unknowable, but no solver gets close to
-saturation. This is the target shape.
+The table preserves the scores known when this feedback was emitted. The later
+Decimal correction changes the retained-prediction profile to `12, 16, 11,
+13, 11, 11` without rerunning a model. Reimbursement Forensics remains the #1
+corrected historical candidate: every tested solver gets some answers, but no
+solver gets close to saturation. It counts as a win over the later
+challengers, although the invalid original gold prevents canonical promotion.
 
 Cross-Document Obligation Resolution is not a keeper. The public packet lets
 solvers recover the core dates, but the scorer requires private exact labels

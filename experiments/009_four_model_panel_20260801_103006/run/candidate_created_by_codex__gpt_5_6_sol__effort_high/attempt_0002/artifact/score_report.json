@@ -1,0 +1,191 @@
+{
+  "accuracy": 1.0,
+  "benchmark": "counterfeit_clock",
+  "corrected_tick_accuracy": 1.0,
+  "exact_score": 30,
+  "missing_prediction_ids": [],
+  "per_item": [
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-001",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-002",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-003",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-004",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-005",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-006",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-007",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-008",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-009",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-010",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-011",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-012",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-013",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-014",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-015",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-016",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-017",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-018",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-019",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-020",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-021",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-022",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-023",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-024",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-025",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-026",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-027",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-028",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-029",
+      "record_id_correct": true
+    },
+    {
+      "corrected_tick_correct": true,
+      "exact": true,
+      "id": "CC-030",
+      "record_id_correct": true
+    }
+  ],
+  "record_id_accuracy": 1.0,
+  "total": 30
+}

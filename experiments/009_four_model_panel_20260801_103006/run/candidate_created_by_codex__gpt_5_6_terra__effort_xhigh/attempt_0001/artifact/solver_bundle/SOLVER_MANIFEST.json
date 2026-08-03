@@ -1,0 +1,10 @@
+{
+  "benchmark": "Patchwork Access Logic (PAL)",
+  "version": "1.0",
+  "entrypoint": "items_private_sample.jsonl",
+  "instructions": "README.md",
+  "answer_format": "one JSONL object per item with exactly id and answer",
+  "assets": ["items_private_sample.jsonl", "README.md"],
+  "contains_gold": false,
+  "contains_generator": false
+}

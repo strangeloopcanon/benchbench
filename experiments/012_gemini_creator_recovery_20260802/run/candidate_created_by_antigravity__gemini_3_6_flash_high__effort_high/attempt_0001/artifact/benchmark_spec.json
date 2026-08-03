@@ -1,0 +1,27 @@
+{
+  "benchmark_name": "RADN-Sim",
+  "version": "1.0.0",
+  "creator_model": "Gemini 3.6 Flash (High) + Antigravity",
+  "domain": "Microarchitecture / Asynchronous State Machine Simulation / Network Flow",
+  "modality": "Structured Code & Algorithmic Trace Logic",
+  "scoring_method": "Exact Match SHA-256 Hex Digest of Canonical Simulation Trace Log",
+  "external_solvability": {
+    "solvable": true,
+    "evidence": "Every problem instance in items_private_sample.jsonl includes the full network topology, queue capacities, node opcodes, initial 32-bit registers, dynamic routing policies, injection schedule, and cycle count. solver_packet.md provides a complete, deterministic, cycle-by-cycle microarchitecture phase specification with unambiguous tie-breaking and 32-bit arithmetic rules.",
+    "ideal_solver_score": "30/30 (100%)"
+  },
+  "novelty_and_differentiation": {
+    "closest_eval_families": ["LiveCodeBench", "BIG-Bench Hard", "SWE-bench"],
+    "why_not_a_duplicate": "Unlike standard LeetCode problems (LiveCodeBench) or natural language instruction following, RADN-Sim tests cycle-accurate concurrent microarchitecture state machine tracing. It requires tracking discrete clock cycle phases, dynamic backpressure stalls, priority queue tie-breaking, and bitwise state transformations simultaneously. Naive zero-shot LLMs and flawed simulators achieve near zero (0-6.7%), while a correct simulator achieves 100%."
+  },
+  "baseline_scores": {
+    "gold_reference_solver": "30/30 (1.0000)",
+    "flawed_naive_simulator_baseline": "2/30 (0.0667)",
+    "random_hash_baseline": "0/30 (0.0000)"
+  },
+  "cli_contract": {
+    "generator": "<local-home>/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/bin/python3.12 generator.py --sample-count 30 --seed 20260516 --out-dir .",
+    "verifier": "<local-home>/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/bin/python3.12 verifier.py --items solver_bundle/items_private_sample.jsonl --gold gold_private_sample.jsonl",
+    "scorer": "<local-home>/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/bin/python3.12 scorer.py --gold gold_private_sample.jsonl --predictions predictions.jsonl --out score_report.json"
+  }
+}

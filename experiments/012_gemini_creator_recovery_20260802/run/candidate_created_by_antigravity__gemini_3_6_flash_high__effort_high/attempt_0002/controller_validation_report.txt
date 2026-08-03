@@ -1,0 +1,49 @@
+missing_root_files: none
+missing_solver_bundle_files: none
+external_solvability_evidence: present in validation_report.md, README.md, benchmark_spec.json
+generation_contract_attempt_1: missing generated solver bundle files: README.md or solver_packet.md
+generation_contract_attempt_2: missing generated solver bundle files: README.md or solver_packet.md
+deterministic_generated_payload_digest: False; digests=[]
+frozen_generated_payload_digest_match: False; frozen_digest=c21c71948890cb6c42087e164fca7f477c19d42477a5ce33aad0bb494cb36965
+solver_bundle_file_count: 0
+leak_scan_matches: none
+score_gold_controller: missing or not normalizable; require total, correct, and accuracy
+score_wrong_shifted_controller: missing or not normalizable; require total, correct, and accuracy
+
+commands:
+[
+  {
+    "args": [
+      "<local-home>/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/bin/python3.12",
+      "generator.py",
+      "--sample-count",
+      "30",
+      "--seed",
+      "20260516",
+      "--out-dir",
+      "."
+    ],
+    "returncode": 0,
+    "stdout_bytes": 42,
+    "stdout_sha256": "f4fff4960b2d7f73eb5eb7a57bd295d39beb66660a94ae633a8addeed54b9f3b",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "args": [
+      "<local-home>/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/bin/python3.12",
+      "generator.py",
+      "--sample-count",
+      "30",
+      "--seed",
+      "20260516",
+      "--out-dir",
+      "."
+    ],
+    "returncode": 0,
+    "stdout_bytes": 42,
+    "stdout_sha256": "f4fff4960b2d7f73eb5eb7a57bd295d39beb66660a94ae633a8addeed54b9f3b",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

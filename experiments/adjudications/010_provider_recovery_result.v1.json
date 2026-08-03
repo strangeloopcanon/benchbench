@@ -1,0 +1,97 @@
+{
+  "schema_version": "benchbench.recovery-adjudication/v1",
+  "experiment_id": "010",
+  "outcome": "infrastructure_incomplete",
+  "canonical_eligible": false,
+  "source_run": {
+    "path": "experiments/010_four_model_panel_20260801_120442",
+    "manifest_sha256": "436d40d6fdbf41c9ae876638ebfb330e03295c15217bac625bbc15659fcc2e93",
+    "run_state_sha256": "64dc5ed3b0fac0cdef6c125ad4c0d07809a0bb5fb289810c51c391b42182f919"
+  },
+  "gemini_solver_recovery": {
+    "path": "experiments/extensions/010_gemini_permission_recovery_20260802",
+    "manifest_sha256": "62a901a931add0813e1cddb0f5b632acfa1423724d14a6ebd23af0d4725ed2a9",
+    "run_state_sha256": "e528138330b9d4a214031907977aa11effc0da18edd6ca9b05675327e2b4b24d",
+    "source_evidence_index_sha256": "f1ab8b893ad65f8d41b5110506850c265c33747675b138e5cdb6740e5143db6c",
+    "runtime_model": "Gemini 3.6 Flash (High)",
+    "cells": [
+      {
+        "candidate_id": "010-auditweave",
+        "state": "success",
+        "correct": 30,
+        "total": 30,
+        "reported_tokens": 65932
+      },
+      {
+        "candidate_id": "010-counterfactual-firewall-policy-synthesis",
+        "state": "success",
+        "correct": 30,
+        "total": 30,
+        "reported_tokens": 79025
+      },
+      {
+        "candidate_id": "010-consolidation-point",
+        "state": "success",
+        "correct": 30,
+        "total": 30,
+        "reported_tokens": 96123
+      }
+    ],
+    "result_artifacts": [
+      {
+        "path": "experiments/extensions/010_gemini_permission_recovery_20260802/run/candidate_created_by_claude_opus_5/solver_results/score_solver_antigravity__gemini_3_6_flash_high__effort_high.json",
+        "sha256": "be8ab9372886575c38a5302a6aecac26945e0e767a32df1d313e063b9cecbcb7"
+      },
+      {
+        "path": "experiments/extensions/010_gemini_permission_recovery_20260802/run/candidate_created_by_gpt_5_6_sol/solver_results/score_solver_antigravity__gemini_3_6_flash_high__effort_high.json",
+        "sha256": "dc9751082991d6d4541f464658a7f3e2a931daff009daa6caf1ac7b64aaa192b"
+      },
+      {
+        "path": "experiments/extensions/010_gemini_permission_recovery_20260802/run/candidate_created_by_gpt_5_6_terra/solver_results/score_solver_antigravity__gemini_3_6_flash_high__effort_high.json",
+        "sha256": "f333665a397270d316abe614f84ca0312fbc0e122b8b9c57ca6056b90d715afa"
+      }
+    ]
+  },
+  "gemini_creator_recovery": [
+    {
+      "path": "experiments/011_gemini_provider_recovery_20260802",
+      "manifest_sha256": "52935b1ef940d3f7a389683332af560656a1c2fb40d14b2292ca98e1b41d8a16",
+      "creator_state": "permission_denied",
+      "repair_state": "completed_invalid_candidate",
+      "valid_candidates": 0,
+      "reported_tokens": 215678
+    },
+    {
+      "path": "experiments/012_gemini_creator_recovery_20260802",
+      "manifest_sha256": "b883e1433aea6955b7c226ff5dd57c328294b98e59f84ba11e87bc7c3c127082",
+      "creator_state": "completed_invalid_candidate",
+      "repair_state": "completed_invalid_candidate",
+      "valid_candidates": 0,
+      "reported_tokens": 557113
+    }
+  ],
+  "opus": {
+    "requested_model": "claude-opus-5-thinking-high",
+    "runtime_identity": "requested_unverified",
+    "completed_original_solver_cells": 1,
+    "did_not_complete_original_solver_cells": 2,
+    "retry_state": "not_run_live_cursor_disabled"
+  },
+  "usage": {
+    "original_reported_tokens": 7036873,
+    "recovery_reported_tokens": 1013871,
+    "recovery_aware_reported_tokens": 8050744,
+    "zero_telemetry_timeout_reservation_tokens": 10000000,
+    "qualification": "Timeout reservations are controller accounting, not provider-reported consumption."
+  },
+  "historical_comparison": {
+    "leader_candidate_id": "004-reimbursement-forensics",
+    "rank": 1,
+    "verdict": "win_over_challengers",
+    "basis": "Reimbursement Forensics retains the corrected 12/30, 16/30, 11/30, 13/30, 11/30, 11/30 profile; every completed Experiment 010 solver cell is 30/30."
+  },
+  "report": {
+    "path": "experiments/adjudications/010_provider_recovery_20260802.md",
+    "sha256": "fe7aa654285c8f9d6f71e1b4f06d7acaed9fb1b34fad6daa6ddf438b27f976ec"
+  }
+}

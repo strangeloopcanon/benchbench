@@ -1,0 +1,195 @@
+{
+  "benchmark": "Patchwork Access Logic (PAL) v1",
+  "duplicate_prediction_ids": 0,
+  "extra_item_ids": [],
+  "item_results": [
+    {
+      "exact": true,
+      "id": "pal-001",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-002",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-003",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-004",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-005",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-006",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-007",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-008",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-009",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-010",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-011",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-012",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-013",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-014",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-015",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-016",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-017",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-018",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-019",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-020",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-021",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-022",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-023",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-024",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-025",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-026",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-027",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-028",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-029",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    },
+    {
+      "exact": true,
+      "id": "pal-030",
+      "query_components_correct": 10,
+      "query_components_total": 10
+    }
+  ],
+  "items": 30,
+  "malformed_prediction_rows": 0,
+  "missing_item_ids": [],
+  "query_provenance_accuracy": 1.0,
+  "query_provenance_components_correct": 300,
+  "query_provenance_components_total": 300,
+  "strict_score": 30,
+  "strict_score_out_of": 30
+}

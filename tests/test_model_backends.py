@@ -3,21 +3,29 @@ import subprocess
 import tempfile
 import time
 import unittest
+from unittest.mock import patch
 
 import benchbench_model_backends as backends
 from benchbench_model_backends import (
+    antigravity_tokens_used,
     antigravity_model_id_from_label,
-    antigravity_model_setting,
     claude_cache_summary,
     claude_tokens_used,
+    codex_supported_efforts,
     cursor_tokens_used,
+    effective_effort,
     parse_antigravity_selected_label,
     parse_model_spec,
+    preflight_model,
+    run_antigravity_model,
+    run_claude_model,
     run_cmd,
+    run_codex_model,
+    run_cursor_model,
     safe_name,
 )
 from benchbench_results import extract_predictions, extract_solver_predictions, score_summary
-from run_broad_three_model_sweep import DEFAULT_MODELS, candidate_card_lines, candidate_status, resolve_model_lists
+from run_broad_three_model_sweep import DEFAULT_MODELS, candidate_card_lines, candidate_status, resolve_model_lists, resolve_panel_policy
 from scripts.build_benchmark_landscape_pack import model_from_safe_slug, solver_model_from_score_path
 
 
@@ -28,10 +36,41 @@ class ModelBackendTests(unittest.TestCase):
         self.assertEqual(spec.codex_model, "gpt-5.5")
         self.assertEqual(spec.agent_label, "gpt-5.5+Codex")
 
+    def test_panel_specs_preserve_per_model_effort(self) -> None:
+        sol = parse_model_spec("gpt-5.6-sol@high")
+        terra = parse_model_spec("gpt-5.6-terra@xhigh")
+        self.assertEqual((sol.codex_model, effective_effort(sol, "low")), ("gpt-5.6-sol", "high"))
+        self.assertEqual((terra.codex_model, effective_effort(terra, "low")), ("gpt-5.6-terra", "xhigh"))
+
+        gemini = parse_model_spec("agy:gemini-3.6-flash-high@high")
+        self.assertEqual(gemini.antigravity_model, "gemini-3.6-flash-high")
+        self.assertEqual(gemini.antigravity_expected_label, "Gemini 3.6 Flash (High)")
+        self.assertEqual(gemini.reasoning_effort, "high")
+
+        opus = parse_model_spec("cursor:claude-opus-5@high")
+        self.assertEqual(opus.cursor_model, "claude-opus-5-thinking-high")
+        self.assertEqual(opus.reasoning_effort, "high")
+
+    def test_unknown_model_effort_is_rejected(self) -> None:
+        with self.assertRaisesRegex(ValueError, "Unsupported reasoning effort"):
+            parse_model_spec("gpt-5.6-sol@extreme")
+
+    def test_codex_catalog_efforts_are_scoped_to_requested_model(self) -> None:
+        catalog = (
+            '{"models":['
+            '{"slug":"gpt-5.6-sol","supported_reasoning_levels":[{"effort":"high"}]},'
+            '{"slug":"gpt-5.6-terra","supported_reasoning_levels":[{"effort":"xhigh"}]}'
+            ']}'
+        )
+        self.assertEqual(codex_supported_efforts(catalog, "gpt-5.6-sol"), {"high"})
+        self.assertEqual(codex_supported_efforts(catalog, "gpt-5.6-terra"), {"xhigh"})
+        self.assertIsNone(codex_supported_efforts(catalog, "missing"))
+
     def test_antigravity_known_model_spec(self) -> None:
         spec = parse_model_spec("agy:gemini-3.5-flash-high")
         self.assertEqual(spec.provider, "antigravity")
         self.assertEqual(spec.name, "gemini-3.5-flash-high")
+        self.assertEqual(spec.antigravity_model, "gemini-3.5-flash-high")
         self.assertEqual(spec.antigravity_expected_label, "Gemini 3.5 Flash (High)")
         self.assertEqual(spec.agent_label, "Gemini 3.5 Flash (High)+Antigravity")
 
@@ -39,8 +78,13 @@ class ModelBackendTests(unittest.TestCase):
         spec = parse_model_spec("agy:gemini-3.1-pro")
         self.assertEqual(spec.provider, "antigravity")
         self.assertEqual(spec.name, "gemini-3.1-pro")
+        self.assertEqual(spec.antigravity_model, "gemini-3.1-pro-high")
         self.assertEqual(spec.antigravity_expected_label, "Gemini 3.1 Pro (High)")
         self.assertEqual(spec.agent_label, "Gemini 3.1 Pro (High)+Antigravity")
+
+    def test_unknown_antigravity_model_is_passed_explicitly(self) -> None:
+        spec = parse_model_spec("agy:typo-model")
+        self.assertEqual(spec.antigravity_model, "typo-model")
 
     def test_antigravity_claude_model_spec(self) -> None:
         spec = parse_model_spec("agy:claude-sonnet-4.6-thinking")
@@ -72,6 +116,35 @@ class ModelBackendTests(unittest.TestCase):
 
         xhigh = parse_model_spec("cursor:fable-xhigh")
         self.assertEqual(xhigh.cursor_model, "claude-fable-5-thinking-xhigh")
+
+    def test_artifact_ids_are_provider_qualified(self) -> None:
+        codex = parse_model_spec("gpt-5.2")
+        cursor = parse_model_spec("cursor:gpt-5.2")
+        self.assertEqual(codex.artifact_id, "codex__gpt_5_2")
+        self.assertEqual(cursor.artifact_id, "cursor__gpt_5_2")
+        self.assertNotEqual(codex.artifact_id, cursor.artifact_id)
+
+    def test_aliases_collapse_to_the_same_concrete_provider_identity(self) -> None:
+        opus_alias = parse_model_spec("cursor:opus-5")
+        opus_named = parse_model_spec("cursor:claude-opus-5")
+        opus_concrete = parse_model_spec("cursor:claude-opus-5-thinking-high")
+        self.assertEqual(
+            {opus_alias.artifact_id, opus_named.artifact_id, opus_concrete.artifact_id},
+            {"cursor__claude_opus_5_thinking_high"},
+        )
+
+        flash_alias = parse_model_spec("agy:gemini-3.6-flash")
+        flash_concrete = parse_model_spec("agy:gemini-3.6-flash-high")
+        self.assertEqual(
+            flash_alias.artifact_id,
+            flash_concrete.artifact_id,
+        )
+
+    def test_historical_xhigh_score_names_preserve_model_identity(self) -> None:
+        for filename in ("score_solver_xhigh_gpt_5_5.json", "score_solver_gpt_5_5_xhigh.json"):
+            model, effort = solver_model_from_score_path(Path(filename))
+            self.assertEqual(model, "gpt-5.5")
+            self.assertEqual(effort, "xhigh")
 
     def test_claude_usage_parser_counts_cache_tokens(self) -> None:
         data = {
@@ -121,6 +194,18 @@ class ModelBackendTests(unittest.TestCase):
         }
         self.assertEqual(cursor_tokens_used(data), 26)
 
+    def test_antigravity_usage_parser_prefers_provider_total(self) -> None:
+        data = {
+            "usage": {
+                "input_tokens": 19,
+                "output_tokens": 5,
+                "thinking_tokens": 3,
+                "cache_read_tokens": 2,
+                "total_tokens": 24,
+            }
+        }
+        self.assertEqual(antigravity_tokens_used(data), 24)
+
     def test_antigravity_label_parser_uses_last_label(self) -> None:
         text = '\n'.join(
             [
@@ -132,28 +217,175 @@ class ModelBackendTests(unittest.TestCase):
         self.assertEqual(antigravity_model_id_from_label("Gemini 3.5 Flash (High)"), "gemini-3.5-flash-high")
         self.assertEqual(antigravity_model_id_from_label("Gemini 3.1 Pro (High)"), "gemini-3.1-pro")
 
-    def test_antigravity_model_setting_restores_original_file(self) -> None:
-        original_settings_path = backends.ANTIGRAVITY_SETTINGS_PATH
-        original_lock_path = backends.ANTIGRAVITY_SETTINGS_LOCK_PATH
-        with tempfile.TemporaryDirectory(prefix="benchbench-agy-settings-test.") as tmp:
+    def test_codex_runtime_identity_is_verified_from_provider_banner(self) -> None:
+        spec = parse_model_spec("gpt-5.6-sol@high")
+        good = backends.codex_runtime_metadata(
+            "model: gpt-5.6-sol\nreasoning effort: high\n",
+            spec,
+            "high",
+        )
+        self.assertFalse(good["model_mismatch"])
+        self.assertEqual(good["runtime_model_reported"], "gpt-5.6-sol")
+        self.assertTrue(
+            backends.codex_runtime_metadata(
+                "model: fallback\nreasoning effort: high\n",
+                spec,
+                "high",
+            )["model_mismatch"]
+        )
+        self.assertTrue(backends.codex_runtime_metadata("", spec, "high")["model_mismatch"])
+
+    def test_provider_commands_use_safe_modes_without_permission_bypass(self) -> None:
+        completed = subprocess.CompletedProcess([], 0, '{"result":"ok","usage":{}}', "")
+        with tempfile.TemporaryDirectory(prefix="benchbench-safe-backends-test.") as tmp:
             tmp_path = Path(tmp)
-            backends.ANTIGRAVITY_SETTINGS_PATH = tmp_path / "settings.json"
-            backends.ANTIGRAVITY_SETTINGS_LOCK_PATH = tmp_path / "settings.lock"
-            try:
-                backends.ANTIGRAVITY_SETTINGS_PATH.write_text(
-                    '{"model":"Gemini 3.5 Flash (High)","x":1}\n',
-                    encoding="utf-8",
+            with patch.object(backends, "run_cmd", return_value=completed) as run:
+                run_codex_model(parse_model_spec("gpt-5.5"), "prompt", tmp_path / "codex.txt", tmp_path, "high", 5)
+                codex_cmd = run.call_args.args[0]
+                self.assertIn("danger-full-access", codex_cmd)
+                self.assertIn("--ignore-user-config", codex_cmd)
+                self.assertIn('model_provider="benchbench_chatgpt"', codex_cmd)
+                self.assertIn(
+                    'model_providers.benchbench_chatgpt.auth.command="/usr/bin/printenv"',
+                    codex_cmd,
                 )
-                with antigravity_model_setting("Gemini 3.1 Pro (High)"):
-                    text = backends.ANTIGRAVITY_SETTINGS_PATH.read_text(encoding="utf-8")
-                    self.assertIn('"model": "Gemini 3.1 Pro (High)"', text)
-                self.assertEqual(
-                    backends.ANTIGRAVITY_SETTINGS_PATH.read_text(encoding="utf-8"),
-                    '{"model":"Gemini 3.5 Flash (High)","x":1}\n',
+                self.assertIn("shell_environment_policy.inherit=none", codex_cmd)
+                self.assertIn(
+                    'shell_environment_policy.exclude=["^BENCHBENCH_CODEX_BEARER_TOKEN$","^BENCHBENCH_CODEX_ACCOUNT_ID$"]',
+                    codex_cmd,
                 )
-            finally:
-                backends.ANTIGRAVITY_SETTINGS_PATH = original_settings_path
-                backends.ANTIGRAVITY_SETTINGS_LOCK_PATH = original_lock_path
+                self.assertNotIn("--dangerously-bypass-approvals-and-sandbox", codex_cmd)
+
+                run_antigravity_model(parse_model_spec("agy:gemini-3.1-pro"), "prompt", tmp_path / "agy.txt", tmp_path, "high", 5)
+                agy_cmd = run.call_args.args[0]
+                self.assertIn("--model", agy_cmd)
+                self.assertIn("gemini-3.1-pro-high", agy_cmd)
+                self.assertEqual(agy_cmd[agy_cmd.index("--effort") + 1], "high")
+                self.assertIn("--sandbox", agy_cmd)
+                self.assertNotIn("--dangerously-skip-permissions", agy_cmd)
+
+                run_claude_model(parse_model_spec("claude:sonnet"), "prompt", tmp_path / "claude.txt", tmp_path, "high", 5)
+                claude_cmd = run.call_args.args[0]
+                self.assertEqual(claude_cmd[claude_cmd.index("--permission-mode") + 1], "default")
+                self.assertNotIn("bypassPermissions", claude_cmd)
+
+                run_cursor_model(parse_model_spec("cursor:claude-opus-5"), "prompt", tmp_path / "cursor.txt", tmp_path, "high", 5)
+                cursor_cmd = run.call_args.args[0]
+                self.assertEqual(cursor_cmd[cursor_cmd.index("--model") + 1], "claude-opus-5-thinking-high")
+                self.assertEqual(cursor_cmd[cursor_cmd.index("--sandbox") + 1], "enabled")
+                self.assertNotIn("--force", cursor_cmd)
+                self.assertIn("--trust", cursor_cmd)
+                self.assertNotIn("--yolo", cursor_cmd)
+
+    def test_antigravity_permission_denial_is_not_reported_as_success(self) -> None:
+        completed = subprocess.CompletedProcess(
+            [],
+            0,
+            '{"status":"CANCELED","response":"","usage":{"total_tokens":123}}',
+            'jetski: no output produced — a tool required the "read_file" permission '
+            "that headless mode cannot prompt for, so it was auto-denied.",
+        )
+        with tempfile.TemporaryDirectory(prefix="benchbench-agy-denial-test.") as tmp:
+            tmp_path = Path(tmp)
+            with patch.object(backends, "run_cmd", return_value=completed):
+                result = run_antigravity_model(
+                    parse_model_spec("agy:gemini-3.1-pro"),
+                    "prompt",
+                    tmp_path / "agy.txt",
+                    tmp_path,
+                    "high",
+                    5,
+                )
+        self.assertEqual(result["returncode"], 77)
+        self.assertTrue(result["permission_denied"])
+        self.assertEqual(result["tokens_used"], 123)
+
+    def test_antigravity_canceled_status_fails_even_without_permission_stderr(self) -> None:
+        completed = subprocess.CompletedProcess(
+            [],
+            0,
+            '{"status":"CANCELED","response":"partial","usage":{"total_tokens":7}}',
+            "",
+        )
+        with tempfile.TemporaryDirectory(prefix="benchbench-agy-canceled-test.") as tmp:
+            tmp_path = Path(tmp)
+            with patch.object(backends, "run_cmd", return_value=completed):
+                result = run_antigravity_model(
+                    parse_model_spec("agy:gemini-3.1-pro"),
+                    "prompt",
+                    tmp_path / "agy.txt",
+                    tmp_path,
+                    "high",
+                    5,
+                )
+        self.assertEqual(result["returncode"], 78)
+        self.assertEqual(result["antigravity_status"], "CANCELED")
+        self.assertFalse(result["permission_denied"])
+
+    def test_antigravity_missing_status_fails_closed(self) -> None:
+        completed = subprocess.CompletedProcess([], 0, '{"response":"answer"}', "")
+        with tempfile.TemporaryDirectory(prefix="benchbench-agy-status-test.") as tmp:
+            tmp_path = Path(tmp)
+            with patch.object(backends, "run_cmd", return_value=completed):
+                result = run_antigravity_model(
+                    parse_model_spec("agy:gemini-3.1-pro"),
+                    "prompt",
+                    tmp_path / "agy.txt",
+                    tmp_path,
+                    "high",
+                    5,
+                )
+        self.assertEqual(result["returncode"], 78)
+        self.assertIsNone(result["antigravity_status"])
+
+    def test_preflight_reports_missing_binary_without_inference(self) -> None:
+        with tempfile.TemporaryDirectory(prefix="benchbench-preflight-test.") as tmp:
+            with patch.object(backends.shutil, "which", return_value=None):
+                result = preflight_model(parse_model_spec("cursor:fable"), Path(tmp))
+        self.assertEqual(result["state"], "binary_missing")
+        self.assertEqual(result["returncode"], 127)
+        self.assertFalse(result["inference_attempted"])
+        self.assertIsNone(result["model_available"])
+
+    def test_preflight_lists_cursor_models_without_inference(self) -> None:
+        with tempfile.TemporaryDirectory(prefix="benchbench-preflight-test.") as tmp:
+            spec = parse_model_spec("cursor:fable")
+            responses = [
+                subprocess.CompletedProcess(["cursor-agent", "--help"], 0, "safe help", ""),
+                subprocess.CompletedProcess(["cursor-agent", "--list-models"], 0, "claude-fable-5-thinking-high", ""),
+            ]
+            with (
+                patch.object(backends.shutil, "which", return_value="/mock/cursor-agent"),
+                patch.object(backends, "run_cmd", side_effect=responses) as run,
+            ):
+                result = preflight_model(spec, Path(tmp))
+        self.assertEqual(result["state"], "binary_ready")
+        self.assertTrue(result["model_listing_supported"])
+        self.assertTrue(result["model_available"])
+        self.assertFalse(result["inference_attempted"])
+        self.assertEqual(run.call_args_list[0].args[0], ["/mock/cursor-agent", "--help"])
+        self.assertEqual(run.call_args_list[1].args[0], ["/mock/cursor-agent", "--list-models"])
+
+    def test_preflight_rejects_near_prefix_model_ids(self) -> None:
+        with tempfile.TemporaryDirectory(prefix="benchbench-preflight-test.") as tmp:
+            spec = parse_model_spec("cursor:claude-fable-5-thinking")
+            responses = [
+                subprocess.CompletedProcess(["cursor-agent", "--help"], 0, "safe help", ""),
+                subprocess.CompletedProcess(
+                    ["cursor-agent", "--list-models"],
+                    0,
+                    "claude-fable-5-thinking-high",
+                    "",
+                ),
+            ]
+            with (
+                patch.object(backends.shutil, "which", return_value="/mock/cursor-agent"),
+                patch.object(backends, "run_cmd", side_effect=responses),
+            ):
+                result = preflight_model(spec, Path(tmp))
+        self.assertEqual(result["state"], "model_unavailable")
+        self.assertFalse(result["model_available"])
+        self.assertFalse(result["inference_attempted"])
 
     def test_run_cmd_timeout_kills_child_process_group(self) -> None:
         with tempfile.TemporaryDirectory(prefix="benchbench-timeout-test.") as tmp:
@@ -238,9 +470,33 @@ class ModelBackendTests(unittest.TestCase):
         self.assertEqual(candidate_status([{"total": 30, "correct": 15, "accuracy": 0.5}]), "reject")
 
     def test_sweep_model_panels_can_separate_creators_and_solvers(self) -> None:
+        self.assertEqual(
+            DEFAULT_MODELS,
+            [
+                "gpt-5.6-sol@high",
+                "gpt-5.6-terra@xhigh",
+                "agy:gemini-3.6-flash-high@high",
+                "cursor:claude-opus-5@high",
+            ],
+        )
         creators, solvers = resolve_model_lists(None, None, None)
         self.assertEqual(creators, DEFAULT_MODELS)
         self.assertEqual(solvers, DEFAULT_MODELS)
+
+    def test_experiment_010_rejects_any_non_frontier_panel_before_launch(self) -> None:
+        exact = ["one", "two", "three", "four"]
+        self.assertEqual(
+            resolve_panel_policy(Path("experiments/010_four_model_panel"), exact, exact, exact, exact),
+            "benchbench.frontier-four/2026-08-01",
+        )
+        with self.assertRaisesRegex(ValueError, "Experiment 010 requires the exact"):
+            resolve_panel_policy(
+                Path("experiments/010_four_model_panel"),
+                exact[:-1],
+                exact,
+                exact,
+                exact,
+            )
 
         creators, solvers = resolve_model_lists(
             ["gpt-5.2", "gpt-5.4"],
@@ -268,11 +524,12 @@ class ModelBackendTests(unittest.TestCase):
             (tmp_path / "score_solver_gpt_5_2.json").write_text('{"correct": 7, "total": 30}\n', encoding="utf-8")
 
             spec = parse_model_spec("gpt-5.2")
-            lines = candidate_card_lines(
-                spec,
-                tmp_path,
-                {"valid": True, "bundle_file_count": 3, "leak_matches": []},
-            )
+            with patch("run_broad_three_model_sweep.MODEL_SPECS", [spec]):
+                lines = candidate_card_lines(
+                    spec,
+                    tmp_path,
+                    {"valid": True, "bundle_file_count": 3, "leak_matches": []},
+                )
             text = "\n".join(lines)
             self.assertIn("What it asks: Answer messy document questions.", text)
             self.assertIn("Intended capability: Cross-document evidence use.", text)

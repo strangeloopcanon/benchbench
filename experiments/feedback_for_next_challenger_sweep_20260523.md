@@ -1,37 +1,45 @@
 # Feedback For Next Challenger Sweep
 
+> **Superseded; do not pass this file to a creator.** Reimbursement Forensics is
+> the #1 corrected historical candidate and a win over the challengers, but
+> its original gold is invalid under the Decimal half-up re-audit and it is not
+> a canonical incumbent. The current registry has no validated incumbent. See
+> `registry.v1.json`.
+
 Use this as `--feedback-context` after the review queue has been checked.
 
 BenchBench evaluates benchmark invention. The next creator should try to beat
-the frozen incumbent, not recreate it.
+the corrected historical leader, not recreate it.
 
 ## Target To Beat
 
-Current frozen incumbent: **Reimbursement Forensics**, created by GPT-5.2 in
+Corrected historical #1: **Reimbursement Forensics**, created by GPT-5.2 in
 Experiment 004.
 
 Solver scores:
 
 | GPT-5.2 | GPT-5.4 | GPT-5.5 | Gemini 3.1 Pro | Gemini 3.5 Flash | Claude Opus |
 |---:|---:|---:|---:|---:|---:|
-| 10/30 | 14/30 | 11/30 | 12/30 | 11/30 | 11/30 |
+| 12/30 | 16/30 | 11/30 | 13/30 | 11/30 | 11/30 |
 
 This is the desired shape: every strong solver finds some answers, and none
 solves the task.
 
-Audit note: this is the target to beat, not a promoted stable benchmark. A
-human still needs to check leakage, answer evidence, scorer fairness, and
-external solvability before it enters the benchmark bank.
+Audit note: these are retained predictions rescored against independently
+recomputed Decimal gold; no model was rerun. This counts as a historical win
+over the challengers, not as a promoted stable benchmark. The original run's
+emitted gold was invalid, so a repaired version still needs validation and a
+fresh panel before it can enter the benchmark bank.
 
 ## Latest Challenger Sweep
 
 Experiment 007 gave all six creators the prior failure report, then ran all six
 solvers on the new candidates. The canonical comparison carries GPT-5.2's
-frozen incumbent forward and treats the other rows as challengers.
+corrected historical leader forward and treats the other rows as challengers.
 
 | creator | benchmark | GPT-5.2 | GPT-5.4 | GPT-5.5 | Gemini 3.1 Pro | Gemini 3.5 Flash | Claude Opus | read |
 |---|---|---:|---:|---:|---:|---:|---:|---|
-| GPT-5.2 (frozen) | Reimbursement Forensics | 10/30 | 14/30 | 11/30 | 12/30 | 11/30 | 11/30 | incumbent |
+| GPT-5.2 (corrected history) | Reimbursement Forensics | 12/30 | 16/30 | 11/30 | 13/30 | 11/30 | 11/30 | #1 historical; win |
 | GPT-5.4 | Catalog Royalty Forensics | 27/30 | 30/30 | 27/30 | 25/30 | 27/30 | 25/30 | too easy |
 | GPT-5.5 | Prior Authorization Forensics | 25/30 | 24/30 | 24/30 | 23/30 | 24/30 | 24/30 | too easy |
 | Gemini 3.1 Pro | Commercial Lease CAM Reconciliation | 1/30 | 26/30 | 26/30 | 16/30 | 18/30 | 26/30 | diagnostic spread, too easy |
@@ -40,6 +48,9 @@ frozen incumbent forward and treats the other rows as challengers.
 
 Two notes matter:
 
+- Reimbursement Forensics is the only complete row that keeps all six solvers
+  low and nonzero. The corrected result beats the challengers as a historical
+  comparison, while its invalid original gold keeps it noncanonical.
 - Raw Experiment 007's GPT-5.2 row was Service Credit Forensics. It scored
   0/30 for all six solvers and needs a solvability/scorer audit before it can
   count as hard.

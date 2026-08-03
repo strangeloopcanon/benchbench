@@ -1,0 +1,159 @@
+{
+  "schema_version": 2,
+  "benchmark_name": "RADN-Sim",
+  "total": 30,
+  "correct": 2,
+  "accuracy": 0.06666666666666667,
+  "details": {
+    "radn_item_001": {
+      "correct": false,
+      "gold": "fa4c36eb767ea683b9447a39982082c38a5e870d36b66bdc451027ef52ce7bd7",
+      "prediction": "ae3e0d9691a4f968462f46b93e0a6fecfb1c1c965922f49fd23bd4845c39cda9"
+    },
+    "radn_item_002": {
+      "correct": true,
+      "gold": "2f1aee266eb43dacb8640b4abfb868bb7b96f06ac3957be55026a7c2ad9e49b2",
+      "prediction": "2f1aee266eb43dacb8640b4abfb868bb7b96f06ac3957be55026a7c2ad9e49b2"
+    },
+    "radn_item_003": {
+      "correct": false,
+      "gold": "57ec1df5bc963ceee38237b288f1d9868630da88d945715189bdd74207314b5d",
+      "prediction": "e875ba9374c8866427b87b4b35f1998e67d599715012b21b12730156cec34847"
+    },
+    "radn_item_004": {
+      "correct": false,
+      "gold": "39c1ab66716ee46e531b07434058da7d3b5089319b5f7b8bd7957862815139aa",
+      "prediction": "e077cb3c77f7f9c8af0877fee71f5fe17e1d2fb13fb4bbe0e0bfa00ed4082186"
+    },
+    "radn_item_005": {
+      "correct": false,
+      "gold": "99e2a6fb1eeb1e3be7106e8bb37efcd90ee12267a6a73d8855d9cc4bbebae131",
+      "prediction": "58bf5c752aa13de2e35edf7f8150cc7187d1aa859acc35cd6f9f53a95bf7b6e7"
+    },
+    "radn_item_006": {
+      "correct": false,
+      "gold": "a1d80eaf27df2901a9a9b8b5794497acf6c1a062af5ba98e626e9f87ac84a5e9",
+      "prediction": "be05f359854bdd4cdb6f788afdf0af22f425cc99fe812f849d941177819895ef"
+    },
+    "radn_item_007": {
+      "correct": false,
+      "gold": "cf0bce8ce2b998a458a4dedd4fc8519a2ff6bc3610cf255d26cd420840f5c913",
+      "prediction": "31a853d8fe72863ed1077650a22265e1486bdd3955cbc4006c16cceeea9f0af1"
+    },
+    "radn_item_008": {
+      "correct": false,
+      "gold": "ada2f3786fe346a883d1637b2efb0d62a7aac5f1914207f25bb8002ff712a1a5",
+      "prediction": "c1f5dd626101da8666295fc6c15287e15ae89264be2f7d6239d1042b31cae904"
+    },
+    "radn_item_009": {
+      "correct": false,
+      "gold": "87b441b5fb4ef10d05c7226442f066801b1002e4379ccf74b79d38808424b86e",
+      "prediction": "4dc715651d80875aaa634ab8a8cb479d68bb768c584ef79a75155912ff2dc128"
+    },
+    "radn_item_010": {
+      "correct": false,
+      "gold": "3e631bc35b148c30f400bb7a322000f7783c248912c28d549fdca62763c5d764",
+      "prediction": "4d9b208d0b76a06a3b2368903189222b1c33283909a48d71bdd62a9c5e3a6ee9"
+    },
+    "radn_item_011": {
+      "correct": false,
+      "gold": "82ea1c03d7f59605ac6eea486324114256ad91e414265738c6c5e62295faa6ab",
+      "prediction": "d01e6411d094d6a0fcfcdc693783af429c2c24e1145548e538997e2444f42c78"
+    },
+    "radn_item_012": {
+      "correct": false,
+      "gold": "d0477cec953d1965f2b4683066a73fa5b7edd48d28ec5059fa17089dbda84a58",
+      "prediction": "814137340bfc9f8d8952c0ed5dd1fa05d0277cc41f260fd4c6b43724be864d71"
+    },
+    "radn_item_013": {
+      "correct": false,
+      "gold": "a9996e24fddd0c3f6fae2d39ee8857866dbe43c3972ba0b8417983d1b02fe856",
+      "prediction": "eb1a0c22ec2ae6d87e61468d888e1b2f40495738126bba07afd410c163ba5379"
+    },
+    "radn_item_014": {
+      "correct": false,
+      "gold": "4c6cf2acf5229675c461c0aaabb62cdc7c59c8d06edc75c9606b6b7f64bb10b1",
+      "prediction": "904f5f8daf220c909d58441e565552aedf4d2167fd331a91a712288e0078fc30"
+    },
+    "radn_item_015": {
+      "correct": false,
+      "gold": "3292c21748b57d090ae61d949eb8a1185df19eb4afbde6aae801ad6c89b5928c",
+      "prediction": "4dea23cd9224090e2cc363e61be3b78c6be39e10fe091f8a465ce63498c4a107"
+    },
+    "radn_item_016": {
+      "correct": false,
+      "gold": "d493f35b8ff1d5f22a93b36fc1206cadda76f02b0f4e41294f1bc8374406cd65",
+      "prediction": "4aa588f884658e02e6ac54d3a0a895f41f553c6ba83f0764af3741ba66ff961b"
+    },
+    "radn_item_017": {
+      "correct": false,
+      "gold": "55e1c8d71e5e94a213385c4b70f0e3215d6f309b6a18530958f1f50341f0afa9",
+      "prediction": "f54fe0352beff5714e94922cdc5703a7059ef58fae06b03f9c316ce796435b6b"
+    },
+    "radn_item_018": {
+      "correct": false,
+      "gold": "e6cb48f6ff2cae844ff76444185a0c6750ef8557f02697d3faabdd3559488974",
+      "prediction": "607f8f3e3fb1fd1ba80857e3b4d97aca5a1e090ba58ef54a161ed778e52afc9e"
+    },
+    "radn_item_019": {
+      "correct": false,
+      "gold": "50be0ec9c080fff07447b29a7d27e2d5d1356bdc062ab852e35847972e9200fb",
+      "prediction": "f96e561c15d1e194f166625c3e2ad564156fd42f417a85d4823d43629bce450c"
+    },
+    "radn_item_020": {
+      "correct": false,
+      "gold": "ab974beaf31e95b7d3a1d12ed5d0e6ceb98ef6dc3183646fe7e02d1df9e8652b",
+      "prediction": "43b23645617e7d1ec343f77a2a818114c9e0006cd033d4450b351753c2681293"
+    },
+    "radn_item_021": {
+      "correct": false,
+      "gold": "4d8f07aee89ff4b8429af8b6f14a74c54d798fb202e72d5f4b7d8d0957c80d5e",
+      "prediction": "ba8f1b820f717b0d03bc9f68bdadf718db94672389dc8e01c8eef4dc66535113"
+    },
+    "radn_item_022": {
+      "correct": false,
+      "gold": "9398b1c74aef29230a4ed828b382574c8d5c735105178d740f65f7f967525156",
+      "prediction": "d7fe1ee0c8b1eb2d8322b82976e01797e27c76214f9ef222fda3adecc4aeb0e5"
+    },
+    "radn_item_023": {
+      "correct": false,
+      "gold": "5974b3929f362513da815b045a510268b0e7a01ed0f0c84ce506a7978a2e8f19",
+      "prediction": "ca06314f5d2b21845c91d37abfdcd76b9049579b1ae92c6e0dedb262d1558cca"
+    },
+    "radn_item_024": {
+      "correct": false,
+      "gold": "ac553760d8ffc70bf6aa9b3d2914a2006fb08b94172103669df9bd83610b5737",
+      "prediction": "df2798ec04949d5879a62bf9ec7411635014918761784adc51f0f4ef3cf2c67b"
+    },
+    "radn_item_025": {
+      "correct": false,
+      "gold": "9a5ad014dcb73836f15c9a4d0e3039d80649100beb413b718ac075dd3afaeb7a",
+      "prediction": "5f63be5df921101ad07fcd31f789ff0790678798c8dce0f1938e2d9bde8e3708"
+    },
+    "radn_item_026": {
+      "correct": false,
+      "gold": "fc6229344173132f9a3eb11322ad94085ca607b8e1e3356f40da52b12ee1ba05",
+      "prediction": "bddde58f8b468d59c320e28d9c4bd5dacf348e2023e33f638aa72466202c9a07"
+    },
+    "radn_item_027": {
+      "correct": false,
+      "gold": "67763223d2ece34402fe7978dd7e48a6beeea76963dc2054091a6bd201e4347b",
+      "prediction": "9302f24c77f02aaff58e54c2cb29ef318894437ac765f415b355138f66d6e0d9"
+    },
+    "radn_item_028": {
+      "correct": true,
+      "gold": "4f3169f6835e3c783ea8c988f198ce7ad6ca13f2ff1fd84ba0a97151db239917",
+      "prediction": "4f3169f6835e3c783ea8c988f198ce7ad6ca13f2ff1fd84ba0a97151db239917"
+    },
+    "radn_item_029": {
+      "correct": false,
+      "gold": "547c434fe62ac7e92f375bef143e05035115aceb387232dbe935ccc2bd6329fa",
+      "prediction": "7262c520fbff70d871aedcc0aa85ad5e8300becd23aa6e15abe5ab76d0d40afd"
+    },
+    "radn_item_030": {
+      "correct": false,
+      "gold": "d86133b5839b3c863a0758567e44b1771782e596ff75b5c0ef1bdcc0b980381f",
+      "prediction": "fd27a1ffb492d50a561a9e3e78429497f0a9e05e5857cd84de35ca40ae3f3009"
+    }
+  }
+}

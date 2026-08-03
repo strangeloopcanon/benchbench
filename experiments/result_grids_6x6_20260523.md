@@ -1,5 +1,3 @@
-# 6x6 Result Grids - 2026-05-23
+# 6x6 Result Grids - Superseded
 
-The canonical presentation is now [`canonical/README.md`](canonical/README.md).
-
-This file is kept as a stable link. The raw experiment folders are unchanged. In the canonical Round 3 grid, GPT-5.2's frozen Reimbursement Forensics row is carried forward from Round 2; raw Experiment 007's Service Credit Forensics row remains a scorer/solvability problem case.
+Reimbursement Forensics had invalid original gold and is not a canonical incumbent. After Decimal correction and rescoring retained predictions without a model rerun, it remains the #1 corrected historical candidate and a win over the later challengers. See [`canonical/README.md`](canonical/README.md) and `registry.v1.json` for the qualified adjudicated state.

@@ -1,0 +1,159 @@
+{
+  "schema_version": 2,
+  "benchmark_name": "RADN-Sim",
+  "total": 30,
+  "correct": 30,
+  "accuracy": 1.0,
+  "details": {
+    "radn_item_001": {
+      "correct": true,
+      "gold": "fa4c36eb767ea683b9447a39982082c38a5e870d36b66bdc451027ef52ce7bd7",
+      "prediction": "fa4c36eb767ea683b9447a39982082c38a5e870d36b66bdc451027ef52ce7bd7"
+    },
+    "radn_item_002": {
+      "correct": true,
+      "gold": "2f1aee266eb43dacb8640b4abfb868bb7b96f06ac3957be55026a7c2ad9e49b2",
+      "prediction": "2f1aee266eb43dacb8640b4abfb868bb7b96f06ac3957be55026a7c2ad9e49b2"
+    },
+    "radn_item_003": {
+      "correct": true,
+      "gold": "57ec1df5bc963ceee38237b288f1d9868630da88d945715189bdd74207314b5d",
+      "prediction": "57ec1df5bc963ceee38237b288f1d9868630da88d945715189bdd74207314b5d"
+    },
+    "radn_item_004": {
+      "correct": true,
+      "gold": "39c1ab66716ee46e531b07434058da7d3b5089319b5f7b8bd7957862815139aa",
+      "prediction": "39c1ab66716ee46e531b07434058da7d3b5089319b5f7b8bd7957862815139aa"
+    },
+    "radn_item_005": {
+      "correct": true,
+      "gold": "99e2a6fb1eeb1e3be7106e8bb37efcd90ee12267a6a73d8855d9cc4bbebae131",
+      "prediction": "99e2a6fb1eeb1e3be7106e8bb37efcd90ee12267a6a73d8855d9cc4bbebae131"
+    },
+    "radn_item_006": {
+      "correct": true,
+      "gold": "a1d80eaf27df2901a9a9b8b5794497acf6c1a062af5ba98e626e9f87ac84a5e9",
+      "prediction": "a1d80eaf27df2901a9a9b8b5794497acf6c1a062af5ba98e626e9f87ac84a5e9"
+    },
+    "radn_item_007": {
+      "correct": true,
+      "gold": "cf0bce8ce2b998a458a4dedd4fc8519a2ff6bc3610cf255d26cd420840f5c913",
+      "prediction": "cf0bce8ce2b998a458a4dedd4fc8519a2ff6bc3610cf255d26cd420840f5c913"
+    },
+    "radn_item_008": {
+      "correct": true,
+      "gold": "ada2f3786fe346a883d1637b2efb0d62a7aac5f1914207f25bb8002ff712a1a5",
+      "prediction": "ada2f3786fe346a883d1637b2efb0d62a7aac5f1914207f25bb8002ff712a1a5"
+    },
+    "radn_item_009": {
+      "correct": true,
+      "gold": "87b441b5fb4ef10d05c7226442f066801b1002e4379ccf74b79d38808424b86e",
+      "prediction": "87b441b5fb4ef10d05c7226442f066801b1002e4379ccf74b79d38808424b86e"
+    },
+    "radn_item_010": {
+      "correct": true,
+      "gold": "3e631bc35b148c30f400bb7a322000f7783c248912c28d549fdca62763c5d764",
+      "prediction": "3e631bc35b148c30f400bb7a322000f7783c248912c28d549fdca62763c5d764"
+    },
+    "radn_item_011": {
+      "correct": true,
+      "gold": "82ea1c03d7f59605ac6eea486324114256ad91e414265738c6c5e62295faa6ab",
+      "prediction": "82ea1c03d7f59605ac6eea486324114256ad91e414265738c6c5e62295faa6ab"
+    },
+    "radn_item_012": {
+      "correct": true,
+      "gold": "d0477cec953d1965f2b4683066a73fa5b7edd48d28ec5059fa17089dbda84a58",
+      "prediction": "d0477cec953d1965f2b4683066a73fa5b7edd48d28ec5059fa17089dbda84a58"
+    },
+    "radn_item_013": {
+      "correct": true,
+      "gold": "a9996e24fddd0c3f6fae2d39ee8857866dbe43c3972ba0b8417983d1b02fe856",
+      "prediction": "a9996e24fddd0c3f6fae2d39ee8857866dbe43c3972ba0b8417983d1b02fe856"
+    },
+    "radn_item_014": {
+      "correct": true,
+      "gold": "4c6cf2acf5229675c461c0aaabb62cdc7c59c8d06edc75c9606b6b7f64bb10b1",
+      "prediction": "4c6cf2acf5229675c461c0aaabb62cdc7c59c8d06edc75c9606b6b7f64bb10b1"
+    },
+    "radn_item_015": {
+      "correct": true,
+      "gold": "3292c21748b57d090ae61d949eb8a1185df19eb4afbde6aae801ad6c89b5928c",
+      "prediction": "3292c21748b57d090ae61d949eb8a1185df19eb4afbde6aae801ad6c89b5928c"
+    },
+    "radn_item_016": {
+      "correct": true,
+      "gold": "d493f35b8ff1d5f22a93b36fc1206cadda76f02b0f4e41294f1bc8374406cd65",
+      "prediction": "d493f35b8ff1d5f22a93b36fc1206cadda76f02b0f4e41294f1bc8374406cd65"
+    },
+    "radn_item_017": {
+      "correct": true,
+      "gold": "55e1c8d71e5e94a213385c4b70f0e3215d6f309b6a18530958f1f50341f0afa9",
+      "prediction": "55e1c8d71e5e94a213385c4b70f0e3215d6f309b6a18530958f1f50341f0afa9"
+    },
+    "radn_item_018": {
+      "correct": true,
+      "gold": "e6cb48f6ff2cae844ff76444185a0c6750ef8557f02697d3faabdd3559488974",
+      "prediction": "e6cb48f6ff2cae844ff76444185a0c6750ef8557f02697d3faabdd3559488974"
+    },
+    "radn_item_019": {
+      "correct": true,
+      "gold": "50be0ec9c080fff07447b29a7d27e2d5d1356bdc062ab852e35847972e9200fb",
+      "prediction": "50be0ec9c080fff07447b29a7d27e2d5d1356bdc062ab852e35847972e9200fb"
+    },
+    "radn_item_020": {
+      "correct": true,
+      "gold": "ab974beaf31e95b7d3a1d12ed5d0e6ceb98ef6dc3183646fe7e02d1df9e8652b",
+      "prediction": "ab974beaf31e95b7d3a1d12ed5d0e6ceb98ef6dc3183646fe7e02d1df9e8652b"
+    },
+    "radn_item_021": {
+      "correct": true,
+      "gold": "4d8f07aee89ff4b8429af8b6f14a74c54d798fb202e72d5f4b7d8d0957c80d5e",
+      "prediction": "4d8f07aee89ff4b8429af8b6f14a74c54d798fb202e72d5f4b7d8d0957c80d5e"
+    },
+    "radn_item_022": {
+      "correct": true,
+      "gold": "9398b1c74aef29230a4ed828b382574c8d5c735105178d740f65f7f967525156",
+      "prediction": "9398b1c74aef29230a4ed828b382574c8d5c735105178d740f65f7f967525156"
+    },
+    "radn_item_023": {
+      "correct": true,
+      "gold": "5974b3929f362513da815b045a510268b0e7a01ed0f0c84ce506a7978a2e8f19",
+      "prediction": "5974b3929f362513da815b045a510268b0e7a01ed0f0c84ce506a7978a2e8f19"
+    },
+    "radn_item_024": {
+      "correct": true,
+      "gold": "ac553760d8ffc70bf6aa9b3d2914a2006fb08b94172103669df9bd83610b5737",
+      "prediction": "ac553760d8ffc70bf6aa9b3d2914a2006fb08b94172103669df9bd83610b5737"
+    },
+    "radn_item_025": {
+      "correct": true,
+      "gold": "9a5ad014dcb73836f15c9a4d0e3039d80649100beb413b718ac075dd3afaeb7a",
+      "prediction": "9a5ad014dcb73836f15c9a4d0e3039d80649100beb413b718ac075dd3afaeb7a"
+    },
+    "radn_item_026": {
+      "correct": true,
+      "gold": "fc6229344173132f9a3eb11322ad94085ca607b8e1e3356f40da52b12ee1ba05",
+      "prediction": "fc6229344173132f9a3eb11322ad94085ca607b8e1e3356f40da52b12ee1ba05"
+    },
+    "radn_item_027": {
+      "correct": true,
+      "gold": "67763223d2ece34402fe7978dd7e48a6beeea76963dc2054091a6bd201e4347b",
+      "prediction": "67763223d2ece34402fe7978dd7e48a6beeea76963dc2054091a6bd201e4347b"
+    },
+    "radn_item_028": {
+      "correct": true,
+      "gold": "4f3169f6835e3c783ea8c988f198ce7ad6ca13f2ff1fd84ba0a97151db239917",
+      "prediction": "4f3169f6835e3c783ea8c988f198ce7ad6ca13f2ff1fd84ba0a97151db239917"
+    },
+    "radn_item_029": {
+      "correct": true,
+      "gold": "547c434fe62ac7e92f375bef143e05035115aceb387232dbe935ccc2bd6329fa",
+      "prediction": "547c434fe62ac7e92f375bef143e05035115aceb387232dbe935ccc2bd6329fa"
+    },
+    "radn_item_030": {
+      "correct": true,
+      "gold": "d86133b5839b3c863a0758567e44b1771782e596ff75b5c0ef1bdcc0b980381f",
+      "prediction": "d86133b5839b3c863a0758567e44b1771782e596ff75b5c0ef1bdcc0b980381f"
+    }
+  }
+}
