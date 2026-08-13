@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prepare the current frontier-four evidence bundle for public release.
+"""Prepare the current frontier-panel evidence bundle for public release.
 
 Raw provider transcripts stay local and are ignored by Git. This script makes
 the retained manifests portable, replaces raw-transcript path fields with an
@@ -12,17 +12,25 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+import sys
 from pathlib import Path
 from typing import Any
 
-
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from benchbench_run_state import config_fingerprint
+from benchbench_schema import benchmark_package_digest
+
 EXPERIMENT_ROOTS = (
     ROOT / "experiments/009_four_model_panel_20260801_103006",
     ROOT / "experiments/010_four_model_panel_20260801_120442",
     ROOT / "experiments/011_gemini_provider_recovery_20260802",
     ROOT / "experiments/012_gemini_creator_recovery_20260802",
-    *(ROOT / "experiments/extensions").glob("010_*_2026080*"),
+    *(ROOT / "experiments").glob("013_*"),
+    *(ROOT / "experiments/extensions").glob("010_*"),
+    *(ROOT / "experiments/extensions").glob("013_*"),
 )
 RAW_PATH_KEYS = {
     "antigravity_log_path",
@@ -89,8 +97,100 @@ def sanitize_public_files() -> None:
                 path.write_text(scrubbed, encoding="utf-8")
 
 
+def rebind_controller_validation(path: Path) -> None:
+    """Rebind a validation record after path-only public sanitization."""
+
+    artifact = path.parent / "artifact"
+    report = path.parent / "controller_validation_report.txt"
+    if not artifact.is_dir() or not report.is_file():
+        return
+    record = json.loads(path.read_text(encoding="utf-8"))
+    if record.get("schema_version") != "benchbench.validation/v1":
+        return
+    record["candidate_digest"] = benchmark_package_digest(artifact)
+    record["report_sha256"] = sha256(report)
+    write_json(path, record)
+
+
+def rebind_controller_validations() -> None:
+    for root in EXPERIMENT_ROOTS:
+        for path in root.glob("run/candidate_created_by_*/attempt_*/controller_validation.v1.json"):
+            rebind_controller_validation(path)
+
+
+def _public_path(value: Any) -> Path | None:
+    if not isinstance(value, str) or value == RAW_SENTINEL or value.startswith("<"):
+        return None
+    relative = value[2:] if value.startswith("./") else value
+    path = Path(relative)
+    return path if path.is_absolute() else ROOT / path
+
+
+def _record_candidate_artifact(record: dict[str, Any]) -> Path | None:
+    candidate = _public_path(record.get("candidate_snapshot"))
+    if candidate is not None and candidate.is_dir():
+        return candidate
+    validation = _public_path(record.get("validation_report_path"))
+    if validation is not None and validation.name == "controller_validation.v1.json":
+        artifact = validation.parent / "artifact"
+        if artifact.is_dir():
+            return artifact
+    return None
+
+
+def rebind_manifest_candidate_digests() -> None:
+    """Keep manifest and normalized-score package bindings self-consistent."""
+
+    for root in EXPERIMENT_ROOTS:
+        manifest_path = root / "manifest.json"
+        if not manifest_path.is_file():
+            continue
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        if not isinstance(manifest, list):
+            continue
+        changed = False
+        for record in manifest:
+            if not isinstance(record, dict):
+                continue
+            artifact = _record_candidate_artifact(record)
+            if artifact is None:
+                continue
+            digest = benchmark_package_digest(artifact)
+            if "candidate_digest" in record and record.get("candidate_digest") != digest:
+                record["candidate_digest"] = digest
+                changed = True
+            score_path = _public_path(record.get("score_path"))
+            if score_path is not None and score_path.is_file():
+                score = json.loads(score_path.read_text(encoding="utf-8"))
+                if isinstance(score, dict) and "candidate_digest" in score and score.get("candidate_digest") != digest:
+                    score["candidate_digest"] = digest
+                    write_json(score_path, score)
+        if changed:
+            write_json(manifest_path, manifest)
+
+
+def rebind_run_state_fingerprint(path: Path) -> None:
+    state = json.loads(path.read_text(encoding="utf-8"))
+    config = state.get("config") if isinstance(state, dict) else None
+    if state.get("schema_version") != 1 or not isinstance(config, dict):
+        return
+    state["config_fingerprint"] = config_fingerprint(config)
+    write_json(path, state)
+
+
+def rebind_run_state_fingerprints() -> None:
+    for root in EXPERIMENT_ROOTS:
+        path = root / "run_state.json"
+        if path.is_file():
+            rebind_run_state_fingerprint(path)
+
+
 def rebind_source_evidence_indexes() -> None:
-    for overlay in (ROOT / "experiments/extensions").glob("010_*_2026080*"):
+    overlays = [
+        *(ROOT / "experiments/extensions").glob("010_*"),
+        *(ROOT / "experiments/extensions").glob("013_*"),
+    ]
+    for overlay in overlays:
         index_path = overlay / "source_evidence/manifest.json"
         index = json.loads(index_path.read_text(encoding="utf-8"))
         for item in index["files"]:
@@ -162,6 +262,9 @@ def rebind_registry() -> None:
 
 def main() -> None:
     sanitize_public_files()
+    rebind_controller_validations()
+    rebind_manifest_candidate_digests()
+    rebind_run_state_fingerprints()
     rebind_source_evidence_indexes()
     rebind_combined_result()
     rebind_recovery_result()

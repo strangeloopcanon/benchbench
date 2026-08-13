@@ -20,7 +20,7 @@ uv run pytest -q
 CI runs the same locked install, compile check, and test suite on macOS because
 the execution boundary depends on macOS Seatbelt.
 
-## Four-Model Panel Preflight
+## Five-Model Panel Preflight
 
 The default panel uses the exact locally advertised provider IDs below. The
 `@effort` suffix is BenchBench's per-model override; it is removed before the
@@ -31,6 +31,7 @@ model ID is passed to the provider CLI.
 | Codex GPT-5.6 Sol high | `gpt-5.6-sol@high` | `gpt-5.6-sol` | `high` |
 | Codex GPT-5.6 Terra extra high | `gpt-5.6-terra@xhigh` | `gpt-5.6-terra` | `xhigh` |
 | Gemini 3.6 Flash | `agy:gemini-3.6-flash-high@high` | `gemini-3.6-flash-high` | `high` |
+| Gemini 3.7 Flash | `agy:gemini-3.7-flash-high@high` | `gemini-3.7-flash-high` | `high` |
 | Claude Opus 5 | `cursor:claude-opus-5@high` | `claude-opus-5-thinking-high` | `high` |
 
 Run this setup-only check before any experiment. It inspects CLI help and model
@@ -41,28 +42,33 @@ uv run python run_broad_three_model_sweep.py \
   --preflight-only
 ```
 
-The preflight uses each provider's non-inference catalog. A clean result reports
-`model_available: true` for all four exact IDs. It never submits a creator or
+The preflight uses each provider's non-inference catalog. A fully ready result
+reports `model_available: true` for all five exact IDs. It never submits a creator or
 solver prompt and never creates a run root. Codex catalog lookup uses its live
 boundary; Antigravity and Cursor catalog checks are explicitly recorded as
-`ambient_catalog_only` and do not prove live credential containment. A contained live canary established
-Antigravity's runtime label as `Gemini 3.6 Flash (High)`; live calls must match
-that label as well as requesting the exact `gemini-3.6-flash-high` ID.
+`ambient_catalog_only` and do not prove live credential containment. Contained
+live canaries established Antigravity's runtime labels as
+`Gemini 3.6 Flash (High)` and `Gemini 3.7 Flash (High)`; live calls must match
+the label for the exact requested ID.
 
 ## Live Run Boundary
 
-Codex and Antigravity have audited live boundaries. Cursor remains available
-for non-inference catalog preflight, but live Cursor execution is disabled
-because its native authentication token is inherited by model-created terminal
-tools. A full frontier-four sweep must wait for a token-free Cursor tool
-environment or use another audited Opus provider. After choosing an explicit
-total-token ceiling for an audited panel, run:
+Antigravity has an audited live boundary. The Codex path fails closed whenever
+the parent-environment isolation probe is unavailable; that probe currently
+fails on this macOS runtime, so no Codex call is dispatched here. Cursor remains
+available for non-inference catalog preflight, but live Cursor execution is
+disabled because its native authentication token is inherited by model-created
+terminal tools. A full frontier-five sweep must restore the Codex boundary and
+use a token-free Cursor tool environment or another audited Opus provider.
+
+The currently runnable audited panel is Antigravity-only. After choosing an
+explicit total-token ceiling, run:
 
 ```bash
 TOKEN_CEILING=20000000 \
 uv run python run_broad_three_model_sweep.py \
   --run-root experiments/custom_audited_panel_YYYYMMDD_HHMMSS \
-  --models gpt-5.6-sol@high gpt-5.6-terra@xhigh agy:gemini-3.6-flash-high@high \
+  --models agy:gemini-3.6-flash-high@high agy:gemini-3.7-flash-high@high \
   --max-total-tokens "$TOKEN_CEILING" \
   --zero-telemetry-reservation 5000000 \
   --allow-dispatch-ceiling-overshoot \
@@ -159,6 +165,16 @@ failed state, add `--retry-failed-source-cells`. The retry is still published
 only to a new overlay and is rejected if successful source evidence already
 exists.
 
+To add a newly released solver that was not in the source run's declared
+panel, add `--allow-panel-expansion`. The new solver identity and the explicit
+panel expansion are recorded in the overlay configuration; source artifacts
+and existing cells remain unchanged.
+
+Versioned frontier-four and frontier-five source runs are accepted by default.
+To extend a mechanically validated custom source run, also pass
+`--allow-custom-source-panel`; that acknowledgement and the source policy are
+recorded in the overlay.
+
 Extensions charge a zero-telemetry timeout or provider failure against the
 declared reservation instead of treating it as free or blocking unrelated
 remaining cells. Each overlay freezes its controller source and copies source
@@ -171,7 +187,7 @@ publishes new evidence only in the overlay.
 ## Prepare Evidence For A Public Commit
 
 Raw provider transcripts stay local and are ignored by Git. Before publishing
-new frontier-four evidence, sanitize machine-specific paths, replace private
+new frontier-panel evidence, sanitize machine-specific paths, replace private
 transcript references, and rebind the dependent integrity graph:
 
 ```bash

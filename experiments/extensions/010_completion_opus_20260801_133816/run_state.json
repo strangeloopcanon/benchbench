@@ -31,7 +31,7 @@
     "unmetered_cost_acknowledged": true,
     "zero_telemetry_reservation": 5000000
   },
-  "config_fingerprint": "f555998a6291f6f718f629dd41c4a32b4a28cd600a6793d820576d89661d0694",
+  "config_fingerprint": "033366c1e856cf9ac29e809f4fd0b8e46db3e8a0ba624689edff47614064bb00",
   "schema_version": 1,
   "source_snapshot": {
     "digest": "65e9d259a0738f5fe5235a8d7949f748461223a7e6899e81bffc36e1fcc9e652",

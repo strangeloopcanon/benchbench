@@ -1,0 +1,11 @@
+{
+  "ticket_id": "INC-2026-232",
+  "service": "distributed-object-storage",
+  "title": "Critical degradation and crash loop on distributed-object-storage",
+  "opened_at": "2026-04-09T16:15:00Z",
+  "closed_at": "2026-04-09T20:15:00Z",
+  "reported_by": "Customer Site Reliability Lead",
+  "associated_rca": "RCA-2026-302",
+  "telemetry_error_rate_pct": 99.9,
+  "status": "CLOSED_WITH_RCA"
+}

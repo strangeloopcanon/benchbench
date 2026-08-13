@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "snapshot_candidate_digest": "fa2dd5baee68525c84d0ba199eeae43683031f9ae06f7ebb1a6e594830fafe83",
+  "source_artifact": "./experiments/013_gemini_37_creator_20260813/run/candidate_created_by_antigravity__gemini_3_7_flash_high__effort_high/attempt_0001/artifact",
+  "source_candidate_digest": "fa2dd5baee68525c84d0ba199eeae43683031f9ae06f7ebb1a6e594830fafe83"
+}

@@ -5,7 +5,7 @@
     "status": "no_validated_incumbent"
   },
   "historical_comparison": {
-    "basis": "Against independently recomputed Decimal half-up gold, the six retained solver predictions score 12/30, 16/30, 11/30, 13/30, 11/30, and 11/30. This remains the only complete six-solver row with every score low and nonzero; later challenger rows reach 25/30 or higher, are invalid, or are incomplete. Every completed Experiment 010 solver cell is 30/30; Opus did not complete two cells and Gemini produced no valid candidate.",
+    "basis": "Against independently recomputed Decimal half-up gold, the six retained solver predictions score 12/30, 16/30, 11/30, 13/30, 11/30, and 11/30. This remains the only complete six-solver row with every score low and nonzero; later challenger rows reach 25/30 or higher, are invalid, or are incomplete. Every completed Experiment 010 and Experiment 013 solver cell is 30/30; Gemini 3.6 produced no valid candidate, while Gemini 3.7 produced a valid but too-easy candidate.",
     "leader_candidate_id": "004-reimbursement-forensics",
     "qualification": "This is a corrected historical comparison, not a canonical promotion. Experiment 004 remains invalid because its original emitted gold was wrong, and no model was rerun.",
     "rank": 1,
@@ -18,7 +18,7 @@
       "experiment_id": "004",
       "historical_comparison": {
         "rank": 1,
-        "read": "Best corrected historical candidate: all six retained solver scores remain low and nonzero (11-16/30), while later challengers reach at least 25/30, are invalid, or have incomplete panels; every completed Experiment 010 challenger cell is 30/30.",
+        "read": "Best corrected historical candidate: all six retained solver scores remain low and nonzero (11-16/30), while later challengers reach at least 25/30, are invalid, or have incomplete panels; every completed Experiment 010 and Experiment 013 challenger cell is 30/30.",
         "verdict": "win_over_challengers"
       },
       "historical_scores": [
@@ -103,12 +103,12 @@
       "experiment_id": "010",
       "historical_comparison": null,
       "historical_scores": [
-        "successful cells only: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30 (recovery)"
+        "successful cells only: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30"
       ],
       "id": "010-auditweave",
       "name": "AuditWeave",
       "outcome": "infrastructure_incomplete",
-      "reason": "The candidate passed the mechanical gate, and Sol, Terra, and recovered Gemini each scored 30/30. Opus did not complete, so the panel remains incomplete and every completed cell shows no useful difficulty.",
+      "reason": "The candidate passed the mechanical gate. Sol, Terra, Gemini 3.6, and Gemini 3.7 each scored 30/30; Opus did not complete, so the panel remains incomplete and every completed cell shows no useful difficulty.",
       "required_next_step": "Increase task difficulty, generate a new version, and run a complete fresh solver panel."
     },
     {
@@ -122,12 +122,12 @@
       "experiment_id": "010",
       "historical_comparison": null,
       "historical_scores": [
-        "successful cells only: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30 (recovery)"
+        "successful cells only: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30"
       ],
       "id": "010-counterfactual-firewall-policy-synthesis",
       "name": "Counterfactual Firewall Policy Synthesis",
       "outcome": "infrastructure_incomplete",
-      "reason": "The candidate passed the mechanical gate, and Sol, Terra, and recovered Gemini each scored 30/30. Opus did not complete, so the panel remains incomplete and every completed cell shows no useful difficulty.",
+      "reason": "The candidate passed the mechanical gate. Sol, Terra, Gemini 3.6, and Gemini 3.7 each scored 30/30; Opus did not complete, so the panel remains incomplete and every completed cell shows no useful difficulty.",
       "required_next_step": "Increase task difficulty, generate a new version, and run a complete fresh solver panel."
     },
     {
@@ -148,15 +148,29 @@
       "experiment_id": "010",
       "historical_comparison": null,
       "historical_scores": [
-        "completed cells: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30 (recovery), Opus 30/30"
+        "completed cells: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30, Opus 30/30"
       ],
       "id": "010-consolidation-point",
       "name": "Consolidation Point",
       "outcome": "infrastructure_incomplete",
-      "reason": "The candidate passed the mechanical gate, and Sol, Terra, recovered Gemini, and Opus each scored 30/30. Every completed cell proves the benchmark is too easy, but the retained Opus runtime identity remains requested/unverified.",
+      "reason": "The candidate passed the mechanical gate. Sol, Terra, Gemini 3.6, Gemini 3.7, and Opus each scored 30/30. Every completed cell proves the benchmark is too easy, but the retained Opus runtime identity remains requested/unverified.",
       "required_next_step": "Increase task difficulty, generate a new version, and run a complete fresh solver panel."
+    },
+    {
+      "cell_states": [],
+      "creator": "Antigravity Gemini 3.7 Flash high",
+      "experiment_id": "013",
+      "historical_comparison": null,
+      "historical_scores": [
+        "completed cells: Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30"
+      ],
+      "id": "013-cloudsla-forensics",
+      "name": "CloudSLA-Forensics",
+      "outcome": "rejected",
+      "reason": "The package passed the full mechanical gate on its first attempt, but Gemini 3.6 and Gemini 3.7 each scored 30/30. The benchmark is valid but provides no useful frontier difficulty.",
+      "required_next_step": "Increase task difficulty, generate a new version, and run a complete fresh five-model solver panel."
     }
   ],
-  "registry_sha256": "8956aa91362c4fd2a237b649f843096fb47fba2b1ba85f8d7fd8b926b9b5b433",
+  "registry_sha256": "878e2087bae68408d5201948957fef054aa2f8be33492ca29ab978d977c640a1",
   "schema_version": "benchbench.canonical-status/v1"
 }

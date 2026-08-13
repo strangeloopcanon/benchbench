@@ -1,11 +1,11 @@
 {
   "bundle_file_count": 0,
-  "candidate_digest": "24ad06d3143859b955a9307fe8a07eaeb48d97edfa04d35a0e848d4370f85cf5",
+  "candidate_digest": "5fc0c7aebd4fca26fb8e6c8a5a683633dbba94da5460315142c395a878a39bf7",
   "deterministic": false,
   "frozen_package_match": false,
   "gold_summary": null,
   "leak_match_count": 0,
-  "report_sha256": "68aae82343f90f78500eaa25098fb683b145c16ad9fe77211c1c961674458b44",
+  "report_sha256": "c0fe2f283d35e710d5c80f84fa1011a62c821159278170e7f50e05aff751aec4",
   "schema_version": "benchbench.validation/v1",
   "valid": false,
   "wrong_summary": null

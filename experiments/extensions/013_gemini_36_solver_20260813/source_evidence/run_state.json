@@ -1,0 +1,67 @@
+{
+  "config": {
+    "creator_effort": "high",
+    "creator_models": [
+      "antigravity__gemini_3_7_flash_high__effort_high"
+    ],
+    "creator_timeout_seconds": 2400,
+    "dispatch_ceiling_overshoot_acknowledged": true,
+    "feedback_digest": "1eae98d5a7bb283d307b6187905ffac5b602765397ee7f7474b6af277ff8a4a8",
+    "generation_seed": 20260516,
+    "harness_digest": "8824e3affce7e5231e0cd5155afdfe913f0bb31023a52116977a82d6822e4c9e",
+    "landscape_digest": "57a9d37f7c1f50323cc4e5c70c347475f538573da1cd1d67a6511f3d5d6b9db6",
+    "landscape_path": "benchmark_landscape/creator_prompt_landscape_pack.md",
+    "max_total_tokens": 5000000,
+    "panel_policy": "custom",
+    "pilot_summary_digest": "760db830ba6e43785dbad48a2c4816a1b54e932e79f23ef0c2b8f09b4eeb6750",
+    "pilot_summary_path": "experiments/001_three_model_grid_pilot/README.md",
+    "provider_preflight": [
+      {
+        "artifact_id": "antigravity__gemini_3_7_flash_high",
+        "binary": "agy",
+        "display_model": "Gemini 3.7 Flash (High)",
+        "executable": "<local-home>/.local/bin/agy",
+        "inference_attempted": false,
+        "model": "gemini-3.7-flash-high",
+        "model_available": true,
+        "model_listing_command": [
+          "<local-home>/.local/bin/agy",
+          "models"
+        ],
+        "model_listing_returncode": 0,
+        "model_listing_stderr_bytes": 29,
+        "model_listing_stderr_sha256": "53f588bc9a928f4a66908deacaca57dddc7e7ce177a0cc3586b5a501be26e1e8",
+        "model_listing_stdout_bytes": 643,
+        "model_listing_stdout_sha256": "a7463eafad52e693c6d4890ed329f16aa60b1dfa9b058c051a13c0f0553efec1",
+        "model_listing_supported": true,
+        "preflight_scope": "ambient_catalog_only",
+        "probe_stderr_bytes": 2289,
+        "probe_stderr_sha256": "c64e4bf74262cebba7d161d29e1632682f64f844c6ca1a718c77a1fa4e8f8343",
+        "probe_stdout_bytes": 0,
+        "probe_stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "provider": "antigravity",
+        "requested_effort": "high",
+        "requested_provider_model": "gemini-3.7-flash-high",
+        "returncode": 0,
+        "state": "binary_ready"
+      }
+    ],
+    "sample_count": 30,
+    "solver_effort": "high",
+    "solver_models": [
+      "antigravity__gemini_3_7_flash_high__effort_high"
+    ],
+    "solver_timeout_seconds": 1500,
+    "unmetered_cost_acknowledged": true,
+    "zero_telemetry_reservation": 5000000
+  },
+  "config_fingerprint": "3223c4572151a8577cb395a661e850e0dd1b4656f06dc7131b76b886b60510fe",
+  "schema_version": 1,
+  "source_snapshot": {
+    "digest": "8824e3affce7e5231e0cd5155afdfe913f0bb31023a52116977a82d6822e4c9e",
+    "file_count": 9,
+    "manifest_path": "source_snapshot/manifest.json",
+    "path": "source_snapshot",
+    "schema_version": "benchbench.source_snapshot/v1"
+  }
+}

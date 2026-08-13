@@ -41,26 +41,26 @@
   "completion_overlays": [
     {
       "path": "experiments/extensions/010_completion_sol_20260801_133816",
-      "manifest_sha256": "6e70cd07a2b4b1d62d15e1e41291ccfdbcdbb831a5f0a9d1ffed7774b9f95134",
-      "run_state_sha256": "d9e2cee20e06b6c677b0dc9f610086823318a35c8d175443054f66101dd0df0d",
+      "manifest_sha256": "3b17b5f3531e7c066f20cfba63b9ff93cc01c208229704b6fa56cdde131e01a8",
+      "run_state_sha256": "783e12b07bbc8bb17bd4f66bd7286342b5281cfae1fa9ca3844b5196fd38b72b",
       "source_evidence_index_sha256": "1e9ccb0847f87058642ccff9fe410e34af2d786db10d2a11c123c7416bc154b8"
     },
     {
       "path": "experiments/extensions/010_completion_terra_20260801_133816",
-      "manifest_sha256": "9771a2aacbdf83c48a692af04fae5b7e04806a013215371173172480fd7fc2db",
-      "run_state_sha256": "b9aaeca661d3ec2519e09001c8cdc450afc1e2b1ddf73f3d3811848e71e7f57c",
+      "manifest_sha256": "2be154f76b6c8bb8548fa0a657775466df3aafc5bb61fa4ffee92a781e45648c",
+      "run_state_sha256": "5e2861ccfe1b1278b0eb600812f077e9faa151bd8468822b6e72a77c86f46157",
       "source_evidence_index_sha256": "1e9ccb0847f87058642ccff9fe410e34af2d786db10d2a11c123c7416bc154b8"
     },
     {
       "path": "experiments/extensions/010_completion_gemini_20260801_133816",
       "manifest_sha256": "e85214fa6e3d5e17ccaf063bc1f93d880ae8ea620c597a9a635cc52def585005",
-      "run_state_sha256": "40ec0f5d02054812e0a499b4049b3c039d6ef9f3b9d1f9306c6d6939a05ed0d9",
+      "run_state_sha256": "da49d8edb0908338c1a809099401a59841f6241491fbb0aee287dbe24a2287fd",
       "source_evidence_index_sha256": "1e9ccb0847f87058642ccff9fe410e34af2d786db10d2a11c123c7416bc154b8"
     },
     {
       "path": "experiments/extensions/010_completion_opus_20260801_133816",
       "manifest_sha256": "cef58f77276cfbd39a97f3181773f9fded44ada266b4ea8851f8255e31bbaeb1",
-      "run_state_sha256": "cfeaf896f9e59e99879dc652b19e6a15f8c9e953b25e1e1189aa3d80db3706c7",
+      "run_state_sha256": "610eda760772b18fd9bc379cb6fdca2d07b81a77f374e878ee87600358c14cc2",
       "source_evidence_index_sha256": "1e9ccb0847f87058642ccff9fe410e34af2d786db10d2a11c123c7416bc154b8"
     }
   ],

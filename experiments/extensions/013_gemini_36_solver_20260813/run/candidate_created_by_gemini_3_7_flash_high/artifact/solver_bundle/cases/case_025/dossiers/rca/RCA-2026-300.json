@@ -1,0 +1,21 @@
+{
+  "rca_id": "RCA-2026-300",
+  "incident_id": "INC-2026-340",
+  "service": "distributed-object-storage",
+  "total_outage_duration_minutes": 360,
+  "timeline_breakdown": [
+    {
+      "phase": "Customer Misconfiguration / Internal Deadlock",
+      "duration_minutes": 45,
+      "attributable_party": "CUSTOMER",
+      "details": "Customer deploy script applied malformed connection pool config, causing self-inflicted drop for 45 min."
+    },
+    {
+      "phase": "Provider Infrastructure Hypervisor Fault",
+      "duration_minutes": 315,
+      "attributable_party": "PROVIDER",
+      "details": "Underlying host node suffered power rail failure requiring hardware migration for 315 min."
+    }
+  ],
+  "final_finding": "Per SLA \u00a75.3, 45 min attributable to customer action is excluded. 315 min is provider compensable."
+}

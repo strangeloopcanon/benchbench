@@ -5,7 +5,7 @@
   "frozen_package_match": false,
   "gold_summary": null,
   "leak_match_count": 0,
-  "report_sha256": "b86c92f3e9f2defea6a2349dfa757a7a32e6403c97054fdff956df69f58086df",
+  "report_sha256": "cf4def070136f140856d07b3ec6b80d583ab2d9f5dcfe667759bae9847e75997",
   "schema_version": "benchbench.validation/v1",
   "valid": false,
   "wrong_summary": null

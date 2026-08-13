@@ -2,7 +2,7 @@
   {
     "artifact_id": "codex__gpt_5_6_sol",
     "benchmark": "Counterfactual Firewall Policy Synthesis",
-    "candidate_digest": "83a877ce85ffcf255db2550cbaa143adc14d96f2ecd5c578cdfc831076b902e6",
+    "candidate_digest": "667750cd12c262df4ae783bf86be9f860234f85f1158fafa8d87688b093a66c7",
     "candidate_snapshot": "./experiments/extensions/010_completion_sol_20260801_133816/run/candidate_created_by_gpt_5_6_terra/artifact",
     "cell_state": "success",
     "creator_model": "gpt-5.6-terra",

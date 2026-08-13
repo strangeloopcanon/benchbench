@@ -22,18 +22,24 @@ evidence and gold use conflicting precedence rules. The Fable creator run is
 incomplete: GPT-5.2 had a provider error and Claude Opus timed out. Those are
 execution states, not `0/30` results.
 
-### Experiment 010 results
+### Frontier results
 
-| Creator | Candidate | Sol high | Terra extra high | Gemini 3.6 Flash high | Opus 5 high |
-|---|---|---:|---:|---:|---:|
-| Sol | AuditWeave | 30/30 | 30/30 | 30/30 | Did not complete |
-| Terra | Counterfactual Firewall Policy Synthesis | 30/30 | 30/30 | 30/30 | Did not complete |
-| Gemini Flash | No valid candidate | — | — | — | — |
-| Opus | Consolidation Point | 30/30 | 30/30 | 30/30 | 30/30 |
+| Creator | Candidate | Sol high | Terra extra high | Gemini 3.6 Flash high | Gemini 3.7 Flash high | Opus 5 high |
+|---|---|---:|---:|---:|---:|---:|
+| Sol | AuditWeave | 30/30 | 30/30 | 30/30 | 30/30 | Did not complete |
+| Terra | Counterfactual Firewall Policy Synthesis | 30/30 | 30/30 | 30/30 | 30/30 | Did not complete |
+| Gemini 3.6 Flash | No valid candidate | — | — | — | — | — |
+| Gemini 3.7 Flash | CloudSLA-Forensics | — | — | 30/30 | 30/30 | — |
+| Opus | Consolidation Point | 30/30 | 30/30 | 30/30 | 30/30 | 30/30 |
 
-Gemini produced no mechanically valid candidate, but its three solver results
+Gemini 3.6 produced no mechanically valid candidate, but its three solver results
 are valid and remain in the record. “Did not complete” is an execution state,
 not `0/30`; the retained Opus runtime identity is requested/unverified.
+
+Gemini 3.7 produced a mechanically valid CloudSLA-Forensics package, then both
+Gemini 3.6 and 3.7 solved it `30/30`. Gemini 3.7 also scored `30/30` on all
+three valid Experiment 010 candidates. The package is valid but too easy, so
+the corrected historical ranking and the no-incumbent conclusion are unchanged.
 
 ![Canonical status](experiments/canonical/figures/canonical_status.svg)
 
@@ -57,9 +63,10 @@ the first can contribute to a benchmark claim, and only after adjudication.
 ## Next Run
 
 The target panel is Codex GPT-5.6 Sol high, Codex GPT-5.6 Terra extra high,
-Gemini 3.6 Flash through Antigravity, and Claude Opus 5. Live execution is
-enabled for Codex and Antigravity. Cursor remains preflight-only until it has a
-credential-safe shell boundary, so a new four-model run needs another audited
+Gemini 3.6 Flash high, Gemini 3.7 Flash high, and Claude Opus 5. Antigravity's
+live boundary is available. The current macOS runtime fails the Codex
+parent-environment isolation probe, and Cursor remains preflight-only, so a
+complete five-model run must restore the Codex boundary and use an audited
 Opus provider. Exact commands and safety limits are in
 [`docs/running.md`](docs/running.md).
 
@@ -76,6 +83,7 @@ The required historical resolutions are in:
 - [`experiments/adjudications/008_fable_creator_sweep.md`](experiments/adjudications/008_fable_creator_sweep.md)
 - [`experiments/adjudications/010_four_model_panel.md`](experiments/adjudications/010_four_model_panel.md)
 - [`experiments/adjudications/010_provider_recovery_20260802.md`](experiments/adjudications/010_provider_recovery_20260802.md)
+- [`experiments/adjudications/013_gemini_37_flash.md`](experiments/adjudications/013_gemini_37_flash.md)
 
 ## Repo Map
 

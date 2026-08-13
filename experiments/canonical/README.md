@@ -12,7 +12,7 @@ Generated from `experiments/registry.v1.json`. Raw run folders remain preserved 
 
 **#1: Reimbursement Forensics is the best corrected historical candidate and counts as a win over the challengers.**
 
-Against independently recomputed Decimal half-up gold, the six retained solver predictions score 12/30, 16/30, 11/30, 13/30, 11/30, and 11/30. This remains the only complete six-solver row with every score low and nonzero; later challenger rows reach 25/30 or higher, are invalid, or are incomplete. Every completed Experiment 010 solver cell is 30/30; Opus did not complete two cells and Gemini produced no valid candidate.
+Against independently recomputed Decimal half-up gold, the six retained solver predictions score 12/30, 16/30, 11/30, 13/30, 11/30, and 11/30. This remains the only complete six-solver row with every score low and nonzero; later challenger rows reach 25/30 or higher, are invalid, or are incomplete. Every completed Experiment 010 and Experiment 013 solver cell is 30/30; Gemini 3.6 produced no valid candidate, while Gemini 3.7 produced a valid but too-easy candidate.
 
 This is a corrected historical comparison, not a canonical promotion. Experiment 004 remains invalid because its original emitted gold was wrong, and no model was rerun.
 
@@ -25,10 +25,11 @@ This is a corrected historical comparison, not a canonical promotion. Experiment
 | 008 | Rosetta Fieldwork | Claude Fable 5 Thinking | infrastructure_incomplete | successful historical cells only: GPT-5.4 14/30, GPT-5.5 11/30, Gemini 3.1 Pro 24/30, Gemini 3.5 Flash 27/30; GPT-5.2: provider_error, Claude Opus: did not complete (timeout) | Use typed cell states, fix provider preflight, and rerun the missing cells under the repaired execution contract. |
 | 009 | Counterfeit Clock v1 | Codex GPT-5.6 Sol high | invalid | No canonical numeric score | Create a new candidate version whose scorer emits schema_version 2 with total, correct, and accuracy, pass the full mechanical gate, then run a complete fresh solver panel. |
 | 009 | Patchwork Access Logic (PAL) | Codex GPT-5.6 Terra extra high | invalid | No canonical numeric score | Create a new candidate version whose scorer emits schema_version 2 with total, correct, and accuracy, pass the full mechanical gate, then run a complete fresh solver panel. |
-| 010 | AuditWeave | Codex GPT-5.6 Sol high | infrastructure_incomplete | successful cells only: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30 (recovery); Claude Opus 5 high: did not complete (timeout) | Increase task difficulty, generate a new version, and run a complete fresh solver panel. |
-| 010 | Counterfactual Firewall Policy Synthesis | Codex GPT-5.6 Terra extra high | infrastructure_incomplete | successful cells only: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30 (recovery); Claude Opus 5 high: did not complete (timeout) | Increase task difficulty, generate a new version, and run a complete fresh solver panel. |
+| 010 | AuditWeave | Codex GPT-5.6 Sol high | infrastructure_incomplete | successful cells only: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30; Claude Opus 5 high: did not complete (timeout) | Increase task difficulty, generate a new version, and run a complete fresh solver panel. |
+| 010 | Counterfactual Firewall Policy Synthesis | Codex GPT-5.6 Terra extra high | infrastructure_incomplete | successful cells only: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30; Claude Opus 5 high: did not complete (timeout) | Increase task difficulty, generate a new version, and run a complete fresh solver panel. |
 | 010 | Gemini creator recovery (no valid candidate) | Antigravity Gemini 3.6 Flash high | invalid | No canonical numeric score | Create a fresh candidate version that passes the complete mechanical package gate. |
-| 010 | Consolidation Point | Cursor Claude Opus 5 high | infrastructure_incomplete | completed cells: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30 (recovery), Opus 30/30 | Increase task difficulty, generate a new version, and run a complete fresh solver panel. |
+| 010 | Consolidation Point | Cursor Claude Opus 5 high | infrastructure_incomplete | completed cells: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30, Opus 30/30 | Increase task difficulty, generate a new version, and run a complete fresh solver panel. |
+| 013 | CloudSLA-Forensics | Antigravity Gemini 3.7 Flash high | rejected | completed cells: Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30 | Increase task difficulty, generate a new version, and run a complete fresh five-model solver panel. |
 
 The figures above are historical evidence only. In particular, `0/30` is never used for a provider error, timeout, malformed output, or incomplete panel.
 
@@ -40,6 +41,7 @@ The figures above are historical evidence only. In particular, `0/30` is never u
 - [Four-model panel](../adjudications/009_four_model_panel.md): both created candidates failed the mechanical score-report contract, Antigravity then failed before inference, and no solver cell ran.
 - [Frontier-four panel](../adjudications/010_four_model_panel.md): original sealed result; three candidates passed the mechanical gate and every completed cell was `30/30`.
 - [Experiment 010 provider recovery](../adjudications/010_provider_recovery_20260802.md): Gemini recovered all three missing solver cells at `30/30`; Opus still did not complete two cells, and Gemini produced no valid candidate.
+- [Gemini 3.7 Flash](../adjudications/013_gemini_37_flash.md): Gemini 3.7 solved all three valid Experiment 010 candidates at `30/30`; its mechanically valid CloudSLA-Forensics candidate was also solved `30/30` by Gemini 3.6 and Gemini 3.7.
 
 ## Registry Coverage
 
@@ -54,6 +56,7 @@ The figures above are historical evidence only. In particular, `0/30` is never u
 | 007 | experiments/007_full_feedback_6x6_20260523_172919 | invalid | Service Credit Forensics gold conflicts with higher-precedence public evidence. |
 | 008 | experiments/008_fable_creator_sweep_20260610_085405 | infrastructure_incomplete | The Fable sweep has a GPT-5.2 provider error and a Claude Opus timeout. |
 | 009 | experiments/009_four_model_panel_20260801_103006 | infrastructure_incomplete | Both completed Codex candidates failed the mechanical score-report contract; Antigravity then failed before inference with zero token telemetry, and the fail-closed budget gate did not start Cursor or any solver cells. |
-| 010 | experiments/010_four_model_panel_20260801_120442 | infrastructure_incomplete | Three candidates passed the mechanical gate. Gemini's recovered solver cells all scored 30/30, leaving every completed cell at 30/30; Opus did not complete two cells. Gemini recovery creator work produced no valid candidate. |
+| 010 | experiments/010_four_model_panel_20260801_120442 | infrastructure_incomplete | Three candidates passed the mechanical gate. Gemini 3.6 and Gemini 3.7 each scored 30/30 on all three; Opus did not complete two cells. Gemini 3.6 creator work produced no valid candidate. |
+| 013 | experiments/013_gemini_37_creator_20260813 | rejected | Gemini 3.7 created the mechanically valid CloudSLA-Forensics package, but Gemini 3.6 and Gemini 3.7 each solved it 30/30. |
 
 A future incumbent must be introduced by a new `validated` candidate entry with digest-verified evidence. The canonical builder rejects a candidate marked eligible with any other outcome.

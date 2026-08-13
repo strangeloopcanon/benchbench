@@ -37,6 +37,7 @@ def test_registry_has_no_validated_incumbent_and_preserves_invalid_history() -> 
         "010-counterfactual-firewall-policy-synthesis",
         "010-gemini-empty-artifact",
         "010-consolidation-point",
+        "013-cloudsla-forensics",
     }
     fable = next(item for item in history if item["id"] == "008-rosetta-fieldwork")
     assert {cell["state"] for cell in fable["cell_states"]} == {"provider_error", "timeout"}
@@ -47,7 +48,7 @@ def test_registry_has_no_validated_incumbent_and_preserves_invalid_history() -> 
     assert reimbursement["historical_comparison"] == {
         "rank": 1,
         "verdict": "win_over_challengers",
-        "read": "Best corrected historical candidate: all six retained solver scores remain low and nonzero (11-16/30), while later challengers reach at least 25/30, are invalid, or have incomplete panels; every completed Experiment 010 challenger cell is 30/30.",
+            "read": "Best corrected historical candidate: all six retained solver scores remain low and nonzero (11-16/30), while later challengers reach at least 25/30, are invalid, or have incomplete panels; every completed Experiment 010 and Experiment 013 challenger cell is 30/30.",
     }
     experiment_009 = [item for item in history if item["experiment_id"] == "009"]
     assert {item["outcome"] for item in experiment_009} == {"invalid"}
@@ -417,9 +418,11 @@ def test_canonical_rebuild_is_deterministic(tmp_path: Path) -> None:
     markdown = (first_dir / "README.md").read_text(encoding="utf-8")
     assert "best corrected historical candidate and counts as a win" in markdown
     assert "original emitted gold was wrong" in markdown
-    assert "Gemini 3.6 Flash high 30/30 (recovery)" in markdown
+    assert "Gemini 3.7 Flash high 30/30" in markdown
+    assert "CloudSLA-Forensics" in markdown
     assert "Gemini returned invalid output" not in markdown
     svg = (first_dir / "figures" / "canonical_status.svg").read_text(encoding="utf-8")
-    assert "Gemini solved 3/3 candidates at 30/30" in svg
-    assert "Opus did not complete 2/3" in svg
+    assert "Gemini 3.7 solved all three Experiment 010 candidates at 30/30" in svg
+    assert "CloudSLA-Forensics was valid" in svg
+    assert "Opus still did not complete 2/3" in svg
     assert "Gemini returned invalid output" not in svg

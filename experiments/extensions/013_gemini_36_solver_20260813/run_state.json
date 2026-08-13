@@ -1,0 +1,70 @@
+{
+  "config": {
+    "custom_source_panel_acknowledged": true,
+    "dispatch_ceiling_overshoot_acknowledged": true,
+    "harness_digest": "df47f0717b61a41db8594ec8a6c767f1ddc7deb41f6a26a69d4de701d1e7a239",
+    "max_total_tokens": 5000000,
+    "panel_expansion": true,
+    "provider_preflight": [
+      {
+        "artifact_id": "antigravity__gemini_3_6_flash_high",
+        "binary": "agy",
+        "display_model": "Gemini 3.6 Flash (High)",
+        "executable": "<local-home>/.local/bin/agy",
+        "inference_attempted": false,
+        "model": "gemini-3.6-flash-high",
+        "model_available": true,
+        "model_listing_command": [
+          "<local-home>/.local/bin/agy",
+          "models"
+        ],
+        "model_listing_returncode": 0,
+        "model_listing_stderr_bytes": 29,
+        "model_listing_stderr_sha256": "53f588bc9a928f4a66908deacaca57dddc7e7ce177a0cc3586b5a501be26e1e8",
+        "model_listing_stdout_bytes": 643,
+        "model_listing_stdout_sha256": "a7463eafad52e693c6d4890ed329f16aa60b1dfa9b058c051a13c0f0553efec1",
+        "model_listing_supported": true,
+        "preflight_scope": "ambient_catalog_only",
+        "probe_stderr_bytes": 2289,
+        "probe_stderr_sha256": "c64e4bf74262cebba7d161d29e1632682f64f844c6ca1a718c77a1fa4e8f8343",
+        "probe_stdout_bytes": 0,
+        "probe_stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "provider": "antigravity",
+        "requested_effort": "high",
+        "requested_provider_model": "gemini-3.6-flash-high",
+        "returncode": 0,
+        "state": "binary_ready"
+      }
+    ],
+    "retry_failed_source_cells": false,
+    "schema_version": 1,
+    "solver": "antigravity__gemini_3_6_flash_high__effort_high",
+    "source_candidates": [
+      {
+        "artifact": "./experiments/013_gemini_37_creator_20260813/run/candidate_created_by_antigravity__gemini_3_7_flash_high__effort_high/attempt_0001/artifact",
+        "candidate_digest": "fa2dd5baee68525c84d0ba199eeae43683031f9ae06f7ebb1a6e594830fafe83",
+        "creator_call_id": "antigravity__gemini_3_7_flash_high__effort_high",
+        "creator_model": "gemini-3.7-flash-high",
+        "validation_report_sha256": "e5922896c05d1173f6c5968d05a992cb200a846a62d6692816d148f00f6033fe",
+        "validation_sha256": "79567a5b876a1012867d185c0da1b54c7ac5a1f646210445db8d954de4ffce09"
+      }
+    ],
+    "source_manifest_sha256": "ae6f02352c0422f5e4eb4bfbec02a0ac68fe2e5cdc8b761b06e82ad2589e7c20",
+    "source_panel_policy": "custom",
+    "source_run_root": "./experiments/013_gemini_37_creator_20260813",
+    "source_run_state_sha256": "9b1f69e3b39628f3425df362389ae29e71bf6af9acf178705dcf4c4fd6fb0970",
+    "source_snapshot_digest": "8824e3affce7e5231e0cd5155afdfe913f0bb31023a52116977a82d6822e4c9e",
+    "timeout_seconds": 1500,
+    "unmetered_cost_acknowledged": true,
+    "zero_telemetry_reservation": 5000000
+  },
+  "config_fingerprint": "04130618b631712c4f934841fc67b1a8d88fafbe8e68c37ac15f76e942f0b621",
+  "schema_version": 1,
+  "source_snapshot": {
+    "digest": "df47f0717b61a41db8594ec8a6c767f1ddc7deb41f6a26a69d4de701d1e7a239",
+    "file_count": 10,
+    "manifest_path": "source_snapshot/manifest.json",
+    "path": "source_snapshot",
+    "schema_version": "benchbench.source_snapshot/v1"
+  }
+}

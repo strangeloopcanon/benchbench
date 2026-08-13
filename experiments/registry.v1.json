@@ -8,7 +8,7 @@
     "leader_candidate_id": "004-reimbursement-forensics",
     "rank": 1,
     "verdict": "win_over_challengers",
-    "basis": "Against independently recomputed Decimal half-up gold, the six retained solver predictions score 12/30, 16/30, 11/30, 13/30, 11/30, and 11/30. This remains the only complete six-solver row with every score low and nonzero; later challenger rows reach 25/30 or higher, are invalid, or are incomplete. Every completed Experiment 010 solver cell is 30/30; Opus did not complete two cells and Gemini produced no valid candidate.",
+    "basis": "Against independently recomputed Decimal half-up gold, the six retained solver predictions score 12/30, 16/30, 11/30, 13/30, 11/30, and 11/30. This remains the only complete six-solver row with every score low and nonzero; later challenger rows reach 25/30 or higher, are invalid, or are incomplete. Every completed Experiment 010 and Experiment 013 solver cell is 30/30; Gemini 3.6 produced no valid candidate, while Gemini 3.7 produced a valid but too-easy candidate.",
     "qualification": "This is a corrected historical comparison, not a canonical promotion. Experiment 004 remains invalid because its original emitted gold was wrong, and no model was rerun."
   },
   "experiments": [
@@ -108,10 +108,10 @@
       "id": "010",
       "run_path": "experiments/010_four_model_panel_20260801_120442",
       "outcome": "infrastructure_incomplete",
-      "summary": "Three candidates passed the mechanical gate. Gemini's recovered solver cells all scored 30/30, leaving every completed cell at 30/30; Opus did not complete two cells. Gemini recovery creator work produced no valid candidate.",
+      "summary": "Three candidates passed the mechanical gate. Gemini 3.6 and Gemini 3.7 each scored 30/30 on all three; Opus did not complete two cells. Gemini 3.6 creator work produced no valid candidate.",
       "recovery_adjudication": {
         "path": "experiments/adjudications/010_provider_recovery_result.v1.json",
-        "sha256": "20914e34cfaf543ad614bcc5f06597535f429b92187bfcb0db15ddcfd6d16c68"
+        "sha256": "676ad8b8160f32be6ab8d609cecda95dd528841df3b8b89a7b4763212f95d5aa"
       },
       "evidence": [
         {
@@ -120,11 +120,11 @@
         },
         {
           "path": "experiments/extensions/010_completion_sol_20260801_133816/manifest.json",
-          "sha256": "6e70cd07a2b4b1d62d15e1e41291ccfdbcdbb831a5f0a9d1ffed7774b9f95134"
+          "sha256": "3b17b5f3531e7c066f20cfba63b9ff93cc01c208229704b6fa56cdde131e01a8"
         },
         {
           "path": "experiments/extensions/010_completion_terra_20260801_133816/manifest.json",
-          "sha256": "9771a2aacbdf83c48a692af04fae5b7e04806a013215371173172480fd7fc2db"
+          "sha256": "2be154f76b6c8bb8548fa0a657775466df3aafc5bb61fa4ffee92a781e45648c"
         },
         {
           "path": "experiments/extensions/010_completion_gemini_20260801_133816/manifest.json",
@@ -136,7 +136,7 @@
         },
         {
           "path": "experiments/010_four_model_panel_20260801_120442/combined_result.v1.json",
-          "sha256": "ff2bee1aae23c7581a42da4803ad44f46e502e48464a8df7e8458133bd15976f"
+          "sha256": "fd4135dfbc89988ef349be186ad6a506feb9229ce716383bb494b3488e311c06"
         },
         {
           "path": "experiments/adjudications/010_four_model_panel.md",
@@ -144,7 +144,7 @@
         },
         {
           "path": "experiments/extensions/010_gemini_permission_recovery_20260802/manifest.json",
-          "sha256": "62a901a931add0813e1cddb0f5b632acfa1423724d14a6ebd23af0d4725ed2a9"
+          "sha256": "952eb5b8b439dcd099cbb797eae24e2671aebddd97dc379eb176364f7f554acf"
         },
         {
           "path": "experiments/011_gemini_provider_recovery_20260802/manifest.json",
@@ -160,7 +160,43 @@
         },
         {
           "path": "experiments/adjudications/010_provider_recovery_result.v1.json",
-          "sha256": "20914e34cfaf543ad614bcc5f06597535f429b92187bfcb0db15ddcfd6d16c68"
+          "sha256": "676ad8b8160f32be6ab8d609cecda95dd528841df3b8b89a7b4763212f95d5aa"
+        },
+        {
+          "path": "experiments/extensions/010_gemini_37_solver_20260813/manifest.json",
+          "sha256": "974a7c14603dab092785e9537d19c32e7100025c06440adb4db5cba5b506c625"
+        },
+        {
+          "path": "experiments/extensions/010_gemini_37_solver_20260813/run_state.json",
+          "sha256": "3124254b2dcc47b16293fd85c2cb7e7ca051a9db01497c50ab7300e57fb1b265"
+        }
+      ]
+    },
+    {
+      "id": "013",
+      "run_path": "experiments/013_gemini_37_creator_20260813",
+      "outcome": "rejected",
+      "summary": "Gemini 3.7 created the mechanically valid CloudSLA-Forensics package, but Gemini 3.6 and Gemini 3.7 each solved it 30/30.",
+      "evidence": [
+        {
+          "path": "experiments/013_gemini_37_creator_20260813/manifest.json",
+          "sha256": "2f8d8ae1c52ee1c3dbd6c4fd3f4d26330c674f5d4ae686956481b37821422d6c"
+        },
+        {
+          "path": "experiments/013_gemini_37_creator_20260813/run_state.json",
+          "sha256": "93ea6601b16c9df59fe779607001c1aeea4a657d2efe9887b3eb97e5be1bfbb5"
+        },
+        {
+          "path": "experiments/extensions/013_gemini_36_solver_20260813/manifest.json",
+          "sha256": "1ce93f9fba0ac8e7cedf6434a8d1e6006462cb5dcbc9b542b2b6d48c99edb0a1"
+        },
+        {
+          "path": "experiments/extensions/013_gemini_36_solver_20260813/run_state.json",
+          "sha256": "012c3023b03082db2596db1a9759f09107f5a3d07e7361e01bca6f2292b3b207"
+        },
+        {
+          "path": "experiments/adjudications/013_gemini_37_flash.md",
+          "sha256": "c6abd6b8cb55864f66f281257f1fafae89f737afb18630ffa17330375f47c718"
         }
       ]
     }
@@ -181,7 +217,7 @@
       "historical_comparison": {
         "rank": 1,
         "verdict": "win_over_challengers",
-        "read": "Best corrected historical candidate: all six retained solver scores remain low and nonzero (11-16/30), while later challengers reach at least 25/30, are invalid, or have incomplete panels; every completed Experiment 010 challenger cell is 30/30."
+        "read": "Best corrected historical candidate: all six retained solver scores remain low and nonzero (11-16/30), while later challengers reach at least 25/30, are invalid, or have incomplete panels; every completed Experiment 010 and Experiment 013 challenger cell is 30/30."
       },
       "required_next_step": "Repair generation and verification with Decimal-only half-up rounding, then generate a new version and run a complete fresh solver panel.",
       "evidence": [
@@ -259,7 +295,7 @@
       "evidence": [
         {
           "path": "experiments/009_four_model_panel_20260801_103006/run/candidate_created_by_codex__gpt_5_6_sol__effort_high/attempt_0002/controller_validation.v1.json",
-          "sha256": "e7d42b312413a80121a64eb99ee65357ba54c69c041b2e678c90ce6dc8c1e181"
+          "sha256": "36c526927c4f825c2a752ea588a09fa6c771aad399c2a71a5b8924b2117d6569"
         },
         {
           "path": "experiments/009_four_model_panel_20260801_103006/run/candidate_created_by_codex__gpt_5_6_sol__effort_high/attempt_0002/controller_validation_report.txt",
@@ -279,7 +315,7 @@
       "evidence": [
         {
           "path": "experiments/009_four_model_panel_20260801_103006/run/candidate_created_by_codex__gpt_5_6_terra__effort_xhigh/attempt_0002/controller_validation.v1.json",
-          "sha256": "ea52b0f5e7f84565be822c1c3fbf31f46a8b1de7bdc984a7ed1c6687db1c6166"
+          "sha256": "bc9983751efbfdf330b91e0d4feba0e52d7c702a9b2680ec8f2413af5768437b"
         },
         {
           "path": "experiments/009_four_model_panel_20260801_103006/run/candidate_created_by_codex__gpt_5_6_terra__effort_xhigh/attempt_0002/controller_validation_report.txt",
@@ -294,9 +330,9 @@
       "creator": "Codex GPT-5.6 Sol high",
       "outcome": "infrastructure_incomplete",
       "canonical_eligible": false,
-      "reason": "The candidate passed the mechanical gate, and Sol, Terra, and recovered Gemini each scored 30/30. Opus did not complete, so the panel remains incomplete and every completed cell shows no useful difficulty.",
+      "reason": "The candidate passed the mechanical gate. Sol, Terra, Gemini 3.6, and Gemini 3.7 each scored 30/30; Opus did not complete, so the panel remains incomplete and every completed cell shows no useful difficulty.",
       "historical_scores": [
-        "successful cells only: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30 (recovery)"
+        "successful cells only: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30"
       ],
       "cell_states": [
         {
@@ -308,15 +344,19 @@
       "evidence": [
         {
           "path": "experiments/010_four_model_panel_20260801_120442/combined_result.v1.json",
-          "sha256": "ff2bee1aae23c7581a42da4803ad44f46e502e48464a8df7e8458133bd15976f"
+          "sha256": "fd4135dfbc89988ef349be186ad6a506feb9229ce716383bb494b3488e311c06"
         },
         {
           "path": "experiments/010_four_model_panel_20260801_120442/run/candidate_created_by_codex__gpt_5_6_sol__effort_high/attempt_0001/controller_validation.v1.json",
-          "sha256": "e7d7bd5efc900fa47b5069f1a6d3077b0b009ea7842a7d446520af592bad645f"
+          "sha256": "813aaab58f169ffd9391273a9030ff53433ce68558dc9b928c31c3ddb8db57c5"
         },
         {
           "path": "experiments/adjudications/010_provider_recovery_result.v1.json",
-          "sha256": "20914e34cfaf543ad614bcc5f06597535f429b92187bfcb0db15ddcfd6d16c68"
+          "sha256": "676ad8b8160f32be6ab8d609cecda95dd528841df3b8b89a7b4763212f95d5aa"
+        },
+        {
+          "path": "experiments/extensions/010_gemini_37_solver_20260813/manifest.json",
+          "sha256": "974a7c14603dab092785e9537d19c32e7100025c06440adb4db5cba5b506c625"
         }
       ]
     },
@@ -327,9 +367,9 @@
       "creator": "Codex GPT-5.6 Terra extra high",
       "outcome": "infrastructure_incomplete",
       "canonical_eligible": false,
-      "reason": "The candidate passed the mechanical gate, and Sol, Terra, and recovered Gemini each scored 30/30. Opus did not complete, so the panel remains incomplete and every completed cell shows no useful difficulty.",
+      "reason": "The candidate passed the mechanical gate. Sol, Terra, Gemini 3.6, and Gemini 3.7 each scored 30/30; Opus did not complete, so the panel remains incomplete and every completed cell shows no useful difficulty.",
       "historical_scores": [
-        "successful cells only: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30 (recovery)"
+        "successful cells only: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30"
       ],
       "cell_states": [
         {
@@ -341,15 +381,19 @@
       "evidence": [
         {
           "path": "experiments/010_four_model_panel_20260801_120442/combined_result.v1.json",
-          "sha256": "ff2bee1aae23c7581a42da4803ad44f46e502e48464a8df7e8458133bd15976f"
+          "sha256": "fd4135dfbc89988ef349be186ad6a506feb9229ce716383bb494b3488e311c06"
         },
         {
           "path": "experiments/010_four_model_panel_20260801_120442/run/candidate_created_by_codex__gpt_5_6_terra__effort_xhigh/attempt_0001/controller_validation.v1.json",
-          "sha256": "3c59661c49b9c10bc207f60fd9583014d97d8477370cd086ac5af417829c9cd8"
+          "sha256": "29c9246a46df38ce6f3b1d123fc9f6d546d454d0cc004ff14495fd7faea5079d"
         },
         {
           "path": "experiments/adjudications/010_provider_recovery_result.v1.json",
-          "sha256": "20914e34cfaf543ad614bcc5f06597535f429b92187bfcb0db15ddcfd6d16c68"
+          "sha256": "676ad8b8160f32be6ab8d609cecda95dd528841df3b8b89a7b4763212f95d5aa"
+        },
+        {
+          "path": "experiments/extensions/010_gemini_37_solver_20260813/manifest.json",
+          "sha256": "974a7c14603dab092785e9537d19c32e7100025c06440adb4db5cba5b506c625"
         }
       ]
     },
@@ -365,15 +409,15 @@
       "evidence": [
         {
           "path": "experiments/010_four_model_panel_20260801_120442/combined_result.v1.json",
-          "sha256": "ff2bee1aae23c7581a42da4803ad44f46e502e48464a8df7e8458133bd15976f"
+          "sha256": "fd4135dfbc89988ef349be186ad6a506feb9229ce716383bb494b3488e311c06"
         },
         {
           "path": "experiments/010_four_model_panel_20260801_120442/run/candidate_created_by_antigravity__gemini_3_6_flash_high__effort_high/attempt_0002/controller_validation.v1.json",
-          "sha256": "708d02e08ed5882562d9f58d59fcac489a46ea881bbc58013a8242436a563559"
+          "sha256": "7bcb1e35ac3c102a25b9190234978d253201a3ed2f6e8f97ceb41746e7cff7c8"
         },
         {
           "path": "experiments/adjudications/010_provider_recovery_result.v1.json",
-          "sha256": "20914e34cfaf543ad614bcc5f06597535f429b92187bfcb0db15ddcfd6d16c68"
+          "sha256": "676ad8b8160f32be6ab8d609cecda95dd528841df3b8b89a7b4763212f95d5aa"
         }
       ]
     },
@@ -384,23 +428,62 @@
       "creator": "Cursor Claude Opus 5 high",
       "outcome": "infrastructure_incomplete",
       "canonical_eligible": false,
-      "reason": "The candidate passed the mechanical gate, and Sol, Terra, recovered Gemini, and Opus each scored 30/30. Every completed cell proves the benchmark is too easy, but the retained Opus runtime identity remains requested/unverified.",
+      "reason": "The candidate passed the mechanical gate. Sol, Terra, Gemini 3.6, Gemini 3.7, and Opus each scored 30/30. Every completed cell proves the benchmark is too easy, but the retained Opus runtime identity remains requested/unverified.",
       "historical_scores": [
-        "completed cells: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30 (recovery), Opus 30/30"
+        "completed cells: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30, Opus 30/30"
       ],
       "required_next_step": "Increase task difficulty, generate a new version, and run a complete fresh solver panel.",
       "evidence": [
         {
           "path": "experiments/010_four_model_panel_20260801_120442/combined_result.v1.json",
-          "sha256": "ff2bee1aae23c7581a42da4803ad44f46e502e48464a8df7e8458133bd15976f"
+          "sha256": "fd4135dfbc89988ef349be186ad6a506feb9229ce716383bb494b3488e311c06"
         },
         {
           "path": "experiments/010_four_model_panel_20260801_120442/run/candidate_created_by_cursor__claude_opus_5_thinking_high__effort_high/attempt_0001/controller_validation.v1.json",
-          "sha256": "1b7c00ff7d7048809e17a05ca824f7435eb62a5f5e6b12e105f12449fb4f6a2a"
+          "sha256": "1d7cf6694587131e22a8a3b6b087106f7d768a08f8bf886a2f80f74406f78990"
         },
         {
           "path": "experiments/adjudications/010_provider_recovery_result.v1.json",
-          "sha256": "20914e34cfaf543ad614bcc5f06597535f429b92187bfcb0db15ddcfd6d16c68"
+          "sha256": "676ad8b8160f32be6ab8d609cecda95dd528841df3b8b89a7b4763212f95d5aa"
+        },
+        {
+          "path": "experiments/extensions/010_gemini_37_solver_20260813/manifest.json",
+          "sha256": "974a7c14603dab092785e9537d19c32e7100025c06440adb4db5cba5b506c625"
+        }
+      ]
+    },
+    {
+      "id": "013-cloudsla-forensics",
+      "experiment_id": "013",
+      "name": "CloudSLA-Forensics",
+      "creator": "Antigravity Gemini 3.7 Flash high",
+      "outcome": "rejected",
+      "canonical_eligible": false,
+      "reason": "The package passed the full mechanical gate on its first attempt, but Gemini 3.6 and Gemini 3.7 each scored 30/30. The benchmark is valid but provides no useful frontier difficulty.",
+      "historical_scores": [
+        "completed cells: Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30"
+      ],
+      "required_next_step": "Increase task difficulty, generate a new version, and run a complete fresh five-model solver panel.",
+      "evidence": [
+        {
+          "path": "experiments/013_gemini_37_creator_20260813/run/candidate_created_by_antigravity__gemini_3_7_flash_high__effort_high/attempt_0001/controller_validation.v1.json",
+          "sha256": "0b8841a7d9abb98cc9d7802f789e2c11f59dbce06a7891da6fed87867dd5c98b"
+        },
+        {
+          "path": "experiments/013_gemini_37_creator_20260813/run/candidate_created_by_antigravity__gemini_3_7_flash_high__effort_high/attempt_0001/controller_validation_report.txt",
+          "sha256": "c19c75d8638193b3ba5a8752f0f72e2ad8b86c21da6c0a7e192ee5323ca0d90f"
+        },
+        {
+          "path": "experiments/013_gemini_37_creator_20260813/run/candidate_created_by_antigravity__gemini_3_7_flash_high__effort_high/solver_results/score_solver_antigravity__gemini_3_7_flash_high__effort_high.json",
+          "sha256": "8d1b36f3422f15a1498d7296a35c81f6b4559701a0acd6df697d1548696a7e92"
+        },
+        {
+          "path": "experiments/extensions/013_gemini_36_solver_20260813/run/candidate_created_by_gemini_3_7_flash_high/solver_results/score_solver_antigravity__gemini_3_6_flash_high__effort_high.json",
+          "sha256": "624602388f0c8d33c3b4363c10e2ff99466c6ae391d6bede2dd335918501efa9"
+        },
+        {
+          "path": "experiments/adjudications/013_gemini_37_flash.md",
+          "sha256": "c6abd6b8cb55864f66f281257f1fafae89f737afb18630ffa17330375f47c718"
         }
       ]
     }

@@ -10,7 +10,7 @@ current benchmark leader. The authoritative interpretation lives in
 There is no validated incumbent. Reimbursement Forensics is nevertheless the
 #1 corrected historical candidate and a comparative win over the challengers.
 
-Four material findings prevent promotion:
+The material findings preventing promotion are:
 
 - Experiment 004's Reimbursement Forensics gold fails Decimal half-up
   semantics, so the original run remains invalid. An independent correction
@@ -27,7 +27,10 @@ Four material findings prevent promotion:
   cells ran, Cursor was not called, and every score is `NA`.
 - Experiment 010 recovery gave Gemini three valid `30/30` solver results.
   Every completed cell is `30/30`; Opus did not complete two cells, and Gemini
-  produced no mechanically valid candidate.
+  3.6 produced no mechanically valid candidate.
+- Experiment 013 added Gemini 3.7 Flash. It solved all three valid Experiment
+  010 candidates `30/30`, created the mechanically valid CloudSLA-Forensics
+  package, and scored `30/30` on that package alongside Gemini 3.6 Flash.
 
 ## Registry Contract
 
@@ -46,6 +49,7 @@ The source run folders remain available for provenance:
 | 008 | infrastructure incomplete: provider error and timeout |
 | 009 | infrastructure incomplete: invalid candidates, Antigravity provider error, no solver cells |
 | 010 | infrastructure incomplete: every completed cell is 30/30; two Opus cells did not complete; Gemini produced no valid candidate |
+| 013 | CloudSLA-Forensics passed packaging but both tested solvers scored 30/30; rejected as too easy |
 
 ## Generated Artifacts
 

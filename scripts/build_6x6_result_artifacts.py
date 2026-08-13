@@ -457,11 +457,6 @@ def _status_svg(
     title: str,
 ) -> str:
     experiment_010 = [item for item in histories if item["experiment_id"] == "010"]
-    gemini_recovered = sum(
-        "Gemini 3.6 Flash high 30/30" in score
-        for item in experiment_010
-        for score in item["historical_scores"]
-    )
     opus_incomplete = sum(
         cell["solver"] == "Claude Opus 5 high" and cell["state"] == "timeout"
         for item in experiment_010
@@ -489,10 +484,10 @@ def _status_svg(
         )
     lines.extend([
         '<text x="48" y="181" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#333">'
-        + escape(f"Experiment 010 recovery: Gemini solved {gemini_recovered}/3 candidates at 30/30.")
+        + escape("Gemini 3.7 solved all three Experiment 010 candidates at 30/30.")
         + "</text>",
         '<text x="48" y="205" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#555">'
-        + escape(f"Opus did not complete {opus_incomplete}/3; Gemini produced no valid candidate.")
+        + escape(f"CloudSLA-Forensics was valid but both tested solvers scored 30/30; Opus still did not complete {opus_incomplete}/3.")
         + "</text>",
     ])
     lines.append("</svg>")
@@ -573,6 +568,7 @@ def render_markdown(
         "- [Four-model panel](../adjudications/009_four_model_panel.md): both created candidates failed the mechanical score-report contract, Antigravity then failed before inference, and no solver cell ran.",
         "- [Frontier-four panel](../adjudications/010_four_model_panel.md): original sealed result; three candidates passed the mechanical gate and every completed cell was `30/30`.",
         "- [Experiment 010 provider recovery](../adjudications/010_provider_recovery_20260802.md): Gemini recovered all three missing solver cells at `30/30`; Opus still did not complete two cells, and Gemini produced no valid candidate.",
+        "- [Gemini 3.7 Flash](../adjudications/013_gemini_37_flash.md): Gemini 3.7 solved all three valid Experiment 010 candidates at `30/30`; its mechanically valid CloudSLA-Forensics candidate was also solved `30/30` by Gemini 3.6 and Gemini 3.7.",
         "",
         "## Registry Coverage",
         "",

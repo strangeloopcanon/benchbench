@@ -25,7 +25,15 @@ from benchbench_model_backends import (
     safe_name,
 )
 from benchbench_results import extract_predictions, extract_solver_predictions, score_summary
-from run_broad_three_model_sweep import DEFAULT_MODELS, candidate_card_lines, candidate_status, resolve_model_lists, resolve_panel_policy
+from benchbench_run_state import call_artifact_id
+from run_broad_three_model_sweep import (
+    DEFAULT_MODELS,
+    FRONTIER_FOUR_MODELS,
+    candidate_card_lines,
+    candidate_status,
+    resolve_model_lists,
+    resolve_panel_policy,
+)
 from scripts.build_benchmark_landscape_pack import model_from_safe_slug, solver_model_from_score_path
 
 
@@ -46,6 +54,11 @@ class ModelBackendTests(unittest.TestCase):
         self.assertEqual(gemini.antigravity_model, "gemini-3.6-flash-high")
         self.assertEqual(gemini.antigravity_expected_label, "Gemini 3.6 Flash (High)")
         self.assertEqual(gemini.reasoning_effort, "high")
+
+        gemini_37 = parse_model_spec("agy:gemini-3.7-flash-high@high")
+        self.assertEqual(gemini_37.antigravity_model, "gemini-3.7-flash-high")
+        self.assertEqual(gemini_37.antigravity_expected_label, "Gemini 3.7 Flash (High)")
+        self.assertEqual(gemini_37.reasoning_effort, "high")
 
         opus = parse_model_spec("cursor:claude-opus-5@high")
         self.assertEqual(opus.cursor_model, "claude-opus-5-thinking-high")
@@ -139,6 +152,9 @@ class ModelBackendTests(unittest.TestCase):
             flash_alias.artifact_id,
             flash_concrete.artifact_id,
         )
+        flash_37_alias = parse_model_spec("agy:gemini-3.7-flash")
+        flash_37_concrete = parse_model_spec("agy:gemini-3.7-flash-high")
+        self.assertEqual(flash_37_alias.artifact_id, flash_37_concrete.artifact_id)
 
     def test_historical_xhigh_score_names_preserve_model_identity(self) -> None:
         for filename in ("score_solver_xhigh_gpt_5_5.json", "score_solver_gpt_5_5_xhigh.json"):
@@ -492,6 +508,7 @@ class ModelBackendTests(unittest.TestCase):
                 "gpt-5.6-sol@high",
                 "gpt-5.6-terra@xhigh",
                 "agy:gemini-3.6-flash-high@high",
+                "agy:gemini-3.7-flash-high@high",
                 "cursor:claude-opus-5@high",
             ],
         )
@@ -500,9 +517,13 @@ class ModelBackendTests(unittest.TestCase):
         self.assertEqual(solvers, DEFAULT_MODELS)
 
     def test_experiment_010_rejects_any_non_frontier_panel_before_launch(self) -> None:
-        exact = ["one", "two", "three", "four"]
+        exact = [
+            call_artifact_id(spec.artifact_id, effective_effort(spec, "high"))
+            for spec in map(parse_model_spec, FRONTIER_FOUR_MODELS)
+        ]
+        current = ["one", "two", "three", "four", "five"]
         self.assertEqual(
-            resolve_panel_policy(Path("experiments/010_four_model_panel"), exact, exact, exact, exact),
+            resolve_panel_policy(Path("experiments/010_four_model_panel"), exact, exact, current, current),
             "benchbench.frontier-four/2026-08-01",
         )
         with self.assertRaisesRegex(ValueError, "Experiment 010 requires the exact"):
@@ -510,9 +531,13 @@ class ModelBackendTests(unittest.TestCase):
                 Path("experiments/010_four_model_panel"),
                 exact[:-1],
                 exact,
-                exact,
-                exact,
+                current,
+                current,
             )
+        self.assertEqual(
+            resolve_panel_policy(Path("experiments/013_frontier_five"), current, current, current, current),
+            "benchbench.frontier-five/2026-08-13",
+        )
 
         creators, solvers = resolve_model_lists(
             ["gpt-5.2", "gpt-5.4"],

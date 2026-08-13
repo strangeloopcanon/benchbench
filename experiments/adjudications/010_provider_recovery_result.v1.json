@@ -10,8 +10,8 @@
   },
   "gemini_solver_recovery": {
     "path": "experiments/extensions/010_gemini_permission_recovery_20260802",
-    "manifest_sha256": "62a901a931add0813e1cddb0f5b632acfa1423724d14a6ebd23af0d4725ed2a9",
-    "run_state_sha256": "e528138330b9d4a214031907977aa11effc0da18edd6ca9b05675327e2b4b24d",
+    "manifest_sha256": "952eb5b8b439dcd099cbb797eae24e2671aebddd97dc379eb176364f7f554acf",
+    "run_state_sha256": "dd9196be05ee5654615e7653fd67be90812ff4465873a9f1e53e3763c03d8e4c",
     "source_evidence_index_sha256": "f1ab8b893ad65f8d41b5110506850c265c33747675b138e5cdb6740e5143db6c",
     "runtime_model": "Gemini 3.6 Flash (High)",
     "cells": [
@@ -44,11 +44,11 @@
       },
       {
         "path": "experiments/extensions/010_gemini_permission_recovery_20260802/run/candidate_created_by_gpt_5_6_sol/solver_results/score_solver_antigravity__gemini_3_6_flash_high__effort_high.json",
-        "sha256": "dc9751082991d6d4541f464658a7f3e2a931daff009daa6caf1ac7b64aaa192b"
+        "sha256": "ac062347f42922123ec6697f667e9b7df1dbb7db2b18a754f2340f751e619e12"
       },
       {
         "path": "experiments/extensions/010_gemini_permission_recovery_20260802/run/candidate_created_by_gpt_5_6_terra/solver_results/score_solver_antigravity__gemini_3_6_flash_high__effort_high.json",
-        "sha256": "f333665a397270d316abe614f84ca0312fbc0e122b8b9c57ca6056b90d715afa"
+        "sha256": "6e576de2940b4ed343ed4a94f3e9872d3fcec271115be731d6015382dcf43337"
       }
     ]
   },

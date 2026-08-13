@@ -5,6 +5,6 @@
 <text x="48" y="96" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#333">No benchmark has passed the current validity and infrastructure gates.</text>
 <text x="48" y="121" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#555">Registry v1 separates canonical validity from corrected historical comparison.</text>
 <text x="48" y="151" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#333">Historical #1: Reimbursement Forensics is a win over challengers; original gold remains invalid.</text>
-<text x="48" y="181" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#333">Experiment 010 recovery: Gemini solved 3/3 candidates at 30/30.</text>
-<text x="48" y="205" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#555">Opus did not complete 2/3; Gemini produced no valid candidate.</text>
+<text x="48" y="181" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#333">Gemini 3.7 solved all three Experiment 010 candidates at 30/30.</text>
+<text x="48" y="205" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#555">CloudSLA-Forensics was valid but both tested solvers scored 30/30; Opus still did not complete 2/3.</text>
 </svg>

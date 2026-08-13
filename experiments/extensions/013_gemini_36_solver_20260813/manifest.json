@@ -1,0 +1,52 @@
+[
+  {
+    "antigravity_actual_label": "Gemini 3.6 Flash (High)",
+    "antigravity_expected_label": "Gemini 3.6 Flash (High)",
+    "antigravity_log_path": "private_raw_evidence_not_published",
+    "antigravity_status": "SUCCESS",
+    "antigravity_usage": {
+      "cache_read_tokens": 2377268,
+      "input_tokens": 232524,
+      "output_tokens": 42965,
+      "thinking_tokens": 23775,
+      "total_tokens": 275489
+    },
+    "artifact_id": "antigravity__gemini_3_6_flash_high",
+    "benchmark": "CloudSLA-Forensics",
+    "candidate_digest": "ff8588e1e55b3d1a8d5d67fb049df1cb17202913e7427d63b38db6863949f2c2",
+    "candidate_snapshot": "./experiments/extensions/013_gemini_36_solver_20260813/run/candidate_created_by_gemini_3_7_flash_high/artifact",
+    "cell_state": "success",
+    "creator_model": "gemini-3.7-flash-high",
+    "display_model": "Gemini 3.6 Flash (High)",
+    "effort": "high",
+    "gold_digest": "306cd77894f01ca39d60dcce8b4fd209c7003b0ba5e3d0bdad2dd34a4a85e03e",
+    "model": "gemini-3.6-flash-high",
+    "model_mismatch": false,
+    "out_path": "private_raw_evidence_not_published",
+    "permission_denied": false,
+    "phase": "solver_extension",
+    "prediction_digest": "c6d5a54efec46a10ccb029273c8209183a6139f1be0a67e9ba6db6dc96aaedca",
+    "prediction_extraction_source": "provider_output",
+    "prediction_rows": 30,
+    "prediction_source": "./experiments/extensions/013_gemini_36_solver_20260813/run/candidate_created_by_gemini_3_7_flash_high/solver_results/predictions_solver_antigravity__gemini_3_6_flash_high__effort_high.jsonl",
+    "predictions_path": "./experiments/extensions/013_gemini_36_solver_20260813/run/candidate_created_by_gemini_3_7_flash_high/solver_results/predictions_solver_antigravity__gemini_3_6_flash_high__effort_high.jsonl",
+    "prompt_path": "private_raw_evidence_not_published",
+    "provider": "antigravity",
+    "requested_provider_model": "gemini-3.6-flash-high",
+    "returncode": 0,
+    "sandbox_mode": "nested-antigravity-plus-outer-seatbelt",
+    "score_path": "./experiments/extensions/013_gemini_36_solver_20260813/run/candidate_created_by_gemini_3_7_flash_high/solver_results/score_solver_antigravity__gemini_3_6_flash_high__effort_high.json",
+    "score_returncode": 0,
+    "score_summary": {
+      "accuracy": 1.0,
+      "correct": 30,
+      "total": 30
+    },
+    "solver_artifact_id": "antigravity__gemini_3_6_flash_high__effort_high",
+    "solver_display_model": "Gemini 3.6 Flash (High)",
+    "solver_model": "gemini-3.6-flash-high",
+    "stderr_path": "private_raw_evidence_not_published",
+    "stdout_path": "private_raw_evidence_not_published",
+    "tokens_used": 275489
+  }
+]

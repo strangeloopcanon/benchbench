@@ -1,0 +1,84 @@
+{
+  "config": {
+    "dispatch_ceiling_overshoot_acknowledged": true,
+    "harness_digest": "b8fac09cf0a133e7ea04f4d3c8dcf0431986b9de28eccaf4b7ea76286bc9e66c",
+    "max_total_tokens": 5000000,
+    "panel_expansion": true,
+    "provider_preflight": [
+      {
+        "artifact_id": "antigravity__gemini_3_7_flash_high",
+        "binary": "agy",
+        "display_model": "Gemini 3.7 Flash (High)",
+        "executable": "<local-home>/.local/bin/agy",
+        "inference_attempted": false,
+        "model": "gemini-3.7-flash-high",
+        "model_available": true,
+        "model_listing_command": [
+          "<local-home>/.local/bin/agy",
+          "models"
+        ],
+        "model_listing_returncode": 0,
+        "model_listing_stderr_bytes": 29,
+        "model_listing_stderr_sha256": "53f588bc9a928f4a66908deacaca57dddc7e7ce177a0cc3586b5a501be26e1e8",
+        "model_listing_stdout_bytes": 643,
+        "model_listing_stdout_sha256": "a7463eafad52e693c6d4890ed329f16aa60b1dfa9b058c051a13c0f0553efec1",
+        "model_listing_supported": true,
+        "preflight_scope": "ambient_catalog_only",
+        "probe_stderr_bytes": 2289,
+        "probe_stderr_sha256": "c64e4bf74262cebba7d161d29e1632682f64f844c6ca1a718c77a1fa4e8f8343",
+        "probe_stdout_bytes": 0,
+        "probe_stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "provider": "antigravity",
+        "requested_effort": "high",
+        "requested_provider_model": "gemini-3.7-flash-high",
+        "returncode": 0,
+        "state": "binary_ready"
+      }
+    ],
+    "retry_failed_source_cells": false,
+    "schema_version": 1,
+    "solver": "antigravity__gemini_3_7_flash_high__effort_high",
+    "source_candidates": [
+      {
+        "artifact": "./experiments/010_four_model_panel_20260801_120442/run/candidate_created_by_codex__gpt_5_6_sol__effort_high/attempt_0001/artifact",
+        "candidate_digest": "939727a0cb1cb4fc9f9abdc849ab405414c7a62b93d34d8b4ba8096cc6a86113",
+        "creator_call_id": "codex__gpt_5_6_sol__effort_high",
+        "creator_model": "gpt-5.6-sol",
+        "validation_report_sha256": "173f63e989d4309d057dc292a5e67aa1b39c5b194df73642d5736f7922f873b6",
+        "validation_sha256": "813aaab58f169ffd9391273a9030ff53433ce68558dc9b928c31c3ddb8db57c5"
+      },
+      {
+        "artifact": "./experiments/010_four_model_panel_20260801_120442/run/candidate_created_by_codex__gpt_5_6_terra__effort_xhigh/attempt_0001/artifact",
+        "candidate_digest": "667750cd12c262df4ae783bf86be9f860234f85f1158fafa8d87688b093a66c7",
+        "creator_call_id": "codex__gpt_5_6_terra__effort_xhigh",
+        "creator_model": "gpt-5.6-terra",
+        "validation_report_sha256": "19cca71b25c69b58be45f95bab210307d668f8d7f54011f3274a977a05123f76",
+        "validation_sha256": "29c9246a46df38ce6f3b1d123fc9f6d546d454d0cc004ff14495fd7faea5079d"
+      },
+      {
+        "artifact": "./experiments/010_four_model_panel_20260801_120442/run/candidate_created_by_cursor__claude_opus_5_thinking_high__effort_high/attempt_0001/artifact",
+        "candidate_digest": "d7062dd405b9121979e839745b37b93ccc8a9c91babf99e74f216ab7c1d2bbc8",
+        "creator_call_id": "cursor__claude_opus_5_thinking_high__effort_high",
+        "creator_model": "claude-opus-5",
+        "validation_report_sha256": "a3b02e6c10f2813917fa6345b45be696ef17b890f9be23f50fb63de24b0d0808",
+        "validation_sha256": "1d7cf6694587131e22a8a3b6b087106f7d768a08f8bf886a2f80f74406f78990"
+      }
+    ],
+    "source_manifest_sha256": "436d40d6fdbf41c9ae876638ebfb330e03295c15217bac625bbc15659fcc2e93",
+    "source_run_root": "./experiments/010_four_model_panel_20260801_120442",
+    "source_run_state_sha256": "64dc5ed3b0fac0cdef6c125ad4c0d07809a0bb5fb289810c51c391b42182f919",
+    "source_snapshot_digest": "79a126c806eab6593210f3852cbb6c26aa05b24959d11b2243b5c2c926e397c0",
+    "timeout_seconds": 1500,
+    "unmetered_cost_acknowledged": true,
+    "zero_telemetry_reservation": 5000000
+  },
+  "config_fingerprint": "2c0088a9d3205dcce33a74d139e299145e475cc599b2a23bdd99b216c031ccb4",
+  "schema_version": 1,
+  "source_snapshot": {
+    "digest": "b8fac09cf0a133e7ea04f4d3c8dcf0431986b9de28eccaf4b7ea76286bc9e66c",
+    "file_count": 10,
+    "manifest_path": "source_snapshot/manifest.json",
+    "path": "source_snapshot",
+    "schema_version": "benchbench.source_snapshot/v1"
+  }
+}
