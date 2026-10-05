@@ -1,0 +1,25 @@
+{
+  "name": "Reimbursement Forensics (ReiFor)",
+  "version": "1.0.0",
+  "description": "Compute the reimbursable total (USD cents) for each travel reimbursement case from a solver-visible evidence bundle: policy excerpt, exchange-rate table, receipts, and emails.",
+  "capability_claim": "Evaluates multi-document consistency reasoning, careful rule interpretation, numerical auditing, and robust handling of adversarial edge cases in messy-but-finite evidence bundles.",
+  "closest_existing_benchmarks": [
+    {
+      "name": "DocVQA / document QA",
+      "reason": "Also requires extracting information from documents, but ReiFor requires full-policy adjudication and exact numeric reconciliation."
+    },
+    {
+      "name": "GAIA / tool-augmented reasoning",
+      "reason": "Both reward tool use, but ReiFor is fully self-contained and deterministically graded from a fixed bundle."
+    },
+    {
+      "name": "SWE-bench (reconciliation flavor)",
+      "reason": "Shares an 'audit and verify' flavor, but ReiFor is not code debugging and has no hidden tests; everything needed is in the documents."
+    }
+  ],
+  "grading_method": "Exact match on integer USD cents.",
+  "input_format": "JSONL items pointing to a solver bundle with text exhibits and shared policy/rate tables.",
+  "output_format": "JSONL lines with fields {id, answer} where answer is an integer string (USD cents).",
+  "sample_count": 30,
+  "seed": 20260516
+}

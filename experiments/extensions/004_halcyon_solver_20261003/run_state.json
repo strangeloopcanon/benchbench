@@ -1,0 +1,18 @@
+{
+  "config": {
+    "harness_digest": "dd0abd49488760954b875af8af50e79694317fcadbbd2c455bb4db6053650d2d",
+    "schema_version": 1,
+    "solver": "antigravity__halcyon__effort_high",
+    "source_run_root": "./experiments/004_feedback_sweep_20260522_225208",
+    "timeout_seconds": 1500
+  },
+  "config_fingerprint": "f2e8957094f7d0fb92ba7226c1e86505b100bc0dee0e7cd80e08230571dd8a8d",
+  "schema_version": 1,
+  "source_snapshot": {
+    "digest": "dd0abd49488760954b875af8af50e79694317fcadbbd2c455bb4db6053650d2d",
+    "file_count": 10,
+    "manifest_path": "source_snapshot/manifest.json",
+    "path": "source_snapshot",
+    "schema_version": "benchbench.source_snapshot/v1"
+  }
+}

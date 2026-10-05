@@ -1,0 +1,11 @@
+receipt_id=reifor_0012_R1 | date=? | ccy=JPY | cat=MEALS | tip=6.43 | flags=VOID,DUPLICATE | amount=42.16 | merchant="Station Cafe"
+receipt_id=reifor_0012_R2 | date=2026-04-08 | cat=LODGING | amount=1021.75 | ccy=EUR | merchant="Sunrise Diner"
+receipt_id=reifor_0012_R3 | date=2026-04-07 | merchant="Alpine Hotel" | cat=MISC | amount=32.85 | ccy=AUD | flags=DUPLICATE
+receipt_id=reifor_0012_R4 | date=2026-04-09 | merchant="Harbor Bistro" | amount=110.74 | cat=GROUND | ccy=EUR
+receipt_id=reifor_0012_R5 | date=2026-04-10 | note="ok" | cat=GROUND | merchant="Station Cafe" | flags=DUPLICATE | ccy=JPY | amount=42.16
+receipt_id=reifor_0012_R6 | date=2026-04-08 | note="itemized" | cat=MEALS | flags=CANCELLED | ccy=USD | amount=15.15 | tip=2.31 | merchant="Sunrise Diner"
+receipt_id=reifor_0012_R7 | date=2026-04-09 | amount=658.36 | cat=LODGING | merchant="Metro Cab" | ccy=GBP
+receipt_id=reifor_0012_R8 | date=2026-04-10 | nights=1 | cat=LODGING | amount=309.28 | ccy=JPY | merchant="Metro Cab"
+receipt_id=reifor_0012_R9 | date=2026-04-07 | note="ok" | merchant="Station Cafe" | amount=301.63 | ccy=GBP | nights=1 | cat=LODGING
+receipt_id=reifor_0012_R10 | date=2026-04-10 | amount=? | cat=LODGING | note="fax_copy" | ccy=AUD | merchant="CityRail" | nights=1
+receipt_id=reifor_0012_R11 | date=2026-04-09 | cat=MISC | note="late_scan" | merchant="Alpine Hotel" | ccy=CAD | amount=7.84

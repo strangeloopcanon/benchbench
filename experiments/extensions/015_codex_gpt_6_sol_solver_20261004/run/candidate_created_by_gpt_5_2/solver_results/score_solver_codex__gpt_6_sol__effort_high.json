@@ -1,0 +1,10 @@
+{
+  "accuracy": 1.0,
+  "candidate_digest": "60b014636e7f02da2e8f4429c9741679d1a5840a5098014cbd46f84bba113e01",
+  "correct": 30,
+  "gold_digest": "e1b69db478a4a3d952646f7024320dc21aaf3821bcd30184226403a548023ed4",
+  "invocation_id": "codex__gpt_6_sol__effort_high",
+  "prediction_digest": "9eefb3e1d03532d5f90ce894cb40fb68da76b6a03cbe1d78bb538721e219071b",
+  "schema_version": 2,
+  "total": 30
+}

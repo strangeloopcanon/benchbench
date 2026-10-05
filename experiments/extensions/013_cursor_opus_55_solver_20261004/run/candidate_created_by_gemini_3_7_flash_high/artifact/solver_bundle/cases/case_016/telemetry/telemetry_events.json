@@ -1,0 +1,26 @@
+{
+  "case_id": "case_016",
+  "reporting_period": "2026-04",
+  "incident_events": [
+    {
+      "incident_id": "INC-2026-250",
+      "service_id": "core-compute-cluster",
+      "start_time": "2026-04-07T17:43:00Z",
+      "end_time": "2026-04-07T18:08:00Z",
+      "duration_minutes": 25,
+      "error_rate_pct": 0.5,
+      "availability_zone": "us-east-1b",
+      "scenario_type": "BELOW_THRESHOLD_DISTRACTOR"
+    },
+    {
+      "incident_id": "INC-2026-251",
+      "service_id": "edge-api-gateway",
+      "start_time": "2026-04-12T09:42:00Z",
+      "end_time": "2026-04-12T15:42:00Z",
+      "duration_minutes": 360,
+      "error_rate_pct": 99.9,
+      "availability_zone": "us-east-1b",
+      "scenario_type": "PARTIAL_CUSTOMER_FAULT"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+receipt_id=reifor_0007_R1 | date=? | note="summary" | merchant="Harbor Bistro" | cat=AIR | amount=495.70 | ccy=USD
+receipt_id=reifor_0007_R2 | date=2026-05-04 | cat=MEALS | amount=57.98 | merchant="Alpine Hotel" | tip=5.27 | note="fax_copy" | flags=DUPLICATE | ccy=AUD
+receipt_id=reifor_0007_R3 | date=? | amount=72.68 | cat=MISC | ccy=JPY | merchant="Harbor Bistro"
+receipt_id=reifor_0007_R4 | date=2026-05-04 | amount=57.98 | cat=GROUND | ccy=AUD | merchant="Alpine Hotel" | flags=DUPLICATE
+receipt_id=reifor_0007_R5 | date=2026-05-03 | merchant="Alpine Hotel" | amount=184.03 | cat=AIR | ccy=CAD
+receipt_id=reifor_0007_R6 | date=2026-05-05 | cat=LODGING | ccy=CAD | merchant="Metro Cab" | nights=1 | amount=324.97
+receipt_id=reifor_0007_R7 | date=2026-05-06 | merchant="Sunrise Diner" | ccy=JPY | amount=69.08 | cat=MISC

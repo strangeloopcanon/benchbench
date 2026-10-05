@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "snapshot_candidate_digest": "d521ea8e9d4fbe0979f24c93824c78f66f4fccabcd84af16f6501ff7e6187d86",
+  "source_artifact": "./experiments/004_feedback_sweep_20260522_225208/run/candidate_created_by_gpt_5_2",
+  "source_candidate_digest": "76e0a4c458b0bcedb179179bf0d5b5fbdfe127446c911714b293239247a3fba1"
+}

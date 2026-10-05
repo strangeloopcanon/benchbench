@@ -1,0 +1,25 @@
+{
+  "config": {
+    "creator_effort": "high",
+    "creator_models": [
+      "codex__gpt_5_2__effort_high"
+    ],
+    "generation_seed": 20260516,
+    "harness_digest": "5aa6c4870c36968ba7493b69420119bc367b7aa83289b7aabecd81b743c419c4",
+    "panel_policy": "custom",
+    "sample_count": 30,
+    "solver_effort": "high",
+    "solver_models": [
+      "antigravity__halcyon__effort_high"
+    ]
+  },
+  "config_fingerprint": "9241e964c669d5f5fdebc51b2cf0a135981997656bf7b080c1511941138a76b5",
+  "schema_version": 1,
+  "source_snapshot": {
+    "digest": "5aa6c4870c36968ba7493b69420119bc367b7aa83289b7aabecd81b743c419c4",
+    "file_count": 9,
+    "manifest_path": "source_snapshot/manifest.json",
+    "path": "source_snapshot",
+    "schema_version": "benchbench.source_snapshot/v1"
+  }
+}

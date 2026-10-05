@@ -1,0 +1,11 @@
+receipt_id=reifor_0011_R1 | date=2026-05-16 | ccy=EUR | amount=74.47 | cat=GROUND | merchant="CloudNine Inn"
+receipt_id=reifor_0011_R2 | date=2026-05-16 | merchant="QuickFuel" | cat=MISC | ccy=JPY | amount=30.81
+receipt_id=reifor_0011_R3 | date=2026-05-14 | cat=MISC | merchant="Corner Mart" | amount=57.85 | ccy=?
+receipt_id=reifor_0011_R4 | date=2026-05-14 | amount=36.81 | merchant="Sunrise Diner" | ccy=JPY | cat=GROUND | note="itemized"
+receipt_id=reifor_0011_R5 | date=2026-05-13 | cat=GROUND | ccy=AUD | amount=48.93 | merchant="CityRail" | flags=VOID
+receipt_id=reifor_0011_R6 | date=2026-05-14 | merchant="Corner Mart" | cat=MEALS | ccy=USD | amount=10.44
+receipt_id=reifor_0011_R7 | date=2026-05-14 | merchant="Metro Cab" | cat=GROUND | amount=55.47 | ccy=EUR
+receipt_id=reifor_0011_R8 | date=2026-05-15 | cat=LODGING | nights=1 | amount=347.93 | merchant="QuickFuel" | ccy=EUR
+receipt_id=reifor_0011_R9 | date=2026-05-14 | merchant="Corner Mart" | note="summary" | amount=10.44 | flags=CANCELLED | cat=MEALS | ccy=USD
+receipt_id=reifor_0011_R10 | date=2026-05-16 | merchant="Alpine Hotel" | amount=205.81 | ccy=EUR | nights=1 | cat=LODGING
+receipt_id=reifor_0011_R11 | date=2026-05-14 | cat=? | ccy=EUR | merchant="Sunrise Diner" | note="summary" | amount=5.27

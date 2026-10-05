@@ -1,0 +1,25 @@
+{
+  "benchmark_name": "maritime_general_average_forensics",
+  "version": "1.0.0",
+  "sample_count": 30,
+  "items_file": "items_private_sample.jsonl",
+  "documentation_files": [
+    "README.md",
+    "solver_packet.md"
+  ],
+  "asset_files": [
+    "assets/maritime_ga_rulebook.md",
+    "assets/fx_and_port_tariffs.csv",
+    "assets/dossiers_part1.md",
+    "assets/dossiers_part2.md",
+    "assets/dossiers_part3.md"
+  ],
+  "answer_contract": {
+    "type": "integer",
+    "unit": "usd_cents",
+    "schema": {
+      "id": "string (mgaf_01 .. mgaf_30)",
+      "answer": "integer (total assessment payable by Lot-A in USD cents)"
+    }
+  }
+}

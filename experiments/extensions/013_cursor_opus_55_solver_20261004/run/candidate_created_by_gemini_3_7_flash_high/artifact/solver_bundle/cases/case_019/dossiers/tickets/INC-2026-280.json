@@ -1,0 +1,13 @@
+{
+  "ticket_id": "INC-2026-280",
+  "service": "managed-relational-db",
+  "title": "Maintenance Window Execution & Overrun on managed-relational-db",
+  "opened_at": "2026-04-07T01:28:00Z",
+  "closed_at": "2026-04-07T03:58:00Z",
+  "reported_by": "Cloud Operations Automated Dispatch",
+  "associated_maintenance_id": "MAINT-2026-200",
+  "notice_sent_timestamp": "2026-04-05T17:28:00Z",
+  "scheduled_minutes": 60,
+  "actual_minutes": 150,
+  "status": "CLOSED"
+}

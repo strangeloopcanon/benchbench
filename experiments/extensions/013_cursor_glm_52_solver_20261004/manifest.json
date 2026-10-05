@@ -1,0 +1,50 @@
+[
+  {
+    "artifact_id": "cursor__glm_5_2_high",
+    "benchmark": "CloudSLA-Forensics",
+    "candidate_digest": "ff8588e1e55b3d1a8d5d67fb049df1cb17202913e7427d63b38db6863949f2c2",
+    "candidate_snapshot": "./experiments/extensions/013_cursor_glm_52_solver_20261004/run/candidate_created_by_gemini_3_7_flash_high/artifact",
+    "cell_state": "success",
+    "creator_model": "gemini-3.7-flash-high",
+    "cursor_cache_read_tokens": 580992,
+    "cursor_cache_write_tokens": 0,
+    "cursor_model": "glm-5.2-high",
+    "cursor_usage": {
+      "cacheReadTokens": 580992,
+      "cacheWriteTokens": 0,
+      "inputTokens": 63409,
+      "outputTokens": 6949
+    },
+    "display_model": "GLM 5.2 (High)",
+    "effort": "high",
+    "gold_digest": "306cd77894f01ca39d60dcce8b4fd209c7003b0ba5e3d0bdad2dd34a4a85e03e",
+    "model": "glm-5.2-high",
+    "out_path": "private_raw_evidence_not_published",
+    "phase": "solver_extension",
+    "prediction_digest": "c6d5a54efec46a10ccb029273c8209183a6139f1be0a67e9ba6db6dc96aaedca",
+    "prediction_extraction_source": "provider_output",
+    "prediction_rows": 30,
+    "prediction_source": "./experiments/extensions/013_cursor_glm_52_solver_20261004/run/candidate_created_by_gemini_3_7_flash_high/solver_results/predictions_solver_cursor__glm_5_2_high__effort_high.jsonl",
+    "predictions_path": "./experiments/extensions/013_cursor_glm_52_solver_20261004/run/candidate_created_by_gemini_3_7_flash_high/solver_results/predictions_solver_cursor__glm_5_2_high__effort_high.jsonl",
+    "prompt_path": "private_raw_evidence_not_published",
+    "provider": "cursor",
+    "requested_provider_model": "glm-5.2-high",
+    "returncode": 0,
+    "runtime_model_reported": null,
+    "runtime_model_verification": "provider_response_omits_model; exact_cli_id_required",
+    "sandbox_mode": "nested-cursor-plus-outer-seatbelt",
+    "score_path": "./experiments/extensions/013_cursor_glm_52_solver_20261004/run/candidate_created_by_gemini_3_7_flash_high/solver_results/score_solver_cursor__glm_5_2_high__effort_high.json",
+    "score_returncode": 0,
+    "score_summary": {
+      "accuracy": 1.0,
+      "correct": 30,
+      "total": 30
+    },
+    "solver_artifact_id": "cursor__glm_5_2_high__effort_high",
+    "solver_display_model": "GLM 5.2 (High)",
+    "solver_model": "glm-5.2-high",
+    "stderr_path": "private_raw_evidence_not_published",
+    "stdout_path": "private_raw_evidence_not_published",
+    "tokens_used": 651350
+  }
+]

@@ -26,16 +26,43 @@ An independent Decimal re-audit changes these gold answers:
 
 The retained historical solver predictions rescore from `10, 14, 11, 12, 11, 11` to `12, 16, 11, 13, 11, 11` out of 30. No model was rerun.
 
-## Historical comparison
+## Root-Cause Audit: Why Historical Gold Was Low (`APPROVAL_RE` & Tip Convention)
 
-On corrected gold, Reimbursement Forensics remains the **#1 historical
-candidate** and should be counted as a **win over the challengers**. Every
-retained solver remains in the low nonzero band (`11-16/30`). Later challenger
-rows reach at least `25/30`, have invalid gold, or have incomplete panels. None
-matches that complete, uniformly difficult score shape.
+Running **Halcyon** (`experiments/extensions/004_halcyon_solver_20261003`) on the preserved Experiment 004 bundle revealed that four independent models (`Halcyon`, `GPT-5.5`, `Gemini 3.5 Flash`, and `Claude Opus`) agreed with each other on **26–30 out of 30 items**, yet all scored `11/30` against the historical/Decimal-recomputed gold.
 
-This does not repair or validate the original run. Its emitted gold was wrong,
-so it cannot be a canonical incumbent or enter the stable benchmark bank. The
-corrected rescore supports a qualified historical comparison only.
+Direct code inspection of `generator.py` and `verifier.py` uncovered three compounding defects in the original gold calculation:
+1. **Broken `APPROVAL_RE` regular expression (`0/30` email approvals parsed)**:
+   - `generator.py` (line 390) and `verifier.py` (line 53) defined:
+     ```python
+     APPROVAL_RE = re.compile(r"APPROVE RECEIPT\\s+(?P<rid>[A-Z0-9_\\-]+)\\s+\\[(?P<mode>FULL|PARTIAL(?:\\s+\\d+)?)\\]")
+     ```
+   - This raw string double-escaped `\s` (`\\s+` matches a literal backslash + `s`) and restricted `<rid>` to uppercase `[A-Z0-9_\-]+`, whereas every receipt ID in `emails.txt` uses lowercase `reifor_0000_R5`. Consequently, **`APPROVAL_RE` matched 0 out of 30 email approvals** when computing `gold_private_sample.jsonl`—even though `generate_case` recorded those approvals in `private_generation_trace.jsonl`.
+2. **Dropped approved receipts with missing `cat=?` or `nights=?`**:
+   - Even if `APPROVAL_RE` had matched, the summation loop only added `MISC`, `LODGING` (multiplying by `nights=0` when `nights=?`), `AIR`, `GROUND`, and `MEALS`, silently dropping approved receipts with `cat=?` (`reifor_0002_R3`, `reifor_0023_R3`) and capping approved receipts at non-approved category limits.
+3. **Unstated `tip=` subtraction convention**:
+   - `generator.py` internally subtracted `tip` from `amount` (`base = amount - tip`), whereas `solver_bundle/common/policy.md` never stated that `amount` included `tip`.
 
-Required resolution: repair both generator and verifier with Decimal-only half-up rounding, create a new benchmark version, validate the public/private contract, and execute a complete fresh solver panel.
+When `scripts/audit_reimbursement_decimal.py` evaluates the retained predictions (and Halcyon's extension predictions) against the **actual policy** (`actual_policy_case_total`, fixing `APPROVAL_RE` to match `reifor_xxxx_Ry`, honoring email approvals, and converting `amount` and `tip` per `policy.md`):
+- **GPT-5.5**: **`30/30` (`100%`)**
+- **Gemini 3.5 Flash (High)**: **`30/30` (`100%`)**
+- **Halcyon**: **`29/30` (`96.7%`)** (or `30/30` when `[FULL]` approvals on otherwise-valid `MEALS` receipts respect the daily cap)
+- **Claude Opus**: **`25/30` (`83.3%`)** (or `28/30` when `[FULL]` approvals remain subject to category caps)
+- **GPT-5.4**: **`25/30` (`83.3%`)** (under post-tip `amount`) / `19/30` (under pre-tip `amount`)
+- **Gemini 3.1 Pro**: **`25/30` (`83.3%`)** (under post-tip `amount`) / `16/30` (under pre-tip `amount`)
+
+## Repaired Benchmark Version (`Experiment 015`: Reimbursement Forensics v2 — Actual Policy)
+
+To evaluate the current frontier panel against the actual policy without regex bugs or unstated conventions, `experiments/015_reimbursement_forensics_v2_20261004` repairs `generator.py`, `verifier.py`, `scorer.py` (`schema_version: 2`), and `solver_bundle/common/policy.md` on the same 30-case seed (`20260516`), passing `local_validate()` (`valid: True`, `deterministic: True`, `frozen_package_match: True`, `leak_matches: []`).
+
+Live solver evaluation on `Experiment 015` (with Python tool execution enabled):
+
+| Solver | Provider | Score | Accuracy | Reported Tokens | Non-Cache (`in+out`) Tokens | Extension Overlay |
+|---|---|---:|---:|---:|---:|---|
+| **Halcyon** | Antigravity (`agy:halcyon`) | **30/30** | **100.0%** | 283,403 | 283,403 | `experiments/extensions/015_halcyon_solver_20261004` |
+| **Claude Opus 5.5 (High)** | Cursor (`cursor:claude-opus-5-5-high`) | **30/30** | **100.0%** | 281,781 | 6,132 | `experiments/extensions/015_cursor_opus_55_solver_20261004` |
+| **GPT-6-Sol (High)** | Codex (`gpt-6-sol@high`) | **30/30** | **100.0%** | 45,738 | 45,738 | `experiments/extensions/015_codex_gpt_6_sol_solver_20261004` |
+| **GLM 5.2 (High)** | Cursor (`cursor:glm-5.2-high`) | **30/30** | **100.0%** | 736,818 | 62,994 | `experiments/extensions/015_cursor_glm_52_solver_20261004` |
+
+*(When Python execution was disabled in Cursor, `Claude Opus 5.5` still scored `30/30` in `661,200` tokens by hand, while `GLM 5.2 (High)` dropped to `17/30` in `79,067` tokens.)*
+
+

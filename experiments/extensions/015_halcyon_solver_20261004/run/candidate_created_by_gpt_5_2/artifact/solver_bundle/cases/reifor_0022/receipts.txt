@@ -1,0 +1,6 @@
+receipt_id=reifor_0022_R1 | date=2026-05-03 | ccy=CAD | amount=478.72 | cat=AIR | merchant="CloudNine Inn"
+receipt_id=reifor_0022_R2 | date=2026-05-02 | ccy=CAD | merchant="Harbor Bistro" | cat=MISC | amount=32.75
+receipt_id=reifor_0022_R3 | date=2026-05-02 | ccy=GBP | cat=MISC | merchant="Metro Cab" | amount=64.18
+receipt_id=reifor_0022_R4 | date=2026-04-30 | tip=12.92 | ccy=GBP | cat=MEALS | amount=71.62 | note="late_scan" | merchant="Alpine Hotel"
+receipt_id=reifor_0022_R5 | date=2026-05-02 | cat=AIR | merchant="Harbor Bistro" | amount=32.75 | ccy=CAD
+receipt_id=reifor_0022_R6 | date=2026-04-30 | ccy=GBP | merchant="Sunrise Diner" | cat=AIR | amount=?

@@ -1,0 +1,30 @@
+{"id": "reifor_0000", "trace": {"approvals": {"reifor_0000_R5": {"mode": "FULL", "usd_cents": null}, "reifor_0000_R3": {"mode": "FULL", "usd_cents": null}}, "n_receipts": 9}}
+{"id": "reifor_0001", "trace": {"approvals": {"reifor_0001_R1": {"mode": "PARTIAL", "usd_cents": 2385}}, "n_receipts": 8}}
+{"id": "reifor_0002", "trace": {"approvals": {"reifor_0002_R7": {"mode": "FULL", "usd_cents": null}, "reifor_0002_R3": {"mode": "FULL", "usd_cents": null}}, "n_receipts": 9}}
+{"id": "reifor_0003", "trace": {"approvals": {}, "n_receipts": 9}}
+{"id": "reifor_0004", "trace": {"approvals": {"reifor_0004_R11": {"mode": "PARTIAL", "usd_cents": 4906}}, "n_receipts": 11}}
+{"id": "reifor_0005", "trace": {"approvals": {"reifor_0005_R7": {"mode": "FULL", "usd_cents": null}}, "n_receipts": 7}}
+{"id": "reifor_0006", "trace": {"approvals": {"reifor_0006_R2": {"mode": "PARTIAL", "usd_cents": 3683}}, "n_receipts": 8}}
+{"id": "reifor_0007", "trace": {"approvals": {"reifor_0007_R5": {"mode": "PARTIAL", "usd_cents": 6093}}, "n_receipts": 7}}
+{"id": "reifor_0008", "trace": {"approvals": {"reifor_0008_R3": {"mode": "FULL", "usd_cents": null}}, "n_receipts": 6}}
+{"id": "reifor_0009", "trace": {"approvals": {"reifor_0009_R9": {"mode": "PARTIAL", "usd_cents": 6869}}, "n_receipts": 9}}
+{"id": "reifor_0010", "trace": {"approvals": {}, "n_receipts": 8}}
+{"id": "reifor_0011", "trace": {"approvals": {"reifor_0011_R6": {"mode": "FULL", "usd_cents": null}}, "n_receipts": 11}}
+{"id": "reifor_0012", "trace": {"approvals": {}, "n_receipts": 11}}
+{"id": "reifor_0013", "trace": {"approvals": {"reifor_0013_R8": {"mode": "FULL", "usd_cents": null}, "reifor_0013_R5": {"mode": "FULL", "usd_cents": null}}, "n_receipts": 11}}
+{"id": "reifor_0014", "trace": {"approvals": {"reifor_0014_R3": {"mode": "FULL", "usd_cents": null}, "reifor_0014_R6": {"mode": "PARTIAL", "usd_cents": 1491}}, "n_receipts": 7}}
+{"id": "reifor_0015", "trace": {"approvals": {"reifor_0015_R9": {"mode": "FULL", "usd_cents": null}}, "n_receipts": 10}}
+{"id": "reifor_0016", "trace": {"approvals": {}, "n_receipts": 6}}
+{"id": "reifor_0017", "trace": {"approvals": {"reifor_0017_R2": {"mode": "FULL", "usd_cents": null}}, "n_receipts": 8}}
+{"id": "reifor_0018", "trace": {"approvals": {"reifor_0018_R9": {"mode": "PARTIAL", "usd_cents": 4917}, "reifor_0018_R4": {"mode": "FULL", "usd_cents": null}}, "n_receipts": 11}}
+{"id": "reifor_0019", "trace": {"approvals": {}, "n_receipts": 11}}
+{"id": "reifor_0020", "trace": {"approvals": {"reifor_0020_R9": {"mode": "FULL", "usd_cents": null}, "reifor_0020_R10": {"mode": "FULL", "usd_cents": null}}, "n_receipts": 10}}
+{"id": "reifor_0021", "trace": {"approvals": {"reifor_0021_R2": {"mode": "FULL", "usd_cents": null}}, "n_receipts": 6}}
+{"id": "reifor_0022", "trace": {"approvals": {}, "n_receipts": 6}}
+{"id": "reifor_0023", "trace": {"approvals": {"reifor_0023_R3": {"mode": "PARTIAL", "usd_cents": 1850}}, "n_receipts": 7}}
+{"id": "reifor_0024", "trace": {"approvals": {"reifor_0024_R11": {"mode": "PARTIAL", "usd_cents": 5173}}, "n_receipts": 11}}
+{"id": "reifor_0025", "trace": {"approvals": {"reifor_0025_R5": {"mode": "FULL", "usd_cents": null}}, "n_receipts": 7}}
+{"id": "reifor_0026", "trace": {"approvals": {}, "n_receipts": 10}}
+{"id": "reifor_0027", "trace": {"approvals": {"reifor_0027_R5": {"mode": "PARTIAL", "usd_cents": 10905}, "reifor_0027_R9": {"mode": "PARTIAL", "usd_cents": 9031}}, "n_receipts": 10}}
+{"id": "reifor_0028", "trace": {"approvals": {"reifor_0028_R2": {"mode": "PARTIAL", "usd_cents": 9397}, "reifor_0028_R4": {"mode": "PARTIAL", "usd_cents": 10543}}, "n_receipts": 6}}
+{"id": "reifor_0029", "trace": {"approvals": {}, "n_receipts": 10}}

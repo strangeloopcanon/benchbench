@@ -1,0 +1,21 @@
+{
+  "rca_id": "RCA-2026-302",
+  "incident_id": "INC-2026-362",
+  "service": "managed-relational-db",
+  "total_outage_duration_minutes": 60,
+  "timeline_breakdown": [
+    {
+      "phase": "Customer Misconfiguration / Internal Deadlock",
+      "duration_minutes": 30,
+      "attributable_party": "CUSTOMER",
+      "details": "Customer deploy script applied malformed connection pool config, causing self-inflicted drop for 30 min."
+    },
+    {
+      "phase": "Provider Infrastructure Hypervisor Fault",
+      "duration_minutes": 30,
+      "attributable_party": "PROVIDER",
+      "details": "Underlying host node suffered power rail failure requiring hardware migration for 30 min."
+    }
+  ],
+  "final_finding": "Per SLA \u00a75.3, 30 min attributable to customer action is excluded. 30 min is provider compensable."
+}

@@ -1,0 +1,21 @@
+{
+  "files": [
+    {
+      "path": "source_evidence/run_state.json",
+      "sha256": "b6e90d92c0559cd306170847905aae918bf4babb68b6b0e21d9417db8ec21aa2"
+    },
+    {
+      "path": "source_evidence/source_manifest.json",
+      "sha256": "34e0807038df4ac0b50a0685b4850eed52a763d66a66ea34451eb7cec8d071d4"
+    },
+    {
+      "path": "source_evidence/gpt_5_2__controller_validation.v1.json",
+      "sha256": "8a7d7e4027ef8968d44b2e57c542241d1ad5e844ef9e2d19ca27dfe8dc0b1f69"
+    },
+    {
+      "path": "source_evidence/gpt_5_2__controller_validation_report.txt",
+      "sha256": "ee8c42abdc661a1e28b19dd58d815a7af7a670bb188bcb9bd65ef8a065beb33b"
+    }
+  ],
+  "schema_version": 1
+}

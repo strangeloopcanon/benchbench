@@ -1,0 +1,50 @@
+[
+  {
+    "artifact_id": "cursor__claude_opus_5_5_high",
+    "benchmark": "CloudSLA-Forensics",
+    "candidate_digest": "ff8588e1e55b3d1a8d5d67fb049df1cb17202913e7427d63b38db6863949f2c2",
+    "candidate_snapshot": "./experiments/extensions/013_cursor_opus_55_solver_20261004/run/candidate_created_by_gemini_3_7_flash_high/artifact",
+    "cell_state": "success",
+    "creator_model": "gemini-3.7-flash-high",
+    "cursor_cache_read_tokens": 437760,
+    "cursor_cache_write_tokens": 54969,
+    "cursor_model": "claude-opus-5-5-high",
+    "cursor_usage": {
+      "cacheReadTokens": 437760,
+      "cacheWriteTokens": 54969,
+      "inputTokens": 26,
+      "outputTokens": 8234
+    },
+    "display_model": "Claude Opus 5.5 (High)",
+    "effort": "high",
+    "gold_digest": "306cd77894f01ca39d60dcce8b4fd209c7003b0ba5e3d0bdad2dd34a4a85e03e",
+    "model": "claude-opus-5-5-high",
+    "out_path": "private_raw_evidence_not_published",
+    "phase": "solver_extension",
+    "prediction_digest": "fa5d63eb32e87f7f6b4affa4bba3e5fd4293d3a3adb3ed7cb6940fac3f23aa59",
+    "prediction_extraction_source": "provider_output",
+    "prediction_rows": 30,
+    "prediction_source": "./experiments/extensions/013_cursor_opus_55_solver_20261004/run/candidate_created_by_gemini_3_7_flash_high/solver_results/predictions_solver_cursor__claude_opus_5_5_high__effort_high.jsonl",
+    "predictions_path": "./experiments/extensions/013_cursor_opus_55_solver_20261004/run/candidate_created_by_gemini_3_7_flash_high/solver_results/predictions_solver_cursor__claude_opus_5_5_high__effort_high.jsonl",
+    "prompt_path": "private_raw_evidence_not_published",
+    "provider": "cursor",
+    "requested_provider_model": "claude-opus-5-5-high",
+    "returncode": 0,
+    "runtime_model_reported": null,
+    "runtime_model_verification": "provider_response_omits_model; exact_cli_id_required",
+    "sandbox_mode": "nested-cursor-plus-outer-seatbelt",
+    "score_path": "./experiments/extensions/013_cursor_opus_55_solver_20261004/run/candidate_created_by_gemini_3_7_flash_high/solver_results/score_solver_cursor__claude_opus_5_5_high__effort_high.json",
+    "score_returncode": 0,
+    "score_summary": {
+      "accuracy": 1.0,
+      "correct": 30,
+      "total": 30
+    },
+    "solver_artifact_id": "cursor__claude_opus_5_5_high__effort_high",
+    "solver_display_model": "Claude Opus 5.5 (High)",
+    "solver_model": "claude-opus-5-5-high",
+    "stderr_path": "private_raw_evidence_not_published",
+    "stdout_path": "private_raw_evidence_not_published",
+    "tokens_used": 500989
+  }
+]

@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "benchmark_id": "consolidation-point-v1",
+  "name": "Consolidation Point",
+  "version": "1.0.0",
+  "created": "2026-08-01",
+  "capability_claim": "Time-indexed normative reasoning: given a base enactment plus a chronological stack of textual amending instruments, each with its own commencement rule and its own separate application rule, reconstruct the operative rule set for a specified event and apply it to a fact pattern to produce an exact figure.",
+  "why_this_capability": "Commencement, application and savings provisions are the part of rule-following that models most reliably get wrong. A change can be textually in the statute book while not yet applying to the case in hand; a change can apply to a case that predates it; a provision can sit in an Act that was never brought into force. Existing evals test rule following against a single static rule set, so this axis is largely unmeasured.",
+  "domain": "synthetic statutory / regulatory reasoning (fictional jurisdiction)",
+  "modality": "text only",
+  "item_count": 30,
+  "item_format": {
+    "file": "solver_bundle/items_private_sample.jsonl",
+    "fields": ["id", "case_ref", "assets", "question", "answer_format"],
+    "shared_asset": "solver_bundle/assets/statute_pack.md"
+  },
+  "answer_format": {
+    "type": "integer",
+    "description": "a single whole number of marks, digits only",
+    "range_in_sample": [140, 910]
+  },
+  "prediction_format": {
+    "file": "predictions.jsonl",
+    "fields": ["id", "answer"]
+  },
+  "scoring": {
+    "method": "exact match on the normalised integer, one point per item",
+    "normalisation": "strip whitespace, thousands separators and an optional trailing unit word; canonicalise sign and leading zeros; never changes the numeric value",
+    "partial_credit": false,
+    "report_schema_version": 2
+  },
+  "determinism": {
+    "answers_are_closed_form": true,
+    "judge_model_required": false,
+    "generator_is_deterministic": true,
+    "seed_semantics": "recorded for provenance; the item bank is fixed and hand-audited, so every seed regenerates byte-identical output"
+  },
+  "difficulty_evidence": {
+    "constant_guess_baseline": "2/30",
+    "ignore_all_amendments_baseline": "2/30",
+    "apply_only_the_latest_law_baseline": "6/30",
+    "notes": "Both shortcut baselines are the two natural failure modes of a solver that flattens the timeline. Scoring well requires per-item temporal resolution."
+  },
+  "external_solvability": {
+    "self_contained": true,
+    "argument": "Every operative number, date, condition and interpretive convention is stated in solver_bundle/assets/statute_pack.md, and every fact needed for a case is stated in the item. Part A of the pack fixes the conventions that would otherwise be contestable (completeness of the pack, commencement versus application, expiry, revocation, no intermediate rounding, treatment of multiple levies, exhaustiveness of the facts). The solver packet contains a fully worked non-graded example that pins the arithmetic conventions. A qualified external solver - a statutory-interpretation specialist, or a model that builds the parameter timeline - can derive each answer with no hidden state and no outside sources.",
+    "identifiability": "For each item, the parameter timeline determines a unique value for every operative parameter at the relevant landing date and assessment date, so the levy is a deterministic function of the stated facts."
+  },
+  "closest_existing_benchmarks": [
+    {
+      "benchmark": "IFEval / tau-bench",
+      "similarity": "both measure adherence to an explicitly supplied rule set",
+      "difference": "those supply one static policy; here the rule set is a stack of dated diffs and the central difficulty is deciding which version of the rule governs a given event, which neither benchmark exercises"
+    },
+    {
+      "benchmark": "MuSR",
+      "similarity": "long-context multi-hop reasoning over a supplied narrative",
+      "difference": "MuSR hops are narrative and the answer is a discrete choice; here the hops are legislative cross-references across instruments, and the answer is an exact arithmetic figure with no option set to anchor on"
+    },
+    {
+      "benchmark": "GSM8K / MATH",
+      "similarity": "the final step is arithmetic",
+      "difference": "the arithmetic here is deliberately trivial (three to six operations). All difficulty sits in parameter selection, so arithmetic competence contributes almost nothing to the score"
+    },
+    {
+      "benchmark": "GPQA / Humanity's Last Exam",
+      "similarity": "expert-level, resistant to retrieval",
+      "difference": "those reward recalled domain knowledge; this benchmark is about a fictional jurisdiction, so recall is worth nothing and there is no training corpus to leak from"
+    },
+    {
+      "benchmark": "SWE-bench / BigCodeBench",
+      "similarity": "a tool-enabled model can write code to help",
+      "difference": "writing a resolver here is easy; getting the temporal predicates right is the whole task, so code execution offers little leverage and cannot verify its own premises"
+    }
+  ],
+  "not_a_duplicate_because": "No widely used eval scores a model on reconstructing a rule system as at a point in time from dated amending instruments. The closest real-world analogue is the daily work of tax and regulatory practitioners, and it is absent from the eval families listed in the landscape report. The benchmark is also leakage-proof by construction: the jurisdiction, the Act and every instrument are invented, so no amount of retrieval or memorisation helps.",
+  "cli_contract": {
+    "generate": "python3 generator.py --sample-count 30 --seed 20260516 --out-dir .",
+    "verify": "python3 verifier.py --items solver_bundle/items_private_sample.jsonl --gold gold_private_sample.jsonl",
+    "score": "python3 scorer.py --gold gold_private_sample.jsonl --predictions predictions.jsonl --out score_report.json"
+  },
+  "files": {
+    "authored_source": ["corpus/statute_pack.md", "corpus/items.json"],
+    "generated": [
+      "gold_private_sample.jsonl",
+      "solver_bundle/items_private_sample.jsonl",
+      "solver_bundle/assets/statute_pack.md",
+      "solver_bundle/solver_packet.md",
+      "solver_bundle/README.md",
+      "solver_bundle/SOLVER_MANIFEST.json"
+    ],
+    "private": [
+      "audit/gold_derivations.md",
+      "validation_report.md",
+      "failure_modes.md",
+      "baselines/"
+    ]
+  },
+  "licence_note": "All legislative text is original fiction written for this benchmark. No real statute is reproduced."
+}

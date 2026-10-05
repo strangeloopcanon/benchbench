@@ -5,7 +5,7 @@
     "status": "no_validated_incumbent"
   },
   "historical_comparison": {
-    "basis": "Against independently recomputed Decimal half-up gold, the six retained solver predictions score 12/30, 16/30, 11/30, 13/30, 11/30, and 11/30. This remains the only complete six-solver row with every score low and nonzero; later challenger rows reach 25/30 or higher, are invalid, or are incomplete. Every completed Experiment 010 and Experiment 013 solver cell is 30/30; Gemini 3.6 produced no valid candidate, while Gemini 3.7 produced a valid but too-easy candidate.",
+    "basis": "Against independently recomputed Decimal half-up gold, the six retained solver predictions score 12/30, 16/30, 11/30, 13/30, 11/30, and 11/30. This remains the only complete six-solver row with every score low and nonzero; later challenger rows reach 25/30 or higher, are invalid, or are incomplete. Every completed Experiment 010 and Experiment 013 solver cell is 30/30; Gemini 3.6 and Halcyon produced no valid candidate, while Gemini 3.7 produced a valid but too-easy candidate.",
     "leader_candidate_id": "004-reimbursement-forensics",
     "qualification": "This is a corrected historical comparison, not a canonical promotion. Experiment 004 remains invalid because its original emitted gold was wrong, and no model was rerun.",
     "rank": 1,
@@ -97,6 +97,10 @@
         {
           "solver": "Claude Opus 5 high",
           "state": "timeout"
+        },
+        {
+          "solver": "Halcyon",
+          "state": "timeout"
         }
       ],
       "creator": "Codex GPT-5.6 Sol high",
@@ -108,7 +112,7 @@
       "id": "010-auditweave",
       "name": "AuditWeave",
       "outcome": "infrastructure_incomplete",
-      "reason": "The candidate passed the mechanical gate. Sol, Terra, Gemini 3.6, and Gemini 3.7 each scored 30/30; Opus did not complete, so the panel remains incomplete and every completed cell shows no useful difficulty.",
+      "reason": "The candidate passed the mechanical gate. Sol, Terra, Gemini 3.6, and Gemini 3.7 each scored 30/30; Opus and Halcyon did not complete, so the panel remains incomplete and every completed cell shows no useful difficulty.",
       "required_next_step": "Increase task difficulty, generate a new version, and run a complete fresh solver panel."
     },
     {
@@ -116,6 +120,10 @@
         {
           "solver": "Claude Opus 5 high",
           "state": "timeout"
+        },
+        {
+          "solver": "Halcyon",
+          "state": "invalid_output"
         }
       ],
       "creator": "Codex GPT-5.6 Terra extra high",
@@ -127,7 +135,7 @@
       "id": "010-counterfactual-firewall-policy-synthesis",
       "name": "Counterfactual Firewall Policy Synthesis",
       "outcome": "infrastructure_incomplete",
-      "reason": "The candidate passed the mechanical gate. Sol, Terra, Gemini 3.6, and Gemini 3.7 each scored 30/30; Opus did not complete, so the panel remains incomplete and every completed cell shows no useful difficulty.",
+      "reason": "The candidate passed the mechanical gate. Sol, Terra, Gemini 3.6, and Gemini 3.7 each scored 30/30; Opus timed out and Halcyon exited its parent single-turn print session while waiting for async subagents, so the panel remains incomplete and every completed cell shows no useful difficulty.",
       "required_next_step": "Increase task difficulty, generate a new version, and run a complete fresh solver panel."
     },
     {
@@ -148,12 +156,12 @@
       "experiment_id": "010",
       "historical_comparison": null,
       "historical_scores": [
-        "completed cells: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30, Opus 30/30"
+        "completed cells: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30, Halcyon 30/30, Opus 30/30"
       ],
       "id": "010-consolidation-point",
       "name": "Consolidation Point",
       "outcome": "infrastructure_incomplete",
-      "reason": "The candidate passed the mechanical gate. Sol, Terra, Gemini 3.6, Gemini 3.7, and Opus each scored 30/30. Every completed cell proves the benchmark is too easy, but the retained Opus runtime identity remains requested/unverified.",
+      "reason": "The candidate passed the mechanical gate. Sol, Terra, Gemini 3.6, Gemini 3.7, Halcyon, and Opus each scored 30/30. Every completed cell proves the benchmark is too easy, but the retained Opus runtime identity remains requested/unverified.",
       "required_next_step": "Increase task difficulty, generate a new version, and run a complete fresh solver panel."
     },
     {
@@ -162,15 +170,43 @@
       "experiment_id": "013",
       "historical_comparison": null,
       "historical_scores": [
-        "completed cells: Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30"
+        "completed cells: Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30, Halcyon 30/30"
       ],
       "id": "013-cloudsla-forensics",
       "name": "CloudSLA-Forensics",
       "outcome": "rejected",
-      "reason": "The package passed the full mechanical gate on its first attempt, but Gemini 3.6 and Gemini 3.7 each scored 30/30. The benchmark is valid but provides no useful frontier difficulty.",
-      "required_next_step": "Increase task difficulty, generate a new version, and run a complete fresh five-model solver panel."
+      "reason": "The package passed the full mechanical gate on its first attempt, but Gemini 3.6, Gemini 3.7, and Halcyon each scored 30/30. The benchmark is valid but provides no useful frontier difficulty.",
+      "required_next_step": "Increase task difficulty, generate a new version, and run a complete fresh solver panel."
+    },
+    {
+      "cell_states": [],
+      "creator": "Antigravity Halcyon",
+      "experiment_id": "014",
+      "historical_comparison": null,
+      "historical_scores": [
+        "completed cells: Halcyon 30/30, Claude Opus 5.5 high 30/30, GPT-6-Sol high 30/30, GLM 5.2 high 30/30, Gemini 3.8 Flash high 30/30, Gemini 3.7 Flash high 30/30, Gemini 3.6 Flash high 30/30, Claude Sonnet 5.5 high 30/30"
+      ],
+      "id": "014-maritime-general-average-forensics",
+      "name": "maritime_general_average_forensics",
+      "outcome": "rejected",
+      "reason": "After replacing the 1-line output-format example leak in solver_bundle/README.md (1324550 -> 999999), the package passed all mechanical validation checks. With Python execution enabled, Halcyon, Claude Opus 5.5 (both Antigravity and Cursor), GPT-6-Sol, GLM 5.2 (High), Gemini 3.8 Flash, Gemini 3.7 Flash, Gemini 3.6 Flash, and Claude Sonnet 5.5 all scored 30/30.",
+      "required_next_step": "Increase task difficulty, generate a new version without manual post-repair intervention, and run a complete fresh solver panel."
+    },
+    {
+      "cell_states": [],
+      "creator": "GPT-5.2 (actual-policy repair)",
+      "experiment_id": "015",
+      "historical_comparison": null,
+      "historical_scores": [
+        "completed cells: Halcyon 30/30, Claude Opus 5.5 high 30/30, GPT-6-Sol high 30/30, GLM 5.2 high 30/30"
+      ],
+      "id": "015-reimbursement-forensics-v2",
+      "name": "Reimbursement Forensics v2 (Actual Policy)",
+      "outcome": "rejected",
+      "reason": "After fixing APPROVAL_RE to match lowercase reifor_xxxx_Ry IDs and clarifying separate Decimal half-up USD-cent conversion for amount and tip per policy.md, the repaired package passed all mechanical validation checks. With Python execution enabled, Halcyon, Claude Opus 5.5, GPT-6-Sol, and GLM 5.2 (High) each scored 30/30 (100%).",
+      "required_next_step": "Increase task difficulty beyond top-frontier saturation (30/30 across Halcyon, Claude Opus 5.5, GPT-6-Sol, and GLM 5.2 High) and run a complete fresh solver panel."
     }
   ],
-  "registry_sha256": "878e2087bae68408d5201948957fef054aa2f8be33492ca29ab978d977c640a1",
+  "registry_sha256": "534972a7fd5445adbaa9335747cb1b8d5607c2abb1b95426b4172048c4dada8e",
   "schema_version": "benchbench.canonical-status/v1"
 }

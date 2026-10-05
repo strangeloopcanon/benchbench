@@ -1,0 +1,11 @@
+{
+  "ticket_id": "INC-2026-282",
+  "service": "edge-api-gateway",
+  "title": "Critical degradation and crash loop on edge-api-gateway",
+  "opened_at": "2026-04-15T17:19:00Z",
+  "closed_at": "2026-04-15T19:19:00Z",
+  "reported_by": "Customer Site Reliability Lead",
+  "associated_rca": "RCA-2026-302",
+  "telemetry_error_rate_pct": 78.5,
+  "status": "CLOSED_WITH_RCA"
+}

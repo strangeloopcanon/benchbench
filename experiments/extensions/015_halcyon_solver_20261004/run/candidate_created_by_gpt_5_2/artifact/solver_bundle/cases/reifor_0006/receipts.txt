@@ -1,0 +1,8 @@
+receipt_id=reifor_0006_R1 | date=2026-04-09 | tip=1.64 | merchant="AeroFly" | ccy=JPY | cat=MEALS | amount=17.99
+receipt_id=reifor_0006_R2 | date=? | ccy=EUR | tip=5.96 | flags=CANCELLED | merchant="CloudNine Inn" | cat=MEALS | amount=65.56
+receipt_id=reifor_0006_R3 | date=2026-04-09 | merchant="CloudNine Inn" | amount=58.94 | tip=15.28 | ccy=GBP | cat=MEALS | note="fax_copy"
+receipt_id=reifor_0006_R4 | date=? | cat=AIR | ccy=AUD | flags=CANCELLED,DUPLICATE | amount=279.95 | merchant="Sunrise Diner"
+receipt_id=reifor_0006_R5 | date=2026-04-07 | amount=108.94 | cat=GROUND | ccy=GBP | merchant="Alpine Hotel"
+receipt_id=reifor_0006_R6 | date=2026-04-08 | cat=AIR | merchant="Corner Mart" | ccy=AUD | amount=630.17
+receipt_id=reifor_0006_R7 | date=2026-04-09 | merchant="CloudNine Inn" | cat=GROUND | ccy=GBP | amount=58.94
+receipt_id=reifor_0006_R8 | date=2026-04-08 | ccy=JPY | amount=56.95 | merchant="CloudNine Inn" | cat=MISC

@@ -1,0 +1,19 @@
+{
+  "benchmark_name": "CloudSLA-Forensics",
+  "version": "1.0.0",
+  "category": "forensic_contract_arbitration",
+  "modalities": ["text", "json", "markdown"],
+  "domain": "enterprise_cloud_infrastructure_finance",
+  "task_description": "Forensic multi-document arbitration of enterprise cloud Service Level Agreement (SLA) breach claims. Solvers must analyze contracts, SLA schedules, incident telemetry logs, support tickets, RCA reports, maintenance notices, and billing statements to determine the exact Net Approved Service Credit (in integer USD cents).",
+  "answer_type": "integer_cents",
+  "sample_count": 30,
+  "scoring_metric": "exact_match_accuracy",
+  "schema_version": 2,
+  "closest_existing_benchmarks": [
+    "Reimbursement Forensics",
+    "GAIA",
+    "SWE-bench",
+    "Berkeley Function Calling Leaderboard"
+  ],
+  "novelty_justification": "Unlike code generation (SWE-bench), math competitions (AIME/MATH), or clean rule engines (MFN-Cascade, Patchwork Ordinance), CloudSLA-Forensics tests realistic forensic audit capabilities across unstructured text tickets, structured JSON telemetry, contract precedence hierarchies, strict notice deadlines, and financial reconciliation. Ground truth is 100% deterministically verifiable and externally identifiable from the public bundle."
+}

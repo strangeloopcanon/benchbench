@@ -1,0 +1,11 @@
+{
+  "ticket_id": "INC-2026-263",
+  "service": "core-compute-cluster",
+  "title": "Intermittent latency alerts on core-compute-cluster",
+  "opened_at": "2026-04-09T05:21:00Z",
+  "closed_at": "2026-04-09T08:21:00Z",
+  "reported_by": "Customer DevOps Monitoring",
+  "telemetry_error_rate_pct": 2.4,
+  "provider_finding": "Observed error rate was 2.4%, which is below the 5.0% Outage threshold defined in Exhibit A \u00a72.1. No compensable downtime accrued.",
+  "status": "RESOLVED_NON_SLA_IMPACTING"
+}
