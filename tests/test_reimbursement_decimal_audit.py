@@ -20,3 +20,19 @@ def test_decimal_audit_corrects_gold_and_preserves_the_low_nonzero_profile() -> 
     assert min(corrected_scores) == 11
     assert max(corrected_scores) == 16
     assert len(corrected_scores) == 6
+    assert result["actual_policy_pre_tip_rescores"] == {
+        "gemini_3_1_pro": 16,
+        "gemini_3_5_flash_high": 30,
+        "gpt_5_2": 8,
+        "gpt_5_4": 19,
+        "gpt_5_5": 30,
+        "opus": 25,
+    }
+    assert result["actual_policy_post_tip_rescores"] == {
+        "gemini_3_1_pro": 25,
+        "gemini_3_5_flash_high": 19,
+        "gpt_5_2": 15,
+        "gpt_5_4": 25,
+        "gpt_5_5": 19,
+        "opus": 17,
+    }

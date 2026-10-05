@@ -1,0 +1,26 @@
+{
+  "name": "maritime_general_average_forensics",
+  "title": "Maritime General Average & Salvage Forensics (MGAF)",
+  "version": "1.0.0",
+  "description": "Forensic maritime average adjusting benchmark requiring cross-document reconciliation of bills of lading, port-of-refuge survey logs, master/adjuster expense vouchers, multi-currency FX schedules, and contemporaneous telex/email amendments under a self-contained York-Antwerp Charter Rulebook.",
+  "capability_claim": "Measures whether tool-enabled frontier models can perform multi-hop forensic accounting and cross-document contradiction resolution over messy operational dossiers where every item has distinct narrative overrides, causal damage classifications (Sacrifice vs. Particular Average), and non-linear rule interactions (Made-Good feedback into Contributory Value, Rule XIII age-tiered New-for-Old deductions, Rule F substituted expense caps, Rule XIX misdeclaration double-assessment penalties, and two-stage Salvage-then-GA cascade adjustments).",
+  "closest_existing_benchmarks": [
+    "Reimbursement Forensics (BenchBench historical #1 candidate)",
+    "MuSR (multistep soft reasoning over narratives)",
+    "GAIA / OSWorld document-grounded accounting tasks"
+  ],
+  "novelty_and_differentiation": "Unlike flat ledger reconciliation (Ledger Canonical Reconciliation, Amendment Ledger Reconciliation) where a single uniform parser solves all 30 items, MGAF couples unstructured narrative forensics (surveyor telexes, thermal imaging logs, customs audit emails, non-separation agreements) with endogenous mathematical feedback: classifying a cargo loss as a General Average Sacrifice vs. Particular Average simultaneously alters both the numerator (the General Average Pool to be apportioned) and the denominator (every interest's Contributory Value via the York-Antwerp Rule XVII 'Made Good' add-back). Furthermore, items span five progressive complexity tiers so naive baselines score nonzero (~4-6/30) while brittle one-pass scripts fail on narrative contradictions and multi-stage casualty cascades.",
+  "task_type": "forensic_accounting_and_document_reconciliation",
+  "answer_format": {
+    "type": "integer",
+    "unit": "usd_cents",
+    "description": "Exact total final assessment (General Average contribution + Salvage contribution + Special Charges directly allocated to Lot-A, in integer USD cents) payable by Cargo Interest Lot-A at the termination of the adventure."
+  },
+  "sample_count": 30,
+  "default_seed": 20260516,
+  "cli_contract": {
+    "generator": "python3.12 generator.py --sample-count 30 --seed 20260516 --out-dir .",
+    "verifier": "python3.12 verifier.py --items solver_bundle/items_private_sample.jsonl --gold gold_private_sample.jsonl",
+    "scorer": "python3.12 scorer.py --gold gold_private_sample.jsonl --predictions predictions.jsonl --out score_report.json"
+  }
+}

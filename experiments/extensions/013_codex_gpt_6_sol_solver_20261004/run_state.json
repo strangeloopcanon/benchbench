@@ -1,0 +1,89 @@
+{
+  "config": {
+    "custom_source_panel_acknowledged": true,
+    "dispatch_ceiling_overshoot_acknowledged": true,
+    "harness_digest": "e8b064f21adcaad67eccf45c6b9ec54122bd7f1ae247051921544e8869a2bfcb",
+    "max_total_tokens": 15000000,
+    "panel_expansion": true,
+    "provider_preflight": [
+      {
+        "artifact_id": "codex__gpt_6_sol",
+        "binary": "codex",
+        "display_model": "gpt-6-sol",
+        "executable": "/opt/homebrew/bin/codex",
+        "inference_attempted": false,
+        "model": "gpt-6-sol",
+        "model_available": true,
+        "model_listing_command": [
+          "codex",
+          "-c",
+          "model_provider=\"benchbench_chatgpt\"",
+          "-c",
+          "model_providers.benchbench_chatgpt.name=\"BenchBench ChatGPT\"",
+          "-c",
+          "model_providers.benchbench_chatgpt.base_url=\"https://chatgpt.com/backend-api/codex\"",
+          "-c",
+          "model_providers.benchbench_chatgpt.wire_api=\"responses\"",
+          "-c",
+          "model_providers.benchbench_chatgpt.auth.command=\"/usr/bin/printenv\"",
+          "-c",
+          "model_providers.benchbench_chatgpt.auth.args=[\"BENCHBENCH_CODEX_BEARER_TOKEN\"]",
+          "-c",
+          "model_providers.benchbench_chatgpt.auth.refresh_interval_ms=0",
+          "-c",
+          "model_providers.benchbench_chatgpt.env_http_headers={\"ChatGPT-Account-ID\" = \"BENCHBENCH_CODEX_ACCOUNT_ID\"}",
+          "-c",
+          "model_providers.benchbench_chatgpt.requires_openai_auth=false",
+          "debug",
+          "models"
+        ],
+        "model_listing_returncode": 0,
+        "model_listing_stderr_bytes": 0,
+        "model_listing_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "model_listing_stdout_bytes": 623298,
+        "model_listing_stdout_sha256": "d889103bfc13be062f092139d309e6031e7be9f78426388d996424cc8cd54802",
+        "model_listing_supported": true,
+        "preflight_scope": "audited_live_boundary",
+        "probe_stderr_bytes": 0,
+        "probe_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "probe_stdout_bytes": 5948,
+        "probe_stdout_sha256": "4760dac7489da0bf168e1c52fee6e7a6aa6d3a602bab35c4c6fb8e93e446c0b7",
+        "provider": "codex",
+        "requested_effort": null,
+        "requested_provider_model": "gpt-6-sol",
+        "returncode": 0,
+        "state": "binary_ready"
+      }
+    ],
+    "retry_failed_source_cells": false,
+    "schema_version": 1,
+    "solver": "codex__gpt_6_sol__effort_high",
+    "source_candidates": [
+      {
+        "artifact": "./experiments/013_gemini_37_creator_20260813/run/candidate_created_by_antigravity__gemini_3_7_flash_high__effort_high/attempt_0001/artifact",
+        "candidate_digest": "ff8588e1e55b3d1a8d5d67fb049df1cb17202913e7427d63b38db6863949f2c2",
+        "creator_call_id": "antigravity__gemini_3_7_flash_high__effort_high",
+        "creator_model": "gemini-3.7-flash-high",
+        "validation_report_sha256": "c19c75d8638193b3ba5a8752f0f72e2ad8b86c21da6c0a7e192ee5323ca0d90f",
+        "validation_sha256": "0b8841a7d9abb98cc9d7802f789e2c11f59dbce06a7891da6fed87867dd5c98b"
+      }
+    ],
+    "source_manifest_sha256": "2f8d8ae1c52ee1c3dbd6c4fd3f4d26330c674f5d4ae686956481b37821422d6c",
+    "source_panel_policy": "custom",
+    "source_run_root": "./experiments/013_gemini_37_creator_20260813",
+    "source_run_state_sha256": "93ea6601b16c9df59fe779607001c1aeea4a657d2efe9887b3eb97e5be1bfbb5",
+    "source_snapshot_digest": "8824e3affce7e5231e0cd5155afdfe913f0bb31023a52116977a82d6822e4c9e",
+    "timeout_seconds": 1500,
+    "unmetered_cost_acknowledged": true,
+    "zero_telemetry_reservation": 5000000
+  },
+  "config_fingerprint": "98288ba9d6108ecd4f1645916f07b92db446f6537a10df577e5fe4a7ce09391b",
+  "schema_version": 1,
+  "source_snapshot": {
+    "digest": "e8b064f21adcaad67eccf45c6b9ec54122bd7f1ae247051921544e8869a2bfcb",
+    "file_count": 10,
+    "manifest_path": "source_snapshot/manifest.json",
+    "path": "source_snapshot",
+    "schema_version": "benchbench.source_snapshot/v1"
+  }
+}

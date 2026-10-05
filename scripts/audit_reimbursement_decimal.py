@@ -150,6 +150,132 @@ def case_total(case_dir: Path, rates: dict[tuple[str, str], Decimal]) -> int:
     return total
 
 
+ACTUAL_POLICY_APPROVAL_RE = re.compile(
+    r"APPROVE RECEIPT\s+(?P<rid>[A-Za-z0-9_\-]+)\s+"
+    r"\[(?P<mode>FULL|PARTIAL(?:\s+\d+)?)\]"
+)
+
+
+def actual_policy_case_total(
+    case_dir: Path,
+    rates: dict[tuple[str, str], Decimal],
+    *,
+    pre_tip: bool = True,
+) -> int:
+    """Compute the reimbursable total under the actual policy when email approvals are honored."""
+    receipts = [
+        parse_receipt_line(line)
+        for line in (case_dir / "receipts.txt").read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
+    emails = (case_dir / "emails.txt").read_text(encoding="utf-8")
+    approvals: dict[str, tuple[str, int | None]] = {}
+    for match in ACTUAL_POLICY_APPROVAL_RE.finditer(emails):
+        mode = match.group("mode")
+        approvals[match.group("rid")] = (
+            ("FULL", None)
+            if mode == "FULL"
+            else ("PARTIAL", int(mode.split()[1]))
+        )
+
+    seen: set[tuple[str | None, ...]] = set()
+    eligible: dict[str | None, int | None] = {}
+    for receipt in receipts:
+        rid = receipt.get("receipt_id")
+        key = tuple(receipt.get(field) for field in ("merchant", "date", "ccy", "amount"))
+        duplicate = key in seen
+        seen.add(key)
+        date, currency, amount_text, category = (
+            receipt.get("date"),
+            receipt.get("ccy"),
+            receipt.get("amount"),
+            receipt.get("cat"),
+        )
+        flags = set(receipt.get("flags", "").split(","))
+        if rid in approvals and approvals[rid][0] == "PARTIAL":
+            eligible[rid] = approvals[rid][1]
+            continue
+        if flags & {"VOID", "CANCELLED"}:
+            eligible[rid] = None
+            continue
+        if rid in approvals and approvals[rid][0] == "FULL":
+            if any(value in {None, "", "?"} for value in (date, currency, amount_text)):
+                eligible[rid] = None
+                continue
+            rate = Decimal("1") if currency == "USD" else rates.get((str(date), str(currency)))
+            if rate is None:
+                eligible[rid] = None
+                continue
+            base_cents = money_to_cents(Decimal(str(amount_text)) * rate)
+            tip_text = receipt.get("tip")
+            tip_cents = (
+                money_to_cents(Decimal(str(tip_text)) * rate)
+                if pre_tip and tip_text not in {None, "", "?"}
+                else 0
+            )
+            eligible[rid] = base_cents + tip_cents
+            continue
+        if (
+            duplicate
+            or (flags & {"DUPLICATE"})
+            or any(value in {None, "", "?"} for value in (date, currency, amount_text, category))
+        ):
+            eligible[rid] = None
+            continue
+        if category == "LODGING" and receipt.get("nights") in {None, "", "?"}:
+            eligible[rid] = None
+            continue
+
+        amount = Decimal(str(amount_text))
+        rate = Decimal("1") if currency == "USD" else rates.get((str(date), str(currency)))
+        if rate is None:
+            eligible[rid] = None
+            continue
+        tip_text = receipt.get("tip")
+        if tip_text not in {None, "", "?"}:
+            tip = Decimal(str(tip_text))
+            if pre_tip:
+                base_cents = money_to_cents(amount * rate)
+                tip_cents = money_to_cents(tip * rate)
+                max_tip_cents = money_to_cents(Decimal(base_cents) / 100 * Decimal("0.20"))
+                eligible[rid] = base_cents + min(tip_cents, max_tip_cents)
+            else:
+                total_cents = money_to_cents(amount * rate)
+                base_cents = money_to_cents((amount - tip) * rate)
+                max_tip_cents = money_to_cents(Decimal(base_cents) / 100 * Decimal("0.20"))
+                eligible[rid] = min(total_cents, base_cents + max_tip_cents)
+        else:
+            eligible[rid] = money_to_cents(amount * rate)
+
+    total = 0
+    per_day: dict[tuple[str | None, str | None], int] = {}
+    for receipt in receipts:
+        rid = receipt.get("receipt_id")
+        cents = eligible.get(rid)
+        if cents is None:
+            continue
+        category, date = receipt.get("cat"), receipt.get("date")
+        if rid in approvals:
+            total += cents
+        elif category == "MISC":
+            total += min(cents, 4000)
+        elif category == "LODGING":
+            nights = receipt.get("nights")
+            if nights in {None, "", "?"}:
+                total += cents
+            else:
+                total += min(cents, 26000 * int(nights))
+        elif category == "AIR":
+            total += cents
+        elif category in {"GROUND", "MEALS"}:
+            per_day[(date, category)] = per_day.get((date, category), 0) + cents
+        else:
+            total += cents
+    for (_date, category), cents in per_day.items():
+        total += min(cents, 9000 if category == "GROUND" else 7500)
+    return total
+
+
 def audit(candidate: Path = CANDIDATE) -> dict[str, Any]:
     bundle = candidate / "solver_bundle"
     rates = load_rates(bundle / "common/exchange_rates.csv")
@@ -158,19 +284,43 @@ def audit(candidate: Path = CANDIDATE) -> dict[str, Any]:
         item_id: case_total(bundle / "cases" / item_id, rates)
         for item_id in historical
     }
+    actual_pre_tip = {
+        item_id: actual_policy_case_total(bundle / "cases" / item_id, rates, pre_tip=True)
+        for item_id in historical
+    }
+    actual_post_tip = {
+        item_id: actual_policy_case_total(bundle / "cases" / item_id, rates, pre_tip=False)
+        for item_id in historical
+    }
     changed = [
         {"id": item_id, "historical": historical[item_id], "decimal_half_up": corrected[item_id]}
         for item_id in historical
         if historical[item_id] != corrected[item_id]
     ]
     rescores: dict[str, int] = {}
+    actual_pre_tip_rescores: dict[str, int] = {}
+    actual_post_tip_rescores: dict[str, int] = {}
     for predictions_path in sorted(candidate.glob("predictions_solver_*.jsonl")):
+        key = predictions_path.stem.removeprefix("predictions_solver_")
         predictions = {row["id"]: row["answer"] for row in read_jsonl(predictions_path)}
-        rescores[predictions_path.stem.removeprefix("predictions_solver_")] = sum(
+        rescores[key] = sum(
             str(predictions.get(item_id)) == str(answer)
             for item_id, answer in corrected.items()
         )
-    return {"changed_gold": changed, "retained_prediction_rescores": rescores}
+        actual_pre_tip_rescores[key] = sum(
+            str(predictions.get(item_id)) == str(answer)
+            for item_id, answer in actual_pre_tip.items()
+        )
+        actual_post_tip_rescores[key] = sum(
+            str(predictions.get(item_id)) == str(answer)
+            for item_id, answer in actual_post_tip.items()
+        )
+    return {
+        "changed_gold": changed,
+        "retained_prediction_rescores": rescores,
+        "actual_policy_pre_tip_rescores": actual_pre_tip_rescores,
+        "actual_policy_post_tip_rescores": actual_post_tip_rescores,
+    }
 
 
 def main() -> None:

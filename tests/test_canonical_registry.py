@@ -38,6 +38,8 @@ def test_registry_has_no_validated_incumbent_and_preserves_invalid_history() -> 
         "010-gemini-empty-artifact",
         "010-consolidation-point",
         "013-cloudsla-forensics",
+        "014-maritime-general-average-forensics",
+        "015-reimbursement-forensics-v2",
     }
     fable = next(item for item in history if item["id"] == "008-rosetta-fieldwork")
     assert {cell["state"] for cell in fable["cell_states"]} == {"provider_error", "timeout"}
@@ -67,7 +69,7 @@ def test_registry_has_no_validated_incumbent_and_preserves_invalid_history() -> 
         cell["state"]
         for item in experiment_010
         for cell in item["cell_states"]
-    } == {"timeout"}
+    } == {"timeout", "invalid_output"}
     consolidation = next(item for item in experiment_010 if item["id"] == "010-consolidation-point")
     assert "completed cells" in consolidation["historical_scores"][0]
     assert registry["historical_comparison"]["leader_candidate_id"] == reimbursement["id"]

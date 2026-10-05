@@ -1,0 +1,10 @@
+receipt_id=reifor_0027_R1 | date=2026-05-18 | note="summary" | cat=AIR | merchant="CityRail" | flags=DUPLICATE | ccy=EUR | amount=?
+receipt_id=reifor_0027_R2 | date=2026-05-18 | ccy=GBP | cat=LODGING | amount=421.99 | nights=2 | merchant="AeroFly" | flags=VOID
+receipt_id=reifor_0027_R3 | date=? | amount=18.72 | ccy=GBP | merchant="Harbor Bistro" | cat=GROUND
+receipt_id=reifor_0027_R4 | date=2026-05-17 | amount=? | ccy=EUR | merchant="Station Cafe" | cat=MISC
+receipt_id=reifor_0027_R5 | date=2026-05-16 | cat=MISC | ccy=AUD | amount=74.85 | merchant="CloudNine Inn"
+receipt_id=reifor_0027_R6 | date=2026-05-15 | cat=MEALS | note="ok" | ccy=CAD | amount=81.39 | merchant="Harbor Bistro"
+receipt_id=reifor_0027_R7 | date=2026-05-17 | ccy=AUD | tip=3.01 | amount=33.06 | note="late_scan" | merchant="Station Cafe" | cat=MEALS
+receipt_id=reifor_0027_R8 | date=2026-05-18 | amount=69.22 | merchant="CityRail" | cat=MEALS | ccy=EUR
+receipt_id=reifor_0027_R9 | date=2026-05-15 | amount=480.77 | cat=LODGING | merchant="Sunrise Diner" | nights=3 | ccy=USD
+receipt_id=reifor_0027_R10 | date=2026-05-17 | cat=GROUND | ccy=JPY | merchant="Sunrise Diner" | amount=109.15

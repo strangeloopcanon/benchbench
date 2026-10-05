@@ -1,0 +1,7 @@
+receipt_id=reifor_0014_R1 | date=2026-05-02 | merchant="AeroFly" | ccy=AUD | cat=MEALS | note="late_scan" | tip=6.24 | amount=40.93
+receipt_id=reifor_0014_R2 | date=2026-05-02 | note="late_scan" | ccy=USD | amount=215.71 | cat=AIR | merchant="Corner Mart" | flags=DUPLICATE
+receipt_id=reifor_0014_R3 | date=2026-05-02 | ccy=GBP | merchant="Alpine Hotel" | cat=GROUND | note="itemized" | amount=84.52
+receipt_id=reifor_0014_R4 | date=2026-05-04 | cat=GROUND | merchant="Alpine Hotel" | amount=15.30 | ccy=? | note="ok"
+receipt_id=reifor_0014_R5 | date=2026-05-01 | merchant="QuickFuel" | amount=447.05 | flags=VOID | nights=2 | ccy=CAD | cat=LODGING
+receipt_id=reifor_0014_R6 | date=2026-05-03 | amount=43.40 | ccy=EUR | cat=GROUND | merchant="AeroFly"
+receipt_id=reifor_0014_R7 | date=2026-05-03 | ccy=EUR | amount=43.40 | cat=LODGING | nights=1 | merchant="AeroFly"

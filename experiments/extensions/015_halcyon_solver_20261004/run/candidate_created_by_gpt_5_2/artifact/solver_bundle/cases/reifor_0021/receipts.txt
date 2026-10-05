@@ -1,0 +1,6 @@
+receipt_id=reifor_0021_R1 | date=2026-05-10 | ccy=CAD | amount=46.05 | cat=GROUND | merchant="Station Cafe"
+receipt_id=reifor_0021_R2 | date=2026-05-07 | amount=679.18 | ccy=AUD | cat=AIR | merchant="AeroFly"
+receipt_id=reifor_0021_R3 | date=2026-05-08 | flags=CANCELLED,DUPLICATE | merchant="Station Cafe" | ccy=CAD | amount=12.20 | cat=GROUND
+receipt_id=reifor_0021_R4 | date=2026-05-08 | flags=CANCELLED | nights=1 | merchant="Metro Cab" | cat=LODGING | ccy=CAD | amount=159.63
+receipt_id=reifor_0021_R5 | date=2026-05-08 | cat=LODGING | note="ok" | amount=51.69 | nights=3 | ccy=CAD | merchant="Station Cafe" | flags=CANCELLED
+receipt_id=reifor_0021_R6 | date=2026-05-08 | ccy=CAD | merchant="Station Cafe" | cat=GROUND | amount=51.69

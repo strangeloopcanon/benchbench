@@ -1,0 +1,50 @@
+[
+  {
+    "artifact_id": "cursor__claude_opus_5_5_high",
+    "benchmark": "Reimbursement Forensics (ReiFor)",
+    "candidate_digest": "60b014636e7f02da2e8f4429c9741679d1a5840a5098014cbd46f84bba113e01",
+    "candidate_snapshot": "./experiments/extensions/015_cursor_opus_55_solver_20261004/run/candidate_created_by_gpt_5_2/artifact",
+    "cell_state": "success",
+    "creator_model": "gpt-5.2",
+    "cursor_cache_read_tokens": 228640,
+    "cursor_cache_write_tokens": 47009,
+    "cursor_model": "claude-opus-5-5-high",
+    "cursor_usage": {
+      "cacheReadTokens": 228640,
+      "cacheWriteTokens": 47009,
+      "inputTokens": 16,
+      "outputTokens": 6116
+    },
+    "display_model": "Claude Opus 5.5 (High)",
+    "effort": "high",
+    "gold_digest": "e1b69db478a4a3d952646f7024320dc21aaf3821bcd30184226403a548023ed4",
+    "model": "claude-opus-5-5-high",
+    "out_path": "private_raw_evidence_not_published",
+    "phase": "solver_extension",
+    "prediction_digest": "9eefb3e1d03532d5f90ce894cb40fb68da76b6a03cbe1d78bb538721e219071b",
+    "prediction_extraction_source": "provider_output",
+    "prediction_rows": 30,
+    "prediction_source": "./experiments/extensions/015_cursor_opus_55_solver_20261004/run/candidate_created_by_gpt_5_2/solver_results/predictions_solver_cursor__claude_opus_5_5_high__effort_high.jsonl",
+    "predictions_path": "./experiments/extensions/015_cursor_opus_55_solver_20261004/run/candidate_created_by_gpt_5_2/solver_results/predictions_solver_cursor__claude_opus_5_5_high__effort_high.jsonl",
+    "prompt_path": "private_raw_evidence_not_published",
+    "provider": "cursor",
+    "requested_provider_model": "claude-opus-5-5-high",
+    "returncode": 0,
+    "runtime_model_reported": null,
+    "runtime_model_verification": "provider_response_omits_model; exact_cli_id_required",
+    "sandbox_mode": "nested-cursor-plus-outer-seatbelt",
+    "score_path": "./experiments/extensions/015_cursor_opus_55_solver_20261004/run/candidate_created_by_gpt_5_2/solver_results/score_solver_cursor__claude_opus_5_5_high__effort_high.json",
+    "score_returncode": 0,
+    "score_summary": {
+      "accuracy": 1.0,
+      "correct": 30,
+      "total": 30
+    },
+    "solver_artifact_id": "cursor__claude_opus_5_5_high__effort_high",
+    "solver_display_model": "Claude Opus 5.5 (High)",
+    "solver_model": "claude-opus-5-5-high",
+    "stderr_path": "private_raw_evidence_not_published",
+    "stdout_path": "private_raw_evidence_not_published",
+    "tokens_used": 281781
+  }
+]

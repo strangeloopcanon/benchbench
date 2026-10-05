@@ -1,0 +1,70 @@
+{
+  "config": {
+    "custom_source_panel_acknowledged": true,
+    "dispatch_ceiling_overshoot_acknowledged": true,
+    "harness_digest": "392550216ff3f1ea7f2c54f186a8b9559207945f7e9ef4b858b0cb95a0030d6a",
+    "max_total_tokens": 15000000,
+    "panel_expansion": true,
+    "provider_preflight": [
+      {
+        "artifact_id": "cursor__glm_5_2_high",
+        "binary": "cursor-agent",
+        "display_model": "GLM 5.2 (High)",
+        "executable": "<local-home>/.local/bin/cursor-agent",
+        "inference_attempted": false,
+        "model": "glm-5.2-high",
+        "model_available": true,
+        "model_listing_command": [
+          "<local-home>/.local/bin/cursor-agent",
+          "--list-models"
+        ],
+        "model_listing_returncode": 0,
+        "model_listing_stderr_bytes": 0,
+        "model_listing_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "model_listing_stdout_bytes": 12145,
+        "model_listing_stdout_sha256": "5860d20488482ac73ee8cb9a2bcdf7852b68dabd3e2269c73f597571dd9de150",
+        "model_listing_supported": true,
+        "preflight_scope": "ambient_catalog_only",
+        "probe_stderr_bytes": 0,
+        "probe_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "probe_stdout_bytes": 5991,
+        "probe_stdout_sha256": "c24026e17118188478fcb47ed8113fa842f93df2043da5116660a368d3dc64b0",
+        "provider": "cursor",
+        "requested_effort": null,
+        "requested_provider_model": "glm-5.2-high",
+        "returncode": 0,
+        "state": "binary_ready"
+      }
+    ],
+    "retry_failed_source_cells": false,
+    "schema_version": 1,
+    "solver": "cursor__glm_5_2_high__effort_high",
+    "source_candidates": [
+      {
+        "artifact": "./experiments/013_gemini_37_creator_20260813/run/candidate_created_by_antigravity__gemini_3_7_flash_high__effort_high/attempt_0001/artifact",
+        "candidate_digest": "ff8588e1e55b3d1a8d5d67fb049df1cb17202913e7427d63b38db6863949f2c2",
+        "creator_call_id": "antigravity__gemini_3_7_flash_high__effort_high",
+        "creator_model": "gemini-3.7-flash-high",
+        "validation_report_sha256": "c19c75d8638193b3ba5a8752f0f72e2ad8b86c21da6c0a7e192ee5323ca0d90f",
+        "validation_sha256": "0b8841a7d9abb98cc9d7802f789e2c11f59dbce06a7891da6fed87867dd5c98b"
+      }
+    ],
+    "source_manifest_sha256": "2f8d8ae1c52ee1c3dbd6c4fd3f4d26330c674f5d4ae686956481b37821422d6c",
+    "source_panel_policy": "custom",
+    "source_run_root": "./experiments/013_gemini_37_creator_20260813",
+    "source_run_state_sha256": "93ea6601b16c9df59fe779607001c1aeea4a657d2efe9887b3eb97e5be1bfbb5",
+    "source_snapshot_digest": "8824e3affce7e5231e0cd5155afdfe913f0bb31023a52116977a82d6822e4c9e",
+    "timeout_seconds": 1500,
+    "unmetered_cost_acknowledged": true,
+    "zero_telemetry_reservation": 5000000
+  },
+  "config_fingerprint": "b8d723495f362865433ff211d4a2697203f81b296619f2a1b545757e1e4f09f2",
+  "schema_version": 1,
+  "source_snapshot": {
+    "digest": "392550216ff3f1ea7f2c54f186a8b9559207945f7e9ef4b858b0cb95a0030d6a",
+    "file_count": 10,
+    "manifest_path": "source_snapshot/manifest.json",
+    "path": "source_snapshot",
+    "schema_version": "benchbench.source_snapshot/v1"
+  }
+}

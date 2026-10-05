@@ -1,0 +1,132 @@
+{
+  "decimal_corrected_gold_score": {
+    "accuracy": 0.36666666666666664,
+    "correct": 11,
+    "total": 30
+  },
+  "historical_gold_score": {
+    "accuracy": 0.36666666666666664,
+    "correct": 11,
+    "total": 30
+  },
+  "item_diffs": [
+    {
+      "decimal_gold": 15992,
+      "historical_gold": 15991,
+      "id": "reifor_0000",
+      "predicted": 16651
+    },
+    {
+      "decimal_gold": 62756,
+      "historical_gold": 62756,
+      "id": "reifor_0001",
+      "predicted": 59243
+    },
+    {
+      "decimal_gold": 87396,
+      "historical_gold": 87396,
+      "id": "reifor_0002",
+      "predicted": 93330
+    },
+    {
+      "decimal_gold": 77063,
+      "historical_gold": 77063,
+      "id": "reifor_0004",
+      "predicted": 81969
+    },
+    {
+      "decimal_gold": 56637,
+      "historical_gold": 56636,
+      "id": "reifor_0006",
+      "predicted": 61201
+    },
+    {
+      "decimal_gold": 36717,
+      "historical_gold": 36717,
+      "id": "reifor_0007",
+      "predicted": 29560
+    },
+    {
+      "decimal_gold": 68889,
+      "historical_gold": 68889,
+      "id": "reifor_0008",
+      "predicted": 69981
+    },
+    {
+      "decimal_gold": 214443,
+      "historical_gold": 214443,
+      "id": "reifor_0009",
+      "predicted": 221069
+    },
+    {
+      "decimal_gold": 28815,
+      "historical_gold": 28815,
+      "id": "reifor_0013",
+      "predicted": 36072
+    },
+    {
+      "decimal_gold": 16434,
+      "historical_gold": 16434,
+      "id": "reifor_0014",
+      "predicted": 15291
+    },
+    {
+      "decimal_gold": 27796,
+      "historical_gold": 27796,
+      "id": "reifor_0016",
+      "predicted": 27808
+    },
+    {
+      "decimal_gold": 188684,
+      "historical_gold": 188684,
+      "id": "reifor_0018",
+      "predicted": 193601
+    },
+    {
+      "decimal_gold": 117087,
+      "historical_gold": 117087,
+      "id": "reifor_0019",
+      "predicted": 118228
+    },
+    {
+      "decimal_gold": 3339,
+      "historical_gold": 3339,
+      "id": "reifor_0020",
+      "predicted": 3715
+    },
+    {
+      "decimal_gold": 11170,
+      "historical_gold": 11170,
+      "id": "reifor_0023",
+      "predicted": 13394
+    },
+    {
+      "decimal_gold": 38548,
+      "historical_gold": 38548,
+      "id": "reifor_0024",
+      "predicted": 43721
+    },
+    {
+      "decimal_gold": 67891,
+      "historical_gold": 67891,
+      "id": "reifor_0027",
+      "predicted": 35949
+    },
+    {
+      "decimal_gold": 63059,
+      "historical_gold": 63059,
+      "id": "reifor_0028",
+      "predicted": 74915
+    },
+    {
+      "decimal_gold": 30629,
+      "historical_gold": 30627,
+      "id": "reifor_0029",
+      "predicted": 32141
+    }
+  ],
+  "returncode": 78,
+  "solver": "Halcyon",
+  "solver_artifact_id": "antigravity__halcyon__effort_high",
+  "tokens_used": 282810
+}

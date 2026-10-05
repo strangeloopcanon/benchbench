@@ -1,0 +1,7 @@
+receipt_id=reifor_0025_R1 | date=2026-04-17 | note="late_scan" | ccy=EUR | cat=MISC | amount=82.64 | merchant="CityRail"
+receipt_id=reifor_0025_R2 | date=2026-04-19 | merchant="CityRail" | cat=GROUND | ccy=AUD | amount=15.26
+receipt_id=reifor_0025_R3 | date=2026-04-20 | amount=59.87 | ccy=AUD | flags=CANCELLED | merchant="Harbor Bistro" | cat=MISC
+receipt_id=reifor_0025_R4 | date=2026-04-17 | amount=82.64 | cat=MEALS | ccy=EUR | merchant="CityRail"
+receipt_id=reifor_0025_R5 | date=2026-04-19 | ccy=? | amount=49.85 | cat=MISC | merchant="Alpine Hotel"
+receipt_id=reifor_0025_R6 | date=2026-04-17 | amount=611.12 | cat=AIR | ccy=JPY | merchant="Corner Mart"
+receipt_id=reifor_0025_R7 | date=2026-04-20 | merchant="Alpine Hotel" | cat=? | ccy=EUR | amount=136.28

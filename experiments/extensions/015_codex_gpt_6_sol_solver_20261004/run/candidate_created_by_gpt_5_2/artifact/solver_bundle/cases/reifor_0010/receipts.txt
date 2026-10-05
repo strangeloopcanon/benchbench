@@ -1,0 +1,8 @@
+receipt_id=reifor_0010_R1 | date=2026-04-24 | ccy=EUR | merchant="Harbor Bistro" | amount=51.70 | cat=GROUND
+receipt_id=reifor_0010_R2 | date=2026-04-23 | amount=16.52 | ccy=GBP | note="ok" | merchant="Alpine Hotel" | cat=MISC
+receipt_id=reifor_0010_R3 | date=2026-04-25 | merchant="Corner Mart" | note="late_scan" | amount=28.37 | cat=MEALS | ccy=EUR
+receipt_id=reifor_0010_R4 | date=2026-04-26 | ccy=AUD | merchant="CloudNine Inn" | cat=AIR | amount=784.87
+receipt_id=reifor_0010_R5 | date=2026-04-24 | merchant="Corner Mart" | ccy=EUR | amount=42.23 | flags=VOID | cat=MEALS
+receipt_id=reifor_0010_R6 | date=2026-04-25 | cat=AIR | merchant="Corner Mart" | ccy=? | amount=736.72
+receipt_id=reifor_0010_R7 | date=2026-04-24 | cat=? | ccy=CAD | merchant="AeroFly" | amount=703.67 | note="ok"
+receipt_id=reifor_0010_R8 | date=2026-04-24 | tip=4.70 | merchant="Harbor Bistro" | amount=51.70 | cat=MEALS | note="summary" | ccy=EUR

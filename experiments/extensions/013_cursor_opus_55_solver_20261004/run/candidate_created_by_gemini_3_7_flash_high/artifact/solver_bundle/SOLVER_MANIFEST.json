@@ -1,0 +1,13 @@
+{
+  "benchmark_name": "CloudSLA-Forensics",
+  "version": "1.0.0",
+  "description": "Forensic enterprise cloud SLA breach and service credit arbitration benchmark.",
+  "item_count": 30,
+  "items_file": "items_private_sample.jsonl",
+  "contract_framework": "CONTRACT_FRAMEWORK.md",
+  "cases_directory": "cases",
+  "answer_schema": {
+    "type": "integer",
+    "description": "Exact Net Approved Service Credit payable in USD cents (e.g. 185000 for $1,850.00)."
+  }
+}

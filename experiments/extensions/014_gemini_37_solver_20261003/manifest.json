@@ -1,0 +1,53 @@
+[
+  {
+    "antigravity_actual_label": "Gemini 3.7 Flash (High)",
+    "antigravity_expected_label": "Gemini 3.7 Flash (High)",
+    "antigravity_log_path": "private_raw_evidence_not_published",
+    "antigravity_status": "SUCCESS",
+    "antigravity_usage": {
+      "cache_read_tokens": 154819,
+      "input_tokens": 225869,
+      "output_tokens": 60394,
+      "thinking_tokens": 58015,
+      "total_tokens": 286263
+    },
+    "artifact_id": "antigravity__gemini_3_7_flash_high",
+    "benchmark": "maritime_general_average_forensics",
+    "candidate_digest": "9597a36bbe2737fcf56f32e9e032e5f27844cde501fad839e6d0b814d02e99d7",
+    "candidate_snapshot": "./experiments/extensions/014_gemini_37_solver_20261003/run/candidate_created_by_halcyon/artifact",
+    "cell_state": "success",
+    "creator_model": "halcyon",
+    "display_model": "Gemini 3.7 Flash (High)",
+    "effort": "high",
+    "gold_digest": "d00b8e30ec284de39f8495e7b3073bc57bedfc25691d7ccab2e7abcc97e2cfc5",
+    "model": "gemini-3.7-flash-high",
+    "model_mismatch": false,
+    "out_path": "private_raw_evidence_not_published",
+    "permission_denied": false,
+    "phase": "solver_extension",
+    "prediction_digest": "172de075f58efcebafa6541c2140fe36c329d1e3226fa9907df33eb25d697fb8",
+    "prediction_extraction_source": "provider_output",
+    "prediction_rows": 30,
+    "prediction_source": "./experiments/extensions/014_gemini_37_solver_20261003/run/candidate_created_by_halcyon/solver_results/predictions_solver_antigravity__gemini_3_7_flash_high__effort_high.jsonl",
+    "predictions_path": "./experiments/extensions/014_gemini_37_solver_20261003/run/candidate_created_by_halcyon/solver_results/predictions_solver_antigravity__gemini_3_7_flash_high__effort_high.jsonl",
+    "print_timeout": false,
+    "prompt_path": "private_raw_evidence_not_published",
+    "provider": "antigravity",
+    "requested_provider_model": "gemini-3.7-flash-high",
+    "returncode": 0,
+    "sandbox_mode": "nested-antigravity-plus-outer-seatbelt",
+    "score_path": "./experiments/extensions/014_gemini_37_solver_20261003/run/candidate_created_by_halcyon/solver_results/score_solver_antigravity__gemini_3_7_flash_high__effort_high.json",
+    "score_returncode": 0,
+    "score_summary": {
+      "accuracy": 1.0,
+      "correct": 30,
+      "total": 30
+    },
+    "solver_artifact_id": "antigravity__gemini_3_7_flash_high__effort_high",
+    "solver_display_model": "Gemini 3.7 Flash (High)",
+    "solver_model": "gemini-3.7-flash-high",
+    "stderr_path": "private_raw_evidence_not_published",
+    "stdout_path": "private_raw_evidence_not_published",
+    "tokens_used": 286263
+  }
+]

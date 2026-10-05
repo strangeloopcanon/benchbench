@@ -29,8 +29,13 @@ EXPERIMENT_ROOTS = (
     ROOT / "experiments/011_gemini_provider_recovery_20260802",
     ROOT / "experiments/012_gemini_creator_recovery_20260802",
     *(ROOT / "experiments").glob("013_*"),
+    *(ROOT / "experiments").glob("014_*"),
+    *(ROOT / "experiments").glob("015_*"),
+    *(ROOT / "experiments/extensions").glob("004_*"),
     *(ROOT / "experiments/extensions").glob("010_*"),
     *(ROOT / "experiments/extensions").glob("013_*"),
+    *(ROOT / "experiments/extensions").glob("014_*"),
+    *(ROOT / "experiments/extensions").glob("015_*"),
 )
 RAW_PATH_KEYS = {
     "antigravity_log_path",
@@ -189,9 +194,13 @@ def rebind_source_evidence_indexes() -> None:
     overlays = [
         *(ROOT / "experiments/extensions").glob("010_*"),
         *(ROOT / "experiments/extensions").glob("013_*"),
+        *(ROOT / "experiments/extensions").glob("014_*"),
+        *(ROOT / "experiments/extensions").glob("015_*"),
     ]
     for overlay in overlays:
         index_path = overlay / "source_evidence/manifest.json"
+        if not index_path.is_file():
+            continue
         index = json.loads(index_path.read_text(encoding="utf-8"))
         for item in index["files"]:
             item["sha256"] = sha256(overlay / item["path"])

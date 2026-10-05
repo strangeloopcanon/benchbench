@@ -1,0 +1,56 @@
+{
+  "case_id": "case_025",
+  "reporting_period": "2026-04",
+  "incident_events": [
+    {
+      "incident_id": "INC-2026-340",
+      "service_id": "distributed-object-storage",
+      "start_time": "2026-04-03T02:43:00Z",
+      "end_time": "2026-04-03T08:43:00Z",
+      "duration_minutes": 360,
+      "error_rate_pct": 42.0,
+      "availability_zone": "us-east-1a",
+      "scenario_type": "PARTIAL_CUSTOMER_FAULT"
+    },
+    {
+      "incident_id": "INC-2026-341",
+      "service_id": "distributed-object-storage",
+      "start_time": "2026-04-04T17:39:00Z",
+      "end_time": "2026-04-04T18:39:00Z",
+      "duration_minutes": 60,
+      "error_rate_pct": 15.4,
+      "availability_zone": "us-east-1a",
+      "scenario_type": "FORCE_MAJEURE_WITH_RTO"
+    },
+    {
+      "incident_id": "INC-2026-342",
+      "service_id": "managed-relational-db",
+      "start_time": "2026-04-07T14:10:00Z",
+      "end_time": "2026-04-07T15:10:00Z",
+      "duration_minutes": 60,
+      "error_rate_pct": 100.0,
+      "availability_zone": "us-east-1b",
+      "scenario_type": "FORCE_MAJEURE_WITH_RTO"
+    },
+    {
+      "incident_id": "INC-2026-343",
+      "service_id": "distributed-object-storage",
+      "start_time": "2026-04-09T03:32:00Z",
+      "end_time": "2026-04-09T06:32:00Z",
+      "duration_minutes": 180,
+      "error_rate_pct": 42.0,
+      "availability_zone": "us-east-1a",
+      "scenario_type": "PARTIAL_CUSTOMER_FAULT"
+    },
+    {
+      "incident_id": "INC-2026-344",
+      "service_id": "distributed-object-storage",
+      "start_time": "2026-04-14T17:08:00Z",
+      "end_time": "2026-04-14T17:33:00Z",
+      "duration_minutes": 25,
+      "error_rate_pct": 15.4,
+      "availability_zone": "multi-az-cluster",
+      "scenario_type": "PARTIAL_CUSTOMER_FAULT"
+    }
+  ]
+}

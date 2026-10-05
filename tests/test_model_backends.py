@@ -28,6 +28,7 @@ from benchbench_results import extract_predictions, extract_solver_predictions, 
 from benchbench_run_state import call_artifact_id
 from run_broad_three_model_sweep import (
     DEFAULT_MODELS,
+    FRONTIER_FIVE_MODELS,
     FRONTIER_FOUR_MODELS,
     candidate_card_lines,
     candidate_status,
@@ -59,6 +60,11 @@ class ModelBackendTests(unittest.TestCase):
         self.assertEqual(gemini_37.antigravity_model, "gemini-3.7-flash-high")
         self.assertEqual(gemini_37.antigravity_expected_label, "Gemini 3.7 Flash (High)")
         self.assertEqual(gemini_37.reasoning_effort, "high")
+
+        halcyon = parse_model_spec("agy:halcyon@high")
+        self.assertEqual(halcyon.antigravity_model, "halcyon")
+        self.assertEqual(halcyon.antigravity_expected_label, "Halcyon")
+        self.assertEqual(halcyon.reasoning_effort, "high")
 
         opus = parse_model_spec("cursor:claude-opus-5@high")
         self.assertEqual(opus.cursor_model, "claude-opus-5-thinking-high")
@@ -155,6 +161,11 @@ class ModelBackendTests(unittest.TestCase):
         flash_37_alias = parse_model_spec("agy:gemini-3.7-flash")
         flash_37_concrete = parse_model_spec("agy:gemini-3.7-flash-high")
         self.assertEqual(flash_37_alias.artifact_id, flash_37_concrete.artifact_id)
+
+        halcyon_alias = parse_model_spec("agy:halcyon")
+        halcyon_concrete = parse_model_spec("agy:halcyon-high")
+        self.assertEqual(halcyon_alias.artifact_id, "antigravity__halcyon")
+        self.assertEqual(halcyon_alias.artifact_id, halcyon_concrete.artifact_id)
 
     def test_historical_xhigh_score_names_preserve_model_identity(self) -> None:
         for filename in ("score_solver_xhigh_gpt_5_5.json", "score_solver_gpt_5_5_xhigh.json"):
@@ -287,6 +298,12 @@ class ModelBackendTests(unittest.TestCase):
                 self.assertIn("--sandbox", agy_cmd)
                 self.assertNotIn("--dangerously-skip-permissions", agy_cmd)
 
+                run_antigravity_model(parse_model_spec("agy:halcyon"), "prompt", tmp_path / "agy_halcyon.txt", tmp_path, "high", 5)
+                agy_halcyon_cmd = run.call_args.args[0]
+                self.assertEqual(agy_halcyon_cmd[agy_halcyon_cmd.index("--model") + 1], "halcyon")
+                self.assertNotIn("--effort", agy_halcyon_cmd)
+                self.assertIn("--sandbox", agy_halcyon_cmd)
+
                 run_claude_model(parse_model_spec("claude:sonnet"), "prompt", tmp_path / "claude.txt", tmp_path, "high", 5)
                 claude_cmd = run.call_args.args[0]
                 self.assertEqual(claude_cmd[claude_cmd.index("--permission-mode") + 1], "default")
@@ -325,6 +342,31 @@ class ModelBackendTests(unittest.TestCase):
         self.assertEqual(result["returncode"], 77)
         self.assertTrue(result["permission_denied"])
         self.assertEqual(result["tokens_used"], 123)
+
+    def test_antigravity_print_timeout_is_not_reported_as_success(self) -> None:
+        completed = subprocess.CompletedProcess(
+            [],
+            0,
+            '{"status":"SUCCESS","response":"","usage":{"total_tokens":478796}}',
+            "[agy] print timeout after 25m0s with turn in progress; returning partial output\n",
+        )
+        with tempfile.TemporaryDirectory(prefix="benchbench-agy-timeout-test.") as tmp:
+            tmp_path = Path(tmp)
+            with (
+                patch.object(backends, "run_cmd", return_value=completed),
+                patch.object(backends.shutil, "which", return_value="/usr/local/bin/agy"),
+            ):
+                result = run_antigravity_model(
+                    parse_model_spec("agy:halcyon"),
+                    "prompt",
+                    tmp_path / "agy.txt",
+                    tmp_path,
+                    "high",
+                    1500,
+                )
+        self.assertEqual(result["returncode"], -124)
+        self.assertTrue(result["print_timeout"])
+        self.assertEqual(result["tokens_used"], 478796)
 
     def test_antigravity_canceled_status_fails_even_without_permission_stderr(self) -> None:
         completed = subprocess.CompletedProcess(
@@ -509,6 +551,7 @@ class ModelBackendTests(unittest.TestCase):
                 "gpt-5.6-terra@xhigh",
                 "agy:gemini-3.6-flash-high@high",
                 "agy:gemini-3.7-flash-high@high",
+                "agy:halcyon@high",
                 "cursor:claude-opus-5@high",
             ],
         )
@@ -521,7 +564,11 @@ class ModelBackendTests(unittest.TestCase):
             call_artifact_id(spec.artifact_id, effective_effort(spec, "high"))
             for spec in map(parse_model_spec, FRONTIER_FOUR_MODELS)
         ]
-        current = ["one", "two", "three", "four", "five"]
+        exact_five = [
+            call_artifact_id(spec.artifact_id, effective_effort(spec, "high"))
+            for spec in map(parse_model_spec, FRONTIER_FIVE_MODELS)
+        ]
+        current = ["one", "two", "three", "four", "five", "six"]
         self.assertEqual(
             resolve_panel_policy(Path("experiments/010_four_model_panel"), exact, exact, current, current),
             "benchbench.frontier-four/2026-08-01",
@@ -535,8 +582,12 @@ class ModelBackendTests(unittest.TestCase):
                 current,
             )
         self.assertEqual(
-            resolve_panel_policy(Path("experiments/013_frontier_five"), current, current, current, current),
+            resolve_panel_policy(Path("experiments/013_frontier_five"), exact_five, exact_five, current, current),
             "benchbench.frontier-five/2026-08-13",
+        )
+        self.assertEqual(
+            resolve_panel_policy(Path("experiments/014_frontier_six"), current, current, current, current),
+            "benchbench.frontier-six/2026-10-03",
         )
 
         creators, solvers = resolve_model_lists(

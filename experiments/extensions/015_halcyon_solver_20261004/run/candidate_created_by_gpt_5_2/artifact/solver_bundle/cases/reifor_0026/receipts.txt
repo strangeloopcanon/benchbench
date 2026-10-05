@@ -1,0 +1,10 @@
+receipt_id=reifor_0026_R1 | date=2026-05-02 | merchant="QuickFuel" | ccy=AUD | amount=21.67 | cat=GROUND
+receipt_id=reifor_0026_R2 | date=2026-05-02 | amount=564.11 | ccy=? | nights=2 | merchant="Corner Mart" | cat=LODGING
+receipt_id=reifor_0026_R3 | date=2026-05-04 | cat=MISC | ccy=JPY | amount=26.10 | note="summary" | merchant="CityRail"
+receipt_id=reifor_0026_R4 | date=2026-05-02 | cat=MISC | note="summary" | merchant="AeroFly" | amount=? | ccy=AUD
+receipt_id=reifor_0026_R5 | date=2026-05-02 | cat=? | amount=73.22 | flags=CANCELLED | merchant="Alpine Hotel" | ccy=JPY
+receipt_id=reifor_0026_R6 | date=2026-05-03 | ccy=JPY | flags=CANCELLED | merchant="AeroFly" | note="summary" | cat=MISC | amount=76.66
+receipt_id=reifor_0026_R7 | date=2026-05-03 | amount=111.76 | ccy=EUR | note="summary" | merchant="CloudNine Inn" | cat=GROUND
+receipt_id=reifor_0026_R8 | date=2026-05-02 | ccy=AUD | amount=21.67 | merchant="QuickFuel" | flags=VOID | cat=MISC
+receipt_id=reifor_0026_R9 | date=2026-05-02 | note="itemized" | flags=VOID | tip=7.04 | cat=MEALS | amount=27.17 | ccy=EUR | merchant="CloudNine Inn"
+receipt_id=reifor_0026_R10 | date=2026-05-01 | ccy=JPY | merchant="Alpine Hotel" | amount=15.49 | cat=MISC

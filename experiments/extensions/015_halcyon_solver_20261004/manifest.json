@@ -1,0 +1,53 @@
+[
+  {
+    "antigravity_actual_label": "Halcyon",
+    "antigravity_expected_label": "Halcyon",
+    "antigravity_log_path": "private_raw_evidence_not_published",
+    "antigravity_status": "ERROR",
+    "antigravity_usage": {
+      "cache_read_tokens": 660187,
+      "input_tokens": 174963,
+      "output_tokens": 108440,
+      "thinking_tokens": 89370,
+      "total_tokens": 283403
+    },
+    "artifact_id": "antigravity__halcyon",
+    "benchmark": "Reimbursement Forensics (ReiFor)",
+    "candidate_digest": "60b014636e7f02da2e8f4429c9741679d1a5840a5098014cbd46f84bba113e01",
+    "candidate_snapshot": "./experiments/extensions/015_halcyon_solver_20261004/run/candidate_created_by_gpt_5_2/artifact",
+    "cell_state": "success",
+    "creator_model": "gpt-5.2",
+    "display_model": "Halcyon",
+    "effort": "high",
+    "gold_digest": "e1b69db478a4a3d952646f7024320dc21aaf3821bcd30184226403a548023ed4",
+    "model": "halcyon",
+    "model_mismatch": false,
+    "out_path": "private_raw_evidence_not_published",
+    "permission_denied": false,
+    "phase": "solver_extension",
+    "prediction_digest": "9eefb3e1d03532d5f90ce894cb40fb68da76b6a03cbe1d78bb538721e219071b",
+    "prediction_extraction_source": "provider_output",
+    "prediction_rows": 30,
+    "prediction_source": "./experiments/extensions/015_halcyon_solver_20261004/run/candidate_created_by_gpt_5_2/solver_results/predictions_solver_antigravity__halcyon__effort_high.jsonl",
+    "predictions_path": "./experiments/extensions/015_halcyon_solver_20261004/run/candidate_created_by_gpt_5_2/solver_results/predictions_solver_antigravity__halcyon__effort_high.jsonl",
+    "print_timeout": false,
+    "prompt_path": "private_raw_evidence_not_published",
+    "provider": "antigravity",
+    "requested_provider_model": "halcyon",
+    "returncode": 0,
+    "sandbox_mode": "nested-antigravity-plus-outer-seatbelt",
+    "score_path": "./experiments/extensions/015_halcyon_solver_20261004/run/candidate_created_by_gpt_5_2/solver_results/score_solver_antigravity__halcyon__effort_high.json",
+    "score_returncode": 0,
+    "score_summary": {
+      "accuracy": 1.0,
+      "correct": 30,
+      "total": 30
+    },
+    "solver_artifact_id": "antigravity__halcyon__effort_high",
+    "solver_display_model": "Halcyon",
+    "solver_model": "halcyon",
+    "stderr_path": "private_raw_evidence_not_published",
+    "stdout_path": "private_raw_evidence_not_published",
+    "tokens_used": 283403
+  }
+]

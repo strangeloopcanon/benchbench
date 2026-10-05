@@ -1,0 +1,9 @@
+receipt_id=reifor_0002_R1 | date=2026-04-27 | merchant="Station Cafe" | cat=MEALS | ccy=USD | amount=78.79
+receipt_id=reifor_0002_R2 | date=2026-04-27 | merchant="CloudNine Inn" | cat=LODGING | nights=2 | amount=23.47 | ccy=CAD
+receipt_id=reifor_0002_R3 | date=2026-04-27 | cat=? | amount=55.98 | ccy=EUR | merchant="CloudNine Inn"
+receipt_id=reifor_0002_R4 | date=2026-04-27 | cat=MISC | amount=23.47 | note="fax_copy" | merchant="CloudNine Inn" | ccy=CAD
+receipt_id=reifor_0002_R5 | date=2026-04-25 | ccy=USD | cat=MISC | amount=7.59 | merchant="CloudNine Inn" | note="fax_copy"
+receipt_id=reifor_0002_R6 | date=2026-04-25 | merchant="Sunrise Diner" | cat=MISC | flags=VOID | ccy=GBP | amount=21.36 | note="ok"
+receipt_id=reifor_0002_R7 | date=2026-04-25 | amount=411.20 | merchant="Corner Mart" | cat=LODGING | ccy=GBP | nights=2
+receipt_id=reifor_0002_R8 | date=2026-04-25 | cat=LODGING | merchant="Sunrise Diner" | ccy=USD | amount=320.75
+receipt_id=reifor_0002_R9 | date=2026-04-27 | cat=LODGING | merchant="Metro Cab" | ccy=EUR | amount=334.40 | nights=1

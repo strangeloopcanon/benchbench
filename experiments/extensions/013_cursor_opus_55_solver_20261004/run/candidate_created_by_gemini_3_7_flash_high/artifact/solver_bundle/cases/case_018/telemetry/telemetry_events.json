@@ -1,0 +1,26 @@
+{
+  "case_id": "case_018",
+  "reporting_period": "2026-04",
+  "incident_events": [
+    {
+      "incident_id": "INC-2026-270",
+      "service_id": "managed-relational-db",
+      "start_time": "2026-04-04T13:14:00Z",
+      "end_time": "2026-04-04T15:44:00Z",
+      "duration_minutes": 150,
+      "error_rate_pct": 78.5,
+      "availability_zone": "us-east-1a",
+      "scenario_type": "MAINTENANCE_OVERRUN"
+    },
+    {
+      "incident_id": "INC-2026-271",
+      "service_id": "edge-api-gateway",
+      "start_time": "2026-04-05T12:30:00Z",
+      "end_time": "2026-04-05T18:30:00Z",
+      "duration_minutes": 360,
+      "error_rate_pct": 42.0,
+      "availability_zone": "us-east-1a",
+      "scenario_type": "PARTIAL_CUSTOMER_FAULT"
+    }
+  ]
+}

@@ -8,7 +8,7 @@
     "leader_candidate_id": "004-reimbursement-forensics",
     "rank": 1,
     "verdict": "win_over_challengers",
-    "basis": "Against independently recomputed Decimal half-up gold, the six retained solver predictions score 12/30, 16/30, 11/30, 13/30, 11/30, and 11/30. This remains the only complete six-solver row with every score low and nonzero; later challenger rows reach 25/30 or higher, are invalid, or are incomplete. Every completed Experiment 010 and Experiment 013 solver cell is 30/30; Gemini 3.6 produced no valid candidate, while Gemini 3.7 produced a valid but too-easy candidate.",
+    "basis": "Against independently recomputed Decimal half-up gold, the six retained solver predictions score 12/30, 16/30, 11/30, 13/30, 11/30, and 11/30. This remains the only complete six-solver row with every score low and nonzero; later challenger rows reach 25/30 or higher, are invalid, or are incomplete. Every completed Experiment 010 and Experiment 013 solver cell is 30/30; Gemini 3.6 and Halcyon produced no valid candidate, while Gemini 3.7 produced a valid but too-easy candidate.",
     "qualification": "This is a corrected historical comparison, not a canonical promotion. Experiment 004 remains invalid because its original emitted gold was wrong, and no model was rerun."
   },
   "experiments": [
@@ -108,7 +108,7 @@
       "id": "010",
       "run_path": "experiments/010_four_model_panel_20260801_120442",
       "outcome": "infrastructure_incomplete",
-      "summary": "Three candidates passed the mechanical gate. Gemini 3.6 and Gemini 3.7 each scored 30/30 on all three; Opus did not complete two cells. Gemini 3.6 creator work produced no valid candidate.",
+      "summary": "Three candidates passed the mechanical gate. Gemini 3.6 and Gemini 3.7 each scored 30/30 on all three; Halcyon scored 30/30 on Consolidation Point and did not complete AuditWeave or CFPS in headless single-turn print mode; Opus did not complete two cells. Gemini 3.6 creator work produced no valid candidate.",
       "recovery_adjudication": {
         "path": "experiments/adjudications/010_provider_recovery_result.v1.json",
         "sha256": "676ad8b8160f32be6ab8d609cecda95dd528841df3b8b89a7b4763212f95d5aa"
@@ -169,6 +169,14 @@
         {
           "path": "experiments/extensions/010_gemini_37_solver_20260813/run_state.json",
           "sha256": "3124254b2dcc47b16293fd85c2cb7e7ca051a9db01497c50ab7300e57fb1b265"
+        },
+        {
+          "path": "experiments/extensions/010_halcyon_solver_20261003/manifest.json",
+          "sha256": "78aa5b027399c728477edbf4a69d12113a6f2dbecde9af789fcdf2c500a8a441"
+        },
+        {
+          "path": "experiments/extensions/010_halcyon_solver_20261003/run_state.json",
+          "sha256": "753754785608bd4f2ac258ee6ba7623305d42ec6598e642370b8cf5eea5ceed3"
         }
       ]
     },
@@ -176,7 +184,7 @@
       "id": "013",
       "run_path": "experiments/013_gemini_37_creator_20260813",
       "outcome": "rejected",
-      "summary": "Gemini 3.7 created the mechanically valid CloudSLA-Forensics package, but Gemini 3.6 and Gemini 3.7 each solved it 30/30.",
+      "summary": "Gemini 3.7 created the mechanically valid CloudSLA-Forensics package, but Gemini 3.6, Gemini 3.7, and Halcyon each solved it 30/30.",
       "evidence": [
         {
           "path": "experiments/013_gemini_37_creator_20260813/manifest.json",
@@ -195,8 +203,160 @@
           "sha256": "012c3023b03082db2596db1a9759f09107f5a3d07e7361e01bca6f2292b3b207"
         },
         {
+          "path": "experiments/extensions/013_halcyon_solver_20261003/manifest.json",
+          "sha256": "07dbca92e96559ec96a5ed5faf97db14cdfb63eb53cee3de30e0add4cac18520"
+        },
+        {
+          "path": "experiments/extensions/013_halcyon_solver_20261003/run_state.json",
+          "sha256": "8ecd62b3139b2c2cf5d1b9375c66dafc16d48bd4cf471f9d897a4538218e0ddd"
+        },
+        {
           "path": "experiments/adjudications/013_gemini_37_flash.md",
           "sha256": "c6abd6b8cb55864f66f281257f1fafae89f737afb18630ffa17330375f47c718"
+        }
+      ]
+    },
+    {
+      "id": "014",
+      "run_path": "experiments/014_halcyon_creator_20261003",
+      "outcome": "rejected",
+      "summary": "After replacing a 1-line output-format example leak in solver_bundle/README.md with a synthetic placeholder, Halcyon's deterministic 30-item maritime_general_average_forensics package passed all mechanical gates; Halcyon, Claude Opus 5.5 (both Antigravity and Cursor), GPT-6-Sol, Gemini 3.8 Flash, Gemini 3.7 Flash, Gemini 3.6 Flash, and Claude Sonnet 5.5 solved it 30/30, while GLM 5.2 (High) scored 24/30.",
+      "evidence": [
+        {
+          "path": "experiments/014_halcyon_creator_20261003/manifest.json",
+          "sha256": "a6004e57586c90f2fcede2c29b8f39e4ed5439ccd2865b9615b22167cddab973"
+        },
+        {
+          "path": "experiments/014_halcyon_creator_20261003/run_state.json",
+          "sha256": "3779f7e671ef6c4fa493c48f45dfd5313e48898da11aeaf70110591fa54a6342"
+        },
+        {
+          "path": "experiments/extensions/014_gemini_36_solver_20261003/manifest.json",
+          "sha256": "5174c422fb0245a4927f95c2a3fff3e74f1a44107a77f2acb491a3a7d5d789f6"
+        },
+        {
+          "path": "experiments/extensions/014_gemini_36_solver_20261003/run_state.json",
+          "sha256": "263b8ccbef85de344c1f4b273aab1f9efc6b0ad8fc5cc2c8f39a8cc50ab1ee54"
+        },
+        {
+          "path": "experiments/extensions/014_gemini_37_solver_20261003/manifest.json",
+          "sha256": "281641252ccda2bbe34c989b9aa97ff7023e299eb15aaf7abadaa9fb844862c1"
+        },
+        {
+          "path": "experiments/extensions/014_gemini_37_solver_20261003/run_state.json",
+          "sha256": "37873031d84a6d8891241b87e9630a0529ec4c7ba0b3003a76aa026e037840c7"
+        },
+        {
+          "path": "experiments/extensions/014_gemini_38_solver_20261003/manifest.json",
+          "sha256": "a361b1d896842f9bd46459361bc3b86c701c9e2c87d2296778cf2e523568abe8"
+        },
+        {
+          "path": "experiments/extensions/014_gemini_38_solver_20261003/run_state.json",
+          "sha256": "a08e86592cfcc6483672282f741c4c96c9176aa5abbb0224764eac0b86147a23"
+        },
+        {
+          "path": "experiments/extensions/014_halcyon_solver_20261003/manifest.json",
+          "sha256": "89dc29f93031d0c84812cd817c2c5ac2dfd54fea1ce0ec990ff3e10295648e12"
+        },
+        {
+          "path": "experiments/extensions/014_halcyon_solver_20261003/run_state.json",
+          "sha256": "a28e4eeac7b4f40284bf6a36b584ebad61ff40dac54420cd765a0854514b935c"
+        },
+        {
+          "path": "experiments/extensions/014_claude_sonnet_55_solver_20261003/manifest.json",
+          "sha256": "5cd822b773173e0d125795ed566f22d1bf0d9c855c20ef694eef5c992a452080"
+        },
+        {
+          "path": "experiments/extensions/014_claude_sonnet_55_solver_20261003/run_state.json",
+          "sha256": "1d7adc63d65ab9cc20f07e0217837db942ec35b46a41592cbd852f4ef5a608db"
+        },
+        {
+          "path": "experiments/extensions/014_claude_opus_55_solver_20261003/manifest.json",
+          "sha256": "1be48bda00e783f764b1775bcd99404f557946ae31f799e7a7f437a36fa79195"
+        },
+        {
+          "path": "experiments/extensions/014_claude_opus_55_solver_20261003/run_state.json",
+          "sha256": "4fc24371d498aaf45db1d89f6f168034365dfea0bfc07fb5e441f80e863ba37a"
+        },
+        {
+          "path": "experiments/extensions/014_codex_gpt_6_sol_solver_20261004/manifest.json",
+          "sha256": "cc9c827a525bb0c95a9a3752adb32a7f846e302f40032c0cc39f4e23f8869a3f"
+        },
+        {
+          "path": "experiments/extensions/014_codex_gpt_6_sol_solver_20261004/run_state.json",
+          "sha256": "bf4d7bf903e227ec6fa2e30da4e30b35c1db7166fae7f2d67d5c78faad4aa773"
+        },
+        {
+          "path": "experiments/extensions/014_cursor_opus_55_solver_20261004/manifest.json",
+          "sha256": "bd49205c1599ae006f15d9791621787d8e1b5f0341f2ac8034883c712a37e5ee"
+        },
+        {
+          "path": "experiments/extensions/014_cursor_opus_55_solver_20261004/run_state.json",
+          "sha256": "0d5e8001052cf382bd5457e4e3e69767d943e939b64defba19c079ca7b297087"
+        },
+        {
+          "path": "experiments/extensions/014_cursor_glm_52_solver_20261004/manifest.json",
+          "sha256": "f7233eb8f3e398ee5e422cb76fd03fdab2d499ecb58f7373a749dcd7d513e820"
+        },
+        {
+          "path": "experiments/extensions/014_cursor_glm_52_solver_20261004/run_state.json",
+          "sha256": "422a70d7693af2a4ff3e36edf19e9962514a70796b19810bf2e76d6beb568c3b"
+        },
+        {
+          "path": "experiments/adjudications/014_halcyon.md",
+          "sha256": "97c303cd9af1efb4adeac2bc098c2a1798ddcf6d1d12717cff48a7a001d7c06e"
+        }
+      ]
+    },
+    {
+      "id": "015",
+      "run_path": "experiments/015_reimbursement_forensics_v2_20261004",
+      "outcome": "rejected",
+      "summary": "Repaired Reimbursement Forensics v2 (Actual Policy) fixing APPROVAL_RE to match lowercase reifor_xxxx_Ry IDs and clarifying separate Decimal half-up USD-cent conversion for amount and tip per policy.md. Passed all mechanical gates; Halcyon, Claude Opus 5.5, and GPT-6-Sol each solved it 30/30, while GLM 5.2 (High) scored 17/30.",
+      "evidence": [
+        {
+          "path": "experiments/015_reimbursement_forensics_v2_20261004/manifest.json",
+          "sha256": "34e0807038df4ac0b50a0685b4850eed52a763d66a66ea34451eb7cec8d071d4"
+        },
+        {
+          "path": "experiments/015_reimbursement_forensics_v2_20261004/run_state.json",
+          "sha256": "b6e90d92c0559cd306170847905aae918bf4babb68b6b0e21d9417db8ec21aa2"
+        },
+        {
+          "path": "experiments/extensions/015_halcyon_solver_20261004/manifest.json",
+          "sha256": "f44ae8bd66d02cd455d3fa06f063ef49dfd76291552414c706479ea3e5456845"
+        },
+        {
+          "path": "experiments/extensions/015_halcyon_solver_20261004/run_state.json",
+          "sha256": "49bb4f37b9304c483ae68ee5fa09feae7372fd3b7e45414be723cbdfbaf0c931"
+        },
+        {
+          "path": "experiments/extensions/015_cursor_opus_55_solver_20261004/manifest.json",
+          "sha256": "3996547010ea4bd9683bbcf8bbd5334711b3059b57bacbf4135b073ab3f68e3f"
+        },
+        {
+          "path": "experiments/extensions/015_cursor_opus_55_solver_20261004/run_state.json",
+          "sha256": "ca3a2a1a5efb59e45b3dcc8302417597a57795f6bf2e8839932bf527d3aaf830"
+        },
+        {
+          "path": "experiments/extensions/015_codex_gpt_6_sol_solver_20261004/manifest.json",
+          "sha256": "82e1562e1f491fbab7a182fa8a39e5fea079fc6e98328231211b8d9330e0dd60"
+        },
+        {
+          "path": "experiments/extensions/015_codex_gpt_6_sol_solver_20261004/run_state.json",
+          "sha256": "1283a84b835a1b1b41b6b344c794947890cc81b47cc3d5590deb47e2bf583635"
+        },
+        {
+          "path": "experiments/extensions/015_cursor_glm_52_solver_20261004/manifest.json",
+          "sha256": "0141d63a9be2d4a6b46d388a3095b1c62a268b6b2a4b6fe032515f646bd9dde7"
+        },
+        {
+          "path": "experiments/extensions/015_cursor_glm_52_solver_20261004/run_state.json",
+          "sha256": "667964b1fa574f8c5771410567bc3168351bb086c468020ccd5037b405ef9048"
+        },
+        {
+          "path": "experiments/adjudications/004_reimbursement_forensics.md",
+          "sha256": "e6a2f05828895ea40eea445b5d7e043604ffe1691ff4aaa453fdc3b1b8bf2505"
         }
       ]
     }
@@ -330,13 +490,17 @@
       "creator": "Codex GPT-5.6 Sol high",
       "outcome": "infrastructure_incomplete",
       "canonical_eligible": false,
-      "reason": "The candidate passed the mechanical gate. Sol, Terra, Gemini 3.6, and Gemini 3.7 each scored 30/30; Opus did not complete, so the panel remains incomplete and every completed cell shows no useful difficulty.",
+      "reason": "The candidate passed the mechanical gate. Sol, Terra, Gemini 3.6, and Gemini 3.7 each scored 30/30; Opus and Halcyon did not complete, so the panel remains incomplete and every completed cell shows no useful difficulty.",
       "historical_scores": [
         "successful cells only: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30"
       ],
       "cell_states": [
         {
           "solver": "Claude Opus 5 high",
+          "state": "timeout"
+        },
+        {
+          "solver": "Halcyon",
           "state": "timeout"
         }
       ],
@@ -357,6 +521,10 @@
         {
           "path": "experiments/extensions/010_gemini_37_solver_20260813/manifest.json",
           "sha256": "974a7c14603dab092785e9537d19c32e7100025c06440adb4db5cba5b506c625"
+        },
+        {
+          "path": "experiments/extensions/010_halcyon_solver_20261003/manifest.json",
+          "sha256": "78aa5b027399c728477edbf4a69d12113a6f2dbecde9af789fcdf2c500a8a441"
         }
       ]
     },
@@ -367,7 +535,7 @@
       "creator": "Codex GPT-5.6 Terra extra high",
       "outcome": "infrastructure_incomplete",
       "canonical_eligible": false,
-      "reason": "The candidate passed the mechanical gate. Sol, Terra, Gemini 3.6, and Gemini 3.7 each scored 30/30; Opus did not complete, so the panel remains incomplete and every completed cell shows no useful difficulty.",
+      "reason": "The candidate passed the mechanical gate. Sol, Terra, Gemini 3.6, and Gemini 3.7 each scored 30/30; Opus timed out and Halcyon exited its parent single-turn print session while waiting for async subagents, so the panel remains incomplete and every completed cell shows no useful difficulty.",
       "historical_scores": [
         "successful cells only: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30"
       ],
@@ -375,6 +543,10 @@
         {
           "solver": "Claude Opus 5 high",
           "state": "timeout"
+        },
+        {
+          "solver": "Halcyon",
+          "state": "invalid_output"
         }
       ],
       "required_next_step": "Increase task difficulty, generate a new version, and run a complete fresh solver panel.",
@@ -394,6 +566,10 @@
         {
           "path": "experiments/extensions/010_gemini_37_solver_20260813/manifest.json",
           "sha256": "974a7c14603dab092785e9537d19c32e7100025c06440adb4db5cba5b506c625"
+        },
+        {
+          "path": "experiments/extensions/010_halcyon_solver_20261003/manifest.json",
+          "sha256": "78aa5b027399c728477edbf4a69d12113a6f2dbecde9af789fcdf2c500a8a441"
         }
       ]
     },
@@ -428,9 +604,9 @@
       "creator": "Cursor Claude Opus 5 high",
       "outcome": "infrastructure_incomplete",
       "canonical_eligible": false,
-      "reason": "The candidate passed the mechanical gate. Sol, Terra, Gemini 3.6, Gemini 3.7, and Opus each scored 30/30. Every completed cell proves the benchmark is too easy, but the retained Opus runtime identity remains requested/unverified.",
+      "reason": "The candidate passed the mechanical gate. Sol, Terra, Gemini 3.6, Gemini 3.7, Halcyon, and Opus each scored 30/30. Every completed cell proves the benchmark is too easy, but the retained Opus runtime identity remains requested/unverified.",
       "historical_scores": [
-        "completed cells: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30, Opus 30/30"
+        "completed cells: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30, Halcyon 30/30, Opus 30/30"
       ],
       "required_next_step": "Increase task difficulty, generate a new version, and run a complete fresh solver panel.",
       "evidence": [
@@ -449,6 +625,10 @@
         {
           "path": "experiments/extensions/010_gemini_37_solver_20260813/manifest.json",
           "sha256": "974a7c14603dab092785e9537d19c32e7100025c06440adb4db5cba5b506c625"
+        },
+        {
+          "path": "experiments/extensions/010_halcyon_solver_20261003/manifest.json",
+          "sha256": "78aa5b027399c728477edbf4a69d12113a6f2dbecde9af789fcdf2c500a8a441"
         }
       ]
     },
@@ -459,11 +639,11 @@
       "creator": "Antigravity Gemini 3.7 Flash high",
       "outcome": "rejected",
       "canonical_eligible": false,
-      "reason": "The package passed the full mechanical gate on its first attempt, but Gemini 3.6 and Gemini 3.7 each scored 30/30. The benchmark is valid but provides no useful frontier difficulty.",
+      "reason": "The package passed the full mechanical gate on its first attempt, but Gemini 3.6, Gemini 3.7, and Halcyon each scored 30/30. The benchmark is valid but provides no useful frontier difficulty.",
       "historical_scores": [
-        "completed cells: Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30"
+        "completed cells: Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30, Halcyon 30/30"
       ],
-      "required_next_step": "Increase task difficulty, generate a new version, and run a complete fresh five-model solver panel.",
+      "required_next_step": "Increase task difficulty, generate a new version, and run a complete fresh solver panel.",
       "evidence": [
         {
           "path": "experiments/013_gemini_37_creator_20260813/run/candidate_created_by_antigravity__gemini_3_7_flash_high__effort_high/attempt_0001/controller_validation.v1.json",
@@ -482,8 +662,118 @@
           "sha256": "624602388f0c8d33c3b4363c10e2ff99466c6ae391d6bede2dd335918501efa9"
         },
         {
+          "path": "experiments/extensions/013_halcyon_solver_20261003/run/candidate_created_by_gemini_3_7_flash_high/solver_results/score_solver_antigravity__halcyon__effort_high.json",
+          "sha256": "16e5723a67a1ddab8af2333046787822656b8d22b2432e84a73887b25f053f29"
+        },
+        {
           "path": "experiments/adjudications/013_gemini_37_flash.md",
           "sha256": "c6abd6b8cb55864f66f281257f1fafae89f737afb18630ffa17330375f47c718"
+        }
+      ]
+    },
+    {
+      "id": "014-maritime-general-average-forensics",
+      "experiment_id": "014",
+      "name": "maritime_general_average_forensics",
+      "creator": "Antigravity Halcyon",
+      "outcome": "rejected",
+      "canonical_eligible": false,
+      "reason": "After replacing the 1-line output-format example leak in solver_bundle/README.md (1324550 -> 999999), the package passed all mechanical validation checks. With Python execution enabled, Halcyon, Claude Opus 5.5 (both Antigravity and Cursor), GPT-6-Sol, GLM 5.2 (High), Gemini 3.8 Flash, Gemini 3.7 Flash, Gemini 3.6 Flash, and Claude Sonnet 5.5 all scored 30/30.",
+      "historical_scores": [
+        "completed cells: Halcyon 30/30, Claude Opus 5.5 high 30/30, GPT-6-Sol high 30/30, GLM 5.2 high 30/30, Gemini 3.8 Flash high 30/30, Gemini 3.7 Flash high 30/30, Gemini 3.6 Flash high 30/30, Claude Sonnet 5.5 high 30/30"
+      ],
+      "required_next_step": "Increase task difficulty, generate a new version without manual post-repair intervention, and run a complete fresh solver panel.",
+      "evidence": [
+        {
+          "path": "experiments/014_halcyon_creator_20261003/run/candidate_created_by_antigravity__halcyon__effort_high/attempt_0002/controller_validation.v1.json",
+          "sha256": "d75fe46078a3ac28f1ba10d82f343cb824a3852eec81ea03a5393a97bc0c7469"
+        },
+        {
+          "path": "experiments/014_halcyon_creator_20261003/run/candidate_created_by_antigravity__halcyon__effort_high/attempt_0002/controller_validation_report.txt",
+          "sha256": "7ff36ba0afcd23321138c3150ce90458d53e8483ab3f0254234ffd1150cb59be"
+        },
+        {
+          "path": "experiments/extensions/014_gemini_36_solver_20261003/run/candidate_created_by_halcyon/solver_results/score_solver_antigravity__gemini_3_6_flash_high__effort_high.json",
+          "sha256": "f22bdfd401dc600708904890672d9bccc9b9c397a32edb93d24a6c44c0b4122a"
+        },
+        {
+          "path": "experiments/extensions/014_gemini_37_solver_20261003/run/candidate_created_by_halcyon/solver_results/score_solver_antigravity__gemini_3_7_flash_high__effort_high.json",
+          "sha256": "ebc8c265216a8517278ddc7f02856a103627f2e0153936a71a816c55e855da08"
+        },
+        {
+          "path": "experiments/extensions/014_gemini_38_solver_20261003/run/candidate_created_by_halcyon/solver_results/score_solver_antigravity__gemini_3_8_flash_high__effort_high.json",
+          "sha256": "08e8a10a2ee5ec46672169ae31f95665f8d98233a91caa6ecca94b8fc642c769"
+        },
+        {
+          "path": "experiments/extensions/014_halcyon_solver_20261003/run/candidate_created_by_halcyon/solver_results/score_solver_antigravity__halcyon__effort_high.json",
+          "sha256": "7c07a81c2be69d6f8f073269547c7883b1f7e4e280ae31416a8d235a7e515db1"
+        },
+        {
+          "path": "experiments/extensions/014_claude_sonnet_55_solver_20261003/run/candidate_created_by_halcyon/solver_results/score_solver_antigravity__claude_sonnet_5_5_high__effort_high.json",
+          "sha256": "5eb78d8bf34fa77d90d242db793ba7c4c7d08d56acc562421f23e3d38d259f47"
+        },
+        {
+          "path": "experiments/extensions/014_claude_opus_55_solver_20261003/run/candidate_created_by_halcyon/solver_results/score_solver_antigravity__claude_opus_5_5_high__effort_high.json",
+          "sha256": "62ce56871b6510c4640f68d00cd69706e2726173a8455ac5bb021d61dd405e01"
+        },
+        {
+          "path": "experiments/extensions/014_codex_gpt_6_sol_solver_20261004/run/candidate_created_by_halcyon/solver_results/score_solver_codex__gpt_6_sol__effort_high.json",
+          "sha256": "ce32dedd11ce899c1b26640bacf58b8dc0004bd4783d3702e70512bb2f55c89c"
+        },
+        {
+          "path": "experiments/extensions/014_cursor_opus_55_solver_20261004/run/candidate_created_by_halcyon/solver_results/score_solver_cursor__claude_opus_5_5_high__effort_high.json",
+          "sha256": "b2cbb02fbc92ca3dde50dc0f32ad95bf502c76b9edd2dd49ee729c4f5b371ccb"
+        },
+        {
+          "path": "experiments/extensions/014_cursor_glm_52_solver_20261004/run/candidate_created_by_halcyon/solver_results/score_solver_cursor__glm_5_2_high__effort_high.json",
+          "sha256": "2d793b9984d9919f35b7a3de2db22b72c6aa6d6794a254bfd1b6eb326d89be1d"
+        },
+        {
+          "path": "experiments/adjudications/014_halcyon.md",
+          "sha256": "97c303cd9af1efb4adeac2bc098c2a1798ddcf6d1d12717cff48a7a001d7c06e"
+        }
+      ]
+    },
+    {
+      "id": "015-reimbursement-forensics-v2",
+      "experiment_id": "015",
+      "name": "Reimbursement Forensics v2 (Actual Policy)",
+      "creator": "GPT-5.2 (actual-policy repair)",
+      "outcome": "rejected",
+      "canonical_eligible": false,
+      "reason": "After fixing APPROVAL_RE to match lowercase reifor_xxxx_Ry IDs and clarifying separate Decimal half-up USD-cent conversion for amount and tip per policy.md, the repaired package passed all mechanical validation checks. With Python execution enabled, Halcyon, Claude Opus 5.5, GPT-6-Sol, and GLM 5.2 (High) each scored 30/30 (100%).",
+      "historical_scores": [
+        "completed cells: Halcyon 30/30, Claude Opus 5.5 high 30/30, GPT-6-Sol high 30/30, GLM 5.2 high 30/30"
+      ],
+      "required_next_step": "Increase task difficulty beyond top-frontier saturation (30/30 across Halcyon, Claude Opus 5.5, GPT-6-Sol, and GLM 5.2 High) and run a complete fresh solver panel.",
+      "evidence": [
+        {
+          "path": "experiments/015_reimbursement_forensics_v2_20261004/run/candidate_created_by_codex__gpt_5_2__effort_high/attempt_0001/controller_validation.v1.json",
+          "sha256": "8a7d7e4027ef8968d44b2e57c542241d1ad5e844ef9e2d19ca27dfe8dc0b1f69"
+        },
+        {
+          "path": "experiments/015_reimbursement_forensics_v2_20261004/run/candidate_created_by_codex__gpt_5_2__effort_high/attempt_0001/controller_validation_report.txt",
+          "sha256": "ee8c42abdc661a1e28b19dd58d815a7af7a670bb188bcb9bd65ef8a065beb33b"
+        },
+        {
+          "path": "experiments/extensions/015_halcyon_solver_20261004/run/candidate_created_by_gpt_5_2/solver_results/score_solver_antigravity__halcyon__effort_high.json",
+          "sha256": "b5ab8ec75cb2f11e7d7cb27f6ae62d429e492bbd0ef4a8e2c32b729e24655f21"
+        },
+        {
+          "path": "experiments/extensions/015_cursor_opus_55_solver_20261004/run/candidate_created_by_gpt_5_2/solver_results/score_solver_cursor__claude_opus_5_5_high__effort_high.json",
+          "sha256": "41cb23b0b21870dd80a78481157e01e4aa8bd356f2215f4a6736f8cda073d4b4"
+        },
+        {
+          "path": "experiments/extensions/015_codex_gpt_6_sol_solver_20261004/run/candidate_created_by_gpt_5_2/solver_results/score_solver_codex__gpt_6_sol__effort_high.json",
+          "sha256": "10e56e9f22f8cd76045d19c2ae322e28f4a643c7786a5f579b43ee182065fcd1"
+        },
+        {
+          "path": "experiments/extensions/015_cursor_glm_52_solver_20261004/run/candidate_created_by_gpt_5_2/solver_results/score_solver_cursor__glm_5_2_high__effort_high.json",
+          "sha256": "18763580101f639d6a5adcc168dcc0588a36756bcec4f1c480f480462e966af2"
+        },
+        {
+          "path": "experiments/adjudications/004_reimbursement_forensics.md",
+          "sha256": "e6a2f05828895ea40eea445b5d7e043604ffe1691ff4aaa453fdc3b1b8bf2505"
         }
       ]
     }

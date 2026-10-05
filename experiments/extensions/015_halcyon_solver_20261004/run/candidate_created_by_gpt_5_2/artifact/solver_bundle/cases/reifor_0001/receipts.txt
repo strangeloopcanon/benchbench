@@ -1,0 +1,8 @@
+receipt_id=reifor_0001_R1 | date=2026-05-16 | cat=MEALS | merchant="CloudNine Inn" | ccy=GBP | amount=46.44
+receipt_id=reifor_0001_R2 | date=2026-05-15 | amount=553.92 | merchant="Metro Cab" | cat=AIR | ccy=AUD | note="summary"
+receipt_id=reifor_0001_R3 | date=? | amount=8.88 | ccy=AUD | cat=GROUND | merchant="QuickFuel"
+receipt_id=reifor_0001_R4 | date=2026-05-13 | ccy=USD | merchant="Alpine Hotel" | cat=MISC | note="ok" | amount=45.14
+receipt_id=reifor_0001_R5 | date=2026-05-14 | cat=GROUND | ccy=JPY | merchant="CloudNine Inn" | amount=105.29
+receipt_id=reifor_0001_R6 | date=2026-05-13 | cat=LODGING | amount=45.14 | merchant="Alpine Hotel" | ccy=USD | nights=1
+receipt_id=reifor_0001_R7 | date=2026-05-15 | amount=56.94 | merchant="AeroFly" | cat=? | ccy=CAD
+receipt_id=reifor_0001_R8 | date=2026-05-13 | cat=AIR | amount=161.70 | ccy=EUR | merchant="QuickFuel" | note="late_scan"

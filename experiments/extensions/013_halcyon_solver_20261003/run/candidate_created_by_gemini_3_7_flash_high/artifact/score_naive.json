@@ -1,0 +1,250 @@
+{
+  "schema_version": 2,
+  "benchmark_name": "CloudSLA-Forensics",
+  "total": 30,
+  "correct": 5,
+  "accuracy": 0.16666666666666666,
+  "matched_ratio": "5/30",
+  "details": [
+    {
+      "id": "case_001",
+      "gold_answer_cents": 2250000,
+      "pred_raw": 900000,
+      "pred_normalized_cents": 900000,
+      "correct": false,
+      "difference_cents": -1350000
+    },
+    {
+      "id": "case_002",
+      "gold_answer_cents": 900000,
+      "pred_raw": 900000,
+      "pred_normalized_cents": 900000,
+      "correct": true,
+      "difference_cents": 0
+    },
+    {
+      "id": "case_003",
+      "gold_answer_cents": 3000000,
+      "pred_raw": 1200000,
+      "pred_normalized_cents": 1200000,
+      "correct": false,
+      "difference_cents": -1800000
+    },
+    {
+      "id": "case_004",
+      "gold_answer_cents": 240000,
+      "pred_raw": 240000,
+      "pred_normalized_cents": 240000,
+      "correct": true,
+      "difference_cents": 0
+    },
+    {
+      "id": "case_005",
+      "gold_answer_cents": 1200000,
+      "pred_raw": 1200000,
+      "pred_normalized_cents": 1200000,
+      "correct": true,
+      "difference_cents": 0
+    },
+    {
+      "id": "case_006",
+      "gold_answer_cents": 2250000,
+      "pred_raw": 900000,
+      "pred_normalized_cents": 900000,
+      "correct": false,
+      "difference_cents": -1350000
+    },
+    {
+      "id": "case_007",
+      "gold_answer_cents": 3000000,
+      "pred_raw": 600000,
+      "pred_normalized_cents": 600000,
+      "correct": false,
+      "difference_cents": -2400000
+    },
+    {
+      "id": "case_008",
+      "gold_answer_cents": 4500000,
+      "pred_raw": 900000,
+      "pred_normalized_cents": 900000,
+      "correct": false,
+      "difference_cents": -3600000
+    },
+    {
+      "id": "case_009",
+      "gold_answer_cents": 600000,
+      "pred_raw": 240000,
+      "pred_normalized_cents": 240000,
+      "correct": false,
+      "difference_cents": -360000
+    },
+    {
+      "id": "case_010",
+      "gold_answer_cents": 480000,
+      "pred_raw": 480000,
+      "pred_normalized_cents": 480000,
+      "correct": true,
+      "difference_cents": 0
+    },
+    {
+      "id": "case_011",
+      "gold_answer_cents": 1200000,
+      "pred_raw": 480000,
+      "pred_normalized_cents": 480000,
+      "correct": false,
+      "difference_cents": -720000
+    },
+    {
+      "id": "case_012",
+      "gold_answer_cents": 300000,
+      "pred_raw": 120000,
+      "pred_normalized_cents": 120000,
+      "correct": false,
+      "difference_cents": -180000
+    },
+    {
+      "id": "case_013",
+      "gold_answer_cents": 2250000,
+      "pred_raw": 900000,
+      "pred_normalized_cents": 900000,
+      "correct": false,
+      "difference_cents": -1350000
+    },
+    {
+      "id": "case_014",
+      "gold_answer_cents": 900000,
+      "pred_raw": 360000,
+      "pred_normalized_cents": 360000,
+      "correct": false,
+      "difference_cents": -540000
+    },
+    {
+      "id": "case_015",
+      "gold_answer_cents": 750000,
+      "pred_raw": 750000,
+      "pred_normalized_cents": 750000,
+      "correct": true,
+      "difference_cents": 0
+    },
+    {
+      "id": "case_016",
+      "gold_answer_cents": 1875000,
+      "pred_raw": 750000,
+      "pred_normalized_cents": 750000,
+      "correct": false,
+      "difference_cents": -1125000
+    },
+    {
+      "id": "case_017",
+      "gold_answer_cents": 1200000,
+      "pred_raw": 240000,
+      "pred_normalized_cents": 240000,
+      "correct": false,
+      "difference_cents": -960000
+    },
+    {
+      "id": "case_018",
+      "gold_answer_cents": 1800000,
+      "pred_raw": 360000,
+      "pred_normalized_cents": 360000,
+      "correct": false,
+      "difference_cents": -1440000
+    },
+    {
+      "id": "case_019",
+      "gold_answer_cents": 1200000,
+      "pred_raw": 240000,
+      "pred_normalized_cents": 240000,
+      "correct": false,
+      "difference_cents": -960000
+    },
+    {
+      "id": "case_020",
+      "gold_answer_cents": 5850000,
+      "pred_raw": 1200000,
+      "pred_normalized_cents": 1200000,
+      "correct": false,
+      "difference_cents": -4650000
+    },
+    {
+      "id": "case_021",
+      "gold_answer_cents": 850000,
+      "pred_raw": 360000,
+      "pred_normalized_cents": 360000,
+      "correct": false,
+      "difference_cents": -490000
+    },
+    {
+      "id": "case_022",
+      "gold_answer_cents": 7400000,
+      "pred_raw": 750000,
+      "pred_normalized_cents": 750000,
+      "correct": false,
+      "difference_cents": -6650000
+    },
+    {
+      "id": "case_023",
+      "gold_answer_cents": 700000,
+      "pred_raw": 120000,
+      "pred_normalized_cents": 120000,
+      "correct": false,
+      "difference_cents": -580000
+    },
+    {
+      "id": "case_024",
+      "gold_answer_cents": 300000,
+      "pred_raw": 120000,
+      "pred_normalized_cents": 120000,
+      "correct": false,
+      "difference_cents": -180000
+    },
+    {
+      "id": "case_025",
+      "gold_answer_cents": 4800000,
+      "pred_raw": 480000,
+      "pred_normalized_cents": 480000,
+      "correct": false,
+      "difference_cents": -4320000
+    },
+    {
+      "id": "case_026",
+      "gold_answer_cents": 2850000,
+      "pred_raw": 480000,
+      "pred_normalized_cents": 480000,
+      "correct": false,
+      "difference_cents": -2370000
+    },
+    {
+      "id": "case_027",
+      "gold_answer_cents": 600000,
+      "pred_raw": 120000,
+      "pred_normalized_cents": 120000,
+      "correct": false,
+      "difference_cents": -480000
+    },
+    {
+      "id": "case_028",
+      "gold_answer_cents": 7400000,
+      "pred_raw": 750000,
+      "pred_normalized_cents": 750000,
+      "correct": false,
+      "difference_cents": -6650000
+    },
+    {
+      "id": "case_029",
+      "gold_answer_cents": 8750000,
+      "pred_raw": 900000,
+      "pred_normalized_cents": 900000,
+      "correct": false,
+      "difference_cents": -7850000
+    },
+    {
+      "id": "case_030",
+      "gold_answer_cents": 1825000,
+      "pred_raw": 600000,
+      "pred_normalized_cents": 600000,
+      "correct": false,
+      "difference_cents": -1225000
+    }
+  ]
+}

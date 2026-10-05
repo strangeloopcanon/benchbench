@@ -20,11 +20,13 @@ uv run pytest -q
 CI runs the same locked install, compile check, and test suite on macOS because
 the execution boundary depends on macOS Seatbelt.
 
-## Five-Model Panel Preflight
+## Frontier Panel Preflight
 
 The default panel uses the exact locally advertised provider IDs below. The
 `@effort` suffix is BenchBench's per-model override; it is removed before the
-model ID is passed to the provider CLI.
+model ID is passed to the provider CLI. (`agy:halcyon` maps to the
+local Antigravity CLI target `halcyon`, which does not accept an `--effort`
+flag.)
 
 | requested panel member | BenchBench spec | provider catalog ID | effective effort |
 |---|---|---|---|
@@ -32,6 +34,7 @@ model ID is passed to the provider CLI.
 | Codex GPT-5.6 Terra extra high | `gpt-5.6-terra@xhigh` | `gpt-5.6-terra` | `xhigh` |
 | Gemini 3.6 Flash | `agy:gemini-3.6-flash-high@high` | `gemini-3.6-flash-high` | `high` |
 | Gemini 3.7 Flash | `agy:gemini-3.7-flash-high@high` | `gemini-3.7-flash-high` | `high` |
+| Halcyon | `agy:halcyon@high` | `halcyon` | `high` (CLI flag omitted) |
 | Claude Opus 5 | `cursor:claude-opus-5@high` | `claude-opus-5-thinking-high` | `high` |
 
 Run this setup-only check before any experiment. It inspects CLI help and model
@@ -43,13 +46,13 @@ uv run python run_broad_three_model_sweep.py \
 ```
 
 The preflight uses each provider's non-inference catalog. A fully ready result
-reports `model_available: true` for all five exact IDs. It never submits a creator or
+reports `model_available: true` for all six exact IDs. It never submits a creator or
 solver prompt and never creates a run root. Codex catalog lookup uses its live
 boundary; Antigravity and Cursor catalog checks are explicitly recorded as
 `ambient_catalog_only` and do not prove live credential containment. Contained
 live canaries established Antigravity's runtime labels as
-`Gemini 3.6 Flash (High)` and `Gemini 3.7 Flash (High)`; live calls must match
-the label for the exact requested ID.
+`Gemini 3.6 Flash (High)`, `Gemini 3.7 Flash (High)`, and `Halcyon`; live
+calls must match the label for the exact requested ID.
 
 ## Live Run Boundary
 
@@ -58,7 +61,7 @@ the parent-environment isolation probe is unavailable; that probe currently
 fails on this macOS runtime, so no Codex call is dispatched here. Cursor remains
 available for non-inference catalog preflight, but live Cursor execution is
 disabled because its native authentication token is inherited by model-created
-terminal tools. A full frontier-five sweep must restore the Codex boundary and
+terminal tools. A full frontier sweep must restore the Codex boundary and
 use a token-free Cursor tool environment or another audited Opus provider.
 
 The currently runnable audited panel is Antigravity-only. After choosing an
@@ -68,7 +71,7 @@ explicit total-token ceiling, run:
 TOKEN_CEILING=20000000 \
 uv run python run_broad_three_model_sweep.py \
   --run-root experiments/custom_audited_panel_YYYYMMDD_HHMMSS \
-  --models agy:gemini-3.6-flash-high@high agy:gemini-3.7-flash-high@high \
+  --models agy:gemini-3.6-flash-high@high agy:gemini-3.7-flash-high@high agy:halcyon@high \
   --max-total-tokens "$TOKEN_CEILING" \
   --zero-telemetry-reservation 5000000 \
   --allow-dispatch-ceiling-overshoot \

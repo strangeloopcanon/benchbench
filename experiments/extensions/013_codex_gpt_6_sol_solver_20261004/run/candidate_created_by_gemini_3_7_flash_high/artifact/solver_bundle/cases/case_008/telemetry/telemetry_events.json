@@ -1,0 +1,46 @@
+{
+  "case_id": "case_008",
+  "reporting_period": "2026-04",
+  "incident_events": [
+    {
+      "incident_id": "INC-2026-170",
+      "service_id": "managed-relational-db",
+      "start_time": "2026-04-03T20:16:00Z",
+      "end_time": "2026-04-03T23:16:00Z",
+      "duration_minutes": 180,
+      "error_rate_pct": 42.0,
+      "availability_zone": "multi-az-cluster",
+      "scenario_type": "STANDARD_PROVIDER_OUTAGE"
+    },
+    {
+      "incident_id": "INC-2026-171",
+      "service_id": "distributed-object-storage",
+      "start_time": "2026-04-07T04:46:00Z",
+      "end_time": "2026-04-07T08:46:00Z",
+      "duration_minutes": 240,
+      "error_rate_pct": 100.0,
+      "availability_zone": "multi-az-cluster",
+      "scenario_type": "STANDARD_PROVIDER_OUTAGE"
+    },
+    {
+      "incident_id": "INC-2026-172",
+      "service_id": "core-compute-cluster",
+      "start_time": "2026-04-12T07:35:00Z",
+      "end_time": "2026-04-12T08:20:00Z",
+      "duration_minutes": 45,
+      "error_rate_pct": 1.2,
+      "availability_zone": "us-east-1b",
+      "scenario_type": "BELOW_THRESHOLD_DISTRACTOR"
+    },
+    {
+      "incident_id": "INC-2026-173",
+      "service_id": "edge-api-gateway",
+      "start_time": "2026-04-15T17:11:00Z",
+      "end_time": "2026-04-15T17:56:00Z",
+      "duration_minutes": 45,
+      "error_rate_pct": 42.0,
+      "availability_zone": "us-east-1a",
+      "scenario_type": "STANDARD_PROVIDER_OUTAGE"
+    }
+  ]
+}

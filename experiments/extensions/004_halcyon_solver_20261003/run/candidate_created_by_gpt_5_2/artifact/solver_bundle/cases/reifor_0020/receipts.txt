@@ -1,0 +1,10 @@
+receipt_id=reifor_0020_R1 | date=2026-04-09 | amount=24.25 | cat=MEALS | ccy=CAD | merchant="Station Cafe"
+receipt_id=reifor_0020_R2 | date=2026-04-09 | cat=LODGING | nights=1 | merchant="CityRail" | amount=289.68 | ccy=JPY
+receipt_id=reifor_0020_R3 | date=2026-04-06 | ccy=JPY | cat=MISC | merchant="Metro Cab" | amount=19.10
+receipt_id=reifor_0020_R4 | date=2026-04-09 | merchant="CloudNine Inn" | cat=MISC | amount=73.47 | ccy=JPY
+receipt_id=reifor_0020_R5 | date=2026-04-08 | cat=AIR | merchant="Alpine Hotel" | amount=235.52 | ccy=JPY
+receipt_id=reifor_0020_R6 | date=2026-04-06 | flags=CANCELLED | ccy=AUD | cat=MEALS | merchant="QuickFuel" | amount=83.00
+receipt_id=reifor_0020_R7 | date=2026-04-06 | note="itemized" | merchant="QuickFuel" | flags=CANCELLED | cat=GROUND | ccy=AUD | amount=30.35
+receipt_id=reifor_0020_R8 | date=? | cat=MISC | merchant="Harbor Bistro" | ccy=USD | amount=31.53
+receipt_id=reifor_0020_R9 | date=2026-04-09 | tip=3.51 | ccy=CAD | amount=13.53 | merchant="CityRail" | cat=MEALS
+receipt_id=reifor_0020_R10 | date=? | merchant="Harbor Bistro" | cat=GROUND | amount=16.55 | ccy=EUR

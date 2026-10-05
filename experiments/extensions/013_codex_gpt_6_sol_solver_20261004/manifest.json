@@ -1,0 +1,43 @@
+[
+  {
+    "artifact_id": "codex__gpt_6_sol",
+    "benchmark": "CloudSLA-Forensics",
+    "candidate_digest": "ff8588e1e55b3d1a8d5d67fb049df1cb17202913e7427d63b38db6863949f2c2",
+    "candidate_snapshot": "./experiments/extensions/013_codex_gpt_6_sol_solver_20261004/run/candidate_created_by_gemini_3_7_flash_high/artifact",
+    "cell_state": "success",
+    "creator_model": "gemini-3.7-flash-high",
+    "display_model": "gpt-6-sol",
+    "effort": "high",
+    "gold_digest": "306cd77894f01ca39d60dcce8b4fd209c7003b0ba5e3d0bdad2dd34a4a85e03e",
+    "model": "gpt-6-sol",
+    "model_mismatch": false,
+    "out_path": "private_raw_evidence_not_published",
+    "phase": "solver_extension",
+    "prediction_digest": "fa5d63eb32e87f7f6b4affa4bba3e5fd4293d3a3adb3ed7cb6940fac3f23aa59",
+    "prediction_extraction_source": "provider_output",
+    "prediction_rows": 30,
+    "prediction_source": "./experiments/extensions/013_codex_gpt_6_sol_solver_20261004/run/candidate_created_by_gemini_3_7_flash_high/solver_results/predictions_solver_codex__gpt_6_sol__effort_high.jsonl",
+    "predictions_path": "./experiments/extensions/013_codex_gpt_6_sol_solver_20261004/run/candidate_created_by_gemini_3_7_flash_high/solver_results/predictions_solver_codex__gpt_6_sol__effort_high.jsonl",
+    "prompt_path": "private_raw_evidence_not_published",
+    "provider": "codex",
+    "requested_provider_model": "gpt-6-sol",
+    "returncode": 0,
+    "runtime_effort_reported": "high",
+    "runtime_model_reported": "gpt-6-sol",
+    "runtime_model_verification": "provider_reported",
+    "sandbox_mode": "outer-seatbelt",
+    "score_path": "./experiments/extensions/013_codex_gpt_6_sol_solver_20261004/run/candidate_created_by_gemini_3_7_flash_high/solver_results/score_solver_codex__gpt_6_sol__effort_high.json",
+    "score_returncode": 0,
+    "score_summary": {
+      "accuracy": 1.0,
+      "correct": 30,
+      "total": 30
+    },
+    "solver_artifact_id": "codex__gpt_6_sol__effort_high",
+    "solver_display_model": "gpt-6-sol",
+    "solver_model": "gpt-6-sol",
+    "stderr_path": "private_raw_evidence_not_published",
+    "stdout_path": "private_raw_evidence_not_published",
+    "tokens_used": 67720
+  }
+]

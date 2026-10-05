@@ -1,0 +1,127 @@
+{
+  "config": {
+    "creator_effort": "high",
+    "creator_models": [
+      "antigravity__halcyon__effort_high"
+    ],
+    "creator_timeout_seconds": 2400,
+    "dispatch_ceiling_overshoot_acknowledged": true,
+    "feedback_digest": "1eae98d5a7bb283d307b6187905ffac5b602765397ee7f7474b6af277ff8a4a8",
+    "generation_seed": 20260516,
+    "harness_digest": "5a2e0dcd3a9ef6a3b4723d6615cafb0337a7a72f57a3bd92ccf05c8f464e65b9",
+    "landscape_digest": "57a9d37f7c1f50323cc4e5c70c347475f538573da1cd1d67a6511f3d5d6b9db6",
+    "landscape_path": "benchmark_landscape/creator_prompt_landscape_pack.md",
+    "max_total_tokens": 15000000,
+    "panel_policy": "custom",
+    "pilot_summary_digest": "760db830ba6e43785dbad48a2c4816a1b54e932e79f23ef0c2b8f09b4eeb6750",
+    "pilot_summary_path": "experiments/001_three_model_grid_pilot/README.md",
+    "provider_preflight": [
+      {
+        "artifact_id": "antigravity__halcyon",
+        "binary": "agy",
+        "display_model": "Halcyon",
+        "executable": "<local-home>/.local/bin/agy",
+        "inference_attempted": false,
+        "model": "halcyon",
+        "model_available": true,
+        "model_listing_command": [
+          "<local-home>/.local/bin/agy",
+          "models"
+        ],
+        "model_listing_returncode": 0,
+        "model_listing_stderr_bytes": 29,
+        "model_listing_stderr_sha256": "53f588bc9a928f4a66908deacaca57dddc7e7ce177a0cc3586b5a501be26e1e8",
+        "model_listing_stdout_bytes": 922,
+        "model_listing_stdout_sha256": "878610e1318fe2a84ec035ae262e8c993717b16916fb2737be87e5e3daa63840",
+        "model_listing_supported": true,
+        "preflight_scope": "ambient_catalog_only",
+        "probe_stderr_bytes": 2901,
+        "probe_stderr_sha256": "8fcf40227fe84704f7f8155b3b5ebcee79dfdc5208fde6e8b07569c24425f976",
+        "probe_stdout_bytes": 0,
+        "probe_stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "provider": "antigravity",
+        "requested_effort": "high",
+        "requested_provider_model": "halcyon",
+        "returncode": 0,
+        "state": "binary_ready"
+      },
+      {
+        "artifact_id": "antigravity__gemini_3_7_flash_high",
+        "binary": "agy",
+        "display_model": "Gemini 3.7 Flash (High)",
+        "executable": "<local-home>/.local/bin/agy",
+        "inference_attempted": false,
+        "model": "gemini-3.7-flash-high",
+        "model_available": true,
+        "model_listing_command": [
+          "<local-home>/.local/bin/agy",
+          "models"
+        ],
+        "model_listing_returncode": 0,
+        "model_listing_stderr_bytes": 29,
+        "model_listing_stderr_sha256": "53f588bc9a928f4a66908deacaca57dddc7e7ce177a0cc3586b5a501be26e1e8",
+        "model_listing_stdout_bytes": 922,
+        "model_listing_stdout_sha256": "878610e1318fe2a84ec035ae262e8c993717b16916fb2737be87e5e3daa63840",
+        "model_listing_supported": true,
+        "preflight_scope": "ambient_catalog_only",
+        "probe_stderr_bytes": 2901,
+        "probe_stderr_sha256": "8fcf40227fe84704f7f8155b3b5ebcee79dfdc5208fde6e8b07569c24425f976",
+        "probe_stdout_bytes": 0,
+        "probe_stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "provider": "antigravity",
+        "requested_effort": "high",
+        "requested_provider_model": "gemini-3.7-flash-high",
+        "returncode": 0,
+        "state": "binary_ready"
+      },
+      {
+        "artifact_id": "antigravity__gemini_3_6_flash_high",
+        "binary": "agy",
+        "display_model": "Gemini 3.6 Flash (High)",
+        "executable": "<local-home>/.local/bin/agy",
+        "inference_attempted": false,
+        "model": "gemini-3.6-flash-high",
+        "model_available": true,
+        "model_listing_command": [
+          "<local-home>/.local/bin/agy",
+          "models"
+        ],
+        "model_listing_returncode": 0,
+        "model_listing_stderr_bytes": 29,
+        "model_listing_stderr_sha256": "53f588bc9a928f4a66908deacaca57dddc7e7ce177a0cc3586b5a501be26e1e8",
+        "model_listing_stdout_bytes": 922,
+        "model_listing_stdout_sha256": "878610e1318fe2a84ec035ae262e8c993717b16916fb2737be87e5e3daa63840",
+        "model_listing_supported": true,
+        "preflight_scope": "ambient_catalog_only",
+        "probe_stderr_bytes": 2901,
+        "probe_stderr_sha256": "8fcf40227fe84704f7f8155b3b5ebcee79dfdc5208fde6e8b07569c24425f976",
+        "probe_stdout_bytes": 0,
+        "probe_stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "provider": "antigravity",
+        "requested_effort": "high",
+        "requested_provider_model": "gemini-3.6-flash-high",
+        "returncode": 0,
+        "state": "binary_ready"
+      }
+    ],
+    "sample_count": 30,
+    "solver_effort": "high",
+    "solver_models": [
+      "antigravity__halcyon__effort_high",
+      "antigravity__gemini_3_7_flash_high__effort_high",
+      "antigravity__gemini_3_6_flash_high__effort_high"
+    ],
+    "solver_timeout_seconds": 1500,
+    "unmetered_cost_acknowledged": true,
+    "zero_telemetry_reservation": 5000000
+  },
+  "config_fingerprint": "86099af8fc81b6359c232081f769c8d44c342f4b499197afd4abbef3bad91baa",
+  "schema_version": 1,
+  "source_snapshot": {
+    "digest": "5a2e0dcd3a9ef6a3b4723d6615cafb0337a7a72f57a3bd92ccf05c8f464e65b9",
+    "file_count": 9,
+    "manifest_path": "source_snapshot/manifest.json",
+    "path": "source_snapshot",
+    "schema_version": "benchbench.source_snapshot/v1"
+  }
+}

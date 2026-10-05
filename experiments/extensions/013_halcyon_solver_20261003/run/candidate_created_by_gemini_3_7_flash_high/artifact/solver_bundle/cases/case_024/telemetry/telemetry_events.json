@@ -1,0 +1,46 @@
+{
+  "case_id": "case_024",
+  "reporting_period": "2026-04",
+  "incident_events": [
+    {
+      "incident_id": "INC-2026-330",
+      "service_id": "managed-relational-db",
+      "start_time": "2026-04-05T04:36:00Z",
+      "end_time": "2026-04-05T06:06:00Z",
+      "duration_minutes": 90,
+      "error_rate_pct": 99.9,
+      "availability_zone": "us-east-1a",
+      "scenario_type": "MAINTENANCE_OVERRUN"
+    },
+    {
+      "incident_id": "INC-2026-331",
+      "service_id": "managed-relational-db",
+      "start_time": "2026-04-10T08:04:00Z",
+      "end_time": "2026-04-10T10:04:00Z",
+      "duration_minutes": 120,
+      "error_rate_pct": 0.5,
+      "availability_zone": "us-east-1a",
+      "scenario_type": "BELOW_THRESHOLD_DISTRACTOR"
+    },
+    {
+      "incident_id": "INC-2026-332",
+      "service_id": "edge-api-gateway",
+      "start_time": "2026-04-13T10:46:00Z",
+      "end_time": "2026-04-13T12:16:00Z",
+      "duration_minutes": 90,
+      "error_rate_pct": 100.0,
+      "availability_zone": "us-east-1a",
+      "scenario_type": "PARTIAL_CUSTOMER_FAULT"
+    },
+    {
+      "incident_id": "INC-2026-333",
+      "service_id": "core-compute-cluster",
+      "start_time": "2026-04-17T22:15:00Z",
+      "end_time": "2026-04-18T01:15:00Z",
+      "duration_minutes": 180,
+      "error_rate_pct": 100.0,
+      "availability_zone": "us-east-1a",
+      "scenario_type": "PARTIAL_CUSTOMER_FAULT"
+    }
+  ]
+}

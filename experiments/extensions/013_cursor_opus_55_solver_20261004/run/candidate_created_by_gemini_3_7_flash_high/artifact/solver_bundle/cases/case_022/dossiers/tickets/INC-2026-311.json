@@ -1,0 +1,11 @@
+{
+  "ticket_id": "INC-2026-311",
+  "service": "core-compute-cluster",
+  "title": "Critical degradation and crash loop on core-compute-cluster",
+  "opened_at": "2026-04-06T01:04:00Z",
+  "closed_at": "2026-04-06T01:29:00Z",
+  "reported_by": "Customer Site Reliability Lead",
+  "associated_rca": "RCA-2026-301",
+  "telemetry_error_rate_pct": 99.9,
+  "status": "CLOSED_WITH_RCA"
+}

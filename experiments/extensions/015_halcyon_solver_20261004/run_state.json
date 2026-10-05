@@ -1,0 +1,70 @@
+{
+  "config": {
+    "custom_source_panel_acknowledged": true,
+    "dispatch_ceiling_overshoot_acknowledged": true,
+    "harness_digest": "e8b064f21adcaad67eccf45c6b9ec54122bd7f1ae247051921544e8869a2bfcb",
+    "max_total_tokens": 15000000,
+    "panel_expansion": false,
+    "provider_preflight": [
+      {
+        "artifact_id": "antigravity__halcyon",
+        "binary": "agy",
+        "display_model": "Halcyon",
+        "executable": "<local-home>/.local/bin/agy",
+        "inference_attempted": false,
+        "model": "halcyon",
+        "model_available": true,
+        "model_listing_command": [
+          "<local-home>/.local/bin/agy",
+          "models"
+        ],
+        "model_listing_returncode": 0,
+        "model_listing_stderr_bytes": 29,
+        "model_listing_stderr_sha256": "53f588bc9a928f4a66908deacaca57dddc7e7ce177a0cc3586b5a501be26e1e8",
+        "model_listing_stdout_bytes": 922,
+        "model_listing_stdout_sha256": "878610e1318fe2a84ec035ae262e8c993717b16916fb2737be87e5e3daa63840",
+        "model_listing_supported": true,
+        "preflight_scope": "ambient_catalog_only",
+        "probe_stderr_bytes": 2901,
+        "probe_stderr_sha256": "8fcf40227fe84704f7f8155b3b5ebcee79dfdc5208fde6e8b07569c24425f976",
+        "probe_stdout_bytes": 0,
+        "probe_stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "provider": "antigravity",
+        "requested_effort": null,
+        "requested_provider_model": "halcyon",
+        "returncode": 0,
+        "state": "binary_ready"
+      }
+    ],
+    "retry_failed_source_cells": false,
+    "schema_version": 1,
+    "solver": "antigravity__halcyon__effort_high",
+    "source_candidates": [
+      {
+        "artifact": "./experiments/015_reimbursement_forensics_v2_20261004/run/candidate_created_by_codex__gpt_5_2__effort_high/attempt_0001/artifact",
+        "candidate_digest": "77b48d7b1ec62ec69e775b7a8a0a2fdc55f5880f422c2219838c59e794598ae4",
+        "creator_call_id": "codex__gpt_5_2__effort_high",
+        "creator_model": "gpt-5.2",
+        "validation_report_sha256": "ad012f1da2d7cdb9d8f0c124f33f68e7ec17bea54ae716706b70e907d938ac51",
+        "validation_sha256": "082ea172cab86a771e91e9e7fa6be713ec382d95b826c76f54503b6d56a6ccc0"
+      }
+    ],
+    "source_manifest_sha256": "34e0807038df4ac0b50a0685b4850eed52a763d66a66ea34451eb7cec8d071d4",
+    "source_panel_policy": "custom",
+    "source_run_root": "./experiments/015_reimbursement_forensics_v2_20261004",
+    "source_run_state_sha256": "af317298d625ec74c2b45d9f90643d57fd4eb150f5fec716383bdb600e27b067",
+    "source_snapshot_digest": "25a51c7943312c10ed6a4d29fe4816d6c705369ef851644c7e08e8bbe4c39ff1",
+    "timeout_seconds": 1500,
+    "unmetered_cost_acknowledged": true,
+    "zero_telemetry_reservation": 5000000
+  },
+  "config_fingerprint": "84353250261f1043120c578a1f9b4c83ea6560a593f26f0e25cbb39a9570e6d0",
+  "schema_version": 1,
+  "source_snapshot": {
+    "digest": "e8b064f21adcaad67eccf45c6b9ec54122bd7f1ae247051921544e8869a2bfcb",
+    "file_count": 10,
+    "manifest_path": "source_snapshot/manifest.json",
+    "path": "source_snapshot",
+    "schema_version": "benchbench.source_snapshot/v1"
+  }
+}

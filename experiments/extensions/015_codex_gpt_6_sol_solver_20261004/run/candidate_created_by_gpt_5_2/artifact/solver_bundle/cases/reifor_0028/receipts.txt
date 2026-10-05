@@ -1,0 +1,6 @@
+receipt_id=reifor_0028_R1 | date=2026-04-16 | merchant="Harbor Bistro" | ccy=JPY | amount=80.06 | note="ok" | cat=GROUND
+receipt_id=reifor_0028_R2 | date=2026-04-15 | ccy=GBP | amount=53.88 | cat=MISC | merchant="Corner Mart"
+receipt_id=reifor_0028_R3 | date=2026-04-15 | note="ok" | cat=MEALS | merchant="Corner Mart" | amount=53.88 | ccy=GBP
+receipt_id=reifor_0028_R4 | date=2026-04-14 | cat=MEALS | ccy=GBP | tip=3.02 | note="itemized" | amount=33.20 | merchant="QuickFuel"
+receipt_id=reifor_0028_R5 | date=2026-04-16 | cat=GROUND | note="itemized" | amount=28.95 | merchant="Sunrise Diner" | ccy=USD
+receipt_id=reifor_0028_R6 | date=2026-04-17 | merchant="Metro Cab" | cat=LODGING | amount=548.77 | nights=2 | ccy=USD
