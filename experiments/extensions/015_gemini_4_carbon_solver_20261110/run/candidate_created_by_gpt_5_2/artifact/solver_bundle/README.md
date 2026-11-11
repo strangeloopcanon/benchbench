@@ -1,0 +1,1 @@
+This solver bundle contains only the solver-visible evidence.\nRead `common/policy.md` and `common/exchange_rates.csv`, then for each item open the listed case files.\nReturn the reimbursable total as integer USD cents.\n

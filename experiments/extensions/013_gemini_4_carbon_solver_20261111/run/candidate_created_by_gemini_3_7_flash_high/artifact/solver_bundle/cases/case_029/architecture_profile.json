@@ -1,0 +1,12 @@
+{
+  "customer_id": "CUST-1028",
+  "deployment_tier": "MISSION_CRITICAL_VIP",
+  "multi_az_enabled": false,
+  "active_regions": [
+    "us-east-1"
+  ],
+  "availability_zones": [
+    "us-east-1a"
+  ],
+  "architecture_audit_notes": "Customer declined Multi-AZ redundant deployment option; operating in Single-AZ mode."
+}

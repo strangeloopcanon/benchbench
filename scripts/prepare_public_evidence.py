@@ -31,11 +31,13 @@ EXPERIMENT_ROOTS = (
     *(ROOT / "experiments").glob("013_*"),
     *(ROOT / "experiments").glob("014_*"),
     *(ROOT / "experiments").glob("015_*"),
+    *(ROOT / "experiments").glob("016_*"),
     *(ROOT / "experiments/extensions").glob("004_*"),
     *(ROOT / "experiments/extensions").glob("010_*"),
     *(ROOT / "experiments/extensions").glob("013_*"),
     *(ROOT / "experiments/extensions").glob("014_*"),
     *(ROOT / "experiments/extensions").glob("015_*"),
+    *(ROOT / "experiments/extensions").glob("016_*"),
 )
 RAW_PATH_KEYS = {
     "antigravity_log_path",
@@ -196,11 +198,31 @@ def rebind_source_evidence_indexes() -> None:
         *(ROOT / "experiments/extensions").glob("013_*"),
         *(ROOT / "experiments/extensions").glob("014_*"),
         *(ROOT / "experiments/extensions").glob("015_*"),
+        *(ROOT / "experiments/extensions").glob("016_*"),
     ]
     for overlay in overlays:
         index_path = overlay / "source_evidence/manifest.json"
         if not index_path.is_file():
             continue
+        if overlay.name.startswith("016_"):
+            source_state_path = overlay / "source_evidence/run_state.json"
+            if source_state_path.is_file():
+                state = json.loads(source_state_path.read_text(encoding="utf-8"))
+                config = state.get("config") if isinstance(state, dict) else None
+                if state.get("schema_version") == 1 and isinstance(config, dict):
+                    fp = config_fingerprint(config)
+                    if state.get("config_fingerprint") != fp:
+                        state["config_fingerprint"] = fp
+                        write_json(source_state_path, state)
+            for val_path in (overlay / "source_evidence").glob("*__controller_validation.v1.json"):
+                prefix = val_path.name.removesuffix("__controller_validation.v1.json")
+                rep_path = val_path.with_name(f"{prefix}__controller_validation_report.txt")
+                if rep_path.is_file():
+                    record = json.loads(val_path.read_text(encoding="utf-8"))
+                    rep_digest = sha256(rep_path)
+                    if record.get("schema_version") == "benchbench.validation/v1" and record.get("report_sha256") != rep_digest:
+                        record["report_sha256"] = rep_digest
+                        write_json(val_path, record)
         index = json.loads(index_path.read_text(encoding="utf-8"))
         for item in index["files"]:
             item["sha256"] = sha256(overlay / item["path"])

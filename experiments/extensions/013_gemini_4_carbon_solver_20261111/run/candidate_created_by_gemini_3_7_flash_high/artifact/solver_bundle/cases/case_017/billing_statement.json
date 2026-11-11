@@ -1,0 +1,16 @@
+{
+  "invoice_id": "INV-202604-1016",
+  "customer_id": "CUST-1016",
+  "billing_period_start": "2026-04-01T00:00:00Z",
+  "billing_period_end": "2026-04-30T23:59:59Z",
+  "billing_period_days": 30,
+  "total_period_minutes": 43200,
+  "monthly_recurring_charge_cents": 2400000,
+  "monthly_recurring_charge_usd": "$24,000.00",
+  "variable_usage_charge_cents": 13146000,
+  "variable_usage_charge_usd": "$131,460.00",
+  "prior_credits_issued_cents": 0,
+  "prior_credits_issued_usd": "$0.00",
+  "max_monthly_credit_cap_percent": 50,
+  "currency": "USD"
+}

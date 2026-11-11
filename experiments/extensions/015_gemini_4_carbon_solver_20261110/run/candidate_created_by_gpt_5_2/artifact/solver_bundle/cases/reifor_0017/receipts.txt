@@ -1,0 +1,8 @@
+receipt_id=reifor_0017_R1 | date=2026-04-19 | cat=? | ccy=AUD | amount=582.41 | merchant="QuickFuel"
+receipt_id=reifor_0017_R2 | date=2026-04-20 | amount=? | merchant="Sunrise Diner" | ccy=CAD | cat=LODGING | nights=2
+receipt_id=reifor_0017_R3 | date=2026-04-17 | cat=MEALS | ccy=CAD | note="late_scan" | merchant="Metro Cab" | amount=19.36
+receipt_id=reifor_0017_R4 | date=2026-04-20 | amount=43.47 | cat=MEALS | ccy=CAD | merchant="AeroFly"
+receipt_id=reifor_0017_R5 | date=2026-04-17 | merchant="Metro Cab" | amount=19.36 | ccy=CAD | cat=AIR
+receipt_id=reifor_0017_R6 | date=2026-04-20 | flags=DUPLICATE | ccy=GBP | amount=469.41 | note="ok" | merchant="Alpine Hotel" | cat=AIR
+receipt_id=reifor_0017_R7 | date=2026-04-19 | note="itemized" | merchant="CityRail" | ccy=GBP | amount=145.94 | cat=AIR
+receipt_id=reifor_0017_R8 | date=2026-04-17 | amount=60.20 | ccy=AUD | merchant="Metro Cab" | cat=GROUND | flags=CANCELLED

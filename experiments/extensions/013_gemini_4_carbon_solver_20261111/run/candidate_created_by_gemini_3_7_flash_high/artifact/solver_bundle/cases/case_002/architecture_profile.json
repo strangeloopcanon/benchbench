@@ -1,0 +1,14 @@
+{
+  "customer_id": "CUST-1001",
+  "deployment_tier": "STANDARD_ENTERPRISE",
+  "multi_az_enabled": true,
+  "active_regions": [
+    "us-east-1",
+    "us-east-2"
+  ],
+  "availability_zones": [
+    "us-east-1a",
+    "us-east-1b"
+  ],
+  "architecture_audit_notes": "Customer architecture verified by Technical Account Manager."
+}

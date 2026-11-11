@@ -1,0 +1,20 @@
+{
+  "bundle_file_count": 259,
+  "candidate_digest": "ff8588e1e55b3d1a8d5d67fb049df1cb17202913e7427d63b38db6863949f2c2",
+  "deterministic": true,
+  "frozen_package_match": true,
+  "gold_summary": {
+    "accuracy": 1.0,
+    "correct": 30,
+    "total": 30
+  },
+  "leak_match_count": 0,
+  "report_sha256": "c19c75d8638193b3ba5a8752f0f72e2ad8b86c21da6c0a7e192ee5323ca0d90f",
+  "schema_version": "benchbench.validation/v1",
+  "valid": true,
+  "wrong_summary": {
+    "accuracy": 0.0,
+    "correct": 0,
+    "total": 30
+  }
+}

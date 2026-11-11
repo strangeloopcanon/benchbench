@@ -51,16 +51,17 @@ PYTHON = shutil.which("python") or shutil.which("python3") or "python3"
 SANDBOX_PYTHON = str(Path(PYTHON).resolve())
 
 DEFAULT_MODELS = [
-    "gpt-5.6-sol@high",
-    "gpt-5.6-terra@xhigh",
-    "agy:gemini-3.6-flash-high@high",
-    "agy:gemini-3.7-flash-high@high",
-    "agy:halcyon@high",
-    "cursor:claude-opus-5@high",
+    "gpt-6-sol@high",
+    "agy:gemini-4-carbon-high@high",
+    "agy:gemini-4-argon-high@high",
+    "agy:gemini-3.8-flash-high@high",
+    "cursor:claude-opus-5-5-high@high",
+    "cursor:glm-5-2-high@high",
 ]
 FRONTIER_FOUR_POLICY = "benchbench.frontier-four/2026-08-01"
 FRONTIER_FIVE_POLICY = "benchbench.frontier-five/2026-08-13"
 FRONTIER_SIX_POLICY = "benchbench.frontier-six/2026-10-03"
+FRONTIER_MODERN_POLICY = "benchbench.frontier-modern/2026-11-10"
 FRONTIER_FOUR_MODELS = [
     "gpt-5.6-sol@high",
     "gpt-5.6-terra@xhigh",
@@ -72,6 +73,14 @@ FRONTIER_FIVE_MODELS = [
     "gpt-5.6-terra@xhigh",
     "agy:gemini-3.6-flash-high@high",
     "agy:gemini-3.7-flash-high@high",
+    "cursor:claude-opus-5@high",
+]
+FRONTIER_SIX_MODELS = [
+    "gpt-5.6-sol@high",
+    "gpt-5.6-terra@xhigh",
+    "agy:gemini-3.6-flash-high@high",
+    "agy:gemini-3.7-flash-high@high",
+    "agy:halcyon@high",
     "cursor:claude-opus-5@high",
 ]
 MODELS = DEFAULT_MODELS[:]
@@ -274,7 +283,11 @@ Your empty artifact directory is:
 Use that exact directory as the working directory for every shell command and
 file read/write. Some agent CLIs may open a global scratch directory by
 default; ignore that scratch directory and build the benchmark package only in
-the artifact directory above.
+the artifact directory above. This is a single-turn headless batch session:
+execute all commands synchronously in this turn, work incrementally with small
+focused file writes and quick verification commands (avoiding giant single-step
+generations that can stall or reset HTTP streams), and do not end your turn
+early to wait for asynchronous subagents or background tasks.
 
 You may use local computation and internet research if useful. Do not browse or
 research forever: the output must be a working package.
@@ -328,7 +341,9 @@ The candidate artifact directory is:
 Use that exact directory as the working directory for every shell command and
 file read/write. Some agent CLIs may open a global scratch directory by
 default; ignore that scratch directory and repair the benchmark package only in
-the artifact directory above.
+the artifact directory above. This is a single-turn headless batch session:
+execute all commands synchronously in this turn and do not end your turn early
+to wait for asynchronous subagents or background tasks.
 
 The controller validation found problems:
 
@@ -355,7 +370,9 @@ You are in an isolated solver bundle at:
 Use that exact directory as the working directory for every shell command and
 file read/write. Some agent CLIs may open a global scratch directory by
 default; ignore that scratch directory and work only in the solver bundle
-above.
+above. This is a single-turn headless batch session: execute all commands
+synchronously in this turn and do not end your turn early to wait for
+asynchronous subagents or background tasks.
 
 You may use any local computation, shell scripts, installed packages, OCR,
 image processing, code, and internet access if useful. Try your best to solve
@@ -1162,6 +1179,19 @@ def resolve_panel_policy(
         creator_call_ids == frontier_five_creator_call_ids
         and solver_call_ids == frontier_five_solver_call_ids
     )
+    frontier_six_specs = [parse_model_spec(value) for value in FRONTIER_SIX_MODELS]
+    frontier_six_creator_call_ids = [
+        call_artifact_id(spec.artifact_id, effective_effort(spec, CREATOR_EFFORT))
+        for spec in frontier_six_specs
+    ]
+    frontier_six_solver_call_ids = [
+        call_artifact_id(spec.artifact_id, effective_effort(spec, SOLVER_EFFORT))
+        for spec in frontier_six_specs
+    ]
+    exact_frontier_six = (
+        creator_call_ids == frontier_six_creator_call_ids
+        and solver_call_ids == frontier_six_solver_call_ids
+    )
     if run_root.name.startswith("010_") and not exact_frontier_four:
         raise ValueError(
             "Experiment 010 requires the exact benchbench.frontier-four/2026-08-01 creator and solver panels"
@@ -1170,7 +1200,9 @@ def resolve_panel_policy(
         return FRONTIER_FOUR_POLICY
     if exact_frontier_five:
         return FRONTIER_FIVE_POLICY
-    return FRONTIER_SIX_POLICY if exact_current_panel else "custom"
+    if exact_frontier_six:
+        return FRONTIER_SIX_POLICY
+    return FRONTIER_MODERN_POLICY if exact_current_panel else "custom"
 
 
 def parse_args() -> argparse.Namespace:
@@ -1272,6 +1304,8 @@ def main() -> None:
             raise SystemExit("Provider preflight failed")
         return
     audited_live_providers = {"codex", "antigravity"}
+    if os.environ.get("BENCHBENCH_ALLOW_HOST_PROVIDER_SANDBOX") == "1":
+        audited_live_providers.add("cursor")
     unsupported_live = sorted({spec.provider for spec in unique_specs.values() if spec.provider not in audited_live_providers})
     if unsupported_live:
         raise SystemExit(

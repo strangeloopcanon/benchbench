@@ -708,6 +708,7 @@ def main() -> None:
         "benchbench.frontier-four/2026-08-01",
         "benchbench.frontier-five/2026-08-13",
         "benchbench.frontier-six/2026-10-03",
+        "benchbench.frontier-modern/2026-11-10",
     }
     if args.allow_custom_source_panel:
         allowed_source_policies.add("custom")

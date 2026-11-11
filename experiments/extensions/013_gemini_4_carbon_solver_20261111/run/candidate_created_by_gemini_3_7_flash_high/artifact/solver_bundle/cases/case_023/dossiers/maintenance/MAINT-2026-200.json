@@ -1,0 +1,9 @@
+{
+  "notice_id": "MAINT-2026-200",
+  "service": "distributed-object-storage",
+  "target_window_start": "2026-04-04T14:06:00Z",
+  "target_window_end": "2026-04-04T15:06:00Z",
+  "notice_sent_at": "2026-03-30T17:06:00Z",
+  "advance_notice_hours": 117,
+  "scope": "Kernel patch and memory scaling on distributed-object-storage"
+}

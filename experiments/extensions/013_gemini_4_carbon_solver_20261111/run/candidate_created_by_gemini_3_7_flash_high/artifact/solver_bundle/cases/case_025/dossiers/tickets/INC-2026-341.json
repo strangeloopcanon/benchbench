@@ -1,0 +1,12 @@
+{
+  "ticket_id": "INC-2026-341",
+  "service": "distributed-object-storage",
+  "title": "Upstream Tier-1 Metro Fiber Cut affecting distributed-object-storage",
+  "opened_at": "2026-04-04T17:39:00Z",
+  "closed_at": "2026-04-04T18:39:00Z",
+  "reported_by": "NOC Automated Alert",
+  "root_cause_category": "FORCE_MAJEURE_TRANSIT_CUT",
+  "upstream_carrier_ticket": "ZAYO-FIBER-88492-CHI",
+  "details": "Regional fiber severed by third-party civil excavation. Provider automated rerouting completed. Duration: 60m. SLA \u00a76.2 grants 30m RTO grace period.",
+  "status": "CLOSED"
+}

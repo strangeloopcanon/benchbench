@@ -1,0 +1,13 @@
+{
+  "ticket_id": "INC-2026-230",
+  "service": "core-compute-cluster",
+  "title": "Maintenance Window Execution & Overrun on core-compute-cluster",
+  "opened_at": "2026-04-05T07:39:00Z",
+  "closed_at": "2026-04-05T10:09:00Z",
+  "reported_by": "Cloud Operations Automated Dispatch",
+  "associated_maintenance_id": "MAINT-2026-200",
+  "notice_sent_timestamp": "2026-04-03T02:39:00Z",
+  "scheduled_minutes": 120,
+  "actual_minutes": 150,
+  "status": "CLOSED"
+}

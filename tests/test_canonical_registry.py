@@ -40,6 +40,7 @@ def test_registry_has_no_validated_incumbent_and_preserves_invalid_history() -> 
         "013-cloudsla-forensics",
         "014-maritime-general-average-forensics",
         "015-reimbursement-forensics-v2",
+        "016-holonomy-weave",
     }
     fable = next(item for item in history if item["id"] == "008-rosetta-fieldwork")
     assert {cell["state"] for cell in fable["cell_states"]} == {"provider_error", "timeout"}

@@ -1,0 +1,9 @@
+receipt_id=reifor_0009_R1 | date=2026-05-09 | ccy=GBP | merchant="Alpine Hotel" | note="late_scan" | amount=815.16 | cat=AIR
+receipt_id=reifor_0009_R2 | date=2026-05-09 | ccy=JPY | merchant="Metro Cab" | flags=VOID | amount=66.13 | cat=MISC
+receipt_id=reifor_0009_R3 | date=2026-05-08 | merchant="AeroFly" | cat=LODGING | amount=1009.60 | nights=3 | ccy=AUD
+receipt_id=reifor_0009_R4 | date=2026-05-09 | ccy=JPY | amount=66.13 | merchant="Metro Cab" | cat=?
+receipt_id=reifor_0009_R5 | date=2026-05-08 | note="fax_copy" | cat=AIR | amount=? | ccy=GBP | merchant="CloudNine Inn"
+receipt_id=reifor_0009_R6 | date=2026-05-10 | merchant="CityRail" | cat=LODGING | amount=195.67 | ccy=JPY | nights=1
+receipt_id=reifor_0009_R7 | date=? | cat=AIR | amount=448.11 | ccy=EUR | merchant="CityRail"
+receipt_id=reifor_0009_R8 | date=2026-05-09 | cat=LODGING | amount=594.95 | nights=3 | merchant="Station Cafe" | ccy=CAD
+receipt_id=reifor_0009_R9 | date=2026-05-09 | cat=AIR | amount=242.84 | ccy=JPY | note="ok" | merchant="Sunrise Diner"

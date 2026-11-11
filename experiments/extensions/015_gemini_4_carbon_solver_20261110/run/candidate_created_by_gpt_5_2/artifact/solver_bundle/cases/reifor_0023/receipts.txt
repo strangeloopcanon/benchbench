@@ -1,0 +1,7 @@
+receipt_id=reifor_0023_R1 | date=2026-05-13 | amount=75.10 | ccy=AUD | cat=MISC | merchant="CloudNine Inn"
+receipt_id=reifor_0023_R2 | date=2026-05-10 | merchant="Alpine Hotel" | flags=VOID | ccy=CAD | cat=MISC | note="summary" | amount=53.37
+receipt_id=reifor_0023_R3 | date=2026-05-10 | note="summary" | cat=? | flags=CANCELLED | ccy=JPY | amount=123.06 | merchant="AeroFly"
+receipt_id=reifor_0023_R4 | date=2026-05-10 | tip=4.96 | ccy=CAD | amount=? | cat=MEALS | merchant="Alpine Hotel"
+receipt_id=reifor_0023_R5 | date=2026-05-11 | amount=714.81 | merchant="Harbor Bistro" | ccy=JPY | cat=AIR
+receipt_id=reifor_0023_R6 | date=2026-05-11 | cat=MISC | amount=45.22 | merchant="Station Cafe" | ccy=USD
+receipt_id=reifor_0023_R7 | date=2026-05-12 | merchant="CloudNine Inn" | note="late_scan" | ccy=USD | tip=3.74 | amount=24.55 | cat=MEALS

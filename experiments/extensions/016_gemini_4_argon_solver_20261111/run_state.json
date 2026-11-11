@@ -1,0 +1,70 @@
+{
+  "config": {
+    "custom_source_panel_acknowledged": true,
+    "dispatch_ceiling_overshoot_acknowledged": true,
+    "harness_digest": "b2265c5c8e85f00cf88ad2ff338050fbb6ebc8b9df5aceb73b797825a668709e",
+    "max_total_tokens": 1500000,
+    "panel_expansion": false,
+    "provider_preflight": [
+      {
+        "artifact_id": "antigravity__gemini_4_argon_high",
+        "binary": "agy",
+        "display_model": "Gemini 4 Argon (High)",
+        "executable": "<local-home>/.local/bin/agy",
+        "inference_attempted": false,
+        "model": "gemini-4-argon-high",
+        "model_available": true,
+        "model_listing_command": [
+          "<local-home>/.local/bin/agy",
+          "models"
+        ],
+        "model_listing_returncode": 0,
+        "model_listing_stderr_bytes": 29,
+        "model_listing_stderr_sha256": "53f588bc9a928f4a66908deacaca57dddc7e7ce177a0cc3586b5a501be26e1e8",
+        "model_listing_stdout_bytes": 543,
+        "model_listing_stdout_sha256": "fbb12cfffdb1c58bab9eaa15071dc4f8301e87ca1ebd800b0f2c086446c54f83",
+        "model_listing_supported": true,
+        "preflight_scope": "ambient_catalog_only",
+        "probe_stderr_bytes": 3319,
+        "probe_stderr_sha256": "e92946f85cec63eca61f93014ca49f53b1e84277eac7954e7fac7d8d712940fd",
+        "probe_stdout_bytes": 0,
+        "probe_stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "provider": "antigravity",
+        "requested_effort": null,
+        "requested_provider_model": "gemini-4-argon-high",
+        "returncode": 0,
+        "state": "binary_ready"
+      }
+    ],
+    "retry_failed_source_cells": true,
+    "schema_version": 1,
+    "solver": "antigravity__gemini_4_argon_high__effort_high",
+    "source_candidates": [
+      {
+        "artifact": "./experiments/016_gemini_4_carbon_creator_20261111/run/candidate_created_by_antigravity__gemini_4_carbon_high__effort_high/attempt_0002/artifact",
+        "candidate_digest": "c6c3b53c56024ae35bbb2962e2943c4f3a3e2cbe66ca10863de7eccf190da185",
+        "creator_call_id": "antigravity__gemini_4_carbon_high__effort_high",
+        "creator_model": "gemini-4-carbon-high",
+        "validation_report_sha256": "1c5bed70181a796ed03d20edb3556b317fe851b788ebbd727262e36aead22bf3",
+        "validation_sha256": "c3a56ebe049f7246c67df0c81a70cf2a1b3334ec75a896f001d4c25297b78b5d"
+      }
+    ],
+    "source_manifest_sha256": "ef2ccdc48d824f0a2cd19fc286ca161d1eab2e5ff680242233acc0b286665cd3",
+    "source_panel_policy": "custom",
+    "source_run_root": "./experiments/016_gemini_4_carbon_creator_20261111",
+    "source_run_state_sha256": "421669eb9eca14c0c852468f0c1a57ac3395a767ba6eb296796812da841d1a69",
+    "source_snapshot_digest": "f215a01b1767e453f89abec2a3d034a72193a6205b7cf3d42e522f218772e6c7",
+    "timeout_seconds": 1500,
+    "unmetered_cost_acknowledged": true,
+    "zero_telemetry_reservation": 500000
+  },
+  "config_fingerprint": "d586c2196ddeb7d1ec2f98c5f36177dd8195a7a463be215edabc52887e751574",
+  "schema_version": 1,
+  "source_snapshot": {
+    "digest": "b2265c5c8e85f00cf88ad2ff338050fbb6ebc8b9df5aceb73b797825a668709e",
+    "file_count": 10,
+    "manifest_path": "source_snapshot/manifest.json",
+    "path": "source_snapshot",
+    "schema_version": "benchbench.source_snapshot/v1"
+  }
+}

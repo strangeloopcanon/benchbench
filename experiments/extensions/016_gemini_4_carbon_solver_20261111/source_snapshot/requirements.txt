@@ -1,0 +1,7 @@
+beautifulsoup4==4.13.5
+huggingface_hub==0.36.2
+pandas==3.0.5
+pyarrow==24.0.0
+requests==2.34.2
+scikit-learn==1.4.2
+scipy==1.16.1

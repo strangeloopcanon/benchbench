@@ -1,0 +1,70 @@
+{
+  "config": {
+    "custom_source_panel_acknowledged": true,
+    "dispatch_ceiling_overshoot_acknowledged": true,
+    "harness_digest": "e491b902ad40dc202d2acd10d314f9fbd3aab02bb154a01275479b8f4cea7cb4",
+    "max_total_tokens": 1500000,
+    "panel_expansion": true,
+    "provider_preflight": [
+      {
+        "artifact_id": "antigravity__gemini_4_carbon_high",
+        "binary": "agy",
+        "display_model": "Gemini 4 Carbon (High)",
+        "executable": "<local-home>/.local/bin/agy",
+        "inference_attempted": false,
+        "model": "gemini-4-carbon-high",
+        "model_available": true,
+        "model_listing_command": [
+          "<local-home>/.local/bin/agy",
+          "models"
+        ],
+        "model_listing_returncode": 0,
+        "model_listing_stderr_bytes": 29,
+        "model_listing_stderr_sha256": "53f588bc9a928f4a66908deacaca57dddc7e7ce177a0cc3586b5a501be26e1e8",
+        "model_listing_stdout_bytes": 543,
+        "model_listing_stdout_sha256": "fbb12cfffdb1c58bab9eaa15071dc4f8301e87ca1ebd800b0f2c086446c54f83",
+        "model_listing_supported": true,
+        "preflight_scope": "ambient_catalog_only",
+        "probe_stderr_bytes": 3319,
+        "probe_stderr_sha256": "e92946f85cec63eca61f93014ca49f53b1e84277eac7954e7fac7d8d712940fd",
+        "probe_stdout_bytes": 0,
+        "probe_stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "provider": "antigravity",
+        "requested_effort": null,
+        "requested_provider_model": "gemini-4-carbon-high",
+        "returncode": 0,
+        "state": "binary_ready"
+      }
+    ],
+    "retry_failed_source_cells": false,
+    "schema_version": 1,
+    "solver": "antigravity__gemini_4_carbon_high__effort_high",
+    "source_candidates": [
+      {
+        "artifact": "./experiments/014_halcyon_creator_20261003/run/candidate_created_by_antigravity__halcyon__effort_high/attempt_0002/artifact",
+        "candidate_digest": "9597a36bbe2737fcf56f32e9e032e5f27844cde501fad839e6d0b814d02e99d7",
+        "creator_call_id": "antigravity__halcyon__effort_high",
+        "creator_model": "halcyon",
+        "validation_report_sha256": "7ff36ba0afcd23321138c3150ce90458d53e8483ab3f0254234ffd1150cb59be",
+        "validation_sha256": "d75fe46078a3ac28f1ba10d82f343cb824a3852eec81ea03a5393a97bc0c7469"
+      }
+    ],
+    "source_manifest_sha256": "a6004e57586c90f2fcede2c29b8f39e4ed5439ccd2865b9615b22167cddab973",
+    "source_panel_policy": "custom",
+    "source_run_root": "./experiments/014_halcyon_creator_20261003",
+    "source_run_state_sha256": "3779f7e671ef6c4fa493c48f45dfd5313e48898da11aeaf70110591fa54a6342",
+    "source_snapshot_digest": "5a2e0dcd3a9ef6a3b4723d6615cafb0337a7a72f57a3bd92ccf05c8f464e65b9",
+    "timeout_seconds": 1500,
+    "unmetered_cost_acknowledged": true,
+    "zero_telemetry_reservation": 500000
+  },
+  "config_fingerprint": "05db79f10a9cba8b083deb4131cebb0d24dc4defef9c2d2a0b10d245bba0d8d8",
+  "schema_version": 1,
+  "source_snapshot": {
+    "digest": "e491b902ad40dc202d2acd10d314f9fbd3aab02bb154a01275479b8f4cea7cb4",
+    "file_count": 10,
+    "manifest_path": "source_snapshot/manifest.json",
+    "path": "source_snapshot",
+    "schema_version": "benchbench.source_snapshot/v1"
+  }
+}

@@ -1,0 +1,78 @@
+[
+  {
+    "antigravity_actual_label": "Halcyon",
+    "antigravity_expected_label": "Halcyon",
+    "antigravity_log_path": "private_raw_evidence_not_published",
+    "antigravity_status": "ERROR",
+    "antigravity_usage": {
+      "cache_read_tokens": 1593335,
+      "input_tokens": 300613,
+      "output_tokens": 233661,
+      "thinking_tokens": 114034,
+      "total_tokens": 534274
+    },
+    "artifact_id": "antigravity__halcyon",
+    "artifact_snapshot": "./experiments/014_halcyon_creator_20261003/run/candidate_created_by_antigravity__halcyon__effort_high/attempt_0001/artifact",
+    "artifact_tree": {
+      "file_count": 12,
+      "total_bytes": 229576
+    },
+    "creator_display_model": "Halcyon",
+    "creator_model": "halcyon",
+    "display_model": "Halcyon",
+    "effort": "high",
+    "model": "halcyon",
+    "model_mismatch": false,
+    "out_path": "private_raw_evidence_not_published",
+    "permission_denied": false,
+    "phase": "creator",
+    "print_timeout": true,
+    "prompt_path": "private_raw_evidence_not_published",
+    "provider": "antigravity",
+    "requested_provider_model": "halcyon",
+    "returncode": -124,
+    "sandbox_mode": "nested-antigravity-plus-outer-seatbelt",
+    "stderr_path": "private_raw_evidence_not_published",
+    "stdout_path": "private_raw_evidence_not_published",
+    "tokens_used": 534274,
+    "validation_report_path": "./experiments/014_halcyon_creator_20261003/run/candidate_created_by_antigravity__halcyon__effort_high/attempt_0001/controller_validation.v1.json"
+  },
+  {
+    "antigravity_actual_label": "Halcyon",
+    "antigravity_expected_label": "Halcyon",
+    "antigravity_log_path": "private_raw_evidence_not_published",
+    "antigravity_status": "SUCCESS",
+    "antigravity_usage": {
+      "cache_read_tokens": 2415556,
+      "input_tokens": 481128,
+      "output_tokens": 64168,
+      "thinking_tokens": 30434,
+      "total_tokens": 545296
+    },
+    "artifact_id": "antigravity__halcyon",
+    "artifact_snapshot": "./experiments/014_halcyon_creator_20261003/run/candidate_created_by_antigravity__halcyon__effort_high/attempt_0002/artifact",
+    "artifact_tree": {
+      "file_count": 17,
+      "total_bytes": 304494
+    },
+    "creator_display_model": "Halcyon",
+    "creator_model": "halcyon",
+    "display_model": "Halcyon",
+    "effort": "high",
+    "model": "halcyon",
+    "model_mismatch": false,
+    "out_path": "private_raw_evidence_not_published",
+    "permission_denied": false,
+    "phase": "repair",
+    "print_timeout": false,
+    "prompt_path": "private_raw_evidence_not_published",
+    "provider": "antigravity",
+    "requested_provider_model": "halcyon",
+    "returncode": 0,
+    "sandbox_mode": "nested-antigravity-plus-outer-seatbelt",
+    "stderr_path": "private_raw_evidence_not_published",
+    "stdout_path": "private_raw_evidence_not_published",
+    "tokens_used": 545296,
+    "validation_report_path": "./experiments/014_halcyon_creator_20261003/run/candidate_created_by_antigravity__halcyon__effort_high/attempt_0002/controller_validation.v1.json"
+  }
+]

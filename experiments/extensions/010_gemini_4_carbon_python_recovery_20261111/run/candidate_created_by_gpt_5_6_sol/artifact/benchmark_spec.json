@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "name": "AuditWeave",
+  "version": "1.0",
+  "capability_claim": "Measures exact abductive reconstruction and counterfactual execution of a formally specified state machine under partial-order and lossy-audit evidence.",
+  "task_type": "forensic trace reconstruction",
+  "modality": "structured text / JSON",
+  "items": 30,
+  "answer_type": "canonical string",
+  "grading": "exact item-level match",
+  "determinism": "Generation is deterministic for sample-count and seed; each published item is exhaustively checked to have one derivable answer.",
+  "closest_benchmarks": [
+    {
+      "name": "MuSR",
+      "difference": "Both require multi-step evidence reconciliation, but AuditWeave uses executable formal semantics, partial orders, and exhaustive exact grading rather than natural-language narrative questions."
+    },
+    {
+      "name": "BIG-Bench Hard algorithmic tasks",
+      "difference": "AuditWeave adds abductive candidate repair, checkpoint constraints, and counterfactual replay over a fresh generated trace rather than direct forward execution."
+    },
+    {
+      "name": "SWE-bench",
+      "difference": "AuditWeave concerns forensic identification in a closed state machine and has no repository patching, underspecified tests, or judge-based correctness."
+    }
+  ],
+  "public_solver_entrypoint": "solver_bundle/solver_packet.md",
+  "item_file": "solver_bundle/items_private_sample.jsonl",
+  "gold_file": "gold_private_sample.jsonl"
+}

@@ -1,0 +1,11 @@
+receipt_id=reifor_0018_R1 | date=2026-04-13 | amount=102.48 | merchant="Harbor Bistro" | ccy=AUD | cat=GROUND
+receipt_id=reifor_0018_R2 | date=2026-04-16 | merchant="CityRail" | ccy=GBP | cat=LODGING | note="fax_copy" | amount=741.27 | nights=2
+receipt_id=reifor_0018_R3 | date=2026-04-16 | note="late_scan" | cat=GROUND | amount=36.69 | merchant="CloudNine Inn" | ccy=JPY
+receipt_id=reifor_0018_R4 | date=2026-04-14 | note="late_scan" | ccy=CAD | cat=AIR | amount=? | merchant="Alpine Hotel"
+receipt_id=reifor_0018_R5 | date=? | cat=GROUND | ccy=USD | merchant="CloudNine Inn" | amount=51.39
+receipt_id=reifor_0018_R6 | date=2026-04-13 | flags=DUPLICATE | amount=102.48 | merchant="Harbor Bistro" | cat=MISC | ccy=AUD
+receipt_id=reifor_0018_R7 | date=2026-04-14 | amount=705.40 | ccy=EUR | cat=LODGING | note="itemized" | merchant="Harbor Bistro" | nights=2
+receipt_id=reifor_0018_R8 | date=2026-04-13 | amount=42.76 | cat=GROUND | ccy=EUR | merchant="AeroFly"
+receipt_id=reifor_0018_R9 | date=2026-04-13 | merchant="Corner Mart" | amount=348.76 | cat=LODGING | ccy=CAD
+receipt_id=reifor_0018_R10 | date=2026-04-16 | merchant="AeroFly" | ccy=GBP | amount=600.37 | cat=AIR
+receipt_id=reifor_0018_R11 | date=2026-04-13 | ccy=GBP | merchant="AeroFly" | amount=64.54 | cat=GROUND

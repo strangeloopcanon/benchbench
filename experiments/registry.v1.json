@@ -8,7 +8,7 @@
     "leader_candidate_id": "004-reimbursement-forensics",
     "rank": 1,
     "verdict": "win_over_challengers",
-    "basis": "Against independently recomputed Decimal half-up gold, the six retained solver predictions score 12/30, 16/30, 11/30, 13/30, 11/30, and 11/30. This remains the only complete six-solver row with every score low and nonzero; later challenger rows reach 25/30 or higher, are invalid, or are incomplete. Every completed Experiment 010 and Experiment 013 solver cell is 30/30; Gemini 3.6 and Halcyon produced no valid candidate, while Gemini 3.7 produced a valid but too-easy candidate.",
+    "basis": "Against independently recomputed Decimal half-up gold, the six retained solver predictions score 12/30, 16/30, 11/30, 13/30, 11/30, and 11/30. This remains the only complete six-solver row with every score low and nonzero; later challenger rows reach 25/30 or higher, are invalid, or are incomplete. Every completed Experiment 010 and Experiment 013 solver cell is 30/30; Gemini 3.6 produced no valid candidate, while Gemini 3.7, Gemini 4 Argon, and Gemini 4 Carbon produced mechanically valid candidates that saturated at 30/30 across the modern frontier panel.",
     "qualification": "This is a corrected historical comparison, not a canonical promotion. Experiment 004 remains invalid because its original emitted gold was wrong, and no model was rerun."
   },
   "experiments": [
@@ -108,7 +108,7 @@
       "id": "010",
       "run_path": "experiments/010_four_model_panel_20260801_120442",
       "outcome": "infrastructure_incomplete",
-      "summary": "Three candidates passed the mechanical gate. Gemini 3.6 and Gemini 3.7 each scored 30/30 on all three; Halcyon scored 30/30 on Consolidation Point and did not complete AuditWeave or CFPS in headless single-turn print mode; Opus did not complete two cells. Gemini 3.6 creator work produced no valid candidate.",
+      "summary": "Three candidates passed the mechanical gate. Gemini 3.6, Gemini 3.7, and Gemini 4 Carbon each scored 30/30 on all three; Gemini 4 Argon scored 30/30 on Consolidation Point and did not complete AuditWeave or CFPS in its initial headless subagent print session; Opus did not complete two cells. Gemini 3.6 creator work produced no valid candidate.",
       "recovery_adjudication": {
         "path": "experiments/adjudications/010_provider_recovery_result.v1.json",
         "sha256": "676ad8b8160f32be6ab8d609cecda95dd528841df3b8b89a7b4763212f95d5aa"
@@ -177,6 +177,22 @@
         {
           "path": "experiments/extensions/010_halcyon_solver_20261003/run_state.json",
           "sha256": "753754785608bd4f2ac258ee6ba7623305d42ec6598e642370b8cf5eea5ceed3"
+        },
+        {
+          "path": "experiments/extensions/010_gemini_4_carbon_solver_20261111/manifest.json",
+          "sha256": "65dc5937cf107ef24191b706d14e631ebc32df113c2ae7507efd5ab70e1d0b19"
+        },
+        {
+          "path": "experiments/extensions/010_gemini_4_carbon_solver_20261111/run_state.json",
+          "sha256": "307bca928a462783fcdd2014d097b3c9cfceaab147455a48b4820b3b868847f5"
+        },
+        {
+          "path": "experiments/extensions/010_gemini_4_carbon_python_recovery_20261111/manifest.json",
+          "sha256": "30a6540d44f25086e7b5ce150745fcb0f90160981f8242ccd1e634eb4d1cfec6"
+        },
+        {
+          "path": "experiments/extensions/010_gemini_4_carbon_python_recovery_20261111/run_state.json",
+          "sha256": "d04ad580970406757c67e9bbaba4d17da425954b2a36624cf0cf381274b3c468"
         }
       ]
     },
@@ -184,7 +200,7 @@
       "id": "013",
       "run_path": "experiments/013_gemini_37_creator_20260813",
       "outcome": "rejected",
-      "summary": "Gemini 3.7 created the mechanically valid CloudSLA-Forensics package, but Gemini 3.6, Gemini 3.7, and Halcyon each solved it 30/30.",
+      "summary": "Gemini 3.7 created the mechanically valid CloudSLA-Forensics package, and Gemini 3.6, Gemini 3.7, Gemini 4 Argon, and Gemini 4 Carbon each solved it 30/30.",
       "evidence": [
         {
           "path": "experiments/013_gemini_37_creator_20260813/manifest.json",
@@ -211,6 +227,14 @@
           "sha256": "8ecd62b3139b2c2cf5d1b9375c66dafc16d48bd4cf471f9d897a4538218e0ddd"
         },
         {
+          "path": "experiments/extensions/013_gemini_4_carbon_solver_20261111/manifest.json",
+          "sha256": "7611f631372a64ede2dbff2e6c71ab0c095b680d170b90f3e46ca0465b442667"
+        },
+        {
+          "path": "experiments/extensions/013_gemini_4_carbon_solver_20261111/run_state.json",
+          "sha256": "50dc58091853e97e87bf5ec817c86a06cb6b901ffda4793fa6f1dfbd9b74c65e"
+        },
+        {
           "path": "experiments/adjudications/013_gemini_37_flash.md",
           "sha256": "c6abd6b8cb55864f66f281257f1fafae89f737afb18630ffa17330375f47c718"
         }
@@ -220,7 +244,7 @@
       "id": "014",
       "run_path": "experiments/014_halcyon_creator_20261003",
       "outcome": "rejected",
-      "summary": "After replacing a 1-line output-format example leak in solver_bundle/README.md with a synthetic placeholder, Halcyon's deterministic 30-item maritime_general_average_forensics package passed all mechanical gates; Halcyon, Claude Opus 5.5 (both Antigravity and Cursor), GPT-6-Sol, Gemini 3.8 Flash, Gemini 3.7 Flash, Gemini 3.6 Flash, and Claude Sonnet 5.5 solved it 30/30, while GLM 5.2 (High) scored 24/30.",
+      "summary": "After replacing a 1-line output-format example leak in solver_bundle/README.md with a synthetic placeholder, Gemini 4 Argon's deterministic 30-item maritime_general_average_forensics package passed all mechanical gates; Gemini 4 Carbon, Gemini 4 Argon, Claude Opus 5.5 (both Antigravity and Cursor), GPT-6-Sol, GLM 5.2 (High), Gemini 3.8 Flash, Gemini 3.7 Flash, Gemini 3.6 Flash, and Claude Sonnet 5.5 solved it 30/30 with Python enabled.",
       "evidence": [
         {
           "path": "experiments/014_halcyon_creator_20261003/manifest.json",
@@ -303,8 +327,16 @@
           "sha256": "422a70d7693af2a4ff3e36edf19e9962514a70796b19810bf2e76d6beb568c3b"
         },
         {
+          "path": "experiments/extensions/014_gemini_4_carbon_solver_20261111/manifest.json",
+          "sha256": "03dd2c4ef373d9efc4398041d09ed87ab1237e4ecce5fa8fafd45e919d27222b"
+        },
+        {
+          "path": "experiments/extensions/014_gemini_4_carbon_solver_20261111/run_state.json",
+          "sha256": "6f815bfd20f549998a60ed03cb31793cd6699abed4258cf0b743597611641b42"
+        },
+        {
           "path": "experiments/adjudications/014_halcyon.md",
-          "sha256": "97c303cd9af1efb4adeac2bc098c2a1798ddcf6d1d12717cff48a7a001d7c06e"
+          "sha256": "46ced0c81217777e57e3a69787a821461fc8857389a61f8a9cac559eace23a4d"
         }
       ]
     },
@@ -312,7 +344,7 @@
       "id": "015",
       "run_path": "experiments/015_reimbursement_forensics_v2_20261004",
       "outcome": "rejected",
-      "summary": "Repaired Reimbursement Forensics v2 (Actual Policy) fixing APPROVAL_RE to match lowercase reifor_xxxx_Ry IDs and clarifying separate Decimal half-up USD-cent conversion for amount and tip per policy.md. Passed all mechanical gates; Halcyon, Claude Opus 5.5, and GPT-6-Sol each solved it 30/30, while GLM 5.2 (High) scored 17/30.",
+      "summary": "Repaired Reimbursement Forensics v2 (Actual Policy) fixing APPROVAL_RE to match lowercase reifor_xxxx_Ry IDs and clarifying separate Decimal half-up USD-cent conversion for amount and tip per policy.md. Passed all mechanical gates; Gemini 4 Carbon, Gemini 4 Argon, Claude Opus 5.5, GPT-6-Sol, and GLM 5.2 (High) each solved it 30/30 with Python enabled.",
       "evidence": [
         {
           "path": "experiments/015_reimbursement_forensics_v2_20261004/manifest.json",
@@ -355,8 +387,52 @@
           "sha256": "667964b1fa574f8c5771410567bc3168351bb086c468020ccd5037b405ef9048"
         },
         {
+          "path": "experiments/extensions/015_gemini_4_carbon_solver_20261110/manifest.json",
+          "sha256": "713dde580d109a9070a8362cd3a925eab1056665be7c1f8f4f3cc2119bb74317"
+        },
+        {
+          "path": "experiments/extensions/015_gemini_4_carbon_solver_20261110/run_state.json",
+          "sha256": "d2bfaac4fb3c043c608e8ef30597b62feb3c3493fc6d9610aa01e5405f59069d"
+        },
+        {
           "path": "experiments/adjudications/004_reimbursement_forensics.md",
-          "sha256": "e6a2f05828895ea40eea445b5d7e043604ffe1691ff4aaa453fdc3b1b8bf2505"
+          "sha256": "059381af2c5f87d394fbcd448bff9372f6b165936d1c95018b09a1b9db1056d7"
+        }
+      ]
+    },
+    {
+      "id": "016",
+      "run_path": "experiments/016_gemini_4_carbon_creator_20261111",
+      "outcome": "rejected",
+      "summary": "Gemini 4 Carbon created the deterministic 30-item HolonomyWeave dihedral gauge-bundle benchmark, passing all mechanical validation checks on automatic controller repair (attempt_0002) with zero leakage; GPT-6-Sol, Gemini 4 Argon, Gemini 4 Carbon, Claude Opus 5.5, and GLM 5.2 (High) each solved it 30/30 with Python enabled.",
+      "evidence": [
+        {
+          "path": "experiments/016_gemini_4_carbon_creator_20261111/manifest.json",
+          "sha256": "a685b5f506d5a26e32d07704ec2c5f60e1ec2e23559c5472efecfd34bc96c15e"
+        },
+        {
+          "path": "experiments/016_gemini_4_carbon_creator_20261111/run_state.json",
+          "sha256": "b3c23e8402f910bc12f3e9892e58de98e7d9b760a005d292bb2e37742ff71486"
+        },
+        {
+          "path": "experiments/extensions/016_gemini_4_carbon_solver_20261111/manifest.json",
+          "sha256": "e44b5e16e6f7e868d3dd721003022f1f67c5d7f6db39bef89cab62c7e2beab70"
+        },
+        {
+          "path": "experiments/extensions/016_gemini_4_carbon_solver_20261111/run_state.json",
+          "sha256": "0f45657610a982094a6aa0a3776676157c86cf2b712af6d0783a2a8fb954f16e"
+        },
+        {
+          "path": "experiments/extensions/016_gemini_4_argon_solver_20261111/manifest.json",
+          "sha256": "a00b25722c2705d7dccdfb3ae51c8de10d3c9b0d7af8697c3a503d15693df4fa"
+        },
+        {
+          "path": "experiments/extensions/016_gemini_4_argon_solver_20261111/run_state.json",
+          "sha256": "5f28275bb80087211dabc3ee6ac9e681de0e155d5cd9f97380df5eb191ff76e8"
+        },
+        {
+          "path": "experiments/adjudications/016_gemini_4_carbon.md",
+          "sha256": "249b492875945b4d68f7aac115583532405d03d20a94b04f5ceecbc350cb6cf5"
         }
       ]
     }
@@ -490,9 +566,9 @@
       "creator": "Codex GPT-5.6 Sol high",
       "outcome": "infrastructure_incomplete",
       "canonical_eligible": false,
-      "reason": "The candidate passed the mechanical gate. Sol, Terra, Gemini 3.6, and Gemini 3.7 each scored 30/30; Opus and Halcyon did not complete, so the panel remains incomplete and every completed cell shows no useful difficulty.",
+      "reason": "The candidate passed the mechanical gate. Sol, Terra, Gemini 3.6, Gemini 3.7, and Gemini 4 Carbon each scored 30/30; Opus and Gemini 4 Argon (initial subagent session) did not complete, so the original panel remains incomplete and every completed cell shows no useful difficulty.",
       "historical_scores": [
-        "successful cells only: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30"
+        "successful cells only: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30, Gemini 4 Carbon high 30/30"
       ],
       "cell_states": [
         {
@@ -500,7 +576,7 @@
           "state": "timeout"
         },
         {
-          "solver": "Halcyon",
+          "solver": "Gemini 4 Argon",
           "state": "timeout"
         }
       ],
@@ -525,6 +601,10 @@
         {
           "path": "experiments/extensions/010_halcyon_solver_20261003/manifest.json",
           "sha256": "78aa5b027399c728477edbf4a69d12113a6f2dbecde9af789fcdf2c500a8a441"
+        },
+        {
+          "path": "experiments/extensions/010_gemini_4_carbon_python_recovery_20261111/manifest.json",
+          "sha256": "30a6540d44f25086e7b5ce150745fcb0f90160981f8242ccd1e634eb4d1cfec6"
         }
       ]
     },
@@ -535,9 +615,9 @@
       "creator": "Codex GPT-5.6 Terra extra high",
       "outcome": "infrastructure_incomplete",
       "canonical_eligible": false,
-      "reason": "The candidate passed the mechanical gate. Sol, Terra, Gemini 3.6, and Gemini 3.7 each scored 30/30; Opus timed out and Halcyon exited its parent single-turn print session while waiting for async subagents, so the panel remains incomplete and every completed cell shows no useful difficulty.",
+      "reason": "The candidate passed the mechanical gate. Sol, Terra, Gemini 3.6, Gemini 3.7, and Gemini 4 Carbon each scored 30/30; Opus timed out and Gemini 4 Argon exited its initial parent single-turn print session while waiting for async subagents, so the original panel remains incomplete and every completed cell shows no useful difficulty.",
       "historical_scores": [
-        "successful cells only: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30"
+        "successful cells only: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30, Gemini 4 Carbon high 30/30"
       ],
       "cell_states": [
         {
@@ -545,7 +625,7 @@
           "state": "timeout"
         },
         {
-          "solver": "Halcyon",
+          "solver": "Gemini 4 Argon",
           "state": "invalid_output"
         }
       ],
@@ -570,6 +650,10 @@
         {
           "path": "experiments/extensions/010_halcyon_solver_20261003/manifest.json",
           "sha256": "78aa5b027399c728477edbf4a69d12113a6f2dbecde9af789fcdf2c500a8a441"
+        },
+        {
+          "path": "experiments/extensions/010_gemini_4_carbon_python_recovery_20261111/manifest.json",
+          "sha256": "30a6540d44f25086e7b5ce150745fcb0f90160981f8242ccd1e634eb4d1cfec6"
         }
       ]
     },
@@ -604,9 +688,9 @@
       "creator": "Cursor Claude Opus 5 high",
       "outcome": "infrastructure_incomplete",
       "canonical_eligible": false,
-      "reason": "The candidate passed the mechanical gate. Sol, Terra, Gemini 3.6, Gemini 3.7, Halcyon, and Opus each scored 30/30. Every completed cell proves the benchmark is too easy, but the retained Opus runtime identity remains requested/unverified.",
+      "reason": "The candidate passed the mechanical gate. Sol, Terra, Gemini 3.6, Gemini 3.7, Gemini 4 Argon, Gemini 4 Carbon, and Opus each scored 30/30. Every completed cell proves the benchmark is too easy, while the retained Opus runtime identity remains requested/unverified.",
       "historical_scores": [
-        "completed cells: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30, Halcyon 30/30, Opus 30/30"
+        "completed cells: Sol 30/30, Terra 30/30, Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30, Gemini 4 Argon 30/30, Gemini 4 Carbon high 30/30, Opus 30/30"
       ],
       "required_next_step": "Increase task difficulty, generate a new version, and run a complete fresh solver panel.",
       "evidence": [
@@ -629,6 +713,10 @@
         {
           "path": "experiments/extensions/010_halcyon_solver_20261003/manifest.json",
           "sha256": "78aa5b027399c728477edbf4a69d12113a6f2dbecde9af789fcdf2c500a8a441"
+        },
+        {
+          "path": "experiments/extensions/010_gemini_4_carbon_solver_20261111/manifest.json",
+          "sha256": "65dc5937cf107ef24191b706d14e631ebc32df113c2ae7507efd5ab70e1d0b19"
         }
       ]
     },
@@ -639,9 +727,9 @@
       "creator": "Antigravity Gemini 3.7 Flash high",
       "outcome": "rejected",
       "canonical_eligible": false,
-      "reason": "The package passed the full mechanical gate on its first attempt, but Gemini 3.6, Gemini 3.7, and Halcyon each scored 30/30. The benchmark is valid but provides no useful frontier difficulty.",
+      "reason": "The package passed the full mechanical gate on its first attempt, and Gemini 3.6, Gemini 3.7, Gemini 4 Argon, and Gemini 4 Carbon each scored 30/30. The benchmark is valid but provides no useful frontier difficulty.",
       "historical_scores": [
-        "completed cells: Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30, Halcyon 30/30"
+        "completed cells: Gemini 3.6 Flash high 30/30, Gemini 3.7 Flash high 30/30, Gemini 4 Argon 30/30, Gemini 4 Carbon high 30/30"
       ],
       "required_next_step": "Increase task difficulty, generate a new version, and run a complete fresh solver panel.",
       "evidence": [
@@ -666,6 +754,10 @@
           "sha256": "16e5723a67a1ddab8af2333046787822656b8d22b2432e84a73887b25f053f29"
         },
         {
+          "path": "experiments/extensions/013_gemini_4_carbon_solver_20261111/run/candidate_created_by_gemini_3_7_flash_high/solver_results/score_solver_antigravity__gemini_4_carbon_high__effort_high.json",
+          "sha256": "5626f45e8104d8fbbeb4a9db78cb199263043a5608c39420ed627be85cae8e1c"
+        },
+        {
           "path": "experiments/adjudications/013_gemini_37_flash.md",
           "sha256": "c6abd6b8cb55864f66f281257f1fafae89f737afb18630ffa17330375f47c718"
         }
@@ -675,12 +767,12 @@
       "id": "014-maritime-general-average-forensics",
       "experiment_id": "014",
       "name": "maritime_general_average_forensics",
-      "creator": "Antigravity Halcyon",
+      "creator": "Antigravity Gemini 4 Argon",
       "outcome": "rejected",
       "canonical_eligible": false,
-      "reason": "After replacing the 1-line output-format example leak in solver_bundle/README.md (1324550 -> 999999), the package passed all mechanical validation checks. With Python execution enabled, Halcyon, Claude Opus 5.5 (both Antigravity and Cursor), GPT-6-Sol, GLM 5.2 (High), Gemini 3.8 Flash, Gemini 3.7 Flash, Gemini 3.6 Flash, and Claude Sonnet 5.5 all scored 30/30.",
+      "reason": "After replacing the 1-line output-format example leak in solver_bundle/README.md (1324550 -> 999999), the package passed all mechanical validation checks. With Python execution enabled, Gemini 4 Carbon, Gemini 4 Argon, Claude Opus 5.5 (both Antigravity and Cursor), GPT-6-Sol, GLM 5.2 (High), Gemini 3.8 Flash, Gemini 3.7 Flash, Gemini 3.6 Flash, and Claude Sonnet 5.5 all scored 30/30.",
       "historical_scores": [
-        "completed cells: Halcyon 30/30, Claude Opus 5.5 high 30/30, GPT-6-Sol high 30/30, GLM 5.2 high 30/30, Gemini 3.8 Flash high 30/30, Gemini 3.7 Flash high 30/30, Gemini 3.6 Flash high 30/30, Claude Sonnet 5.5 high 30/30"
+        "completed cells: Gemini 4 Carbon high 30/30, Gemini 4 Argon 30/30, Claude Opus 5.5 high 30/30, GPT-6-Sol high 30/30, GLM 5.2 high 30/30, Gemini 3.8 Flash high 30/30, Gemini 3.7 Flash high 30/30, Gemini 3.6 Flash high 30/30, Claude Sonnet 5.5 high 30/30"
       ],
       "required_next_step": "Increase task difficulty, generate a new version without manual post-repair intervention, and run a complete fresh solver panel.",
       "evidence": [
@@ -729,8 +821,12 @@
           "sha256": "2d793b9984d9919f35b7a3de2db22b72c6aa6d6794a254bfd1b6eb326d89be1d"
         },
         {
+          "path": "experiments/extensions/014_gemini_4_carbon_solver_20261111/run/candidate_created_by_halcyon/solver_results/score_solver_antigravity__gemini_4_carbon_high__effort_high.json",
+          "sha256": "6dc1ea86a61d5ab3834054bbacf06de79301f739b2b076844b411dfaa560792e"
+        },
+        {
           "path": "experiments/adjudications/014_halcyon.md",
-          "sha256": "97c303cd9af1efb4adeac2bc098c2a1798ddcf6d1d12717cff48a7a001d7c06e"
+          "sha256": "46ced0c81217777e57e3a69787a821461fc8857389a61f8a9cac559eace23a4d"
         }
       ]
     },
@@ -741,11 +837,11 @@
       "creator": "GPT-5.2 (actual-policy repair)",
       "outcome": "rejected",
       "canonical_eligible": false,
-      "reason": "After fixing APPROVAL_RE to match lowercase reifor_xxxx_Ry IDs and clarifying separate Decimal half-up USD-cent conversion for amount and tip per policy.md, the repaired package passed all mechanical validation checks. With Python execution enabled, Halcyon, Claude Opus 5.5, GPT-6-Sol, and GLM 5.2 (High) each scored 30/30 (100%).",
+      "reason": "After fixing APPROVAL_RE to match lowercase reifor_xxxx_Ry IDs and clarifying separate Decimal half-up USD-cent conversion for amount and tip per policy.md, the repaired package passed all mechanical validation checks. With Python execution enabled, Gemini 4 Carbon, Gemini 4 Argon, Claude Opus 5.5, GPT-6-Sol, and GLM 5.2 (High) each scored 30/30 (100%).",
       "historical_scores": [
-        "completed cells: Halcyon 30/30, Claude Opus 5.5 high 30/30, GPT-6-Sol high 30/30, GLM 5.2 high 30/30"
+        "completed cells: Gemini 4 Carbon high 30/30, Gemini 4 Argon 30/30, Claude Opus 5.5 high 30/30, GPT-6-Sol high 30/30, GLM 5.2 high 30/30"
       ],
-      "required_next_step": "Increase task difficulty beyond top-frontier saturation (30/30 across Halcyon, Claude Opus 5.5, GPT-6-Sol, and GLM 5.2 High) and run a complete fresh solver panel.",
+      "required_next_step": "Increase task difficulty beyond top-frontier saturation (30/30 across Gemini 4 Carbon, Gemini 4 Argon, Claude Opus 5.5, GPT-6-Sol, and GLM 5.2 High) and run a complete fresh solver panel.",
       "evidence": [
         {
           "path": "experiments/015_reimbursement_forensics_v2_20261004/run/candidate_created_by_codex__gpt_5_2__effort_high/attempt_0001/controller_validation.v1.json",
@@ -772,8 +868,59 @@
           "sha256": "18763580101f639d6a5adcc168dcc0588a36756bcec4f1c480f480462e966af2"
         },
         {
+          "path": "experiments/extensions/015_gemini_4_carbon_solver_20261110/run/candidate_created_by_gpt_5_2/solver_results/score_solver_antigravity__gemini_4_carbon_high__effort_high.json",
+          "sha256": "8e414c8f05102c14f5bcabb68ebcba397e850b6df34fc031789fc4d4d5fd87da"
+        },
+        {
           "path": "experiments/adjudications/004_reimbursement_forensics.md",
-          "sha256": "e6a2f05828895ea40eea445b5d7e043604ffe1691ff4aaa453fdc3b1b8bf2505"
+          "sha256": "059381af2c5f87d394fbcd448bff9372f6b165936d1c95018b09a1b9db1056d7"
+        }
+      ]
+    },
+    {
+      "id": "016-holonomy-weave",
+      "experiment_id": "016",
+      "name": "HolonomyWeave",
+      "creator": "Antigravity Gemini 4 Carbon high",
+      "outcome": "rejected",
+      "canonical_eligible": false,
+      "reason": "The deterministic 30-item dihedral gauge-bundle benchmark passed all mechanical validation checks on automatic controller repair (attempt_0002) with zero gold leakage and zero manual intervention. With Python execution enabled, GPT-6-Sol, Gemini 4 Argon, Gemini 4 Carbon, Claude Opus 5.5, and GLM 5.2 (High) each scored 30/30 (100%).",
+      "historical_scores": [
+        "completed cells: GPT-6-Sol high 30/30, Gemini 4 Argon high 30/30, Gemini 4 Carbon high 30/30, Claude Opus 5.5 high 30/30, GLM 5.2 high 30/30"
+      ],
+      "required_next_step": "Increase task difficulty beyond lifted-graph search saturation when Python execution is available, generate a new version, and run a complete fresh solver panel.",
+      "evidence": [
+        {
+          "path": "experiments/016_gemini_4_carbon_creator_20261111/run/candidate_created_by_antigravity__gemini_4_carbon_high__effort_high/attempt_0002/controller_validation.v1.json",
+          "sha256": "cdbac6f505148f3fc8f8c34dc6da0000141476e3965705dc7e47f959df45d0f7"
+        },
+        {
+          "path": "experiments/016_gemini_4_carbon_creator_20261111/run/candidate_created_by_antigravity__gemini_4_carbon_high__effort_high/attempt_0002/controller_validation_report.txt",
+          "sha256": "b854b6fffe92338bab5cc86693e65002e6b8b5943caf8bfa027e5ad52e539a96"
+        },
+        {
+          "path": "experiments/016_gemini_4_carbon_creator_20261111/run/candidate_created_by_antigravity__gemini_4_carbon_high__effort_high/solver_results/score_solver_codex__gpt_6_sol__effort_high.json",
+          "sha256": "8e76234c685eeb0058fcfa631addd36a84037de32337dc525b030333da220deb"
+        },
+        {
+          "path": "experiments/016_gemini_4_carbon_creator_20261111/run/candidate_created_by_antigravity__gemini_4_carbon_high__effort_high/solver_results/score_solver_cursor__claude_opus_5_5_high__effort_high.json",
+          "sha256": "e86dc9ea3d8bb149fced25280d88ec15535eedbda2598334129d9f463637904c"
+        },
+        {
+          "path": "experiments/016_gemini_4_carbon_creator_20261111/run/candidate_created_by_antigravity__gemini_4_carbon_high__effort_high/solver_results/score_solver_cursor__glm_5_2_high__effort_high.json",
+          "sha256": "df9ab7f8a07137388c6b53420095efd105505867db042aabdd62a50ac21da883"
+        },
+        {
+          "path": "experiments/extensions/016_gemini_4_carbon_solver_20261111/run/candidate_created_by_gemini_4_carbon_high/solver_results/score_solver_antigravity__gemini_4_carbon_high__effort_high.json",
+          "sha256": "8e6b907613eb7e2eb42fd32016bfbe1b455d33987984d31d47a45fd14221561f"
+        },
+        {
+          "path": "experiments/extensions/016_gemini_4_argon_solver_20261111/run/candidate_created_by_gemini_4_carbon_high/solver_results/score_solver_antigravity__gemini_4_argon_high__effort_high.json",
+          "sha256": "02172e775c6a7232ccad1d08b12871161d82345050e34e721c4f87ad1a56278e"
+        },
+        {
+          "path": "experiments/adjudications/016_gemini_4_carbon.md",
+          "sha256": "249b492875945b4d68f7aac115583532405d03d20a94b04f5ceecbc350cb6cf5"
         }
       ]
     }

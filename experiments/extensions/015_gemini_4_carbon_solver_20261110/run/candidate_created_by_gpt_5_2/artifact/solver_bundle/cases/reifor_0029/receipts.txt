@@ -1,0 +1,10 @@
+receipt_id=reifor_0029_R1 | date=2026-05-12 | amount=53.97 | cat=MEALS | merchant="Station Cafe" | ccy=JPY
+receipt_id=reifor_0029_R2 | date=2026-05-14 | amount=124.49 | ccy=USD | cat=GROUND | merchant="Sunrise Diner"
+receipt_id=reifor_0029_R3 | date=2026-05-14 | merchant="CityRail" | amount=37.34 | ccy=JPY | cat=GROUND
+receipt_id=reifor_0029_R4 | date=2026-05-11 | merchant="QuickFuel" | cat=MISC | ccy=AUD | amount=?
+receipt_id=reifor_0029_R5 | date=2026-05-14 | ccy=JPY | cat=MEALS | merchant="Station Cafe" | amount=57.96
+receipt_id=reifor_0029_R6 | date=2026-05-11 | ccy=GBP | tip=9.69 | cat=MEALS | note="fax_copy" | merchant="Metro Cab" | amount=37.36
+receipt_id=reifor_0029_R7 | date=2026-05-14 | ccy=AUD | note="summary" | amount=29.46 | cat=MISC | merchant="Sunrise Diner"
+receipt_id=reifor_0029_R8 | date=2026-05-11 | merchant="Harbor Bistro" | cat=LODGING | ccy=USD | nights=1 | amount=151.55 | note="fax_copy"
+receipt_id=reifor_0029_R9 | date=2026-05-11 | note="late_scan" | ccy=AUD | flags=DUPLICATE | cat=AIR | amount=688.44 | merchant="QuickFuel"
+receipt_id=reifor_0029_R10 | date=2026-05-12 | cat=MEALS | ccy=JPY | merchant="Metro Cab" | amount=72.39

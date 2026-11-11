@@ -1,0 +1,70 @@
+{
+  "config": {
+    "custom_source_panel_acknowledged": true,
+    "dispatch_ceiling_overshoot_acknowledged": true,
+    "harness_digest": "f08a68ecb0e98bc97d397a43040eadffac6e9a5d182b0bcd1fbc496f39f8b608",
+    "max_total_tokens": 1500000,
+    "panel_expansion": true,
+    "provider_preflight": [
+      {
+        "artifact_id": "antigravity__gemini_4_carbon_high",
+        "binary": "agy",
+        "display_model": "Gemini 4 Carbon (High)",
+        "executable": "<local-home>/.local/bin/agy",
+        "inference_attempted": false,
+        "model": "gemini-4-carbon-high",
+        "model_available": true,
+        "model_listing_command": [
+          "<local-home>/.local/bin/agy",
+          "models"
+        ],
+        "model_listing_returncode": 0,
+        "model_listing_stderr_bytes": 29,
+        "model_listing_stderr_sha256": "53f588bc9a928f4a66908deacaca57dddc7e7ce177a0cc3586b5a501be26e1e8",
+        "model_listing_stdout_bytes": 808,
+        "model_listing_stdout_sha256": "9a0d8f1a6787ca33604bc3501a0721df8abf53eae2f3172240e7d48533889ebd",
+        "model_listing_supported": true,
+        "preflight_scope": "ambient_catalog_only",
+        "probe_stderr_bytes": 3319,
+        "probe_stderr_sha256": "e92946f85cec63eca61f93014ca49f53b1e84277eac7954e7fac7d8d712940fd",
+        "probe_stdout_bytes": 0,
+        "probe_stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "provider": "antigravity",
+        "requested_effort": null,
+        "requested_provider_model": "gemini-4-carbon-high",
+        "returncode": 0,
+        "state": "binary_ready"
+      }
+    ],
+    "retry_failed_source_cells": false,
+    "schema_version": 1,
+    "solver": "antigravity__gemini_4_carbon_high__effort_high",
+    "source_candidates": [
+      {
+        "artifact": "./experiments/015_reimbursement_forensics_v2_20261004/run/candidate_created_by_codex__gpt_5_2__effort_high/attempt_0001/artifact",
+        "candidate_digest": "60b014636e7f02da2e8f4429c9741679d1a5840a5098014cbd46f84bba113e01",
+        "creator_call_id": "codex__gpt_5_2__effort_high",
+        "creator_model": "gpt-5.2",
+        "validation_report_sha256": "ee8c42abdc661a1e28b19dd58d815a7af7a670bb188bcb9bd65ef8a065beb33b",
+        "validation_sha256": "8a7d7e4027ef8968d44b2e57c542241d1ad5e844ef9e2d19ca27dfe8dc0b1f69"
+      }
+    ],
+    "source_manifest_sha256": "34e0807038df4ac0b50a0685b4850eed52a763d66a66ea34451eb7cec8d071d4",
+    "source_panel_policy": "custom",
+    "source_run_root": "./experiments/015_reimbursement_forensics_v2_20261004",
+    "source_run_state_sha256": "b6e90d92c0559cd306170847905aae918bf4babb68b6b0e21d9417db8ec21aa2",
+    "source_snapshot_digest": "5aa6c4870c36968ba7493b69420119bc367b7aa83289b7aabecd81b743c419c4",
+    "timeout_seconds": 1500,
+    "unmetered_cost_acknowledged": true,
+    "zero_telemetry_reservation": 500000
+  },
+  "config_fingerprint": "bde6c6fb4aebee8fe924e390f49a91bcfffb57db32a7e7fcbfbb992f115228a4",
+  "schema_version": 1,
+  "source_snapshot": {
+    "digest": "f08a68ecb0e98bc97d397a43040eadffac6e9a5d182b0bcd1fbc496f39f8b608",
+    "file_count": 10,
+    "manifest_path": "source_snapshot/manifest.json",
+    "path": "source_snapshot",
+    "schema_version": "benchbench.source_snapshot/v1"
+  }
+}

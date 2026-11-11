@@ -30,6 +30,7 @@ from run_broad_three_model_sweep import (
     DEFAULT_MODELS,
     FRONTIER_FIVE_MODELS,
     FRONTIER_FOUR_MODELS,
+    FRONTIER_SIX_MODELS,
     candidate_card_lines,
     candidate_status,
     resolve_model_lists,
@@ -166,6 +167,26 @@ class ModelBackendTests(unittest.TestCase):
         halcyon_concrete = parse_model_spec("agy:halcyon-high")
         self.assertEqual(halcyon_alias.artifact_id, "antigravity__halcyon")
         self.assertEqual(halcyon_alias.artifact_id, halcyon_concrete.artifact_id)
+
+        carbon_alias = parse_model_spec("agy:carbon")
+        carbon_named = parse_model_spec("agy:gemini-4-carbon")
+        carbon_concrete = parse_model_spec("agy:gemini-4-carbon-high")
+        self.assertEqual(carbon_concrete.artifact_id, "antigravity__gemini_4_carbon_high")
+        self.assertEqual(carbon_concrete.antigravity_expected_label, "Gemini 4 Carbon (High)")
+        self.assertEqual(
+            {carbon_alias.artifact_id, carbon_named.artifact_id, carbon_concrete.artifact_id},
+            {"antigravity__gemini_4_carbon_high"},
+        )
+
+        argon_alias = parse_model_spec("agy:argon")
+        argon_named = parse_model_spec("agy:gemini-4-argon")
+        argon_concrete = parse_model_spec("agy:gemini-4-argon-high")
+        self.assertEqual(argon_concrete.artifact_id, "antigravity__gemini_4_argon_high")
+        self.assertEqual(argon_concrete.antigravity_expected_label, "Gemini 4 Argon (High)")
+        self.assertEqual(
+            {argon_alias.artifact_id, argon_named.artifact_id, argon_concrete.artifact_id},
+            {"antigravity__gemini_4_argon_high"},
+        )
 
     def test_historical_xhigh_score_names_preserve_model_identity(self) -> None:
         for filename in ("score_solver_xhigh_gpt_5_5.json", "score_solver_gpt_5_5_xhigh.json"):
@@ -547,12 +568,12 @@ class ModelBackendTests(unittest.TestCase):
         self.assertEqual(
             DEFAULT_MODELS,
             [
-                "gpt-5.6-sol@high",
-                "gpt-5.6-terra@xhigh",
-                "agy:gemini-3.6-flash-high@high",
-                "agy:gemini-3.7-flash-high@high",
-                "agy:halcyon@high",
-                "cursor:claude-opus-5@high",
+                "gpt-6-sol@high",
+                "agy:gemini-4-carbon-high@high",
+                "agy:gemini-4-argon-high@high",
+                "agy:gemini-3.8-flash-high@high",
+                "cursor:claude-opus-5-5-high@high",
+                "cursor:glm-5-2-high@high",
             ],
         )
         creators, solvers = resolve_model_lists(None, None, None)
@@ -567,6 +588,10 @@ class ModelBackendTests(unittest.TestCase):
         exact_five = [
             call_artifact_id(spec.artifact_id, effective_effort(spec, "high"))
             for spec in map(parse_model_spec, FRONTIER_FIVE_MODELS)
+        ]
+        exact_six = [
+            call_artifact_id(spec.artifact_id, effective_effort(spec, "high"))
+            for spec in map(parse_model_spec, FRONTIER_SIX_MODELS)
         ]
         current = ["one", "two", "three", "four", "five", "six"]
         self.assertEqual(
@@ -586,8 +611,12 @@ class ModelBackendTests(unittest.TestCase):
             "benchbench.frontier-five/2026-08-13",
         )
         self.assertEqual(
-            resolve_panel_policy(Path("experiments/014_frontier_six"), current, current, current, current),
+            resolve_panel_policy(Path("experiments/014_frontier_six"), exact_six, exact_six, current, current),
             "benchbench.frontier-six/2026-10-03",
+        )
+        self.assertEqual(
+            resolve_panel_policy(Path("experiments/016_frontier_modern"), current, current, current, current),
+            "benchbench.frontier-modern/2026-11-10",
         )
 
         creators, solvers = resolve_model_lists(

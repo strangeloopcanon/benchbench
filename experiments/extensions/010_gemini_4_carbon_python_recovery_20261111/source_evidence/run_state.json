@@ -1,0 +1,41 @@
+{
+  "config": {
+    "creator_effort": "high",
+    "creator_models": [
+      "codex__gpt_5_6_sol__effort_high",
+      "codex__gpt_5_6_terra__effort_xhigh",
+      "antigravity__gemini_3_6_flash_high__effort_high",
+      "cursor__claude_opus_5_thinking_high__effort_high"
+    ],
+    "creator_timeout_seconds": 2400,
+    "dispatch_ceiling_overshoot_acknowledged": true,
+    "feedback_digest": null,
+    "generation_seed": 20260516,
+    "harness_digest": "79a126c806eab6593210f3852cbb6c26aa05b24959d11b2243b5c2c926e397c0",
+    "landscape_digest": "57a9d37f7c1f50323cc4e5c70c347475f538573da1cd1d67a6511f3d5d6b9db6",
+    "landscape_path": "benchmark_landscape/creator_prompt_landscape_pack.md",
+    "max_total_tokens": 20000000,
+    "panel_policy": "benchbench.frontier-four/2026-08-01",
+    "pilot_summary_digest": "760db830ba6e43785dbad48a2c4816a1b54e932e79f23ef0c2b8f09b4eeb6750",
+    "pilot_summary_path": "experiments/001_three_model_grid_pilot/README.md",
+    "sample_count": 30,
+    "solver_effort": "high",
+    "solver_models": [
+      "codex__gpt_5_6_sol__effort_high",
+      "codex__gpt_5_6_terra__effort_xhigh",
+      "antigravity__gemini_3_6_flash_high__effort_high",
+      "cursor__claude_opus_5_thinking_high__effort_high"
+    ],
+    "solver_timeout_seconds": 1500,
+    "unmetered_cost_acknowledged": true
+  },
+  "config_fingerprint": "b0bbde11420877a819b7976bdc14e0e5d5c3de61d87cfb0dd68859b23556a980",
+  "schema_version": 1,
+  "source_snapshot": {
+    "digest": "79a126c806eab6593210f3852cbb6c26aa05b24959d11b2243b5c2c926e397c0",
+    "file_count": 9,
+    "manifest_path": "source_snapshot/manifest.json",
+    "path": "source_snapshot",
+    "schema_version": "benchbench.source_snapshot/v1"
+  }
+}

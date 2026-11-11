@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "snapshot_candidate_digest": "c6c3b53c56024ae35bbb2962e2943c4f3a3e2cbe66ca10863de7eccf190da185",
+  "source_artifact": "./experiments/016_gemini_4_carbon_creator_20261111/run/candidate_created_by_antigravity__gemini_4_carbon_high__effort_high/attempt_0002/artifact",
+  "source_candidate_digest": "c6c3b53c56024ae35bbb2962e2943c4f3a3e2cbe66ca10863de7eccf190da185"
+}

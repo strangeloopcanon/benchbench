@@ -1,0 +1,11 @@
+{
+  "assets_root": ".",
+  "items_file": "items_private_sample.jsonl",
+  "name": "Reimbursement Forensics (ReiFor)",
+  "prohibited": [
+    "gold answers",
+    "generator/verifier/scorer code",
+    "hidden seeds or private traces"
+  ],
+  "version": "1.0.0"
+}

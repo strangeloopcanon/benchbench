@@ -1,0 +1,10 @@
+receipt_id=reifor_0015_R1 | date=2026-05-21 | ccy=GBP | amount=42.43 | cat=MEALS | merchant="CityRail"
+receipt_id=reifor_0015_R2 | date=2026-05-19 | nights=3 | merchant="CloudNine Inn" | ccy=AUD | amount=845.10 | cat=LODGING
+receipt_id=reifor_0015_R3 | date=? | merchant="Alpine Hotel" | ccy=CAD | note="late_scan" | amount=1068.62 | cat=LODGING | nights=3
+receipt_id=reifor_0015_R4 | date=2026-05-20 | cat=GROUND | amount=1068.62 | merchant="Alpine Hotel" | ccy=CAD
+receipt_id=reifor_0015_R5 | date=2026-05-19 | amount=77.11 | merchant="Harbor Bistro" | cat=MISC | ccy=AUD
+receipt_id=reifor_0015_R6 | date=2026-05-20 | merchant="Station Cafe" | amount=68.07 | ccy=USD | cat=MISC
+receipt_id=reifor_0015_R7 | date=2026-05-20 | merchant="Station Cafe" | amount=? | ccy=JPY | nights=1 | cat=LODGING
+receipt_id=reifor_0015_R8 | date=2026-05-20 | amount=? | ccy=EUR | cat=AIR | merchant="Metro Cab"
+receipt_id=reifor_0015_R9 | date=2026-05-20 | ccy=GBP | cat=AIR | note="itemized" | merchant="Corner Mart" | amount=610.75
+receipt_id=reifor_0015_R10 | date=2026-05-19 | amount=29.56 | cat=MISC | merchant="Metro Cab" | ccy=USD

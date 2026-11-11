@@ -1,0 +1,21 @@
+{
+  "files": [
+    {
+      "path": "source_evidence/run_state.json",
+      "sha256": "b3c23e8402f910bc12f3e9892e58de98e7d9b760a005d292bb2e37742ff71486"
+    },
+    {
+      "path": "source_evidence/source_manifest.json",
+      "sha256": "a685b5f506d5a26e32d07704ec2c5f60e1ec2e23559c5472efecfd34bc96c15e"
+    },
+    {
+      "path": "source_evidence/gemini_4_carbon_high__controller_validation.v1.json",
+      "sha256": "cdbac6f505148f3fc8f8c34dc6da0000141476e3965705dc7e47f959df45d0f7"
+    },
+    {
+      "path": "source_evidence/gemini_4_carbon_high__controller_validation_report.txt",
+      "sha256": "b854b6fffe92338bab5cc86693e65002e6b8b5943caf8bfa027e5ad52e539a96"
+    }
+  ],
+  "schema_version": 1
+}

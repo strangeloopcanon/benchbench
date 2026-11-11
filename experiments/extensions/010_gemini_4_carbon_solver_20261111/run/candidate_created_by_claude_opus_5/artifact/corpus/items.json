@@ -1,0 +1,217 @@
+{
+  "benchmark_id": "consolidation-point-v1",
+  "asset_files": ["statute_pack.md"],
+  "answer_format": "Reply with a single whole number: the total levy in marks. Digits only - no currency symbol, no thousands separator, no words.",
+  "items": [
+    {
+      "id": "sc-001",
+      "case_ref": "MHR/2013/014",
+      "question": "Case MHR/2013/014. On 14 March 2013, with discharge commencing at 09:20, Kelvish Marine Holdings (a body corporate) landed 7.4 tonnes gross of farmed produce at Port Kelvish, a scheduled harbour. The vessel occupied a powered berth. The quay is not a community quay. The operator's total gross landed weight at all scheduled harbours during 2012 was 210 tonnes. The operator held a Class A licence on 31 December 2018. The harbour master issued the notice of assessment on 2 April 2013. What is the levy charged in respect of this landing, in marks?",
+      "answer": "390",
+      "tags": ["original-law", "baseline"]
+    },
+    {
+      "id": "sc-002",
+      "case_ref": "MHR/2014/207",
+      "question": "Case MHR/2014/207. On 3 September 2014, with discharge commencing at 11:05, Ailsa Renwick (a sole trader, not a body corporate) landed 5.0 tonnes gross of farmed produce at Stranmere, a scheduled harbour. The vessel occupied a berth that is not a powered berth. The quay is not a community quay. The operator's total gross landed weight at all scheduled harbours during 2013 was 38 tonnes. The operator held a Class A licence on 31 December 2018. The harbour master issued the notice of assessment on 20 September 2014. What is the levy charged in respect of this landing, in marks?",
+      "answer": "175",
+      "tags": ["split-application-dates", "small-operator-20pct"]
+    },
+    {
+      "id": "sc-003",
+      "case_ref": "MHR/2015/031",
+      "question": "Case MHR/2015/031. On 8 February 2015, with discharge commencing at 07:40, Ailsa Renwick (a sole trader, not a body corporate) landed 9.2 tonnes gross of farmed produce at Stranmere, a scheduled harbour. The vessel occupied a powered berth. The quay is not a community quay. The operator's total gross landed weight at all scheduled harbours during 2014 was 44 tonnes. The operator held a Class A licence on 31 December 2018. The harbour master issued the notice of assessment on 1 March 2015. What is the levy charged in respect of this landing, in marks?",
+      "answer": "440",
+      "tags": ["small-operator-25pct"]
+    },
+    {
+      "id": "sc-004",
+      "case_ref": "MHR/2016/488",
+      "question": "Case MHR/2016/488. On 5 November 2016, with discharge commencing at 23:30, Tolvern Shellfish Company (a body corporate) landed 4.1 tonnes gross of farmed produce at Tolvern, a scheduled harbour. The vessel occupied a berth that is not a powered berth. The quay is not a community quay. The produce was held at 2 degrees Celsius at the moment of discharge. The operator's total gross landed weight at all scheduled harbours during 2015 was 300 tonnes. The operator held a Class A licence on 31 December 2018. The harbour master issued the notice of assessment on 20 November 2016. What is the levy charged in respect of this landing, in marks?",
+      "answer": "340",
+      "tags": ["uncommenced-provision", "night-supplement"]
+    },
+    {
+      "id": "sc-005",
+      "case_ref": "MHR/2016/402",
+      "question": "Case MHR/2016/402. On 28 September 2016, with discharge commencing at 23:10, Vellisay Fisheries Limited (a body corporate) landed 3.6 tonnes gross of farmed produce at Vellisay, a scheduled harbour. The vessel occupied a powered berth. The quay is not a community quay. The operator's total gross landed weight at all scheduled harbours during 2015 was 640 tonnes. The operator held a Class A licence on 31 December 2018. The harbour master issued the notice of assessment on 10 October 2016. What is the levy charged in respect of this landing, in marks?",
+      "answer": "245",
+      "tags": ["appointed-day-boundary"]
+    },
+    {
+      "id": "sc-006",
+      "case_ref": "MHR/2019/113",
+      "question": "Case MHR/2019/113. On 12 April 2019, with discharge commencing at 10:00, Bryn Aldercott (a sole trader, not a body corporate) landed 12.0 tonnes gross of farmed produce at Dun Ardagh, a scheduled harbour. The vessel occupied a berth that is not a powered berth. The quay is a community quay. The operator's total gross landed weight at all scheduled harbours during 2018 was 30 tonnes. The operator held a Class A licence on 31 December 2018. The harbour master issued the notice of assessment on 3 May 2019. What is the levy charged in respect of this landing, in marks?",
+      "answer": "500",
+      "tags": ["repeal-no-saving", "community-quay"]
+    },
+    {
+      "id": "sc-007",
+      "case_ref": "MHR/2019/266",
+      "question": "Case MHR/2019/266. On 15 June 2019, with discharge commencing at 13:20, Marris Quinn (a sole trader, not a body corporate) landed 6.5 tonnes gross of farmed produce at Craighorn, a scheduled harbour. The vessel occupied a powered berth. The quay is not a community quay. The operator's total gross landed weight at all scheduled harbours during 2018 was 41 tonnes. The operator held a Class C licence on 31 December 2018. The harbour master issued the notice of assessment on 1 July 2019. What is the levy charged in respect of this landing, in marks?",
+      "answer": "365",
+      "tags": ["savings-provision"]
+    },
+    {
+      "id": "sc-008",
+      "case_ref": "MHR/2022/009",
+      "question": "Case MHR/2022/009. On 10 January 2022, with discharge commencing at 15:45, Marris Quinn (a sole trader, not a body corporate) landed 6.5 tonnes gross of farmed produce at Craighorn, a scheduled harbour. The vessel occupied a powered berth. The quay is not a community quay. The operator's total gross landed weight at all scheduled harbours during 2021 was 20 tonnes. The operator held a Class C licence on 31 December 2018. The harbour master issued the notice of assessment on 25 January 2022. What is the levy charged in respect of this landing, in marks?",
+      "answer": "330",
+      "tags": ["savings-sunset", "emergency-period", "revoked-order"]
+    },
+    {
+      "id": "sc-009",
+      "case_ref": "MHR/2021/551",
+      "question": "Case MHR/2021/551. On 4 December 2021, with discharge commencing at 02:15, Vellisay Fisheries Limited (a body corporate) landed 9.9 tonnes gross of farmed produce at Vellisay, a scheduled harbour. The vessel occupied a powered berth. The quay is not a community quay. The operator's total gross landed weight at all scheduled harbours during 2020 was 480 tonnes. The operator held a Class A licence on 31 December 2018. The harbour master issued the notice of assessment on 20 December 2021. What is the levy charged in respect of this landing, in marks?",
+      "answer": "585",
+      "tags": ["emergency-period", "night-supplement-90"]
+    },
+    {
+      "id": "sc-010",
+      "case_ref": "MHR/2022/118",
+      "question": "Case MHR/2022/118. On 15 March 2022, with discharge commencing at 08:30, Tolvern Shellfish Company (a body corporate) landed 4.2 tonnes gross of farmed produce at Tolvern, a scheduled harbour. The vessel occupied a berth that is not a powered berth. The quay is not a community quay. The operator's total gross landed weight at all scheduled harbours during 2021 was 260 tonnes. The operator held a Class A licence on 31 December 2018. The harbour master issued the notice of assessment on 30 March 2022. What is the levy charged in respect of this landing, in marks?",
+      "answer": "280",
+      "tags": ["post-expiry-revival"]
+    },
+    {
+      "id": "sc-011",
+      "case_ref": "MHR/2022/243",
+      "question": "Case MHR/2022/243. On 20 May 2022, with discharge commencing at 12:00, Kelvish Marine Holdings (a body corporate) landed 3.3 tonnes gross of farmed produce at Port Kelvish, a scheduled harbour. The vessel occupied a powered berth. The quay is not a community quay. The operator's total gross landed weight at all scheduled harbours during 2021 was 190 tonnes. The operator held a Class A licence on 31 December 2018. The harbour master issued the notice of assessment on 4 August 2022. What is the levy charged in respect of this landing, in marks?",
+      "answer": "310",
+      "tags": ["assessment-date-rounding", "midway-down"]
+    },
+    {
+      "id": "sc-012",
+      "case_ref": "MHR/2022/399",
+      "question": "Case MHR/2022/399. On 3 August 2022, with discharge commencing at 22:00, Kelvish Marine Holdings (a body corporate) landed 8.0 tonnes gross of farmed produce at Port Kelvish, a scheduled harbour. The vessel occupied a powered berth. The quay is not a community quay. The operator's total gross landed weight at all scheduled harbours during 2021 was 500 tonnes. The operator held a Class A licence on 31 December 2018. The harbour master issued the notice of assessment on 15 August 2022. What is the levy charged in respect of this landing, in marks?",
+      "answer": "680",
+      "tags": ["night-boundary-2200", "midway-down"]
+    },
+    {
+      "id": "sc-013",
+      "case_ref": "MHR/2022/456",
+      "question": "Case MHR/2022/456. On 9 September 2022, with discharge commencing at 05:00, Dun Ardagh Aquaculture Limited (a body corporate) landed 6.0 tonnes gross of farmed produce at Dun Ardagh, a scheduled harbour. The vessel occupied a berth that is not a powered berth. The quay is not a community quay. The operator's total gross landed weight at all scheduled harbours during 2021 was 410 tonnes. The operator held a Class A licence on 31 December 2018. The harbour master issued the notice of assessment on 1 October 2022. What is the levy charged in respect of this landing, in marks?",
+      "answer": "350",
+      "tags": ["night-boundary-0500"]
+    },
+    {
+      "id": "sc-014",
+      "case_ref": "MHR/2022/622",
+      "question": "Case MHR/2022/622. On 20 December 2022, with discharge commencing at 16:10, Erin Halloway (a sole trader, not a body corporate) landed 11.5 tonnes gross of farmed produce at Stranmere, a scheduled harbour. The vessel occupied a powered berth. The quay is a community quay. The operator's total gross landed weight at all scheduled harbours during 2021 was 320 tonnes. The operator held a Class A licence on 31 December 2018. The harbour master issued the notice of assessment on 10 January 2023. What is the levy charged in respect of this landing, in marks?",
+      "answer": "670",
+      "tags": ["revoked-order", "community-quay"]
+    },
+    {
+      "id": "sc-015",
+      "case_ref": "MHR/2023/077",
+      "question": "Case MHR/2023/077. On 14 February 2023, with discharge commencing at 09:00, Dun Ardagh Aquaculture Limited (a body corporate) landed 2.0 tonnes gross of farmed produce at Dun Ardagh, a scheduled harbour. The vessel occupied a berth that is not a powered berth. The quay is not a community quay. The operator's total gross landed weight at all scheduled harbours during 2022 was 700 tonnes. The operator held a Class A licence on 31 December 2018. The harbour master issued the notice of assessment on 1 March 2023. What is the levy charged in respect of this landing, in marks?",
+      "answer": "140",
+      "tags": ["rate-62", "whole-tonne-no-round-up"]
+    },
+    {
+      "id": "sc-016",
+      "case_ref": "MHR/2023/188",
+      "question": "Case MHR/2023/188. On 3 May 2023, with discharge commencing at 11:30, Tolvern Shellfish Company (a body corporate) landed 0.8 tonnes gross of farmed produce at Tolvern, a scheduled harbour. The vessel occupied a powered berth. The quay is not a community quay. The operator's total gross landed weight at all scheduled harbours during 2022 was 220 tonnes. The operator held a Class A licence on 31 December 2018. The harbour master issued the notice of assessment on 20 May 2023. What is the levy charged in respect of this landing, in marks?",
+      "answer": "180",
+      "tags": ["nil-chargeable-tonnage"]
+    },
+    {
+      "id": "sc-017",
+      "case_ref": "MHR/2024/044",
+      "question": "Case MHR/2024/044. On 8 February 2024, Craighorn Marine Produce Limited (a body corporate) made two landings of farmed produce at Craighorn, a scheduled harbour: the first with discharge commencing at 14:00 of 3.0 tonnes gross, and the second with discharge commencing at 20:00 of 5.0 tonnes gross. Both vessels occupied powered berths. Neither quay is a community quay. The operator's total gross landed weight at all scheduled harbours during 2023 was 350 tonnes. The operator held a Class A licence on 31 December 2018. The harbour master issued the notice of assessment on 1 March 2024. What is the total levy charged in respect of the landings described, in marks?",
+      "answer": "790",
+      "tags": ["aggregation", "multi-landing"]
+    },
+    {
+      "id": "sc-018",
+      "case_ref": "MHR/2024/121",
+      "question": "Case MHR/2024/121. On 20 March 2024, with discharge commencing at 10:15, Dun Ardagh Aquaculture Limited (a body corporate) landed 7.0 tonnes gross of farmed produce at Dun Ardagh, a scheduled harbour. The vessel occupied a berth that is not a powered berth. The quay is a community quay. The operator's total gross landed weight at all scheduled harbours during 2023 was 260 tonnes. The operator held a Class A licence on 31 December 2018. The harbour master issued the notice of assessment on 5 April 2024. What is the levy charged in respect of this landing, in marks?",
+      "answer": "450",
+      "tags": ["body-corporate-exclusion"]
+    },
+    {
+      "id": "sc-019",
+      "case_ref": "MHR/2024/126",
+      "question": "Case MHR/2024/126. On 21 March 2024, with discharge commencing at 03:00, Bryn Aldercott (a sole trader, not a body corporate) landed 7.0 tonnes gross of farmed produce at Dun Ardagh, a scheduled harbour. The vessel occupied a berth that is not a powered berth. The quay is a community quay. The operator's total gross landed weight at all scheduled harbours during 2023 was 210 tonnes. The operator held a Class A licence on 31 December 2018. The harbour master issued the notice of assessment on 5 April 2024. What is the levy charged in respect of this landing, in marks?",
+      "answer": "500",
+      "tags": ["community-quay-individual", "night-supplement-120"]
+    },
+    {
+      "id": "sc-020",
+      "case_ref": "MHR/2018/512",
+      "question": "Case MHR/2018/512. On 10 October 2018, with discharge commencing at 09:45, Erin Halloway (a sole trader, not a body corporate) landed 5.5 tonnes gross of farmed produce at Stranmere, a scheduled harbour. The vessel occupied a powered berth. The quay is a community quay. The operator's total gross landed weight at all scheduled harbours during 2017 was 300 tonnes. The operator held a Class A licence on 31 December 2018. The harbour master issued the notice of assessment on 1 November 2018. What is the levy charged in respect of this landing, in marks?",
+      "answer": "390",
+      "tags": ["pre-commencement-discount"]
+    },
+    {
+      "id": "sc-021",
+      "case_ref": "MHR/2016/291",
+      "question": "Case MHR/2016/291. On 4 July 2016, with discharge commencing at 12:30, Marris Quinn (a sole trader, not a body corporate) landed 10.0 tonnes gross of farmed produce at Craighorn, a scheduled harbour. The vessel occupied a berth that is not a powered berth. The quay is not a community quay. The operator's total gross landed weight at all scheduled harbours during 2015 was exactly 50.0 tonnes. The operator held a Class C licence on 31 December 2018. The harbour master issued the notice of assessment on 20 July 2016. What is the levy charged in respect of this landing, in marks?",
+      "answer": "350",
+      "tags": ["threshold-boundary-at"]
+    },
+    {
+      "id": "sc-022",
+      "case_ref": "MHR/2016/338",
+      "question": "Case MHR/2016/338. On 12 August 2016, with discharge commencing at 12:30, Marris Quinn (a sole trader, not a body corporate) landed 10.0 tonnes gross of farmed produce at Craighorn, a scheduled harbour. The vessel occupied a berth that is not a powered berth. The quay is not a community quay. The operator's total gross landed weight at all scheduled harbours during 2015 was 50.4 tonnes. The operator held a Class C licence on 31 December 2018. The harbour master issued the notice of assessment on 26 August 2016. What is the levy charged in respect of this landing, in marks?",
+      "answer": "445",
+      "tags": ["threshold-boundary-over"]
+    },
+    {
+      "id": "sc-023",
+      "case_ref": "MHR/2014/155",
+      "question": "Case MHR/2014/155. On 1 July 2014, with discharge commencing at 06:00, Vellisay Fisheries Limited (a body corporate) landed 15.0 tonnes gross of farmed produce at Vellisay, a scheduled harbour. The vessel occupied a powered berth. The quay is not a community quay. The operator's total gross landed weight at all scheduled harbours during 2013 was 500 tonnes. The operator held a Class A licence on 31 December 2018. The harbour master issued the notice of assessment on 15 July 2014. What is the levy charged in respect of this landing, in marks?",
+      "answer": "775",
+      "tags": ["rate-change-on-date"]
+    },
+    {
+      "id": "sc-024",
+      "case_ref": "MHR/2014/154",
+      "question": "Case MHR/2014/154. On 30 June 2014, with discharge commencing at 06:00, Vellisay Fisheries Limited (a body corporate) landed 15.0 tonnes gross of farmed produce at Vellisay, a scheduled harbour. The vessel occupied a powered berth. The quay is not a community quay. The operator's total gross landed weight at all scheduled harbours during 2013 was 500 tonnes. The operator held a Class A licence on 31 December 2018. The harbour master issued the notice of assessment on 15 July 2014. What is the levy charged in respect of this landing, in marks?",
+      "answer": "670",
+      "tags": ["rate-change-day-before"]
+    },
+    {
+      "id": "sc-025",
+      "case_ref": "MHR/2020/090",
+      "question": "Case MHR/2020/090. On 31 March 2020, with discharge commencing at 08:00, Erin Halloway (a sole trader, not a body corporate) landed 6.6 tonnes gross of farmed produce at Stranmere, a scheduled harbour. The vessel occupied a powered berth. The quay is a community quay. The operator's total gross landed weight at all scheduled harbours during 2019 was 150 tonnes. The operator held a Class A licence on 31 December 2018. The harbour master issued the notice of assessment on 20 April 2020. What is the levy charged in respect of this landing, in marks?",
+      "answer": "370",
+      "tags": ["order-effect-date-before"]
+    },
+    {
+      "id": "sc-026",
+      "case_ref": "MHR/2020/092",
+      "question": "Case MHR/2020/092. On 1 April 2020, with discharge commencing at 08:00, Erin Halloway (a sole trader, not a body corporate) landed 6.6 tonnes gross of farmed produce at Stranmere, a scheduled harbour. The vessel occupied a powered berth. The quay is a community quay. The operator's total gross landed weight at all scheduled harbours during 2019 was 150 tonnes. The operator held a Class A licence on 31 December 2018. The harbour master issued the notice of assessment on 20 April 2020. What is the levy charged in respect of this landing, in marks?",
+      "answer": "410",
+      "tags": ["order-effect-date-on"]
+    },
+    {
+      "id": "sc-027",
+      "case_ref": "MHR/2013/301",
+      "question": "Case MHR/2013/301. On 2 June 2013, with discharge commencing at 10:00, Marris Quinn (a sole trader, not a body corporate) landed 4.5 tonnes gross of farmed produce at Craighorn, a scheduled harbour. The vessel occupied a berth that is not a powered berth. The quay is not a community quay. The operator's total gross landed weight at all scheduled harbours during 2012 was 12 tonnes. The operator held a Class C licence on 31 December 2018. Following an audit, the harbour master issued the notice of assessment for this landing on 9 September 2022. What is the levy charged in respect of this landing, in marks?",
+      "answer": "160",
+      "tags": ["late-assessment", "assessment-date-rounding"]
+    },
+    {
+      "id": "sc-028",
+      "case_ref": "MHR/2024/287",
+      "question": "Case MHR/2024/287. Craighorn Marine Produce Limited (a body corporate) made two landings of farmed produce at Craighorn, a scheduled harbour: the first on 11 June 2024 with discharge commencing at 23:30 of 2.0 tonnes gross, and the second on 12 June 2024 with discharge commencing at 04:00 of 4.0 tonnes gross. Both vessels occupied powered berths. Neither quay is a community quay. The operator's total gross landed weight at all scheduled harbours during 2023 was 400 tonnes. The operator held a Class A licence on 31 December 2018. The harbour master issued the notice of assessment on 1 July 2024. What is the total levy charged in respect of the landings described, in marks?",
+      "answer": "910",
+      "tags": ["aggregation-overnight", "night-supplement-per-landing"]
+    },
+    {
+      "id": "sc-029",
+      "case_ref": "MHR/2023/104",
+      "question": "Case MHR/2023/104. On 5 March 2023, Craighorn Marine Produce Limited (a body corporate) made two landings of farmed produce at Craighorn, a scheduled harbour: the first with discharge commencing at 08:00 of 3.0 tonnes gross, and the second with discharge commencing at 18:00 of 5.0 tonnes gross. Both vessels occupied powered berths. Neither quay is a community quay. The operator's total gross landed weight at all scheduled harbours during 2022 was 380 tonnes. The operator held a Class A licence on 31 December 2018. The harbour master issued the notice of assessment on 20 March 2023. What is the total levy charged in respect of the landings described, in marks?",
+      "answer": "730",
+      "tags": ["no-aggregation-pre-2024", "separate-rounding"]
+    },
+    {
+      "id": "sc-030",
+      "case_ref": "MHR/2021/377",
+      "question": "Case MHR/2021/377. On 15 September 2021, with discharge commencing at 01:00, Marris Quinn (a sole trader, not a body corporate) landed 8.4 tonnes gross of farmed produce at Craighorn, a scheduled harbour. The vessel occupied a powered berth. The quay is a community quay. The operator's total gross landed weight at all scheduled harbours during 2020 was 47 tonnes. The operator held a Class C licence on 31 December 2018. The harbour master issued the notice of assessment on 2 October 2021. What is the levy charged in respect of this landing, in marks?",
+      "answer": "355",
+      "tags": ["emergency-period", "savings-provision", "community-quay", "night-supplement-90"]
+    }
+  ]
+}

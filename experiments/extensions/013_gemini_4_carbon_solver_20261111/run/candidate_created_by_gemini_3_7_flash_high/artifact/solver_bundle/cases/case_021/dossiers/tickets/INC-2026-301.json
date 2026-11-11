@@ -1,0 +1,11 @@
+{
+  "ticket_id": "INC-2026-301",
+  "service": "managed-relational-db",
+  "title": "Unscheduled Outage on managed-relational-db due to storage control plane crash",
+  "opened_at": "2026-04-07T15:13:00Z",
+  "closed_at": "2026-04-07T15:38:00Z",
+  "reported_by": "Automated Health Probe",
+  "telemetry_error_rate_pct": 99.9,
+  "details": "Storage volume orchestrator deadlocked causing API requests to fail with HTTP 500 for 25 minutes.",
+  "status": "CLOSED"
+}

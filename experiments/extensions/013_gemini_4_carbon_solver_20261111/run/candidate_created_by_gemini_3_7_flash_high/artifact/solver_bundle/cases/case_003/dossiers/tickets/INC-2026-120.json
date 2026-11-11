@@ -1,0 +1,11 @@
+{
+  "ticket_id": "INC-2026-120",
+  "service": "core-compute-cluster",
+  "title": "Unscheduled Outage on core-compute-cluster due to storage control plane crash",
+  "opened_at": "2026-04-05T05:48:00Z",
+  "closed_at": "2026-04-05T11:48:00Z",
+  "reported_by": "Automated Health Probe",
+  "telemetry_error_rate_pct": 78.5,
+  "details": "Storage volume orchestrator deadlocked causing API requests to fail with HTTP 500 for 360 minutes.",
+  "status": "CLOSED"
+}

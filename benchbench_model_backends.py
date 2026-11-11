@@ -46,8 +46,22 @@ def codex_broker_config_args() -> list[str]:
 
 KNOWN_ANTIGRAVITY_MODELS = {
     "current": (None, "Antigravity current model"),
-    # A contained live canary established the provider's runtime-log label;
-    # keep it bound so a silent resolver fallback becomes a typed mismatch.
+    # Contained live canaries established the provider's runtime-log labels;
+    # keep them bound so a silent resolver fallback becomes a typed mismatch.
+    "carbon": ("Gemini 4 Carbon (High)", "Gemini 4 Carbon (High)"),
+    "carbon-high": ("Gemini 4 Carbon (High)", "Gemini 4 Carbon (High)"),
+    "gemini-4-carbon": ("Gemini 4 Carbon (High)", "Gemini 4 Carbon (High)"),
+    "gemini-4-carbon-high": ("Gemini 4 Carbon (High)", "Gemini 4 Carbon (High)"),
+    "gemini-4-carbon-medium": ("Gemini 4 Carbon (Medium)", "Gemini 4 Carbon (Medium)"),
+    "gemini-4-carbon-low": ("Gemini 4 Carbon (Low)", "Gemini 4 Carbon (Low)"),
+    "argon": ("Gemini 4 Argon (High)", "Gemini 4 Argon (High)"),
+    "argon-high": ("Gemini 4 Argon (High)", "Gemini 4 Argon (High)"),
+    "gemini-4-argon": ("Gemini 4 Argon (High)", "Gemini 4 Argon (High)"),
+    "gemini-4-argon-high": ("Gemini 4 Argon (High)", "Gemini 4 Argon (High)"),
+    "gemini-4-argon-medium": ("Gemini 4 Argon (Medium)", "Gemini 4 Argon (Medium)"),
+    "gemini-4-argon-low": ("Gemini 4 Argon (Low)", "Gemini 4 Argon (Low)"),
+    # `halcyon` was the pre-release Antigravity CLI alias for Gemini 4 Argon;
+    # retain its historical expected label and artifact identity for Exp 014.
     "halcyon": ("Halcyon", "Halcyon"),
     "halcyon-high": ("Halcyon", "Halcyon"),
     "gemini-3.8-flash": ("Gemini 3.8 Flash (High)", "Gemini 3.8 Flash (High)"),
@@ -76,6 +90,18 @@ KNOWN_ANTIGRAVITY_MODELS = {
 # retained in historical sweep manifests, while `agy models` exposes the
 # concrete identifiers below.
 ANTIGRAVITY_CLI_MODELS = {
+    "carbon": "gemini-4-carbon-high",
+    "carbon-high": "gemini-4-carbon-high",
+    "gemini-4-carbon": "gemini-4-carbon-high",
+    "gemini-4-carbon-high": "gemini-4-carbon-high",
+    "gemini-4-carbon-medium": "gemini-4-carbon-medium",
+    "gemini-4-carbon-low": "gemini-4-carbon-low",
+    "argon": "gemini-4-argon-high",
+    "argon-high": "gemini-4-argon-high",
+    "gemini-4-argon": "gemini-4-argon-high",
+    "gemini-4-argon-high": "gemini-4-argon-high",
+    "gemini-4-argon-medium": "gemini-4-argon-medium",
+    "gemini-4-argon-low": "gemini-4-argon-low",
     "halcyon": "halcyon",
     "halcyon-high": "halcyon",
     "gemini-3.8-flash": "gemini-3.8-flash-high",
@@ -122,6 +148,7 @@ KNOWN_CURSOR_MODELS = {
     "glm-5.3": ("glm-5.2-high", "GLM 5.2 (High)"),
     "glm-5.2": ("glm-5.2-high", "GLM 5.2 (High)"),
     "glm-5.2-high": ("glm-5.2-high", "GLM 5.2 (High)"),
+    "glm-5-2-high": ("glm-5.2-high", "GLM 5.2 (High)"),
     "glm-5.2-max": ("glm-5.2-max", "GLM 5.2 (Max)"),
     "claude-opus-5": ("claude-opus-5-thinking-high", "Claude Opus 5 Thinking (High)"),
     "opus-5": ("claude-opus-5-thinking-high", "Claude Opus 5 Thinking (High)"),

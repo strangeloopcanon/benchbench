@@ -1,0 +1,13 @@
+{
+  "ticket_id": "INC-2026-320",
+  "service": "distributed-object-storage",
+  "title": "Maintenance Window Execution & Overrun on distributed-object-storage",
+  "opened_at": "2026-04-04T14:06:00Z",
+  "closed_at": "2026-04-04T21:06:00Z",
+  "reported_by": "Cloud Operations Automated Dispatch",
+  "associated_maintenance_id": "MAINT-2026-200",
+  "notice_sent_timestamp": "2026-03-30T17:06:00Z",
+  "scheduled_minutes": 60,
+  "actual_minutes": 420,
+  "status": "CLOSED"
+}

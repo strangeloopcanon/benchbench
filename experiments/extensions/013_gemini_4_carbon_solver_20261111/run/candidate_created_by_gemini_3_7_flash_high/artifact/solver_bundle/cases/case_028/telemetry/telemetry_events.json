@@ -1,0 +1,56 @@
+{
+  "case_id": "case_028",
+  "reporting_period": "2026-04",
+  "incident_events": [
+    {
+      "incident_id": "INC-2026-370",
+      "service_id": "managed-relational-db",
+      "start_time": "2026-04-07T02:32:00Z",
+      "end_time": "2026-04-07T05:32:00Z",
+      "duration_minutes": 180,
+      "error_rate_pct": 78.5,
+      "availability_zone": "us-east-1b",
+      "scenario_type": "PARTIAL_CUSTOMER_FAULT"
+    },
+    {
+      "incident_id": "INC-2026-371",
+      "service_id": "edge-api-gateway",
+      "start_time": "2026-04-12T18:20:00Z",
+      "end_time": "2026-04-12T19:20:00Z",
+      "duration_minutes": 60,
+      "error_rate_pct": 42.0,
+      "availability_zone": "multi-az-cluster",
+      "scenario_type": "STANDARD_PROVIDER_OUTAGE"
+    },
+    {
+      "incident_id": "INC-2026-372",
+      "service_id": "core-compute-cluster",
+      "start_time": "2026-04-16T05:45:00Z",
+      "end_time": "2026-04-16T07:15:00Z",
+      "duration_minutes": 90,
+      "error_rate_pct": 42.0,
+      "availability_zone": "us-east-1b",
+      "scenario_type": "PARTIAL_CUSTOMER_FAULT"
+    },
+    {
+      "incident_id": "INC-2026-373",
+      "service_id": "distributed-object-storage",
+      "start_time": "2026-04-21T03:15:00Z",
+      "end_time": "2026-04-21T05:15:00Z",
+      "duration_minutes": 120,
+      "error_rate_pct": 100.0,
+      "availability_zone": "multi-az-cluster",
+      "scenario_type": "PARTIAL_CUSTOMER_FAULT"
+    },
+    {
+      "incident_id": "INC-2026-374",
+      "service_id": "distributed-object-storage",
+      "start_time": "2026-04-25T14:22:00Z",
+      "end_time": "2026-04-25T18:22:00Z",
+      "duration_minutes": 240,
+      "error_rate_pct": 99.9,
+      "availability_zone": "multi-az-cluster",
+      "scenario_type": "FORCE_MAJEURE_WITH_RTO"
+    }
+  ]
+}

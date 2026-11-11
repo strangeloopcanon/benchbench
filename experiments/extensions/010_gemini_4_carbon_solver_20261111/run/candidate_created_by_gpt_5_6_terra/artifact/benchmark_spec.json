@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "name": "Counterfactual Firewall Policy Synthesis",
+  "short_name": "CFPS",
+  "version": "1.0",
+  "capability_claim": "Faithful executable modeling and exact optimization of compositional access-policy constraints.",
+  "modality": "structured text / JSONL",
+  "instance_count_private_sample": 30,
+  "solver_access": "Only solver_bundle/ is solver-visible; it contains the complete rules and public instance data.",
+  "task": "Choose a minimum-cost permission-revocation set that keeps all services operational and blocks all attacks.",
+  "answer_format": "A comma-separated, lexicographically increasing permission tuple without spaces, or NONE.",
+  "objectives_in_order": [
+    "minimum total revocation cost",
+    "minimum number of revoked permissions",
+    "lexicographically smallest increasing tuple of permission names"
+  ],
+  "grading": {
+    "kind": "deterministic exact item-level match",
+    "report_schema_version": 2,
+    "primary_metric": "accuracy"
+  },
+  "generation": {
+    "command": "<local-home>/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/bin/python3.12 generator.py --sample-count 30 --seed 20260516 --out-dir .",
+    "deterministic": true,
+    "dependencies": ["Python 3.12 standard library"]
+  },
+  "nearest_existing_benchmark_families": ["BIG-bench program reasoning", "constraint optimization", "small operations-research coding tasks"],
+  "novelty_claim": "CFPS uses a compact policy DSL whose asymmetric service and attack semantics create coupled safety and interdiction constraints; it scores the exact canonical optimum rather than explanation quality or generic code output.",
+  "external_solvability": "All permission costs and all recipe/channel structures are in the solver packet. A qualified solver can evaluate every one of the finite 2^18 revocation sets (or encode the same Boolean optimization in SAT/ILP), so the optimum and tie-break are identifiable without private information."
+}

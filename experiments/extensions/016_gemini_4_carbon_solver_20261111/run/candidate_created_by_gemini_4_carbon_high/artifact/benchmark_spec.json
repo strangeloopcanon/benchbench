@@ -1,0 +1,63 @@
+{
+  "schema_version": 2,
+  "benchmark_id": "holonomy_weave",
+  "name": "HolonomyWeave",
+  "title": "HolonomyWeave: Dihedral Gauge Parallel-Transport Optimization",
+  "version": "1.0.0",
+  "domain": "discrete_mathematics_and_combinatorial_optimization",
+  "task_type": "exact_integer_optimization",
+  "answer_type": "integer",
+  "default_seed": 20260516,
+  "default_sample_count": 30,
+  "description": "Parametric discrete gauge theory benchmark evaluating exact multi-sector parallel-transport shortest walks over finite abelian and non-abelian generalized dihedral fiber bundles D_M = Z_2 |x Z_M on gauge-scrambled and potential-twisted directed weaves.",
+  "entrypoints": {
+    "generator": {
+      "script": "generator.py",
+      "cli_example": "python3 generator.py --sample-count 30 --seed 20260516 --out-dir ."
+    },
+    "verifier": {
+      "script": "verifier.py",
+      "cli_example": "python3 verifier.py --root ."
+    },
+    "scorer": {
+      "script": "scorer.py",
+      "cli_example": "python3 scorer.py --gold gold_private_sample.jsonl --predictions predictions.jsonl --out score_report.json"
+    }
+  },
+  "files": {
+    "items": "solver_bundle/items_private_sample.jsonl",
+    "gold": "gold_private_sample.jsonl",
+    "solver_manifest": "solver_bundle/SOLVER_MANIFEST.json",
+    "solver_readme": "solver_bundle/README.md",
+    "solver_packet": "solver_bundle/solver_packet.md",
+    "validation_report": "validation_report.md",
+    "failure_modes": "failure_modes.md"
+  },
+  "tiers": [
+    {
+      "name": "tier1_tractable",
+      "count_in_default_sample": 6,
+      "index_range": [0, 5],
+      "description": "Abelian Z_M parallel-transport weaves (N=6, M in {5,7}) with braided strands, cross-weft bridges, and single plaquette winding."
+    },
+    {
+      "name": "tier2_intermediate",
+      "count_in_default_sample": 12,
+      "index_range": [6, 17],
+      "description": "Two-stage toroidal abelian weaves (N=8, M in {9,11}) featuring competing positive and counter-winding plaquette loops where modular wrap-around strictly beats monotone forward paths."
+    },
+    {
+      "name": "tier3_holonomy",
+      "count_in_default_sample": 12,
+      "index_range": [18, 29],
+      "description": "Non-abelian dihedral gauge weaves D_M = Z_2 |x Z_M (N=9, M in {7,9}) with reflection twists, chiral cross-wefts, and vertex gauge conjugation requiring symmetry-breaking double-reflection conjugation."
+    }
+  ],
+  "contracts": {
+    "item_jsonl_required_keys": ["id", "tier", "prompt", "graph"],
+    "gold_jsonl_exact_keys": ["id", "answer"],
+    "prediction_jsonl_required_keys": ["id", "answer"],
+    "score_output_required_keys": ["schema_version", "total", "correct", "accuracy"],
+    "solver_bundle_isolated": true
+  }
+}

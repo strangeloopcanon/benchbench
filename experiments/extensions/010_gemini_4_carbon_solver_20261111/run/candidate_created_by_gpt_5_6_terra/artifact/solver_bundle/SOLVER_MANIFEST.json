@@ -1,0 +1,9 @@
+{
+  "answer_format": "comma-separated increasing permission names, or NONE",
+  "benchmark": "cfps-v1",
+  "item_count": 30,
+  "item_file": "items_private_sample.jsonl",
+  "public_assets": [],
+  "schema_version": 1,
+  "solver_instructions": "README.md"
+}

@@ -1,0 +1,6 @@
+receipt_id=reifor_0008_R1 | date=2026-04-13 | merchant="Station Cafe" | ccy=EUR | amount=159.22 | note="ok" | cat=AIR
+receipt_id=reifor_0008_R2 | date=2026-04-13 | cat=GROUND | merchant="Station Cafe" | ccy=EUR | amount=159.22
+receipt_id=reifor_0008_R3 | date=2026-04-15 | ccy=USD | amount=128.05 | cat=AIR | merchant="Sunrise Diner"
+receipt_id=reifor_0008_R4 | date=2026-04-12 | cat=AIR | note="summary" | amount=515.21 | merchant="AeroFly" | ccy=AUD
+receipt_id=reifor_0008_R5 | date=2026-04-13 | merchant="Alpine Hotel" | tip=9.10 | ccy=USD | cat=MEALS | amount=35.11
+receipt_id=reifor_0008_R6 | date=2026-04-15 | merchant="CityRail" | nights=2 | ccy=JPY | amount=610.56 | cat=LODGING

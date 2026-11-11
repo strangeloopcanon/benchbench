@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "benchmark": "holonomy_weave",
+  "title": "HolonomyWeave",
+  "item_count": 30,
+  "items_file": "items_private_sample.jsonl",
+  "readme_file": "README.md",
+  "solver_packet_file": "solver_packet.md",
+  "files": [
+    "README.md",
+    "SOLVER_MANIFEST.json",
+    "items_private_sample.jsonl",
+    "solver_packet.md"
+  ],
+  "answer_schema": {
+    "format": "jsonl",
+    "row_keys": [
+      "id",
+      "answer"
+    ],
+    "id_type": "string",
+    "answer_type": "integer"
+  },
+  "contains_gold_answers": false,
+  "network_access_required": false
+}

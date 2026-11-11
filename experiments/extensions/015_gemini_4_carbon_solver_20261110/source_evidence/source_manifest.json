@@ -1,0 +1,12 @@
+[
+  {
+    "artifact_id": "codex__gpt_5_2",
+    "display_model": "gpt-5.2",
+    "effort": "high",
+    "model": "gpt-5.2",
+    "phase": "creator",
+    "requested_provider_model": "gpt-5.2",
+    "returncode": 0,
+    "tokens_used": 0
+  }
+]

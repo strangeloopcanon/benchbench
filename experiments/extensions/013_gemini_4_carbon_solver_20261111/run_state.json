@@ -1,0 +1,70 @@
+{
+  "config": {
+    "custom_source_panel_acknowledged": true,
+    "dispatch_ceiling_overshoot_acknowledged": true,
+    "harness_digest": "b2265c5c8e85f00cf88ad2ff338050fbb6ebc8b9df5aceb73b797825a668709e",
+    "max_total_tokens": 1500000,
+    "panel_expansion": true,
+    "provider_preflight": [
+      {
+        "artifact_id": "antigravity__gemini_4_carbon_high",
+        "binary": "agy",
+        "display_model": "Gemini 4 Carbon (High)",
+        "executable": "<local-home>/.local/bin/agy",
+        "inference_attempted": false,
+        "model": "gemini-4-carbon-high",
+        "model_available": true,
+        "model_listing_command": [
+          "<local-home>/.local/bin/agy",
+          "models"
+        ],
+        "model_listing_returncode": 0,
+        "model_listing_stderr_bytes": 29,
+        "model_listing_stderr_sha256": "53f588bc9a928f4a66908deacaca57dddc7e7ce177a0cc3586b5a501be26e1e8",
+        "model_listing_stdout_bytes": 543,
+        "model_listing_stdout_sha256": "fbb12cfffdb1c58bab9eaa15071dc4f8301e87ca1ebd800b0f2c086446c54f83",
+        "model_listing_supported": true,
+        "preflight_scope": "ambient_catalog_only",
+        "probe_stderr_bytes": 3319,
+        "probe_stderr_sha256": "e92946f85cec63eca61f93014ca49f53b1e84277eac7954e7fac7d8d712940fd",
+        "probe_stdout_bytes": 0,
+        "probe_stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "provider": "antigravity",
+        "requested_effort": null,
+        "requested_provider_model": "gemini-4-carbon-high",
+        "returncode": 0,
+        "state": "binary_ready"
+      }
+    ],
+    "retry_failed_source_cells": false,
+    "schema_version": 1,
+    "solver": "antigravity__gemini_4_carbon_high__effort_high",
+    "source_candidates": [
+      {
+        "artifact": "./experiments/013_gemini_37_creator_20260813/run/candidate_created_by_antigravity__gemini_3_7_flash_high__effort_high/attempt_0001/artifact",
+        "candidate_digest": "ff8588e1e55b3d1a8d5d67fb049df1cb17202913e7427d63b38db6863949f2c2",
+        "creator_call_id": "antigravity__gemini_3_7_flash_high__effort_high",
+        "creator_model": "gemini-3.7-flash-high",
+        "validation_report_sha256": "c19c75d8638193b3ba5a8752f0f72e2ad8b86c21da6c0a7e192ee5323ca0d90f",
+        "validation_sha256": "0b8841a7d9abb98cc9d7802f789e2c11f59dbce06a7891da6fed87867dd5c98b"
+      }
+    ],
+    "source_manifest_sha256": "2f8d8ae1c52ee1c3dbd6c4fd3f4d26330c674f5d4ae686956481b37821422d6c",
+    "source_panel_policy": "custom",
+    "source_run_root": "./experiments/013_gemini_37_creator_20260813",
+    "source_run_state_sha256": "93ea6601b16c9df59fe779607001c1aeea4a657d2efe9887b3eb97e5be1bfbb5",
+    "source_snapshot_digest": "8824e3affce7e5231e0cd5155afdfe913f0bb31023a52116977a82d6822e4c9e",
+    "timeout_seconds": 1500,
+    "unmetered_cost_acknowledged": true,
+    "zero_telemetry_reservation": 500000
+  },
+  "config_fingerprint": "3a403bcf0fbf04046def577778c3afa8afce470c676dd0f181130d100568221f",
+  "schema_version": 1,
+  "source_snapshot": {
+    "digest": "b2265c5c8e85f00cf88ad2ff338050fbb6ebc8b9df5aceb73b797825a668709e",
+    "file_count": 10,
+    "manifest_path": "source_snapshot/manifest.json",
+    "path": "source_snapshot",
+    "schema_version": "benchbench.source_snapshot/v1"
+  }
+}

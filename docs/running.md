@@ -24,18 +24,18 @@ the execution boundary depends on macOS Seatbelt.
 
 The default panel uses the exact locally advertised provider IDs below. The
 `@effort` suffix is BenchBench's per-model override; it is removed before the
-model ID is passed to the provider CLI. (`agy:halcyon` maps to the
-local Antigravity CLI target `halcyon`, which does not accept an `--effort`
-flag.)
+model ID is passed to the provider CLI.
 
 | requested panel member | BenchBench spec | provider catalog ID | effective effort |
 |---|---|---|---|
-| Codex GPT-5.6 Sol high | `gpt-5.6-sol@high` | `gpt-5.6-sol` | `high` |
-| Codex GPT-5.6 Terra extra high | `gpt-5.6-terra@xhigh` | `gpt-5.6-terra` | `xhigh` |
-| Gemini 3.6 Flash | `agy:gemini-3.6-flash-high@high` | `gemini-3.6-flash-high` | `high` |
-| Gemini 3.7 Flash | `agy:gemini-3.7-flash-high@high` | `gemini-3.7-flash-high` | `high` |
-| Halcyon | `agy:halcyon@high` | `halcyon` | `high` (CLI flag omitted) |
-| Claude Opus 5 | `cursor:claude-opus-5@high` | `claude-opus-5-thinking-high` | `high` |
+| Codex GPT-6-Sol high | `gpt-6-sol@high` | `gpt-6-sol` | `high` |
+| Gemini 4 Carbon (High) | `agy:gemini-4-carbon-high@high` | `gemini-4-carbon-high` | `high` |
+| Gemini 4 Argon (High) | `agy:gemini-4-argon-high@high` | `gemini-4-argon-high` | `high` |
+| Gemini 3.8 Flash (High) | `agy:gemini-3.8-flash-high@high` | `gemini-3.8-flash-high` | `high` |
+| Claude Opus 5.5 (High) | `cursor:claude-opus-5-5-high@high` | `claude-opus-5-5-high` | `high` |
+| GLM 5.2 (High) | `cursor:glm-5-2-high@high` | `glm-5.2-high` | `high` |
+
+*(Historical note: `agy:halcyon` was the pre-release Antigravity CLI alias for `Gemini 4 Argon` in Experiment 014 and remains bound in historical sweep manifests.)*
 
 Run this setup-only check before any experiment. It inspects CLI help and model
 catalogs without submitting an inference prompt or creating a run directory:
@@ -51,7 +51,7 @@ solver prompt and never creates a run root. Codex catalog lookup uses its live
 boundary; Antigravity and Cursor catalog checks are explicitly recorded as
 `ambient_catalog_only` and do not prove live credential containment. Contained
 live canaries established Antigravity's runtime labels as
-`Gemini 3.6 Flash (High)`, `Gemini 3.7 Flash (High)`, and `Halcyon`; live
+`Gemini 4 Carbon (High)`, `Gemini 4 Argon (High)`, and `Gemini 3.8 Flash (High)`; live
 calls must match the label for the exact requested ID.
 
 ## Live Run Boundary
@@ -71,7 +71,7 @@ explicit total-token ceiling, run:
 TOKEN_CEILING=20000000 \
 uv run python run_broad_three_model_sweep.py \
   --run-root experiments/custom_audited_panel_YYYYMMDD_HHMMSS \
-  --models agy:gemini-3.6-flash-high@high agy:gemini-3.7-flash-high@high agy:halcyon@high \
+  --models agy:gemini-4-carbon-high@high agy:gemini-4-argon-high@high agy:gemini-3.8-flash-high@high \
   --max-total-tokens "$TOKEN_CEILING" \
   --zero-telemetry-reservation 5000000 \
   --allow-dispatch-ceiling-overshoot \

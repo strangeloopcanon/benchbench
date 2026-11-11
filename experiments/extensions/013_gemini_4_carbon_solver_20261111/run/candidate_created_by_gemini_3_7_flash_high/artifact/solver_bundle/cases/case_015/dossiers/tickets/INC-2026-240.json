@@ -1,0 +1,11 @@
+{
+  "ticket_id": "INC-2026-240",
+  "service": "edge-api-gateway",
+  "title": "Intermittent latency alerts on edge-api-gateway",
+  "opened_at": "2026-04-03T16:12:00Z",
+  "closed_at": "2026-04-03T20:12:00Z",
+  "reported_by": "Customer DevOps Monitoring",
+  "telemetry_error_rate_pct": 0.5,
+  "provider_finding": "Observed error rate was 0.5%, which is below the 5.0% Outage threshold defined in Exhibit A \u00a72.1. No compensable downtime accrued.",
+  "status": "RESOLVED_NON_SLA_IMPACTING"
+}

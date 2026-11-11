@@ -1,0 +1,11 @@
+{
+  "ticket_id": "INC-2026-293",
+  "service": "managed-relational-db",
+  "title": "Critical degradation and crash loop on managed-relational-db",
+  "opened_at": "2026-04-12T04:21:00Z",
+  "closed_at": "2026-04-12T05:51:00Z",
+  "reported_by": "Customer Site Reliability Lead",
+  "associated_rca": "RCA-2026-303",
+  "telemetry_error_rate_pct": 78.5,
+  "status": "CLOSED_WITH_RCA"
+}

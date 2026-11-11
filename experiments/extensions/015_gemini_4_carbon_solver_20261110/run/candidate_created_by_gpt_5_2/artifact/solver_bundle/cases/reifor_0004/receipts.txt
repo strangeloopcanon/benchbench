@@ -1,0 +1,11 @@
+receipt_id=reifor_0004_R1 | date=2026-04-24 | cat=GROUND | ccy=USD | amount=19.71 | merchant="QuickFuel"
+receipt_id=reifor_0004_R2 | date=2026-04-24 | ccy=USD | amount=29.66 | flags=DUPLICATE | cat=GROUND | merchant="Station Cafe"
+receipt_id=reifor_0004_R3 | date=2026-04-24 | merchant="Alpine Hotel" | cat=? | tip=6.45 | amount=70.95 | ccy=AUD
+receipt_id=reifor_0004_R4 | date=2026-04-24 | note="late_scan" | ccy=GBP | cat=MISC | amount=27.64 | merchant="CityRail"
+receipt_id=reifor_0004_R5 | date=2026-04-23 | merchant="Metro Cab" | cat=MEALS | ccy=USD | amount=39.41 | flags=DUPLICATE
+receipt_id=reifor_0004_R6 | date=2026-04-22 | ccy=EUR | merchant="Station Cafe" | amount=340.36 | cat=LODGING
+receipt_id=reifor_0004_R7 | date=2026-04-25 | cat=AIR | amount=572.94 | ccy=GBP | merchant="Metro Cab"
+receipt_id=reifor_0004_R8 | date=2026-04-23 | nights=1 | merchant="Metro Cab" | cat=LODGING | amount=? | ccy=USD
+receipt_id=reifor_0004_R9 | date=2026-04-23 | merchant="Sunrise Diner" | cat=MEALS | amount=? | ccy=EUR
+receipt_id=reifor_0004_R10 | date=2026-04-24 | ccy=JPY | amount=47.27 | cat=MEALS | merchant="CloudNine Inn"
+receipt_id=reifor_0004_R11 | date=2026-04-22 | cat=? | ccy=EUR | merchant="QuickFuel" | note="fax_copy" | amount=34.69

@@ -1,0 +1,7 @@
+receipt_id=reifor_0005_R1 | date=2026-05-20 | cat=LODGING | ccy=GBP | nights=3 | amount=138.25 | merchant="QuickFuel"
+receipt_id=reifor_0005_R2 | date=2026-05-20 | ccy=GBP | note="summary" | cat=GROUND | amount=138.25 | merchant="QuickFuel" | flags=VOID
+receipt_id=reifor_0005_R3 | date=2026-05-18 | ccy=CAD | amount=281.95 | cat=AIR | merchant="QuickFuel"
+receipt_id=reifor_0005_R4 | date=2026-05-20 | amount=65.91 | ccy=JPY | cat=MISC | merchant="AeroFly"
+receipt_id=reifor_0005_R5 | date=2026-05-19 | cat=GROUND | ccy=JPY | merchant="AeroFly" | amount=19.86
+receipt_id=reifor_0005_R6 | date=2026-05-17 | amount=675.01 | ccy=JPY | merchant="Harbor Bistro" | cat=AIR | note="summary"
+receipt_id=reifor_0005_R7 | date=2026-05-17 | merchant="Sunrise Diner" | amount=712.63 | ccy=GBP | cat=AIR | note="fax_copy"

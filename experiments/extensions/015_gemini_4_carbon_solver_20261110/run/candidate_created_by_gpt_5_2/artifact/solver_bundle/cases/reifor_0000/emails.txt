@@ -1,0 +1,11 @@
+Subject: Reimbursement review for reifor_0000
+
+Hi,
+I reviewed the attached receipts against the policy excerpt.
+
+Notes:
+- APPROVE RECEIPT reifor_0000_R5 [FULL]
+- APPROVE RECEIPT reifor_0000_R3 [FULL]
+
+Thanks,
+Casey (Ops)

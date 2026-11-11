@@ -70,6 +70,7 @@ def generated_code_profile(
     allow_user_preferences: bool = False,
     allow_system_sockets: bool = False,
     allow_subprocesses: bool = False,
+    allow_pseudo_tty: bool = False,
 ) -> str:
     """Return a restrictive Seatbelt profile for generated package commands."""
 
@@ -117,6 +118,14 @@ def generated_code_profile(
         clauses.append("(allow user-preference-read)")
     if allow_system_sockets:
         clauses.append("(allow system-socket)")
+    if allow_pseudo_tty:
+        clauses.extend(
+            [
+                "(allow pseudo-tty)",
+                '(allow file-read* (literal "/dev"))',
+                '(allow file-read* file-write* file-ioctl (literal "/dev/ptmx") (literal "/dev/tty") (regex #"^/dev/ttys[0-9]+$"))',
+            ]
+        )
     clauses.extend(
         [
             '(allow file-read-metadata (literal "/Users"))',
@@ -302,6 +311,12 @@ def load_cursor_access_token() -> str:
     if completed.returncode != 0 or not token or "\n" in token:
         raise SandboxUnavailable("Cursor login lacks a brokerable access token")
     return token
+
+
+def _has_antigravity_token_file(original: dict[str, str]) -> bool:
+    original_home = Path(original.get("HOME", str(Path.home())))
+    source = original_home / ".gemini" / "antigravity-cli" / "antigravity-oauth-token"
+    return source.is_file() and not source.is_symlink()
 
 
 def antigravity_token_source(original: dict[str, str]) -> Path:
@@ -499,6 +514,18 @@ def isolated_provider_path(binary: str, scratch: Path):
         # The PATH entry is a small launcher whose Node runtime and bundled
         # sandbox live in this versioned, read-only installation tree.
         extra_reads.append(Path.home() / ".local" / "share" / "cursor-agent")
+    codex_node_target: Path | None = None
+    if binary == "codex":
+        node_bin = shutil.which("node")
+        if node_bin:
+            codex_node_target = Path(node_bin).resolve()
+            node_runtime_root = (
+                codex_node_target.parent.parent
+                if codex_node_target.parent.name == "bin"
+                else codex_node_target.parent
+            )
+            if node_runtime_root not in {Path("/"), Path.home()}:
+                extra_reads.append(node_runtime_root)
     # Cursor falls back to a shared `/tmp/.cursor` store when its data path is
     # longer than 84 characters. Keep this audited wrapper root short so every
     # call retains a unique, outer-sandboxed store instead.
@@ -513,14 +540,28 @@ def isolated_provider_path(binary: str, scratch: Path):
         provider_home.mkdir()
         if binary == "codex":
             (provider_home / ".codex").mkdir()
+            if codex_node_target is not None:
+                (wrapper_root / "node").symlink_to(codex_node_target)
         elif binary == "cursor-agent":
             (provider_home / ".cursor").mkdir()
             (provider_home / ".cursor-data").mkdir()
         elif binary == "agy":
             _write_antigravity_headless_settings(provider_home, scratch)
+        use_antigravity_host_keyring = (
+            binary == "agy"
+            and allow_host_provider_sandbox
+            and not _has_antigravity_token_file(previous)
+        )
+        host_keychains = (
+            Path(previous.get("HOME", str(Path.home()))) / "Library" / "Keychains"
+        ).resolve()
+        if use_antigravity_host_keyring and host_keychains.is_dir():
+            (provider_home / "Library").mkdir(parents=True, exist_ok=True)
+            (provider_home / "Library" / "Keychains").symlink_to(host_keychains)
+            extra_reads.append(host_keychains)
         antigravity_auth_thread = (
             _stage_antigravity_token_once(previous, provider_home)
-            if binary == "agy"
+            if binary == "agy" and not use_antigravity_host_keyring
             else None
         )
         wrapper_bin = wrapper_root / binary
@@ -535,11 +576,17 @@ def isolated_provider_path(binary: str, scratch: Path):
                 if binary == "agy"
                 else []
             ),
-            # Credentials are brokered before the provider enters Seatbelt.
-            # Provider processes retain the narrow Security.framework services
-            # needed for TLS trust, but model-created tools must never be able
-            # to invoke the Keychain command-line client.
-            denied_executables=[Path("/usr/bin/security")],
+            denied_write_subpaths=(
+                [host_keychains] if use_antigravity_host_keyring else []
+            ),
+            # Credentials are brokered before the provider enters Seatbelt when
+            # a token file is available. When Antigravity 1.5+ stores its OAuth
+            # session solely in macOS Keychain (`go-keyring`) and host-provider
+            # sandbox mode is explicitly enabled, allow read-only keyring lookup
+            # while keeping `agy --sandbox` active for model-invoked commands.
+            denied_executables=(
+                [] if use_antigravity_host_keyring else [Path("/usr/bin/security")]
+            ),
             mach_services=(
                 [
                     "com.apple.SystemConfiguration.DNSConfiguration",
@@ -557,11 +604,16 @@ def isolated_provider_path(binary: str, scratch: Path):
                     "com.apple.SecurityServer",
                     "com.apple.securityd.xpc",
                 ]
-                if binary == "codex"
+                if binary == "codex" or use_antigravity_host_keyring
                 else []
             ),
-            allow_user_preferences=binary == "cursor-agent",
-            allow_system_sockets=binary in {"codex", "cursor-agent"},
+            allow_user_preferences=(
+                binary == "cursor-agent" or use_antigravity_host_keyring
+            ),
+            allow_system_sockets=(
+                binary in {"codex", "cursor-agent"} or use_antigravity_host_keyring
+            ),
+            allow_pseudo_tty=binary == "agy",
         )
         if binary == "codex" and not allow_host_provider_sandbox:
             # Prove the boundary before sanitized_provider_environment reads a
@@ -579,6 +631,29 @@ def isolated_provider_path(binary: str, scratch: Path):
                 f"unset {CURSOR_BROKER_TOKEN_ENV}\n"
                 "export CURSOR_AUTH_TOKEN=\"$token\"\n"
                 "unset token\n"
+                f"exec /usr/bin/sandbox-exec -p '{escaped_profile}' '{escaped_actual}' \"$@\"\n"
+            )
+        elif binary == "agy":
+            # Antigravity 1.5+ ignores `unsandboxed(*)` in settings.json and
+            # invokes nested `sandbox-exec` when `--sandbox` is passed, which
+            # macOS Seatbelt rejects (`sandbox_apply: Operation not permitted`)
+            # inside the controller's outer gold-isolation Seatbelt profile.
+            # Strip `--sandbox` at the outer Seatbelt wrapper boundary (matching
+            # Codex's `danger-full-access` outer-Seatbelt arrangement).
+            wrapper_text = (
+                "#!/bin/sh\n"
+                "set -- \"${@}\"\n"
+                "filtered=''\n"
+                "i=0\n"
+                "n=$#\n"
+                "while [ \"$i\" -lt \"$n\" ]; do\n"
+                "  arg=$1\n"
+                "  shift\n"
+                "  if [ \"$arg\" != \"--sandbox\" ]; then\n"
+                "    set -- \"$@\" \"$arg\"\n"
+                "  fi\n"
+                "  i=$((i + 1))\n"
+                "done\n"
                 f"exec /usr/bin/sandbox-exec -p '{escaped_profile}' '{escaped_actual}' \"$@\"\n"
             )
         else:

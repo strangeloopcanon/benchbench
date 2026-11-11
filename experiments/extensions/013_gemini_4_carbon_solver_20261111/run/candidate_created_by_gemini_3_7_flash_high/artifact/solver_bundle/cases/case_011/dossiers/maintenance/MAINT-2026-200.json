@@ -1,0 +1,9 @@
+{
+  "notice_id": "MAINT-2026-200",
+  "service": "core-compute-cluster",
+  "target_window_start": "2026-04-03T19:02:00Z",
+  "target_window_end": "2026-04-03T20:02:00Z",
+  "notice_sent_at": "2026-03-31T04:02:00Z",
+  "advance_notice_hours": 87,
+  "scope": "Kernel patch and memory scaling on core-compute-cluster"
+}

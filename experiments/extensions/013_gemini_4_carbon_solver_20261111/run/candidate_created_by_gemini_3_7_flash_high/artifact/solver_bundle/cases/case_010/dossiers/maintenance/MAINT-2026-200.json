@@ -1,0 +1,9 @@
+{
+  "notice_id": "MAINT-2026-200",
+  "service": "edge-api-gateway",
+  "target_window_start": "2026-04-06T03:03:00Z",
+  "target_window_end": "2026-04-06T05:03:00Z",
+  "notice_sent_at": "2026-04-02T21:03:00Z",
+  "advance_notice_hours": 78,
+  "scope": "Kernel patch and memory scaling on edge-api-gateway"
+}

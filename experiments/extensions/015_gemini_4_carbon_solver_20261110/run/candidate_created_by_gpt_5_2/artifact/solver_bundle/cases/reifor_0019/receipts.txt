@@ -1,0 +1,11 @@
+receipt_id=reifor_0019_R1 | date=2026-04-23 | amount=25.10 | cat=MISC | merchant="CityRail" | ccy=USD
+receipt_id=reifor_0019_R2 | date=2026-04-23 | merchant="Sunrise Diner" | note="summary" | ccy=USD | cat=GROUND | amount=86.20
+receipt_id=reifor_0019_R3 | date=2026-04-25 | cat=AIR | merchant="CityRail" | ccy=AUD | amount=569.23
+receipt_id=reifor_0019_R4 | date=2026-04-22 | amount=491.33 | ccy=USD | merchant="QuickFuel" | cat=LODGING
+receipt_id=reifor_0019_R5 | date=2026-04-23 | note="late_scan" | amount=62.81 | flags=DUPLICATE | merchant="Metro Cab" | cat=? | ccy=GBP
+receipt_id=reifor_0019_R6 | date=2026-04-23 | amount=56.45 | cat=MEALS | merchant="Sunrise Diner" | tip=14.64 | ccy=AUD
+receipt_id=reifor_0019_R7 | date=2026-04-22 | cat=MEALS | merchant="Corner Mart" | amount=79.62 | note="itemized" | ccy=JPY
+receipt_id=reifor_0019_R8 | date=2026-04-22 | merchant="AeroFly" | cat=AIR | ccy=GBP | amount=263.40
+receipt_id=reifor_0019_R9 | date=2026-04-25 | amount=465.33 | merchant="Sunrise Diner" | nights=3 | ccy=AUD | cat=LODGING | note="fax_copy"
+receipt_id=reifor_0019_R10 | date=2026-04-22 | note="itemized" | amount=491.33 | merchant="QuickFuel" | ccy=USD | cat=AIR
+receipt_id=reifor_0019_R11 | date=2026-04-25 | ccy=GBP | cat=MISC | merchant="CityRail" | amount=9.17

@@ -1,0 +1,9 @@
+receipt_id=reifor_0003_R1 | date=2026-05-19 | amount=72.75 | merchant="Corner Mart" | cat=MEALS | ccy=? | note="fax_copy"
+receipt_id=reifor_0003_R2 | date=2026-05-18 | cat=AIR | ccy=CAD | note="itemized" | merchant="CityRail" | amount=303.99
+receipt_id=reifor_0003_R3 | date=2026-05-17 | merchant="Harbor Bistro" | ccy=USD | cat=MISC | amount=48.18
+receipt_id=reifor_0003_R4 | date=2026-05-17 | amount=526.53 | cat=AIR | merchant="Metro Cab" | ccy=AUD
+receipt_id=reifor_0003_R5 | date=? | merchant="Corner Mart" | amount=72.75 | cat=GROUND | ccy=USD
+receipt_id=reifor_0003_R6 | date=2026-05-18 | ccy=JPY | amount=190.30 | nights=1 | merchant="CityRail" | cat=LODGING
+receipt_id=reifor_0003_R7 | date=2026-05-18 | cat=AIR | merchant="Harbor Bistro" | ccy=AUD | amount=222.16
+receipt_id=reifor_0003_R8 | date=2026-05-20 | amount=53.04 | merchant="CityRail" | ccy=AUD | cat=MISC
+receipt_id=reifor_0003_R9 | date=2026-05-19 | cat=GROUND | note="itemized" | merchant="QuickFuel" | ccy=GBP | amount=135.82
